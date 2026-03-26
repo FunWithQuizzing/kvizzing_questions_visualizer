@@ -40,8 +40,7 @@ def _parse_line_date(line: str) -> Optional[date]:
     # Disambiguate M/D/YY vs DD/MM/YYYY by range
     # If a > 12 it must be DD/MM; if b > 12 it must be M/D
     if b > 12:
-        # format is DD/MM/YYYY  (b is month, a is day)
-        # but b > 12 is impossible for a month — means a is month, b is day
+        # b > 12 is impossible for a month, so b must be the day → format is M/D (US)
         month, day = a, b
     elif a > 12:
         month, day = b, a

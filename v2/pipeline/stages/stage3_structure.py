@@ -233,7 +233,9 @@ def structure(
         session: Optional[Session] = None
         if raw.get("is_session_question") and raw.get("session_quizmaster"):
             session_date = q_date.strftime("%Y-%m-%d")
-            qm_slug = raw["session_quizmaster"].lower().split()[0]
+            # Take the first component before any space or dot for a clean slug
+            # e.g. "pratik.s.chandarana" → "pratik", "Pavan Pamidimarri" → "pavan"
+            qm_slug = re.split(r"[\s.]", raw["session_quizmaster"].lower())[0]
             session = Session(
                 id=f"{session_date}-{qm_slug}",
                 quizmaster=raw["session_quizmaster"],
@@ -256,12 +258,13 @@ def structure(
             ),
             source=source,
             session=session,
-            scores_after=_map_scores_after(raw.get("scores_after")),
+            # scores_after only applies to session questions per spec
+            scores_after=_map_scores_after(raw.get("scores_after")) if session else None,
             reactions=None,
             highlights=None,
         )
-    except (KeyError, ValueError, ValidationError):
-        return None
+    except (KeyError, ValueError, ValidationError) as e:
+        raise ValueError(str(e)) from e
 
 
 # ── Error logging ──────────────────────────────────────────────────────────────
@@ -301,8 +304,6 @@ def run(
     for i, candidate in enumerate(candidates):
         try:
             obj = structure(candidate, config, collision_counter, source_file, pair_index=i + 1)
-            if obj is None:
-                raise ValueError("structure() returned None")
             results.append(obj)
         except Exception as e:
             if errors_dir:

@@ -40,44 +40,24 @@ _MEDIA_PATTERNS = re.compile(
     re.IGNORECASE,
 )
 
-# System message substrings — lines matching these are dropped entirely.
-# WhatsApp system messages appear as "[timestamp] GroupName: ..." or
-# "[timestamp] text" with no username colon — we catch them by content.
-_SYSTEM_SUBSTRINGS = (
-    "end-to-end encrypted",
-    "created this group",
-    "added ",
-    "removed ",
-    "left",
-    "changed the group",
-    "changed their phone number",
-    "changed this group",
-    "joined using this group",
-    "was added",
-    "security code changed",
-    "You joined from",
-    "Messages and calls are",
-    "missed voice call",
-    "missed video call",
-)
-
 _DELETED_PATTERNS = re.compile(
     r"^(This message was deleted|You deleted this message)$",
     re.IGNORECASE,
 )
 
+# LTR mark (U+200E) at the start of the text is the reliable WhatsApp signal
+# that this is a system event (e.g. "X joined", "X created this group").
+# Every WhatsApp system message starts with \u200e; no legitimate user message does.
+_SYSTEM_LTR_MARK = "\u200e"
+
 
 def _is_system_line(username: str, text: str) -> bool:
     """Return True if this line is a WhatsApp system notification."""
-    # System messages often have the group name as "username" and contain
-    # characteristic substrings, OR have a username that contains special chars.
-    text_lower = text.lower()
-    for s in _SYSTEM_SUBSTRINGS:
-        if s.lower() in text_lower:
-            return True
-    # Lines where the "username" is the group name (contains |, emoji clusters, etc.)
-    # are system events — heuristic: group name lines often contain || or ‎
-    if "||" in username or "\u200e" in username:
+    # Primary signal: WhatsApp prefixes all system event text with U+200E (LTR mark)
+    if text.startswith(_SYSTEM_LTR_MARK):
+        return True
+    # Secondary: group name as sender (contains ||)
+    if "||" in username:
         return True
     return False
 
@@ -174,8 +154,8 @@ def run(
         else:
             # Continuation line (multi-line message) — append to current
             if current and line_stripped:
-                # Skip lines that look like system events even as continuations
-                if not any(s.lower() in line_stripped.lower() for s in _SYSTEM_SUBSTRINGS):
+                # System continuation lines also start with U+200E — skip them
+                if not line_stripped.startswith(_SYSTEM_LTR_MARK):
                     current["text"] = (current["text"] + "\n" + line_stripped).strip()
 
     if current:

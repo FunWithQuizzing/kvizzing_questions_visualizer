@@ -167,11 +167,11 @@ class TestStructure:
         obj = structure(c, BASE_CONFIG, Counter())
         assert obj.stats.difficulty is None
 
-    def test_missing_question_text_returns_none(self):
+    def test_missing_question_text_raises(self):
         c = _base()
         del c["question_text"]
-        obj = structure(c, BASE_CONFIG, Counter())
-        assert obj is None
+        with pytest.raises((KeyError, ValueError)):
+            structure(c, BASE_CONFIG, Counter())
 
     def test_session_populated_when_present(self):
         c = _base()
@@ -185,6 +185,15 @@ class TestStructure:
         assert obj.session.quizmaster == "pratik.s.chandarana"
         assert obj.session.theme == "Hollywood Movies"
         assert obj.session.question_number == 3
+        # Session ID uses first name component (split on space or dot)
+        assert obj.session.id == "2025-09-23-pratik"
+
+    def test_session_slug_split_on_space(self):
+        c = _base()
+        c["is_session_question"] = True
+        c["session_quizmaster"] = "Pavan Pamidimarri"
+        obj = structure(c, BASE_CONFIG, Counter())
+        assert obj.session.id == "2025-09-23-pavan"
 
     def test_session_none_for_adhoc(self):
         obj = structure(_base(), BASE_CONFIG, Counter())
@@ -215,6 +224,9 @@ class TestScoresAfter:
 
     def test_scores_after_populated_when_present(self):
         c = _base()
+        c["is_session_question"] = True
+        c["session_quizmaster"] = "pratik.s.chandarana"
+        c["session_question_number"] = 1
         c["scores_after"] = [
             {"username": "Akshay", "score": 3},
             {"username": "Aditi Bapat", "score": 1},
@@ -228,6 +240,9 @@ class TestScoresAfter:
 
     def test_scores_after_values_correct(self):
         c = _base()
+        c["is_session_question"] = True
+        c["session_quizmaster"] = "pratik.s.chandarana"
+        c["session_question_number"] = 1
         c["scores_after"] = [{"username": "Akshay", "score": 5}]
         obj = structure(c, BASE_CONFIG, Counter())
         assert obj.scores_after[0].score == 5
@@ -239,16 +254,14 @@ class TestScoresAfter:
         # Empty list → _map_scores_after returns None
         assert obj.scores_after is None
 
-    def test_scores_after_only_on_session_questions(self):
-        """Non-session (ad-hoc) questions should never have scores_after."""
+    def test_scores_after_cleared_for_adhoc_questions(self):
+        """Stage 3 must null out scores_after for non-session questions even if LLM set it."""
         c = _base()
         c["is_session_question"] = False
         c["scores_after"] = [{"username": "Akshay", "score": 1}]
         obj = structure(c, BASE_CONFIG, Counter())
-        # scores_after can be set even if not a session question (LLM may set it);
-        # the schema allows it but the spec says it should never be populated for ad-hoc.
-        # We verify the field is at least correctly typed.
         assert obj is not None
+        assert obj.scores_after is None
 
 
 class TestRun:

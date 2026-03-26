@@ -85,6 +85,17 @@ class TestStage1Parse:
         msgs = run(_lines("chat_us_locale.txt"), BASE_CONFIG, aliases=aliases)
         assert msgs[0]["username"] == "pavan"
 
+    def test_question_containing_left_or_added_not_filtered(self):
+        """'left' and 'added' in question text must not trigger system message filter."""
+        lines = [
+            "[9/23/25, 14:00:00] Pavan: She left her keys on the left side. Who added this rule?\n",
+            "[9/23/25, 14:01:00] Akshay: Answer A?\n",
+            "[9/23/25, 14:01:30] Aditi: Answer B?\n",
+        ]
+        msgs = run(lines, BASE_CONFIG)
+        assert len(msgs) == 3
+        assert "left" in msgs[0]["text"]
+
     def test_empty_input_returns_empty(self):
         assert run([], BASE_CONFIG) == []
 

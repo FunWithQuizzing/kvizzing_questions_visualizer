@@ -13,7 +13,8 @@
   "stage2": {
     "extraction_window_messages": 40,
     "heuristic_reply_window_minutes": 15,
-    "heuristic_min_replies": 2
+    "heuristic_min_replies": 2,
+    "llm_request_delay_seconds": 2.5
   },
 
   "stage3": {

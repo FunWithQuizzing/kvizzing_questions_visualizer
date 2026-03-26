@@ -39,6 +39,14 @@ def _parse_json(text: str) -> list:
     text = re.sub(r"\s*```$", "", text)
     return json.loads(text.strip())
 
+
+def _parse_retry_delay(err_str: str) -> float | None:
+    """Extract the suggested retry delay (seconds) from a rate-limit error string."""
+    m = re.search(r"retry[_ ]?(?:after|delay|in)[^\d]*(\d+(?:\.\d+)?)", err_str, re.IGNORECASE)
+    if m:
+        return float(m.group(1))
+    return None
+
 # ── Phase 2a — Heuristic pre-filter ───────────────────────────────────────────
 
 # Patterns that strongly suggest a question message
@@ -227,7 +235,7 @@ def _call_llm(
             err_str = str(e)
             if "429" in err_str or "rate_limit" in err_str.lower() or "resource_exhausted" in err_str.lower():
                 if attempt < max_retries - 1:
-                    delay = base_delay * (2**attempt)
+                    delay = _parse_retry_delay(err_str) or base_delay * (2**attempt)
                     log.warning("Stage2 rate-limited — retrying in %.1fs (attempt %d/%d)…", delay, attempt + 1, max_retries)
                     time.sleep(delay)
                     continue
@@ -260,6 +268,7 @@ def extract(
     Overlapping windows may produce duplicates — deduplication happens in Stage 5.
     """
     window_size: int = config["stage2"]["extraction_window_messages"]
+    request_delay: float = config["stage2"].get("llm_request_delay_seconds", 2.5)
     all_candidates: list[dict] = []
 
     for idx in candidate_indices:
@@ -270,6 +279,7 @@ def extract(
             log.warning("Stage2: skipping candidate at index %d due to LLM error.", idx)
             continue
         all_candidates.extend(pairs)
+        time.sleep(request_delay)
 
     return all_candidates
 

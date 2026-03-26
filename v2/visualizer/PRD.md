@@ -2,7 +2,9 @@
 
 ## Overview
 
-A web app for browsing, filtering, and exploring the KVizzing question archive. The primary audience is the KVizzing WhatsApp group members — people who asked or answered these questions and want to relive, search, and discover them.
+A web app for browsing, exploring, and celebrating the KVizzing question archive. The audience is the KVizzing WhatsApp group — members who've been part of this, want to revisit memorable questions, discover ones they missed, and just have fun with the history of the group.
+
+The tone throughout should be warm and playful — this is a group of friends quizzing together, not a competitive platform. Numbers and stats are there to spark curiosity and nostalgia, not to rank people.
 
 The core navigation model is **calendar-first**: a persistent calendar sidebar gives a temporal overview of all activity, with sessions as named events and ad-hoc question dates as markers. Clicking into a date or session opens the relevant view. Sessions are the primary unit of organisation; individual questions are always surfaced in the context of where they came from.
 
@@ -13,9 +15,9 @@ The core navigation model is **calendar-first**: a persistent calendar sidebar g
 1. Make the question archive **browsable and searchable** without needing to scroll WhatsApp
 2. Give sessions **first-class treatment** — they are the main events in the group's quiz history
 3. Provide a **per-question view** that replays the full discussion thread in context
-4. Surface **stats and patterns** — who asks the most, what topics come up, which questions were hardest
-5. Celebrate **highlights** — funniest questions, crowd favourites, fastest solves
-6. **Gamify exploration** — random question button as the seed for a lightweight quiz-like experience
+4. Surface **fun stats** — how the group quizzes, what topics come up, which questions got everyone talking
+5. Celebrate **highlights** — the questions that made everyone laugh, stumped everyone, or sparked a moment
+6. **Make it playable** — random question button as the seed for a lightweight quiz-like experience
 
 ---
 
@@ -84,7 +86,7 @@ The most important view. Opened by clicking a session on the calendar or from th
 
 **Header:**
 - Session ID, date, quizmaster name, theme (if set)
-- Session-level stats: total questions, total participants (unique across all questions), average time to answer, average difficulty
+- Session at a glance: total questions, how many people joined in, average time to answer, how tricky it was overall
 
 **Question list:**
 - All questions in `question_number` order
@@ -164,7 +166,7 @@ Keyword search backed by `data/search_index.json` (pre-built from SQLite FTS5). 
 
 Active filters are reflected in the URL as query params (e.g. `/feed?topic=history&solver=Saumay`) so filtered views can be shared.
 
-**Sort options:** Newest, Oldest, Most reactions, Hardest (most wrong attempts), Fastest solve, Most participants
+**Sort options:** Newest, Oldest, Most appreciated (most reactions), Trickiest (most wrong attempts), Quickest solve, Most discussed (most participants)
 
 ---
 
@@ -182,24 +184,26 @@ A reverse-chronological list of all sessions, as an alternative to finding them 
 
 ---
 
-### 5. Stats & Leaderboards
+### 5. Group Stats
 
-Aggregate views derived from the full archive.
+A celebration of the group's quizzing history. Numbers and charts that tell the story of KVizzing — not a scoreboard, just a fun look at how the group plays.
 
-**Leaderboard tabs:**
+**Member spotlight tabs:**
 
-| Tab | Metric |
+| Tab | What it shows |
 |---|---|
-| Top Solvers | Most correct answers |
-| Top Askers | Most questions posed |
-| Fastest | Lowest average `time_to_answer_seconds` (min 5 questions) |
-| Most Engaged | Highest total attempts across questions |
+| Quiz setters | Members who have set the most questions — a nod to the people who keep the group going |
+| Answer getters | Members who've cracked the most questions |
+| Quickest on the draw | Members with the fastest average solve time (shown only for members with 5+ solves, so it's meaningful) |
+| Most in the mix | Members who jump in and attempt the most answers, regardless of whether they get it right |
 
-**Charts:**
-- Topic breakdown — bar/donut chart of question count by `TopicCategory`, average difficulty per topic
-- Difficulty over time — rolling average `wrong_attempts` by month
-- Question type distribution — donut chart of `QuestionType`
-- Session frequency — bar chart of sessions per month
+Framing note: these are shown as fun facts about the group, not a ranked table with 1st/2nd/3rd. Numbers are visible but the emphasis is on participation, not winning.
+
+**Group history charts:**
+- Topic mix — how questions break down by topic across the full archive
+- How tricky have questions been? — rolling average wrong attempts by month
+- Question styles — breakdown of question types (factual, connect, identify, etc.)
+- Session activity — how often sessions happen, shown as a bar chart by month
 
 **URL format:** `/stats`
 
@@ -207,9 +211,11 @@ Aggregate views derived from the full archive.
 
 ### 6. Highlights Reel
 
-A curated feed of questions with `highlights` populated, sorted by `total_reactions` descending.
+The questions the group loved most — sorted by total reactions. A feel-good browse through the archive's best moments: the ones that made everyone laugh, the ones that stumped everyone, the ones that sparked a conversation.
 
-**Category filter:** driven by whatever categories exist in the data — not hardcoded (e.g. `funny`, `crowd_favourite`, `spicy`, `surprising`, `confirmed_correct`)
+**Category filter:** driven by whatever categories exist in the data — not hardcoded (e.g. `funny`, `crowd_favourite`, `spicy`, `surprising`, `confirmed_correct`). Each category gets a friendly label in the UI rather than the raw key (e.g. "Made everyone laugh" instead of `funny`, "Group favourite" instead of `crowd_favourite`).
+
+**Empty state (no reactions data):** A friendly message explaining that reactions come from WhatsApp and will appear here once enriched. Not a dead end.
 
 **URL format:** `/highlights`
 

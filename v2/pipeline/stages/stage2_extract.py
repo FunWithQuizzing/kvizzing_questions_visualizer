@@ -22,10 +22,13 @@ Output: list of raw candidate dicts (not yet Pydantic-validated)
 from __future__ import annotations
 
 import json
+import logging
 import re
 import time
 from datetime import datetime, timedelta
 from typing import Optional
+
+log = logging.getLogger("kvizzing")
 
 # ── Phase 2a — Heuristic pre-filter ───────────────────────────────────────────
 
@@ -208,14 +211,20 @@ def _call_llm(
             )
             text = response.content[0].text.strip()
             return json.loads(text)
+        except json.JSONDecodeError as e:
+            log.warning("Stage2 LLM returned invalid JSON (attempt %d): %s", attempt + 1, e)
+            return []
         except Exception as e:
             err_str = str(e)
             if "429" in err_str or "rate_limit" in err_str.lower():
                 if attempt < max_retries - 1:
-                    time.sleep(base_delay * (2**attempt))
+                    delay = base_delay * (2**attempt)
+                    log.warning("Stage2 rate-limited — retrying in %.1fs (attempt %d/%d)…", delay, attempt + 1, max_retries)
+                    time.sleep(delay)
                     continue
-            # Non-retriable error or exhausted retries — return empty
-            return []
+            # Non-retriable error: log and re-raise so the pipeline fails loudly
+            log.error("Stage2 LLM call failed: %s", e, exc_info=True)
+            raise
     return []
 
 
@@ -305,13 +314,19 @@ def detect_session_scores(
             if result.get("found"):
                 return result.get("scores")
             return None
+        except json.JSONDecodeError as e:
+            log.warning("Stage2 session-score LLM returned invalid JSON: %s", e)
+            return None
         except Exception as e:
             err_str = str(e)
             if "429" in err_str or "rate_limit" in err_str.lower():
                 if attempt < max_retries - 1:
-                    time.sleep(base_delay * (2**attempt))
+                    delay = base_delay * (2**attempt)
+                    log.warning("Stage2 session-score rate-limited — retrying in %.1fs…", delay)
+                    time.sleep(delay)
                     continue
-            return None
+            log.error("Stage2 session-score LLM call failed: %s", e, exc_info=True)
+            raise
     return None
 
 

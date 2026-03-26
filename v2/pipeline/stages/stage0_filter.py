@@ -55,8 +55,12 @@ def _parse_line_date(line: str) -> Optional[date]:
 
 def _dates_in_store(db_conn: sqlite3.Connection) -> set[date]:
     """Return the set of dates already stored in questions.db."""
-    rows = db_conn.execute("SELECT DISTINCT date FROM questions").fetchall()
-    return {date.fromisoformat(r[0]) for r in rows}
+    try:
+        rows = db_conn.execute("SELECT DISTINCT date FROM questions").fetchall()
+        return {date.fromisoformat(r[0]) for r in rows}
+    except sqlite3.OperationalError:
+        # Table doesn't exist yet (fresh DB before Stage 5 has run)
+        return set()
 
 
 def run(
@@ -96,10 +100,11 @@ def run(
         target_dates = file_dates - stored
     else:
         # Incremental: dates strictly after last_stored_date
-        rows = db_conn.execute(
-            "SELECT MAX(date) FROM questions"
-        ).fetchone()
-        last_stored = date.fromisoformat(rows[0]) if rows[0] else None
+        try:
+            rows = db_conn.execute("SELECT MAX(date) FROM questions").fetchone()
+            last_stored = date.fromisoformat(rows[0]) if rows[0] else None
+        except sqlite3.OperationalError:
+            last_stored = None
         if last_stored is None:
             # No data yet — fall back to full backfill
             return run(config, db_conn, mode="backfill")

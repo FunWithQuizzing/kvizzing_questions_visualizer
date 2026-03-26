@@ -19,6 +19,8 @@ import argparse
 import json
 import sqlite3
 import sys
+from collections import defaultdict
+from datetime import date as Date, timedelta
 from pathlib import Path
 
 # ── Path setup ────────────────────────────────────────────────────────────────
@@ -75,6 +77,9 @@ def _llm_client():
 
 def _run_pipeline(mode: str) -> None:
     config = _load_config()
+    # Resolve chat_file relative to V2_DIR (config paths are V2-relative)
+    config = dict(config)
+    config["chat_file"] = str(V2_DIR / config["chat_file"])
     aliases = _load_aliases()
 
     data_dir = V2_DIR / "data"
@@ -86,6 +91,9 @@ def _run_pipeline(mode: str) -> None:
     data_dir.mkdir(parents=True, exist_ok=True)
 
     db = sqlite3.connect(str(db_path))
+    client = _llm_client()
+    if client is None:
+        print("WARNING: anthropic package not found — running without LLM extraction.")
 
     try:
         # ── Stage 0 — Filter ─────────────────────────────────────────────────
@@ -104,37 +112,50 @@ def _run_pipeline(mode: str) -> None:
         messages = stage1(lines, config, aliases=aliases)
         print(f"  {len(messages):,} messages parsed.")
 
-        # ── Stage 2 — Extract ─────────────────────────────────────────────────
-        print("[Stage 2] Extracting Q&A candidates…")
-        client = _llm_client()
-        if client is None:
-            print("  WARNING: anthropic package not found — running without LLM extraction.")
-        candidates = stage2(messages, config, llm_client=client)
-        print(f"  {len(candidates):,} candidates extracted.")
+        # Group messages by UTC date so we can process and store date-by-date.
+        # For each date D we include the next day's messages too, covering the
+        # 4-hour lookahead buffer (late-night Q&A threads that span midnight).
+        by_date: dict[str, list[dict]] = defaultdict(list)
+        for m in messages:
+            by_date[m["timestamp"][:10]].append(m)
 
-        if not candidates:
-            print("  No candidates found — nothing to store.")
-            return
+        target_dates = sorted(by_date.keys())
+        print(f"  {len(target_dates)} dates in window.")
 
-        # ── Stage 3 — Structure ───────────────────────────────────────────────
-        print("[Stage 3] Structuring candidates…")
-        questions = stage3(candidates, config, errors_dir=errors_dir)
-        print(f"  {len(questions):,} questions validated.")
+        total_stored = 0
 
-        if not questions:
-            print("  No valid questions — check data/errors/ for details.")
-            return
+        for date_str in target_dates:
+            # Build window: this date + next day (lookahead)
+            next_day = str(
+                Date(int(date_str[:4]), int(date_str[5:7]), int(date_str[8:]))
+                + timedelta(days=1)
+            )
+            window = by_date.get(date_str, []) + by_date.get(next_day, [])
 
-        # ── Stage 4 — Enrich ──────────────────────────────────────────────────
-        print("[Stage 4] Enriching with topics and tags…")
-        if client is None:
-            print("  Skipping enrichment (no LLM client).")
-        questions = stage4(questions, config, llm_client=client)
+            # ── Stage 2 — Extract ─────────────────────────────────────────
+            candidates = stage2(window, config, llm_client=client)
+            if not candidates:
+                print(f"  [{date_str}] 0 candidates.")
+                continue
 
-        # ── Stage 5 — Store ───────────────────────────────────────────────────
-        print("[Stage 5] Storing to questions.db…")
-        count = stage5(questions, db, state_path=state_path)
-        print(f"  {count:,} questions upserted.")
+            # ── Stage 3 — Structure ───────────────────────────────────────
+            questions = stage3(candidates, config, errors_dir=errors_dir)
+
+            # Keep only questions dated on this specific date to avoid
+            # double-storing questions that appear in multiple windows.
+            questions = [q for q in questions if str(q.date) == date_str]
+            if not questions:
+                continue
+
+            # ── Stage 4 — Enrich ──────────────────────────────────────────
+            questions = stage4(questions, config, llm_client=client)
+
+            # ── Stage 5 — Store (commits immediately) ─────────────────────
+            count = stage5(questions, db, state_path=state_path)
+            total_stored += count
+            print(f"  [{date_str}] {count} questions stored  (running total: {total_stored})")
+
+        print(f"\n[Stage 5] Done — {total_stored:,} questions stored.")
 
         # ── Stage 6 — Export ──────────────────────────────────────────────────
         print("[Stage 6] Exporting JSON files…")

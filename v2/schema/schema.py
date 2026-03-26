@@ -3,7 +3,7 @@ KVizzing Question Schema
 ========================
 Single source of truth for the KVizzing question data model.
 
-Run directly to regenerate schema.json:
+Run directly to regenerate schema.json and inject content into README.md:
     python3 schema.py
 """
 
@@ -11,11 +11,14 @@ from __future__ import annotations
 
 import json
 import pathlib
+import re
 from datetime import date as Date, datetime
 from enum import Enum
 from typing import Optional
 
 from pydantic import BaseModel, Field, field_validator
+
+HERE = pathlib.Path(__file__).parent
 
 
 # ── Enumerations ──────────────────────────────────────────────────────────────
@@ -276,10 +279,56 @@ class KVizzingQuestion(BaseModel):
     )
 
 
+# ── README injection ───────────────────────────────────────────────────────────
+
+def _inject(readme_path: pathlib.Path, marker: str, content: str) -> None:
+    """Replace content between <!-- BEGIN:marker --> and <!-- END:marker --> in readme_path."""
+    text = readme_path.read_text(encoding="utf-8")
+    pattern = re.compile(
+        rf"(<!-- BEGIN:{re.escape(marker)} -->).*?(<!-- END:{re.escape(marker)} -->)",
+        re.DOTALL,
+    )
+    replacement = rf"\1\n{content}\n\2"
+    new_text, count = pattern.subn(replacement, text)
+    if count == 0:
+        raise ValueError(f"Markers <!-- BEGIN:{marker} --> / <!-- END:{marker} --> not found in {readme_path}")
+    readme_path.write_text(new_text, encoding="utf-8")
+
+
 # ── Schema export ─────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
+    # 1. Generate schema.json
     schema = KVizzingQuestion.model_json_schema()
-    output_path = pathlib.Path(__file__).parent / "schema.json"
-    output_path.write_text(json.dumps(schema, indent=2, ensure_ascii=False))
-    print(f"Written: {output_path}")
+    schema_path = HERE / "schema.json"
+    schema_path.write_text(json.dumps(schema, indent=2, ensure_ascii=False))
+    print(f"Written: {schema_path}")
+
+    # 2. Load examples.json
+    examples_path = HERE / "examples.json"
+    examples = json.loads(examples_path.read_text(encoding="utf-8"))
+
+    # 3. Inject into README.md
+    readme_path = HERE / "README.md"
+
+    # Inject schema.json block
+    schema_block = f"```json\n{json.dumps(schema, indent=2, ensure_ascii=False)}\n```"
+    _inject(readme_path, "schema.json", schema_block)
+
+    # Inject each example individually
+    titles = [
+        "1. Factual question (single solver, confirmed)",
+        "2. Multi-part identify question (collaborative)",
+        "3. Visual question (structured quiz session)",
+        "4. Connect question (collaborative solve)",
+    ]
+    examples_md_parts = []
+    for title, example in zip(titles, examples):
+        ex = {k: v for k, v in example.items() if k != "_comment"}
+        examples_md_parts.append(
+            f"### {title}\n\n```json\n{json.dumps(ex, indent=2, ensure_ascii=False)}\n```"
+        )
+    examples_block = "\n\n".join(examples_md_parts)
+    _inject(readme_path, "examples.json", examples_block)
+
+    print(f"Injected into: {readme_path}")

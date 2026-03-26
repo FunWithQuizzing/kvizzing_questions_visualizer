@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Claude Code
+.claude/
+
+# Raw chat exports and derived data (contain personal information)
+v1/_chat.txt
+v1/output_all/
+v1/extracted_qa_pairs/

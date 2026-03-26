@@ -15,7 +15,8 @@ v1/_chat.txt
 v1/output_all/
 v1/extracted_qa_pairs/
 
-# v2 pipeline — raw input and internal store (gitignored; see PIPELINE.md)
+# v2 pipeline — raw input, internal store, and logs (gitignored; see PIPELINE.md)
 v2/data/raw/
 v2/data/questions.db
 v2/data/errors/
+v2/pipeline/logs/

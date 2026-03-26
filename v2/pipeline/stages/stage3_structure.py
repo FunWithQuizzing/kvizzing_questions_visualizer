@@ -15,6 +15,8 @@ from __future__ import annotations
 
 import json
 import pathlib
+import re
+import sys
 from collections import Counter
 from datetime import datetime, date as Date
 from typing import Optional
@@ -22,7 +24,6 @@ from zoneinfo import ZoneInfo
 
 from pydantic import ValidationError
 
-import sys
 sys.path.insert(0, str(pathlib.Path(__file__).parent.parent.parent / "schema"))
 from schema import (
     KVizzingQuestion,
@@ -163,9 +164,6 @@ def _infer_question_type(text: str) -> QuestionType:
     if "?" in text:
         return QuestionType.factual
     return QuestionType.unknown
-
-
-import re
 
 
 def structure(

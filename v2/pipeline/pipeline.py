@@ -34,7 +34,7 @@ sys.path.insert(0, str(V2_DIR / "schema"))
 
 from utils.logging import setup as _setup_logging
 
-log = _setup_logging(V2_DIR / "data")
+log = _setup_logging(_PIPELINE_DIR / "logs")
 
 # ── Local imports ─────────────────────────────────────────────────────────────
 

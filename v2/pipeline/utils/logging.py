@@ -4,16 +4,18 @@ from __future__ import annotations
 
 import logging
 import sys
+from datetime import date
 from pathlib import Path
 
 
-def setup(log_dir: Path) -> logging.Logger:
+def setup(logs_dir: Path) -> logging.Logger:
     """
-    Configure the 'kvizzing' logger to write to both stdout and pipeline.log.
+    Configure the 'kvizzing' logger to write to both stdout and a
+    per-day log file at logs_dir/YYYY-MM-DD.log.
     Safe to call multiple times (handlers are only added once).
     """
-    log_dir.mkdir(parents=True, exist_ok=True)
-    log_path = log_dir / "pipeline.log"
+    logs_dir.mkdir(parents=True, exist_ok=True)
+    log_path = logs_dir / f"{date.today().isoformat()}.log"
 
     ts_fmt = logging.Formatter(
         "%(asctime)s  %(levelname)-7s  %(message)s",

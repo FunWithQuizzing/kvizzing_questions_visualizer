@@ -1,0 +1,164 @@
+2026-03-26 11:24:13  INFO     ============================================================
+2026-03-26 11:24:13  INFO     Pipeline run  mode=backfill
+2026-03-26 11:24:13  INFO     ============================================================
+2026-03-26 11:24:13  INFO     [Stage 0] Filtering lines (backfill)…
+2026-03-26 11:24:13  INFO       277,982 lines in window.
+2026-03-26 11:24:13  INFO     [Stage 1] Parsing messages…
+2026-03-26 11:24:15  INFO       247,198 messages parsed.
+2026-03-26 11:24:15  INFO       177 dates in window.
+2026-03-26 11:24:15  DEBUG      [2025-09-23] Stage 2: extracting from 670 messages…
+2026-03-26 11:24:32  INFO       [2025-09-23] 0 candidates.
+2026-03-26 11:24:32  DEBUG      [2025-09-24] Stage 2: extracting from 1128 messages…
+2026-03-26 11:24:56  INFO       [2025-09-24] 0 candidates.
+2026-03-26 11:24:56  DEBUG      [2025-09-25] Stage 2: extracting from 926 messages…
+2026-03-26 11:25:15  INFO       [2025-09-25] 0 candidates.
+2026-03-26 11:25:15  DEBUG      [2025-09-26] Stage 2: extracting from 492 messages…
+2026-03-26 11:25:25  INFO       [2025-09-26] 0 candidates.
+2026-03-26 11:25:25  DEBUG      [2025-09-27] Stage 2: extracting from 1005 messages…
+2026-03-26 11:25:42  INFO       [2025-09-27] 0 candidates.
+2026-03-26 11:25:42  DEBUG      [2025-09-28] Stage 2: extracting from 1865 messages…
+2026-03-26 11:26:09  INFO       [2025-09-28] 0 candidates.
+2026-03-26 11:26:09  DEBUG      [2025-09-29] Stage 2: extracting from 1500 messages…
+2026-03-26 11:26:32  INFO       [2025-09-29] 0 candidates.
+2026-03-26 11:26:32  DEBUG      [2025-09-30] Stage 2: extracting from 1052 messages…
+2026-03-26 11:26:51  INFO       [2025-09-30] 0 candidates.
+2026-03-26 11:26:51  DEBUG      [2025-10-01] Stage 2: extracting from 1051 messages…
+2026-03-26 11:27:10  INFO       [2025-10-01] 0 candidates.
+2026-03-26 11:27:10  DEBUG      [2025-10-02] Stage 2: extracting from 1174 messages…
+2026-03-26 11:27:18  INFO     Pipeline run complete.
+2026-03-26 11:27:23  INFO     ============================================================
+2026-03-26 11:27:23  INFO     Pipeline run  mode=backfill
+2026-03-26 11:27:23  INFO     ============================================================
+2026-03-26 11:27:23  INFO     [Stage 0] Filtering lines (backfill)…
+2026-03-26 11:27:23  INFO       277,982 lines in window.
+2026-03-26 11:27:23  INFO     [Stage 1] Parsing messages…
+2026-03-26 11:27:25  INFO       247,198 messages parsed.
+2026-03-26 11:27:25  INFO       177 dates in window.
+2026-03-26 11:27:25  DEBUG      [2025-09-23] Stage 2: extracting from 670 messages…
+2026-03-26 11:27:25  ERROR    Stage2 LLM call failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CZSAT4rb9V5VriWN7kCTT'}
+Traceback (most recent call last):
+  File "/Users/saumay/Library/Mobile Documents/com~apple~CloudDocs/Documents/Repos/Github/Kvizzing/kvizzing_group/KVizzing/v2/pipeline/stages/stage2_extract.py", line 206, in _call_llm
+    response = llm_client.messages.create(
+        model=model,
+    ...<2 lines>...
+        messages=[{"role": "user", "content": user_prompt}],
+    )
+  File "/opt/homebrew/lib/python3.14/site-packages/anthropic/_utils/_utils.py", line 282, in wrapper
+    return func(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.14/site-packages/anthropic/resources/messages/messages.py", line 996, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/v1/messages",
+        ^^^^^^^^^^^^^^^
+    ...<30 lines>...
+        stream_cls=Stream[RawMessageStreamEvent],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/opt/homebrew/lib/python3.14/site-packages/anthropic/_base_client.py", line 1364, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/anthropic/_base_client.py", line 1137, in request
+    raise self._make_status_error_from_response(err.response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CZSAT4rb9V5VriWN7kCTT'}
+2026-03-26 11:27:25  ERROR    Pipeline crashed — see above for traceback.
+Traceback (most recent call last):
+  File "/Users/saumay/Library/Mobile Documents/com~apple~CloudDocs/Documents/Repos/Github/Kvizzing/kvizzing_group/KVizzing/v2/pipeline/pipeline.py", line 170, in _run_pipeline
+    candidates = stage2(window, config, llm_client=client)
+  File "/Users/saumay/Library/Mobile Documents/com~apple~CloudDocs/Documents/Repos/Github/Kvizzing/kvizzing_group/KVizzing/v2/pipeline/stages/stage2_extract.py", line 352, in run
+    return extract(messages, candidate_indices, config, llm_client)
+  File "/Users/saumay/Library/Mobile Documents/com~apple~CloudDocs/Documents/Repos/Github/Kvizzing/kvizzing_group/KVizzing/v2/pipeline/stages/stage2_extract.py", line 258, in extract
+    pairs = _call_llm(window, config, llm_client)
+  File "/Users/saumay/Library/Mobile Documents/com~apple~CloudDocs/Documents/Repos/Github/Kvizzing/kvizzing_group/KVizzing/v2/pipeline/stages/stage2_extract.py", line 206, in _call_llm
+    response = llm_client.messages.create(
+        model=model,
+    ...<2 lines>...
+        messages=[{"role": "user", "content": user_prompt}],
+    )
+  File "/opt/homebrew/lib/python3.14/site-packages/anthropic/_utils/_utils.py", line 282, in wrapper
+    return func(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.14/site-packages/anthropic/resources/messages/messages.py", line 996, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/v1/messages",
+        ^^^^^^^^^^^^^^^
+    ...<30 lines>...
+        stream_cls=Stream[RawMessageStreamEvent],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/opt/homebrew/lib/python3.14/site-packages/anthropic/_base_client.py", line 1364, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/anthropic/_base_client.py", line 1137, in request
+    raise self._make_status_error_from_response(err.response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CZSAT4rb9V5VriWN7kCTT'}
+2026-03-26 11:27:25  INFO     Pipeline run complete.
+2026-03-26 11:35:56  INFO     ============================================================
+2026-03-26 11:35:56  INFO     Pipeline run  mode=backfill
+2026-03-26 11:35:56  INFO     ============================================================
+2026-03-26 11:35:56  INFO     [Stage 0] Filtering lines (backfill)…
+2026-03-26 11:35:56  INFO       277,982 lines in window.
+2026-03-26 11:35:56  INFO     [Stage 1] Parsing messages…
+2026-03-26 11:35:58  INFO       247,198 messages parsed.
+2026-03-26 11:35:58  INFO       177 dates in window.
+2026-03-26 11:35:58  DEBUG      [2025-09-23] Stage 2: extracting from 670 messages…
+2026-03-26 11:35:58  ERROR    Stage2 LLM call failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CZSB6sMMJTyesT3bKVM4w'}
+Traceback (most recent call last):
+  File "/Users/saumay/Library/Mobile Documents/com~apple~CloudDocs/Documents/Repos/Github/Kvizzing/kvizzing_group/KVizzing/v2/pipeline/stages/stage2_extract.py", line 206, in _call_llm
+    response = llm_client.messages.create(
+        model=model,
+    ...<2 lines>...
+        messages=[{"role": "user", "content": user_prompt}],
+    )
+  File "/opt/homebrew/lib/python3.14/site-packages/anthropic/_utils/_utils.py", line 282, in wrapper
+    return func(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.14/site-packages/anthropic/resources/messages/messages.py", line 996, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/v1/messages",
+        ^^^^^^^^^^^^^^^
+    ...<30 lines>...
+        stream_cls=Stream[RawMessageStreamEvent],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/opt/homebrew/lib/python3.14/site-packages/anthropic/_base_client.py", line 1364, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/anthropic/_base_client.py", line 1137, in request
+    raise self._make_status_error_from_response(err.response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CZSB6sMMJTyesT3bKVM4w'}
+2026-03-26 11:35:58  ERROR    Pipeline crashed — see above for traceback.
+Traceback (most recent call last):
+  File "/Users/saumay/Library/Mobile Documents/com~apple~CloudDocs/Documents/Repos/Github/Kvizzing/kvizzing_group/KVizzing/v2/pipeline/pipeline.py", line 186, in _run_pipeline
+    candidates = stage2(window, config, llm_client=client)
+  File "/Users/saumay/Library/Mobile Documents/com~apple~CloudDocs/Documents/Repos/Github/Kvizzing/kvizzing_group/KVizzing/v2/pipeline/stages/stage2_extract.py", line 352, in run
+    return extract(messages, candidate_indices, config, llm_client)
+  File "/Users/saumay/Library/Mobile Documents/com~apple~CloudDocs/Documents/Repos/Github/Kvizzing/kvizzing_group/KVizzing/v2/pipeline/stages/stage2_extract.py", line 258, in extract
+    pairs = _call_llm(window, config, llm_client)
+  File "/Users/saumay/Library/Mobile Documents/com~apple~CloudDocs/Documents/Repos/Github/Kvizzing/kvizzing_group/KVizzing/v2/pipeline/stages/stage2_extract.py", line 206, in _call_llm
+    response = llm_client.messages.create(
+        model=model,
+    ...<2 lines>...
+        messages=[{"role": "user", "content": user_prompt}],
+    )
+  File "/opt/homebrew/lib/python3.14/site-packages/anthropic/_utils/_utils.py", line 282, in wrapper
+    return func(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.14/site-packages/anthropic/resources/messages/messages.py", line 996, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/v1/messages",
+        ^^^^^^^^^^^^^^^
+    ...<30 lines>...
+        stream_cls=Stream[RawMessageStreamEvent],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/opt/homebrew/lib/python3.14/site-packages/anthropic/_base_client.py", line 1364, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/anthropic/_base_client.py", line 1137, in request
+    raise self._make_status_error_from_response(err.response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CZSB6sMMJTyesT3bKVM4w'}
+2026-03-26 11:35:58  INFO     Pipeline run complete.

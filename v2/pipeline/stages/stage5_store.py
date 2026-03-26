@@ -3,7 +3,7 @@ Stage 5 — Store
 
 Upserts KVizzingQuestion objects into SQLite (questions.db):
   - Creates the schema on first run (questions table, FTS5 virtual table,
-    sync triggers, session_scores table)
+    session_scores table)
   - INSERT OR REPLACE on id — safe for incremental and re-runs
   - Each date's batch is wrapped in a single transaction
   - Per-question session scores upserted into session_scores table

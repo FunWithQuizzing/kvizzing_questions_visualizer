@@ -14,7 +14,8 @@ def load_config(config_dir: Path) -> dict:
 def load_aliases(config_dir: Path) -> dict:
     path = config_dir / "username_aliases.json"
     if path.exists():
-        return json.loads(path.read_text(encoding="utf-8"))
+        data = json.loads(path.read_text(encoding="utf-8"))
+        return data.get("aliases", {})
     return {}
 
 

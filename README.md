@@ -19,6 +19,7 @@ v1/                          # Initial extraction pipeline
   Explainer.docx             # Overview of the v1 approach
 
 v2/                          # Current version
+  PIPELINE.md                # End-to-end pipeline architecture (parse → extract → structure → enrich → deploy)
   schema/                    # Single source of truth for the data model
     schema.py                # Pydantic models — run to regenerate everything
     schema.json              # Auto-generated JSON Schema (never edit by hand)

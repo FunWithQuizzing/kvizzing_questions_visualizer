@@ -18,6 +18,8 @@ from pydantic import ValidationError
 
 from schema import (
     KVizzingQuestion,
+    MediaAttachment,
+    MediaType,
     Answer,
     AnswerPart,
     DiscussionEntry,
@@ -337,6 +339,80 @@ class TestInject:
         assert result.count("<!-- BEGIN:bar -->") == 1
         assert result.count("<!-- END:bar -->") == 1
         assert result.count("new") == 1
+
+
+# ── Media attachments ─────────────────────────────────────────────────────────
+
+class TestMedia:
+    def _base(self) -> dict:
+        return load_example(2)  # visual question — has_media: true
+
+    def test_has_media_true_with_null_media_allowed(self):
+        """has_media=True + media=None is valid: file exists but not yet extracted."""
+        ex = self._base()
+        assert ex["question"]["has_media"] is True
+        assert ex["question"].get("media") is None
+        KVizzingQuestion.model_validate(ex)
+
+    def test_has_media_true_with_media_populated(self):
+        ex = self._base()
+        ex["question"]["media"] = [
+            {
+                "type": "image",
+                "url": "https://cdn.example.com/media/2026-03-16-007-q.jpg",
+                "filename": "IMG-20260316-WA0007.jpg",
+                "caption": None,
+            }
+        ]
+        KVizzingQuestion.model_validate(ex)
+
+    def test_all_media_types_accepted(self):
+        ex = self._base()
+        for media_type in ["image", "video", "audio", "document"]:
+            ex["question"]["media"] = [{"type": media_type}]
+            KVizzingQuestion.model_validate(ex)
+
+    def test_invalid_media_type_rejected(self):
+        ex = self._base()
+        ex["question"]["media"] = [{"type": "gif"}]
+        with pytest.raises(ValidationError):
+            KVizzingQuestion.model_validate(ex)
+
+    def test_media_all_optional_fields_null(self):
+        """url, filename, caption are all optional."""
+        ex = self._base()
+        ex["question"]["media"] = [{"type": "image"}]
+        KVizzingQuestion.model_validate(ex)
+
+    def test_media_on_discussion_entry(self):
+        """A hint message can have a media attachment (e.g. an image clue)."""
+        ex = load_example(0)
+        ex["discussion"][1]["media"] = [
+            {"type": "image", "url": None, "filename": "hint.jpg", "caption": "Here's a clue"}
+        ]
+        KVizzingQuestion.model_validate(ex)
+
+    def test_null_media_on_discussion_entry_allowed(self):
+        ex = load_example(0)
+        for entry in ex["discussion"]:
+            entry["media"] = None
+        KVizzingQuestion.model_validate(ex)
+
+    def test_has_media_false_media_null(self):
+        """Standard text question: has_media=False, media=None."""
+        ex = load_example(0)
+        assert ex["question"]["has_media"] is False
+        assert ex["question"].get("media") is None
+        KVizzingQuestion.model_validate(ex)
+
+    def test_multiple_attachments_allowed(self):
+        """A message can have more than one attachment."""
+        ex = self._base()
+        ex["question"]["media"] = [
+            {"type": "image", "filename": "a.jpg"},
+            {"type": "image", "filename": "b.jpg"},
+        ]
+        KVizzingQuestion.model_validate(ex)
 
 
 if __name__ == "__main__":

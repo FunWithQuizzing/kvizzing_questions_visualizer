@@ -182,6 +182,22 @@
           "default": null,
           "description": "True if this attempt was the winning answer. Null for non-attempt roles.",
           "title": "Is Correct"
+        },
+        "media": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/MediaAttachment"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Media attachments on this discussion message (e.g. an image posted as a hint). Null when unavailable or not applicable.",
+          "title": "Media"
         }
       },
       "required": [
@@ -246,6 +262,68 @@
       "title": "Highlights",
       "type": "object"
     },
+    "MediaAttachment": {
+      "properties": {
+        "type": {
+          "$ref": "#/$defs/MediaType",
+          "description": "Media type — image, video, audio, or document"
+        },
+        "url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "URL of the hosted media file (e.g. CDN path, GitHub LFS URL). Null until the file is extracted from a WhatsApp backup and hosted.",
+          "title": "Url"
+        },
+        "filename": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Original filename from the WhatsApp backup (e.g. 'IMG-20260316-WA0007.jpg'). Null if unavailable.",
+          "title": "Filename"
+        },
+        "caption": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Caption text attached to the media message, if any.",
+          "title": "Caption"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "title": "MediaAttachment",
+      "type": "object"
+    },
+    "MediaType": {
+      "enum": [
+        "image",
+        "video",
+        "audio",
+        "document"
+      ],
+      "title": "MediaType",
+      "type": "string"
+    },
     "Question": {
       "properties": {
         "timestamp": {
@@ -269,9 +347,25 @@
           "description": "Question format type — describes the thinking required, independent of medium. Use has_media=True for image/video questions; they can be any type."
         },
         "has_media": {
-          "description": "True if the question message included an image/video (detected via 'image omitted' / 'video omitted')",
+          "description": "True if the question message included an image/video/audio (detected via 'image omitted' / 'video omitted' in the chat export). Remains True even when media[] is null — it means the file exists in the original chat but has not yet been extracted.",
           "title": "Has Media",
           "type": "boolean"
+        },
+        "media": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/MediaAttachment"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Actual media attachments, populated when files are extracted from a WhatsApp backup. Null when unavailable (e.g. plain .txt export). has_media=True with media=null means: file exists but not yet extracted.",
+          "title": "Media"
         },
         "topic": {
           "anyOf": [

@@ -66,7 +66,34 @@ class DiscussionRole(str, Enum):
     answer_reveal = "answer_reveal" # asker reveals answer without anyone getting it
 
 
+class MediaType(str, Enum):
+    image    = "image"    # jpg, png, webp, etc.
+    video    = "video"    # mp4, mov, etc.
+    audio    = "audio"    # opus, mp3, voice notes
+    document = "document" # pdf, docx, etc.
+
+
 # ── Sub-models ────────────────────────────────────────────────────────────────
+
+class MediaAttachment(BaseModel):
+    type: MediaType = Field(
+        description="Media type — image, video, audio, or document"
+    )
+    url: Optional[str] = Field(
+        default=None,
+        description="URL of the hosted media file (e.g. CDN path, GitHub LFS URL). "
+                    "Null until the file is extracted from a WhatsApp backup and hosted."
+    )
+    filename: Optional[str] = Field(
+        default=None,
+        description="Original filename from the WhatsApp backup "
+                    "(e.g. 'IMG-20260316-WA0007.jpg'). Null if unavailable."
+    )
+    caption: Optional[str] = Field(
+        default=None,
+        description="Caption text attached to the media message, if any."
+    )
+
 
 class Question(BaseModel):
     timestamp: datetime = Field(
@@ -85,8 +112,16 @@ class Question(BaseModel):
         )
     )
     has_media: bool = Field(
-        description="True if the question message included an image/video "
-                    "(detected via 'image omitted' / 'video omitted')"
+        description="True if the question message included an image/video/audio "
+                    "(detected via 'image omitted' / 'video omitted' in the chat export). "
+                    "Remains True even when media[] is null — it means the file exists "
+                    "in the original chat but has not yet been extracted."
+    )
+    media: Optional[list[MediaAttachment]] = Field(
+        default=None,
+        description="Actual media attachments, populated when files are extracted from a "
+                    "WhatsApp backup. Null when unavailable (e.g. plain .txt export). "
+                    "has_media=True with media=null means: file exists but not yet extracted."
     )
     topic: Optional[TopicCategory] = Field(
         default=None,
@@ -152,6 +187,11 @@ class DiscussionEntry(BaseModel):
     is_correct: Optional[bool] = Field(
         default=None,
         description="True if this attempt was the winning answer. Null for non-attempt roles."
+    )
+    media: Optional[list[MediaAttachment]] = Field(
+        default=None,
+        description="Media attachments on this discussion message (e.g. an image posted as a hint). "
+                    "Null when unavailable or not applicable."
     )
 
 

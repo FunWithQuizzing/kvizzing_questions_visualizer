@@ -283,3 +283,4 @@ if __name__ == "__main__":
     output_path = pathlib.Path(__file__).parent / "schema.json"
     output_path.write_text(json.dumps(schema, indent=2, ensure_ascii=False))
     print(f"Written: {output_path}")
+# test

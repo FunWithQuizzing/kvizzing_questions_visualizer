@@ -11,12 +11,15 @@ Run from v2/pipeline/:
 
 All file paths in pipeline_config.json are resolved relative to v2/ (the parent
 of this script's directory).
+
+Logs are written to v2/data/pipeline.log (appended on every run).
 """
 
 from __future__ import annotations
 
 import argparse
 import json
+import logging
 import sqlite3
 import sys
 from collections import defaultdict
@@ -31,6 +34,32 @@ V2_DIR = _PIPELINE_DIR.parent
 
 sys.path.insert(0, str(_PIPELINE_DIR))
 sys.path.insert(0, str(V2_DIR / "schema"))
+
+# ── Logging ───────────────────────────────────────────────────────────────────
+
+def _setup_logging() -> logging.Logger:
+    """Configure a logger that writes to both stdout and v2/data/pipeline.log."""
+    log_dir = V2_DIR / "data"
+    log_dir.mkdir(parents=True, exist_ok=True)
+    log_path = log_dir / "pipeline.log"
+
+    fmt = logging.Formatter("%(asctime)s  %(levelname)-7s  %(message)s", datefmt="%Y-%m-%d %H:%M:%S")
+
+    file_handler = logging.FileHandler(log_path, encoding="utf-8")
+    file_handler.setFormatter(fmt)
+
+    console_handler = logging.StreamHandler(sys.stdout)
+    console_handler.setFormatter(logging.Formatter("%(message)s"))  # plain for terminal
+
+    logger = logging.getLogger("kvizzing")
+    logger.setLevel(logging.DEBUG)
+    if not logger.handlers:  # avoid duplicate handlers on re-import
+        logger.addHandler(file_handler)
+        logger.addHandler(console_handler)
+    return logger
+
+
+log = _setup_logging()
 
 from stages.stage0_filter import run as stage0
 from stages.stage1_parse import run as stage1
@@ -93,24 +122,28 @@ def _run_pipeline(mode: str) -> None:
     db = sqlite3.connect(str(db_path))
     client = _llm_client()
     if client is None:
-        print("WARNING: anthropic package not found — running without LLM extraction.")
+        log.warning("anthropic package not found — running without LLM extraction.")
+
+    log.info("=" * 60)
+    log.info("Pipeline run  mode=%s", mode)
+    log.info("=" * 60)
 
     try:
         # ── Stage 0 — Filter ─────────────────────────────────────────────────
-        print(f"[Stage 0] Filtering lines ({mode})…")
+        log.info("[Stage 0] Filtering lines (%s)…", mode)
         lines = stage0(config, db, mode=mode)
         if not lines:
-            print("  No new dates to process.")
-            print("[Stage 6] Exporting JSON files…")
+            log.info("  No new dates to process.")
+            log.info("[Stage 6] Exporting JSON files…")
             counts = stage6(db, data_dir, members_config_path=members_config, state_path=state_path)
-            _print_counts(counts)
+            _log_counts(counts)
             return
-        print(f"  {len(lines):,} lines in window.")
+        log.info("  %s lines in window.", f"{len(lines):,}")
 
         # ── Stage 1 — Parse ───────────────────────────────────────────────────
-        print("[Stage 1] Parsing messages…")
+        log.info("[Stage 1] Parsing messages…")
         messages = stage1(lines, config, aliases=aliases)
-        print(f"  {len(messages):,} messages parsed.")
+        log.info("  %s messages parsed.", f"{len(messages):,}")
 
         # Group messages by UTC date so we can process and store date-by-date.
         # For each date D we include the next day's messages too, covering the
@@ -120,7 +153,7 @@ def _run_pipeline(mode: str) -> None:
             by_date[m["timestamp"][:10]].append(m)
 
         target_dates = sorted(by_date.keys())
-        print(f"  {len(target_dates)} dates in window.")
+        log.info("  %d dates in window.", len(target_dates))
 
         total_stored = 0
 
@@ -133,42 +166,53 @@ def _run_pipeline(mode: str) -> None:
             window = by_date.get(date_str, []) + by_date.get(next_day, [])
 
             # ── Stage 2 — Extract ─────────────────────────────────────────
+            log.debug("  [%s] Stage 2: extracting from %d messages…", date_str, len(window))
             candidates = stage2(window, config, llm_client=client)
             if not candidates:
-                print(f"  [{date_str}] 0 candidates.")
+                log.info("  [%s] 0 candidates.", date_str)
                 continue
+            log.debug("  [%s] %d candidates extracted.", date_str, len(candidates))
 
             # ── Stage 3 — Structure ───────────────────────────────────────
+            log.debug("  [%s] Stage 3: structuring…", date_str)
             questions = stage3(candidates, config, errors_dir=errors_dir)
 
             # Keep only questions dated on this specific date to avoid
             # double-storing questions that appear in multiple windows.
             questions = [q for q in questions if str(q.date) == date_str]
             if not questions:
+                log.debug("  [%s] 0 valid questions after date filter.", date_str)
                 continue
+            log.debug("  [%s] %d questions structured.", date_str, len(questions))
 
             # ── Stage 4 — Enrich ──────────────────────────────────────────
+            log.debug("  [%s] Stage 4: enriching topics/tags…", date_str)
             questions = stage4(questions, config, llm_client=client)
 
             # ── Stage 5 — Store (commits immediately) ─────────────────────
             count = stage5(questions, db, state_path=state_path)
             total_stored += count
-            print(f"  [{date_str}] {count} questions stored  (running total: {total_stored})")
+            log.info("  [%s] %d questions stored  (running total: %d)", date_str, count, total_stored)
 
-        print(f"\n[Stage 5] Done — {total_stored:,} questions stored.")
+        log.info("")
+        log.info("[Stage 5] Done — %s questions stored.", f"{total_stored:,}")
 
         # ── Stage 6 — Export ──────────────────────────────────────────────────
-        print("[Stage 6] Exporting JSON files…")
+        log.info("[Stage 6] Exporting JSON files…")
         counts = stage6(db, data_dir, members_config_path=members_config, state_path=state_path)
-        _print_counts(counts)
+        _log_counts(counts)
 
+    except Exception:
+        log.exception("Pipeline crashed — see above for traceback.")
+        raise
     finally:
         db.close()
+        log.info("Pipeline run complete.")
 
 
-def _print_counts(counts: dict) -> None:
+def _log_counts(counts: dict) -> None:
     for key, val in counts.items():
-        print(f"  {key}: {val:,}")
+        log.info("  %s: %s", key, f"{val:,}")
 
 
 # ── Export-only ───────────────────────────────────────────────────────────────
@@ -181,14 +225,18 @@ def _run_export() -> None:
     members_config = _PIPELINE_DIR / "config" / "members.json"
 
     if not db_path.exists():
-        print(f"ERROR: {db_path} not found. Run backfill first.")
+        log.error("questions.db not found at %s — run backfill first.", db_path)
         sys.exit(1)
 
     db = sqlite3.connect(str(db_path))
     try:
-        print("[Stage 6] Exporting JSON files…")
+        log.info("[Stage 6] Exporting JSON files…")
         counts = stage6(db, data_dir, members_config_path=members_config, state_path=state_path)
-        _print_counts(counts)
+        _log_counts(counts)
+        log.info("Export complete.")
+    except Exception:
+        log.exception("Export crashed.")
+        raise
     finally:
         db.close()
 
@@ -196,14 +244,12 @@ def _run_export() -> None:
 # ── Enrichment stubs ──────────────────────────────────────────────────────────
 
 def _run_enrich_reactions(db_path: str) -> None:
-    print("enrich-reactions: not yet implemented.")
-    print(f"  Source DB: {db_path}")
+    log.error("enrich-reactions: not yet implemented.  Source DB: %s", db_path)
     sys.exit(1)
 
 
 def _run_enrich_media(media_dir: str) -> None:
-    print("enrich-media: not yet implemented.")
-    print(f"  Media dir: {media_dir}")
+    log.error("enrich-media: not yet implemented.  Media dir: %s", media_dir)
     sys.exit(1)
 
 

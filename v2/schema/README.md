@@ -444,6 +444,26 @@
       "title": "Reaction",
       "type": "object"
     },
+    "Score": {
+      "properties": {
+        "username": {
+          "description": "Username of the participant",
+          "title": "Username",
+          "type": "string"
+        },
+        "score": {
+          "description": "Score at this point in the session",
+          "title": "Score",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "username",
+        "score"
+      ],
+      "title": "Score",
+      "type": "object"
+    },
     "Session": {
       "properties": {
         "id": {
@@ -637,6 +657,22 @@
       ],
       "default": null,
       "description": "Null for ad-hoc questions; populated for QM-hosted quiz sessions"
+    },
+    "scores_after": {
+      "anyOf": [
+        {
+          "items": {
+            "$ref": "#/$defs/Score"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Scores announced by the quizmaster immediately after this question, if present. Null if no score announcement followed this question. Only populated for session questions — never for ad-hoc questions.",
+      "title": "Scores After"
     },
     "reactions": {
       "anyOf": [

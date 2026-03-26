@@ -273,6 +273,11 @@ class Highlights(BaseModel):
         return v
 
 
+class Score(BaseModel):
+    username: str = Field(description="Username of the participant")
+    score: int = Field(description="Score at this point in the session")
+
+
 class Source(BaseModel):
     file: str = Field(
         description="Source daily chat file (e.g. 'chat_2025-09-23.txt')"
@@ -307,6 +312,12 @@ class KVizzingQuestion(BaseModel):
     session: Optional[Session] = Field(
         default=None,
         description="Null for ad-hoc questions; populated for QM-hosted quiz sessions"
+    )
+    scores_after: Optional[list[Score]] = Field(
+        default=None,
+        description="Scores announced by the quizmaster immediately after this question, "
+                    "if present. Null if no score announcement followed this question. "
+                    "Only populated for session questions — never for ad-hoc questions."
     )
     reactions: Optional[list[Reaction]] = Field(
         default=None,

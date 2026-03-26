@@ -58,7 +58,7 @@ data/raw/_chat.txt  (always the full export)
         │
         ▼
 ┌───────────────┐
-│  4. Enrich    │  Topic/tags via LLM, reactions from SQLite (optional)
+│  4. Enrich    │  Topic/tags/embeddings via LLM, reactions from SQLite
 └───────┬───────┘
         │
         ▼
@@ -68,7 +68,7 @@ data/raw/_chat.txt  (always the full export)
         │
         ▼
 ┌───────────────┐
-│  6. Export    │  SQLite → JSON files for the UI
+│  6. Export    │  SQLite → JSON + search indices for the UI
 └───────┬───────┘
         │
         ▼
@@ -182,18 +182,25 @@ Prompt strategy: feed a sliding window of ~40 messages around a suspected questi
 
 **What it does:**
 
-| Enrichment | Source | Field |
-|---|---|---|
-| Topic classification | LLM | `question.topic` |
-| Tag generation | LLM | `question.tags` |
-| Reactions | WhatsApp SQLite DB | `reactions[]` |
-| Highlights | Derived from reactions + config | `highlights` |
+| Enrichment | Source | Output | Required for |
+|---|---|---|---|
+| Topic classification | LLM | `question.topic` | Topic filter |
+| Tag generation | LLM | `question.tags` | Tag filter |
+| Embeddings | Embedding model | stored in `questions.db` | Semantic search |
+| Reactions | WhatsApp SQLite DB | `reactions[]` | Highlights reel |
+| Highlights | Derived from reactions + config | `highlights` | Highlights reel |
+
+**Embeddings for semantic search:**
+Each question's text is embedded into a vector using an embedding model (e.g. `text-embedding-3-small` from OpenAI, or a local model via `sentence-transformers`). Vectors are stored in a dedicated `embeddings` table in `questions.db`, keyed on `question.id`.
+
+At export time (Stage 6), these vectors are used to build a static HNSW index file. In the browser, a user's search query is embedded client-side using `transformers.js` (runs the model in-browser via WASM), and the HNSW index is queried for nearest neighbours — returning semantically similar questions with no backend required.
+
+This means a search like *"questions about Indian history"* surfaces relevant questions even if those exact words don't appear in the question text.
 
 **Notes:**
-- Fully optional. The pipeline and UI work without it.
-- Reactions require the WhatsApp SQLite DB from device backup (iOS: `ChatStorage.sqlite`; Android: `msgstore.db`). The pipeline skips this gracefully if not provided.
-- LLM topic/tag calls are cheap — question texts are short and can be batched.
-- Only new questions (not already enriched in the store) are sent to the LLM.
+- All enrichments are fully optional. Only new questions (not already enriched in the store) are sent to the LLM — incremental runs are cheap.
+- Reactions require the WhatsApp SQLite DB from device backup (iOS: `ChatStorage.sqlite`; Android: `msgstore.db`). Pipeline skips gracefully if not provided.
+- Embedding the full backfill (~1,500 questions) is a one-time batch job. Each incremental run embeds only the new day's questions.
 
 ---
 
@@ -232,8 +239,20 @@ At the expected scale (~1,000–2,000 questions over several years), both would 
 - Generates `data/questions_by_date/YYYY-MM-DD.json` — per-day slices for calendar queries
 - Generates `data/sessions.json` — index of all sessions (loaded first by the calendar sidebar)
 - Generates `data/stats.json` — pre-aggregated leaderboards, topic counts, difficulty over time
+- Generates `data/tags.json` — tag → question ID index for instant tag filtering
+- Builds `data/search.hnsw` — static HNSW vector index from stored embeddings, consumed by the browser for semantic search (only generated if embeddings are present)
 
-**Why pre-aggregate stats:** The UI is a static site with no backend. Computing leaderboards client-side over 1,500 questions on every page load is wasteful. `stats.json` is computed once at export time.
+**Why pre-aggregate:** The UI is a static site. Computing leaderboards or tag indices client-side over thousands of questions on every load is wasteful. Everything is computed once at export time.
+
+**Search capabilities enabled by this export:**
+
+| Search type | How | File used |
+|---|---|---|
+| Keyword / full-text | Pagefind indexes rendered HTML at build time | Pagefind index (auto-generated) |
+| Filter by asker | Client-side filter on `questions.json` | `questions.json` |
+| Filter by tag | Tag → ID lookup | `data/tags.json` |
+| Filter by topic / difficulty / type | Client-side filter | `questions.json` |
+| Semantic search | Query embedded in-browser → HNSW nearest-neighbour | `data/search.hnsw` |
 
 **Output:**
 ```
@@ -245,6 +264,8 @@ data/
     ...
   sessions.json               ← calendar sidebar loads this first
   stats.json                  ← pre-computed leaderboards + charts
+  tags.json                   ← tag → [question_id, ...] index
+  search.hnsw                 ← vector index for semantic search (optional)
   questions.db                ← pipeline's internal store (not served to UI)
   pipeline_state.json         ← tracks last processed date
 ```
@@ -279,13 +300,15 @@ data/raw/_chat.txt              ← drop the full WhatsApp export here (every ru
 
 pipeline_state.json             ← tracks last processed date
 
-data/questions.db               ← SQLite store (Stages 1–5 write here)
+data/questions.db               ← SQLite store: questions + embeddings (Stages 1–5)
 data/errors/                    ← failed validations for manual review
 
 data/questions.json             ← Stage 6 export (UI-ready)
-data/questions_by_date/         ← Stage 6 export
-data/sessions.json              ← Stage 6 export
-data/stats.json                 ← Stage 6 export
+data/questions_by_date/         ← Stage 6 export (calendar queries)
+data/sessions.json              ← Stage 6 export (calendar sidebar)
+data/stats.json                 ← Stage 6 export (leaderboards, charts)
+data/tags.json                  ← Stage 6 export (tag filter index)
+data/search.hnsw                ← Stage 6 export (semantic search index, optional)
 
 dist/                           ← Stage 7 output (deployable static site)
 ```
@@ -310,6 +333,8 @@ dist/                           ← Stage 7 output (deployable static site)
 ## Open Questions
 
 1. **LLM for extraction**: Claude API vs local Llama (v1 used Llama)? Claude will be more accurate; cost is low given infrequent runs.
-2. **Error review**: A lightweight CLI or UI to review `extraction_confidence: "low"` candidates and promote/discard them manually? Or is editing `questions.db` directly acceptable?
-3. **Reactions timing**: The WhatsApp SQLite DB is not always available. Should reactions be a separate optional enrichment run, decoupled from the daily pipeline?
-4. **questions.db in git**: Commit it to track history, or keep it local-only and rely on re-running the pipeline to regenerate? Committing means the data travels with the code; not committing keeps the repo lean.
+2. **Embedding model**: OpenAI `text-embedding-3-small` (fast, hosted, small cost) vs a local `sentence-transformers` model (free, runs offline, slower backfill)? For a one-time backfill of ~1,500 questions, either is fine.
+3. **Semantic search client-side model**: `transformers.js` embeds the user's query in-browser (no backend needed) but adds ~20MB WASM download on first search. Acceptable given the audience (members who use it regularly)?
+4. **Error review**: A lightweight CLI or UI to review `extraction_confidence: "low"` candidates and promote/discard them manually? Or is editing `questions.db` directly acceptable for now?
+5. **Reactions timing**: The WhatsApp SQLite DB is not always available. Should reactions be a separate optional enrichment run, decoupled from the daily pipeline?
+6. **questions.db in git**: Commit it so the data travels with the code, or keep local-only? Committing means anyone can clone and run the visualizer immediately; not committing keeps the repo lean but requires a full re-run on a new machine.

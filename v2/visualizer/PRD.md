@@ -141,13 +141,18 @@ A filtered/sorted list of questions. Not the primary entry point, but useful for
 - Reaction summary (e.g. `😂 ×3  ❤️ ×2`) if available
 - Highlight badges if present
 
+**Search bar (top of feed):**
+- **Keyword search** — full-text via Pagefind (indexes all question text at build time)
+- **Semantic search** — natural language query (e.g. "Indian history questions") embedded in-browser via `transformers.js`, matched against a pre-built HNSW vector index. Toggle between keyword and semantic mode.
+
 **Filter bar:**
 - Topic (multi-select)
+- Tags (multi-select, drawn from `data/tags.json`)
+- Asker (dropdown)
 - Difficulty
 - Question type
 - Has media (toggle)
 - Date range picker
-- Asker (dropdown)
 - Session (dropdown — or "Ad-hoc only" toggle)
 - Extraction confidence (default: hide `low`)
 

@@ -25,6 +25,7 @@ from schema import (
     DiscussionEntry,
     Highlights,
     Question,
+    Score,
     Session,
     Source,
     Stats,
@@ -413,6 +414,67 @@ class TestMedia:
             {"type": "image", "filename": "b.jpg"},
         ]
         KVizzingQuestion.model_validate(ex)
+
+
+# ── scores_after ──────────────────────────────────────────────────────────────
+
+class TestScoresAfter:
+    def _base(self) -> dict:
+        return load_example(2)  # session question
+
+    def test_null_scores_after_allowed(self):
+        ex = self._base()
+        ex["scores_after"] = None
+        KVizzingQuestion.model_validate(ex)
+
+    def test_scores_after_absent_allowed(self):
+        """Field is optional — omitting it entirely is valid."""
+        ex = self._base()
+        ex.pop("scores_after", None)
+        KVizzingQuestion.model_validate(ex)
+
+    def test_scores_after_single_entry(self):
+        ex = self._base()
+        ex["scores_after"] = [{"username": "Akshay", "score": 3}]
+        obj = KVizzingQuestion.model_validate(ex)
+        assert obj.scores_after is not None
+        assert len(obj.scores_after) == 1
+        assert obj.scores_after[0].username == "Akshay"
+        assert obj.scores_after[0].score == 3
+
+    def test_scores_after_multiple_entries(self):
+        ex = self._base()
+        ex["scores_after"] = [
+            {"username": "Akshay", "score": 3},
+            {"username": "Aditi Bapat", "score": 1},
+            {"username": "Sushant", "score": 2},
+        ]
+        obj = KVizzingQuestion.model_validate(ex)
+        assert len(obj.scores_after) == 3
+
+    def test_scores_after_on_adhoc_question_allowed(self):
+        """Schema allows scores_after on any question; enforcement is pipeline-level."""
+        ex = load_example(0)  # ad-hoc question
+        ex["scores_after"] = [{"username": "Akshay", "score": 1}]
+        KVizzingQuestion.model_validate(ex)
+
+    def test_scores_after_missing_username_rejected(self):
+        ex = self._base()
+        ex["scores_after"] = [{"score": 3}]  # no username
+        with pytest.raises(ValidationError):
+            KVizzingQuestion.model_validate(ex)
+
+    def test_scores_after_missing_score_rejected(self):
+        ex = self._base()
+        ex["scores_after"] = [{"username": "Akshay"}]  # no score
+        with pytest.raises(ValidationError):
+            KVizzingQuestion.model_validate(ex)
+
+    def test_scores_after_score_must_be_integer(self):
+        ex = self._base()
+        ex["scores_after"] = [{"username": "Akshay", "score": "three"}]
+        with pytest.raises(ValidationError):
+            KVizzingQuestion.model_validate(ex)
 
 
 if __name__ == "__main__":

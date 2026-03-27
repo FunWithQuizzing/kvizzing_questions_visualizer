@@ -1,0 +1,149 @@
+[
+  {
+    "question_timestamp": "2025-10-19T07:37:48Z",
+    "question_text": "X Y is generally comprised of chopped and candied fruits including berries, cherries and Papaya (raw papaya in India). A song with the same title was included in the Grammy hall of fame in 1998",
+    "question_asker": "Sidhesh K K",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Tutti Frutti",
+    "answer_solver": "Saara",
+    "answer_timestamp": "2025-10-19T07:39:06Z",
+    "answer_confirmed": false,
+    "confirmation_text": null,
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-10-19T07:39:06Z",
+        "username": "Saara",
+        "text": "Tutty fruity?",
+        "role": "attempt",
+        "is_correct": true
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "medium"
+  },
+  {
+    "question_timestamp": "2025-10-19T13:18:40Z",
+    "question_text": "Following up on the Bertrand Russel question in the morning quiz, in another essay he emphasises the need to empirically verify assumptions before putting them in writing. He says even eminent people makes such mistakes and cites the example of a classic mistake committed by Aristotle in one of his writings. What was the mistake?",
+    "question_asker": "Nikhil Borra",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Women have fewer teeth than men",
+    "answer_solver": "Meghna",
+    "answer_timestamp": "2025-10-19T13:21:46Z",
+    "answer_confirmed": false,
+    "confirmation_text": null,
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-10-19T13:21:46Z",
+        "username": "Meghna",
+        "text": "That Women have fewer teeth",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-10-19T13:21:49Z",
+        "username": "Meghna",
+        "text": "?",
+        "role": "chat",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "medium"
+  },
+  {
+    "question_timestamp": "2025-10-19T15:31:36Z",
+    "question_text": "Connect the following (non-exhaustive): - Virat Kohli - Mohd Rizwan - Stephen Fleming - Shaun Pollock - Brendon Mccullum",
+    "question_asker": "Ankit Jain",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Lost their first ODI as captain in all three formats (Test, ODI, and T20), with Gill being the newest addition to this list",
+    "answer_solver": "Tapish",
+    "answer_timestamp": "2025-10-19T15:42:28Z",
+    "answer_confirmed": false,
+    "confirmation_text": null,
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-10-19T15:33:22Z",
+        "username": "Khandoba",
+        "text": "Cricketers 😎",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-10-19T15:40:47Z",
+        "username": "Akshay",
+        "text": "More than x catches on debut?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-10-19T15:41:17Z",
+        "username": "Tapish",
+        "text": "Lost first odi as captain?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-10-19T15:41:28Z",
+        "username": "Ankit Jain",
+        "text": "good track.. keep going",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-10-19T15:41:41Z",
+        "username": "Saayu Windows",
+        "text": "Overseas odi?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-10-19T15:41:42Z",
+        "username": "Abhishek Vats",
+        "text": "Wins?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-10-19T15:42:00Z",
+        "username": "Lzafeer Ahmad B F",
+        "text": "While captaining a former captain",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-10-19T15:42:01Z",
+        "username": "Tapish",
+        "text": "First matches as captain lost in both Test and ODIs?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-10-19T15:42:28Z",
+        "username": "Tapish",
+        "text": "All 3 formats?",
+        "role": "attempt",
+        "is_correct": true
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "medium"
+  }
+]

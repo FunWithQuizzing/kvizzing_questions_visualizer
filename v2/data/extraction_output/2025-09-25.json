@@ -1,0 +1,1866 @@
+[
+  {
+    "question_timestamp": "2025-09-25T02:16:31Z",
+    "question_text": "Which country in the South Pacific has this flag.. [image: flag of a South Pacific island nation, likely Niue based on context]",
+    "question_asker": "Dhruv",
+    "has_media": true,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Niue",
+    "answer_solver": "Akshay",
+    "answer_timestamp": "2025-09-25T02:17:58Z",
+    "answer_confirmed": false,
+    "confirmation_text": null,
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-09-25T02:17:12Z",
+        "username": "Akshay",
+        "text": "Nauru?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T02:17:21Z",
+        "username": "Dhruv",
+        "text": "no",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T02:17:58Z",
+        "username": "Akshay",
+        "text": "Then should be niue",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-25T02:18:02Z",
+        "username": "Pavan Pamidimarri",
+        "text": "Cook Islands?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T02:18:25Z",
+        "username": "Dhruv",
+        "text": "i didn't know of this country's existence before playing today's geoconnections",
+        "role": "chat",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "medium"
+  },
+  {
+    "question_timestamp": "2025-09-25T03:22:05Z",
+    "question_text": "1. The crescent represents the Muslims of India, while the seven stars are the 'saptrishi constellation' and represent the myriad Hindu communities. The Union Jack was to denote greater autonomy and _________ as a dominion of the British Empire. FITB and name the two persons who proposed this flag. [image: historical Indian flag with crescent, seven stars, and Union Jack]",
+    "question_asker": "Akshay",
+    "has_media": true,
+    "is_session_question": true,
+    "session_quizmaster": "Akshay",
+    "session_theme": "Historical Indian Flags",
+    "session_question_number": 1,
+    "answer_text": "Home Rule; Annie Besant and Lokmanya Tilak",
+    "answer_solver": "Khandoba",
+    "answer_timestamp": "2025-09-25T03:23:41Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Correct!",
+    "answer_is_collaborative": true,
+    "answer_parts": [
+      {"label": "FITB", "text": "Home Rule", "solver": "Shvetal"},
+      {"label": "Person 1", "text": "Annie Besant", "solver": "Shvetal"},
+      {"label": "Person 2", "text": "Lokmanya Tilak", "solver": "Khandoba"}
+    ],
+    "discussion": [
+      {
+        "timestamp": "2025-09-25T03:22:59Z",
+        "username": "Shvetal",
+        "text": "Home Rule and Annie Besant?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T03:23:26Z",
+        "username": "Akshay",
+        "text": "Annie Besant and?",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T03:23:35Z",
+        "username": "Shvetal",
+        "text": "Trying to think of the second person",
+        "role": "chat",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T03:23:41Z",
+        "username": "Khandoba",
+        "text": "Tilak?",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-25T03:24:15Z",
+        "username": "Akshay",
+        "text": "Correct!",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T03:24:24Z",
+        "username": "Akshay",
+        "text": "Annie Besant and Lokmanya Tilak",
+        "role": "answer_reveal",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-09-25T03:46:03Z",
+    "question_text": "2. This flag of _______ uses the standard red ensign design and features the erstwhile seal of this province. The seal features two ships and a structure named after King George III, that was originally built to guard the newly acquired territory against possible enemy incursions, including from the French. This structure was demolished in the mid-late 19th century, but it lends its name to an iconic part of ________ (same blank) [image: British Indian province flag with red ensign design and provincial seal]",
+    "question_asker": "Akshay",
+    "has_media": true,
+    "is_session_question": true,
+    "session_quizmaster": "Akshay",
+    "session_theme": "Historical Indian Flags",
+    "session_question_number": 2,
+    "answer_text": "Bombay Presidency; the neighborhood is Fort (named after Fort George)",
+    "answer_solver": "Pavan Pamidimarri",
+    "answer_timestamp": "2025-09-25T03:51:07Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Fort is correct",
+    "answer_is_collaborative": false,
+    "answer_parts": [
+      {"label": "Province", "text": "Bombay Presidency", "solver": "Pavan Pamidimarri"},
+      {"label": "Neighborhood", "text": "Fort", "solver": "Pavan Pamidimarri"}
+    ],
+    "discussion": [
+      {
+        "timestamp": "2025-09-25T03:48:10Z",
+        "username": "Pavan Pamidimarri",
+        "text": "That's Bombay presidency",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T03:48:20Z",
+        "username": "Akshay",
+        "text": "Correct!",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T03:48:25Z",
+        "username": "Akshay",
+        "text": "And the neighborhood is?",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T03:48:44Z",
+        "username": "Nikhil Borra",
+        "text": "Mahim?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T03:48:48Z",
+        "username": "Akshay",
+        "text": "Nope",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T03:49:22Z",
+        "username": "Pavan Pamidimarri",
+        "text": "Is the neighborhood the newly acquired territory they were trying to guard?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T03:49:51Z",
+        "username": "Akshay",
+        "text": "Yes this structure was built in Bombay.",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T03:49:59Z",
+        "username": "Pavan Pamidimarri",
+        "text": "Colaba?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T03:50:15Z",
+        "username": "Akshay",
+        "text": "It was built at the site of an older structure called the Dongri _______ from earlier times",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T03:50:23Z",
+        "username": "Akshay",
+        "text": "No no",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T03:50:31Z",
+        "username": "Akshay",
+        "text": "Hint: Not a proper noun",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T03:50:39Z",
+        "username": "Kartikey Pradhan",
+        "text": "Gymkhana",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T03:50:46Z",
+        "username": "Akshay",
+        "text": "Nope",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T03:51:02Z",
+        "username": "Prathamesh",
+        "text": "Dockyard? I am just making stuff up now",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T03:51:07Z",
+        "username": "Pavan Pamidimarri",
+        "text": "fort?",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-25T03:51:15Z",
+        "username": "Akshay",
+        "text": "Fort is correct",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T03:52:01Z",
+        "username": "Akshay",
+        "text": "Fort George was the garrison the British built to protect Bombay from invasions",
+        "role": "answer_reveal",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-09-25T04:02:37Z",
+    "question_text": "3. Identify the entity from its British-era ensign. It has a close Bombay connection. [image: British-era ensign with red background and a seal, likely Aden's ensign]",
+    "question_asker": "Akshay",
+    "has_media": true,
+    "is_session_question": true,
+    "session_quizmaster": "Akshay",
+    "session_theme": "Historical Indian Flags",
+    "session_question_number": 3,
+    "answer_text": "Aden (colony governed by Bombay Presidency)",
+    "answer_solver": "Pavan Pamidimarri",
+    "answer_timestamp": "2025-09-25T04:06:15Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Aden is correct!",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-09-25T04:03:28Z",
+        "username": "Prathamesh",
+        "text": "Close Bombay connection makes me think Alibag",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T04:03:41Z",
+        "username": "Lzafeer Ahmad B F",
+        "text": "Bombay sailing club",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T04:04:08Z",
+        "username": "Akshay",
+        "text": "Nope",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T04:05:43Z",
+        "username": "Akshay",
+        "text": "The sailing part is a good track, it's known for its important maritime role",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T04:05:55Z",
+        "username": "Lzafeer Ahmad B F",
+        "text": "Anything to do with Qatar or Oman?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T04:05:58Z",
+        "username": "Akshay",
+        "text": "Present day it's known for slightly less savory reasons",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T04:06:09Z",
+        "username": "Akshay",
+        "text": "In the right neighborhood!",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T04:06:15Z",
+        "username": "Pavan Pamidimarri",
+        "text": "Aden",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-25T04:06:16Z",
+        "username": "Lzafeer Ahmad B F",
+        "text": "Oooh",
+        "role": "chat",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T04:06:21Z",
+        "username": "Prathamesh",
+        "text": "Yemen?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T04:06:23Z",
+        "username": "Akshay",
+        "text": "Aden is correct!",
+        "role": "confirmation",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-09-25T04:10:40Z",
+    "question_text": "Do you know this flag? Relatively easy [image: Karnataka state proposed flag with yellow and red colors]",
+    "question_asker": "Prathamesh",
+    "has_media": true,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Karnataka (proposed state flag)",
+    "answer_solver": "Akshay",
+    "answer_timestamp": "2025-09-25T04:12:05Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Yes, Karnataka and Tamil Nadu have proposed flags. TN is very easy to recognize because of the Meenakshi Temple in its emblem",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-09-25T04:12:05Z",
+        "username": "Akshay",
+        "text": "Karnataka state flag? Proposed",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-25T04:12:16Z",
+        "username": "Akshay",
+        "text": "The red yellow is a giveaway",
+        "role": "chat",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T04:12:18Z",
+        "username": "Lzafeer Ahmad B F",
+        "text": "Karnataka no?",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-25T04:13:37Z",
+        "username": "Prathamesh",
+        "text": "Yes, Karnataka and Tamil Nadu have proposed flags. TN is very easy to recognize because of the Meenakshi Temple in its emblem",
+        "role": "confirmation",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-09-25T04:21:12Z",
+    "question_text": "4. This historical flag features two cobras flanking the sun, denoting both the founders' claimed lineage from the Nagas and suryavanshis, and also symbolizing a likely apocryphal story about Mahadji _________ being shielded from the sun by cobras as a child. The saffron background is a common feature of successor states descended from the ______ confederacy. Which state and dynasty? This royal house still exists and this pic is from their ancestral palace in _________. [image: saffron flag with two cobras flanking the sun, ancestral palace of the Scindia dynasty]",
+    "question_asker": "Akshay",
+    "has_media": true,
+    "is_session_question": true,
+    "session_quizmaster": "Akshay",
+    "session_theme": "Historical Indian Flags",
+    "session_question_number": 4,
+    "answer_text": "Scindia (Shinde) dynasty of Gwalior; descended from the Maratha confederacy",
+    "answer_solver": "Pavan Pamidimarri",
+    "answer_timestamp": "2025-09-25T04:25:38Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Correct! The Scindias (or Shindes) of Gwalior is correct!",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-09-25T04:24:50Z",
+        "username": "Prathamesh",
+        "text": "I know the Gaekwad dynasty has a saffron flag but doesn't have cobras. Am I in the right area?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T04:25:01Z",
+        "username": "Pavan Pamidimarri",
+        "text": "Maratha, Holkar",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T04:25:38Z",
+        "username": "Pavan Pamidimarri",
+        "text": "no actually Scindia and Gwalior i think",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-25T04:25:43Z",
+        "username": "Akshay",
+        "text": "So yes, the saffron background is common to almost all states coming out of the Marathas",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T04:26:03Z",
+        "username": "Akshay",
+        "text": "Correct! The Scindias (or Shindes) of Gwalior is correct!",
+        "role": "confirmation",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-09-25T04:31:54Z",
+    "question_text": "Five ships — Concepción, San Antonio, Santiago, Trinidad and Victoria — set sail from Seville with about 250 people under the command of a Portuguese sailor. Just one of them — Victoria — made it to the destination with 18 survivors, after the original leader of the expedition died on the way. What remarkable feat did this expedition accomplish?",
+    "question_asker": "Pavan Pamidimarri",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "First circumnavigation of the globe; expedition was led by Ferdinand Magellan (Portuguese, sailing for Spain)",
+    "answer_solver": "Kartikey Pradhan",
+    "answer_timestamp": "2025-09-25T04:35:47Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Correct, Magellan was also Portuguese, just 17 of the 250 made it back to Europe after circumnavigating the globe",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-09-25T04:35:03Z",
+        "username": "Naman Maheshwari",
+        "text": "Is this Vasco da Gama arriving in India?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T04:35:12Z",
+        "username": "Pavan Pamidimarri",
+        "text": "no",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T04:35:20Z",
+        "username": "Kartikey Pradhan",
+        "text": "Magellan",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T04:35:47Z",
+        "username": "Kartikey Pradhan",
+        "text": "Circumnavigation of the earth?",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-25T04:36:24Z",
+        "username": "Pavan Pamidimarri",
+        "text": "Correct, Magellan was also Portuguese, just 17 of the 250 made it back to Europe after circumnavigating the globe",
+        "role": "confirmation",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-09-25T04:38:28Z",
+    "question_text": "One of the places this expedition stopped was the kingdom of Butuan. They observed Hindu religious practices there. It is the place farthest from India where Hindu religious practices were observed before Europeans colonized the world. Which country is the kingdom of Butuan in?",
+    "question_asker": "Pavan Pamidimarri",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Philippines",
+    "answer_solver": "Nikhil Borra",
+    "answer_timestamp": "2025-09-25T04:39:17Z",
+    "answer_confirmed": true,
+    "confirmation_text": "The Philippines is the correct answer, they found lots of evidence of trade with Srivijaya (Indonesia), Champa (Vietnam), Cambodia, etc. in Butuan",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-09-25T04:38:55Z",
+        "username": "Nikhil Borra",
+        "text": "Java?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T04:38:59Z",
+        "username": "Akshay",
+        "text": "New guinea?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T04:39:04Z",
+        "username": "Pavan Pamidimarri",
+        "text": "Neither",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T04:39:05Z",
+        "username": "Kartikey Pradhan",
+        "text": "Chile?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T04:39:06Z",
+        "username": "Nikhil Borra",
+        "text": "Or Bali?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T04:39:17Z",
+        "username": "Pavan Pamidimarri",
+        "text": "no",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T04:39:17Z",
+        "username": "Nikhil Borra",
+        "text": "Philippines?",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-25T04:39:37Z",
+        "username": "Pavan Pamidimarri",
+        "text": "hint: Spanish connection",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T04:41:51Z",
+        "username": "Pavan Pamidimarri",
+        "text": "The Philippines is the correct answer, they found lots of evidence of trade with Srivijaya (Indonesia), Champa (Vietnam), Cambodia, etc. in Butuan",
+        "role": "confirmation",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-09-25T04:47:36Z",
+    "question_text": "5. This flag of a British Indian province features interesting symbols, including a bow, two matsyas depicting religious diversity, and a Y-symbol depicting something evocative. Which province? This seal lives on as the official seal of the present-day state. [image: British Indian province flag with bow, two fish, and Y-shaped river symbol]",
+    "question_asker": "Akshay",
+    "has_media": true,
+    "is_session_question": true,
+    "session_quizmaster": "Akshay",
+    "session_theme": "Historical Indian Flags",
+    "session_question_number": 5,
+    "answer_text": "United Provinces (present-day Uttar Pradesh); the Y-symbol depicts the Triveni Sangam at Prayagraj, the fish depict Awadh, and the bow depicts the Ramayana",
+    "answer_solver": "Pavan Pamidimarri",
+    "answer_timestamp": "2025-09-25T04:49:43Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Correct!",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-09-25T04:48:27Z",
+        "username": "Pavan Pamidimarri",
+        "text": "Travancore?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T04:48:43Z",
+        "username": "Akshay",
+        "text": "Already saw earlier today, and that wasn't a province",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T04:49:43Z",
+        "username": "Pavan Pamidimarri",
+        "text": "United Provinces",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-25T04:50:07Z",
+        "username": "Akshay",
+        "text": "Correct!",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T04:50:22Z",
+        "username": "Pavan Pamidimarri",
+        "text": "confluence of Ganga and Yamuna, religious diversity",
+        "role": "chat",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T04:50:50Z",
+        "username": "Akshay",
+        "text": "Denotes the sangam at prayagraj. The fish denote Awadh",
+        "role": "answer_reveal",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T04:51:00Z",
+        "username": "Akshay",
+        "text": "Bow and Arrow depicting the Ramayana",
+        "role": "answer_reveal",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-09-25T05:14:14Z",
+    "question_text": "Simple map question.. global presence of? [image: world map showing presence of Costco warehouses across multiple countries]",
+    "question_asker": "Ankit Jain",
+    "has_media": true,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Costco",
+    "answer_solver": "Akshay",
+    "answer_timestamp": "2025-09-25T05:50:18Z",
+    "answer_confirmed": false,
+    "confirmation_text": null,
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-09-25T05:27:23Z",
+        "username": "Khandoba",
+        "text": "Can we get little direction maybe?",
+        "role": "chat",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T05:28:22Z",
+        "username": "Abhishek S",
+        "text": "Like, is this a business/company/brand like I am currently thinking?",
+        "role": "chat",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T05:40:35Z",
+        "username": "Akshay",
+        "text": "Olympics hosts",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T05:45:59Z",
+        "username": "Ankit Jain",
+        "text": "hint: well known brand in the US",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T05:46:41Z",
+        "username": "Akshay",
+        "text": "Target?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T05:47:46Z",
+        "username": "Shubham",
+        "text": "7 11?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T05:48:04Z",
+        "username": "Ankit Jain",
+        "text": "recently celebrated their 43rd birthday",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T05:48:59Z",
+        "username": "Ankit Jain",
+        "text": "was #2 on one of the best places to work once after google",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T05:50:03Z",
+        "username": "Ankit Jain",
+        "text": "another hint.. addictive",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T05:50:18Z",
+        "username": "Akshay",
+        "text": "Or costco",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-25T05:50:35Z",
+        "username": "Ankit Jain",
+        "text": "Costco it is",
+        "role": "chat",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "medium"
+  },
+  {
+    "question_timestamp": "2025-09-25T06:22:57Z",
+    "question_text": "Connect this list (non-exhaustive): Don, Daag, Zanjeer, Majboor, Benaam, Chori mera kaam, Vishwanath, Gambler, Hare Rama Hare Krishna, Johny Mera Naam, Ittefaq.",
+    "question_asker": "Abhishek S",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Films featuring character actor Iftikhar as a police officer/inspector",
+    "answer_solver": "Kartikey Pradhan",
+    "answer_timestamp": "2025-09-25T06:29:52Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Yup :D",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-09-25T06:27:13Z",
+        "username": "Khandoba",
+        "text": "Just to start somewhere, Pran movies?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T06:27:54Z",
+        "username": "Abhishek S",
+        "text": "Wasn't in Ittefaq, for one",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T06:28:26Z",
+        "username": "Shubham",
+        "text": "Something Kapoor related?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T06:28:43Z",
+        "username": "Abhishek S",
+        "text": "Nope",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T06:29:12Z",
+        "username": "Abhishek S",
+        "text": "But this is a pretty old and well-known quizzing funda",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T06:29:29Z",
+        "username": "Ricky",
+        "text": "Movies from the 70s",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T06:29:37Z",
+        "username": "Abhishek S",
+        "text": "Yeah, a little more specific than that",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T06:29:52Z",
+        "username": "Kartikey Pradhan",
+        "text": "Oh Iftikhar as policeman",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-25T06:30:02Z",
+        "username": "Abhishek S",
+        "text": "Yup :D",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T06:31:06Z",
+        "username": "Abhishek S",
+        "text": "Only rivaled by Jagdish Raj",
+        "role": "answer_reveal",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-09-25T08:08:43Z",
+    "question_text": "What's the occasion for this photograph? [image: group photo at Lord's Cricket Ground 200th anniversary celebration, with cricketers including Sachin Tendulkar, Shane Warne, and Aaron Finch visible]",
+    "question_asker": "Abhishek S",
+    "has_media": true,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Lord's Cricket Ground 200th anniversary celebration (a bicentenary match was held with Sachin Tendulkar and Shane Warne as captains)",
+    "answer_solver": "Shiv Ram",
+    "answer_timestamp": "2025-09-25T08:17:47Z",
+    "answer_confirmed": false,
+    "confirmation_text": null,
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-09-25T08:15:33Z",
+        "username": "Kartikey Pradhan",
+        "text": "IPL launch party or something?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T08:17:47Z",
+        "username": "Shiv Ram",
+        "text": "Lords 200 years celebration",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-25T08:18:55Z",
+        "username": "Abhishek S",
+        "text": "Yeah, that's the hidden part in the background. A cricket match was held to celebrate the occasion with Sachin and Warne being captains of the two teams.",
+        "role": "answer_reveal",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "medium"
+  },
+  {
+    "question_timestamp": "2025-09-25T13:52:06Z",
+    "question_text": "6. This kingdom and later princely state is believed to have been founded by the brother of the last Kakatiya king of Warangal. The trishul and moon denote Lord Shiva, possibly referencing the temple dedicated to Goddess Sati located in its largest town, and today the HQ of the district of the same name. [image: flag of the Bastar princely state with trishul and moon symbols]",
+    "question_asker": "Akshay",
+    "has_media": true,
+    "is_session_question": true,
+    "session_quizmaster": "Akshay",
+    "session_theme": "Historical Indian Flags",
+    "session_question_number": 6,
+    "answer_text": "Bastar (princely state, now Bastar district in Chhattisgarh); the town is Dantewada, where Sati's tooth (dant) is said to have fallen",
+    "answer_solver": "Pavan Pamidimarri",
+    "answer_timestamp": "2025-09-25T13:59:20Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Correct!",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-09-25T13:55:25Z",
+        "username": "Pavan Pamidimarri",
+        "text": "Pithapuram?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T13:56:45Z",
+        "username": "Akshay",
+        "text": "Nope, the goddess sati is a hint, expanding further - the temple and the town derives its name from the legend that one of Sati's teeth fell over there.",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T13:58:08Z",
+        "username": "Kartikey Pradhan",
+        "text": "Has to be Dantewada",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T13:58:41Z",
+        "username": "Akshay",
+        "text": "And so the state is?",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T13:58:46Z",
+        "username": "Kartikey Pradhan",
+        "text": "CG?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T13:59:20Z",
+        "username": "Pavan Pamidimarri",
+        "text": "Bastar",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-25T13:59:24Z",
+        "username": "Akshay",
+        "text": "Correct!",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T13:59:49Z",
+        "username": "Akshay",
+        "text": "Bastar is correct, today Bastar district in CG. Their descendants have also been active in politics on both sides of the spectrum",
+        "role": "answer_reveal",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-09-25T14:10:57Z",
+    "question_text": "7. Probably the easiest in this set. ID this princely state, arguably the most powerful pre-independence, very close to the British Raj and a formidable opponent of the Republic of India. [image: flag of Hyderabad state with Nizam's symbol]",
+    "question_asker": "Akshay",
+    "has_media": true,
+    "is_session_question": true,
+    "session_quizmaster": "Akshay",
+    "session_theme": "Historical Indian Flags",
+    "session_question_number": 7,
+    "answer_text": "Hyderabad (Nizam's state)",
+    "answer_solver": "Nikhil Borra",
+    "answer_timestamp": "2025-09-25T14:11:23Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Yess",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-09-25T14:11:23Z",
+        "username": "Nikhil Borra",
+        "text": "Nizam's.",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-25T14:11:34Z",
+        "username": "Pavan Pamidimarri",
+        "text": "Hyderabad",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-25T14:12:02Z",
+        "username": "Akshay",
+        "text": "Yess",
+        "role": "confirmation",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-09-25T14:29:29Z",
+    "question_text": "8. Flag showing what and representing what entity? Today it's known as _______. By way of hint, this symbol has a lot of significance in Indian culture and Hinduism. [image: saffron flag with a lotus symbol, flag of the Bharatiya Jana Sangh (BJS)]",
+    "question_asker": "Akshay",
+    "has_media": true,
+    "is_session_question": true,
+    "session_quizmaster": "Akshay",
+    "session_theme": "Historical Indian Flags",
+    "session_question_number": 8,
+    "answer_text": "Bharatiya Jana Sangh (BJS) flag; today known as the BJP (Bharatiya Janata Party)",
+    "answer_solver": "Meghna",
+    "answer_timestamp": "2025-09-25T14:33:49Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Jan Sangh is correct!",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-09-25T14:30:44Z",
+        "username": "Nikhil Borra",
+        "text": "Hindu Mahasabha and RSS?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T14:31:41Z",
+        "username": "Akshay",
+        "text": "Nope. They were separate orgs, but right track.",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T14:33:36Z",
+        "username": "Ankit Jain",
+        "text": "VHP?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T14:33:49Z",
+        "username": "Meghna",
+        "text": "BJS flag",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-25T14:34:14Z",
+        "username": "Akshay",
+        "text": "Jan Sangh is correct!",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T14:34:57Z",
+        "username": "Meghna",
+        "text": "Technically BJP's predecessor",
+        "role": "chat",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T14:35:13Z",
+        "username": "Akshay",
+        "text": "Yes, that's the blank and would have been the next hint",
+        "role": "answer_reveal",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-09-25T14:38:28Z",
+    "question_text": "9. I have asked this before in another context, but to complete the set. Easy one, erstwhile seal of what? [image: old coat of arms with motto, believed to be the seal of Bombay city]",
+    "question_asker": "Akshay",
+    "has_media": true,
+    "is_session_question": true,
+    "session_quizmaster": "Akshay",
+    "session_theme": "Historical Indian Flags",
+    "session_question_number": 9,
+    "answer_text": "Bombay (old city coat of arms)",
+    "answer_solver": "Meghna",
+    "answer_timestamp": "2025-09-25T14:41:46Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Correct!",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-09-25T14:39:07Z",
+        "username": "Meghna",
+        "text": "Is it Indian navy?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T14:39:34Z",
+        "username": "Meghna",
+        "text": "No wait it's east India company",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T14:39:47Z",
+        "username": "Akshay",
+        "text": "Nope @Lzafeer had cracked it the previous time",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T14:40:01Z",
+        "username": "Akshay",
+        "text": "The motto is a big clue",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T14:41:39Z",
+        "username": "Meghna",
+        "text": "First city in India",
+        "role": "chat",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T14:41:46Z",
+        "username": "Meghna",
+        "text": "Bombay?",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-25T14:41:53Z",
+        "username": "Akshay",
+        "text": "Correct!",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T14:42:27Z",
+        "username": "Akshay",
+        "text": "The city coat of arms, the old one. Today's is different. More modern, and the motto has changed",
+        "role": "answer_reveal",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-09-25T14:50:45Z",
+    "question_text": "10. Easy one to round it off. [image: Mughal standard flag with lion and sun (Sher-o-Khurshid) symbol]",
+    "question_asker": "Akshay",
+    "has_media": true,
+    "is_session_question": true,
+    "session_quizmaster": "Akshay",
+    "session_theme": "Historical Indian Flags",
+    "session_question_number": 10,
+    "answer_text": "Mughal Empire standard (symbol called 'Sher-o-Khurshid')",
+    "answer_solver": "Abhishek Vats",
+    "answer_timestamp": "2025-09-25T14:52:32Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Correct!",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-09-25T14:52:32Z",
+        "username": "Abhishek Vats",
+        "text": "Mughals?",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-25T14:52:56Z",
+        "username": "Akshay",
+        "text": "Correct!",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T14:53:25Z",
+        "username": "Akshay",
+        "text": "The mughal standard, the symbol is called 'Sher-o-Khurshid'",
+        "role": "answer_reveal",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-09-25T15:26:28Z",
+    "question_text": "X and Y were a director-actor duo infamous for their volatile collaborations on five films between 1972 and 1987, including one where Y allegedly threatened X with a gun during production and another involving dragging a steamship over a mountain in the Amazon. X, a prolific filmmaker who once ate his own shoe after losing a bet, is known for his intense documentaries, while Y, a temperamental star with over 130 film credits, reportedly attempted to direct traffic in Rome while naked. Who are X and Y?",
+    "question_asker": "Abhishek S",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "X = Werner Herzog (director), Y = Klaus Kinski (actor)",
+    "answer_solver": null,
+    "answer_timestamp": null,
+    "answer_confirmed": false,
+    "confirmation_text": null,
+    "answer_is_collaborative": false,
+    "answer_parts": [
+      {"label": "X (director)", "text": "Werner Herzog", "solver": "Abhishek Vats"},
+      {"label": "Y (actor)", "text": "Klaus Kinski", "solver": null}
+    ],
+    "discussion": [
+      {
+        "timestamp": "2025-09-25T15:28:48Z",
+        "username": "Abhishek Vats",
+        "text": "Just going by documentaries is it herzog?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T15:31:10Z",
+        "username": "Abhishek S",
+        "text": "Yep, Herzog is X. The actor is German, a frequent collaborator, and one on whom he also made a documentary titled My dear fiend.",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T15:39:25Z",
+        "username": "Shubham",
+        "text": "Hint for the actor?",
+        "role": "chat",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T15:47:04Z",
+        "username": "Abhishek S",
+        "text": "Hint: Pal (Hindi Song)",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T15:48:41Z",
+        "username": "Abhishek S",
+        "text": "Yup, KK is the non-cryptic hint",
+        "role": "hint",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "low"
+  },
+  {
+    "question_timestamp": "2025-09-25T16:00:40Z",
+    "question_text": "This popular children's toy/product was first marketed as a soot remover from walls of the houses. As gas and oil heaters became popular in the 1940s, it fell out of favor and sales started dipping. It got reinvented as the product we know today for art and craft, and is popular globally.",
+    "question_asker": "Prathamesh",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Play-Doh",
+    "answer_solver": "Akshay",
+    "answer_timestamp": "2025-09-25T16:00:50Z",
+    "answer_confirmed": false,
+    "confirmation_text": null,
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-09-25T16:00:50Z",
+        "username": "Akshay",
+        "text": "Playdoh?",
+        "role": "attempt",
+        "is_correct": true
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "medium"
+  },
+  {
+    "question_timestamp": "2025-09-25T16:46:32Z",
+    "question_text": "Talking about United Provinces… this was the name of Uttar Pradesh under British rule. But before it became the name of that region, it was the name of an entirely different country. Which country used to be called United Provinces in the 17th and 18th centuries?",
+    "question_asker": "Pavan Pamidimarri",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "The Netherlands (United Provinces of the Netherlands)",
+    "answer_solver": "Naman Agarwal",
+    "answer_timestamp": "2025-09-25T16:48:30Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Correct! During the American revolution, the United Provinces of the Netherlands helped out with loans to the Americans",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-09-25T16:48:30Z",
+        "username": "Naman Agarwal",
+        "text": "That dutch area? I don't know if it's more countries than Netherlands",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-25T16:52:23Z",
+        "username": "Pavan Pamidimarri",
+        "text": "Correct! During the American revolution, the United Provinces of the Netherlands helped out with loans to the Americans",
+        "role": "confirmation",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-09-25T17:11:28Z",
+    "question_text": "The name UP of India itself is a shortened version, formalized in 1937, from United Provinces of _____ and _____?",
+    "question_asker": "Akshay",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "United Provinces of Agra and Oudh",
+    "answer_solver": "Naman Agarwal",
+    "answer_timestamp": "2025-09-25T17:15:37Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Agra is correct!",
+    "answer_is_collaborative": false,
+    "answer_parts": [
+      {"label": "Province 1", "text": "Agra", "solver": "Naman Agarwal"},
+      {"label": "Province 2", "text": "Oudh (Awadh)", "solver": "Naman Agarwal"}
+    ],
+    "discussion": [
+      {
+        "timestamp": "2025-09-25T17:13:21Z",
+        "username": "Naman Agarwal",
+        "text": "One must be Awadh",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T17:13:44Z",
+        "username": "Naman Agarwal",
+        "text": "Not sure what the West side was called",
+        "role": "chat",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T17:14:12Z",
+        "username": "Akshay",
+        "text": "Getting there",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T17:15:37Z",
+        "username": "Naman Agarwal",
+        "text": "Was Meerut a province? Or Agra maybe",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-25T17:15:51Z",
+        "username": "Akshay",
+        "text": "Agra is correct!",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T17:16:08Z",
+        "username": "Akshay",
+        "text": "UP of Agra and Oudh (their spelling for awadh)",
+        "role": "answer_reveal",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-09-25T17:28:54Z",
+    "question_text": "The capital of British India was ____ until 1911. The capital was shifted to Delhi that year. Before that, Delhi and its surroundings were part of a different province of British India. What was the previous capital, and which province was Delhi part of before it became the capital?",
+    "question_asker": "Pavan Pamidimarri",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Capital was Calcutta (Kolkata); Delhi was part of the Punjab province",
+    "answer_solver": "Dhruv",
+    "answer_timestamp": "2025-09-25T17:29:47Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Correct, Punjab.",
+    "answer_is_collaborative": false,
+    "answer_parts": [
+      {"label": "Previous capital", "text": "Calcutta", "solver": "Dhruv"},
+      {"label": "Province Delhi was in", "text": "Punjab", "solver": "Dhruv"}
+    ],
+    "discussion": [
+      {
+        "timestamp": "2025-09-25T17:29:11Z",
+        "username": "Dhruv",
+        "text": "Kolkata?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T17:29:14Z",
+        "username": "Lzafeer Ahmad B F",
+        "text": "KOlkata",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T17:29:16Z",
+        "username": "Abhishek Vats",
+        "text": "Calcutta",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T17:29:19Z",
+        "username": "Pavan Pamidimarri",
+        "text": "Yes",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T17:29:34Z",
+        "username": "Lzafeer Ahmad B F",
+        "text": "Province.",
+        "role": "chat",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T17:29:34Z",
+        "username": "Pavan Pamidimarri",
+        "text": "Which province was Delhi part of before it became the capital?",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T17:29:47Z",
+        "username": "Dhruv",
+        "text": "Punjab ?",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-25T17:29:55Z",
+        "username": "Lzafeer Ahmad B F",
+        "text": "Yep",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-25T17:30:13Z",
+        "username": "Pavan Pamidimarri",
+        "text": "Correct, Punjab.",
+        "role": "confirmation",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-09-25T19:42:00Z",
+    "question_text": "R.K. Narayan wrote his best-known work _The Guide_ in 1956 during a visit to the United States. It was his first trip outside India, funded by a Rockefeller Fellowship. He wrote the book while living in a university town about which he wrote: \"I have lived under the illusion that I would never have to leave ____. All the friends I seem to have in the world seem to be gathered there.\" Name the town.",
+    "question_asker": "Pavan Pamidimarri",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Berkeley, California",
+    "answer_solver": "Lzafeer Ahmad B F",
+    "answer_timestamp": "2025-09-25T19:46:32Z",
+    "answer_confirmed": false,
+    "confirmation_text": null,
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-09-25T19:43:02Z",
+        "username": "Dhruv",
+        "text": "Cambridge?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T19:43:10Z",
+        "username": "Pavan Pamidimarri",
+        "text": "No",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T19:46:21Z",
+        "username": "Sapan",
+        "text": "Princeton",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T19:46:32Z",
+        "username": "Lzafeer Ahmad B F",
+        "text": "Berkely?",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-25T19:46:33Z",
+        "username": "Khandoba",
+        "text": "Stanford?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T19:46:50Z",
+        "username": "Pavan Pamidimarri",
+        "text": "hint is that _I_ am asking the question",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T19:48:01Z",
+        "username": "Pavan Pamidimarri",
+        "text": "i found a bunch of unique Berkeley and India connections over the years I have lived here, will keep asking questions about them here",
+        "role": "answer_reveal",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "medium"
+  },
+  {
+    "question_timestamp": "2025-09-25T19:56:28Z",
+    "question_text": "This is a photo of a politician in chains taken during India's Emergency in 1976. This photo was published in international media including _Time_ magazine and became a symbol of a country in chains. This politician went on to serve as the union minister for industry, railways, and defense under different prime ministers. He spoke Konkani, Tulu, Kannada, Tamil, Malayalam, Hindi, Marathi, and English, and was elected five times to the Lok Sabha from the Muzaffarpur constituency in Bihar. Name him. [image: politician in chains, Emergency era India 1976]",
+    "question_asker": "Pavan Pamidimarri",
+    "has_media": true,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "George Fernandes",
+    "answer_solver": "Lzafeer Ahmad B F",
+    "answer_timestamp": "2025-09-25T19:56:35Z",
+    "answer_confirmed": false,
+    "confirmation_text": null,
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-09-25T19:56:35Z",
+        "username": "Lzafeer Ahmad B F",
+        "text": "George Fernandes",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-25T19:59:41Z",
+        "username": "Lzafeer Ahmad B F",
+        "text": "The 1976 arrest was the dynamite conspiracy IIRC. Some plan about blowing up a train or looting a train carrying dynamite.",
+        "role": "chat",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T20:00:16Z",
+        "username": "Dhruv",
+        "text": "MoD under AB Vajpayee govt",
+        "role": "chat",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "medium"
+  },
+  {
+    "question_timestamp": "2025-09-25T21:40:44Z",
+    "question_text": "He is considered the most important Buddhist philosopher after the Buddha himself. He founded the _mAdhyamaka_ (\"middle way\") school of _mahAyAna_ (\"great vehicle\") Buddhism. His influence on Buddhist philosophy is greater than that of Adi Shankara on Hindu philosophy. Little is known reliably about his personal life, as the only extant biographies are in Chinese and Tibetan, and were written centuries after his death. Some sources say he served as the head of the university at nAlanda. Independent India named a university and a dam after him. Who is he?",
+    "question_asker": "Pavan Pamidimarri",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Nagarjuna (Buddhist philosopher; Nagarjuna Sagar dam and Nagarjuna University named after him)",
+    "answer_solver": "Meghna",
+    "answer_timestamp": "2025-09-25T22:26:25Z",
+    "answer_confirmed": false,
+    "confirmation_text": null,
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-09-25T22:03:45Z",
+        "username": "Khandoba",
+        "text": "This is a Chinese traveller to India right? So the name should be Chinese?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T22:03:55Z",
+        "username": "Akshay",
+        "text": "Most of the chinese and japanese icons are Indian",
+        "role": "chat",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T22:04:02Z",
+        "username": "Akshay",
+        "text": "I am going to say bodhidharma?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T22:19:41Z",
+        "username": "Akshay",
+        "text": "Nagarjuna was a buddhist saint I dunno if it is this though",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T22:26:25Z",
+        "username": "Meghna",
+        "text": "Nagarjuna should be it I think.",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-25T22:31:47Z",
+        "username": "Pavan Pamidimarri",
+        "text": "Nagarjuna is the most influential Buddhist philosopher",
+        "role": "answer_reveal",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T22:32:07Z",
+        "username": "Pavan Pamidimarri",
+        "text": "founded the Madhyamika school",
+        "role": "answer_reveal",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T22:32:20Z",
+        "username": "Pavan Pamidimarri",
+        "text": "Nagarjuna Sagar and Nagarjuna University are named after him",
+        "role": "answer_reveal",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "medium"
+  },
+  {
+    "question_timestamp": "2025-09-25T22:44:39Z",
+    "question_text": "This is a funny play on words of what phrase originally said by Leonidas to Xerxes at the Battle of Thermopylae, and also referenced in the movie 300. It symbolizes freedom, defiance and resistance against tyranny. Bonus pts for the original Greek phrase. [image: sign or item reading 'Come and mow it' — a play on 'Come and take it' / 'Molon Labe']",
+    "question_asker": "Akshay",
+    "has_media": true,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Come and take it (original Greek: Molon Labe — said by Leonidas at Thermopylae, used by 2A advocates in the US)",
+    "answer_solver": "Khandoba",
+    "answer_timestamp": "2025-09-25T22:56:20Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Come and take it is correct",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-09-25T22:55:10Z",
+        "username": "Khandoba",
+        "text": "Come and test it?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T22:56:20Z",
+        "username": "Khandoba",
+        "text": "Or take it?",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-25T22:59:32Z",
+        "username": "Akshay",
+        "text": "Come and take it is correct",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T23:00:45Z",
+        "username": "Akshay",
+        "text": "Leonidas is believed to have said 'molon labe' which is 'come and take them' in the context of surrendering",
+        "role": "answer_reveal",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-09-25T23:21:27Z",
+    "question_text": "Historical kingdom, today an Indian state. The symbol here is the 'pakhangba' a mythical dragon snake in the mythology of the ______ ppl of this state. You will find statues and symbols in the state capital, and even in Republic Day floats. [image: flag of Kingdom of Manipur with pakhangba (mythical dragon-snake) symbol]",
+    "question_asker": "Akshay",
+    "has_media": true,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Manipur (Kingdom of Manipur); the people are the Meitei",
+    "answer_solver": "Srikanth Kapali",
+    "answer_timestamp": "2025-09-25T23:23:35Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Correct!",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-09-25T23:22:33Z",
+        "username": "Srikanth Kapali",
+        "text": "Nagaland (Naga)",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-25T23:22:41Z",
+        "username": "Akshay",
+        "text": "Nope",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T23:23:18Z",
+        "username": "Khandoba",
+        "text": "But it will be some other northeastern state",
+        "role": "chat",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T23:23:20Z",
+        "username": "Akshay",
+        "text": "Hint: one of the blanks refers to a group of ppl that have their own form of vaishnavism too",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T23:23:35Z",
+        "username": "Srikanth Kapali",
+        "text": "Manipur meitei",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-25T23:23:38Z",
+        "username": "Akshay",
+        "text": "Correct!",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T23:23:51Z",
+        "username": "Akshay",
+        "text": "This is the flag of the Kingdom of Manipur",
+        "role": "answer_reveal",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-09-25T23:29:25Z",
+    "question_text": "Historical kingdom and now an Indian state. Which ancient kingdom does this flag represent? Bonus points for the name of the creature. [image: flag with a mythical lion-dragon hybrid (Ngi Ngao Kham), flag of the Ahom Kingdom of Assam]",
+    "question_asker": "Srikanth Kapali",
+    "has_media": true,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Ahom Kingdom (of Assam); the creature is the 'Ngi Ngao Kham', a mythical lion-dragon hybrid",
+    "answer_solver": "Akshay",
+    "answer_timestamp": "2025-09-25T23:43:55Z",
+    "answer_confirmed": false,
+    "confirmation_text": null,
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-09-25T23:34:23Z",
+        "username": "Prathamesh",
+        "text": "The creature reminds me of the flag of Sri Lanka",
+        "role": "chat",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-25T23:43:55Z",
+        "username": "Akshay",
+        "text": "Ahoms?",
+        "role": "attempt",
+        "is_correct": true
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "medium"
+  },
+  {
+    "question_timestamp": "2025-09-25T23:57:04Z",
+    "question_text": "Not much remarkable about this flag, except that it has the typical red-yellow color combination common to most Hindu kingdoms due to its auspiciousness in Hinduism, and the sun symbol denotes the claimed suryavanshi lineage, again common for kshatriya kingdoms. This used to be a princely state in Eastern India. The reason I know this flag is because I went down a rabbit hole after learning Moon Moon Sen and her daughters Riya and Raima Sen are descended from this royal family. Which one? [image: red and yellow flag with sun symbol, flag of the Cooch Behar princely state]",
+    "question_asker": "Akshay",
+    "has_media": true,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Cooch Behar (princely state in West Bengal; Maharani Gayatri Devi was also a princess of Cooch Behar)",
+    "answer_solver": null,
+    "answer_timestamp": null,
+    "answer_confirmed": false,
+    "confirmation_text": null,
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-09-25T23:59:50Z",
+        "username": "Pavan Pamidimarri",
+        "text": "Tripura",
+        "role": "attempt",
+        "is_correct": false
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "low"
+  }
+]

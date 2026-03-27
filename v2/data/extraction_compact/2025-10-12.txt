@@ -1,0 +1,1536 @@
+[2025-10-12T01:22:31Z] Akshay: Who is the WI batsman? ‎<This message was edited>
+[2025-10-12T01:22:46Z] Akshay: Chris Gayle?
+[2025-10-12T01:22:54Z] Shubham: Yes.
+[2025-10-12T01:23:02Z] Shubham: Christopher Henry Gayle.
+[2025-10-12T07:15:46Z] Ryan Colaço: Quick debut question from me. Simple fill in the blanks. Extremely loose overarching theme: ↵ 1. Isaac Asimov, Short stories like "Liar" and "Runabout" (1942): _________ ↵ 2. John McCarthy, his 1956 Dartmouth Conference Proposal :   _______ ________ ↵ 3. Auguste Villiers de l'Isle-Adam, Novel, Tomorrow's Eve (1886): ____________ ↵ 4. Neal Stephenson, Novel, Snow Crash (1992): _______________ ↵ 5. Robert A. Heinlein, Novel, Stranger in a Strange Land (1961): _________
+[2025-10-12T07:19:53Z] Khandoba: Utopia?
+[2025-10-12T07:21:42Z] Ryan Colaço: In the rightish direction ↵ Hint to set you on the right path: ↵ Karel Čapek, Rossum's universal robots (1920) : *_Robot_*
+[2025-10-12T07:22:19Z] Saara: AI is the theme?
+[2025-10-12T07:22:38Z] Ryan Colaço: Author, Work: ___commonly known term popularized____ ‎<This message was edited>
+[2025-10-12T07:22:42Z] Saara: I know Asimov wrote The Fun They Had about personalised AI education
+[2025-10-12T07:23:04Z] Abhishek S: Did these words introduce a word for the first time like Robot in the hint you gave?
+[2025-10-12T07:23:18Z] Ryan Colaço: Exactly
+[2025-10-12T07:23:28Z] Abhishek S: So all blanks are different?
+[2025-10-12T07:24:12Z] Ryan Colaço: Umm yeah, kinda ↵ That's why I said "extremely loose" ↵ Predominantly a fill in each blank question
+[2025-10-12T07:24:20Z] Khandoba: And we have to guess all 5 blanks, not just the theme
+[2025-10-12T07:24:24Z] Khandoba: Ok ok got it
+[2025-10-12T07:24:54Z] Ryan Colaço: Sorry ↵ I should have framed it better ↵ Just trying to transmit some recent interesting lurn-ings
+[2025-10-12T07:25:13Z] Abhishek S: Asimov: Artificial Intelligence?
+[2025-10-12T07:25:37Z] Abhishek S: I assume all answers are all tied in some mysterious way as well?
+[2025-10-12T07:25:46Z] Khandoba: Asimov: Robot ↵ Mccarthy: artificial intelligence
+[2025-10-12T07:26:26Z] Khandoba: There’s a loose overarching theme to them
+[2025-10-12T07:27:32Z] Nikunj: Could be all related to computing/social media terms
+[2025-10-12T07:29:12Z] Ryan Colaço: close... ↵ Asimov has done a lot of work in coining "novums" (concepts that are mentioned in science fiction.. That end up becoming a popularly understood word and better defined concept later, for the rest of the world)
+[2025-10-12T07:29:58Z] Ryan Colaço: Okay theme is that... ↵ Basically... Kinda just progressively more "in vogue or popular discussion" tech terms
+[2025-10-12T07:31:47Z] Ryan Colaço: @⁨~Khandoba⁩ gets 2. ↵ The term artificial intelligence (AI) was coined and effectively popularized by American computer scientist John McCarthy. ↵ While others like Alan Turing had previously worked on the concept of "thinking machines," McCarthy gave the field its enduring name and formal identity. ↵ He coined it in his workshop proposal in 1955 for an academic conference. He felt other terms in use, like "cybernetics" or "automata theory," were too restrictive.
+[2025-10-12T07:32:31Z] Ryan Colaço: Hints: ↵ For 5, think DOGE
+[2025-10-12T07:33:18Z] Abhishek S: Cryptocurrency
+[2025-10-12T07:33:20Z] Khandoba: I’d say Cryptography but the word seems older than that
+[2025-10-12T07:35:53Z] Ryan Colaço: Think person + DOGE+ recent AI-related work
+[2025-10-12T07:36:05Z] Khandoba: Grok?
+[2025-10-12T07:38:52Z] Ryan Colaço: @⁨~Khandoba⁩ is leading with 2/5
+[2025-10-12T07:39:05Z] Ryan Colaço: The connecting overarching theme for your list is *fictional concepts and terminology that became reality* . ↵  All the terms originated either in science fiction literature or as highly speculative concepts that have since become concrete, commercially relevant technological fields or products:
+[2025-10-12T07:39:20Z] Khandoba: I mean the hint was very obvious here😅
+[2025-10-12T07:39:40Z] Abhishek S: Similar hints for others, please 😬
+[2025-10-12T07:39:40Z] Ryan Colaço: Hey! ↵ 2 points are 2 points, man
+[2025-10-12T07:39:52Z] Khandoba: Is one of them singularity?
+[2025-10-12T07:40:28Z] Abhishek S: I get the theme here, from Grok, so I'm gonna guess one of them is Metaverse
+[2025-10-12T07:40:34Z] Khandoba: I’d say virtual reality is one
+[2025-10-12T07:42:23Z] Ryan Colaço: Okay for 4 ↵ - ↵ Mark's $36billion failed bid that at least gave us good VR
+[2025-10-12T07:42:34Z] Khandoba: Oculus
+[2025-10-12T07:42:46Z] Ryan Colaço: Oh.. ↵ That's 4 cracked!
+[2025-10-12T07:43:08Z] Ryan Colaço: Metaverse ↵ 3/5 done
+[2025-10-12T07:43:33Z] Abhishek S: Yeah that's what I was guessing it could be since it can't be the 1886 one
+[2025-10-12T07:43:45Z] Ryan Colaço: The list, as you see, is a bit chronological ↵ In terms of when these terms picked up in popularity
+[2025-10-12T07:44:10Z] Abhishek S: Is 3 Android?
+[2025-10-12T07:44:21Z] Ryan Colaço: Ding ding ding
+[2025-10-12T07:44:25Z] Ryan Colaço: 4/5
+[2025-10-12T07:44:35Z] Sidhesh K K: Which one is left
+[2025-10-12T07:44:55Z] Sidhesh K K: I'm trying to jump into a moving train
+[2025-10-12T07:45:14Z] Ryan Colaço: Just the first ↵ But again ↵ Remember I'm a shitty q-framer (I'm now realising) ↵ So that one is not a brand name
+[2025-10-12T07:45:24Z] Ryan Colaço: Like 2 was not either... It's a concept
+[2025-10-12T07:45:48Z] Khandoba: So Asimov is left?
+[2025-10-12T07:46:44Z] Sidhesh K K: Khandoba had mentioned robot/robotics right?
+[2025-10-12T07:46:59Z] Khandoba: Yeah but that’s probably not it
+[2025-10-12T07:47:03Z] Abhishek S: Yeah, since Robot origin is already someone else
+[2025-10-12T07:47:11Z] Sidhesh K K: Hmmm
+[2025-10-12T07:47:25Z] Abhishek Vats: Isn't the answer in the question ? 🙈
+[2025-10-12T07:47:26Z] Ryan Colaço: Shit
+[2025-10-12T07:47:33Z] Abhishek Vats: I mean a part of it 😅
+[2025-10-12T07:47:40Z] Ryan Colaço: Sorry i missed Khandoba's guess
+[2025-10-12T07:47:46Z] Ryan Colaço: Robotics, is right!!!
+[2025-10-12T07:47:47Z] Ryan Colaço: Although the term "robot" originated in 1920 from the Czech word robota (meaning "drudgery" or "forced labor") in Karel Čapek's play R.U.R., the dedicated field of study was not yet named. The term robotics was subsequently coined two decades later in 1941 by science fiction author Isaac Asimov, simply to describe the science and technology dealing with robots.
+[2025-10-12T07:48:34Z] Ryan Colaço: 5/5 ↵ Lurn for me... Do this on a laptop. ↵ Damn.. hard to keep up with a phone keyboard
+[2025-10-12T07:48:51Z] Khandoba: Fun questions
+[2025-10-12T07:49:19Z] Abhishek Vats: Aise na bole paijaan 😅
+[2025-10-12T07:49:30Z] Ryan Colaço: Points for everyone
+[2025-10-12T07:49:42Z] Abhishek S: Yeah, it was all TIL, could only get to the answers through guessing 😬
+[2025-10-12T07:49:53Z] Khandoba: Hoping to continue this performance (without the hints) in the quiz 6 hours from now (I’m gonna be sleep deprived af)
+[2025-10-12T07:50:15Z] Sidhesh K K: Coffeee coffee coffee
+[2025-10-12T07:50:17Z] Abhishek Vats: Don't have coffee and sleep. 😂
+[2025-10-12T07:50:46Z] Ryan Colaço: Yeah ↵ I only wanted to share the rabbithole I recently went down... That novums are a whole genre of things
+[2025-10-12T07:50:51Z] Abhishek Vats: Also if you're having coffee, let me know I will pace my drinking accordingly 😂🙈
+[2025-10-12T07:51:04Z] Khandoba: Do you mean ↵ 1. Don’t have coffee ↵ 2. ⁠sleep ↵ Or ↵ 1. Don’t have coffee ↵ 2. ⁠don’t have sleep ↵ ?
+[2025-10-12T07:51:17Z] Abhishek Vats: Hahhahahhah 😂
+[2025-10-12T07:51:30Z] Abhishek Vats: Let me know whichever option you are choosing
+[2025-10-12T07:51:40Z] Abhishek Vats: It might have a butterfly effect 😂
+[2025-10-12T07:51:53Z] Khandoba: No I gotta sleep, I’m going against Pavan
+[2025-10-12T07:52:08Z] Khandoba: Ideally I should study 😅
+[2025-10-12T07:52:08Z] Ryan Colaço: Drink thums up... Do toofani ↵ There's always another option
+[2025-10-12T07:52:38Z] Abhishek S: Some of these are popular quiz questions of old - like origins of Robot and Android, but it's tough to remember the sci-fi authors names and works if you're not a sci-fi fan. Except for Asimov, none of those other names are committed to memory for me, even now after reading the questions just a few minutes ago 🙈😂
+[2025-10-12T07:53:22Z] Abhishek Vats: Hail Mary ! 😅
+[2025-10-12T07:53:51Z] Khandoba: Like Neal Stephenson was saved in some corner of the mind but no recall
+[2025-10-12T07:54:23Z] Ryan Colaço: Haan.. next time I want to share some new lurn-ings I'm going to not  try to force frame it as a question ↵ Or .. will do it after my morning coffee+on a laptop at least
+[2025-10-12T07:54:49Z] Khandoba: Please do the latter
+[2025-10-12T07:54:57Z] Sidhesh K K: Or in Gopal Dutts words.. try a JigarBomb.. it's a gamble how the caffeine and alcohol workd
+[2025-10-12T07:55:22Z] Ryan Colaço: What is this wondrous thing I've never heard of
+[2025-10-12T07:55:23Z] Abhishek S: Aditi's questions are great and quite workable. I'm quite looking forward to watching it just as an audience, it's going to be great to participate, mate. And you will do great. ↵ Unless you want to sleep for longer and give it a skip, and if so, can I take you spot, please 😂
+[2025-10-12T07:55:43Z] Khandoba: GD is is GD legend!
+[2025-10-12T07:56:27Z] Abhishek Vats: It will be a great quiz for sure. I am still using the "Pichle saath dino mein" question to get people into quizzing 😅
+[2025-10-12T07:56:38Z] Khandoba: Aisa Mai Kisi ka saath favouritism nahi kar sakta
+[2025-10-12T07:57:17Z] Khandoba: That was a great question to share with non-quizzing friends
+[2025-10-12T08:03:30Z] Ryan Colaço: Chalo..  @⁨~Khandoba⁩ so gaya... So, ↵ As warm up for his competitors to get an unfair advantage... ↵ One more question coming up
+[2025-10-12T08:03:33Z] Ryan Colaço: (This time used gemini to help polish my rough idea for the question..so, hopefully, a better quality one)
+[2025-10-12T08:04:33Z] Ryan Colaço: In the 11th century, a *renowned ruler from the Paramara dynasty* governed the Malwa region, famed as a scholar-king, builder, and patron of the arts. ↵ Centuries later, his name appeared in a *popular Hindi idiom* -used to express a stark contrast between two people or things. Curiously, the idiom's oldest recorded uses are found in Hindi and Marathi folk speech, not in classical Sanskrit or early medieval texts, suggesting it emerged long after his reign. ↵ One of the *cities he founded* still carries his name today. ↵ Name this king, the idiom he inspired, and the modern city that preserves his legacy? ‎<This message was edited>
+[2025-10-12T08:05:27Z] Sidhesh K K: Kahaan raja bhoj kahaan gangu teli?
+[2025-10-12T08:06:05Z] Ryan Colaço: Home run on first attempt ✨
+[2025-10-12T08:06:07Z] Tapish: Raja Bhoj, Kahaan Raja Bhoj Kahaan Gangu Teli, Bhopal?
+[2025-10-12T08:06:30Z] Ryan Colaço: Yes yes!! ↵ Perfection
+[2025-10-12T08:07:55Z] Ryan Colaço: The only reason I got here is because @⁨~Abhishek S⁩ sent me on an "obscure songs from the 00s" treasure hunt ↵ https://youtu.be/_8wCdjGaJW4?si=k5_tVRaCnjSxM4k8 ↵ And I refuse to suffer this earworm alone ↵ You're all very welcome
+[2025-10-12T08:08:41Z] Tapish: Dulhe Raja ❤️
+[2025-10-12T08:12:23Z] Abhishek S: This movie and all its songs 🔥 https://youtu.be/PmWDxFFGeNg?si=QFd6nLQx8xu4b1qT
+[2025-10-12T08:17:59Z] Farhan: The movie 🔥 was hoping someone mentioned this on the bollywood quiz. One of the GOAT Govinda movies
+[2025-10-12T08:19:07Z] Abhishek S: Exactly what I said when rewatching with my family today
+[2025-10-12T08:20:20Z] Ryan Colaço: Can we make a letterboxd type list of movies where Anupam Kher plays an overly enthusiastic (and pretty inappropriate) member of staff in an academic institution? ↵ Can already see this + Kuch Kuch hota hai + Mohabbatein  in it
+[2025-10-12T08:23:44Z] Abhishek S: There was this rehash of Shaagird (Joy Mukharjee movie from the 60s) which starred Anupam Kher as a lecherous Professor with Rishi Kapoor and Urmila in the movie. Can't recall the name.
+[2025-10-12T08:24:25Z] Abhishek S: Shreeman Ashique is the title. So we can add that to the list.
+[2025-10-12T08:28:45Z] Ryan Colaço: Was he also similar in student of the year? Or am I mixing him up with someone else?
+[2025-10-12T08:34:57Z] Tapish: Rishi Kapoor
+[2025-10-12T08:36:25Z] Ryan Colaço: Ah!
+[2025-10-12T08:37:05Z] Sidhesh K K: There was aabra ka daabra too
+[2025-10-12T12:56:56Z] Abhishek S: X was a pioneer of the modern Hindi ghazal, infusing it with sharp critiques of political corruption and calls for social rebellion during the turbulent 1970s Emergency era, while working as a scriptwriter for All India Radio. X's lines from a revolutionary poem urging systemic change were chanted by Arvind Kejriwal during the 2011 Indian anti-corruption movement. ID X.
+[2025-10-12T12:57:45Z] Saara: Was it JP Narayan by any chance
+[2025-10-12T12:57:52Z] Abhishek Vats: Hum dekhenge ?
+[2025-10-12T12:58:09Z] Abhishek Vats: Faiz?
+[2025-10-12T12:58:23Z] Abhishek S: Nope, proper poet.
+[2025-10-12T12:58:44Z] Abhishek S: Nope. Wrong country's emergency 😬😁
+[2025-10-12T12:58:50Z] Kartikey Pradhan: Ramdhari singh dinkar
+[2025-10-12T12:58:51Z] Kartikey Pradhan: Singhasan
+[2025-10-12T12:58:57Z] Kartikey Pradhan: Khaali karo junta aati hai
+[2025-10-12T12:59:16Z] Abhishek Vats: My bad for jumping the gun again 😂
+[2025-10-12T12:59:19Z] Abhishek S: Nope.
+[2025-10-12T13:01:12Z] Kartikey Pradhan: Oh wait
+[2025-10-12T13:01:17Z] Kartikey Pradhan: Hum honge kaamyab?
+[2025-10-12T13:01:44Z] Abhishek S: The poem in question that was sung by Arvind Kejriwal is the right way to get at this so I'll give more hints on the same
+[2025-10-12T13:02:14Z] Abhishek S: Nope, not that one. He sang a lot for an out of tune non singer, didn't he 😂
+[2025-10-12T13:02:19Z] Saara: Harivansh rai Bachchan?
+[2025-10-12T13:02:22Z] Kartikey Pradhan: Lmao
+[2025-10-12T13:02:49Z] Saara: Agneepath?
+[2025-10-12T13:02:50Z] Abhishek S: The poem talks of a mountain of agony that needs to be melted
+[2025-10-12T13:03:16Z] Dhruv: Do we have link for today per chance?
+[2025-10-12T13:03:38Z] Kartikey Pradhan: Gham ki shaam magar shaam hi toh hai…?
+[2025-10-12T13:04:13Z] Abhishek S: In an hour, I suppose? We are all eagerly waiting for it, I'm sure 😂 But I understand you would be extra eager 😀 Best of luck!
+[2025-10-12T13:04:23Z] Abhishek S: Nope.
+[2025-10-12T13:04:36Z] Abhishek S: Last hint, which will be the most direct - Masaan
+[2025-10-12T13:04:44Z] Kartikey Pradhan: Aye
+[2025-10-12T13:05:09Z] Kartikey Pradhan: Duhsyant kimar
+[2025-10-12T13:05:26Z] Abhishek S: Dushyant Kumar is correct.
+[2025-10-12T13:05:41Z] Akshay: Dushyant Kumar Tyagi?
+[2025-10-12T13:06:10Z] Akshay: Something parvat jaisa
+[2025-10-12T13:06:12Z] Akshay: Or something
+[2025-10-12T13:06:24Z] Abhishek S: Incidentally he died six months after the declaration of emergency due to a sudden heart attack. At 42.
+[2025-10-12T13:06:28Z] Kartikey Pradhan: Mashaal jalni chahiye something
+[2025-10-12T13:06:31Z] Abhishek S: https://youtu.be/eSyWUsAS1_k?si=xll8LLaxQ6nnqc3v
+[2025-10-12T13:06:32Z] Tapish: Hogayi hai peer parvat si ‎<This message was edited>
+[2025-10-12T13:07:53Z] Abhishek S: This is a terrible tune. The ghazal is fantastic. I sing it to myself many a time, but in a tune of my own like all things 🤣
+[2025-10-12T13:08:38Z] Abhishek S: हो गई है पीर पर्वत-सी पिघलनी चाहिए, ↵ इस हिमालय से कोई गंगा निकलनी चाहिए। ↵ आज यह दीवार, परदों की तरह हिलने लगी, ↵ शर्त लेकिन थी कि ये बुनियाद हिलनी चाहिए। ↵ हर सड़क पर, हर गली में, हर नगर, हर गाँव में, ↵ हाथ लहराते हुए हर लाश चलनी चाहिए। ↵ सिर्फ हंगामा खड़ा करना मेरा मकसद नहीं, ↵ सारी कोशिश है कि ये सूरत बदलनी चाहिए। ↵ मेरे सीने में नहीं तो तेरे सीने में सही, ↵ हो कहीं भी आग, लेकिन आग जलनी चाहिए।
+[2025-10-12T13:11:41Z] Akshay: Awesome Q. Both Snowcrash and Stranger in a.. are novels i re read frequently. Also Stephenson’s ‘Diamond Age’ is a must read, predicted AI-based chatbots 25 y before chatgpt. His latest series ‘Polostan’ is also a riveting read
+[2025-10-12T13:18:37Z] Shubhankar: @⁨Aditi Bapat⁩ ma’am I don’t think I’ll be able to make it in time for the quiz 🥲 ↵ Really sorry for backing out at the last moment 🥹
+[2025-10-12T13:20:54Z] Aditi Bapat: No worries Shubhankar! @⁨Kartikey Pradhan⁩ next tribute if he can still make it. Or anyone else who's on the zoom today 😊 ‎<This message was edited>
+[2025-10-12T13:21:16Z] Aditi Bapat: And what's with everyone calling me ma'am? 😶
+[2025-10-12T13:22:52Z] Abhishek S: Dang it, I really needed to put myself in the queue in time!
+[2025-10-12T13:23:37Z] Aditi Bapat: Will send the Zoom link in a minute once I've woken up a little bit
+[2025-10-12T13:25:44Z] Abhishek Vats: Need to be awake at US timings for the polls for that unless the quiz is being hosted by @⁨~Pavan Pamidimarri⁩ @⁨~Khandoba⁩ or @⁨Akshay⁩
+[2025-10-12T13:25:47Z] Kartikey Pradhan: Yes, i can make it
+[2025-10-12T13:26:01Z] Abhishek Vats: Because I think they work 24x7
+[2025-10-12T13:26:02Z] Abhishek Vats: 😅
+[2025-10-12T13:26:43Z] Pavan Pamidimarri: Or not at all
+[2025-10-12T13:31:48Z] Kartikey Pradhan: All it took was one Rajpal yadav gif
+[2025-10-12T13:33:15Z] Khandoba: Sorry ma’am
+[2025-10-12T13:35:04Z] Khandoba: 🤫
+[2025-10-12T13:36:15Z] Pavan Pamidimarri: But very memorable one. I can still see it
+[2025-10-12T13:36:31Z] Khandoba: Galat ho raha hai ye, ek toh im already feeling like Gangu Teli in the panel
+[2025-10-12T13:38:16Z] Akshay: Just finished watching (or listening to*) the latest kviz show ‎<This message was edited>
+[2025-10-12T13:38:22Z] Pavan Pamidimarri: Arre, you won the live Kviz in your debut
+[2025-10-12T13:38:27Z] Abhishek S: Nah, I'm sure the addition of you and @⁨Kartikey Pradhan⁩ to the quiz is going to make this super competitive and fun for us who'll be watching
+[2025-10-12T13:38:45Z] Abhishek Vats: Back to back 😅
+[2025-10-12T13:38:58Z] Abhishek Vats: The defending champion when no one could 😅
+[2025-10-12T13:39:12Z] Abhishek S: And answering in this chat, I presume
+[2025-10-12T13:39:14Z] Akshay: Great job abhishek and sis! Super fun episode, again only one Q that passed. Dhadkan 🤣
+[2025-10-12T13:39:25Z] Abhishek Vats: So @⁨~Khandoba⁩ you are the undefeated champ 😅
+[2025-10-12T13:39:49Z] Naman Agarwal: The quiz is
+[2025-10-12T13:39:52Z] Naman Agarwal: Over?
+[2025-10-12T13:40:22Z] Khandoba: Only because Magnus stopped defending 🤣
+[2025-10-12T13:40:44Z] Abhishek S: So is @⁨~Pavan Pamidimarri⁩ from the last episode. And @⁨Kartikey Pradhan⁩ won the Buzzing dry run the last time he was on one
+[2025-10-12T13:40:45Z] Khandoba: No, at 7 AM PT ‎<This message was edited>
+[2025-10-12T13:41:13Z] Abhishek Vats: Like undertaker. Only thing is you have Brock Lesnar, john cena and Randy Orton in a fatal four way to ight 😅
+[2025-10-12T13:41:15Z] Naman Agarwal: Oh great
+[2025-10-12T13:41:29Z] Pavan Pamidimarri: Oh I better get out of bed and make some coffee
+[2025-10-12T13:41:47Z] Abhishek Vats: @⁨~Pavan Pamidimarri⁩ last time glenn worked 😅
+[2025-10-12T13:42:18Z] Abhishek Vats: Trust the process as @⁨~Dhruv⁩  and @⁨~Ryan Colaço⁩ would say 😅
+[2025-10-12T13:42:26Z] Khandoba: If only it wasn’t 6.45 in the morning
+[2025-10-12T13:42:42Z] Abhishek Vats: Sunday 😅
+[2025-10-12T13:43:04Z] Khandoba: Didn’t think of that, hmm🤔
+[2025-10-12T13:43:25Z] Abhishek Vats: Humra toh almost Monday is here 😅
+[2025-10-12T13:43:52Z] Abhishek Vats: Also @⁨Aditi Bapat⁩ permission to steal questions please 😅
+[2025-10-12T13:44:22Z] Aditi Bapat: I thought I was trying to include as many timezones as possible, but everyone ended up being from the US😶
+[2025-10-12T13:44:38Z] Aditi Bapat: Absolutely. 🙌🏽
+[2025-10-12T13:45:57Z] Abhishek S: Was it a Random generator or an Ayn Rand-om generator
+[2025-10-12T13:47:14Z] Akshay: Who is this guy?
+[2025-10-12T13:47:31Z] Kartikey Pradhan: Salman Khan from Kuch Kuch Hota Hai
+[2025-10-12T13:47:46Z] Kartikey Pradhan: Does everything right, gets nothing
+[2025-10-12T13:48:24Z] Tapish: Arteta, first of his name, creator of processes, lord of haram ball,  trusted by many
+[2025-10-12T13:48:55Z] Tapish: No offence to the Gunners btw 😂 just a joke
+[2025-10-12T13:49:12Z] Aditi Bapat: It was truly a random generator, hence Pavan being selected. 😛 ↵ Varna everyone in the group will agree with me when I say 'tum rehnedo' to the Abhisheks 😏
+[2025-10-12T13:49:13Z] Abhishek S: @⁨Akshay⁩ shedding a tear for the disparagement to Ayn Rand 😂🤣?
+[2025-10-12T13:50:05Z] Kartikey Pradhan: Pavan makes it through random generators also
+[2025-10-12T13:50:08Z] Kartikey Pradhan: What the hell Pavan
+[2025-10-12T13:52:49Z] Akshay: No no as in sad about outcome
+[2025-10-12T13:53:00Z] Akshay: No bhartiya reprezentation
+[2025-10-12T13:53:10Z] Akshay: I mean there was but not now
+[2025-10-12T13:53:48Z] Abhishek Vats: Modiji asked us to share internet so couldn't connect in time
+[2025-10-12T13:56:01Z] Kartikey Pradhan: Kabhi shuru karne ka hai, ma’am?
+[2025-10-12T13:57:02Z] Aditi Bapat: https://pheast.zoom.us/j/82821025253?pwd=pcEuEhxAbPe31panbY6EppZj4VFSU9.1
+[2025-10-12T13:57:09Z] Aditi Bapat: Here we go
+[2025-10-12T13:57:33Z] Akshay: acting na kare paijaan, mr amazon ko zeb nahin deti
+[2025-10-12T13:57:42Z] Akshay: I used the correct urdu word 🤣
+[2025-10-12T13:57:58Z] Khandoba: I’ll be there in a minute
+[2025-10-12T13:59:47Z] Pavan Pamidimarri: joining now
+[2025-10-12T14:05:46Z] Lzafeer Ahmad B F: Catamaran
+[2025-10-12T14:06:17Z] Naman Agarwal: Oh we are answering here
+[2025-10-12T14:06:31Z] Lzafeer Ahmad B F: Haan. Otherwise it’ll pop on their zoom chat
+[2025-10-12T14:07:48Z] Tapish: Psycho
+[2025-10-12T14:07:48Z] Abhishek Vats: Shining
+[2025-10-12T14:07:51Z] Abhishek S: The shining
+[2025-10-12T14:07:51Z] Naman Agarwal: Shining
+[2025-10-12T14:07:55Z] Lzafeer Ahmad B F: Shining
+[2025-10-12T14:07:55Z] Tapish: Shining yes
+[2025-10-12T14:08:12Z] Abhishek Vats: And the twins running around
+[2025-10-12T14:08:13Z] Naman Agarwal: Muskuraahat ki 'Chamkaan'
+[2025-10-12T14:08:30Z] Tapish: Wow! What a mix up 😂
+[2025-10-12T14:08:32Z] Abhishek S: Him being in the photograph
+[2025-10-12T14:09:21Z] Abhishek S: Bystander law
+[2025-10-12T14:09:21Z] Abhishek Vats: Bystander ?
+[2025-10-12T14:09:33Z] Abhishek Vats: It's in the question 🙈😂
+[2025-10-12T14:09:34Z] Lzafeer Ahmad B F: Good samratina law
+[2025-10-12T14:09:37Z] Lzafeer Ahmad B F: Samaritan*
+[2025-10-12T14:09:38Z] Naman Agarwal: She used the word bystander
+[2025-10-12T14:09:53Z] Abhishek S: Seinfeld Is my answer
+[2025-10-12T14:09:54Z] Surabhi: Probably this
+[2025-10-12T14:10:14Z] Naman Agarwal: I wonder how your autocorrect picked up samratina 🤔
+[2025-10-12T14:10:16Z] Abhishek Vats: My answer cannot be wrong it's Modiji 😅
+[2025-10-12T14:10:29Z] Surabhi: Mumkin hai
+[2025-10-12T14:10:42Z] Farhan: Mumkin hai to Modi hai
+[2025-10-12T14:10:59Z] Surabhi: Non biological law
+[2025-10-12T14:11:06Z] Lzafeer Ahmad B F: It autocorrected to martian first
+[2025-10-12T14:11:15Z] Naman Agarwal: Pleading e the fifth then?
+[2025-10-12T14:11:28Z] Abhishek Vats: This is a first 😅
+[2025-10-12T14:11:29Z] Surabhi: Could it be witness protection law?
+[2025-10-12T14:11:40Z] Abhishek Vats: Seems like it
+[2025-10-12T14:11:58Z] Tapish: Probably this
+[2025-10-12T14:11:59Z] Surabhi: Fact checking?
+[2025-10-12T14:12:01Z] Tapish: Yes
+[2025-10-12T14:12:12Z] Farhan: Oh damn
+[2025-10-12T14:12:12Z] Abhishek Vats: Oh
+[2025-10-12T14:12:12Z] Surabhi: Wow
+[2025-10-12T14:12:17Z] Farhan: Amazing question
+[2025-10-12T14:12:19Z] Abhishek Vats: Great question
+[2025-10-12T14:12:19Z] Tapish: Nice crack!
+[2025-10-12T14:12:22Z] Abhishek S: Damn
+[2025-10-12T14:12:24Z] Surabhi: So far removed from all the guesses
+[2025-10-12T14:12:25Z] Naman Agarwal: AB stumped us all
+[2025-10-12T14:12:25Z] Lzafeer Ahmad B F: What a super question
+[2025-10-12T14:12:27Z] Tapish: Wow!
+[2025-10-12T14:12:53Z] Abhishek Vats: Oscar winning animated best
+[2025-10-12T14:12:59Z] Abhishek Vats: Random typing sorry 😂
+[2025-10-12T14:13:00Z] Tapish: Oscar winners
+[2025-10-12T14:13:06Z] Abhishek Vats: Nominated 😅
+[2025-10-12T14:13:19Z] Abhishek Vats: Kp too close
+[2025-10-12T14:13:22Z] Abhishek S: Won the best animated feature
+[2025-10-12T14:13:30Z] Farhan: Best animated movies
+[2025-10-12T14:13:34Z] Tapish: Overthinking it I think
+[2025-10-12T14:13:41Z] Naman Agarwal: Interesting
+[2025-10-12T14:13:47Z] Abhishek Vats: @⁨~Abhishek S⁩ this is like the na na karte moment 😅
+[2025-10-12T14:13:59Z] Abhishek S: Hard relate
+[2025-10-12T14:14:04Z] Abhishek Vats: Non exhaustive mein fass gya KP 😅
+[2025-10-12T14:14:13Z] Naman Agarwal: What is na na karte?
+[2025-10-12T14:14:29Z] Tapish: Watch the latest episode of the KViz show
+[2025-10-12T14:14:29Z] Abhishek Vats: Watch the movies quiz bollywood edition
+[2025-10-12T14:14:37Z] Farhan: Someone is not doing home work 😂
+[2025-10-12T14:14:49Z] Naman Agarwal: Arey abhi toh utha hoon
+[2025-10-12T14:14:57Z] Naman Agarwal: Mankad
+[2025-10-12T14:14:58Z] Abhishek Vats: I am sure @⁨~Abhishek S⁩ is hearing a word about it till date 😅
+[2025-10-12T14:14:59Z] Tapish: Mankad
+[2025-10-12T14:15:01Z] Abhishek S: Mankads
+[2025-10-12T14:15:05Z] Naman Agarwal: Ek hi Vinoo
+[2025-10-12T14:15:05Z] Abhishek Vats: Mankad
+[2025-10-12T14:15:07Z] Farhan: Mankad
+[2025-10-12T14:15:09Z] Shubham: 😂 😂 😂
+[2025-10-12T14:15:48Z] Akshay: Vaseline?
+[2025-10-12T14:15:48Z] Abhishek Vats: Vaseline
+[2025-10-12T14:15:55Z] Akshay: Petroleum jelly
+[2025-10-12T14:15:55Z] Naman Agarwal: Vaseline
+[2025-10-12T14:15:56Z] Lzafeer Ahmad B F: Vaseline
+[2025-10-12T14:15:58Z] Srikanth Kapali: Vaseline
+[2025-10-12T14:16:04Z] Shubham: This was a KViz question, right?
+[2025-10-12T14:16:11Z] Abhishek Vats: Yup
+[2025-10-12T14:16:13Z] Lzafeer Ahmad B F: Yes
+[2025-10-12T14:16:15Z] Farhan: Similar
+[2025-10-12T14:16:30Z] Naman Agarwal: KV would have said Pawan waited patiently
+[2025-10-12T14:16:49Z] Abhishek Vats: Pavan and etmy is 10 points to gryffindor
+[2025-10-12T14:16:51Z] Akshay: Narmada
+[2025-10-12T14:16:54Z] Farhan: Narmada
+[2025-10-12T14:16:56Z] Akshay: Yatra
+[2025-10-12T14:17:35Z] Naman Agarwal: That's a specific thing?
+[2025-10-12T14:17:37Z] Srikanth Kapali: Kanwar yatra?
+[2025-10-12T14:17:53Z] Farhan: Y is Parikrama i think
+[2025-10-12T14:18:12Z] Naman Agarwal: Kanwar is other parts also
+[2025-10-12T14:18:23Z] Abhishek Vats: I was thinking that but akshay ne narmada bola toh baat khatam 😅
+[2025-10-12T14:18:59Z] Abhishek S: Great Dane
+[2025-10-12T14:18:59Z] Abhishek Vats: Great dane
+[2025-10-12T14:19:02Z] Tapish: Great Dane?
+[2025-10-12T14:19:07Z] Srikanth Kapali: Great Dane
+[2025-10-12T14:19:08Z] Naman Agarwal: Scooby doo
+[2025-10-12T14:19:10Z] Akshay: Great Dane
+[2025-10-12T14:19:17Z] Lzafeer Ahmad B F: Akshay ne ek baar jo commitment kardi toh mein khud ki bhi nahi sunta
+[2025-10-12T14:19:19Z] Akshay: But they aren’t sighthounds
+[2025-10-12T14:19:29Z] Akshay: They were bred for royalty
+[2025-10-12T14:19:33Z] Akshay: Never did any work
+[2025-10-12T14:19:33Z] Srikanth Kapali: This was on the dog kviz
+[2025-10-12T14:19:34Z] Abhishek S: Or Marmaduke
+[2025-10-12T14:19:50Z] Akshay: But great dane fits
+[2025-10-12T14:19:51Z] Abhishek Vats: Selmun bhoi ‎<This message was edited>
+[2025-10-12T14:20:17Z] Akshay: I am not a virgin lekin 🤣🤣🤣
+[2025-10-12T14:21:46Z] Akshay: This Q is a bit confusing because of the first part, good misdirection
+[2025-10-12T14:21:52Z] Akshay: Great Danes aren’t working dogs
+[2025-10-12T14:21:59Z] Naman Agarwal: Scooby Dooby Doo kahaan hai tu
+[2025-10-12T14:22:03Z] Abhishek Vats: Hint scooby doo
+[2025-10-12T14:22:07Z] Naman Agarwal: There it is
+[2025-10-12T14:22:29Z] Srikanth Kapali: Greyhounds are pretty big too
+[2025-10-12T14:22:39Z] Akshay: Greyhounds are long and thin
+[2025-10-12T14:22:41Z] Naman Agarwal: Yeah I have traveled in many
+[2025-10-12T14:22:45Z] Akshay: They aren’t big big
+[2025-10-12T14:23:03Z] Abhishek Vats: Yup but hounds came later in terms of domestication I think
+[2025-10-12T14:23:05Z] Akshay: Great Danes OTOH can easily fight buffaloes, i ve seen it live 🤣
+[2025-10-12T14:23:10Z] Srikanth Kapali: If you can survive a Greyhound journey you can survive anything
+[2025-10-12T14:23:23Z] Akshay: I used to love traveling in greyhounds
+[2025-10-12T14:23:31Z] Akshay: You meet such interesting characters
+[2025-10-12T14:23:35Z] Naman Agarwal: I have even peed in their bathrooms. I am set
+[2025-10-12T14:23:48Z] Abhishek Vats: Also a great swedish house mafia track 😅
+[2025-10-12T14:24:46Z] Akshay: Brave
+[2025-10-12T14:24:47Z] Naman Agarwal: Anyone interested in bets?
+[2025-10-12T14:25:06Z] Akshay: Real football or communist?
+[2025-10-12T14:25:08Z] Abhishek Vats: @⁨~Khandoba⁩ or @⁨~Pavan Pamidimarri⁩
+[2025-10-12T14:25:09Z] Abhishek S: Pavan comeback
+[2025-10-12T14:25:11Z] Naman Agarwal: Pawan ka kya bhaw?
+[2025-10-12T14:25:38Z] Akshay: 1970 WC
+[2025-10-12T14:25:55Z] Naman Agarwal: Yeah I was saying some WC as well
+[2025-10-12T14:25:58Z] Srikanth Kapali: Tribute to Munich victims
+[2025-10-12T14:26:02Z] Tapish: Black and white tv
+[2025-10-12T14:26:03Z] Naman Agarwal: But feels more specific
+[2025-10-12T14:26:09Z] Abhishek Vats: Black and white television pe dikhta tha 😅
+[2025-10-12T14:26:22Z] Tapish: Yes
+[2025-10-12T14:26:22Z] Abhishek Vats: Thanks to the 2006 world cup docu
+[2025-10-12T14:26:43Z] Tapish: Exactly! I was trying to remember Kidhar dekha hai ya padha hai
+[2025-10-12T14:26:43Z] Abhishek Vats: It was my honest answer 😅
+[2025-10-12T14:26:44Z] Akshay: Buckyballs came later
+[2025-10-12T14:27:04Z] Naman Agarwal: Footballs are Buckminster fullerenes though
+[2025-10-12T14:27:10Z] Naman Agarwal: I meant are not
+[2025-10-12T14:27:27Z] Abhishek S: Visibility on field nahi
+[2025-10-12T14:27:33Z] Akshay: I mean all buckyballs are footballs but all footballs are not buckyballs
+[2025-10-12T14:27:47Z] Abhishek Vats: I visited germany for 2005 confederations cup. And got a chance to watch messi before he was messi against ronaldonho
+[2025-10-12T14:27:52Z] Abhishek Vats: Ronaldinho
+[2025-10-12T14:28:09Z] Akshay: Pahunche hue aadmi ho aap :)
+[2025-10-12T14:28:28Z] Tapish: This was in Germany right?
+[2025-10-12T14:28:32Z] Tapish: The tournament?
+[2025-10-12T14:28:35Z] Abhishek Vats: I bought a razer when I couldn't grow a beard for a cd which had the world cup moments
+[2025-10-12T14:28:41Z] Naman Agarwal: Arey
+[2025-10-12T14:29:09Z] Abhishek S: Great question!
+[2025-10-12T14:29:18Z] Abhishek Vats: And before 2006 wc I know random facts about world cup 😅
+[2025-10-12T14:29:32Z] Abhishek Vats: My slumdog moment 😅
+[2025-10-12T14:30:14Z] Akshay: Unabomber
+[2025-10-12T14:30:31Z] Srikanth Kapali: Unabomber
+[2025-10-12T14:31:09Z] Naman Agarwal: I didn't know about this guy at all 😯
+[2025-10-12T14:31:21Z] Abhishek Vats: Great question
+[2025-10-12T14:32:02Z] Abhishek Vats: I was thinking mathematicians 😅
+[2025-10-12T14:32:15Z] Srikanth Kapali: Great questions overall
+[2025-10-12T14:32:33Z] Akshay: Apollo 11?
+[2025-10-12T14:32:34Z] Abhishek S: Moon rock
+[2025-10-12T14:32:35Z] Srikanth Kapali: Titanic survivors
+[2025-10-12T14:32:40Z] Akshay: Astronauts returning?
+[2025-10-12T14:32:47Z] Lzafeer Ahmad B F: Moon waale
+[2025-10-12T14:32:49Z] Tapish: Yes
+[2025-10-12T14:32:52Z] Farhan: Moon mission
+[2025-10-12T14:32:54Z] Abhishek Vats: Moon rocks?
+[2025-10-12T14:32:59Z] Nikhil Borra: Neil Armstrong
+[2025-10-12T14:33:01Z] Naman Agarwal: Yeah 1969
+[2025-10-12T14:33:15Z] Abhishek Vats: TISS fact 😅
+[2025-10-12T14:33:29Z] Abhishek Vats: Summer of?
+[2025-10-12T14:34:08Z] Naman Agarwal: I started thinking Dhruv was born in 1969? What shit has he been eating/drinking?
+[2025-10-12T14:34:19Z] Farhan: Same here
+[2025-10-12T14:34:26Z] Shubham: Ed sheeran
+[2025-10-12T14:34:36Z] Nikhil Borra: Musk's children?
+[2025-10-12T14:34:37Z] Lzafeer Ahmad B F: Ed Sheeran album covers
+[2025-10-12T14:34:37Z] Abhishek Vats: @⁨~Pavan Pamidimarri⁩ acknowledged the joke so my KPIs for the group are done 😅
+[2025-10-12T14:34:48Z] Abhishek Vats: Ed Sheeran albums
+[2025-10-12T14:34:53Z] Naman Agarwal: She should really accept math as an answer here
+[2025-10-12T14:34:54Z] Abhishek Vats: Names also
+[2025-10-12T14:34:57Z] Farhan: Ed sheeran albums
+[2025-10-12T14:35:44Z] Nikhil Borra: I should get points for this.
+[2025-10-12T14:35:49Z] Abhishek Vats: Or signs on ipswich town jersey 😅
+[2025-10-12T14:35:52Z] Naman Agarwal: Totally
+[2025-10-12T14:36:09Z] Nikhil Borra: It's a non-exhaustive list.
+[2025-10-12T14:36:13Z] Abhishek Vats: Hint ipswich
+[2025-10-12T14:36:29Z] Farhan: So pop culture, sports and biz question
+[2025-10-12T14:36:40Z] Naman Agarwal: And math
+[2025-10-12T14:36:51Z] Abhishek Vats: Because next one is play
+[2025-10-12T14:36:54Z] Lzafeer Ahmad B F: A curveball at Pavan. Even if he is thinking Ed Sheeran that football connect might throw him off
+[2025-10-12T14:37:02Z] Abhishek Vats: Roz sunn na padta hai bro office mein. 😅
+[2025-10-12T14:37:14Z] Lzafeer Ahmad B F: He’s leaking the nuclear launch codes
+[2025-10-12T14:37:19Z] Abhishek Vats: That question is done
+[2025-10-12T14:37:28Z] Abhishek Vats: So that distraction is out
+[2025-10-12T14:37:30Z] Lzafeer Ahmad B F: Over thinking it
+[2025-10-12T14:37:40Z] Naman Agarwal: Yaar I had no idea
+[2025-10-12T14:38:06Z] Lzafeer Ahmad B F: I meant KP. Haha.
+[2025-10-12T14:38:19Z] Abhishek S: Yeah I would have been surprised if Pavan knew Ed Sheeran albums 😀
+[2025-10-12T14:38:40Z] Naman Agarwal: Unless Ed Sheeran started singing in Sanskrit
+[2025-10-12T14:39:19Z] Abhishek S: Huckleberry Finn
+[2025-10-12T14:39:19Z] Naman Agarwal: And then there were
+[2025-10-12T14:39:29Z] Nikhil Borra: C S Lewis?
+[2025-10-12T14:39:30Z] Abhishek Vats: And then there were none
+[2025-10-12T14:39:34Z] Nikhil Borra: Narnia?
+[2025-10-12T14:39:42Z] Abhishek Vats: Christie
+[2025-10-12T14:39:44Z] Naman Agarwal: Agatha Christie
+[2025-10-12T14:39:44Z] Srikanth Kapali: Mark Twain
+[2025-10-12T14:39:52Z] Srikanth Kapali: Huckleberry finn
+[2025-10-12T14:39:53Z] Akshay: Nope
+[2025-10-12T14:39:59Z] Akshay: Agatha Christie yaar
+[2025-10-12T14:40:01Z] Akshay: No?
+[2025-10-12T14:40:13Z] Tapish: Yes
+[2025-10-12T14:40:24Z] Tapish: And then there were none
+[2025-10-12T14:40:29Z] Abhishek Vats: Yup nine, eight, is a countdown hint
+[2025-10-12T14:40:31Z] Naman Agarwal: I loved that story btw
+[2025-10-12T14:40:46Z] Naman Agarwal: Big Agatha Christie fan
+[2025-10-12T14:41:01Z] Lzafeer Ahmad B F: I thought Abhishek was also participating and had a screen like Pavan ‎image omitted
+[2025-10-12T14:41:53Z] Lzafeer Ahmad B F: Best 6 pounds I spent last year. ‎image omitted
+[2025-10-12T14:41:56Z] Lzafeer Ahmad B F: Best 6 pounds I spent last year. ‎image omitted
+[2025-10-12T14:42:35Z] Lzafeer Ahmad B F: The Lime cycle ride to and from the theatre cost me more than
+[2025-10-12T14:42:39Z] Naman Agarwal: My favorite is Murder of Roger Ackroyd though .. that book really blew my mind
+[2025-10-12T14:43:15Z] Naman Agarwal: What a fair split 🪓
+[2025-10-12T14:43:20Z] Abhishek S: How many questions left?
+[2025-10-12T14:43:31Z] Lzafeer Ahmad B F: Sony Liv has a lot of the BbC adaptations of Agatha Christie works
+[2025-10-12T14:43:36Z] Srikanth Kapali: Amitabh bacchan
+[2025-10-12T14:43:39Z] Shubham: I can relate with KP so hard. I keep blanking out on the simplest of things during quizzes.
+[2025-10-12T14:43:44Z] Farhan: Narrated by AB
+[2025-10-12T14:43:57Z] Lzafeer Ahmad B F: Why didn’t they ask Evans was my favourite of the lot.
+[2025-10-12T14:43:58Z] Abhishek Vats: Amitabh narration
+[2025-10-12T14:44:01Z] Abhishek S: Amitabha voice overs
+[2025-10-12T14:44:08Z] Naman Agarwal: Wow nice crack
+[2025-10-12T14:44:29Z] Naman Agarwal: I was so bowled over by this question
+[2025-10-12T14:44:39Z] Akshay: Amitabh bachchan voiceovers
+[2025-10-12T14:44:40Z] Naman Agarwal: Fun2shh kept throwing me off
+[2025-10-12T14:44:59Z] Abhishek Vats: Great movie though 😅
+[2025-10-12T14:45:09Z] Akshay: Paresh Rawal
+[2025-10-12T14:45:10Z] Tapish: Hilarious 😂
+[2025-10-12T14:45:35Z] Naman Agarwal: Shatranj ke khiladi lagaan and Fun2shh Ra one Krissh3
+[2025-10-12T14:45:49Z] Naman Agarwal: Pil gaya Warikoo
+[2025-10-12T14:45:58Z] Srikanth Kapali: Quick update aus 125/1 in 19 overs chasing 330
+[2025-10-12T14:46:00Z] Abhishek Vats: They don't need to focus on outliers 😅
+[2025-10-12T14:46:32Z] Naman Agarwal: Is March of the Penguins the same as the Benedict debacle?
+[2025-10-12T14:46:34Z] Naman Agarwal: 😬
+[2025-10-12T14:46:53Z] Farhan: Penuin
+[2025-10-12T14:46:57Z] Akshay: Khatam tata byebye goodbye gaya
+[2025-10-12T14:46:58Z] Lzafeer Ahmad B F: Great recall. Hahaha.
+[2025-10-12T14:47:08Z] Naman Agarwal: Pengling
+[2025-10-12T14:47:10Z] Meghna: Pengwings
+[2025-10-12T14:47:23Z] Nikhil Borra: Rosa Parks
+[2025-10-12T14:47:26Z] Akshay: Rosa parks
+[2025-10-12T14:47:32Z] Naman Agarwal: Rosa Parks
+[2025-10-12T14:47:40Z] Srikanth Kapali: Crossing the Selma bridge
+[2025-10-12T14:47:49Z] Naman Agarwal: Ye aurat har quiz mein aa jaati hai
+[2025-10-12T14:48:06Z] Akshay: They didn’t want to highlight Colvin because the NAACP considered not so great PR
+[2025-10-12T14:48:33Z] Nikhil Borra: Montgomery Bus Boycott.
+[2025-10-12T14:49:02Z] Lzafeer Ahmad B F: Oops;. I am watching on delay
+[2025-10-12T14:49:03Z] Lzafeer Ahmad B F: Lol
+[2025-10-12T14:49:14Z] Lzafeer Ahmad B F: Came to answer and saw its been answered 3 minutes back
+[2025-10-12T14:49:19Z] Akshay: Exasperation in pavan’s voice
+[2025-10-12T14:49:20Z] Akshay: Bahaha
+[2025-10-12T14:49:29Z] Farhan: Internet share kar diya?
+[2025-10-12T14:49:33Z] Akshay: ‘Sha, itna bhi nahin aata’
+[2025-10-12T14:49:50Z] Akshay: Ye sab gareebon wali acting na karein janaab
+[2025-10-12T14:50:05Z] Nikhil Borra: Avengers Civil War?
+[2025-10-12T14:50:08Z] Lzafeer Ahmad B F: U sorry. I was watching on mute.
+[2025-10-12T14:50:11Z] Srikanth Kapali: KGF
+[2025-10-12T14:50:14Z] Abhishek S: Infinity war
+[2025-10-12T14:50:29Z] Tapish: Race 3?
+[2025-10-12T14:50:33Z] Akshay: Bareilly ki barfi?
+[2025-10-12T14:50:50Z] Akshay: Possible
+[2025-10-12T14:51:11Z] Tapish: Only going by people realised how bad it is after the first weekend
+[2025-10-12T14:51:23Z] Akshay: Correct makes senseee
+[2025-10-12T14:51:25Z] Tapish: First weekend made massive due to Bhai
+[2025-10-12T14:51:31Z] Surabhi: Did we get a Salman movie in 2018?
+[2025-10-12T14:51:34Z] Naman Agarwal: This was earlier iirc
+[2025-10-12T14:51:43Z] Tapish: Race 3 was 2018 I guess yes
+[2025-10-12T14:51:54Z] Lzafeer Ahmad B F: Race 3 really?
+[2025-10-12T14:51:57Z] Lzafeer Ahmad B F: Crazy crack
+[2025-10-12T14:52:01Z] Lzafeer Ahmad B F: If thats the answer
+[2025-10-12T14:52:16Z] Naman Agarwal: How about Padmavat
+[2025-10-12T14:52:24Z] Naman Agarwal: Might have been that year
+[2025-10-12T14:52:39Z] Naman Agarwal: This is like guessing what gives AB kicks
+[2025-10-12T14:52:40Z] Nikhil Borra: It's already there.
+[2025-10-12T14:52:47Z] Naman Agarwal: Oh lol
+[2025-10-12T14:53:14Z] Naman Agarwal: KGF hoga
+[2025-10-12T14:53:52Z] Akshay: Bell bottom too late
+[2025-10-12T14:53:54Z] Akshay: 2021
+[2025-10-12T14:53:57Z] Naman Agarwal: Yeah
+[2025-10-12T14:53:59Z] Abhishek Vats: Wasn't that a post covid release
+[2025-10-12T14:54:07Z] Akshay: Nope 2018
+[2025-10-12T14:54:11Z] Naman Agarwal: That was around that time only
+[2025-10-12T14:54:12Z] Lzafeer Ahmad B F: Nope. pre Covid
+[2025-10-12T14:54:22Z] Naman Agarwal: Hamara kutta kutta
+[2025-10-12T14:54:30Z] Lzafeer Ahmad B F: Race 3 wasn’t so bad also
+[2025-10-12T14:54:42Z] Farhan: thugs?
+[2025-10-12T14:54:46Z] Farhan: 🧐
+[2025-10-12T14:54:54Z] Tapish: Can be yes!
+[2025-10-12T14:54:54Z] Naman Agarwal: Oh thugggsss
+[2025-10-12T14:55:03Z] Naman Agarwal: Aamir hi hoga
+[2025-10-12T14:55:06Z] Akshay: Ok
+[2025-10-12T14:55:10Z] Lzafeer Ahmad B F: Thugs of Hindustan?
+[2025-10-12T14:55:12Z] Tapish: Yes Thugs it is
+[2025-10-12T14:55:15Z] Lzafeer Ahmad B F: Thugs
+[2025-10-12T14:55:16Z] Lzafeer Ahmad B F: Yes
+[2025-10-12T14:55:17Z] Akshay: ‘Aazadi hai gunah toh manzoor hai saza’
+[2025-10-12T14:55:16Z] Abhishek S: Thugs hi hai
+[2025-10-12T14:55:43Z] Farhan: The numbers show how bad the movie was
+[2025-10-12T14:55:44Z] Farhan: 😂
+[2025-10-12T14:55:47Z] Abhishek Vats: Thugs then
+[2025-10-12T14:55:51Z] Akshay: Special appearance by katrina kaif’s legs
+[2025-10-12T14:56:17Z] Akshay: ^ referring to height difference 🤣
+[2025-10-12T14:56:34Z] Naman Agarwal: Amazing amazing quiz!! Ab chalo India ko bachao
+[2025-10-12T14:56:52Z] Naman Agarwal: Aussies peloing
+[2025-10-12T14:57:04Z] Tapish: Second innings going like Thugs collection for us
+[2025-10-12T14:57:13Z] Akshay: Woh MI wali daadi ko bulao
+[2025-10-12T14:57:59Z] Nikhil Borra: @⁨Aditi Bapat⁩ Great quiz ma'am.
+[2025-10-12T14:58:14Z] Srikanth Kapali: As expected. We deserve to be eliminated from this WC
+[2025-10-12T14:58:43Z] Naman Agarwal: Arey @⁨~Srikanth Kapali⁩ be positive yaar
+[2025-10-12T14:58:53Z] Farhan: Mast majja aa gaya! Great questions @⁨Aditi Bapat⁩
+[2025-10-12T14:59:21Z] Akshay: Extremely fun Quiz and extremely fun questions!
+[2025-10-12T14:59:21Z] Nikhil Borra: @⁨~Khandoba⁩ Congratulations.👍🏾
+[2025-10-12T14:59:23Z] Farhan: +1 for weekly edition
+[2025-10-12T14:59:25Z] Tapish: Great quiz, great fun @⁨Aditi Bapat⁩ ! 🙌 ‎<This message was edited>
+[2025-10-12T14:59:39Z] Akshay: Thanks @⁨Aditi Bapat⁩ !!
+[2025-10-12T14:59:48Z] Lzafeer Ahmad B F: Congrats Khandoba bhai ‎GIF omitted
+[2025-10-12T14:59:51Z] Akshay: @⁨~Khandoba⁩ first bencher
+[2025-10-12T15:00:00Z] Farhan: +1
+[2025-10-12T15:00:14Z] Lzafeer Ahmad B F: Thanks @⁨Aditi Bapat⁩ super questions
+[2025-10-12T15:00:30Z] Abhishek S: Thanks for a lovely quiz @⁨Aditi Bapat⁩ !! You were fantastic as a quizmaster! Can't wait for the next quiz, and I want to add my name to the substitutes list of that one already 😂
+[2025-10-12T15:00:31Z] Dhruv: Great quiz, thanks Aditi!!!
+[2025-10-12T15:00:34Z] Naman Agarwal: @⁨~Khandoba⁩ is that non first bencher jo exam mein phodta hai
+[2025-10-12T15:00:50Z] Dhruv: I'm just happy i didn't get 0
+[2025-10-12T15:01:07Z] Khandoba: improve speeding read
+[2025-10-12T15:01:08Z] Farhan: 911 was a great crack. None could crack it
+[2025-10-12T15:01:30Z] Lzafeer Ahmad B F: Somce of the cracks were fantastic!
+[2025-10-12T15:01:37Z] Abhishek Vats: Next quiz organizer please include @⁨~Khandoba⁩ and @⁨Akshay⁩ in the same panel 😅 ‎<This message was edited>
+[2025-10-12T15:01:54Z] Srikanth Kapali: Staing facts. Have not put together a solid performance and scraped past bottom of the table teams like Pak and SL
+[2025-10-12T15:01:57Z] Tapish: Also, apologies to Bhai!
+[2025-10-12T15:02:34Z] Naman Agarwal: I guess Race3 wouldn't have nosedived like that
+[2025-10-12T15:02:41Z] Lzafeer Ahmad B F: Bola tha maine.
+[2025-10-12T15:02:49Z] Naman Agarwal: Bhai's appeal lasts
+[2025-10-12T15:03:02Z] Kartikey Pradhan: me throughout the quizk
+[2025-10-12T15:03:05Z] Akshay: https://youtu.be/_QhsFejhjCA?si=I5G9KTJEgX6MUlQN
+[2025-10-12T15:03:18Z] Khandoba: bachhe ki jaan loge kya
+[2025-10-12T15:03:20Z] Akshay: Punishment for doubting bhoi ^
+[2025-10-12T15:03:29Z] Akshay: Referring to me
+[2025-10-12T15:03:54Z] Abhishek Vats: Hum toh sir popcorn khaenge. Baaki toh aap pe hai 😂
+[2025-10-12T15:04:00Z] Pavan Pamidimarri: Thank you @⁨Aditi Bapat⁩ for a wonderful quiz. Really great questions, please thank NN for us as well.
+[2025-10-12T15:04:44Z] Kartikey Pradhan: amazing quiz @⁨Aditi Bapat⁩, thank you for doing this and pls get well soon!!
+[2025-10-12T15:04:45Z] Khandoba: let me take a moment to appreciate @⁨Aditi Bapat⁩ . I have shown less commitment to my work than she showed for the quiz. Thank you!
+[2025-10-12T15:04:46Z] Abhishek Vats: NN is batman for this group 😅
+[2025-10-12T15:05:05Z] Akshay: Who is NN?
+[2025-10-12T15:05:26Z] Abhishek Vats: 10 points to @⁨~Khandoba⁩ 😂
+[2025-10-12T15:05:40Z] Naman Agarwal: Please pay attention
+[2025-10-12T15:05:56Z] Akshay: :’(
+[2025-10-12T15:06:24Z] Naman Agarwal: So AB is Alfred Bapat?
+[2025-10-12T15:06:38Z] Khandoba: @⁨~Naman Agarwal⁩ on fire today
+[2025-10-12T15:17:20Z] Aditi Bapat: Thank you so much everyone for participating!!  This was SO much fun. I'm gonna be smiling all day today ❤️
+[2025-10-12T15:17:49Z] Aditi Bapat: Sorry for the unceremonious nose-blowing y'all had to see 😭
+[2025-10-12T15:18:48Z] Dhruv: Hope you get better soon :)
+[2025-10-12T15:19:26Z] Aditi Bapat: @⁨Kartikey Pradhan⁩ you were a beast in the Buzzing episode so I'm going to make a buzzing quiz specifically for you 🫡
+[2025-10-12T15:20:54Z] Aditi Bapat: I stopped after one of the 'interesting characters' tried to sell me meth.
+[2025-10-12T15:22:58Z] Aditi Bapat: Merehi quiz me se muze hi crop kar diya
+[2025-10-12T15:26:19Z] Aditi Bapat: Same. 😶
+[2025-10-12T15:49:26Z] Pavan Pamidimarri: My wife asked me how much time I spent creating yesterday’s quiz. I told her I made it during breaks at work, but those were LONG breaks
+[2025-10-12T15:49:58Z] Naman Agarwal: What did you tell your manager at work?
+[2025-10-12T15:50:17Z] Pavan Pamidimarri: it helped that i was traveling last week
+[2025-10-12T15:50:17Z] Kartikey Pradhan: That he needed to help wife with something
+[2025-10-12T15:50:42Z] Naman Agarwal: I vote for a QFH option at work
+[2025-10-12T15:50:58Z] Pavan Pamidimarri: to distort Douglas Adams: “time is relative, travel time doubly so”
+[2025-10-12T15:51:34Z] Naman Agarwal: Douglas Adams is the wisest man that ever lived
+[2025-10-12T15:51:50Z] Pavan Pamidimarri: i first read that as Quit From Home
+[2025-10-12T15:51:51Z] Sidhesh K K: Would love to know about the tone of the question
+[2025-10-12T15:52:16Z] Pavan Pamidimarri: asking the right questions, my friend.
+[2025-10-12T15:53:05Z] Sidhesh K K: I'm getting questions just for the sheer amount of time being spent on the whatsapp 😂
+[2025-10-12T15:53:13Z] Pavan Pamidimarri: she wanted to go out on a day trip yesterday morning, so the tone definitely was one of how the hell did you manage to squeeze this in in the hectic week you’ve had
+[2025-10-12T15:53:35Z] Srikanth Kapali: Happy to be an audience member for the next three years at least before I get to the level of quizzers here
+[2025-10-12T15:53:59Z] Pavan Pamidimarri: @⁨~Srikanth Kapali⁩ we missed you yesterday... i expected you to crack a few of the questions
+[2025-10-12T15:54:26Z] Srikanth Kapali: Recovering from Vancouver trip and severe congestion
+[2025-10-12T15:54:35Z] Khandoba: I’m glad I’m single (I’m not, I’m crying secretly)
+[2025-10-12T15:54:49Z] Srikanth Kapali: Plus busy booking a Christmas Spain trip
+[2025-10-12T15:55:03Z] Pavan Pamidimarri: that sounds wonderful
+[2025-10-12T15:55:25Z] Srikanth Kapali: Covering Barca, sevilla, and Granada
+[2025-10-12T15:55:44Z] Srikanth Kapali: Have family in Barca so saving on accomodations costs there
+[2025-10-12T15:57:05Z] Pavan Pamidimarri: Sevilla is wonderful. I didn’t manage to squeeze in Granada, I did Sevilla, Cadiz, and Cordoba. Highly recommend Cordoba if you can squeeze it in
+[2025-10-12T15:57:58Z] Khandoba: Is it named after me by any chance?
+[2025-10-12T15:58:31Z] Srikanth Kapali: Only if you are baby Yoda years old
+[2025-10-12T15:58:35Z] Kartikey Pradhan: Reminds me of this scene
+[2025-10-12T15:58:57Z] Naman Agarwal: LadiesToilet 😂
+[2025-10-12T15:59:05Z] Kartikey Pradhan: Some influencer recently did it with Marathi names and it is HILARIOUS
+[2025-10-12T15:59:18Z] Khandoba: The amount of times I have randomly said “max… imumoccpuancyhundredandfifty” is concerning
+[2025-10-12T15:59:29Z] Khandoba: Pls share
+[2025-10-12T15:59:52Z] Naman Agarwal: A kuttamaran in Khandoba
+[2025-10-12T15:59:58Z] Kartikey Pradhan: I once named my quiz team “Ladis Wash-Haroom”
+[2025-10-12T16:00:23Z] Shubham: I remember seeing something like this with Kerala Christian names.
+[2025-10-12T16:02:49Z] Kartikey Pradhan: https://www.instagram.com/reel/DL7St1iybU8/?igsh=MXR0eDUzZnd6OHQ5aw==
+[2025-10-12T16:21:00Z] Akshay: Kay mast pakdun kaanakhaali lavla
+[2025-10-12T16:22:11Z] Akshay: https://youtube.com/shorts/QKbTHrWSxPk?si=Q0uJpW52B6cUWG3V
+[2025-10-12T16:23:48Z] Kartikey Pradhan: Hahahahahahaha
+[2025-10-12T16:24:19Z] Kartikey Pradhan: This northie in maharashtra jokes are hilarious
+[2025-10-12T16:27:59Z] Akshay: It’s a full genre as is evident
+[2025-10-12T16:33:19Z] Shubhankar: Emplois Muswashans
+[2025-10-12T16:43:18Z] Sidhesh K K: There is a big devil in the details of the video...
+[2025-10-12T16:53:27Z] Akshay: Need to be very observant 🤣
+[2025-10-12T17:27:32Z] Dhruv: This Nobel laureate, who was a  physicist, known for his discovery in particle physics, also gave a theory completely unrelated to his field. This new research/theory was made in Italy, was criticized for till nearly 10 years after his death, ultimately led to being the dominant theory among research scholars. Who is the person, what was their new field of research and what did they exactly find?
+[2025-10-12T17:31:46Z] Lzafeer Ahmad B F: Is the new field of research something about the adequate pressure to extract a coffee shot and how a Mokapot just doesn’t make the cut and makes shit coffee. Pissing off Italians who swear by a Mokapot
+[2025-10-12T17:32:02Z] Dhruv: No
+[2025-10-12T17:32:21Z] Dhruv: Ok hint: new field is related to the cretaceous period
+[2025-10-12T17:33:05Z] Lzafeer Ahmad B F: Hard relate ‎image omitted
+[2025-10-12T17:38:46Z] Aditi Bapat: Is the find that dinosaurs were actually birds?
+[2025-10-12T17:38:56Z] Dhruv: Not quite
+[2025-10-12T17:39:17Z] Lzafeer Ahmad B F: There were no dangerous dinosaurs in Italy
+[2025-10-12T17:39:18Z] Dhruv: Ok, I'll tell the field.. this is about geology
+[2025-10-12T17:39:53Z] Dhruv: Just need the Nobel laureate and their new finding now
+[2025-10-12T17:45:36Z] Aditi Bapat: Was his original field geology or new field?
+[2025-10-12T17:46:26Z] Dhruv: While not quite a "new" field but other field was Geology, main was particle physics for which he also win a Nobel
+[2025-10-12T17:48:01Z] Tapish: Schrodinger and DNA?
+[2025-10-12T17:48:10Z] Dhruv: Not quite
+[2025-10-12T17:48:11Z] Tapish: But DNA is biology not geology
+[2025-10-12T17:48:14Z] Tapish: :/
+[2025-10-12T17:48:37Z] Dhruv: Think dinosaurs and think extinction then add geology to it
+[2025-10-12T17:49:37Z] Tapish: Asteroids causing their extinction?
+[2025-10-12T17:50:09Z] Lzafeer Ahmad B F: Volcanic eruption
+[2025-10-12T17:50:30Z] Dhruv: Yes, you're in the general area, but I'm looking for something specific as KV says
+[2025-10-12T17:51:20Z] Akshay: Is this luis alvarez? His son was a geologist no?* ‎<This message was edited>
+[2025-10-12T17:51:41Z] Dhruv: Yes, Walter Alvarez!! And their finding was ?
+[2025-10-12T17:51:59Z] Akshay: UC Berkeley
+[2025-10-12T17:52:15Z] Dhruva: Was it x ray crystallography?
+[2025-10-12T17:52:18Z] Akshay: Asteroid hit created a winter and killed dinosaurs?
+[2025-10-12T17:52:34Z] Akshay: Because of the dust and debris
+[2025-10-12T17:54:21Z] Dhruva: Carbon dating?
+[2025-10-12T17:55:12Z] Dhruv: Not quite but, well I'll give it to you dude, you were the closest.. their finding was a theory called the Alvarez Hypothesis which states asteroids killed the dinosaurs, their main finding was the kpg line (cretaceous -palogene).. it states that in every natural sedimentary rock deposit around the world below which there are a world of fossils but above which there is nothing.. its usually marked by a single line of black, which Luis identified to be Iridium
+[2025-10-12T17:55:22Z] Dhruv: .
+[2025-10-12T17:56:27Z] Dhruv: For further reading: https://www2.lbl.gov/Science-Articles/Archive/luis-alvarez-iridium.html
+[2025-10-12T17:57:21Z] Aditi Bapat: What you'd you call Tinder when it's only for Paleontologists.
+[2025-10-12T17:57:31Z] Dhruv: https://www2.lbl.gov/Science-Articles/Archive/dinosaur-extinction.html
+[2025-10-12T18:03:22Z] Kartikey Pradhan: I had heard a worse version 😂
+[2025-10-12T18:03:54Z] Kartikey Pradhan: Who called it tinder for old people and not carbon dating
+[2025-10-12T18:07:00Z] Dhruv: One more that I have, this DC villain whose last name roughly translates to body eating spirit in a certain language, also was a villainic character in a semi-famous Ubisoft game, which was in a series. He is more famous in the DC universe than he is for the game. Any idea who?
+[2025-10-12T18:07:54Z] Shiv Ram: Ras al Ghul?
+[2025-10-12T18:08:07Z] Dhruv: Any idea on the game?
+[2025-10-12T18:08:15Z] Shiv Ram: Assassin's Creed?
+[2025-10-12T18:08:35Z] Dhruv: Mirage to be specific
+[2025-10-12T18:16:33Z] Prathamesh: Am I too late for this? 😅
+[2025-10-12T18:17:42Z] Saayu Windows: Lol we have 23 entries when we need 12 people. Quizzing is seriously not hyped as it should be
+[2025-10-12T18:19:09Z] Saayu Windows: I humbly request peeps to opt out if you're a pro or if you generally know a lot about things. Ofc you can join in as viewers but lets give chance to 1st timers as this quiz is going to be comparatively v v v v easy. ‎<This message was edited>
+[2025-10-12T18:20:51Z] Saayu Windows: If you know the answers to the questions posted in all these KV groups, I dont think this quiz is for you, you'll get bored 🙈🤣
+[2025-10-12T18:32:33Z] Khandoba: Opted out since I got to participate today 🙂
+[2025-10-12T18:33:01Z] Saayu Windows: Thank you
+[2025-10-12T18:33:12Z] Saayu Windows: Dont take it the wrong way guys
+[2025-10-12T18:33:28Z] Dhruv: In that case, let me opt out too
+[2025-10-12T18:33:32Z] Khandoba: Hey I don’t think anyone will
+[2025-10-12T18:34:17Z] Khandoba: But lot of quizzes are happening here, I’m sure everyone will get a chance sooner or later
+[2025-10-12T18:34:28Z] Pavan Pamidimarri: i will also opt out. not because i know things but because i got to play today
+[2025-10-12T18:34:33Z] Abhishek S: I'm happy to sit this one out too, not because I presume to know anything, but simply because everyone should get a chance to be in a quiz. It will be fun nevertheless to support from the sidelines 🙂 ‎<This message was edited>
+[2025-10-12T18:35:02Z] Saayu Windows: Hope all of you join as viewers
+[2025-10-12T18:35:14Z] Khandoba: Definitely will
+[2025-10-12T18:36:13Z] Saayu Windows: My bad, please try to opt out if you have been a part of quiz here. That should be the primary reason to opt out ‎<This message was edited>
+[2025-10-12T18:37:38Z] Saayu Windows: Please dont let the number drop less than 12 🙈🤣
+[2025-10-12T18:38:12Z] Khandoba: Then we’re back in the game🤣
+[2025-10-12T18:38:24Z] Saayu Windows: Yes definitely 🙈
+[2025-10-12T18:39:55Z] Khandoba: Great question, Ra’s is underrated
+[2025-10-12T18:46:45Z] Abhishek S: Say, hypothetically, if I had to put a poll on your favourite Batman villain, which group should I put that in - the movies one, or the books one?
+[2025-10-12T18:47:07Z] Sidhesh K K: Mooks
+[2025-10-12T18:47:14Z] Abhishek S: And I don't want to limit it to one source either - could even be video games
+[2025-10-12T18:47:20Z] Khandoba: No need to call us that
+[2025-10-12T18:47:33Z] Prathamesh: If you want to make people angry then do it in movies one and say that comics are not books
+[2025-10-12T18:47:55Z] Khandoba: Dange karwaoge ‎<This message was edited>
+[2025-10-12T18:48:35Z] Sidhesh K K: Dono me daal do
+[2025-10-12T18:48:45Z] Khandoba: I’d say books, original source material is comics
+[2025-10-12T18:49:14Z] Sidhesh K K: Then we can analyse the variance in responses basis where people see it first and if there are different responses in different groups
+[2025-10-12T18:49:33Z] Sidhesh K K: Like riddler from the books but joker from the movie
+[2025-10-12T18:50:44Z] Abhishek S: That makes the most sense
+[2025-10-12T18:51:05Z] Pavan Pamidimarri: Sidhesh, do you work in HR?
+[2025-10-12T18:51:08Z] Kartikey Pradhan: Done 😊
+[2025-10-12T18:51:15Z] Sidhesh K K: Yes
+[2025-10-12T18:51:41Z] Khandoba: 10 points to Pavan
+[2025-10-12T18:52:27Z] Dhruv: A/b testing?
+[2025-10-12T18:52:44Z] Sidhesh K K: But I'm the wrong person for Diwali ideas 😜
+[2025-10-12T18:54:15Z] Naman Agarwal: I don't know if folks dig this sort of question but in case ↵ What's the probability that two randomly drawn chords of a ⭕ intersect
+[2025-10-12T18:56:26Z] Akshay: 1/3?
+[2025-10-12T18:59:31Z] Khandoba: Can someone elaborate the maths?
+[2025-10-12T18:59:55Z] Naman Agarwal: So I'll tell you the way I thought about it
+[2025-10-12T19:00:12Z] Khandoba: Yes plz
+[2025-10-12T19:01:02Z] Naman Agarwal: Pick 4 random points a circle, these represent the ends of the chords. Now pick the ends of the individual chords. You will see 2 cases of no intersection and 1 with
+[2025-10-12T19:01:47Z] Akshay: Correct, choose any 4 points, and simply by drawing all possible combinations of chords, you will get only three cases of which only one* intersects ‎<This message was edited>
+[2025-10-12T19:03:00Z] Naman Agarwal: Basically once you are at picking 4 points which are the ends you are there .. that's the only intellectual leap
+[2025-10-12T19:04:09Z] Naman Agarwal: Since people dug that -- ↵ If `X` and `Y` are independently uniformly sampled from the interval `(0, 1)`, what is the probability that `Y/X` rounds to an even number (0 is even).
+[2025-10-12T19:04:45Z] Naman Agarwal: This will require pen and paper and at some point some googling (unless you are a series sum wiz)
+[2025-10-12T19:05:19Z] Akshay: Hmmmm
+[2025-10-12T19:05:22Z] Akshay: Sochna padega
+[2025-10-12T19:05:29Z] Naman Agarwal: Haan
+[2025-10-12T19:05:29Z] Akshay: Not as intuitive
+[2025-10-12T19:05:33Z] Naman Agarwal: This is not caz ‎<This message was edited>
+[2025-10-12T19:15:09Z] Akshay: So for a uniform distribution, can i say P(x<x1) = x1-0?
+[2025-10-12T19:23:32Z] Khandoba: Comma-sutra?
+[2025-10-12T19:28:31Z] Khandoba: Is it something like plains of —-?
+[2025-10-12T19:28:40Z] Nikhil Borra: In great numbers?
+[2025-10-12T19:29:36Z] Abhishek S: Well, actually 90, but I couldn't find a react for that
+[2025-10-12T19:29:55Z] Nikhil Borra: Greater?
+[2025-10-12T19:30:00Z] Khandoba: Large numbers
+[2025-10-12T19:30:04Z] Abhishek S: 95 per cent there, in fact
+[2025-10-12T19:30:31Z] Abhishek S: Large numbers is correct
+[2025-10-12T19:30:48Z] Abhishek S: Large or big would have been acceptable
+[2025-10-12T19:32:07Z] Abhishek S: I need the exact answer here. ‎image omitted
+[2025-10-12T19:33:13Z] Khandoba: Inigo Montoya?
+[2025-10-12T19:33:21Z] Khandoba: That’s the original
+[2025-10-12T19:33:38Z] Khandoba: Is it a pun based on that?
+[2025-10-12T19:33:51Z] Abhishek S: Yes
+[2025-10-12T19:34:47Z] Abhishek S: No points for Inigo Montoya though, I specified that I need the pun wala exact answer
+[2025-10-12T19:34:52Z] Khandoba: Yes yes
+[2025-10-12T19:35:03Z] Khandoba: I’m thinking out loud
+[2025-10-12T19:35:34Z] Tapish: Idaho Montoya?
+[2025-10-12T19:35:49Z] Khandoba: Damn, nice
+[2025-10-12T19:36:05Z] Tapish: Potato state 🤣
+[2025-10-12T19:36:22Z] Khandoba: I’m staying away from starchy things
+[2025-10-12T19:36:28Z] Khandoba: 😬
+[2025-10-12T19:36:44Z] Tapish: I had fries today
+[2025-10-12T19:36:47Z] Tapish: 🤣🤣🤣
+[2025-10-12T19:36:59Z] Khandoba: Slumdog moment
+[2025-10-12T19:37:54Z] Abhishek S: There were serious math problems being posed as questions before I interjected with my silly puns 😂
+[2025-10-12T19:38:12Z] Khandoba: At least we have guesses for these
+[2025-10-12T19:38:13Z] Tapish: I was about to ask if the last one got answered
+[2025-10-12T19:38:38Z] Khandoba: I think they are working it out
+[2025-10-12T19:39:28Z] Abhishek S: I wouldn't even know if any of the statements above are answers or not - such is the extent of my knowledge and understanding of the question 🙈
+[2025-10-12T19:39:47Z] Khandoba: Sammme
+[2025-10-12T19:41:17Z] Tapish: I did try to find a pen and paper, so may be part points.
+[2025-10-12T19:42:17Z] Akshay: Lool i thought it would be gone by now
+[2025-10-12T19:42:21Z] Akshay: Trying it now
+[2025-10-12T19:42:30Z] Khandoba: Hehehe
+[2025-10-12T19:42:41Z] Abhishek S: So I'll just pose more memes disguised as questions in the meanwhile, let the nerds do the serious stuff
+[2025-10-12T19:42:42Z] Akshay: I assumed ki gaya since puns were being discussed
+[2025-10-12T19:44:04Z] Khandoba: Pehchan Kaun 🤣
+[2025-10-12T19:45:46Z] Abhishek S: Spooking death 😬
+[2025-10-12T19:46:47Z] Prathamesh: Death is correct
+[2025-10-12T19:46:52Z] Abhishek S: Flirting with death 🤣
+[2025-10-12T19:46:58Z] Prathamesh: Yes!
+[2025-10-12T19:47:08Z] Abhishek Vats: Butt OX?
+[2025-10-12T19:47:23Z] Khandoba: Bullocks
+[2025-10-12T19:48:57Z] Abhishek S: ID what 'artwork' is hidden ‎image omitted
+[2025-10-12T19:49:28Z] Khandoba: Captcha
+[2025-10-12T19:51:11Z] Khandoba: Herders
+[2025-10-12T19:51:27Z] Abhishek S: Good attempt
+[2025-10-12T19:51:34Z] Abhishek S: Try herder
+[2025-10-12T19:53:00Z] Khandoba: Sheep-herders?
+[2025-10-12T19:53:15Z] Khandoba: That’d just be shepherds
+[2025-10-12T19:53:47Z] Abhishek S: May be I should have asked you not to try herder
+[2025-10-12T19:54:01Z] Khandoba: I am a very literal man
+[2025-10-12T19:54:08Z] Lzafeer Ahmad B F: Baah-Ders
+[2025-10-12T19:54:16Z] Saara: Damn
+[2025-10-12T19:54:20Z] Khandoba: Barn doors?
+[2025-10-12T19:55:02Z] Abhishek S: A very nice attempt. But they very clearly have plenty of Baahs. So they can't be without
+[2025-10-12T19:55:11Z] Prathamesh: Border collie
+[2025-10-12T19:55:50Z] Khandoba: Great crack
+[2025-10-12T19:57:42Z] Saara: Iron Age?
+[2025-10-12T20:00:43Z] Tapish: Tara Sutaria 🤣🤣🤣
+[2025-10-12T20:00:44Z] Abhishek S: I'm sure I didn't delete the previous in time 😂
+[2025-10-12T20:00:51Z] Khandoba: Dekh liya tha Maine
+[2025-10-12T20:02:44Z] Abhishek S: ID the spider ‎image omitted
+[2025-10-12T20:02:51Z] Khandoba: Black widow
+[2025-10-12T20:02:58Z] Saara: Daddy long legs
+[2025-10-12T20:03:43Z] Khandoba: Tooo damn funny
+[2025-10-12T20:03:49Z] Saara: I still don’t know ↵ What prompted this
+[2025-10-12T20:03:53Z] Saara: Nomenclature ‎<This message was edited>
+[2025-10-12T20:04:16Z] Khandoba: Wait, that’s real?
+[2025-10-12T20:04:33Z] Khandoba: Like they really named the spider species that?
+[2025-10-12T20:04:35Z] Sidhesh K K: Maybe the child of the scientist pointed it out
+[2025-10-12T20:04:37Z] Abhishek S: Yup, that's the nickname for this spider
+[2025-10-12T20:04:57Z] Saara: Or their…sugar baby
+[2025-10-12T20:05:06Z] Tapish: Should’ve gone for the entire Look Daddy Long Legs
+[2025-10-12T20:05:34Z] Khandoba: I guess we should all be happy it’s not Diddy long legs
+[2025-10-12T20:06:11Z] Abhishek Vats: I thought daddy long legs was peter crouch or yao ming 😅 ‎<This message was edited>
+[2025-10-12T20:06:59Z] Tapish: I wonder if his last name is because he can’t Crouch 🤣
+[2025-10-12T20:07:58Z] Abhishek S: Guess who? ‎image omitted
+[2025-10-12T20:08:28Z] Tapish: Death?
+[2025-10-12T20:08:36Z] Sidhesh K K: The nun?
+[2025-10-12T20:08:55Z] Abhishek Vats: Om puri 🙈
+[2025-10-12T20:09:19Z] Tapish: Ronaldo?
+[2025-10-12T20:09:25Z] Abhishek Vats: Who else has a wrinkly or wrinkle free face
+[2025-10-12T20:09:40Z] Lzafeer Ahmad B F: Iron man
+[2025-10-12T20:09:44Z] Khandoba: That lady from Dr Who
+[2025-10-12T20:11:33Z] Abhishek S: This "thing" is known to say an onomatopoeic word that rhymes with Guess who
+[2025-10-12T20:12:18Z] Abhishek Vats: Ghosts and stuff
+[2025-10-12T20:12:24Z] Abhishek S: Or Dr Who for that matter, rhymes with
+[2025-10-12T20:12:30Z] Tapish: Boo
+[2025-10-12T20:12:41Z] Abhishek S: Correct track, give me a keyword to crack this
+[2025-10-12T20:12:46Z] Tapish: Ghost and Boo
+[2025-10-12T20:12:52Z] Abhishek S: Boo is the word I hinted at
+[2025-10-12T20:13:00Z] Lzafeer Ahmad B F: Winnie the Boo
+[2025-10-12T20:13:03Z] Abhishek Vats: Boo who
+[2025-10-12T20:13:04Z] Abhishek S: Hinted at Haunted at heh
+[2025-10-12T20:13:19Z] Abhishek S: Paint me a picture or say the keyword!
+[2025-10-12T20:13:40Z] Tapish: Peek a boo
+[2025-10-12T20:13:41Z] Abhishek S: I'm sorry, I really should be asleep 😂🤣
+[2025-10-12T20:14:10Z] Abhishek S: No, it should go with the picture too right, something is missing when you simply say ghost
+[2025-10-12T20:14:17Z] Sidhesh K K: Casper?
+[2025-10-12T20:14:37Z] Abhishek S: Yes but what precisely
+[2025-10-12T20:14:54Z] Abhishek S: I was just looking for Ghost in a sheet 😭
+[2025-10-12T20:15:05Z] Abhishek S: Or sheet as keyword
+[2025-10-12T20:15:22Z] Khandoba: I typed and deleted that because it looked weird🤣
+[2025-10-12T20:15:36Z] Tapish: Harry Potter sent by Dumbledore
+[2025-10-12T20:16:08Z] Abhishek S: I would have accepted this medium as well
+[2025-10-12T20:16:19Z] Abhishek Vats: Should have sent the ghosts and stuff video 🙈
+[2025-10-12T20:16:38Z] Abhishek Vats: Instead of the deadmau5 gif 😅
+[2025-10-12T20:17:19Z] Abhishek S: No question, just funny 😂
+[2025-10-12T20:19:15Z] Abhishek S: Sticking to the Halloween theme 👻 ‎image omitted
+[2025-10-12T20:19:53Z] Abhishek S: Also, sorry for springing in an impromptu quiz at this odd hour 😬🙈
+[2025-10-12T20:22:35Z] Tapish: Polterpianists?
+[2025-10-12T20:22:41Z] Abhishek S: I mean you guys who are reacting right now wouldn't mind cause you are online right now 😂 The apology is for those who read these later 🤣
+[2025-10-12T20:22:43Z] Tapish: That’s not a piano though
+[2025-10-12T20:23:17Z] Abhishek S: Great attempt but the hidden one is a better pun and this isn't the actual musical instrument
+[2025-10-12T20:23:35Z] Abhishek Vats: Poltersghosts?
+[2025-10-12T20:24:02Z] Tapish: So it’s a pun on Poltergeists?
+[2025-10-12T20:25:00Z] Abhishek Vats: No clue ‎GIF omitted
+[2025-10-12T20:25:35Z] Akshay: 1/4 + 1-Pi/4 ?
+[2025-10-12T20:25:47Z] Abhishek S: Think: genre of music
+[2025-10-12T20:26:07Z] Akshay: Ghost metal?
+[2025-10-12T20:26:35Z] Dhruv: Death Metal?
+[2025-10-12T20:26:37Z] Saara: Death metal??
+[2025-10-12T20:26:45Z] Akshay: Obv ansr but doesnt fit
+[2025-10-12T20:26:54Z] Dhruv: Death metallists
+[2025-10-12T20:27:31Z] Abhishek S: Poltergeist is the word on which the pun is to be made
+[2025-10-12T20:28:02Z] Dhruv: Polterguest?
+[2025-10-12T20:28:05Z] Abhishek Vats: Polkagheist?
+[2025-10-12T20:28:07Z] Sayu Sekhar: Polka Geist ?
+[2025-10-12T20:29:05Z] Dhruv: This looks like a joke, like those that used to come in Readers Digest ‎<This message was edited>
+[2025-10-12T20:29:53Z] Sayu Sekhar: 😆 laughter the best medicine life’s like that
+[2025-10-12T20:30:06Z] Sayu Sekhar: Humour in uniform
+[2025-10-12T20:30:25Z] Sayu Sekhar: Ooooom
+[2025-10-12T20:30:32Z] Sayu Sekhar: 🤣
+[2025-10-12T20:33:33Z] Saara: Something to do with the monster under the bed?
+[2025-10-12T20:35:02Z] Abhishek S: Nope nothing under the bed
+[2025-10-12T20:35:17Z] Tapish: Memory mattress?
+[2025-10-12T20:35:30Z] Dhruv: Memory foam mattress?? 😝😝😝😝 ↵ Thinking out of the box
+[2025-10-12T20:37:37Z] Abhishek S: Whose therapy session? ‎image omitted
+[2025-10-12T20:37:47Z] Akshay: Alligator?
+[2025-10-12T20:38:35Z] Srikanth Kapali: See you later, alligator :)
+[2025-10-12T20:40:14Z] Abhishek S: Complete the joke, heh ‎image omitted
+[2025-10-12T20:40:31Z] Sayu Sekhar: Haha ↵ Walk into a bar
+[2025-10-12T20:41:22Z] Khandoba: My favorite quizzing team name was “3 idiots walk into a bar” for a pub quiz
+[2025-10-12T20:44:24Z] Tapish: Metal detector
+[2025-10-12T20:44:35Z] Khandoba: Metal 🤘🏽 detectors
+[2025-10-12T20:44:55Z] Sayu Sekhar: Rock metal detector?
+[2025-10-12T20:45:04Z] Abhishek Vats: Where's the beard ? And wasn't he in a cave?😅
+[2025-10-12T20:46:08Z] Abhishek S: Points to everyone, I don't care
+[2025-10-12T20:47:18Z] Abhishek Vats: Last time someone said this about a certain amount of money in India.... 😅
+[2025-10-12T20:47:36Z] Abhishek Vats: Straight to account 😅
+[2025-10-12T20:47:49Z] Tapish: Also the Freedom 251 phone hasn’t arrived yet 🤣
+[2025-10-12T20:48:22Z] Saara: Passive funds?
+[2025-10-12T20:48:26Z] Abhishek Vats: Truth teller 😅
+[2025-10-12T20:48:40Z] Tapish: No interest? 😂
+[2025-10-12T20:49:00Z] Abhishek Vats: Sounds about right
+[2025-10-12T20:49:13Z] Abhishek S: Can improve a bit
+[2025-10-12T20:49:27Z] Abhishek Vats: Freedom came in 2014 no?😂
+[2025-10-12T20:49:28Z] Tapish: Zero interest?
+[2025-10-12T20:49:29Z] Srikanth Kapali: Zero interest savings account
+[2025-10-12T20:49:40Z] Abhishek S: "Actually, I'll give it to you!"
+[2025-10-12T20:50:12Z] Tapish: 2016
+[2025-10-12T20:50:23Z] Abhishek Vats: I meant independence 😅🙈
+[2025-10-12T20:50:49Z] Abhishek Vats: Psycho?
+[2025-10-12T20:50:56Z] Tapish: Psycho
+[2025-10-12T20:51:14Z] Khandoba: Norman bates?
+[2025-10-12T20:51:25Z] Khandoba: Bates motel
+[2025-10-12T20:51:38Z] Abhishek Vats: Forgot Blank length was indicative in this one 😂
+[2025-10-12T20:51:53Z] Tapish: 🤣🤣🤣
+[2025-10-12T20:52:01Z] Abhishek S: I didn't want to ask people to improve, who am I to judge
+[2025-10-12T20:57:17Z] Abhishek S: Last one and then I'll call it a night, I promise
+[2025-10-12T20:58:15Z] Abhishek S: Who's hidden
+[2025-10-12T20:58:38Z] Abhishek Vats: Yoda
+[2025-10-12T20:59:08Z] Khandoba: i don't get it
+[2025-10-12T20:59:11Z] Saara: Thanks a lot for these! V fun
+[2025-10-12T20:59:34Z] Abhishek S: Fine, one last last one ‎image omitted
+[2025-10-12T20:59:56Z] Abhishek Vats: Climate change 😂
+[2025-10-12T21:00:09Z] Abhishek Vats: This one is one of my favourites 😅
+[2025-10-12T21:00:11Z] Abhishek S: Get it, you will
+[2025-10-12T21:01:10Z] Abhishek S: Before I leave, here's a math joke for the needs too 😂 ‎image omitted
+[2025-10-12T21:01:14Z] Abhishek Vats: Had been an ongoing banter with one of my friends who had his thesis around this
+[2025-10-12T21:01:40Z] Abhishek S: Around falling pennies?
+[2025-10-12T21:01:54Z] Abhishek Vats: Hahahhah that's his stipend 😅🙈
+[2025-10-12T21:01:58Z] Abhishek Vats: And the joke 😅
+[2025-10-12T21:02:44Z] Abhishek Vats: Making up a word but algbraimer's
+[2025-10-12T21:02:53Z] Shubham: Alzehmeirs's coefficient?
+[2025-10-12T21:03:50Z] Shubham: Answer slide?
+[2025-10-12T21:04:14Z] Abhishek Vats: Jordan schlanskey?
+[2025-10-12T21:04:20Z] Shubham: Yes.
+[2025-10-12T21:04:33Z] Abhishek Vats: Sorry forgot it wasn't a question 😂
+[2025-10-12T21:05:06Z] Khandoba: answer?
+[2025-10-12T21:06:19Z] Abhishek S: Hint
+[2025-10-12T21:06:38Z] Abhishek Vats: Nostalgebra 😂
+[2025-10-12T21:06:43Z] Tapish: Nostalgebra
+[2025-10-12T21:06:45Z] Tapish: 🤣🤣🤣🤣
+[2025-10-12T21:06:55Z] Abhishek Vats: I am just thinking algebra and memory
+[2025-10-12T21:06:58Z] Abhishek Vats: 😂
+[2025-10-12T21:07:06Z] Abhishek S: It's a stretch of a pun ‎image omitted
+[2025-10-12T21:07:08Z] Tapish: Hint ❤️🙏
+[2025-10-12T21:07:15Z] Abhishek Vats: Second one seems to be failing me 😂
+[2025-10-12T21:07:32Z] Abhishek Vats: More of Alzheimer's no?
+[2025-10-12T21:08:06Z] Abhishek S: Yeah, which is why I actually liked the first attempts
+[2025-10-12T21:18:03Z] Abhishek Vats: https://youtube.com/shorts/M0ZvPyoJa9c?si=xibVOZWRFQeJscon
+[2025-10-12T21:18:49Z] Abhishek Vats: Remember this from a similar initiative by the women's team earlier which was a question in one of the first KViz shows
+[2025-10-12T21:18:57Z] Abhishek Vats: I think S1e3
+[2025-10-12T21:19:17Z] Abhishek Vats: I went for Alzheimer's then also 😅
+[2025-10-12T21:29:48Z] Aditi Bapat: Went for lunch like an idiot and missed the whole thing. ↵ Yaar these pun quizzes are too much fun. Like Ryan said, they're earning me brownie points in other friend groups, so thank you Abhishek 🫡
+[2025-10-12T21:40:32Z] Abhishek Vats: First ad in India for this brand ‎image omitted
+[2025-10-12T21:40:50Z] Khandoba: Didn’t someone share it earlier?
+[2025-10-12T21:41:03Z] Abhishek Vats: I think I missed that one then 🙈
+[2025-10-12T21:41:33Z] Khandoba: “You have lost your touch, Bruce”
+[2025-10-12T21:41:54Z] Abhishek Vats: Why do we fall master wayne 😂
+[2025-10-12T21:42:35Z] Khandoba: Speaking of, under the red hood, top 3 batman animated movies
+[2025-10-12T21:42:43Z] Akshay: Shared it on the other group lol
+[2025-10-12T21:44:02Z] Abhishek Vats: Repeat questions helped me during the streak so think habits die hard 😅
+[2025-10-12T21:48:48Z] Abhishek S: This is apple Macintosh right?
+[2025-10-12T21:48:59Z] Abhishek Vats: Yup
+[2025-10-12T23:03:09Z] Pavan Pamidimarri: Urban settlements tend to spring up at places where a river becomes shallow and can be crossed on foot or horseback, because taxes can be imposed on the trade crossing the river at that point. This city started off in that manner and is on the Main river, the longest tributary of the Rhine. Before it was annexed by Prussia in the 19th century, it was a free city state for several centuries. The city is named after the same tribe of people after whom a different neighboring country is also named. Which city?
+[2025-10-12T23:03:20Z] Pavan Pamidimarri: And which neighboring country?
+[2025-10-12T23:04:14Z] Dhruv: Mannheim or Frankfurt?
+[2025-10-12T23:04:24Z] Naman Agarwal: Since I read you are flying to it Frankfurt
+[2025-10-12T23:04:33Z] Dhruv: Frankfurt and France ?
+[2025-10-12T23:05:31Z] Pavan Pamidimarri: it is the Franks’ ford on the Main
+[2025-10-12T23:05:58Z] Dhruv: Also called Frankfurt am Main?
+[2025-10-12T23:06:08Z] Pavan Pamidimarri: yes
+[2025-10-12T23:06:24Z] Pavan Pamidimarri: Frankfurt am Main is the financial capital of Germany, and arguably the European Union because the European Central Bank is headquartered there. This is the skyline of the city, which gives it a nickname. The nickname is a portmanteau based on the city’s location and another global city long famed for its skyline. What is the nickname? ‎image omitted
+[2025-10-12T23:07:44Z] Khandoba: newest York?
+[2025-10-12T23:07:53Z] Khandoba: 😅
+[2025-10-12T23:08:15Z] Pavan Pamidimarri: no but somewhat in that direction
+[2025-10-12T23:09:30Z] Dhruv: Somewhere in that direction and Main, maybe Mainhattan?
+[2025-10-12T23:09:54Z] Pavan Pamidimarri: excellent crack
+[2025-10-12T23:09:55Z] Dhruv: I also went in this direction first
+[2025-10-12T23:10:05Z] Khandoba: wow
+[2025-10-12T23:41:09Z] Akshay: What an answer!
+[2025-10-13T00:02:27Z] Pavan Pamidimarri: Wikipedia says: George _______________ was an Anglo-Irish philosopher, writer, and clergyman who is regarded as the founder of "immaterialism", a philosophical theory he developed which was later referred to as "subjective idealism" by others. As a leading figure in the empiricism movement and one of its originators, he was among the most cited philosophers of 18th-century Europe. His works had a profound influence on the views of later thinkers, such as Immanuel Kant and David Hume. FITB ‎<This message was edited>
+[2025-10-13T00:03:51Z] Srikanth Kapali: Berkeley
+[2025-10-13T00:04:20Z] Srikanth Kapali: Clue was you are asking the question I thought something related to Pavan, California
+[2025-10-13T00:04:48Z] Pavan Pamidimarri: Perfectly reasoned
+[2025-10-13T00:05:42Z] Pavan Pamidimarri: I don't understand most of what I copy pasted, and I don't think most of the people here do either. Still I asked the question expecting it to be answered. So this is the correct way to think ‎<This message was edited>
+[2025-10-13T01:09:36Z] Pavan Pamidimarri: The Yongning Pagoda or Yongning Temple (simplified Chinese: 永宁寺; traditional Chinese: 永寧寺; pinyin: Yǒngníng Sì) in Luoyang was completed in 516 CE, but it was destroyed in a lightning-induced fire in 534 CE. The timber-frame pagoda with a complete column grid and a stabilising masonry-core was built during the Northern Wei, and reached a height over 482 feet (147m). Possibly nine stories high, of which seven were made of earth platforms with wooden verandas, and the top two stories being completely out of wood. What is unique about this building?
+[2025-10-13T01:17:43Z] Aditi Bapat: Does it feature on any currency?
+[2025-10-13T01:17:56Z] Pavan Pamidimarri: Great guess but no
+[2025-10-13T01:18:36Z] Nikunj: Is it the base for the giant buddha statue in china???
+[2025-10-13T01:19:19Z] Pavan Pamidimarri: No, but I think that is near Luoyang too
+[2025-10-13T01:19:40Z] Pavan Pamidimarri: Hint to focus on some data provided in the question
+[2025-10-13T01:19:41Z] Dhruv: Is it probably the tallest building in the world in ancient time?
+[2025-10-13T01:20:00Z] Pavan Pamidimarri: Tallest building during the time it existed
+[2025-10-13T01:20:39Z] Pavan Pamidimarri: Interrupted the Great Pyramid's 3,000+ year old reign as the world tallest building
+[2025-10-13T01:22:38Z] Pavan Pamidimarri: Nothing taller than this pagoda was built anywhere else in the world for another 700 years
+[2025-10-13T01:23:02Z] Pavan Pamidimarri: So a big outlier in terms of tech
+[2025-10-13T01:23:09Z] Dhruv: What was the next tallest thing? Qutab minar?
+[2025-10-13T01:23:28Z] Dhruv: Like the next thing built that was taller than this
+[2025-10-13T01:23:40Z] Pavan Pamidimarri: Around 1200 some cathedral in England overtook the Great Pyramid as the tallest ‎<This message was edited>
+[2025-10-13T01:24:33Z] Pavan Pamidimarri: Then each European city tried to outdo the other in cathedral construction
+[2025-10-13T01:26:18Z] Pavan Pamidimarri: Qutb minar is less than half the height of this pagoda
+[2025-10-13T02:18:36Z] Aditi Bapat: Mr. "I'm just happy I didn't get 0" 😏
+[2025-10-13T06:54:03Z] Khandoba: correlation is equal to causation
+[2025-10-13T07:33:35Z] Khandoba: Catfished?
+[2025-10-13T07:34:30Z] Abhishek S: They lack the whiskers for Catfish, na
+[2025-10-13T07:35:21Z] Tapish: Sucks to be at home?
+[2025-10-13T07:36:00Z] Abhishek S: Hmm, you may be on to something
+[2025-10-13T07:36:07Z] Khandoba: Something to do with phishing?
+[2025-10-13T07:36:22Z] Abhishek S: Nope
+[2025-10-13T07:36:23Z] Tapish: Ah yes can be
+[2025-10-13T07:36:46Z] Khandoba: Paani fer diya mere aur tapish ke hopes pe
+[2025-10-13T07:37:08Z] Abhishek S: This needs fish
+[2025-10-13T07:37:22Z] Tapish: Mere harr answer pe class-teacher waala remark Yaad ajaata hai “can do better”
+[2025-10-13T07:37:25Z] Tapish: 😂😂😂
+[2025-10-13T07:37:26Z] Khandoba: Is that a sucker fish? ‎<This message was edited>
+[2025-10-13T07:37:39Z] Tapish: Sucker fish at home?
+[2025-10-13T07:43:13Z] Khandoba: Can’t think of anything, any hint?
+[2025-10-13T07:43:44Z] Tapish: Sanjeev Kapoor 😂😂 ‎<This message was edited>
+[2025-10-13T07:44:08Z] Khandoba: Why?
+[2025-10-13T07:44:19Z] Tapish: Chef lag raha 😂😂😂
+[2025-10-13T07:44:30Z] Khandoba: Ohh🤣🤣
+[2025-10-13T07:44:43Z] Khandoba: I was overthinking that joke🤣
+[2025-10-13T07:44:47Z] Abhishek S: Very direct - Name of a conquistador is missing
+[2025-10-13T07:45:08Z] Abhishek S: Kind of name if you know, you know
+[2025-10-13T07:45:37Z] Khandoba: Idk, Cortez?
+[2025-10-13T07:46:45Z] Tapish: Jack Sparrow
+[2025-10-13T07:46:54Z] Abhishek S: He's the one linked with the search for the fountain of youth, hence the pun here
+[2025-10-13T07:47:03Z] Tapish: Arreeeee
+[2025-10-13T07:47:08Z] Tapish: Ponce de Leon
+[2025-10-13T07:47:21Z] Khandoba: That went close
+[2025-10-13T07:47:26Z] Tapish: Pirates of the Caribbean yes
+[2025-10-13T07:47:33Z] Khandoba: Shit, fountain of youth
+[2025-10-13T07:47:48Z] Sidhesh K K: Ponce de lepn
+[2025-10-13T07:47:50Z] Khandoba: That was brilliant
+[2025-10-13T07:48:00Z] Abhishek S: I thought you guys figured out the pun already 😆
+[2025-10-13T07:48:06Z] Tapish: Didn’t regard that Yuth and fountain at all
+[2025-10-13T07:48:09Z] Tapish: 🤣🤣🤣🤣
+[2025-10-13T07:48:38Z] Khandoba: Yeah, I was thinking more about that missing O in youth
+[2025-10-13T07:48:43Z] Abhishek S: Haan, you were on Khana Khazana track 😂
+[2025-10-13T07:50:02Z] Khandoba: No shit?
+[2025-10-13T07:50:23Z] Saara: No ship
+[2025-10-13T07:50:43Z] Shubham: No sheet?
+[2025-10-13T07:51:04Z] Saara: Bedsheet?
+[2025-10-13T07:51:08Z] Tapish: You gave the master key 🤣
+[2025-10-13T07:51:09Z] Khandoba: If this was amber heard’s bed, my answer would have been correct🤣
+[2025-10-13T07:51:18Z] Saara: lol sorry late to the party
+[2025-10-13T07:51:49Z] Abhishek S: No one gets here on time unless they are here all the time 😂
+[2025-10-13T07:51:56Z] Khandoba: Ouch
+[2025-10-13T07:52:00Z] Tapish: Amber heard and Depp have never been in such proximity as this chat after that hearing before today 🤣
+[2025-10-13T07:52:10Z] Khandoba: No need to attack us bro
+[2025-10-13T07:52:14Z] Shubham: No personal attacks, please.
+[2025-10-13T07:52:19Z] Tapish: We need to get to work @⁨~Khandoba⁩ 🤣 ‎<This message was edited>
+[2025-10-13T07:52:53Z] Khandoba: Midnight for me😅
+[2025-10-13T07:53:04Z] Khandoba: I’m an imposter with Indian phone number 🤣
+[2025-10-13T07:53:06Z] Tapish: I am in the middle of work 🤣 ‎<This message was edited>
+[2025-10-13T07:53:21Z] Abhishek S: And I am at work 😂
+[2025-10-13T07:53:42Z] Khandoba: Just make sure your bosses never get membership
+[2025-10-13T07:54:12Z] Tapish: Likewise, but wfh today 🤣
+[2025-10-13T07:56:56Z] Tapish: Hints?
+[2025-10-13T07:57:21Z] Abhishek S: a kind of reality show genre?
+[2025-10-13T08:00:29Z] Khandoba: Flip each other off?
+[2025-10-13T08:01:18Z] Tapish: I’m out, no idea about reality tv
+[2025-10-13T08:01:27Z] Tapish: Except Abhijeet Sawant
+[2025-10-13T08:01:48Z] Shubham: Shark tank?
+[2025-10-13T08:02:36Z] Abhishek S: Can build on this
+[2025-10-13T08:03:27Z] Abhishek S: This is a real estate selling reality show on Sony
+[2025-10-13T08:03:48Z] Shubham: Oh!
+[2025-10-13T08:03:55Z] Khandoba: Flip houses
+[2025-10-13T08:03:58Z] Shubham: Like flip house?
+[2025-10-13T08:28:06Z] Abhishek S: Hate it when work interrupts me at work.
+[2025-10-13T08:38:24Z] Abhishek S: Name the cousin ‎image omitted
+[2025-10-13T08:42:49Z] Lzafeer Ahmad B F: Thats Pilsbury Dough boy
+[2025-10-13T08:43:24Z] Lzafeer Ahmad B F: Cousin would be gluten free or something ?
+[2025-10-13T08:44:14Z] Abhishek S: Clue is in what the man says last
+[2025-10-13T08:45:02Z] Shubham: I dough know.
+[2025-10-13T08:45:12Z] Lzafeer Ahmad B F: Oh wait
+[2025-10-13T08:45:22Z] Lzafeer Ahmad B F: John Dough
+[2025-10-13T08:46:30Z] Lzafeer Ahmad B F: WHats the Indian equivalent for John Doe?
+[2025-10-13T08:47:48Z] Abhishek S: Does it fit the initials of John Doe or sound similar?
+[2025-10-13T08:47:54Z] Lzafeer Ahmad B F: Nope
+[2025-10-13T08:48:15Z] Abhishek S: Damn, so it's not Jamna Das 😬
+[2025-10-13T08:48:21Z] Lzafeer Ahmad B F: HAhaha
+[2025-10-13T08:48:28Z] Lzafeer Ahmad B F: Think Bollywood.
+[2025-10-13T08:48:32Z] Khandoba: Rahul Sharma
+[2025-10-13T08:48:42Z] Abhishek S: _______ Ram?
+[2025-10-13T08:49:29Z] Abhishek S: Was thinking like Aaya Ram, Gaya Ram or something
+[2025-10-13T08:50:07Z] Lzafeer Ahmad B F: Do you know the origin of this phrasE?
+[2025-10-13T08:50:30Z] Lzafeer Ahmad B F: Nearly a 50 year plus career
+[2025-10-13T08:50:32Z] Abhishek S: Like political party switching
+[2025-10-13T08:50:46Z] Khandoba: Amitabh Bachchan?
+[2025-10-13T08:50:49Z] Shubham: Amitabh?
+[2025-10-13T08:50:54Z] Abhishek S: Ashok Kumar?
+[2025-10-13T08:51:13Z] Lzafeer Ahmad B F: Correct
+[2025-10-13T08:51:58Z] Khandoba: Ashok Kumar had 50+ year career?
+[2025-10-13T08:52:01Z] Abhishek S: Damn! I was thinking of a common name, and somehow was thinking of Madan Kumar (from Jubilee) when you said 50 year career 😂
+[2025-10-13T08:52:12Z] Khandoba: I don’t think I ever saw a movie where he was young
+[2025-10-13T08:52:47Z] Shubham: And the Indian equivalent of Jane Doe?
+[2025-10-13T08:53:03Z] Lzafeer Ahmad B F: Yeah. Thats what it means. But the origin came about because of a leader Called Gaya something. Switching allegiance some 4-5 times withing 2 weeks
+[2025-10-13T08:53:16Z] Lzafeer Ahmad B F: 1960-1970 Haryana
+[2025-10-13T08:53:29Z] Lzafeer Ahmad B F: So Aaya ram Gaya ram.
+[2025-10-13T08:53:38Z] Lzafeer Ahmad B F: There isn’t one.
+[2025-10-13T08:53:44Z] Lzafeer Ahmad B F: YEt
+[2025-10-13T08:54:40Z] Lzafeer Ahmad B F: Or at least didn’t iuntil 2020
+[2025-10-13T08:55:28Z] Lzafeer Ahmad B F: Lawyers contemplating important questions. ‎image omitted
+[2025-10-13T08:55:30Z] Abhishek S: 1934-1997, so 60+ yr career
+[2025-10-13T08:56:34Z] Khandoba: Wow
+[2025-10-13T08:57:20Z] Khandoba: Jaya sounds good, for one, it is ubiquitous across states
+[2025-10-13T08:58:06Z] Lzafeer Ahmad B F: YEah. Thats why I suggested Jaya because that was the logic behind Ashok Kumar.
+[2025-10-13T08:59:52Z] Khandoba: Make it happen, Jaya dev
+[2025-10-13T09:00:05Z] Khandoba: Initials same as Jane doe
+[2025-10-13T09:00:13Z] Khandoba: Also part of Aarti 🤣
+[2025-10-13T09:00:29Z] Abhishek S: Would probably be Jaya Kumari to keep it consistent with Ashok Kumar
+[2025-10-13T09:00:53Z] Abhishek S: Looking up John Doe orders/Ashok Kumar orders now cause of this question
+[2025-10-13T10:24:54Z] Ryan Colaço: Watch Nirma ad... ↵ Pick one name... ↵ Done
+[2025-10-13T10:41:46Z] Naren Iyer: Yes.. Ubiquity across states is really important in the current climate.. with the language policies and the states’ regional politics..
+[2025-10-13T11:23:27Z] Ryan Colaço: Is he a viking _re-horn_ ? Like reborn?
+[2025-10-13T11:24:00Z] Dhruv Nath: Re-Bjorn?
+[2025-10-13T11:24:27Z] Dhruv Nath: Thinking of Borg!
+[2025-10-13T11:25:25Z] Dhruv Nath: But the blank seems to be longer
+[2025-10-13T11:30:11Z] Farhan: Seems like It is expertly masked to create this doubt
+[2025-10-13T11:36:33Z] Ryan Colaço: I wonder if we should create a historical version of "Gunda"... ↵ It could be set in Eurasia of the 5th century CE and the main antagonist could be Ibu Atilla
+[2025-10-13T11:52:50Z] Abhishek S: All that effort and set up for the Ibu Atilla pun 👏👏👏
+[2025-10-13T11:53:12Z] Abhishek S: Atilla the pun
+[2025-10-13T11:57:25Z] Ryan Colaço: I'll work hard when they pay off is worthy of a facepalm
+[2025-10-13T12:17:22Z] Surabhi: Birds of prey/pray?
+[2025-10-13T12:28:56Z] Abhishek S: ID the hidden animal ‎image omitted
+[2025-10-13T12:29:16Z] Sidhesh K K: Platypus
+[2025-10-13T12:29:20Z] Saara: Platypus?
+[2025-10-13T12:29:21Z] Nikunj: Platypus
+[2025-10-13T12:34:21Z] Abhishek S: A Pun on the animal in pic. ‎image omitted
+[2025-10-13T12:34:48Z] Saara: Vanitee?
+[2025-10-13T12:37:10Z] Saara: Hahaaaa
+[2025-10-13T12:41:58Z] Abhishek S: What did she get instead? ‎image omitted
+[2025-10-13T12:42:31Z] Lzafeer Ahmad B F: Toy otter
+[2025-10-13T12:45:39Z] Abhishek S: Good attempt
+[2025-10-13T12:48:41Z] Sidhesh K K: Toy Yoda?
+[2025-10-13T12:48:57Z] Lzafeer Ahmad B F: HAHAHAHA> TOo good
+[2025-10-13T12:50:52Z] Abhishek S: Fill the missing caption ‎image omitted
+[2025-10-13T12:53:11Z] Sidhesh K K: Nazar hati durghatna ghati
+[2025-10-13T12:55:54Z] Sidhesh K K: Any theme for this?
+[2025-10-13T12:55:57Z] Abhishek S: There is wordplay involved
+[2025-10-13T12:56:12Z] Sidhesh K K: I'm going on the lines of machhli ki aankh
+[2025-10-13T12:56:18Z] Sidhesh K K: Baaz ki nazar
+[2025-10-13T12:56:27Z] Abhishek S: Connected with what's happening in the picture
+[2025-10-13T12:57:15Z] Abhishek S: Hint to get you to where you need to be: Gregory Peck
+[2025-10-13T12:57:51Z] Nikhil Borra: Maltese Falcon?
+[2025-10-13T12:58:35Z] Sidhesh K K: Ooooh... to mock a killing bird?
+[2025-10-13T12:58:38Z] Tapish: To mock a killing bird
+[2025-10-13T12:58:55Z] Tapish: Too good
+[2025-10-13T12:59:27Z] Sidhesh K K: Mal-tease Falcon could also fit.... but not gregory peck I guess
+[2025-10-13T12:59:57Z] Abhishek S: Yeah that's Humphrey Bogart
+[2025-10-13T13:00:24Z] Abhishek S: And this wordplay is perfect
+[2025-10-13T13:05:26Z] Abhishek S: I have around 8-10 more questions, will share these at 8 PM IST. There, that's your heads-up. And the extent of my patience 🙈
+[2025-10-13T13:49:12Z] Khandoba: Appreciate hai
+[2025-10-13T14:55:12Z] Shubham: ?
+[2025-10-13T14:55:24Z] Akshay: Kviz kab hai? Kab hai kviz?
+[2025-10-13T14:55:28Z] Akshay: It’s 830
+[2025-10-13T14:55:35Z] Khandoba: Sab Gabbar hai idhar🤣
+[2025-10-13T15:06:17Z] Abhishek S: Ok, sorry, folks, starting a bit late 😬
+[2025-10-13T15:06:43Z] Kartikey Pradhan: Ladke gf ka text seen par chhod ke intezaar kar rahe hain
+[2025-10-13T15:06:58Z] Kartikey Pradhan: Inko late hoga
+[2025-10-13T15:07:46Z] Abhishek S: Easy one for warm-up ‎image omitted
+[2025-10-13T15:08:12Z] Shubham: Leaning tower?
+[2025-10-13T15:08:34Z] Kartikey Pradhan: The tower of pisa
+[2025-10-13T15:08:55Z] Abhishek S: Ho gaya warm-up
+[2025-10-13T15:09:31Z] Abhishek S: Now for a bit of stretching. ‎image omitted
+[2025-10-13T15:10:26Z] Kartikey Pradhan: Lead singer
+[2025-10-13T15:10:35Z] Tapish: Lead Zeppelin
+[2025-10-13T15:10:44Z] Kartikey Pradhan: Oh lmao hahahahahahahaha
+[2025-10-13T15:11:12Z] Abhishek S: I didn't even hide the PLZ on the drum set
+[2025-10-13T15:12:03Z] Abhishek S: Buzzer test ‎image omitted
+[2025-10-13T15:12:18Z] Kartikey Pradhan: Dumble-door
+[2025-10-13T15:12:34Z] Kartikey Pradhan: Dumbell-door maybe
+[2025-10-13T15:12:37Z] Dhruv: Dumble doordash
+[2025-10-13T15:12:38Z] Shubham: Dumble door dash?
+[2025-10-13T15:13:01Z] Kartikey Pradhan: This is yday all over again 🥺
+[2025-10-13T15:13:12Z] Pavan Pamidimarri: Part points to KP
+[2025-10-13T15:13:23Z] Khandoba: Where have I heard that before
+[2025-10-13T15:13:29Z] Tapish: “Can do better” remember your class teacher’s words as I say 🤣
+[2025-10-13T15:13:30Z] Abhishek S: Nope, KP gets a lesson 😀
+[2025-10-13T15:13:52Z] Kartikey Pradhan: That’s my team name which will concede defeat to the team “what the hell Pavan”
+[2025-10-13T15:14:37Z] Abhishek S: What's hidden ‎image omitted
+[2025-10-13T15:14:50Z] Saara: Candy crush?
+[2025-10-13T15:14:51Z] Ankit Jain: candy crush
+[2025-10-13T15:14:52Z] Abhishek Vats: Candy crush
+[2025-10-13T15:14:52Z] Kartikey Pradhan: Cnady crush
+[2025-10-13T15:14:53Z] Dhruv: Candy crush
+[2025-10-13T15:15:01Z] Tapish: Candy crush
+[2025-10-13T15:15:02Z] Abhishek S: And closed!
+[2025-10-13T15:15:25Z] Abhishek S: Alright, feels like everyone has warmed up 😀
+[2025-10-13T15:16:27Z] Saara: Chicago?
+[2025-10-13T15:16:30Z] Abhishek Vats: Chicago deep dish?
+[2025-10-13T15:16:33Z] Dhruv: Hawaiian?
+[2025-10-13T15:16:55Z] Dhruv: Oh because of the band
+[2025-10-13T15:17:00Z] Khandoba: Ok meeting over, I’m back
+[2025-10-13T15:17:07Z] Abhishek S: Points split for Saara and Vats
+[2025-10-13T15:17:16Z] Saara: I love that I’m getting to use my brain on something aside from excel during a workday
+[2025-10-13T15:17:27Z] Dhruv: Was it really over or were you like guys i gtg, will send email 😝😝
+[2025-10-13T15:17:40Z] Khandoba: I wrapped up 15 minutes early
+[2025-10-13T15:17:57Z] Khandoba: Could not lose more of them imaginary points
+[2025-10-13T15:17:58Z] Kartikey Pradhan: In a 15 mins meeting
+[2025-10-13T15:18:13Z] Khandoba: Dr Zeus
+[2025-10-13T15:18:16Z] Saara: Seuss
+[2025-10-13T15:18:19Z] Kartikey Pradhan: Dr zeues
+[2025-10-13T15:18:22Z] Saara: Zeuss
+[2025-10-13T15:18:26Z] Tapish: Dr Zeus
+[2025-10-13T15:18:41Z] Khandoba: No one will know
+[2025-10-13T15:19:08Z] Khandoba: Horton here comes the who
+[2025-10-13T15:19:15Z] Abhishek S: Sab le lo points
+[2025-10-13T15:19:29Z] Abhishek Vats: https://youtu.be/-CVD7PUBzLk?si=onfnJ8u2LkJ08X86
+[2025-10-13T15:19:44Z] Abhishek Vats: Or Dr Zeus I know of 😂
+[2025-10-13T15:19:57Z] Abhishek S: ID who's hidden ‎image omitted
+[2025-10-13T15:20:05Z] Dhruv: No space
+[2025-10-13T15:20:15Z] Sidhesh K K: Elvis
+[2025-10-13T15:20:43Z] Kartikey Pradhan: That’s a cracker of a crack
+[2025-10-13T15:20:49Z] Abhishek Vats: Did he leave the building after this?
+[2025-10-13T15:20:59Z] Dhruv: I thought it was a bathroom stall
+[2025-10-13T15:21:04Z] Dhruv: Whoops
+[2025-10-13T15:21:19Z] Abhishek S: Name the store ‎image omitted
+[2025-10-13T15:21:21Z] Pavan Pamidimarri: You all are really good at this. The answer comes up before I can download the image on this WiFi
+[2025-10-13T15:21:38Z] Abhishek Vats: Hole foods
+[2025-10-13T15:21:39Z] Kartikey Pradhan: Eurozone
+[2025-10-13T15:21:48Z] Saara: Oh hahahaha
+[2025-10-13T15:22:04Z] Abhishek Vats: Seen this one have I
+[2025-10-13T15:22:16Z] Sidhesh K K: Yo-da Man! ‎<This message was edited>
+[2025-10-13T15:22:16Z] Kartikey Pradhan: Yoda master 🙏
+[2025-10-13T15:22:52Z] Dhruv: Makes it easy for me to distinguish now, from now on you're Yoda
+[2025-10-13T15:23:12Z] Abhishek Vats: Doya
+[2025-10-13T15:23:13Z] Abhishek S: Let's pause for anyone who wants to sacrifice their data and phone space by setting images to auto download 😬
+[2025-10-13T15:23:24Z] Abhishek Vats: Please let me be one
+[2025-10-13T15:23:47Z] Kartikey Pradhan: Kitne dayaalu hain aap
+[2025-10-13T15:24:27Z] Abhishek Vats: Done
+[2025-10-13T15:25:56Z] Abhishek Vats: Burnitdown 😂
+[2025-10-13T15:26:07Z] Abhishek Vats: Sorry was watching wwe 😂
+[2025-10-13T15:26:08Z] Surabhi: Bernadette
+[2025-10-13T15:26:14Z] Khandoba: Is it a Star Trek reference?
+[2025-10-13T15:26:16Z] Surabhi: Burn a debt
+[2025-10-13T15:26:24Z] Kartikey Pradhan: Wow
+[2025-10-13T15:26:28Z] Khandoba: Nice
+[2025-10-13T15:26:42Z] Kartikey Pradhan: I’d have never got that ‎<This message was edited>
+[2025-10-13T15:26:48Z] Dhruv: Same
+[2025-10-13T15:26:58Z] Surabhi: This helped
+[2025-10-13T15:27:01Z] Abhishek Vats: If it was a TBBT screengrab maybe 😅
+[2025-10-13T15:27:10Z] Abhishek Vats: Hahhahaha
+[2025-10-13T15:28:18Z] Abhishek S: Will only close after I get the exact answer
+[2025-10-13T15:28:41Z] Tapish: Ether oar
+[2025-10-13T15:28:46Z] Kartikey Pradhan: Ether/oar situation
+[2025-10-13T15:28:47Z] Khandoba: Wow
+[2025-10-13T15:28:56Z] Sidhesh K K: Beautiful!
+[2025-10-13T15:29:26Z] Khandoba: I was typing an aesthetic situation even though it didn’t make sense 🤣 ‎<This message was edited>
+[2025-10-13T15:29:31Z] Abhishek Vats: I was thinking the answer was something poisonous
+[2025-10-13T15:29:43Z] Sidhesh K K: Chummeshwari crack this was
+[2025-10-13T15:30:04Z] Tapish: I was going with this only 😂
+[2025-10-13T15:32:29Z] Khandoba: Have no idea what high noon with Gary cooper is
+[2025-10-13T15:32:39Z] Sidhesh K K: High Noon was a movie
+[2025-10-13T15:32:42Z] Surabhi: Need a hint ( or maybe 7)
+[2025-10-13T15:32:45Z] Abhishek S: High Noon (1952) Starring Gary Cooper
+[2025-10-13T15:32:59Z] Abhishek Vats: Sheldon se related hai kya?
+[2025-10-13T15:33:06Z] Abhishek S: Knowing just a little about the movie helps
+[2025-10-13T15:33:14Z] Abhishek S: Like juust what it is
+[2025-10-13T15:33:17Z] Tapish: Phir toh nahi
+[2025-10-13T15:33:22Z] Sidhesh K K: Both blanks same?
+[2025-10-13T15:33:37Z] Sidhesh K K: Best Western?
+[2025-10-13T15:33:42Z] Abhishek S: Yes the first and second blanks are the same keyword
+[2025-10-13T15:33:53Z] Abhishek Vats: Is it "High" noon or high noon
+[2025-10-13T15:34:05Z] Khandoba: Niceee
+[2025-10-13T15:34:25Z] Kartikey Pradhan: Mere upar se nikal gaya ye
+[2025-10-13T15:34:33Z] Sayu Sekhar: Was about to guess “blockbuster”
+[2025-10-13T15:34:49Z] Khandoba: The movie is a western
+[2025-10-13T15:34:58Z] Kartikey Pradhan: Oooff
+[2025-10-13T15:35:06Z] Kartikey Pradhan: How dumb can one person be
+[2025-10-13T15:35:19Z] Khandoba: Just having an off day (or a week)
+[2025-10-13T15:35:30Z] Kartikey Pradhan: Pls stop being a Chappell
+[2025-10-13T15:35:46Z] Khandoba: “SAD”
+[2025-10-13T15:36:09Z] Kartikey Pradhan: Shamitaaaa
+[2025-10-13T15:36:30Z] Kartikey Pradhan: West Bengal west mein hai obvio
+[2025-10-13T15:36:34Z] Sidhesh K K: More questions coming?
+[2025-10-13T15:36:51Z] Lzafeer Ahmad B F: I couldn’t find the kid meme in time
+[2025-10-13T15:36:51Z] Kartikey Pradhan: Spicy meetups
+[2025-10-13T15:37:04Z] Lzafeer Ahmad B F: Found it
+[2025-10-13T15:37:05Z] Abhishek Vats: Seasonal greetings
+[2025-10-13T15:37:09Z] Kartikey Pradhan: Lol
+[2025-10-13T15:37:25Z] Tapish: Wow
+[2025-10-13T15:37:29Z] Pavan Pamidimarri: Reminds me of the time my mom thought western meant any movie made in the west
+[2025-10-13T15:37:42Z] Khandoba: Ye save kar lo
+[2025-10-13T15:37:52Z] Abhishek S: Just a few more
+[2025-10-13T15:37:54Z] Naren Iyer: Baingan
+[2025-10-13T15:37:55Z] Lzafeer Ahmad B F: Saved! Love a good sticker
+[2025-10-13T15:39:03Z] Naren Iyer: Constinpation
+[2025-10-13T15:39:12Z] Abhishek Vats: Soot?
+[2025-10-13T15:39:22Z] Khandoba: I think they are talking about the nose
+[2025-10-13T15:39:52Z] Abhishek Vats: Shute?
+[2025-10-13T15:39:54Z] Tapish: viral?
+[2025-10-13T15:39:56Z] Kartikey Pradhan: A netinpot
+[2025-10-13T15:39:57Z] Tapish: Virus
+[2025-10-13T15:40:11Z] Dhruv: The bend?
+[2025-10-13T15:40:18Z] Pavan Pamidimarri: Tinnitus
+[2025-10-13T15:40:52Z] Abhishek Vats: A big stoppah?😂
+[2025-10-13T15:40:54Z] Abhishek S: Hint: The pun is a homophone
+[2025-10-13T15:40:56Z] Kartikey Pradhan: Hanumankind?
+[2025-10-13T15:41:27Z] Naren Iyer: Sorry I’m all about inclusivity..
+[2025-10-13T15:42:12Z] Sidhesh K K: It's Notin?
+[2025-10-13T15:42:37Z] Kartikey Pradhan: Is it that geeky that I am thinking Sn for Tin and sinusitis where am i even headed w this
+[2025-10-13T15:42:54Z] Pavan Pamidimarri: Right there with you
+[2025-10-13T15:42:55Z] Abhishek Vats: Blew/blue?
+[2025-10-13T15:43:00Z] Abhishek S: It's a very crosswordy word
+[2025-10-13T15:43:08Z] Kartikey Pradhan: Adele
+[2025-10-13T15:43:26Z] Pavan Pamidimarri: Eke is the most crossword word
+[2025-10-13T15:43:32Z] Pavan Pamidimarri: Then Oreo
+[2025-10-13T15:43:47Z] Abhishek S: It's literally the term for what we see in the picture in place of the tinman's nose
+[2025-10-13T15:43:53Z] Khandoba: These are not hints, these are highlighting more gaps in my knowledge 😭
+[2025-10-13T15:43:57Z] Kartikey Pradhan: Everythingship ‎GIF omitted
+[2025-10-13T15:44:07Z] Naren Iyer: Chimney
+[2025-10-13T15:44:10Z] Ricky: Chimney?
+[2025-10-13T15:44:31Z] Abhishek S: Rhymes with this
+[2025-10-13T15:44:31Z] Abhishek Vats: Oh flue?
+[2025-10-13T15:44:39Z] Pavan Pamidimarri: Flue
+[2025-10-13T15:44:42Z] Khandoba: Oh damn
+[2025-10-13T15:44:49Z] Pavan Pamidimarri: Good one
+[2025-10-13T15:44:51Z] Abhishek Vats: Spoonfed hua hai ye toh 😂
+[2025-10-13T15:45:02Z] Kartikey Pradhan: Mazak ban ke reh gayi hai zindagi
+[2025-10-13T15:45:32Z] Abhishek Vats: Next @⁨~Abhishek S⁩ would have started wordle like hints 😅
+[2025-10-13T15:45:33Z] Sidhesh K K: Floo powder for the cure?
+[2025-10-13T15:45:52Z] Khandoba: Cryptic crossword
+[2025-10-13T15:46:02Z] Abhishek Vats: Don't say diagonally 😂
+[2025-10-13T15:47:33Z] Khandoba: This is what movie turbo
+[2025-10-13T15:47:35Z] Kartikey Pradhan: Snail race
+[2025-10-13T15:47:35Z] Saara: Drag race?
+[2025-10-13T15:47:37Z] Dhruv: Turbo race?
+[2025-10-13T15:47:47Z] Abhishek S: Looking for one-word
+[2025-10-13T15:48:11Z] Abhishek Vats: Drag race is quite logical 😅
+[2025-10-13T15:48:12Z] Lzafeer Ahmad B F: I’d take this for an answer
+[2025-10-13T15:48:40Z] Kartikey Pradhan: Yeah this is the dharma with pharma moment in this quiz
+[2025-10-13T15:48:41Z] Abhishek S: The answer is a more apt pun
+[2025-10-13T15:48:46Z] Abhishek Vats: Yeartona 😂
+[2025-10-13T15:48:59Z] Saara: In quizzes I’m very much the person whose answer is better than the actual answer (meaning I get answers wrong very often xD)
+[2025-10-13T15:49:05Z] Abhishek S: Think: food
+[2025-10-13T15:49:16Z] Kartikey Pradhan: Escargo
+[2025-10-13T15:49:19Z] Pavan Pamidimarri: Escargo
+[2025-10-13T15:49:20Z] Abhishek Vats: Nocar 😂
+[2025-10-13T15:49:30Z] Tapish: Nascargo?
+[2025-10-13T15:49:35Z] Kartikey Pradhan: Oh damnnnn
+[2025-10-13T15:49:37Z] Kartikey Pradhan: Hahahahahaha
+[2025-10-13T15:49:39Z] Abhishek S: Will give it to that
+[2025-10-13T15:50:04Z] Lzafeer Ahmad B F: But salt as a sponsor 🤣
+[2025-10-13T15:50:04Z] Tapish: Totally built on this 😂
+[2025-10-13T15:50:14Z] Kartikey Pradhan: Story of my life brother
+[2025-10-13T15:50:40Z] Khandoba: Vats such an altruist
+[2025-10-13T15:51:30Z] Kartikey Pradhan: Peanuts
+[2025-10-13T15:51:34Z] Abhishek S: Half points to all funny answers that fit. Double for the exact answer.
+[2025-10-13T15:51:36Z] Saara: Alliteration?
+[2025-10-13T15:51:37Z] Sayu Sekhar: Sibling Revelry 🤣🤣
+[2025-10-13T15:51:39Z] Abhishek Vats: Peanut allergy?
+[2025-10-13T15:51:51Z] Kartikey Pradhan: Peanuts analogy
+[2025-10-13T15:52:08Z] Surabhi: A peanut analogy
+[2025-10-13T15:52:13Z] Abhishek S: Closed
+[2025-10-13T15:52:16Z] Surabhi: Too slow 😂
+[2025-10-13T15:52:48Z] Abhishek Vats: If it's an appreciation for my gif skills then appreciate rahega 😅
+[2025-10-13T15:53:12Z] Abhishek Vats: Nascargot 😂
+[2025-10-13T15:53:34Z] Kartikey Pradhan: I am so gonna use this at work
+[2025-10-13T15:53:37Z] Sayu Sekhar: This is a nice inside joke from now
+[2025-10-13T15:53:38Z] Abhishek S: Last two coming up
+[2025-10-13T15:53:44Z] Kartikey Pradhan: Might get fired but who cares
+[2025-10-13T15:53:51Z] Khandoba: jab se move hua hun wo sab GIFs gayab hi ho gaye hai keyboard se
+[2025-10-13T15:54:01Z] Kartikey Pradhan: “Guys why is this team such a fucking Nascargot”
+[2025-10-13T15:54:01Z] Khandoba: Ehh, there are always other jobs
+[2025-10-13T15:54:03Z] Surabhi: Nobody’s gonna know (they’re gonna know)
+[2025-10-13T15:55:09Z] Tapish: Tablets
+[2025-10-13T15:55:15Z] Kartikey Pradhan: Lollll
+[2025-10-13T15:55:25Z] Abhishek Vats: Pill-aging
+[2025-10-13T15:55:30Z] Kartikey Pradhan: Flintstone max
+[2025-10-13T15:55:32Z] Sayu Sekhar: Noiceee
+[2025-10-13T15:55:52Z] Kartikey Pradhan: Beautyyy
+[2025-10-13T15:56:02Z] Lzafeer Ahmad B F: Super crack
+[2025-10-13T15:56:24Z] Dhruv: Vats on fiyaaahh 🔥
+[2025-10-13T15:57:48Z] Abhishek S: Before I share the last one, here's a sukha Puri - Name them all ‎image omitted
+[2025-10-13T15:58:26Z] Kartikey Pradhan: Oh lmao
+[2025-10-13T15:58:28Z] Dhruv: Euphoric is happy?
+[2025-10-13T15:58:30Z] Kartikey Pradhan: Sneezy
+[2025-10-13T15:58:31Z] Saara: Happy ↵ Grumpy ↵ Sleepy ↵ Sneezy ↵ ___ ↵ Bashful
+[2025-10-13T15:58:33Z] Surabhi: Shit. Happy sleepy droopy
+[2025-10-13T15:58:38Z] Khandoba: Happy grumpy sleepy sneezy
+[2025-10-13T15:58:41Z] Kartikey Pradhan: Grumpy
+[2025-10-13T15:58:42Z] Kartikey Pradhan: Bunty
+[2025-10-13T15:58:44Z] Saara: Ok I just made up some I think
+[2025-10-13T15:58:46Z] Kartikey Pradhan: Jonty
+[2025-10-13T15:58:50Z] Lzafeer Ahmad B F: Here’s one from me while I wait for a work meeting to start
+[2025-10-13T15:58:53Z] Saara: Sabun slow
+[2025-10-13T15:58:55Z] Pavan Pamidimarri: Doc
+[2025-10-13T15:59:03Z] Abhishek Vats: Satte pe satta ↵ Ravi, som, mangal, bhudh ,brahaspati, shukra aur sunny 😂
+[2025-10-13T15:59:11Z] Khandoba: You think you made up some, look at what KP is doing🤣
+[2025-10-13T15:59:19Z] Sayu Sekhar: Motion to make this the right answer
+[2025-10-13T15:59:23Z] Kartikey Pradhan: Go on a death row
+[2025-10-13T15:59:27Z] Abhishek Vats: Take adjournment? 😂
+[2025-10-13T15:59:38Z] Lzafeer Ahmad B F: 😂😂
+[2025-10-13T15:59:39Z] Abhishek S: Only one is missing - mentally challenged
+[2025-10-13T15:59:42Z] Surabhi: 7 dwarves ki ghar wapsi
+[2025-10-13T15:59:48Z] Kartikey Pradhan: Mr the Dube
+[2025-10-13T15:59:49Z] Lzafeer Ahmad B F: Close. But no
+[2025-10-13T15:59:50Z] Sayu Sekhar: Dopey
+[2025-10-13T15:59:51Z] Khandoba: We don’t say that word anymore
+[2025-10-13T15:59:59Z] Abhishek S: All closed now
+[2025-10-13T16:00:00Z] Saara: My manager when I’m on leave:
+[2025-10-13T16:00:52Z] Abhishek Vats: Dopey lives matter 😢
+[2025-10-13T16:01:20Z] Kartikey Pradhan: Close the argument
+[2025-10-13T16:01:43Z] Kartikey Pradhan: Go moot
+[2025-10-13T16:01:44Z] Tapish: Drop the case
+[2025-10-13T16:01:49Z] Abhishek S: Fun and easy one to close it ‎image omitted
+[2025-10-13T16:03:07Z] Abhishek Vats: My answer 😂
+[2025-10-13T16:03:09Z] Lzafeer Ahmad B F: Yeh easy bolke humein bewakoof bulaane ka trick thoda Kazual hai
+[2025-10-13T16:03:15Z] Surabhi: Pile up?
+[2025-10-13T16:03:32Z] Kartikey Pradhan: Battle hardened
+[2025-10-13T16:03:50Z] Pavan Pamidimarri: Something to do with Ben Hur
+[2025-10-13T16:04:02Z] Kartikey Pradhan: Horsing around
+[2025-10-13T16:05:05Z] Abhishek S: The clue is in how the second sentence starts for the " speaker " (who also needs to be identified to crack this)
+[2025-10-13T16:05:42Z] Abhishek Vats: Caeser hi lag raha hai ye toh 😅
+[2025-10-13T16:05:50Z] Tapish: Hail Caesar 😂😂😂😂😂
+[2025-10-13T16:05:53Z] Kartikey Pradhan: Et tu brutus
+[2025-10-13T16:05:56Z] Abhishek Vats: It was brutus?
+[2025-10-13T16:06:10Z] Khandoba: Oh Damn
+[2025-10-13T16:06:14Z] Abhishek Vats: This seems correct
+[2025-10-13T16:06:22Z] Kartikey Pradhan: Modi hai toh mumkin hai
+[2025-10-13T16:06:26Z] Tapish: Thank you 🙏😂
+[2025-10-13T16:06:27Z] Lzafeer Ahmad B F: Super crack.
+[2025-10-13T16:06:30Z] Lzafeer Ahmad B F: Hahahahhaa
+[2025-10-13T16:06:47Z] Kartikey Pradhan: Hail mogambo
+[2025-10-13T16:07:09Z] Lzafeer Ahmad B F: I would have guessed it. But because Abhishek said it’s easy I thought I’ll give others a chance
+[2025-10-13T16:07:48Z] Khandoba: Are you a lawyer by any chance?😬
+[2025-10-13T16:08:30Z] Lzafeer Ahmad B F: Fortunately or unfortunately. Yes
+[2025-10-13T16:11:47Z] Kartikey Pradhan: This was a famous Hollywood nightclub on Sunset Boulevard, whose name was slightly twisted to name a Clark Gable movie released in 1953. This movie’s name in turn inspired an iconic character developed by Salim-Javed, which was 60% shot with Anupam Kher before him getting replaced. Who?
+[2025-10-13T16:12:02Z] Abhishek S: Mogambo
+[2025-10-13T16:12:07Z] Abhishek Vats: Mogambo
+[2025-10-13T16:12:09Z] Kartikey Pradhan: Lmao closed
+[2025-10-13T16:12:18Z] Abhishek Vats: You missed yesterdays episode it seems
+[2025-10-13T16:12:32Z] Lzafeer Ahmad B F: It just shows you didn’t watch yesterdays episode
+[2025-10-13T16:12:35Z] Abhishek Vats: The YT KViz show
+[2025-10-13T16:12:35Z] Kartikey Pradhan: What? There was a question on Mogambo?
+[2025-10-13T16:12:59Z] Abhishek Vats: -10 points to gryffindor
+[2025-10-13T16:13:00Z] Kartikey Pradhan: I am such a fkn nascargot man
+[2025-10-13T16:13:41Z] Surabhi: Bunty
+[2025-10-13T16:13:49Z] Surabhi: 🧼
+[2025-10-13T16:15:07Z] Abhishek Vats: My first reaction to bunty 😂
+[2025-10-13T16:15:17Z] Abhishek Vats: Censored for obvious reasons
+[2025-10-13T16:15:27Z] Kartikey Pradhan: Kya yaad dila diya yaar dekhna padega ab
+[2025-10-13T16:16:27Z] Shubhankar: Hahaha
+[2025-10-13T16:17:49Z] Sidhesh K K: Sheep
+[2025-10-13T16:17:55Z] Abhishek S: This was hard to edit out so had skipped it
+[2025-10-13T16:17:58Z] Abhishek Vats: Jumping sheep?
+[2025-10-13T16:18:05Z] Surabhi: Counting sheep
+[2025-10-13T16:18:10Z] Abhishek Vats: No you didn't 😅
+[2025-10-13T16:18:40Z] Abhishek S: Had, phir kar liya 🤣🙈
+[2025-10-13T16:19:43Z] Abhishek S: Ab khatam, pakka. Points maine de diye, count khud kar lena
+[2025-10-13T16:20:15Z] Pavan Pamidimarri: I have the advantage of having nothing to count
+[2025-10-13T16:28:36Z] Khandoba: I’ll leave the dojo then
+[2025-10-13T16:39:24Z] Abhishek Vats: Says the ‎GIF omitted
+[2025-10-13T16:47:27Z] Abhishek S: The buzzer aspect of these questions isn't well suited for a lot of us, especially us older folk as I too found when @⁨~Naman Agarwal⁩ hosted that wonderful cricket quiz 😁
+[2025-10-13T16:52:15Z] Abhishek S: Which is why I wish to start a classical infinite bounds style kvizzing tournament. It will have 4 quarter finals, followed by 2 semis and a final. The first 16 people to vote YES for it in the poll below, shall be slotted for the first four quizzes.
+[2025-10-13T16:53:10Z] Kartikey Pradhan: Hamla achanak se hua
+[2025-10-13T16:53:55Z] Khandoba: Damn near gave me a heart attack when I saw first 16
+[2025-10-13T16:54:52Z] Prathamesh: I have no idea about the context of this poll. I just saw quizzing and voted yes 😄
+[2025-10-13T16:56:01Z] Khandoba: All those years of pushing buttons has helped us today
+[2025-10-13T16:56:21Z] Kartikey Pradhan: That’s what she said
+[2025-10-13T17:06:04Z] Pavan Pamidimarri: There are just two rivers in the world that have more than one country named after them. ↵ Name both rivers and the countries named after them.
+[2025-10-13T17:06:31Z] Kartikey Pradhan: Tanzania and Zanzibar
+[2025-10-13T17:06:53Z] Nikhil Borra: Any way pounce can also be added?
+[2025-10-13T17:07:32Z] Pavan Pamidimarri: Zanzibar is not a county
+[2025-10-13T17:07:52Z] Shashank Jalani: Zambezi - Zambia and Zimbabwe?
+[2025-10-13T17:07:59Z] Kartikey Pradhan: Oh shoot yes wtf
+[2025-10-13T17:08:22Z] Surabhi: Nigeria and Niger?
+[2025-10-13T17:09:05Z] Pavan Pamidimarri: There is one other pair of countries named after another river ‎<This message was edited>
+[2025-10-13T17:10:07Z] Abhishek S: No, but I will not give any indication if I don't get the precise answer I need, until the round is over. In case someone gives the precise answer, instead of a split, they will get full points. I feel that's fair.
+[2025-10-13T17:10:18Z] Pavan Pamidimarri: I don't think zimbabwe is named after the river
+[2025-10-13T17:10:33Z] Aditi Bapat: Signing up for quiz even at the risk of this happening @⁨~Abhishek S⁩ 😏
+[2025-10-13T17:10:44Z] Kartikey Pradhan: The other pair is also African no?
+[2025-10-13T17:10:53Z] Pavan Pamidimarri: Yes
+[2025-10-13T17:11:31Z] Kartikey Pradhan: Is it Tanzania and some other country, based on Tanganyika
+[2025-10-13T17:11:37Z] Pavan Pamidimarri: No
+[2025-10-13T17:11:51Z] Abhishek S: I will try to keep a varied level of difficulty in the quiz.
+[2025-10-13T17:11:56Z] Pavan Pamidimarri: The biggest river of Africa by volume ‎<This message was edited>
+[2025-10-13T17:12:07Z] Kartikey Pradhan: Congo?
+[2025-10-13T17:12:11Z] Kartikey Pradhan: Congo
+[2025-10-13T17:12:32Z] Pavan Pamidimarri: That's the right river
+[2025-10-13T17:12:40Z] Kartikey Pradhan: Democratic republic of congo
+[2025-10-13T17:13:05Z] Kartikey Pradhan: And just congo…?
+[2025-10-13T17:13:09Z] Kartikey Pradhan: I feel so stupid
+[2025-10-13T17:13:13Z] Pavan Pamidimarri: Yeah Republic of Congo
+[2025-10-13T17:13:15Z] Akshay: Signed up!
+[2025-10-13T17:13:26Z] Akshay: DRC and Congo Brazzaville
+[2025-10-13T17:49:38Z] Shubhankar: Almost missed it 😆
+[2025-10-13T18:29:19Z] Kartikey Pradhan: Last vote remaining
+[2025-10-13T18:42:09Z] Abhishek S: The 16 are in. Anyone else who wishes to participate will be put in a standby lot, and can hopefully fill in if someone needs to drop out. Per a random draw, these are the groupings for the QFs: ‎image omitted
+[2025-10-13T18:43:11Z] Dhruv: Thanks for considering me!! Hope i dont let my team down
+[2025-10-13T18:43:30Z] Abhishek Vats: Individual quarter finals no ?
+[2025-10-13T18:43:37Z] Dhruv: Ohhhhhhhh
+[2025-10-13T18:43:42Z] Dhruv: Sworyyyy
+[2025-10-13T18:45:16Z] Aditi Bapat: When is the quiz waise?
+[2025-10-13T18:45:25Z] Abhishek Vats: @⁨Sidhesh K K⁩ we meet again 😅
+[2025-10-13T18:46:06Z] Abhishek S: I would like to finish up with two QFs this weekend, and then 2 the next.
+[2025-10-13T18:47:36Z] Aditi Bapat: Ideally not clashing with Harsh's quiz, cuz I will withdraw as contestant from that one if I can make it for this one but would like to attend 😊 ‎<This message was edited>
+[2025-10-13T18:47:44Z] Abhishek S: Please react to let me know if Sunday morning 8 AM IST is convenient for you ‎<This message was edited>
+[2025-10-13T18:47:57Z] Pavan Pamidimarri: This group is delivering at least one quiz for me to participate in every week. Unbelievably good
+[2025-10-13T18:48:12Z] Pavan Pamidimarri: When is Harsh's quiz?
+[2025-10-13T18:48:23Z] Abhishek S: That's Saturday night IST
+[2025-10-13T18:48:31Z] Khandoba: Pinned message
+[2025-10-13T18:49:12Z] Abhishek Vats: If the quarter finals are in order then works 😅
+[2025-10-13T18:49:30Z] Abhishek Vats: Thoda aadhe ghante mein chai coffee ho jaega 😅
+[2025-10-13T18:49:52Z] Khandoba: Agreed, moreover these are quizzes worth participating even if you don’t know things since you can deduce and have fun
+[2025-10-13T18:49:53Z] Abhishek S: If everyone in one of the QFs is okay with it, I'll hold that in that timeslot
+[2025-10-13T18:50:52Z] Lzafeer Ahmad B F: What connects:- ↵ Barpakhiz ↵ Awit ng Tagumpay ↵ White Night Riots ↵ Svobodu Andzhele Devis ↵ JNU ↵ (Non-exhaustive)
+[2025-10-13T18:51:27Z] Aditi Bapat: PST you mean?
+[2025-10-13T18:51:30Z] Khandoba: This is for group 1&2 right?
+[2025-10-13T18:51:34Z] Abhishek Vats: Is it a song?
+[2025-10-13T18:51:49Z] Abhishek S: That was meant for when Harsh's quiz is
+[2025-10-13T18:51:49Z] Khandoba: I think he was talking about Harsh’s quiz
+[2025-10-13T18:51:50Z] Abhishek Vats: Or slogan I guess
+[2025-10-13T18:52:11Z] Lzafeer Ahmad B F: How about both
+[2025-10-13T18:52:20Z] Aditi Bapat: Arre arre sorry. I shall shut up with my time confusion 🥲
+[2025-10-13T18:52:26Z] Abhishek Vats: I only know that much 😅
+[2025-10-13T18:52:39Z] Abhishek S: Azaadi?
+[2025-10-13T18:52:55Z] Lzafeer Ahmad B F: Looking for a specific name.
+[2025-10-13T18:53:09Z] Lzafeer Ahmad B F: Slogan / Song
+[2025-10-13T18:53:09Z] Abhishek S: Aung sang
+[2025-10-13T18:53:17Z] Abhishek Vats: I know it's in Spanish but for a lack of better guess I will say hum dekhenge 🙈🙈
+[2025-10-13T18:53:44Z] Lzafeer Ahmad B F: You can even give the English translation
+[2025-10-13T18:53:51Z] Lzafeer Ahmad B F: Which is the slogan
+[2025-10-13T18:53:56Z] Abhishek S: Viva la revolution
+[2025-10-13T18:54:03Z] Lzafeer Ahmad B F: Nope.
+[2025-10-13T18:54:29Z] Abhishek Vats: We will see 😂
+[2025-10-13T18:54:34Z] Lzafeer Ahmad B F: But yes. It’s a slogan used in sort of a revolution / protest.
+[2025-10-13T18:54:45Z] Lzafeer Ahmad B F: TO unite the masses
+[2025-10-13T18:55:03Z] Abhishek Vats: Once United never defeated?
+[2025-10-13T18:55:21Z] Lzafeer Ahmad B F: On the right track.
+[2025-10-13T18:55:36Z] Abhishek S: Hum honge kaamyaab
+[2025-10-13T18:55:50Z] Abhishek Vats: Else it's manchester united ‎GIF omitted
+[2025-10-13T18:56:02Z] Lzafeer Ahmad B F: The people United shall never be defeated. ↵ El Pueblo UNIDO Jamas Sera Vencido.
+[2025-10-13T18:57:08Z] Lzafeer Ahmad B F: White Night Riots and JNU they used as is. The rest are the local adaptation / variation
+[2025-10-13T18:58:12Z] Lzafeer Ahmad B F: It was also in Narcos.
+[2025-10-13T18:58:12Z] Abhishek Vats: Bella ciao before saathi ayo
+[2025-10-13T19:03:26Z] Arjun: Bonus nahi milta if you hadn't answered this one! 😅
+[2025-10-13T19:42:24Z] Kartikey Pradhan: Too earlyyyyy
+[2025-10-13T19:42:53Z] Kartikey Pradhan: Thodi mercy dikhayein
+[2025-10-13T19:45:11Z] Akshay: Can i confirm by tonight CST?
+[2025-10-13T19:47:57Z] Surabhi: Sunday might be difficult for me. By when can I confirm?
+[2025-10-13T19:49:34Z] Abhishek S: The other time slot I can work with is Sunday evening IST. Please indicate if this works (around 9-10 PM)
+[2025-10-13T19:50:33Z] Akshay: This i’ll hv to pass, have to go out… sunday morning ist should work for me
+[2025-10-13T19:50:38Z] Akshay: Reacted
+[2025-10-13T19:51:55Z] Abhishek S: I'm looking to find 8 people available on Sunday, 4 for morning and 4 for evening. Can shift time around a bit based on everyone's convenience. Rest 8 will be competing next weekend.
+[2025-10-13T19:52:23Z] Dhruv: Sunday morning is fine for me
+[2025-10-13T19:52:25Z] Tapish: Slightly tough for me if my group is there, morning works! India Australia and United Pool both are there that day 😅 Morning is absolutely fine ‎<This message was edited>
+[2025-10-13T19:54:20Z] Surabhi: I don’t think I can make it on Sunday as a whole. I’ll probably just opt out. Too much will be happening for Diwali.
+[2025-10-13T19:55:53Z] Abhishek Vats: I'm free only with not much to do 😅 ↵ Consider me available for either 👍🏻 ‎<This message was edited>
+[2025-10-13T19:56:13Z] Khandoba: Yeah I’m available for all slots
+[2025-10-13T19:56:41Z] Pavan Pamidimarri: Sunday evening IST is much better for me.
+[2025-10-13T19:56:51Z] Pavan Pamidimarri: and for domestic tranquility in my household
+[2025-10-13T19:57:11Z] Lzafeer Ahmad B F: Sunday morning. Works for me too
+[2025-10-13T19:57:25Z] Pavan Pamidimarri: if I do a quiz on Saturday night after being on a work trip all week, i am asking for trouble
+[2025-10-13T19:58:02Z] Lzafeer Ahmad B F: Florian Writz in the box
+[2025-10-13T19:58:38Z] Abhishek Vats: Will keep an eye out for that 😂
+[2025-10-13T20:02:52Z] Dhruv: wait sorry my bad, Sunday evening is better for me.. I was thinking IST Sunday morning would mean morning for me too, but thats 10:30 PM CT for me.. Sunday evening is better
+[2025-10-13T20:34:48Z] Akshay: Interest in a short 10 Q obscure flags quiz? Live on this group
+[2025-10-13T20:35:04Z] Dhruv: been missing the flags quiz
+[2025-10-13T20:36:48Z] Akshay: Will do if i get atleast 5 responses, else tonight when more ppl can join!
+[2025-10-13T20:37:10Z] Akshay: It isn’t nearly as serious as the other quizzes!
+[2025-10-13T20:37:36Z] Khandoba: I’d vote for it but I’m confident I’ll get 0 answers
+[2025-10-13T20:37:49Z] Khandoba: So better wait for some who might know something
+[2025-10-13T20:37:54Z] Akshay: You may be surprised :)
+[2025-10-13T20:38:20Z] Khandoba: Not with flags 😅
+[2025-10-13T20:38:22Z] Akshay: Okay, let’s do tonight CST so more ppl r online ‎<This message was edited>
+[2025-10-13T20:38:30Z] Shubham: Same, but I've still voted.
+[2025-10-13T20:38:52Z] Dhruv: time?
+[2025-10-13T20:39:19Z] Dhruv: it becomes 11:30 PM no ?
+[2025-10-13T20:39:31Z] Akshay: 1130 p - 12 a CST, i.e. 10 - 1030 a IST
+[2025-10-13T20:39:40Z] Dhruv: gotcha, thanks bro, that works
+[2025-10-13T20:43:10Z] Pavan Pamidimarri: let’s do it now
+[2025-10-13T20:45:02Z] Prathamesh: So when is @⁨~Abhishek S⁩’s quiz happening?
+[2025-10-13T21:26:12Z] Aditi Bapat: @⁨~Prathamesh⁩ here.
+[2025-10-13T21:39:12Z] Naman Agarwal: @⁨~Abhishek S⁩ iiuc you only need 8 people this weekend right? Can I go the weekend after in that case?
+[2025-10-13T21:45:30Z] Arjun: Halley's event
+[2025-10-13T22:29:00Z] Ankit Jain: only seeing now.. voted just in case folks can’t make it.. stellar lineup already!

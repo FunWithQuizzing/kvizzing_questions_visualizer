@@ -1,0 +1,2614 @@
+[2026-02-23T00:25:24Z] Pavan Pamidimarri: Q.	What did Sam Altman say when he was asked about the amount of power consumed in training large language models? ‎image omitted
+[2026-02-23T00:27:24Z] Smit D Mahajani: Is this a movie reference?
+[2026-02-23T00:38:11Z] Pavan Pamidimarri: no
+[2026-02-23T00:39:22Z] Nikunj: Is it like training a baby takes more time/energy??
+[2026-02-23T00:48:55Z] Pavan Pamidimarri: Correct. The AI oiligarchs have finally given up on “it’s not humans vs. AI” — now it’s humans vs. AI if you point out how energy-intensive AI is
+[2026-02-23T00:56:20Z] Pavan Pamidimarri: https://www.news18.com/world/training-a-human-takes-20-years-of-food-sam-altman-on-how-much-power-ai-consumes-ws-kl-9922309.html
+[2026-02-23T01:27:52Z] Khandoba: They are getting away with saying anything
+[2026-02-23T01:47:16Z] Pavan Pamidimarri: If you make enough money, you can be a sociopath and you won't suffer any real consequences
+[2026-02-23T01:53:12Z] మాन$: That is Djibouti area na
+[2026-02-23T01:58:31Z] మాन$: Chup kar rulayega kya
+[2026-02-23T01:59:19Z] మాन$: Speaking of @⁨~Abhishek S⁩ Sal is missing for some days
+[2026-02-23T02:00:56Z] మాन$: This would be an NRI thing again
+[2026-02-23T02:05:50Z] మాन$: I truing to sleep well for mental health.   so missing everyday.
+[2026-02-23T02:21:03Z] Pavan Pamidimarri: He was here today
+[2026-02-23T02:21:42Z] Khandoba: That Palantir dude was talking about how their company kills people on an investor call
+[2026-02-23T02:24:22Z] Saumay: Knew this was coming. But what a flip Sam has taken. From claiming to do things for good and remaining not for profit to this.
+[2026-02-23T02:30:15Z] Chinmay Mehta: Kya mast sets @⁨~Dr.Namrata Srinivasan ⁩ @⁨~Pavan Pamidimarri⁩ @⁨Abhishek Vats⁩ @⁨~Tapish⁩ , lots of lurn!!
+[2026-02-23T02:35:38Z] Pavan Pamidimarri: This is why I am always suspicious of people who claim to “change the world.” It is what the HBO series Silicon Valley mocked so expertly.
+[2026-02-23T02:36:34Z] Pavan Pamidimarri: https://www.youtube.com/watch?v=B8C5sjjhsso
+[2026-02-23T02:38:28Z] Pavan Pamidimarri: I don’t use the word evil lightly. But I do use the word evil to describe Peter Thiel.
+[2026-02-23T02:39:23Z] Pavan Pamidimarri: He is the sort of Tolkien fan who roots for the Eye
+[2026-02-23T02:39:33Z] Khandoba: Oh yeah, big time evil
+[2026-02-23T02:40:37Z] Khandoba: What else do you call a man who doesn’t care about continuance of human race but his profits are non-negotiable
+[2026-02-23T02:40:39Z] Saumay: Legendary show.
+[2026-02-23T02:47:35Z] Saumay: I don’t think they are seeking the end of humanity. ↵ What these top guys seems to be converging to is their ‘data driven’ authority to decide who should be living and who should not, which is scary. ‎<This message was edited>
+[2026-02-23T02:47:57Z] Khandoba: I am just quoting him
+[2026-02-23T02:48:08Z] Khandoba: Paraphrasing a little
+[2026-02-23T02:49:27Z] Khandoba: And I know they don’t want end to humanity, I’m not that naïve obviously. But I’m willing to bet they wouldn’t mind fueling genocide if it makes them more money.
+[2026-02-23T02:52:19Z] Saumay: That’s 100% true
+[2026-02-23T02:54:12Z] Pavan Pamidimarri: They don’t “need
+[2026-02-23T02:54:30Z] Pavan Pamidimarri: “ as many people to run their profix-maximizing leviathan
+[2026-02-23T02:55:31Z] Pavan Pamidimarri: their optimum may be a population that is 1/10th as big and more subservient to their needs because they can be controlled through data and behavior-shaping algorithms…
+[2026-02-23T02:55:45Z] Saumay: And I agree that even if they don’t intend to, in the pursuit of making more money, they might end humanity at some point, accidentally.
+[2026-02-23T02:55:56Z] Pavan Pamidimarri: and then suddenly 90% population loss isn’t seen as an insurmountable moral objection
+[2026-02-23T02:57:14Z] Pavan Pamidimarri: and even if they don’t END end humanity, they are betting that in any such catastrophic scenario: ↵ * they will outlive the catastrophe (which is why they are building bunkers), and ↵ * ⁠the 10% that survives will be much more subservient to them. ‎<This message was edited>
+[2026-02-23T02:59:14Z] Pavan Pamidimarri: their calculus may be that they have a win-win proposition with this mindless accelerationism. “No-catastrophe, I win; catastrophe, I win” incentive structures make catastrophe much more likely.
+[2026-02-23T03:27:31Z] Saumay: It's quite depressing to think about all this. The more you think, the worse it gets.
+[2026-02-23T03:28:43Z] Pavan Pamidimarri: I hate being like this about technology. An important part of my identity is an optimist about the future of humanity, because I want to believe in humanity.
+[2026-02-23T04:03:40Z] Saumay: Existential crisis because of all this is quite real. Personally I have seen a major drop in my energy levels because optimism is slowly seeping away. ‎<This message was edited>
+[2026-02-23T04:09:02Z] Pavan Pamidimarri: that is scary. it’s like we need to visualize a positive future here that doesn’t involve the oligarchs taking over society even more brazenly than they already have. we need that positive vision so we can work towards it
+[2026-02-23T04:09:27Z] Pavan Pamidimarri: i am going to stop thinking of this now and work on a set.
+[2026-02-23T04:09:37Z] Pavan Pamidimarri: btw, did you run your satellite pictures set?
+[2026-02-23T04:11:46Z] Saumay: Yeah, otherwise it just feels too pointless.
+[2026-02-23T04:11:59Z] Saumay: lol almost forgot about it. Can do it at 10 pm pst after dinner ‎<This message was edited>
+[2026-02-23T04:18:44Z] Akshay: It’s very scared of pavan now ‎image omitted
+[2026-02-23T04:18:46Z] Akshay: It’s very scared of pavan now ‎image omitted
+[2026-02-23T04:20:13Z] Pavan Pamidimarri: The AI thinks I am dangerous. I think I should record a Massie-like statement about my mental and physical health.
+[2026-02-23T04:20:50Z] Akshay: Given that this instance thinks four score and seven means 182 i think ull be ok
+[2026-02-23T04:21:58Z] Pavan Pamidimarri: The current generation of AI must have a lot of fun with the imperial system of units. I wonder if it fares any better with the more organized SI.
+[2026-02-23T04:23:54Z] Akshay: I think the commercial AIs are scarily accurate at converting units and identifying numbers, albeit with a non zero (if tiny) error rate
+[2026-02-23T04:24:40Z] Akshay: This is a local LLaMa 3B model, so not the smartest. Plus still figuring the best structured prompt to give the best results.
+[2026-02-23T04:25:52Z] Akshay: Like when i gave claude a question answer block it not only identified the answers, it did so simply based on the evolution of the points tally
+[2026-02-23T04:26:33Z] Akshay: It’s the lowest friction approach but i dont want to expose anything to these LLMs
+[2026-02-23T04:28:53Z] Pavan Pamidimarri: thank you!
+[2026-02-23T04:29:11Z] Pavan Pamidimarri: responsible use like this is our best hope
+[2026-02-23T04:36:35Z] Saumay: Ques: Many people believe that X originated because 19th-century newspapers charged by the letter for advertisements. However, these changes were actually popularized by an influential figure Y to promote regional cultural identity. ↵ Solve for X and Y. X is a phenomena. Y is a person ‎<This message was edited>
+[2026-02-23T04:37:41Z] Nikunj: Us english
+[2026-02-23T04:37:49Z] Nikunj: Vs uk english?
+[2026-02-23T04:38:04Z] Saumay: Can you be more precise?
+[2026-02-23T04:38:15Z] Saumay: An example would help
+[2026-02-23T04:38:19Z] Nikhil Borra: Color vs colour
+[2026-02-23T04:38:26Z] Nikunj: It's how words are spelt differently in US and UK ‎<This message was edited>
+[2026-02-23T04:38:30Z] Abhishek Vats: Person was Webster?
+[2026-02-23T04:38:42Z] Saumay: Both are correct
+[2026-02-23T04:38:47Z] Saumay: Noah Webster
+[2026-02-23T04:39:43Z] Nikunj: Chalo week ki shuruat achhi Hui hai by answering a question
+[2026-02-23T05:13:03Z] Pavan Pamidimarri: I have a themed quiz ready
+[2026-02-23T05:13:14Z] Pavan Pamidimarri: are there enough people around to run it now?
+[2026-02-23T05:14:20Z] Dr.Namrata Srinivasan: Go for it!!
+[2026-02-23T05:15:39Z] Pavan Pamidimarri: This set came out of my discovering one fascinating fact. From there it became 2-3 questions, and I decided to build a 10-question set with it
+[2026-02-23T05:16:31Z] Pavan Pamidimarri: The topic is Indian metallurgy
+[2026-02-23T05:16:59Z] Dr.Namrata Srinivasan: Oooo love it!
+[2026-02-23T05:17:02Z] Pavan Pamidimarri: you can deduce most of the answers even if you know nothing about it
+[2026-02-23T05:17:09Z] Dr.Namrata Srinivasan: Won’t know shit but excited to LURN
+[2026-02-23T05:17:10Z] మాन$: Lets hit the iron when hot
+[2026-02-23T05:17:38Z] Pavan Pamidimarri: 10 questions, +10, no negatives
+[2026-02-23T05:17:43Z] Pavan Pamidimarri: ### Quiz start
+[2026-02-23T05:18:02Z] Pavan Pamidimarri: 1.	In 1926, archaeologists in Mohenjo-Daro unearthed a tiny, intricate 10.5 cm tall statue known as the "Dancing Girl" (c. 2300 BCE). Her creation involved a highly sophisticated technique: sculpting a model in X obtained from Y, coating it in dense clay, baking it to melt the X out, and pouring molten bronze into the empty cavity. Based on the vanishing of the original model, this widespread metallurgical casting technique, still used by jewelers today, is commonly called Lost X Casting. ID X and Y.
+[2026-02-23T05:18:13Z] మాन$: Brass
+[2026-02-23T05:18:44Z] Pavan Pamidimarri: This is her ‎image omitted
+[2026-02-23T05:18:49Z] మాन$: Wax casting
+[2026-02-23T05:18:50Z] Pavan Pamidimarri: Not brass
+[2026-02-23T05:19:04Z] Nikhil Borra: Honeybees
+[2026-02-23T05:19:06Z] Ankit Choudhury: bronze, lost wax casting?
+[2026-02-23T05:19:09Z] Nikhil Borra: Beeswax
+[2026-02-23T05:19:34Z] Pavan Pamidimarri: Lost Wax Casting is correct. X=wax, Y=honebees
+[2026-02-23T05:19:47Z] Khandoba: Fascinating
+[2026-02-23T05:19:48Z] Pavan Pamidimarri: Manas: 7, Nikhil: 3
+[2026-02-23T05:20:10Z] Pavan Pamidimarri: Lost wax casting is still used. I have seen it being done by artisans when I was growing up.
+[2026-02-23T05:20:35Z] Pavan Pamidimarri: next question
+[2026-02-23T05:20:40Z] Pavan Pamidimarri: 2.	Pure copper is quite soft and it is terrible for holding an edge on a tool or weapon. Before the Indus Valley civilization established trade routes for tin to make true bronze, their metallurgists discovered that adding X, a naturally occurring, highly toxic _____ to the smelt would significantly harden the copper. This hazardous X bronze was in systematic use in the Early Harappan Phase, between 3,300 BCE and 2,600 BCE. ID X.
+[2026-02-23T05:21:10Z] మాन$: Asbestos
+[2026-02-23T05:21:17Z] Pavan Pamidimarri: not asbestos
+[2026-02-23T05:21:32Z] మాन$: Lead
+[2026-02-23T05:21:38Z] Pavan Pamidimarri: not lead
+[2026-02-23T05:21:42Z] మాन$: Mercury
+[2026-02-23T05:21:47Z] Kartikey Pradhan: Nickel?
+[2026-02-23T05:21:48Z] Pavan Pamidimarri: not mercury
+[2026-02-23T05:21:49Z] Ankit Choudhury: arsenic?
+[2026-02-23T05:22:01Z] Pavan Pamidimarri: Arsenic is correct.
+[2026-02-23T05:22:18Z] Khandoba: What is the blank?
+[2026-02-23T05:22:38Z] Pavan Pamidimarri: metal
+[2026-02-23T05:22:57Z] Pavan Pamidimarri: i replaced the word with blank at the last minute
+[2026-02-23T05:23:02Z] Pavan Pamidimarri: thought it might make it too easy
+[2026-02-23T05:23:09Z] మాन$: Hid metal in metallurgy quiz
+[2026-02-23T05:23:16Z] Pavan Pamidimarri: Manas: 7, Nikhil: 3, Ankit: 10
+[2026-02-23T05:23:33Z] Kartikey Pradhan: I somehow always find it difficult to visualize arsenic as a proper, elite metal
+[2026-02-23T05:23:34Z] Dr.Namrata Srinivasan: Brilliant questions so far pavan ↵ So much lutn
+[2026-02-23T05:23:49Z] మాन$: I only 2 done
+[2026-02-23T05:23:59Z] Pavan Pamidimarri: 3.	For decades, historians believed X Y was brought to India from the outside around 1200 BCE. X is a metal and Y is a process used to obtain X from its ore. However, excavations at sites like Atranjikhera in Uttar Pradesh revealed X slags and furnaces buried in soil layers far older than expected, proving Indian people were Y X roughly around the same time the Indus Valley cities were in their twilight in between 2,000 BCE and 1,800 BCE. ID X and Y.
+[2026-02-23T05:24:03Z] Dr.Namrata Srinivasan: I know but I was drinking tea
+[2026-02-23T05:24:07Z] Dr.Namrata Srinivasan: Missed it real time
+[2026-02-23T05:24:23Z] Kartikey Pradhan: Iron?
+[2026-02-23T05:24:25Z] మాन$: Al2o3
+[2026-02-23T05:24:28Z] Kartikey Pradhan: Smelting from ores?
+[2026-02-23T05:24:40Z] Khandoba: Wow
+[2026-02-23T05:24:43Z] Pavan Pamidimarri: Correct, X=iron, Y=smelting
+[2026-02-23T05:24:43Z] Khandoba: Great crack
+[2026-02-23T05:25:02Z] మాन$: @⁨Kartikey Pradhan⁩ is here. I take my leave
+[2026-02-23T05:25:20Z] Pavan Pamidimarri: Manas: 7, Nikhil: 3, Ankit: 10, KP: 10
+[2026-02-23T05:25:46Z] Pavan Pamidimarri: next
+[2026-02-23T05:25:50Z] Pavan Pamidimarri: 4.	In the earliest verses of the Rigveda, the word _ayas_ was used broadly to mean "metal," referring mostly to copper and bronze. However, as the Vedic peoples entered the Iron Age in India, they had to invent a word for iron. Later Vedic texts have the term _X ayas_, meaning "black metal," to differentiate it. ID X.
+[2026-02-23T05:26:06Z] Sayu Sekhar: Lead
+[2026-02-23T05:26:08Z] Sayu Sekhar: ?
+[2026-02-23T05:26:08Z] Kartikey Pradhan: Krishna dhatu
+[2026-02-23T05:26:19Z] Pavan Pamidimarri: good guess but wrong wire
+[2026-02-23T05:26:22Z] Srijan Naayak: Shyam ?
+[2026-02-23T05:26:24Z] Sayu Sekhar: Oh sorry
+[2026-02-23T05:26:32Z] Sayu Sekhar: Shyam
+[2026-02-23T05:26:37Z] Kartikey Pradhan: Ufff
+[2026-02-23T05:26:52Z] Sayu Sekhar: Misunderstood the question completely 😬
+[2026-02-23T05:26:52Z] Pavan Pamidimarri: Correct, the _shyAma ayas_ is what later Vedic texts call iron
+[2026-02-23T05:27:21Z] Pavan Pamidimarri: Manas: 7, Nikhil: 3, Ankit: 10, KP: 10, Srijan: 10
+[2026-02-23T05:27:36Z] Pavan Pamidimarri: next
+[2026-02-23T05:27:38Z] Pavan Pamidimarri: 5.	Standing in X is a 1,600-year-old, six-ton iron pillar that has baffled scientists for centuries because it simply refuses to rust. It was forged during the reign of the second ruler named Chandra of the Y dynasty. Modern analysis revealed the secret: ancient Indian metallurgists did not add limestone to their furnaces, leaving the element Z in the iron that reacted with the weather to form a protective "misawite" shield. ID X, Y, and Z.
+[2026-02-23T05:27:49Z] Sayu Sekhar: Iron pillar
+[2026-02-23T05:27:57Z] Srijan Naayak: Delhi
+[2026-02-23T05:28:02Z] Srijan Naayak: X
+[2026-02-23T05:28:04Z] Khandoba: Zinc?
+[2026-02-23T05:28:04Z] Kartikey Pradhan: Mehrauli
+[2026-02-23T05:28:05Z] Ankit Choudhury: iron pillar
+[2026-02-23T05:28:12Z] Ankit Choudhury: Gupta
+[2026-02-23T05:28:12Z] Kartikey Pradhan: Maurya
+[2026-02-23T05:28:14Z] Sayu Sekhar: Gupta dynasty
+[2026-02-23T05:28:46Z] Pavan Pamidimarri: No Zinc
+[2026-02-23T05:28:53Z] Kartikey Pradhan: Cutting all the wrong wires
+[2026-02-23T05:29:17Z] Sayu Sekhar: Aluminium ?
+[2026-02-23T05:29:19Z] Pavan Pamidimarri: This element is essential to life
+[2026-02-23T05:29:25Z] Chinmay Mehta: Phosphorus
+[2026-02-23T05:29:26Z] Sayu Sekhar: Calcium
+[2026-02-23T05:29:37Z] Pavan Pamidimarri: Phosphorus is correct
+[2026-02-23T05:29:40Z] Sayu Sekhar: I was thinking metals 😥
+[2026-02-23T05:30:08Z] Pavan Pamidimarri: Srijan and Ankit get 3, Chinmay gets 4 ‎<This message was edited>
+[2026-02-23T05:30:35Z] Pavan Pamidimarri: Manas: 7, Nikhil: 3, Ankit: 13, KP: 10, Srijan: 13, Chinmay: 4
+[2026-02-23T05:31:05Z] Pavan Pamidimarri: next one has two parts, 3 points for X, 7 points for Z
+[2026-02-23T05:31:09Z] Pavan Pamidimarri: 6.	X is an alloy of iron. The earliest evidence of X production is found in Anatolia around 1,800 BCE. The next major development in the history of X occurred in the first millennium BCE when Z X appeared in South India and Sri Lanka. Metal production sites employed wind furnaces driven by the monsoon winds, capable of producing high-strength X. Large-scale Z X production in India using crucibles occurred by the sixth century BCE. Z X was the world’s strongest X suitable for weapons manufacturing for the next two millennia until the industrial revolution. ID X and Z.
+[2026-02-23T05:31:33Z] Sayu Sekhar: Steel
+[2026-02-23T05:31:35Z] Srijan Naayak: Steel
+[2026-02-23T05:31:37Z] Sayu Sekhar: Carbon
+[2026-02-23T05:31:38Z] Shubhankar: Steel
+[2026-02-23T05:31:39Z] Nikhil Borra: Pig iron?
+[2026-02-23T05:31:50Z] Pavan Pamidimarri: X is steel
+[2026-02-23T05:31:57Z] Pavan Pamidimarri: Z is a specific style of steel
+[2026-02-23T05:32:03Z] Kartikey Pradhan: Is this wootz steel?
+[2026-02-23T05:32:08Z] Sayu Sekhar: Stainless steel
+[2026-02-23T05:32:08Z] Nikhil Borra: Damascus?
+[2026-02-23T05:32:18Z] Pavan Pamidimarri: beautiful crack, @⁨Kartikey Pradhan⁩
+[2026-02-23T05:32:18Z] Sayu Sekhar: 🤣
+[2026-02-23T05:32:58Z] Pavan Pamidimarri: Wootz steel is correct
+[2026-02-23T05:33:21Z] Pavan Pamidimarri: KP takes a slight lead with this… Manas: 7, Nikhil: 3, Ankit: 13, KP: 17, Srijan: 13, Chinmay: 4, Sayu 3
+[2026-02-23T05:33:34Z] Pavan Pamidimarri: next
+[2026-02-23T05:33:36Z] Pavan Pamidimarri: 7.	Wootz steel was highly prized all over Eurasia. Industries relying on Wootz steel ingots imported from South India sprang up in several Middle Eastern cities. These workshops fashioned swords and other weapons out of this Indian steel. Europeans first encountered blades made of Wootz steel during the Crusades, when their enemies wielded blades far superior to their own. These crusaders told tales of Islamic swords that could slice through silk in mid-air and bend 90 degrees without breaking. They named the metal X Steel after the city where they ran into it. ID X.
+[2026-02-23T05:33:50Z] Kartikey Pradhan: This is damascus
+[2026-02-23T05:34:05Z] Pavan Pamidimarri: And that is correct! Damascus it is
+[2026-02-23T05:34:09Z] Kartikey Pradhan: Sorry Nikhil
+[2026-02-23T05:34:29Z] Sayu Sekhar: Kp now travelling forward in time 😁
+[2026-02-23T05:34:37Z] Pavan Pamidimarri: Damascus steel is now conclusively traced to South India
+[2026-02-23T05:35:07Z] Kartikey Pradhan: Karnataka right?
+[2026-02-23T05:35:20Z] Pavan Pamidimarri: no comment right now
+[2026-02-23T05:35:27Z] Kartikey Pradhan: Oh
+[2026-02-23T05:35:28Z] Kartikey Pradhan: Sorry
+[2026-02-23T05:35:29Z] Kartikey Pradhan: Sure
+[2026-02-23T05:35:31Z] Pavan Pamidimarri: Manas: 7, Nikhil: 3, Ankit: 13, KP: 27, Srijan: 13, Chinmay: 4, Sayu 3
+[2026-02-23T05:35:42Z] Pavan Pamidimarri: next
+[2026-02-23T05:35:58Z] Pavan Pamidimarri: 8.	The legendary strength of Wootz steel is because of its unusually high X content. Scientists have identified X nanotubes as well as crystalline structures in the steel, two of the reasons for its exceptional strength and sharpness. To make this steel, ancient Indian smiths placed wrought iron, wood, and leaves into sealed clay containers and baked them in specialized furnaces for days. ID X.
+[2026-02-23T05:36:04Z] Saumay: Shyama?
+[2026-02-23T05:36:11Z] Kartikey Pradhan: Carbon?
+[2026-02-23T05:36:11Z] మాन$: Carbon
+[2026-02-23T05:36:12Z] Sayu Sekhar: Carbon
+[2026-02-23T05:36:21Z] Kartikey Pradhan: Carbon nanotubes
+[2026-02-23T05:36:23Z] Nikhil Borra: Carbon?
+[2026-02-23T05:36:34Z] మాन$: Damn same time missed by nanoseconds
+[2026-02-23T05:36:37Z] Pavan Pamidimarri: Carbon is correct.
+[2026-02-23T05:36:42Z] Sayu Sekhar: I said it first two questions ago 🤣
+[2026-02-23T05:37:03Z] Pavan Pamidimarri: KP now running away with it… Manas: 7, Nikhil: 3, Ankit: 13, KP: 37, Srijan: 13, Chinmay: 4, Sayu 3
+[2026-02-23T05:37:17Z] Pavan Pamidimarri: next
+[2026-02-23T05:37:19Z] Pavan Pamidimarri: 9.	The name Wootz is derived from the word _ukku_. _Ukku_ is the word for steel in X and Y, two major related languages from the region that produced most of the world’s best steel for the two millennia between 5th century BCE and 15th century CE. ID X and Y.
+[2026-02-23T05:37:34Z] మాन$: Telugu
+[2026-02-23T05:37:34Z] Kartikey Pradhan: Kannada
+[2026-02-23T05:37:35Z] Sayu Sekhar: Kannada Tamil
+[2026-02-23T05:37:36Z] మాन$: Kannada
+[2026-02-23T05:37:50Z] Kartikey Pradhan: Now i understand
+[2026-02-23T05:37:58Z] Dr.Namrata Srinivasan: So good!!!
+[2026-02-23T05:38:04Z] Kartikey Pradhan: Good hide Pavan
+[2026-02-23T05:38:33Z] Pavan Pamidimarri: Telugu and Kannada are correct. Wootz steel was produced in southern Maharashtra, Karnataka, Telangana, Andhra Pradesh, and Tamil Nadu.
+[2026-02-23T05:38:37Z] Pavan Pamidimarri: as well as Sri Lanka
+[2026-02-23T05:39:14Z] Pavan Pamidimarri: Manas: 12, Nikhil: 3, Ankit: 13, KP: 42, Srijan: 13, Chinmay: 4, Sayu 3
+[2026-02-23T05:39:20Z] Pavan Pamidimarri: last question
+[2026-02-23T05:39:26Z] Pavan Pamidimarri: 10.	The 14th-century metal craft known as Y uses an alloy of zinc and copper, inlaid with silver. The final step involves rubbing the object with a special soil found only in the X Fort. This soil rich in ammonium chloride acts as an oxidizing agent, chemically reacting with the zinc to turn the background jet black. Y means “made in X.” ID X and Y.
+[2026-02-23T05:39:42Z] Kartikey Pradhan: Ahh
+[2026-02-23T05:39:44Z] మాन$: Golconda
+[2026-02-23T05:39:54Z] Saumay: Bidar?
+[2026-02-23T05:39:58Z] Kartikey Pradhan: Bidri
+[2026-02-23T05:40:00Z] Kartikey Pradhan: Yes
+[2026-02-23T05:40:03Z] Kartikey Pradhan: Bidar
+[2026-02-23T05:40:11Z] Pavan Pamidimarri: Bidriware from Bidar is correct
+[2026-02-23T05:40:15Z] Kartikey Pradhan: I was hovering around the word
+[2026-02-23T05:40:26Z] Kartikey Pradhan: All I could recall was Bandar
+[2026-02-23T05:40:33Z] మాन$: First bench behaviour
+[2026-02-23T05:41:07Z] Pavan Pamidimarri: Final scores… Manas: 12, Nikhil: 3, Ankit: 13, KP: 47, Srijan: 13, Chinmay: 4, Sayu 3, Saumay: 5
+[2026-02-23T05:41:11Z] Pavan Pamidimarri: KP wins it comfortably
+[2026-02-23T05:41:19Z] Srijan Naayak: Fantastic set Pavan, had so much lurn 💫.
+[2026-02-23T05:41:25Z] Srijan Naayak: Always
+[2026-02-23T05:41:33Z] Pavan Pamidimarri: ### Quiz end
+[2026-02-23T05:42:01Z] Pavan Pamidimarri: the fact that led to this set was that the famed Damascus steel was actually made with ingots from my part of India
+[2026-02-23T05:42:03Z] Kartikey Pradhan: Amazing meta recalls from college days
+[2026-02-23T05:42:16Z] Saumay: @⁨Kartikey Pradhan⁩ ne apna loha manwa liya ‎<This message was edited>
+[2026-02-23T05:42:30Z] మాन$: Pavan jeetega ya KP.
+[2026-02-23T05:44:26Z] Saumay: mast set @⁨~Pavan Pamidimarri⁩ ⚡
+[2026-02-23T05:45:08Z] Saumay: starting this in 10
+[2026-02-23T05:47:07Z] Saumay: Will continue from here
+[2026-02-23T05:47:20Z] Shyam Gopal: @⁨~Pavan Pamidimarri⁩ fantastic set. Especially this funda. Coincidentally Black Metal is one of my favorite genres of music. My friends are never gonna hear the end of this.
+[2026-02-23T05:48:03Z] Kartikey Pradhan: Ye kaisi headstart hai
+[2026-02-23T05:48:26Z] Kartikey Pradhan: Which shyaamdhatu artists do you like?
+[2026-02-23T05:48:28Z] Pavan Pamidimarri: arre koi nahin, tum phir bhi jeetoge
+[2026-02-23T05:50:09Z] Pavan Pamidimarri: One sookha puri from the metallurgy quiz....
+[2026-02-23T05:52:12Z] Pavan Pamidimarri: 11.	X is one of the most renowned British scientists ever. He was obsessed with Wootz steel and tried to reengineer it. In the 1820s, X published a paper claiming he had successfully replicated the properties of Indian Wootz steel by adding silver. This claim was later proven to be false. ID X.
+[2026-02-23T05:52:29Z] Nikhil Borra: Newton?
+[2026-02-23T05:52:35Z] Pavan Pamidimarri: not Newton
+[2026-02-23T05:52:38Z] Kartikey Pradhan: 1820 toh Faraday magnetism funda
+[2026-02-23T05:52:50Z] Pavan Pamidimarri: Michael Faraday is correct
+[2026-02-23T05:53:15Z] Dr.Namrata Srinivasan: SO SO GOOD PAVAN🔥🔥🔥
+[2026-02-23T05:53:19Z] Dr.Namrata Srinivasan: Loved it
+[2026-02-23T05:53:35Z] Dr.Namrata Srinivasan: Spectator with only lurns but soo good!!!
+[2026-02-23T05:54:11Z] Saumay: Oh wow. Huge Faraday fan but wasn't aware of this.
+[2026-02-23T05:54:44Z] Abhishek S: Faraday Faraday, Kardi rendi hai kudi
+[2026-02-23T05:56:32Z] Pavan Pamidimarri: https://www.nature.com/articles/129045a0 ‎image omitted
+[2026-02-23T05:56:59Z] Saumay: resuming this. ↵ +10 for right answers. No negatives. ↵ I want claim to fame. Would ask to improve the answer if required.
+[2026-02-23T05:57:26Z] Saumay: Score ↵ @⁨Abhishek Vats⁩ : 10
+[2026-02-23T05:57:29Z] Saumay: Question 2
+[2026-02-23T05:58:08Z] Pavan Pamidimarri: Malibu beach?
+[2026-02-23T05:59:31Z] Khandoba: Chennai?
+[2026-02-23T05:59:51Z] Saumay: Indian beach is a good track though
+[2026-02-23T06:00:21Z] Pavan Pamidimarri: looks like a helipad there
+[2026-02-23T06:00:31Z] Pavan Pamidimarri: so quite remote?
+[2026-02-23T06:00:42Z] Nikhil Borra: Is it Chandipur?
+[2026-02-23T06:00:42Z] Kartikey Pradhan: Andamans?
+[2026-02-23T06:00:54Z] Abhishek S: Normandy
+[2026-02-23T06:00:59Z] Kartikey Pradhan: But doesn’t have this kinda arid land
+[2026-02-23T06:01:01Z] Saumay: Are Indian hai
+[2026-02-23T06:01:04Z] Pavan Pamidimarri: chandipore is more island-like IIRC
+[2026-02-23T06:01:12Z] Kartikey Pradhan: Gujarat?
+[2026-02-23T06:01:15Z] Abhishek S: Nahar Mandi
+[2026-02-23T06:01:33Z] Abhishek S: Pondicherr
+[2026-02-23T06:01:35Z] Saumay: not touristy beach
+[2026-02-23T06:01:45Z] Pavan Pamidimarri: is the picture oriented north on top?
+[2026-02-23T06:01:54Z] Pavan Pamidimarri: i am thinking west coast
+[2026-02-23T06:02:01Z] Saumay: Good track
+[2026-02-23T06:02:22Z] Kartikey Pradhan: Dadra Nagar Haveli?
+[2026-02-23T06:02:33Z] Saumay: close
+[2026-02-23T06:02:34Z] Kartikey Pradhan: Daman Diu
+[2026-02-23T06:02:37Z] Nikunj: If not gujarat ↵ Then nr mumbai like alibag?
+[2026-02-23T06:02:54Z] Saumay: it's not a touristy place
+[2026-02-23T06:03:14Z] Abhishek S: Thiruvanthapuram
+[2026-02-23T06:03:18Z] Saumay: Historical significance
+[2026-02-23T06:03:27Z] Pavan Pamidimarri: naval battle site?
+[2026-02-23T06:03:29Z] Khandoba: Calicut?
+[2026-02-23T06:03:33Z] Nikunj: Ajanta ellora ke aas pas?
+[2026-02-23T06:03:36Z] Kartikey Pradhan: I mean knowing the kind of qs you ask, is it like some location from where Kasab et al entered?
+[2026-02-23T06:04:02Z] Saumay: Pre independence
+[2026-02-23T06:04:10Z] Kartikey Pradhan: Dandi
+[2026-02-23T06:04:13Z] Kartikey Pradhan: Namak
+[2026-02-23T06:04:17Z] Kartikey Pradhan: Hatt bc
+[2026-02-23T06:04:21Z] Abhishek S: They had satellite imagery pre independence?
+[2026-02-23T06:04:29Z] Pavan Pamidimarri: is this the Dandi beach?
+[2026-02-23T06:04:31Z] Pavan Pamidimarri: wow
+[2026-02-23T06:04:54Z] Nikunj: Green tick aaya nahi hai
+[2026-02-23T06:04:59Z] Nikhil Borra: Didn't you the satellite images of the Ram Setu???
+[2026-02-23T06:05:00Z] Saumay: It's correct
+[2026-02-23T06:05:00Z] Nikunj: Ab aa gaya
+[2026-02-23T06:05:14Z] Kartikey Pradhan: This is such a bad way to arrive at this answer
+[2026-02-23T06:05:31Z] Abhishek S: Gandhi in Wankhade nahi toh Ganhi at Narendra Modi stadium hi sahi
+[2026-02-23T06:05:32Z] Pavan Pamidimarri: great question, not great answering
+[2026-02-23T06:05:42Z] Kartikey Pradhan: Lovely ques really
+[2026-02-23T06:06:09Z] Saumay: Satellite images are from this era. The event could've occured in the past.
+[2026-02-23T06:06:10Z] Pavan Pamidimarri: all your pictures in this set have north on top, right?
+[2026-02-23T06:06:18Z] Saumay: Yes. Always.
+[2026-02-23T06:06:21Z] Kartikey Pradhan: And no points to Gujarat for not developing this as a tourist spot
+[2026-02-23T06:06:46Z] Kartikey Pradhan: Anywhere else in the world they would have preserved and accentuated the heritage
+[2026-02-23T06:07:03Z] Pavan Pamidimarri: somethign that happened here only brought about the first elections in India. not that important
+[2026-02-23T06:07:22Z] Saumay: Next one
+[2026-02-23T06:07:35Z] Nikhil Borra: The 2014 one???
+[2026-02-23T06:07:51Z] Kartikey Pradhan: First election of independent India, yes
+[2026-02-23T06:08:03Z] Saumay: Question 3: first of something ‎image omitted
+[2026-02-23T06:08:15Z] Pavan Pamidimarri: mcd
+[2026-02-23T06:08:20Z] Kartikey Pradhan: Yeah
+[2026-02-23T06:08:26Z] Kartikey Pradhan: Great answer
+[2026-02-23T06:08:44Z] Kartikey Pradhan: Particularly drive through I reckon?
+[2026-02-23T06:08:47Z] Abhishek S: Municipal corporation of Delhi
+[2026-02-23T06:08:58Z] Kartikey Pradhan: Or just McD
+[2026-02-23T06:08:59Z] Saumay: Great crack. How did you do it?
+[2026-02-23T06:09:19Z] Khandoba: He approved the floor plan
+[2026-02-23T06:09:20Z] Nikhil Borra: Ye kab hua??
+[2026-02-23T06:09:25Z] Abhishek S: The answer is pinned in the chat
+[2026-02-23T06:09:47Z] Kartikey Pradhan: He was there with Ray Kroc when they flipped the first mcchicken
+[2026-02-23T06:09:53Z] Saumay: Scores: ↵ @⁨Kartikey Pradhan⁩ 10, @⁨~Pavan Pamidimarri⁩ 10, @⁨Abhishek Vats⁩ : 10
+[2026-02-23T06:10:19Z] Anurag Bhide: @⁨Abhishek Vats⁩ ko tag Kiya jaaye since he seems offline
+[2026-02-23T06:10:30Z] Pavan Pamidimarri: the three entrances to the parking lot — 2 for drive-through in and out
+[2026-02-23T06:11:02Z] Saumay: i think you'd have got it even without the inital hint 'first of something'
+[2026-02-23T06:11:36Z] Pavan Pamidimarri: may be, but may be not. because i knew it was first of something, it struck me immediately
+[2026-02-23T06:11:47Z] Saumay: great crack though
+[2026-02-23T06:11:49Z] Saumay: moving onto next
+[2026-02-23T06:12:22Z] Pavan Pamidimarri: Siachen?
+[2026-02-23T06:12:28Z] Khandoba: Everest?
+[2026-02-23T06:12:44Z] Abhishek S: Mt Rushmore
+[2026-02-23T06:12:49Z] Ryan Colaço: Milan Cortina?
+[2026-02-23T06:12:58Z] Anurag Bhide: Tiger Hill?
+[2026-02-23T06:13:03Z] Kartikey Pradhan: Everest?
+[2026-02-23T06:13:08Z] Pavan Pamidimarri: is that a tunnel going through or am i seeing things?
+[2026-02-23T06:13:11Z] Kartikey Pradhan: The pass that you have to bridge across ‎<This message was edited>
+[2026-02-23T06:13:43Z] Kartikey Pradhan: Ok already done above didn’t see
+[2026-02-23T06:13:57Z] Saumay: You have to guess the mountain
+[2026-02-23T06:14:02Z] Kartikey Pradhan: K2?
+[2026-02-23T06:14:02Z] Khandoba: K2
+[2026-02-23T06:14:03Z] Pavan Pamidimarri: kailas?
+[2026-02-23T06:14:06Z] Saumay: Seeing things
+[2026-02-23T06:14:26Z] Kartikey Pradhan: Foonk ke guess karte toh Shivji bhi dikh jaate
+[2026-02-23T06:14:43Z] Saumay: the northern side is what we generally see in pictures. You can find the same pattern. ‎image omitted
+[2026-02-23T06:14:55Z] Kartikey Pradhan: What a beauty man
+[2026-02-23T06:15:01Z] Pavan Pamidimarri: main phoonk liya tha shyam ko
+[2026-02-23T06:15:03Z] Kartikey Pradhan: What an absolute beauty
+[2026-02-23T06:15:14Z] Kartikey Pradhan: Shyaamdhatu-ra ‎<This message was edited>
+[2026-02-23T06:15:47Z] Saumay: another great crack
+[2026-02-23T06:15:58Z] Saumay: Scores: ↵ @⁨Kartikey Pradhan⁩ 10, @⁨~Pavan Pamidimarri⁩ 20, @⁨Abhishek Vats⁩ : 10
+[2026-02-23T06:16:31Z] Saumay: moving on to next one
+[2026-02-23T06:17:02Z] Saumay: ques 5 ‎image omitted
+[2026-02-23T06:17:18Z] Kartikey Pradhan: James Dean?
+[2026-02-23T06:17:33Z] Anurag Bhide: Route 66 dikh raha hai
+[2026-02-23T06:17:36Z] Anurag Bhide: Is that it?
+[2026-02-23T06:17:44Z] Khandoba: Radiator springs😅
+[2026-02-23T06:17:46Z] Saumay: claim to fame of this place
+[2026-02-23T06:18:05Z] Saumay: Spot on @⁨~Khandoba⁩
+[2026-02-23T06:18:15Z] Khandoba: Hain?😮
+[2026-02-23T06:18:32Z] Kartikey Pradhan: Ok some lurn on this pls? What is this?
+[2026-02-23T06:18:45Z] Saumay: i think i should clarify the type of question is 'claim to fame' or 'identify the exact place' to avoid confusion
+[2026-02-23T06:18:49Z] Pavan Pamidimarri: had to google — Cars movie
+[2026-02-23T06:19:02Z] Pavan Pamidimarri: https://pixarcars.fandom.com/wiki/Radiator_Springs
+[2026-02-23T06:19:03Z] Saumay: this is the town on which radiator springs is based in Cars movie
+[2026-02-23T06:19:28Z] Kartikey Pradhan: Maine dekhi hi nahi hai
+[2026-02-23T06:19:33Z] Kartikey Pradhan: TIL!
+[2026-02-23T06:20:26Z] Khandoba: Literally
+[2026-02-23T06:20:44Z] Saumay: Yeah, this one was a bit niche
+[2026-02-23T06:20:51Z] Kartikey Pradhan: And i just googled to validate my wrong guess. Turns out he crashed on route 466. Talk about selective memory 🙈
+[2026-02-23T06:21:42Z] Khandoba: I guess when everyone was reading history and geography, i was watching children’s movies
+[2026-02-23T06:21:52Z] Khandoba: BECAUSE I WAS A CHILD
+[2026-02-23T06:22:41Z] Kartikey Pradhan: As someone’s therapist very rightly said - all the root of evil is in your childhood
+[2026-02-23T06:22:53Z] Kartikey Pradhan: What we did as children
+[2026-02-23T06:22:58Z] Khandoba: Mine is only goodness
+[2026-02-23T06:23:00Z] Kartikey Pradhan: Damn heavy ho gaya
+[2026-02-23T06:23:19Z] Khandoba: Doc Hudson taught me well
+[2026-02-23T06:23:22Z] Anurag Bhide: @⁨~Saumay⁩ agla daalo meeting hai 12 baje
+[2026-02-23T06:23:28Z] Khandoba: To understand what that means, watch cars
+[2026-02-23T06:23:56Z] Saumay: And it's more than a children's movie. 👀
+[2026-02-23T06:23:59Z] Saumay: Onto next one
+[2026-02-23T06:24:06Z] Kartikey Pradhan: Netflix after making Drive to Survive
+[2026-02-23T06:24:21Z] Saumay: Scores: ↵ @⁨Kartikey Pradhan⁩ 10, @⁨~Pavan Pamidimarri⁩ 20, @⁨Abhishek Vats⁩ : 10 @⁨~Khandoba⁩ 10
+[2026-02-23T06:24:32Z] Kartikey Pradhan: Points hi nahi mil rahe
+[2026-02-23T06:24:51Z] Saumay: ques 6 ‎image omitted
+[2026-02-23T06:25:07Z] Kartikey Pradhan: Washington monument?
+[2026-02-23T06:25:12Z] Saumay: want exact place
+[2026-02-23T06:25:56Z] Kartikey Pradhan: Oh
+[2026-02-23T06:25:58Z] Kartikey Pradhan: Jallian
+[2026-02-23T06:25:59Z] Pavan Pamidimarri: watergateh
+[2026-02-23T06:26:00Z] Kartikey Pradhan: Wala
+[2026-02-23T06:26:01Z] Kartikey Pradhan: Bagh
+[2026-02-23T06:26:17Z] Khandoba: Oh wow
+[2026-02-23T06:26:18Z] Saumay: Jallianwala Bagh is correct
+[2026-02-23T06:26:19Z] Pavan Pamidimarri: wow great crack
+[2026-02-23T06:26:20Z] Khandoba: Nice crack
+[2026-02-23T06:26:45Z] Pavan Pamidimarri: what a stupid guess i made
+[2026-02-23T06:26:59Z] Kartikey Pradhan: Wo neeli tin ki chhatein had to be in India
+[2026-02-23T06:27:02Z] Kartikey Pradhan: Bad first guess
+[2026-02-23T06:27:41Z] Saumay: Yeah, I was wondering if Indian cities actually look like US cities from top
+[2026-02-23T06:27:42Z] Kartikey Pradhan: Actually this sharp cut square corner was the clue
+[2026-02-23T06:27:53Z] Kartikey Pradhan: Waterbody i mean
+[2026-02-23T06:27:56Z] Saumay: Precisely
+[2026-02-23T06:28:30Z] Saumay: Scores: ↵ @⁨Kartikey Pradhan⁩ 20, @⁨~Pavan Pamidimarri⁩ 20, @⁨Abhishek Vats⁩ : 10 @⁨~Khandoba⁩ 10
+[2026-02-23T06:28:36Z] Saumay: onto next one
+[2026-02-23T06:29:05Z] Saumay: ques 7 ‎image omitted
+[2026-02-23T06:29:25Z] Suyash Singh: ayodhya
+[2026-02-23T06:29:25Z] Khandoba: Lodhi garden?
+[2026-02-23T06:29:32Z] Saumay: want city
+[2026-02-23T06:29:39Z] Kartikey Pradhan: Delhi?
+[2026-02-23T06:29:43Z] Kartikey Pradhan: No
+[2026-02-23T06:29:46Z] Kartikey Pradhan: Can’t be
+[2026-02-23T06:29:52Z] Kartikey Pradhan: Agra?
+[2026-02-23T06:29:54Z] Pavan Pamidimarri: Lucknow?
+[2026-02-23T06:30:02Z] Anurag Bhide: Fatehpur Sikri?
+[2026-02-23T06:30:06Z] Saumay: good track
+[2026-02-23T06:30:11Z] Suyash Singh: varanasi
+[2026-02-23T06:30:21Z] Pavan Pamidimarri: Mathura?
+[2026-02-23T06:30:24Z] Khandoba: you can see a mandir clearly
+[2026-02-23T06:30:36Z] Khandoba: Aah
+[2026-02-23T06:30:40Z] Khandoba: Hometown
+[2026-02-23T06:30:44Z] Suyash Singh: wrong wires only🥲
+[2026-02-23T06:31:01Z] Khandoba: No use of my knowing thy QM
+[2026-02-23T06:31:15Z] Pavan Pamidimarri: What is the big statue looking at the mandir?
+[2026-02-23T06:31:31Z] Saumay: one of those exhaustive places which have temple next to a mosque ‎image omitted
+[2026-02-23T06:31:34Z] Pavan Pamidimarri: no i am seeing things again
+[2026-02-23T06:31:37Z] Shubhankar: Shree Krishna Janmbhumi 🙏🏼
+[2026-02-23T06:32:14Z] Saumay: Towards the north? That's the mosque
+[2026-02-23T06:32:30Z] Kartikey Pradhan: Been there ten times at least and zero recollection of this mosque
+[2026-02-23T06:32:59Z] Pavan Pamidimarri: no i thought i saw a big statue to the west-southwest
+[2026-02-23T06:33:31Z] Saumay: Ayodhya and Varanasi being another famous ones. All these cases are/were in court.
+[2026-02-23T06:33:41Z] Pavan Pamidimarri: the day after Dec 6 1992, BJP MPs chanted about this mosque (and the one in Varanasi) in Lok Sabha ‎<This message was edited>
+[2026-02-23T06:34:04Z] Saumay: Also, this one is very close to me, emotionally and literally ↵ I've grown up like 1 km from this place ‎<This message was edited>
+[2026-02-23T06:34:15Z] Pavan Pamidimarri: “kAshi mathurA bAkI hai” was the chant
+[2026-02-23T06:34:44Z] Tapish: Yes “Ayodhya toh bas jhaanki hai, Kashi Mathura baaki hai”
+[2026-02-23T06:35:12Z] Tapish: This was chanted all throughout
+[2026-02-23T06:36:10Z] Saumay: onto next one
+[2026-02-23T06:36:40Z] Saumay: Scores: ↵ @⁨Kartikey Pradhan⁩ 20, @⁨~Pavan Pamidimarri⁩ 30, @⁨Abhishek Vats⁩ : 10 @⁨~Khandoba⁩ 10
+[2026-02-23T06:37:17Z] Saumay: ques 8 ‎image omitted
+[2026-02-23T06:37:59Z] Suyash Singh: jodhpur?
+[2026-02-23T06:38:06Z] Anurag Bhide: Some fort
+[2026-02-23T06:38:31Z] Suyash Singh: jaipur?
+[2026-02-23T06:38:45Z] Tapish: Varanasi ghats?
+[2026-02-23T06:38:50Z] Pavan Pamidimarri: Cuttack?
+[2026-02-23T06:38:50Z] Kartikey Pradhan: Chittodgarh?
+[2026-02-23T06:38:53Z] Pavan Pamidimarri: no
+[2026-02-23T06:39:03Z] Pavan Pamidimarri: oh wow
+[2026-02-23T06:39:05Z] Kartikey Pradhan: Hai toh fort hi
+[2026-02-23T06:39:05Z] Saumay: It's Chittorgarh
+[2026-02-23T06:39:09Z] Kartikey Pradhan: Yes
+[2026-02-23T06:39:15Z] Pavan Pamidimarri: didn’t know Chittor was near a river
+[2026-02-23T06:39:23Z] Pavan Pamidimarri: with a such an interesting 180 degree bend
+[2026-02-23T06:40:17Z] Saumay: It's Beriach river
+[2026-02-23T06:40:21Z] Kartikey Pradhan: Vindhya basin
+[2026-02-23T06:40:59Z] Saumay: Scores: ↵ @⁨Kartikey Pradhan⁩ 30, @⁨~Pavan Pamidimarri⁩ 30, @⁨Abhishek Vats⁩ : 10 @⁨~Khandoba⁩ 10
+[2026-02-23T06:41:39Z] Saumay: next one
+[2026-02-23T06:42:15Z] Saumay: ques 9
+[2026-02-23T06:42:45Z] Anurag Bhide: Ahmedabad?
+[2026-02-23T06:42:59Z] Saumay: hint: zoomed out image
+[2026-02-23T06:43:17Z] Kartikey Pradhan: Mujhe toh middle east lag raha hai
+[2026-02-23T06:43:32Z] Anurag Bhide: Somewhere very sandy for sure
+[2026-02-23T06:43:36Z] Saumay: zoomed out image ‎image omitted
+[2026-02-23T06:43:48Z] Anurag Bhide: Road infra India se better hai
+[2026-02-23T06:44:13Z] Anurag Bhide: Jamnagar?
+[2026-02-23T06:44:26Z] Kartikey Pradhan: Confuse ho gaya main ab
+[2026-02-23T06:44:29Z] Kartikey Pradhan: Itna green belt
+[2026-02-23T06:44:31Z] Saumay: this is the locality
+[2026-02-23T06:44:34Z] Pavan Pamidimarri: Pearl River delta?
+[2026-02-23T06:44:37Z] Saumay: this is the city
+[2026-02-23T06:44:44Z] Saumay: i want both
+[2026-02-23T06:44:57Z] Anurag Bhide: Clutter of homes is very Indian
+[2026-02-23T06:45:11Z] Anurag Bhide: Oh
+[2026-02-23T06:45:16Z] Anurag Bhide: Karachi?
+[2026-02-23T06:45:17Z] Shubhankar: Is this Karachi?
+[2026-02-23T06:45:18Z] Kartikey Pradhan: Indian nahi hai
+[2026-02-23T06:45:22Z] Shubhankar: Hahaha
+[2026-02-23T06:45:26Z] Shubhankar: Same time
+[2026-02-23T06:45:31Z] Pavan Pamidimarri: nice
+[2026-02-23T06:45:37Z] Saumay: and the locality?
+[2026-02-23T06:45:38Z] Anurag Bhide: Lyari?
+[2026-02-23T06:45:47Z] Kartikey Pradhan: Waah waah waah
+[2026-02-23T06:45:49Z] Saumay: great crack!
+[2026-02-23T06:45:55Z] Kartikey Pradhan: FANTASTIC QUESTION
+[2026-02-23T06:46:03Z] Anurag Bhide: I was stuck on Kutch coast for some reason
+[2026-02-23T06:46:09Z] Anurag Bhide: Turned out to be a good track
+[2026-02-23T06:46:17Z] Saumay: I felt like saying good track to this
+[2026-02-23T06:46:21Z] Kartikey Pradhan: Wo bolta bhi hai movie mein - boat se jaa rahe hain and all
+[2026-02-23T06:46:22Z] Saumay: and this as well
+[2026-02-23T06:46:24Z] Anurag Bhide: Just sarhad paar
+[2026-02-23T06:46:30Z] Shubhankar: Main airfield dekh kar samjha
+[2026-02-23T06:46:41Z] Kartikey Pradhan: Super ques super crack
+[2026-02-23T06:46:44Z] Shubhankar: Apne koi bhi coastal city itna dry nahi h
+[2026-02-23T06:46:44Z] Anurag Bhide: Ye toh unfair advantage hai 😡
+[2026-02-23T06:47:03Z] Kartikey Pradhan: Ye hamare soldier ladke ne crack kiya how poetic
+[2026-02-23T06:47:19Z] Saumay: the small red highlighted portion in middle is Lyari ‎image omitted
+[2026-02-23T06:47:24Z] Shubhankar: Kaunsa maine land kiya h waha bhai 🙏🏼🫣
+[2026-02-23T06:47:32Z] Kartikey Pradhan: Bhide toh waise hi smart hai usne toh crack karna hi tha
+[2026-02-23T06:47:41Z] Khandoba: Inshallah
+[2026-02-23T06:48:29Z] Saumay: also tells you a bit about exaggeration in movies. Lyari is quite small. ↵ "jiski lyari, uska Karachi ↵ jiska Karachi, uska Pakistan" wtf 💁🏼‍♂️ ‎<This message was edited>
+[2026-02-23T06:48:58Z] Kartikey Pradhan: Wo toh confirmation bias wali statement lagi thi mujhe waise bhi
+[2026-02-23T06:49:09Z] Kartikey Pradhan: Hum hi hain sabse important
+[2026-02-23T06:49:21Z] Pavan Pamidimarri: Bollywood movie matlab 1 ka 100 bolke batayenge
+[2026-02-23T06:49:21Z] Saumay: Exactly
+[2026-02-23T06:49:34Z] Anurag Bhide: I learn after Dhurandhar that Karachi is ENORMOUS
+[2026-02-23T06:49:44Z] Anurag Bhide: Like 2-3 crore population
+[2026-02-23T06:50:04Z] Kartikey Pradhan: Haan UP ke size ke desh mein 200-250 mn log bhar rakhe hain
+[2026-02-23T06:50:09Z] Saumay: Extremely big, compared to Mumbai
+[2026-02-23T06:50:10Z] Kartikey Pradhan: Pop density is through the roof there
+[2026-02-23T06:50:22Z] Saumay: also this 👀
+[2026-02-23T06:51:03Z] Saumay: Scores: ↵ @⁨Kartikey Pradhan⁩ 30, @⁨~Pavan Pamidimarri⁩ 30, @⁨Abhishek Vats⁩ : 10 @⁨~Khandoba⁩ 10 @⁨~Shubhankar⁩ 5 @⁨~Anurag Bhide⁩ 5
+[2026-02-23T06:51:17Z] Saumay: onto next one
+[2026-02-23T06:51:34Z] Pavan Pamidimarri: when half the country is uninhabitable desert or mountain — increasing the pressure on the flat ground
+[2026-02-23T06:52:31Z] Saumay: ques 10 ‎image omitted
+[2026-02-23T06:52:40Z] Pavan Pamidimarri: bab el mandeb
+[2026-02-23T06:52:41Z] Suyash Singh: Ladakh
+[2026-02-23T06:52:41Z] Kartikey Pradhan: Ladakh?
+[2026-02-23T06:52:56Z] Sidhesh K K: Zanskar?
+[2026-02-23T06:53:06Z] Anurag Bhide: Rishikesh?
+[2026-02-23T06:53:10Z] Saumay: i want the river
+[2026-02-23T06:53:13Z] Saumay: and the road next to it
+[2026-02-23T06:53:23Z] Shiv Ram: Kishenganga?
+[2026-02-23T06:53:38Z] Sidhesh K K: Beas?
+[2026-02-23T06:53:41Z] మాन$: Wait is it not like the dome of shiva lingam?
+[2026-02-23T06:53:47Z] Sidhesh K K: Manali highway?
+[2026-02-23T06:54:10Z] Saumay: same ecosystem
+[2026-02-23T06:54:21Z] Sidhesh K K: Jhelum
+[2026-02-23T06:54:31Z] Anurag Bhide: Tirthan?
+[2026-02-23T06:54:34Z] Anurag Bhide: Parvati?
+[2026-02-23T06:54:35Z] Pavan Pamidimarri: indus and srinagar-leh? ‎<This message was edited>
+[2026-02-23T06:54:49Z] Saumay: river is right
+[2026-02-23T06:54:58Z] Saumay: onto road
+[2026-02-23T06:55:05Z] Anurag Bhide: Mere andar ka stoner jaag gaya 😂
+[2026-02-23T06:55:14Z] Pavan Pamidimarri: karakorum highway?
+[2026-02-23T06:55:18Z] Shiv Ram: Karakoram highway
+[2026-02-23T06:55:18Z] Shiv Ram: ?
+[2026-02-23T06:55:27Z] Saumay: karakoram highway is correct
+[2026-02-23T06:55:43Z] Saumay: great guess!
+[2026-02-23T06:57:06Z] Saumay: it goes from pakistan to china along the old silk route
+[2026-02-23T06:57:17Z] Pavan Pamidimarri: Khunjerab pass
+[2026-02-23T06:57:25Z] Saumay: this highway is also called the eigth wonder of the world by some
+[2026-02-23T06:57:48Z] Kartikey Pradhan: Is this the road that they call as “India ki gardan” in Lakshya? ‎<This message was edited>
+[2026-02-23T06:57:52Z] మాन$: Who have not seen other wonders
+[2026-02-23T06:58:10Z] Saumay: No. That's NH1. Srinagar to Leh
+[2026-02-23T06:58:20Z] Pavan Pamidimarri: that was my first guess
+[2026-02-23T06:58:20Z] Saumay: this is solely in pakistan
+[2026-02-23T06:58:21Z] Shubhankar: Now NH-44
+[2026-02-23T06:58:26Z] Pavan Pamidimarri: runs along the Indus for a little bit
+[2026-02-23T06:59:02Z] Shubhankar: Sorry that’s Srinagar-Kanyakumari
+[2026-02-23T06:59:14Z] Saumay: also, there is a famous viewpoint alongthis karakoram highway from where you can see most of Nanga Parbat(9th tallest peak) and its grandeur ‎image omitted
+[2026-02-23T06:59:17Z] Pavan Pamidimarri: is the new numbering based on a grid? like the US interstates
+[2026-02-23T06:59:43Z] Shubhankar: Srinagar leh is still NH-1
+[2026-02-23T07:00:24Z] Shubhankar: That I’m not sure. But around 2018-19 renaming was carried out of all the NHs
+[2026-02-23T07:00:28Z] Saumay: Explains the geopolitical signifiance of POK and why pakistan needed it badly. This wouldn't have been possible otherwise ‎<This message was edited>
+[2026-02-23T07:01:12Z] Saumay: onto next one
+[2026-02-23T07:01:34Z] Pavan Pamidimarri: Looks like it is: ↵ All north-south oriented highways will have even numbers increasing from the east to the west. ↵ All east-west oriented highways will have odd numbers increasing from the north to the south. ↵ All major Highways will be single digit or double digit in number.
+[2026-02-23T07:02:03Z] Saumay: Scores: ↵ @⁨Kartikey Pradhan⁩ 30, @⁨~Pavan Pamidimarri⁩ 40, @⁨Abhishek Vats⁩ : 10 @⁨~Khandoba⁩ 10 @⁨~Shubhankar⁩ 5 @⁨~Anurag Bhide⁩ 5
+[2026-02-23T07:02:27Z] Saumay: Oh wow. Didn't know this.
+[2026-02-23T07:02:53Z] Shubhankar: With my Flying experience, it is quite haphazard  🫣 but I’ll try and fit this formula with my recollection ‎<This message was edited>
+[2026-02-23T07:04:10Z] Kartikey Pradhan: And these major highways still fall under this same numbering scheme?
+[2026-02-23T07:04:39Z] Pavan Pamidimarri: yes… Srinagar-Kanyakumari used to be NH-7, now it is NH44 with this scheme
+[2026-02-23T07:05:27Z] Shubhankar: NH 44 (Srinagar-Kanyakumari) ↵ NH 9 (Malaut-Pithoragarh) ↵ NH 7 (Fazilka-Mana) ↵ NH 754A (Amritsar-Jamnagar) ↵ NH 62 (Abohar-Pindwara)
+[2026-02-23T07:05:29Z] Kartikey Pradhan: I meant to ask - every highway oriented N-S on the right of this highway would be numbered higher than 44, like 46, 48?
+[2026-02-23T07:05:30Z] Shubhankar: And so on
+[2026-02-23T07:06:02Z] Kartikey Pradhan: Brilliant fact! Thank you for this
+[2026-02-23T07:06:02Z] Shubhankar: I’ve been trying to figure out a pattern but never been able to fit it
+[2026-02-23T07:06:16Z] Pavan Pamidimarri: that’s how the interstate highways in the US were named back in the day
+[2026-02-23T07:06:24Z] మాन$: Quiz done? Can I add a set?
+[2026-02-23T07:06:29Z] Pavan Pamidimarri: this is a very sensible way of numbering highways
+[2026-02-23T07:06:41Z] Pavan Pamidimarri: oh it’s past 11, i should go to bed
+[2026-02-23T07:06:44Z] మాन$: @⁨~Saumay⁩ ?
+[2026-02-23T07:06:45Z] Saumay: 3-4 more questions to go
+[2026-02-23T07:07:08Z] Saumay: ques 11 ‎image omitted
+[2026-02-23T07:07:19Z] Kartikey Pradhan: I mean for the longest time i appreciated the way NYC named its streets. Avenues in N/S, streets in E/W
+[2026-02-23T07:07:24Z] Kartikey Pradhan: Fuji?
+[2026-02-23T07:07:51Z] Pavan Pamidimarri: some feature on the Great Rift Valley?
+[2026-02-23T07:08:04Z] Shiv Ram: Kilimanjaro?
+[2026-02-23T07:08:04Z] మాन$: Kilimanjaro
+[2026-02-23T07:08:37Z] Saumay: Very close. part of same ecosystem technically
+[2026-02-23T07:08:37Z] మాन$: Missed with nanoseconds again
+[2026-02-23T07:08:40Z] Pavan Pamidimarri: great crack. my eyes are playing tricks on me so i should go to bed
+[2026-02-23T07:08:45Z] Kartikey Pradhan: Actually Fuji is such a horrendous guess itna vegetation belt with arid outline nahi hai
+[2026-02-23T07:09:11Z] Saumay: Scores: ↵ @⁨Kartikey Pradhan⁩ 30, @⁨~Pavan Pamidimarri⁩ 40, @⁨Abhishek Vats⁩ : 10 @⁨~Khandoba⁩ 10 @⁨~Shubhankar⁩ 5 @⁨~Anurag Bhide⁩ 5 @⁨~Shiv Ram⁩ 10
+[2026-02-23T07:09:14Z] Saumay: onto next one
+[2026-02-23T07:09:43Z] మాन$: Wrong movie
+[2026-02-23T07:09:56Z] Saumay: ques 12 ‎image omitted
+[2026-02-23T07:10:09Z] మాन$: Monza
+[2026-02-23T07:10:32Z] Kartikey Pradhan: Le mans
+[2026-02-23T07:10:35Z] Kartikey Pradhan: This is Le Mans ‎<This message was edited>
+[2026-02-23T07:10:43Z] Saumay: good track, literally and in context of quiz too
+[2026-02-23T07:10:51Z] Saumay: Spot on
+[2026-02-23T07:10:56Z] Saumay: It is Le Mans
+[2026-02-23T07:10:57Z] Shubhankar: Wow
+[2026-02-23T07:11:32Z] Saumay: Great crack @⁨Kartikey Pradhan⁩ !!
+[2026-02-23T07:11:39Z] Kartikey Pradhan: Main literally kal hi Ford vs Ferrari dekh raha tha and I had checked the track layout
+[2026-02-23T07:11:58Z] Saumay: Scores: ↵ @⁨Kartikey Pradhan⁩ 40, @⁨~Pavan Pamidimarri⁩ 40, @⁨Abhishek Vats⁩ : 10 @⁨~Khandoba⁩ 10 @⁨~Shubhankar⁩ 5 @⁨~Anurag Bhide⁩ 5 @⁨~Shiv Ram⁩ 10
+[2026-02-23T07:12:26Z] Kartikey Pradhan: Especially when they ask Ken Miles to slow down, he slows down on that east straight
+[2026-02-23T07:12:40Z] Saumay: Yes!
+[2026-02-23T07:12:56Z] Saumay: Okay, next one
+[2026-02-23T07:13:55Z] Kartikey Pradhan: Ushuaia?
+[2026-02-23T07:14:02Z] Kartikey Pradhan: Drake Passage?
+[2026-02-23T07:14:24Z] Kartikey Pradhan: Actually v bad guess bc
+[2026-02-23T07:14:28Z] Shiv Ram: Cape of Good Hope?
+[2026-02-23T07:14:45Z] Saumay: Great guess @⁨~Shiv Ram⁩
+[2026-02-23T07:14:54Z] Saumay: I was just about to give a hint
+[2026-02-23T07:14:54Z] Kartikey Pradhan: Excellent answer!
+[2026-02-23T07:15:06Z] Saumay: but very well deduced
+[2026-02-23T07:15:19Z] Pavan Pamidimarri: fantastic crack
+[2026-02-23T07:15:28Z] Saumay: Scores: ↵ @⁨Kartikey Pradhan⁩ 40, @⁨~Pavan Pamidimarri⁩ 40, @⁨Abhishek Vats⁩ : 10 @⁨~Khandoba⁩ 10 @⁨~Shubhankar⁩ 5 @⁨~Anurag Bhide⁩ 5 @⁨~Shiv Ram⁩ 20
+[2026-02-23T07:15:30Z] Kartikey Pradhan: Udhar mein boats khadi hain kaun jaa raha hai udhar beach par dhoop khaane 🙈🙈🙈🙈
+[2026-02-23T07:16:07Z] Saumay: next one should be the last
+[2026-02-23T07:16:48Z] Anurag Bhide: Monaco?
+[2026-02-23T07:16:55Z] Pavan Pamidimarri: capetown?
+[2026-02-23T07:17:08Z] Sidhesh K K: Queenstown
+[2026-02-23T07:17:15Z] Kartikey Pradhan: Christ
+[2026-02-23T07:17:17Z] Sidhesh K K: NZ?
+[2026-02-23T07:17:23Z] Kartikey Pradhan: Redeemer
+[2026-02-23T07:17:27Z] Kartikey Pradhan: Corcovado
+[2026-02-23T07:17:35Z] Pavan Pamidimarri: oh nice
+[2026-02-23T07:17:38Z] Saumay: christ the redeemer is correct!
+[2026-02-23T07:18:28Z] Pavan Pamidimarri: great questions @⁨~Saumay⁩, lots of fun and lurn!
+[2026-02-23T07:18:31Z] Saumay: @⁨Kartikey Pradhan⁩ wins the quiz with this answer
+[2026-02-23T07:18:46Z] Saumay: Scores: ↵ @⁨Kartikey Pradhan⁩ 50, @⁨~Pavan Pamidimarri⁩ 40, @⁨~Shiv Ram⁩ 20 @⁨Abhishek Vats⁩ : 10 @⁨~Khandoba⁩ 10 @⁨~Shubhankar⁩ 5 @⁨~Anurag Bhide⁩ 5
+[2026-02-23T07:19:01Z] Kartikey Pradhan: Super good collection Saumay, really lovely way of seeing geographical landmarks with pop culture and history
+[2026-02-23T07:19:05Z] Kartikey Pradhan: Dandi was a massive lurn
+[2026-02-23T07:19:18Z] Anurag Bhide: Great fun and highly addictive format @⁨~Saumay⁩ !
+[2026-02-23T07:19:27Z] Kartikey Pradhan: Really need more of these!
+[2026-02-23T07:19:50Z] Kartikey Pradhan: Your taste is also not straightforward, which makes it a beautiful deduction game
+[2026-02-23T07:20:07Z] Saumay: I think now you'll be able to predict a few
+[2026-02-23T07:20:10Z] Saumay: last sookha puri
+[2026-02-23T07:20:16Z] Kartikey Pradhan: Aaj help hua from the last time
+[2026-02-23T07:20:37Z] Saumay: i knew you'd get Le Mans
+[2026-02-23T07:21:12Z] Kartikey Pradhan: Yaar
+[2026-02-23T07:21:16Z] Kartikey Pradhan: Ye bhi pata toh hai
+[2026-02-23T07:21:16Z] Anurag Bhide: 2-2 golf course!
+[2026-02-23T07:21:31Z] Anurag Bhide: Japan?
+[2026-02-23T07:21:48Z] Kartikey Pradhan: Pool hai
+[2026-02-23T07:21:51Z] Kartikey Pradhan: Golf courses hain
+[2026-02-23T07:21:54Z] Kartikey Pradhan: Highway hai
+[2026-02-23T07:22:24Z] Kartikey Pradhan: Wealthy suburb bhi hai top right mein
+[2026-02-23T07:22:25Z] Anurag Bhide: Orlando?
+[2026-02-23T07:22:32Z] Saumay: that central structure
+[2026-02-23T07:22:32Z] Kartikey Pradhan: California?
+[2026-02-23T07:23:18Z] Kartikey Pradhan: Oh wait
+[2026-02-23T07:23:25Z] Kartikey Pradhan: No nv
+[2026-02-23T07:23:28Z] Kartikey Pradhan: Never mind
+[2026-02-23T07:23:31Z] Suyash Singh: San Francisco?
+[2026-02-23T07:23:37Z] Saumay: good track
+[2026-02-23T07:23:39Z] Nikhil Borra: Los Angeles?
+[2026-02-23T07:23:48Z] Shiv Ram: Wild guess - Vegas?
+[2026-02-23T07:23:54Z] Anurag Bhide: Black dome thing?
+[2026-02-23T07:23:56Z] Kartikey Pradhan: Beverly hills lag raha tha mujhe
+[2026-02-23T07:23:58Z] Saumay: Vegas is correct
+[2026-02-23T07:23:59Z] Kartikey Pradhan: Ohho
+[2026-02-23T07:24:00Z] Kartikey Pradhan: Wow
+[2026-02-23T07:24:07Z] Kartikey Pradhan: Amazingg
+[2026-02-23T07:26:37Z] Saumay: Not sure if you guys have used 3d navigation thing in maps. It's super cool
+[2026-02-23T07:27:04Z] Saumay: and surprisingly, they are rolling it out for indian tier2/3 cities as well
+[2026-02-23T07:27:22Z] Pranshu: Crazy lurn today going through all the sets in the last 1 hour 😅😅 @⁨~Dr.Namrata Srinivasan ⁩ @⁨~Pavan Pamidimarri⁩ @⁨Abhishek Vats⁩ @⁨~Smit D Mahajani⁩ @⁨~Tapish⁩
+[2026-02-23T07:29:07Z] Saumay: that's the Vegas sphere
+[2026-02-23T07:47:24Z] Pranshu: Inspired by @⁨~Pavan Pamidimarri⁩’s set and the moonquake question from the kvizzing episode I have a geophysics question which is just to share the cool new thing in geophysics :)
+[2026-02-23T07:48:36Z] Pranshu: Within the core of a single strand of ultra-pure glass, microscopic density fluctuations are "frozen" during the manufacturing process. When a laser pulse is sent through, these imperfections cause a tiny fraction of the light to bounce back to the source—a phenomenon known as Rayleigh scattering. ↵ In modern geophysics, by monitoring the changes in optical phase of these returning echoes through X one can record earthquakes, volcanic tremors, as it (referring to X) microscopically stretches or compresses effectively turning it into a virtual seismometers. ↵ Identify X which is commonly used in a different industry for a completely different purpose.
+[2026-02-23T07:49:16Z] Nikhil Borra: Diamonds?
+[2026-02-23T07:49:20Z] Anurag Bhide: Strata of earth?
+[2026-02-23T07:49:33Z] Anurag Bhide: Used in seismic surveys for reservoir identification
+[2026-02-23T07:49:35Z] Saumay: Prism?
+[2026-02-23T07:49:42Z] Anurag Bhide: In oil & gas
+[2026-02-23T07:50:20Z] Anurag Bhide: Sorry this is sound not optical
+[2026-02-23T07:50:30Z] Saumay: Optical fibre cable?
+[2026-02-23T07:50:41Z] Pranshu: Ding ding ding!
+[2026-02-23T07:50:50Z] Saumay: Wow
+[2026-02-23T07:50:55Z] Saumay: What a great question
+[2026-02-23T07:52:34Z] Pranshu: So the fiber optic cables that are laid out for communication purposes can be re-purposed to record all kinds of tremors. Same tech with a fiber laid out  in sea can also used to track whales!
+[2026-02-23T07:55:00Z] Pranshu: Moonquake reminded me of sharing this because after that question I was telling my husband that there were discussions in some of the caltech geophysics groups about developing machines and tech to lay fiber optic cable on the Moon and mars to monitor moonquakes and marsquakes ‎<This message was edited>
+[2026-02-23T07:59:35Z] Saumay: Optical fibre is such a revolutionary invention now that I think about it
+[2026-02-23T08:06:24Z] Saumay: You can run your set now @⁨~మాन$⁩ ‎<This message was edited>
+[2026-02-23T08:06:50Z] Shubhankar: Fulfilling my promise from yesterday
+[2026-02-23T08:07:13Z] Shubhankar: 😄
+[2026-02-23T08:09:47Z] Shubhankar: Sorry bad network
+[2026-02-23T08:09:52Z] Shubhankar: 🫣
+[2026-02-23T08:17:56Z] మాन$: 6 online. Will run evening IST
+[2026-02-23T12:51:11Z] మాन$: Guys ready for a few sets?
+[2026-02-23T14:10:36Z] Akshay: Superb sets @⁨~Pavan Pamidimarri⁩ and @⁨~Saumay⁩ , annoyed i missed an IVC quiz!
+[2026-02-23T14:21:57Z] Akshay: Procedure to calculate what? ‎image omitted
+[2026-02-23T14:19:53Z] మాन$: Inter Veinous Cathether
+[2026-02-23T14:23:36Z] Abhishek Vats: Your member tags?😂
+[2026-02-23T14:24:23Z] Akshay: I wish
+[2026-02-23T14:25:12Z] Kartikey Pradhan: what is P, any hint on that?
+[2026-02-23T14:27:56Z] Akshay: P is a number closely associated with this hobby. Like in running it is the distance - 100 m, 200 m etc
+[2026-02-23T14:28:42Z] Dr.Namrata Srinivasan: Is it Pi lol
+[2026-02-23T14:28:52Z] Kartikey Pradhan: Uno cards? P being the number of cards in hand?
+[2026-02-23T14:28:56Z] Dr.Namrata Srinivasan: Oh wait just saw the dimension stuff
+[2026-02-23T14:29:04Z] Kartikey Pradhan: but what would dimensions do in that
+[2026-02-23T14:29:04Z] Akshay: Not pi or uno
+[2026-02-23T14:29:11Z] Kartikey Pradhan: scratch that
+[2026-02-23T14:29:14Z] Abhishek Vats: Lego sets?
+[2026-02-23T14:29:16Z] Dr.Namrata Srinivasan: It’s some geometric thing
+[2026-02-23T14:29:21Z] Dr.Namrata Srinivasan: If it has sides and shit
+[2026-02-23T14:29:23Z] Akshay: Rightish track
+[2026-02-23T14:29:24Z] Kartikey Pradhan: AoE kinda stuff?
+[2026-02-23T14:29:28Z] Anurag Bhide: Is thebblank thickness?
+[2026-02-23T14:29:29Z] Akshay: But thats 3D
+[2026-02-23T14:29:34Z] Kartikey Pradhan: how big or small my farm should be or something like that
+[2026-02-23T14:29:39Z] Abhishek Vats: Puzzles jigsaw ‎<This message was edited>
+[2026-02-23T14:29:45Z] Nikhil Borra: Jigsaw puzzles
+[2026-02-23T14:29:48Z] Dr.Namrata Srinivasan: Wah
+[2026-02-23T14:29:48Z] Akshay: What in jigsaw puzzles?
+[2026-02-23T14:29:58Z] Dr.Namrata Srinivasan: Corner piece?
+[2026-02-23T14:29:58Z] Nikhil Borra: Which piece to start with
+[2026-02-23T14:30:05Z] Akshay: Something specific u do when doing jigsaws
+[2026-02-23T14:30:17Z] Akshay: Number of corner pieces in a jigsaw is correct!
+[2026-02-23T14:30:24Z] Dr.Namrata Srinivasan: What a question!
+[2026-02-23T14:30:43Z] Kartikey Pradhan: lurn
+[2026-02-23T14:30:45Z] Akshay: https://www.youtube.com/live/1MhuXtiXkF4?si=Kb-I4UmaU_vUKu7v
+[2026-02-23T14:30:48Z] Akshay: From here
+[2026-02-23T14:30:57Z] Anurag Bhide: Isn't that always 4?
+[2026-02-23T14:31:20Z] Kartikey Pradhan: asli id se aao, Wenger
+[2026-02-23T14:31:24Z] Anurag Bhide: Are we saying edge pieces?
+[2026-02-23T14:31:27Z] Akshay: Thats actual corners, but the edge pieces change depending on the dimension and no of total pieces
+[2026-02-23T14:32:31Z] Sidhesh K K: Have always wondered, what does one do with the puzzle once it's solved?
+[2026-02-23T14:32:52Z] Sidhesh K K: Like Legos you can keep on a stand
+[2026-02-23T14:33:17Z] Sidhesh K K: Genuine question for any jigsaw enthusiasts
+[2026-02-23T14:33:36Z] Akshay: I usually glue them, frame them and ang them on the walls
+[2026-02-23T14:34:00Z] Sidhesh K K: Nice
+[2026-02-23T14:35:27Z] Anurag Bhide: They break them up like Buddhist monks wipe out mandalas to represent that nothing is permanent in life 🙃
+[2026-02-23T14:38:30Z] Kartikey Pradhan: Q. In 2007, Kenny Miller marked his debut with a superb goal that gave Derby a 1-0 win over Newcastle. Newcastle had 14 players away on international duty who looked jaded and tired after the break, and it looked very apparent. In an otherwise regular league game, what significance does this goal/win hold in the all-time PL record books? ‎image omitted
+[2026-02-23T14:39:11Z] Anurag Bhide: Is this that Derby season where they only got 14 points?
+[2026-02-23T14:39:33Z] Anurag Bhide: Only instance of only 1 win in a season?
+[2026-02-23T14:40:36Z] Kartikey Pradhan: you are somewhere around the answer so will close it. ↵ This is the 2007-08 Derby County season where they only managed 11 points across the whole season, setting record for the least points by a team in a season. They lost 29, drew 8, and won only 1, which was this game.
+[2026-02-23T14:41:10Z] Anurag Bhide: Haan lowest points tally in PL is what I meant
+[2026-02-23T14:41:37Z] Kartikey Pradhan: this i am not aware of
+[2026-02-23T14:42:01Z] Anurag Bhide: Neither am I 😅
+[2026-02-23T14:43:12Z] Kartikey Pradhan: okay so just checked. You are right, in a completed season that’s the only instance of 1 win in a season
+[2026-02-23T14:43:54Z] Kartikey Pradhan: in fact, the reason why I found this trivia was while looking at the PL table, and Wolves scoring only 10 so far, with 1 win so far
+[2026-02-23T14:44:15Z] Kartikey Pradhan: 28 games down, 1 win and 10 points, they are in touching distance of this unwanted record
+[2026-02-23T14:45:20Z] Kartikey Pradhan: worst 7 ever ‎image omitted
+[2026-02-23T14:47:48Z] Akshay: Examples ‎image omitted
+[2026-02-23T14:51:25Z] Khandoba: There are professional jigsaw puzzlers? And they have mathematical strategies to ace it?
+[2026-02-23T14:51:45Z] Khandoba: Things you lurn everyday
+[2026-02-23T14:53:11Z] Sidhesh K K: Akshay ko integrations aise hi nahi pasand
+[2026-02-23T15:06:43Z] Smit D Mahajani: Ah yes, the famous historical city of Prague, Arkansas ‎image omitted
+[2026-02-23T15:49:32Z] Khandoba: Americans live in their own world😂
+[2026-02-23T15:54:38Z] మాन$: Can I start a set?
+[2026-02-23T15:54:53Z] Dr.Namrata Srinivasan: Go for it!
+[2026-02-23T15:56:23Z] మాन$: With blessings of Vats baba @⁨Abhishek Vats⁩ ↵ ### Quiz starts. ↵ Overall hint think Indian ‎<This message was edited>
+[2026-02-23T15:56:46Z] మాन$: 1. Venom without fangs, coiled in command, ↵ A living arsenal beneath one hand.
+[2026-02-23T15:57:14Z] మాन$: The first one is the toughest
+[2026-02-23T15:57:39Z] Khandoba: What is the theme?
+[2026-02-23T15:57:52Z] మాन$: Answer this you will know
+[2026-02-23T15:57:59Z] Anurag Bhide: Is it a person or thing?
+[2026-02-23T15:58:05Z] Khandoba: Nagraj?
+[2026-02-23T15:58:14Z] Dr.Namrata Srinivasan: What the
+[2026-02-23T15:58:21Z] మాन$: Nagraj is the answer
+[2026-02-23T15:58:27Z] Dr.Namrata Srinivasan: Elaborate please
+[2026-02-23T15:59:01Z] మాन$: https://www.instagram.com/reel/DVCCxbrDMV-/?igsh=YWUyM3R1YzVtb285
+[2026-02-23T15:59:12Z] మాन$: 2. Not born to power, but trained in pain, ↵ Steel City’s tactician fights without gain
+[2026-02-23T15:59:20Z] Khandoba: Dhruv
+[2026-02-23T15:59:23Z] Anurag Bhide: Theme is comic book characters?
+[2026-02-23T15:59:24Z] Dr.Namrata Srinivasan: TIL
+[2026-02-23T15:59:31Z] Dr.Namrata Srinivasan: Wow crazy !
+[2026-02-23T15:59:33Z] Dr.Namrata Srinivasan: Nice one
+[2026-02-23T15:59:41Z] మాन$: Super commander dhruv is correct
+[2026-02-23T15:59:58Z] మాन$: 3. Night breeds fear in Mumbai’s veins, ↵ A hound of justice breaks the chains.
+[2026-02-23T16:00:04Z] Abhishek S: Doga
+[2026-02-23T16:00:06Z] Tapish: Dogs
+[2026-02-23T16:00:09Z] Tapish: Doga
+[2026-02-23T16:00:16Z] మాन$: Sal getting Doga
+[2026-02-23T16:00:23Z] Khandoba: Mujhe jo 2 pata the maine Bata diye
+[2026-02-23T16:00:25Z] మాन$: Doga is correct
+[2026-02-23T16:00:27Z] Khandoba: Now I will spectate
+[2026-02-23T16:00:39Z] మాन$: You will be surprised
+[2026-02-23T16:00:53Z] మాन$: 4. Crowned by serpents, tempered by flame, ↵ A warrior-prince of forgotten name.
+[2026-02-23T16:01:09Z] Shubhankar: Nagraj
+[2026-02-23T16:01:09Z] Abhishek S: Bhokal
+[2026-02-23T16:01:21Z] మాन$: Bhokal is correct
+[2026-02-23T16:01:43Z] మాन$: 5. From modest clerk to cosmic guide, ↵ Chakras awaken, ego aside.
+[2026-02-23T16:01:51Z] Khandoba: Shaktiman
+[2026-02-23T16:01:53Z] Abhishek S: Parmanu
+[2026-02-23T16:01:53Z] Shubhankar: Shaktiman
+[2026-02-23T16:02:14Z] మాन$: Shaktimaan is correct
+[2026-02-23T16:02:30Z] మాन$: 6. Mantra, mudra, mystic sight, ↵ Tantric storms ignite the night.
+[2026-02-23T16:02:45Z] Shubhankar: Dhalsim
+[2026-02-23T16:02:56Z] మాन$: Think super indian
+[2026-02-23T16:03:05Z] Abhishek S: Anthony Gonsalves
+[2026-02-23T16:03:09Z] Khandoba: Ye MK Wala hai kya?
+[2026-02-23T16:03:16Z] Shubhankar: Yes!
+[2026-02-23T16:03:22Z] Dr.Namrata Srinivasan: What on earth
+[2026-02-23T16:03:32Z] Khandoba: Phantom?
+[2026-02-23T16:03:49Z] Anurag Bhide: Mandrake
+[2026-02-23T16:04:05Z] Tapish: Aghori?
+[2026-02-23T16:04:06Z] మాन$: Not indian
+[2026-02-23T16:04:28Z] మాन$: TIL answer is Tiranga. Was not wanting to give a hint
+[2026-02-23T16:04:45Z] Abhishek S: Tiranga is the Indian Captain America
+[2026-02-23T16:04:55Z] Abhishek S: Manoj Comics na?
+[2026-02-23T16:05:31Z] Abhishek S: No, Raj. But yes, he's inspired by Captain America
+[2026-02-23T16:05:42Z] మాन$: https://www.google.com/search?q=tiranga+xomics&oq=tiranga+xomics&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDI5MTlqMGo3qAIPsAIB&client=ms-android-samsung-ss&sourceid=chrome-mobile&ie=UTF-8 ‎image omitted
+[2026-02-23T16:05:48Z] మాन$: 7. Brain outruns the fastest car, ↵ Criminals fall before “______ __ _____” afar.
+[2026-02-23T16:06:05Z] Khandoba: Chamcha
+[2026-02-23T16:06:08Z] Khandoba: Chacha
+[2026-02-23T16:06:09Z] Dhruv: Chacha
+[2026-02-23T16:06:11Z] Khandoba: Choudhary
+[2026-02-23T16:06:13Z] Dhruv: Chaudhari
+[2026-02-23T16:06:21Z] మాन$: What did you say to me
+[2026-02-23T16:06:39Z] మాन$: Chacha Chaudhary is correct
+[2026-02-23T16:06:46Z] Dhruv: Not to you, he said it to Saboo
+[2026-02-23T16:06:49Z] Khandoba: I said what I said
+[2026-02-23T16:07:17Z] మాन$: 8. Wit over wealth, thin but tall, ↵ Street-smart hero outsmarts all.
+[2026-02-23T16:07:28Z] మాन$: You are then spatula
+[2026-02-23T16:07:37Z] Abhishek S: Supandi
+[2026-02-23T16:07:56Z] మాन$: Suppandi is correct
+[2026-02-23T16:08:21Z] Khandoba: I have only heard about Supandi, never read a single issue
+[2026-02-23T16:08:29Z] మాन$: 9. Panels where epics learned to breathe, ↵ History inked in saffron sheath. ↵ Not one character
+[2026-02-23T16:08:38Z] Khandoba: Amar
+[2026-02-23T16:08:38Z] Abhishek S: Amar chitra
+[2026-02-23T16:08:41Z] Khandoba: Chitra Katha
+[2026-02-23T16:08:42Z] Dhruv: Ack
+[2026-02-23T16:08:59Z] మాन$: ACK amar chitra katha is correct
+[2026-02-23T16:09:02Z] Anurag Bhide: Suppandi toh wit nahi dimwit tha na?
+[2026-02-23T16:09:23Z] మాन$: 10. Reincarnated rage with axe in hand, ↵ Time fears the warrior of this land.
+[2026-02-23T16:09:32Z] మాन$: Last of this set
+[2026-02-23T16:09:42Z] Abhishek S: This is Indian Thor
+[2026-02-23T16:09:50Z] Smit D Mahajani: Hatim ‎<This message was edited>
+[2026-02-23T16:09:50Z] Dr.Namrata Srinivasan: WHAT
+[2026-02-23T16:09:51Z] మాन$: Thor is indian this
+[2026-02-23T16:09:55Z] Khandoba: A-shok?
+[2026-02-23T16:10:10Z] Smit D Mahajani: Parashuram?
+[2026-02-23T16:10:12Z] Dr.Namrata Srinivasan: Parashuram
+[2026-02-23T16:10:25Z] Smit D Mahajani: Set kya hai? Main toh aise hi naam bole jaa raha hun
+[2026-02-23T16:10:26Z] మాन$: Parashuram is correct
+[2026-02-23T16:10:28Z] Dhruv: There's a comic on Parshuram?
+[2026-02-23T16:10:32Z] Dr.Namrata Srinivasan: Ded
+[2026-02-23T16:10:38Z] Smit D Mahajani: Bc pt. mil gaya 😂
+[2026-02-23T16:10:44Z] Dr.Namrata Srinivasan: Awesome set!! ↵ So much lurn
+[2026-02-23T16:10:45Z] మాन$: Quiz ends ### ‎image omitted
+[2026-02-23T16:11:02Z] Smit D Mahajani: What was the set even about?
+[2026-02-23T16:11:09Z] మాन$: Will be back in an hour or so for another set completely different from this
+[2026-02-23T16:11:13Z] Khandoba: Indian super heroes
+[2026-02-23T16:11:15Z] మాन$: Indian comics
+[2026-02-23T16:11:21Z] Smit D Mahajani: Oh okay
+[2026-02-23T16:11:25Z] Tapish: Nice set @⁨~మాन$⁩ 🙌
+[2026-02-23T16:11:26Z] Smit D Mahajani: Achha okay
+[2026-02-23T16:11:48Z] Smit D Mahajani: There's a comic on every major avatar of Vishnu I think
+[2026-02-23T16:11:58Z] Smit D Mahajani: I think ACK ki hai
+[2026-02-23T16:12:07Z] Naman Agarwal: Missed it :(
+[2026-02-23T16:14:58Z] మాन$: https://www.google.com/search?q=parshuram.comic&oq=parshuram.comic&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDMxNTJqMGo5qAIAsAIB&client=ms-android-samsung-ss&sourceid=chrome-mobile&ie=UTF-8 ‎image omitted
+[2026-02-23T16:29:00Z] Abhishek Vats: Missed too many great sets @⁨~Pavan Pamidimarri⁩ @⁨~Saumay⁩ @⁨~మాन$⁩
+[2026-02-23T16:29:11Z] Abhishek Vats: Mast lurn bhare sawaal 🙌🏻
+[2026-02-23T16:31:30Z] Dhruv: If anyone is interested, I've got a set of about 10 questions about game based maps.. should be relatively easy for this group
+[2026-02-23T16:35:14Z] Anurag Bhide: What are game based maps?
+[2026-02-23T16:35:34Z] Abhishek Vats: Video game wale maps I think
+[2026-02-23T16:35:45Z] Anurag Bhide: Ohh main toh out hoon fir
+[2026-02-23T16:36:16Z] Abhishek Vats: Out toh bs GG hona chahiye
+[2026-02-23T16:36:48Z] Dhruv: For example: ↵ 1) ‎image omitted
+[2026-02-23T16:37:05Z] Anurag Bhide: Sirf Pochinki pata hai ek shayad PUBG me hota hai
+[2026-02-23T16:37:08Z] Abhishek Vats: Stray?
+[2026-02-23T16:37:23Z] Abhishek Vats: De_dust2?
+[2026-02-23T16:37:40Z] Anurag Bhide: Elon ka doosra beta hai kya ye?
+[2026-02-23T16:38:01Z] మాन$: He has many
+[2026-02-23T16:38:05Z] Dhruv: Counter strike
+[2026-02-23T16:39:00Z] మాन$: You asking or answering
+[2026-02-23T16:39:16Z] Dhruv: No i was telling about dedust2
+[2026-02-23T16:39:29Z] Dhruv: 2) ‎image omitted
+[2026-02-23T16:39:51Z] Abhishek Vats: Mario World?
+[2026-02-23T16:40:16Z] Dhruv: Think old school, 1st of many
+[2026-02-23T16:40:22Z] Anurag Bhide: Minecraft
+[2026-02-23T16:40:26Z] Abhishek Vats: Adventure Island?
+[2026-02-23T16:40:39Z] మాन$: I know this. But not coming in mind
+[2026-02-23T16:40:43Z] Dhruv: You're on the right line tho
+[2026-02-23T16:41:33Z] Smit D Mahajani: Warcraft?
+[2026-02-23T16:41:36Z] మాन$: Crash. Or sonic
+[2026-02-23T16:41:39Z] Dhruv: It was a Nintendo game first
+[2026-02-23T16:42:11Z] Dhruv: 40 years active about a princess
+[2026-02-23T16:42:21Z] Abhishek Vats: Zelda?
+[2026-02-23T16:42:32Z] Sidhesh K K: Super mario world
+[2026-02-23T16:42:52Z] Dhruv: 3) ‎image omitted
+[2026-02-23T16:43:43Z] Sidhesh K K: Wolfenstein?
+[2026-02-23T16:43:46Z] Dhruv: Would love to get the exact map in the game
+[2026-02-23T16:44:11Z] Smit D Mahajani: Pop
+[2026-02-23T16:44:11Z] Dhruv: This game had loads of maps that you could play on
+[2026-02-23T16:44:14Z] Smit D Mahajani: ?
+[2026-02-23T16:44:16Z] Nikunj: Cod?
+[2026-02-23T16:44:29Z] Dhruv: Any idea on the map?
+[2026-02-23T16:44:47Z] Sidhesh K K: Nuketown?
+[2026-02-23T16:45:22Z] Dhruv: 4) ‎image omitted
+[2026-02-23T16:45:33Z] Abhishek Vats: MGS
+[2026-02-23T16:45:34Z] Dhruv: The color is a major hint
+[2026-02-23T16:45:51Z] Sidhesh K K: Delta force?
+[2026-02-23T16:45:55Z] Nikunj: Farcry??
+[2026-02-23T16:45:55Z] Abhishek Vats: Fallout?
+[2026-02-23T16:46:38Z] Dhruv: Fallout it is! When you see the map on your arm thingy
+[2026-02-23T16:47:20Z] మాन$: @⁨~Dhruv⁩ your ❤️ is our ✅
+[2026-02-23T16:47:34Z] Nikunj: Gta?
+[2026-02-23T16:47:35Z] మాन$: Sa
+[2026-02-23T16:47:40Z] మాन$: Gta sa
+[2026-02-23T16:47:50Z] మాन$: Groove street
+[2026-02-23T16:48:26Z] మాन$: Vicecity ‎<This message was edited>
+[2026-02-23T16:48:32Z] Sidhesh K K: Vice city
+[2026-02-23T16:49:07Z] Abhishek Vats: Uncharted
+[2026-02-23T16:49:22Z] Abhishek Vats: Lost legacy?
+[2026-02-23T16:49:22Z] Dhruv: Beautiful game
+[2026-02-23T16:49:28Z] మాन$: Was typing that only but was thinking which version
+[2026-02-23T16:50:14Z] మాन$: Gta V
+[2026-02-23T16:50:16Z] Abhishek Vats: Nfs
+[2026-02-23T16:50:28Z] Dhruv: Which one tho
+[2026-02-23T16:50:36Z] Abhishek Vats: Heat
+[2026-02-23T16:50:38Z] మాन$: Underground
+[2026-02-23T16:51:08Z] మాन$: Pubg
+[2026-02-23T16:51:16Z] Abhishek Vats: FC6
+[2026-02-23T16:51:32Z] Dhruv: Vats just ruling over!
+[2026-02-23T16:51:46Z] Abhishek Vats: Zyada online nahi hai 😂
+[2026-02-23T16:51:51Z] Shiv Ram: Aisa koi topic hai jo aapko pata nahi? ‎<This message was edited>
+[2026-02-23T16:51:58Z] Tapish: The only FC I have played, not so keen into games but sunaa hai 4 is better
+[2026-02-23T16:52:13Z] మాन$: Payaaaa
+[2026-02-23T16:52:16Z] Abhishek Vats: Jeevan ka satya 😂
+[2026-02-23T16:52:21Z] Tapish: No none niet nadaaa
+[2026-02-23T16:52:42Z] మాन$: Pokémon
+[2026-02-23T16:52:51Z] Dhruv: Which one tho
+[2026-02-23T16:52:59Z] Abhishek Vats: Let's go pikachu
+[2026-02-23T16:53:05Z] మాन$: Emerald
+[2026-02-23T16:53:18Z] Shiv Ram: Pokémon Go?
+[2026-02-23T16:53:34Z] మాन$: That will be google maps
+[2026-02-23T16:53:37Z] Dhruv: I'm not sure but the source i got it from said Kanto, not sure if it's a game
+[2026-02-23T16:53:38Z] Tapish: Let’s Go Eevee
+[2026-02-23T16:53:53Z] Abhishek Vats: Photo kheechne wali?
+[2026-02-23T16:53:54Z] Tapish: Kanto bas region hai iirc
+[2026-02-23T16:54:01Z] మాन$: Kanto is the region for the first game first region
+[2026-02-23T16:54:27Z] Abhishek Vats: Yup kanto isn't a game. For that it would be pokemon RBG
+[2026-02-23T16:54:30Z] Abhishek Vats: Y
+[2026-02-23T16:54:53Z] మాन$: Red blue yellow
+[2026-02-23T16:55:09Z] మాन$: Cs go
+[2026-02-23T16:55:21Z] Khandoba: IGI?
+[2026-02-23T16:55:39Z] Abhishek Vats: Kya badhiya series yaad dila di
+[2026-02-23T16:55:41Z] Tapish: MW
+[2026-02-23T16:55:42Z] మాन$: Oh thank god. I will kick myself if it's that
+[2026-02-23T16:55:43Z] Tapish: 2
+[2026-02-23T16:55:53Z] Tapish: Cod Mw2
+[2026-02-23T16:55:55Z] మాन$: I want it so much
+[2026-02-23T16:56:01Z] Dhruv: Mw2 is right, which map
+[2026-02-23T16:56:16Z] Tapish: Bailout mein tha?
+[2026-02-23T16:56:23Z] Abhishek Vats: Mw ko ekdum james bond style mein introduce kia hai 😂
+[2026-02-23T16:56:43Z] Dhruv: This is Rust from mw2
+[2026-02-23T16:57:38Z] Khandoba: Far cry?
+[2026-02-23T16:57:50Z] Nikunj: PUBG?
+[2026-02-23T16:58:12Z] మాन$: Can't find pukipsi
+[2026-02-23T16:58:12Z] Sayu Sekhar: Yeh toh pubg erangel lag ra
+[2026-02-23T16:58:22Z] Nikunj: Not erangel
+[2026-02-23T16:58:47Z] Nikunj: Deston??
+[2026-02-23T16:58:53Z] Sayu Sekhar: Not erangel right usmein neeche hai
+[2026-02-23T16:58:58Z] Sayu Sekhar: Island I mean
+[2026-02-23T16:59:06Z] Dhruv: Not sure
+[2026-02-23T16:59:12Z] మాन$: WoW
+[2026-02-23T16:59:14Z] Abhishek Vats: Valhalla?
+[2026-02-23T16:59:23Z] Tapish: Yesssss
+[2026-02-23T16:59:29Z] Dhruv: Valhalla it is!!
+[2026-02-23T16:59:49Z] Nikunj: Assassin's right?
+[2026-02-23T17:00:07Z] Nikunj: Yet to play this one
+[2026-02-23T17:00:20Z] Dhruv: Aur finally ek Vats ki language mein Sookha Poori: ‎image omitted
+[2026-02-23T17:00:31Z] Abhishek Vats: Bomberman
+[2026-02-23T17:00:34Z] Abhishek Vats: Or tanks
+[2026-02-23T17:00:41Z] Dhruv: Bomberman it is!
+[2026-02-23T17:01:33Z] మాन$: Tank will have eagles flags
+[2026-02-23T17:01:38Z] Tapish: Mast mast set @⁨~Dhruv⁩ bhai 🙌🙌 I don’t usually play but my friend plays a lot and I love watching. Par school time waale saare naam suun ke mazaa aagaya ❤️❤️❤️
+[2026-02-23T17:01:45Z] మాन$: St Patrick's day ka hain kya
+[2026-02-23T17:01:47Z] Khandoba: Mast nostalgic set
+[2026-02-23T17:02:18Z] మాन$: I want igi now. Going to that rabbit hole now
+[2026-02-23T17:02:32Z] Khandoba: Mere paas Nai hai bhai
+[2026-02-23T17:02:37Z] Abhishek Vats: Great set @⁨~Dhruv⁩ 🙌🏻
+[2026-02-23T17:02:50Z] Dhruv: Igi2 mein Dragunov se maarna was epic
+[2026-02-23T17:03:13Z] Tapish: House of the dead khela hai kisi ne?
+[2026-02-23T17:03:32Z] Abhishek Vats: 2 bhi kheli hai. Pr 1 better
+[2026-02-23T17:04:24Z] Tapish: 1 hi kheli hai sirf, first time jab PC aaya tha ghar pe yeh Roadrash Virtual Cop2 aur NFS2 laaya tha CD burn kar ke
+[2026-02-23T17:04:48Z] Dhruv: It was similar as Resident evil na
+[2026-02-23T17:04:55Z] Manik Kamra: Ohhh, what a great game. Ek hi same time mein I was introduced to House of Dead and V COP 2
+[2026-02-23T17:05:01Z] Dhruv: Yaar Virtua Cop!!!
+[2026-02-23T17:05:52Z] Manik Kamra: Started playing games again last year. Ghost of Tsushima khelne ke baad pura jag suna suna lagta hai
+[2026-02-23T17:06:12Z] Tapish: House of the dead aur Silent Hill: Shattered Memories bohot kamm sunnta hoon logon se but I loved them both so much
+[2026-02-23T17:06:41Z] Manik Kamra: Haan maine nai suna Silent Hill kabhi
+[2026-02-23T17:07:02Z] Dhruv: Yotei khel lo
+[2026-02-23T17:07:02Z] Tapish: Maine finally PS khariida last year, Uncharted 4, Ghost of Tsushima, FC6 kheli ‎<This message was edited>
+[2026-02-23T17:07:20Z] Manik Kamra: khel li bhai, acchi thi, but not as good
+[2026-02-23T17:07:40Z] Tapish: Abhi Hogwarts Legacy khel raha dost, Gafoor Ghisela in Slytherin 😂
+[2026-02-23T17:07:59Z] Manik Kamra: Maine shuru kari thi, but didn't complete it. Bore hogaya tha thoda beech mein
+[2026-02-23T17:08:34Z] Dhruv: I'm working on 100%-ing Tsushima
+[2026-02-23T17:08:46Z] Dhruv: Too much to do for 100%
+[2026-02-23T17:09:16Z] Manik Kamra: Maine 85 tak kari thi ↵ I want to wait for some time so that I forget and then I will play it again
+[2026-02-23T17:09:21Z] Tapish: Same review usska bhi par woh khelte rehta hai.
+[2026-02-23T17:09:29Z] మాन$: https://youtu.be/z4gP-x5YihI?si=iZrbzVgc_tey6guo
+[2026-02-23T17:09:50Z] మాन$: IGI gameplay mil gaya atleast
+[2026-02-23T17:09:59Z] Tapish: Again bohot zyada nahi dekha ya khela but jitne dekhe ya khele hain, RDR2 ka world is ❤️🙌
+[2026-02-23T17:10:29Z] Dhruv: This is igi2 tho isn't it?
+[2026-02-23T17:10:44Z] Dr.Namrata Srinivasan: Guys I have a small cricket set ↵ Can run it in 40 minutes
+[2026-02-23T17:10:48Z] మాन$: NFS most wanted. A good game. ↵ Roadrash the b3st
+[2026-02-23T17:10:51Z] Dr.Namrata Srinivasan: After dinner😬
+[2026-02-23T17:11:06Z] Shubhankar: Oho! What memories
+[2026-02-23T17:11:18Z] Dhruv: Boodhi aurat walker wali ko laat maarne mein bahut maza aata tha
+[2026-02-23T17:11:54Z] Tapish: Mike Sydney Rhonda Milwaukee Jon Bose
+[2026-02-23T17:12:04Z] Dhruv: My kid sister and i used to enjoy playing it together! She used to kick and i used to race
+[2026-02-23T17:13:50Z] Dhruv: Yaar aap to bahut saare games ko khelna dhund lete ho. IGI dhund pao to batana please
+[2026-02-23T17:14:59Z] Dhruv: Kyunki jo banda khel raha hai video mein, wo bahut ghatiya khel raha hai.. I'm so irritated
+[2026-02-23T17:24:08Z] Smit D Mahajani: Q: This is part of a letter written by X to Y in context of the Korean War. Who are X and Y? ‎image omitted
+[2026-02-23T17:28:19Z] AntNishu: nehru
+[2026-02-23T17:28:42Z] Smit D Mahajani: Which one is Nehru?
+[2026-02-23T17:28:54Z] AntNishu: writing the letter
+[2026-02-23T17:28:59Z] Smit D Mahajani: No
+[2026-02-23T17:29:06Z] AntNishu: oh
+[2026-02-23T17:29:19Z] AntNishu: then her sister is the one who wrote
+[2026-02-23T17:29:23Z] Smit D Mahajani: No
+[2026-02-23T17:32:57Z] Abhishek Vats: Nehru is the receiver ?
+[2026-02-23T17:33:24Z] AntNishu: patel
+[2026-02-23T17:33:59Z] Smit D Mahajani: Nehru ko likhit letter mein disagreement hai matlab Patel hi honge, ye maan ke chalo
+[2026-02-23T17:34:02Z] AntNishu: wasn't her sister un representative at that time
+[2026-02-23T17:34:28Z] Smit D Mahajani: Not sure
+[2026-02-23T17:34:49Z] Dhruv: Yes. Vijayalakshmi Pandit
+[2026-02-23T17:35:27Z] Abhishek Vats: Towards the end of the korean war I think
+[2026-02-23T17:35:46Z] Smit D Mahajani: This is the entirety of the part about Korea from the full letter: ↵ "My dear Jawaharlal, ↵ Thank you for your letters dated 29 and 30 June 1950 respectively. ↵ I have seen the statement on Korea. While it is satisfactory in its support of the UNO’s recommendation, I feel that we need not have reiterated our foreign policy. Such reiteration implies that this step could be construed as a departure from that policy and we were being apologetic or on the defensive about it. After all, the step which we have taken fits in with our policy of supporting the UNO and invoking the various remedies mentioned in the Charter against aggression. Once we felt, as we did in the case of Korea, that an aggression had taken place, I do not think we can set any limits to our action to resist that aggression. We have to exhaust all the means laid down in the Charter. The question merely would be one of timing and effectiveness. When actual armed aggression takes place, it is doubtful whether negotiations and mediation alone can secure the objective of peace. Negotiations and mediation can avail us only if there is a cessation of hostilities. Otherwise we cannot match words against arms."
+[2026-02-23T17:36:30Z] Smit D Mahajani: Idk why, but I find all the letters between Nehru and Patel so interesting ‎<This message was edited>
+[2026-02-23T17:37:33Z] Dhruv: At the time thankfully opposing ideas within the same party were welcome
+[2026-02-23T17:37:54Z] Smit D Mahajani: Yeah their equation is the most misunderstood one, and that's on purpose
+[2026-02-23T17:38:23Z] Smit D Mahajani: I think Guha has put it brilliantly: ↵ "Congress has dis-owned Patel, and the BJP has mis-owned Patel" ‎<This message was edited>
+[2026-02-23T17:53:58Z] Abhishek Vats: Unairbrush ‎image omitted
+[2026-02-23T17:54:22Z] Manik Kamra: Un-titanic? 😅
+[2026-02-23T17:54:45Z] Abhishek Vats: Close. Think of the animal and take blessings from Sal
+[2026-02-23T17:54:46Z] Khandoba: Turtle-nic
+[2026-02-23T17:54:54Z] Abhishek Vats: Will give it
+[2026-02-23T17:55:22Z] Manik Kamra: Hahahaha
+[2026-02-23T17:57:23Z] Abhishek Vats: Leoturtle di caprio ‎image omitted
+[2026-02-23T17:58:00Z] Tapish: Teenage Girlfriend Ninja Turtle
+[2026-02-23T17:58:42Z] Abhishek Vats: Koi set hi chala do 🥲
+[2026-02-23T17:59:08Z] మాन$: I have one
+[2026-02-23T17:59:19Z] మాन$: But online 4 hain
+[2026-02-23T17:59:52Z] Tapish: Aasha karte hain 4 mein se ek na ek toh jawaab de hi dega ya degi 🙈 ‎<This message was edited>
+[2026-02-23T18:00:19Z] Abhishek Vats: @⁨~Dr.Namrata Srinivasan ⁩ is also running a set na?
+[2026-02-23T18:00:30Z] Abhishek Vats: Uske pehle kar do khatam
+[2026-02-23T18:01:10Z] మాन$: @⁨~Smit D Mahajani⁩ asked few. Is your set done?
+[2026-02-23T18:01:25Z] Smit D Mahajani: I just asked one Q ‎<This message was edited>
+[2026-02-23T18:01:37Z] Smit D Mahajani: I wasn't running a set
+[2026-02-23T18:01:52Z] Smit D Mahajani: Jisko bhi set shuru karna hai kardo
+[2026-02-23T18:03:05Z] Dr.Namrata Srinivasan: I have a set
+[2026-02-23T18:03:36Z] మాन$: Rock paper scissors
+[2026-02-23T18:03:41Z] Dr.Namrata Srinivasan: The cricket one ↵ Random Qs ↵ Not long format
+[2026-02-23T18:03:58Z] మాन$: I have to sleep too
+[2026-02-23T18:04:26Z] Dr.Namrata Srinivasan: I can follow ypu @⁨~మాन$⁩
+[2026-02-23T18:04:38Z] మాन$: Follow me where?
+[2026-02-23T18:04:53Z] మాन$: 😇
+[2026-02-23T18:05:20Z] Dr.Namrata Srinivasan: What’s your set?
+[2026-02-23T18:05:28Z] మాन$: Ok lets start. ↵ With blessings of Vats baba ↵ And hint is taxonomy ↵ ###quiz start
+[2026-02-23T18:05:56Z] మాन$: 1. Knighted voice of forests deep, ↵ Now fossils and spiders his surname keep.
+[2026-02-23T18:06:23Z] Abhishek Vats: Bhai Mera naam mat jodo. It's a normal format everyone uses
+[2026-02-23T18:06:37Z] మాन$: Famous ppl whose names are used
+[2026-02-23T18:06:40Z] Dr.Namrata Srinivasan: Arachnidae?
+[2026-02-23T18:06:50Z] Abhishek Vats: David attenborough
+[2026-02-23T18:07:19Z] మాन$: David Attenborough is correct
+[2026-02-23T18:08:04Z] మాन$: 2. Poker face, avant-garde flair, ↵ A fern and wasp her title wear.
+[2026-02-23T18:08:48Z] Pavan Pamidimarri: what is the theme?
+[2026-02-23T18:08:58Z] Pavan Pamidimarri: oh taxonomy
+[2026-02-23T18:09:15Z] Pavan Pamidimarri: famous person after whom some ferns and wasps are named
+[2026-02-23T18:09:27Z] Dr.Namrata Srinivasan: Lady Gaga?😆
+[2026-02-23T18:09:35Z] Pavan Pamidimarri: oh wow
+[2026-02-23T18:09:40Z] మాन$: Lady gaga is correct
+[2026-02-23T18:09:41Z] Pavan Pamidimarri: G-A-G-A
+[2026-02-23T18:09:44Z] Pavan Pamidimarri: nucleotides
+[2026-02-23T18:09:59Z] మాन$: 3. Oval Office once his domain, ↵ Now a parasite bears his name.
+[2026-02-23T18:10:04Z] Pavan Pamidimarri: obama
+[2026-02-23T18:10:05Z] Dr.Namrata Srinivasan: Obama?
+[2026-02-23T18:10:16Z] Dr.Namrata Srinivasan: Clinton?
+[2026-02-23T18:10:16Z] Abhishek Vats: Trump ↵ Oh he himself is one
+[2026-02-23T18:10:24Z] మాन$: Obama is correct
+[2026-02-23T18:10:30Z] Abhishek Vats: Different species of parasite
+[2026-02-23T18:10:51Z] మాन$: 4. He curved the cosmos, rewrote light, ↵ A beetle echoes his insight.
+[2026-02-23T18:10:56Z] Dr.Namrata Srinivasan: Sagan
+[2026-02-23T18:10:59Z] Pavan Pamidimarri: einstein
+[2026-02-23T18:10:59Z] Khandoba: Einstein
+[2026-02-23T18:11:11Z] మాन$: Einstein  is correct
+[2026-02-23T18:11:13Z] Dr.Namrata Srinivasan: Oh damn ↵ Didn’t read the full q 🤣
+[2026-02-23T18:11:17Z] మాन$: Wrong wire ‎<This message was edited>
+[2026-02-23T18:11:59Z] మాन$: 5. M_______ legend, rhythm divine, ↵ A Mexican moth now shares his sign.
+[2026-02-23T18:12:11Z] Dr.Namrata Srinivasan: MJ?
+[2026-02-23T18:12:14Z] Abhishek Vats: Mj
+[2026-02-23T18:12:26Z] మాन$: Moonwalk MJ is correct
+[2026-02-23T18:12:44Z] మాन$: 6. Satisfaction in gravelly tone, ↵ A trilobite fossil bears his own.
+[2026-02-23T18:12:58Z] Anurag Bhide: Morgan Freeman?
+[2026-02-23T18:13:08Z] మాन$: Gravelly?
+[2026-02-23T18:13:13Z] Pavan Pamidimarri: richards?
+[2026-02-23T18:13:14Z] Dr.Namrata Srinivasan: Clint eastwoo?
+[2026-02-23T18:13:16Z] Pavan Pamidimarri: ekeith
+[2026-02-23T18:13:40Z] Dr.Namrata Srinivasan: Arnold Schwaz
+[2026-02-23T18:13:43Z] Khandoba: RFK jr?
+[2026-02-23T18:13:48Z] Khandoba: 🤣
+[2026-02-23T18:14:06Z] Pavan Pamidimarri: that’s more than gravelly
+[2026-02-23T18:14:10Z] Anurag Bhide: Wait
+[2026-02-23T18:14:12Z] Anurag Bhide: Jagger
+[2026-02-23T18:14:16Z] Anurag Bhide: Mick
+[2026-02-23T18:14:20Z] Anurag Bhide: Satisfaction
+[2026-02-23T18:14:20Z] Khandoba: Like nails on a blackboard
+[2026-02-23T18:14:22Z] Anurag Bhide: Nice
+[2026-02-23T18:14:23Z] Dr.Namrata Srinivasan: What the ↵ Good one🤣🤣🤣
+[2026-02-23T18:14:25Z] Pavan Pamidimarri: oh yeah i should have guessed that instead
+[2026-02-23T18:14:26Z] Dr.Namrata Srinivasan: Very good one
+[2026-02-23T18:14:30Z] మాन$: Mick jagger is correct
+[2026-02-23T18:15:02Z] మాन$: 7. _____________ from scholar’s pen, ↵ A wasp now hums his realm again.
+[2026-02-23T18:15:15Z] Dr.Namrata Srinivasan: Tolkien
+[2026-02-23T18:15:26Z] Pavan Pamidimarri: great crack
+[2026-02-23T18:15:38Z] మాन$: Middle earth JRR Tolkien is correct
+[2026-02-23T18:16:11Z] Khandoba: @⁨Abhishek Vats⁩ ek Pavan ka in doc brown costume saying great crack instead of great Scott bana do🤣
+[2026-02-23T18:16:21Z] మాन$: 8. F*****, s**, the champion’s art, ↵ An ancient wasp preserves his heart.
+[2026-02-23T18:16:35Z] Pavan Pamidimarri: ali?
+[2026-02-23T18:16:44Z] Abhishek Vats: I'll be back
+[2026-02-23T18:17:02Z] మాन$: Floated stung Md. Ali is correct
+[2026-02-23T18:17:05Z] Pavan Pamidimarri: float, sting?
+[2026-02-23T18:17:14Z] Khandoba: Lage haath Khud ka as a terminator bana do
+[2026-02-23T18:17:28Z] Dr.Namrata Srinivasan: Nice ↵ I guessed “fucks sake” 🤣🤣🤣 ↵ And I was wondering who said it
+[2026-02-23T18:17:35Z] Khandoba: Sammmmme
+[2026-02-23T18:17:37Z] మాन$: 8.  fame and climate plea, ↵ A trapdoor spider honours he.
+[2026-02-23T18:17:43Z] Dr.Namrata Srinivasan: lol great minds
+[2026-02-23T18:17:44Z] Pavan Pamidimarri: gre
+[2026-02-23T18:17:46Z] Dr.Namrata Srinivasan: Greta
+[2026-02-23T18:17:48Z] Abhishek Vats: Al gore
+[2026-02-23T18:17:50Z] Pavan Pamidimarri: go
+[2026-02-23T18:17:53Z] Khandoba: Al Gore
+[2026-02-23T18:17:54Z] Pavan Pamidimarri: gore
+[2026-02-23T18:17:59Z] మాन$: NOTA
+[2026-02-23T18:18:05Z] Khandoba: Leo?
+[2026-02-23T18:18:07Z] Dr.Namrata Srinivasan: Leo de cap
+[2026-02-23T18:18:27Z] మాन$: Titanic fame leo Dicaprio
+[2026-02-23T18:18:30Z] Khandoba: No cap
+[2026-02-23T18:18:34Z] Pavan Pamidimarri: need to restart my outlook app
+[2026-02-23T18:19:16Z] మాन$: 10. Crazy in love, global _____, ↵ A horsefly gleams with golden sheen.
+[2026-02-23T18:19:25Z] KD: Beyonce
+[2026-02-23T18:19:44Z] మాन$: Queen Beyonce is correct
+[2026-02-23T18:20:02Z] మాन$: 11. Desert planets, spice, and dune, ↵ A reptile bears his saga soon.
+[2026-02-23T18:20:03Z] Khandoba: You missed number 9?
+[2026-02-23T18:20:11Z] Pavan Pamidimarri: herbert? ‎<This message was edited>
+[2026-02-23T18:20:12Z] Anurag Bhide: Chalamet?
+[2026-02-23T18:20:13Z] Dr.Namrata Srinivasan: Chamber
+[2026-02-23T18:20:13Z] Khandoba: Herbert
+[2026-02-23T18:20:15Z] మాन$: Leo was 9 actually
+[2026-02-23T18:20:17Z] Dr.Namrata Srinivasan: Godamnit
+[2026-02-23T18:20:27Z] Dr.Namrata Srinivasan: Chalomet*
+[2026-02-23T18:20:40Z] మాन$: Frank Herbert is correct
+[2026-02-23T18:20:55Z] Dr.Namrata Srinivasan: Wah.
+[2026-02-23T18:21:17Z] మాन$: 12. D#@#@#  aloud on marble stair, ↵ A frog now leaps in his care.
+[2026-02-23T18:21:30Z] KD: Dhudum
+[2026-02-23T18:21:31Z] KD: ?
+[2026-02-23T18:21:38Z] Abhishek Vats: Sorry @⁨~Pavan Pamidimarri⁩ ↵ Please stop if it gets too much 🙈 ‎image omitted
+[2026-02-23T18:22:14Z] KD: Darwin?
+[2026-02-23T18:22:22Z] Pavan Pamidimarri: how do i make a sticker of this
+[2026-02-23T18:23:11Z] Dr.Namrata Srinivasan: Waiting for a great crack on this
+[2026-02-23T18:23:51Z] Pavan Pamidimarri: fred astaire?
+[2026-02-23T18:23:52Z] KD: Dickens?
+[2026-02-23T18:24:19Z] Anurag Bhide: Renuka Shahane ☠️
+[2026-02-23T18:24:35Z] Tapish: Lo chali main
+[2026-02-23T18:24:38Z] Pavan Pamidimarri: need a hint
+[2026-02-23T18:24:51Z] మాन$: Hint. I have a
+[2026-02-23T18:24:55Z] Pavan Pamidimarri: mlk
+[2026-02-23T18:25:01Z] Abhishek Vats: Hahhahahhahah
+[2026-02-23T18:25:02Z] Dr.Namrata Srinivasan: Oh wow
+[2026-02-23T18:25:05Z] Dr.Namrata Srinivasan: Awesome
+[2026-02-23T18:25:10Z] AntNishu: how
+[2026-02-23T18:25:13Z] Pavan Pamidimarri: very nice
+[2026-02-23T18:25:15Z] మాन$: Dreamed. MLK jr. Is correct
+[2026-02-23T18:25:19Z] Pavan Pamidimarri: marble stairs of Lincoln Memorial ‎<This message was edited>
+[2026-02-23T18:25:30Z] Abhishek Vats: Mere liye ye hi answer hai 😂
+[2026-02-23T18:25:32Z] KD: Ohhhhhhh
+[2026-02-23T18:25:39Z] Khandoba: Mujhe laga likhte likhte ruk gaya
+[2026-02-23T18:25:50Z] Dr.Namrata Srinivasan: Same 🤣🤣🤣
+[2026-02-23T18:26:03Z] మాन$: 13. Jungle wisdom, barefoot lore, ↵ A forest frog recalls the roar. ↵ Last
+[2026-02-23T18:26:13Z] Dr.Namrata Srinivasan: Bear grill
+[2026-02-23T18:26:14Z] Khandoba: Steve
+[2026-02-23T18:26:15Z] Pavan Pamidimarri: goodall
+[2026-02-23T18:26:16Z] మాन$: The first word was dream so
+[2026-02-23T18:26:16Z] Dr.Namrata Srinivasan: Godamnit
+[2026-02-23T18:26:17Z] Khandoba: Irwin
+[2026-02-23T18:26:29Z] మాन$: NOTA
+[2026-02-23T18:26:30Z] Anurag Bhide: Tarzan
+[2026-02-23T18:26:32Z] KD: Kipling
+[2026-02-23T18:26:40Z] Khandoba: Mowgli
+[2026-02-23T18:26:40Z] Tapish: Yoink waala banda lag raha hai
+[2026-02-23T18:26:45Z] Pavan Pamidimarri: kipling
+[2026-02-23T18:26:49Z] Abhishek Vats: Bear grylls
+[2026-02-23T18:26:51Z] Khandoba: Fishing garett
+[2026-02-23T18:27:02Z] KD: Damn
+[2026-02-23T18:27:09Z] మాन$: Mowgli is correct ↵ (The Indian bush frog Raorchestes mowlgli was named after him.)
+[2026-02-23T18:27:10Z] Dr.Namrata Srinivasan: Reminded me of “child bear”
+[2026-02-23T18:27:46Z] Pavan Pamidimarri: great set @⁨~మాन$⁩
+[2026-02-23T18:27:51Z] మాन$: Quiz ends ###
+[2026-02-23T18:27:52Z] Dr.Namrata Srinivasan: Super fun set!! ↵ Loved it @⁨~మాन$⁩
+[2026-02-23T18:27:56Z] Abhishek Vats: Great set Maanas
+[2026-02-23T18:28:04Z] Tapish: Nice set Maanas
+[2026-02-23T18:28:13Z] KD: Noice!! 🙏🏻🤩🥳
+[2026-02-23T18:28:16Z] Anurag Bhide: Wonderful concept @⁨~మాन$⁩ !! Had no idea so many species are named after people
+[2026-02-23T18:28:22Z] Dr.Namrata Srinivasan: Ikr!!!
+[2026-02-23T18:28:32Z] Dr.Namrata Srinivasan: I wish I could remember the species 🤣🤣🤣
+[2026-02-23T18:28:35Z] మాन$: There are more
+[2026-02-23T18:29:07Z] మాन$: So pinned comment stays
+[2026-02-23T18:29:10Z] Abhishek Vats: Chalo is se pehle koi haddi toote @⁨~Dr.Namrata Srinivasan ⁩ kar do quiz aap 😂
+[2026-02-23T18:29:20Z] Dr.Namrata Srinivasan: Lessgooo
+[2026-02-23T18:29:32Z] Dr.Namrata Srinivasan: Gandhi in quadrangular adjacent quiz 🤣🤣🤣
+[2026-02-23T18:29:39Z] Dr.Namrata Srinivasan: Not long format ↵ Random trivia
+[2026-02-23T18:29:41Z] Dr.Namrata Srinivasan: Let’s start
+[2026-02-23T18:30:06Z] Dr.Namrata Srinivasan: Q1.First father son duo to score a century on test debut ↵ (5 points)
+[2026-02-23T18:30:14Z] Anurag Bhide: Lala mohinder
+[2026-02-23T18:30:15Z] Abhishek Vats: Amarnaths?
+[2026-02-23T18:30:16Z] Anurag Bhide: ?
+[2026-02-23T18:30:26Z] Dr.Namrata Srinivasan: 2.5
+[2026-02-23T18:30:31Z] Dr.Namrata Srinivasan: Son is?
+[2026-02-23T18:30:34Z] Kartikey Pradhan: Surinder
+[2026-02-23T18:30:35Z] Khandoba: Surindar
+[2026-02-23T18:30:39Z] Anurag Bhide: Ohhh
+[2026-02-23T18:30:39Z] Dr.Namrata Srinivasan: 2.5
+[2026-02-23T18:30:46Z] మాन$: Oh cricket hain. Mein gayaa. Goodnight. Will LURN after sunrise
+[2026-02-23T18:30:46Z] Sidhesh K K: Namrata be like... ↵ Toot gayi toot ke haddi chur ho gayi... ↵ Operate karne majboor ho gayi!
+[2026-02-23T18:30:47Z] Dr.Namrata Srinivasan: Bhide 2.5 KP 2.5
+[2026-02-23T18:30:59Z] Dr.Namrata Srinivasan: LOL
+[2026-02-23T18:31:07Z] Dr.Namrata Srinivasan: Next
+[2026-02-23T18:31:54Z] Dr.Namrata Srinivasan: 2.Krishma Kumar was a huge fan of X, deciding to name his son Y after a suiting brand endorsed by X in the 90s ↵ ID X Y (4 6)
+[2026-02-23T18:32:06Z] Sidhesh K K: Dinesh
+[2026-02-23T18:32:09Z] Anurag Bhide: Mayur
+[2026-02-23T18:32:10Z] Abhishek Vats: Sachin mrf
+[2026-02-23T18:32:12Z] Sidhesh K K: Mongia
+[2026-02-23T18:32:14Z] Dr.Namrata Srinivasan: 6
+[2026-02-23T18:32:20Z] Dr.Namrata Srinivasan: What about X
+[2026-02-23T18:32:29Z] Sidhesh K K: Jackie
+[2026-02-23T18:32:32Z] Sidhesh K K: Shroff
+[2026-02-23T18:32:44Z] Dr.Namrata Srinivasan: Sid cracked for YO
+[2026-02-23T18:32:48Z] Dr.Namrata Srinivasan: Y *
+[2026-02-23T18:32:51Z] Kartikey Pradhan: Gavaskar?
+[2026-02-23T18:32:59Z] Dr.Namrata Srinivasan: 4
+[2026-02-23T18:33:17Z] Dr.Namrata Srinivasan: X-Sunil Gavaskar ↵ Y-Dinesh Karthik
+[2026-02-23T18:33:26Z] Anurag Bhide: Wow TIL
+[2026-02-23T18:33:34Z] Dr.Namrata Srinivasan: Bhide 2.5 KP 6.5 Sid 6
+[2026-02-23T18:33:36Z] Kartikey Pradhan: lol Sid Dinesh Mongia bola hahahahahahaha
+[2026-02-23T18:33:41Z] Abhishek Vats: Sid mongia bol k nikal gye
+[2026-02-23T18:33:42Z] Abhishek Vats: 😂
+[2026-02-23T18:33:47Z] Dr.Namrata Srinivasan: LOLLLL
+[2026-02-23T18:34:10Z] Dr.Namrata Srinivasan: Are there 2 Sid’s in the group?
+[2026-02-23T18:34:27Z] Sidhesh K K: Abe yaar... sirf Dinesh bola rehta 😢
+[2026-02-23T18:34:31Z] Anurag Bhide: Not to our knowledge
+[2026-02-23T18:34:39Z] Dr.Namrata Srinivasan: Omg did you guess Dinesh for X 🤣🤣🤣🤣🤣
+[2026-02-23T18:34:40Z] Dr.Namrata Srinivasan: Ded
+[2026-02-23T18:34:48Z] Dr.Namrata Srinivasan: Ok new rule
+[2026-02-23T18:34:51Z] Tapish: 2 Dinesh toh aagaye
+[2026-02-23T18:34:56Z] Dr.Namrata Srinivasan: Be specific with X and Y
+[2026-02-23T18:34:59Z] Dr.Namrata Srinivasan: LOL
+[2026-02-23T18:35:02Z] Dr.Namrata Srinivasan: otherwise no points
+[2026-02-23T18:35:04Z] Tapish: Bechaara Ramadin
+[2026-02-23T18:35:06Z] Abhishek Vats: Nope he guessed dinesh mongia instead of dinesh Karthik
+[2026-02-23T18:35:07Z] Dr.Namrata Srinivasan: I’ll let this one slip
+[2026-02-23T18:35:07Z] Kartikey Pradhan: Dinesh Kaneria
+[2026-02-23T18:35:15Z] Sidhesh K K: No I guessed Dinesh for Y. But Mongia instead of Karthik🤣🤣🤣
+[2026-02-23T18:35:29Z] Dr.Namrata Srinivasan: Ok that’s still fine
+[2026-02-23T18:35:30Z] Anurag Bhide: Dinesh Salunkhe bhi hai 😂😂
+[2026-02-23T18:35:34Z] Kartikey Pradhan: #justiceforramdin
+[2026-02-23T18:35:36Z] Dr.Namrata Srinivasan: Was looking for the link
+[2026-02-23T18:35:43Z] Sidhesh K K: Wo Denesh tha
+[2026-02-23T18:35:47Z] Dr.Namrata Srinivasan: LOL 🤣🤣🤣
+[2026-02-23T18:35:52Z] Abhishek Vats: Bhai usko toh danish rakhne pe hi pel dia ↵ Dinesh mein toh ‎GIF omitted
+[2026-02-23T18:36:02Z] Dr.Namrata Srinivasan: Next
+[2026-02-23T18:36:59Z] Dr.Namrata Srinivasan: Prof D B deodhar debuted in 1911 and played until 1948 ↵ Along with X, he was the only cricketer to have broken this record. ↵ ID X and the record (6 4)
+[2026-02-23T18:37:10Z] Dr.Namrata Srinivasan: Lots of clues in Q
+[2026-02-23T18:37:15Z] Kartikey Pradhan: ww
+[2026-02-23T18:37:16Z] Anurag Bhide: John Traicos?
+[2026-02-23T18:37:16Z] Tapish: Rhodes
+[2026-02-23T18:37:19Z] Kartikey Pradhan: 1 and 2
+[2026-02-23T18:37:21Z] Tapish: Wilfred Rhodes
+[2026-02-23T18:37:25Z] Dr.Namrata Srinivasan: 4 to you
+[2026-02-23T18:37:29Z] Abhishek Vats: Ashdown ‎<This message was edited>
+[2026-02-23T18:37:30Z] Kartikey Pradhan: played before WW1 and after WW2 ‎<This message was edited>
+[2026-02-23T18:37:31Z] Tapish: Played for 5 decades
+[2026-02-23T18:37:33Z] Kartikey Pradhan: bill ashdown
+[2026-02-23T18:37:49Z] Dr.Namrata Srinivasan: KP gets 10
+[2026-02-23T18:37:54Z] Kartikey Pradhan: Vats bol diya Ashdown
+[2026-02-23T18:37:57Z] Kartikey Pradhan: before me
+[2026-02-23T18:38:01Z] Tapish: Ah yaar alag track
+[2026-02-23T18:38:08Z] Abhishek Vats: Spelling ka chakar babu bhaiya 😂
+[2026-02-23T18:38:15Z] Dr.Namrata Srinivasan: Oh my bad didn’t see that
+[2026-02-23T18:38:20Z] Dr.Namrata Srinivasan: How benevolent
+[2026-02-23T18:38:25Z] Dr.Namrata Srinivasan: The funda is the WW funda
+[2026-02-23T18:38:30Z] Dr.Namrata Srinivasan: DBD lived to 101
+[2026-02-23T18:38:42Z] Dr.Namrata Srinivasan: And also thought Sanskrit in Pune university! ↵ What a cutie!
+[2026-02-23T18:38:44Z] Kartikey Pradhan: we have asked this here
+[2026-02-23T18:38:50Z] Dr.Namrata Srinivasan: Oh sorry ↵ Didn’t see
+[2026-02-23T18:39:01Z] Kartikey Pradhan: here
+[2026-02-23T18:39:08Z] Kartikey Pradhan: maybe before you joined
+[2026-02-23T18:39:18Z] Dr.Namrata Srinivasan: Bhide 2.5 KP 10.5 Sid 6 Vats 5
+[2026-02-23T18:39:23Z] Abhishek Vats: Revision ho gya chalo
+[2026-02-23T18:39:26Z] Dr.Namrata Srinivasan: Yup it’s before I joined
+[2026-02-23T18:39:35Z] Dr.Namrata Srinivasan: Do questions get repeated often?
+[2026-02-23T18:39:44Z] Kartikey Pradhan: world is small enough 🙂
+[2026-02-23T18:39:51Z] Tapish: Bahut zaroori hai, mera puraa khaali hogaya hai
+[2026-02-23T18:40:00Z] Dr.Namrata Srinivasan: Vats did you get any other Q? ↵ Feel like I’m screwing up the scoring
+[2026-02-23T18:40:02Z] Abhishek Vats: Sometimes. In a different form too sometimes
+[2026-02-23T18:40:15Z] Abhishek Vats: Nope nope ↵ Main hi nalayak hu 😂
+[2026-02-23T18:41:15Z] Kartikey Pradhan: On your left is an English cricketer Bill A. (1898-1979), who primarily played county cricket for Kent. On right is DB Deodhar (1892-1993), who was the first Indian first-class cricketer known to have lived to 100. What is common between these two, which no one else has done, and will never be able to do now? ‎image omitted
+[2026-02-23T18:41:21Z] Anurag Bhide: Let it be pls continue before Shiv Ram finds out
+[2026-02-23T18:41:28Z] Kartikey Pradhan: @⁨~Dr.Namrata Srinivasan ⁩ this was the ques
+[2026-02-23T18:42:10Z] Dr.Namrata Srinivasan: Q.The England test match in 1952 popularly referred to as X’s test,stirred controversy following the failure of X’s selection to the Indian team by the chair of selectors,Y,causing him to accept an offer to play in the Z league. ↵ The series went so poorly that an SOS had to be sent to Haslingden to acquire X for the remainder of the tests. ↵ ID X Y Z ( 3 3 4)
+[2026-02-23T18:42:18Z] Dr.Namrata Srinivasan: Thanks !
+[2026-02-23T18:42:21Z] Abhishek Vats: Mankad
+[2026-02-23T18:42:23Z] Dr.Namrata Srinivasan: lolol 🤣🤣
+[2026-02-23T18:42:24Z] Kartikey Pradhan: mankad
+[2026-02-23T18:42:32Z] Dr.Namrata Srinivasan: 3
+[2026-02-23T18:42:39Z] Abhishek Vats: Lancashire league
+[2026-02-23T18:42:39Z] Tapish: Nayudu
+[2026-02-23T18:42:44Z] Tapish: Lancashire League
+[2026-02-23T18:42:47Z] Abhishek Vats: Other one no idea
+[2026-02-23T18:43:00Z] Abhishek Vats: PK Roy?
+[2026-02-23T18:43:01Z] Dr.Namrata Srinivasan: 7 to vats 3 to tapish
+[2026-02-23T18:43:04Z] Tapish: CK nayudu the
+[2026-02-23T18:43:07Z] Dr.Namrata Srinivasan: It was Nayudu
+[2026-02-23T18:43:35Z] Dr.Namrata Srinivasan: Bhide 2.5 KP 10.5 Sid 6 Vats 12 Tapish 3
+[2026-02-23T18:43:40Z] Dr.Namrata Srinivasan: Next
+[2026-02-23T18:44:23Z] Dr.Namrata Srinivasan: “some had the birthright to the membership.We have won it” ↵ Who said the following (5) ↵ Context (3) ↵ Year (2)
+[2026-02-23T18:44:34Z] Kartikey Pradhan: lala
+[2026-02-23T18:44:37Z] Anurag Bhide: Lords membership?
+[2026-02-23T18:44:43Z] Kartikey Pradhan: pakistan victory
+[2026-02-23T18:44:49Z] Kartikey Pradhan: first test series against them
+[2026-02-23T18:44:59Z] Kartikey Pradhan: 1952?
+[2026-02-23T18:45:00Z] Abhishek Vats: 1952
+[2026-02-23T18:45:07Z] Dr.Namrata Srinivasan: I’ll give it to you
+[2026-02-23T18:45:20Z] Kartikey Pradhan: i meant to say first test series victory against them
+[2026-02-23T18:45:24Z] Dr.Namrata Srinivasan: Can you refine
+[2026-02-23T18:45:40Z] Dr.Namrata Srinivasan: Want to prevent a Sid 🤣🤣
+[2026-02-23T18:45:45Z] Dr.Namrata Srinivasan: From happening
+[2026-02-23T18:45:50Z] Kartikey Pradhan: this?
+[2026-02-23T18:45:56Z] Dr.Namrata Srinivasan: Who is them
+[2026-02-23T18:46:02Z] Kartikey Pradhan: against Pak
+[2026-02-23T18:46:11Z] Kartikey Pradhan: this was India’s first test series win vs Pak
+[2026-02-23T18:46:14Z] Dr.Namrata Srinivasan: Nope
+[2026-02-23T18:46:19Z] Kartikey Pradhan: ho gaya Sid
+[2026-02-23T18:46:20Z] Anurag Bhide: First win in England?
+[2026-02-23T18:46:27Z] Kartikey Pradhan: oh
+[2026-02-23T18:46:30Z] Dr.Namrata Srinivasan: NOTA
+[2026-02-23T18:46:31Z] Kartikey Pradhan: first ever test series win
+[2026-02-23T18:46:32Z] Abhishek Vats: That was later no
+[2026-02-23T18:46:38Z] Dr.Namrata Srinivasan: Nope
+[2026-02-23T18:46:42Z] Kartikey Pradhan: it came vs Pak
+[2026-02-23T18:46:47Z] Dr.Namrata Srinivasan: You haven’t cracked who said it yet
+[2026-02-23T18:46:51Z] Dr.Namrata Srinivasan: It’s not lala
+[2026-02-23T18:46:57Z] Kartikey Pradhan: here
+[2026-02-23T18:46:59Z] Kartikey Pradhan: ah
+[2026-02-23T18:47:01Z] Dr.Namrata Srinivasan: It’s not
+[2026-02-23T18:47:01Z] Kartikey Pradhan: damn
+[2026-02-23T18:47:11Z] Tapish: Full ICC status?
+[2026-02-23T18:47:17Z] Dr.Namrata Srinivasan: Of?
+[2026-02-23T18:47:30Z] Abhishek Vats: Test playing nation?
+[2026-02-23T18:47:49Z] Dr.Namrata Srinivasan: This is nearly there
+[2026-02-23T18:47:57Z] Dr.Namrata Srinivasan: Don’t think India
+[2026-02-23T18:48:05Z] Anurag Bhide: Member status?
+[2026-02-23T18:48:07Z] Dr.Namrata Srinivasan: I’ll give Tapish 2 for this
+[2026-02-23T18:48:09Z] Tapish: Pakistan
+[2026-02-23T18:48:10Z] Kartikey Pradhan: full ICC status to Pak
+[2026-02-23T18:48:11Z] Tapish: ??
+[2026-02-23T18:48:14Z] Dr.Namrata Srinivasan: Yup
+[2026-02-23T18:48:19Z] Dr.Namrata Srinivasan: I’ll give Tapish that crack
+[2026-02-23T18:48:22Z] Dr.Namrata Srinivasan: And X
+[2026-02-23T18:48:33Z] Anurag Bhide: Hafeez kardar
+[2026-02-23T18:48:35Z] Kartikey Pradhan: kya khichdi banayi hai is sawaal ki aur guesses ki
+[2026-02-23T18:49:12Z] Tapish: Nice guess ❤️
+[2026-02-23T18:49:31Z] Smit D Mahajani: Full Member status and Test membership are effectively the same ‎<This message was edited>
+[2026-02-23T18:49:37Z] Anurag Bhide: Pakistan pe tick lag chuka tha 😅
+[2026-02-23T18:49:51Z] Dr.Namrata Srinivasan: This was said by Abdul hafeez kardar in 1952, ↵ When fighting for full ICC member status ↵ They were constantly asked to prove their worth as a member nation. ↵ Which they did prove in their test match ↵ This was the year 1952 ↵ The first test match where travel was by road - Lahore to Amritsar
+[2026-02-23T18:50:12Z] Tapish: Haan isspe main fir sochne lag gaya, good guess from there
+[2026-02-23T18:50:41Z] Dr.Namrata Srinivasan: Bhide 7.5 KP 12.5 Sid 6 Vats 12 Tapish 6
+[2026-02-23T18:50:53Z] Dr.Namrata Srinivasan: Next
+[2026-02-23T18:51:23Z] Kartikey Pradhan: OH BHAISAHAB HAHAHAHAHAHAHAHAHAHAHA
+[2026-02-23T18:52:02Z] Abhishek Vats: @⁨~Khandoba⁩ ka idea
+[2026-02-23T18:52:19Z] Dr.Namrata Srinivasan: Q.X Y, founded in Sialkot in 1931,saw their marketing opportunity with cricketer _____ with whom they shared initials,launching a signed bat called the Sunny Tonny. ↵ ID X.
+[2026-02-23T18:52:41Z] Kartikey Pradhan: SS?
+[2026-02-23T18:52:42Z] Tapish: SG
+[2026-02-23T18:52:50Z] Dr.Namrata Srinivasan: But come on 🤣
+[2026-02-23T18:52:51Z] Kartikey Pradhan: oh fck
+[2026-02-23T18:52:53Z] Kartikey Pradhan: gavaskar
+[2026-02-23T18:52:56Z] Tapish: Sanspareils Greenlands
+[2026-02-23T18:52:56Z] Dr.Namrata Srinivasan: Give Me more
+[2026-02-23T18:53:03Z] Dr.Namrata Srinivasan: Full 10 to Tapish
+[2026-02-23T18:53:03Z] Tapish: Gavaskar
+[2026-02-23T18:53:14Z] Kartikey Pradhan: WHY DID I WRITE SS BHAINS KI TAANG
+[2026-02-23T18:53:21Z] Dr.Namrata Srinivasan: Bhide 7.5 KP 12.5 Sid 6 Vats 12 Tapish 16
+[2026-02-23T18:53:25Z] Anurag Bhide: I started thinking of 1931 cricketers 🤦‍♂
+[2026-02-23T18:53:30Z] Khandoba: Austria effect
+[2026-02-23T18:53:44Z] Dr.Namrata Srinivasan: Next
+[2026-02-23T18:54:01Z] Anurag Bhide: Deutsche Bank kyun cricketers ke sath ad kar raha tha
+[2026-02-23T18:54:57Z] Dr.Namrata Srinivasan: NKP Salve,1983 BCCI president requested MCC authorities for 2 extra passes following India’s qualification to the finals,which he was refused-changing the face of Indian cricket. ↵ What event followed and why was it special?
+[2026-02-23T18:55:14Z] Kartikey Pradhan: reliance cup?
+[2026-02-23T18:55:15Z] Kartikey Pradhan: 87
+[2026-02-23T18:55:25Z] Smit D Mahajani: Deepika and Wamiqa had to watch the match from their hotel rooms
+[2026-02-23T18:55:34Z] Dr.Namrata Srinivasan: Can you give me one more record it broke
+[2026-02-23T18:55:39Z] Dr.Namrata Srinivasan: Other than the win
+[2026-02-23T18:55:42Z] Tapish: Hosting in subcontinent
+[2026-02-23T18:55:46Z] Dr.Namrata Srinivasan: Correct
+[2026-02-23T18:55:46Z] Kartikey Pradhan: outside of england
+[2026-02-23T18:55:46Z] Anurag Bhide: First sponsored wc
+[2026-02-23T18:55:47Z] Tapish: First time outside England
+[2026-02-23T18:55:53Z] Kartikey Pradhan: first time WC
+[2026-02-23T18:55:53Z] Dr.Namrata Srinivasan: Yup !
+[2026-02-23T18:55:58Z] Dr.Namrata Srinivasan: 10 to KP!
+[2026-02-23T18:56:12Z] Dr.Namrata Srinivasan: Bhide 7.5 KP 22.5 Sid 6 Vats 12 Tapish 16
+[2026-02-23T18:56:35Z] Kartikey Pradhan: GG ko batao saale ye hai pride karne wali baat
+[2026-02-23T18:56:36Z] Dr.Namrata Srinivasan: 5 to go
+[2026-02-23T18:57:18Z] Tapish: Fir bolega Azad hai Bhagat Singh hai NKP Salve hai
+[2026-02-23T18:57:19Z] Abhishek Vats: Wo bolega Nehru k time pe nahi hua
+[2026-02-23T18:57:26Z] Tapish: Presser lamba kheech jaayega
+[2026-02-23T18:57:58Z] Dr.Namrata Srinivasan: Molipur,Mehsana held a one of a kind tournament in 2022,featuring teams from Chennai,Gandhi nagar,maharashtra and haryana with high definition streaming on a stream service.What was unique about this tournament?
+[2026-02-23T18:58:07Z] Smit D Mahajani: Sham tournament
+[2026-02-23T18:58:11Z] Smit D Mahajani: Fooled some Russians ‎<This message was edited>
+[2026-02-23T18:58:12Z] Kartikey Pradhan: fake IPL?
+[2026-02-23T18:58:17Z] Dr.Namrata Srinivasan: 10 to smit!
+[2026-02-23T18:58:52Z] Tapish: Day Night toh hote hi rehte hain
+[2026-02-23T18:58:53Z] Smit D Mahajani: Aise bakchod answers ke hi pts. milenge mujhe isme ‎<This message was edited>
+[2026-02-23T18:58:58Z] Dr.Namrata Srinivasan: The funniest thing about this was the fact that the organizer was their in house Harsha bhogle impersonator and got arrested too🤣🤣
+[2026-02-23T18:58:59Z] Abhishek Vats: India pak series toh ban thi na tab
+[2026-02-23T18:59:37Z] Dr.Namrata Srinivasan: It was called the century hitters T20
+[2026-02-23T18:59:51Z] Dr.Namrata Srinivasan: Bhide 7.5 KP 22.5 Sid 6 Vats 12 Tapish 16 smit 10
+[2026-02-23T18:59:58Z] Kartikey Pradhan: Tweetsofbhogle ki yaad aa gayi
+[2026-02-23T19:00:11Z] Smit D Mahajani: It was the prequel to fifer takers T20
+[2026-02-23T19:00:21Z] Abhishek Vats: Sahibzada captain
+[2026-02-23T19:00:53Z] Tapish: GOAT
+[2026-02-23T19:00:59Z] Dr.Namrata Srinivasan: Q.The X tournament was conducted by the madras Cricket association in 1944,19 years before England’s Gillette cup making it the first Y in the world. ↵ ID X Y
+[2026-02-23T19:01:27Z] Kartikey Pradhan: TNPL
+[2026-02-23T19:01:27Z] Anurag Bhide: ACC cement?
+[2026-02-23T19:01:34Z] Tapish: First LOI tournament?
+[2026-02-23T19:01:45Z] Anurag Bhide: First sponsored tournament?
+[2026-02-23T19:01:51Z] Dr.Namrata Srinivasan: 5
+[2026-02-23T19:02:12Z] Tapish: Moin ud Dowlah cup?
+[2026-02-23T19:02:17Z] Anurag Bhide: What is LOI?
+[2026-02-23T19:02:22Z] Tapish: Gold cup?
+[2026-02-23T19:02:31Z] Tapish: Limited over
+[2026-02-23T19:02:33Z] Dr.Namrata Srinivasan: Nope, ↵ This was the first sponsored tournament
+[2026-02-23T19:03:02Z] Dr.Namrata Srinivasan: Moin Ud dowlah was the true IPL forerunner 🤣🤣
+[2026-02-23T19:03:15Z] Dr.Namrata Srinivasan: First by the maharajas vizzy and patiala ↵ Later SBI and cement
+[2026-02-23T19:03:18Z] Dr.Namrata Srinivasan: But this is a diff one
+[2026-02-23T19:03:53Z] Tapish: Aur koi yaad nahi aa raha uss time ka aisa
+[2026-02-23T19:04:03Z] Dr.Namrata Srinivasan: I’ll close then
+[2026-02-23T19:04:14Z] Dr.Namrata Srinivasan: It’s the B Subramaniam tournament
+[2026-02-23T19:04:26Z] Dr.Namrata Srinivasan: Could’ve just guessed 2 random Tamil names and you’d have gotten it🤣🤣🤣
+[2026-02-23T19:04:43Z] Dr.Namrata Srinivasan: Bhide 7.5 KP 22.5 Sid 6 Vats 12 Tapish 21 smit 10
+[2026-02-23T19:04:47Z] Khandoba: You could have said this group is a hint
+[2026-02-23T19:04:50Z] Dr.Namrata Srinivasan: Last 2
+[2026-02-23T19:05:01Z] Abhishek Vats: Points mil jaate aur racist ka tag bhi 😂
+[2026-02-23T19:05:20Z] Tapish: Apna axiom galat hojaata
+[2026-02-23T19:05:33Z] Tapish: Either we are right or we are …
+[2026-02-23T19:06:48Z] Dr.Namrata Srinivasan: Q.The madras test match of 1952-2 has to be stopped abruptly with England 224-5 at stumps-the match was rescheduled for the following day,incidentally ending with India’s first test win. ↵ Why was the match postponed?
+[2026-02-23T19:07:13Z] Tapish: Death of king George
+[2026-02-23T19:07:17Z] Abhishek Vats: King george died?
+[2026-02-23T19:07:19Z] Dr.Namrata Srinivasan: 10
+[2026-02-23T19:07:21Z] Dr.Namrata Srinivasan: Yup
+[2026-02-23T19:07:29Z] Dr.Namrata Srinivasan: Bhide 7.5 KP 22.5 Sid 6 Vats 12 Tapish 31 smit 10
+[2026-02-23T19:07:32Z] Dr.Namrata Srinivasan: Last Q
+[2026-02-23T19:07:41Z] Kartikey Pradhan: ye sab kuch 1952 mein hi ho gaya tha kya
+[2026-02-23T19:08:03Z] Abhishek Vats: 80s mein solar eclipse wala bhi hai na shayad
+[2026-02-23T19:08:20Z] Tapish: Apan kitne achche hain history ko tribute dene ke liye 952 runs bhi khaa gaye the
+[2026-02-23T19:08:41Z] Kartikey Pradhan: 9+5+2 = 16
+[2026-02-23T19:08:46Z] Kartikey Pradhan: 1+6 =
+[2026-02-23T19:09:09Z] Tapish: Na koi chori na koi daaka
+[2026-02-23T19:09:15Z] Kartikey Pradhan: gunaah hai ye
+[2026-02-23T19:09:24Z] Smit D Mahajani: Daaka toh Bangladesh mein hai ‎<This message was edited>
+[2026-02-23T19:09:54Z] Abhishek Vats: Suuuuuiiiperstar mahendra singh dhoni bolne wala hai wo
+[2026-02-23T19:10:02Z] Tapish: Chinnaswamy Ka Chittagong hone hi waala tha thank you edit kar diya bhai
+[2026-02-23T19:10:17Z] Anurag Bhide: Suuuiiiiperstar toh DSP hai
+[2026-02-23T19:10:23Z] Anurag Bhide: Aur OG Ashoke Dinda
+[2026-02-23T19:11:00Z] Kartikey Pradhan: yaar wo twitter account Dinda academy
+[2026-02-23T19:11:03Z] Kartikey Pradhan: it's hilarious
+[2026-02-23T19:11:11Z] Dr.Namrata Srinivasan: Q.Who said ↵ And in what circumstance ↵ (5 5) ↵ “There was a 50 % chance that I’d hit the stumps if I threw and 100 % chance of hitting the stumps with ball in hand “
+[2026-02-23T19:11:19Z] Anurag Bhide: Jonty
+[2026-02-23T19:11:23Z] Kartikey Pradhan: dhoni
+[2026-02-23T19:11:23Z] Anurag Bhide: Inzy runout
+[2026-02-23T19:11:27Z] Anurag Bhide: 1992 WC
+[2026-02-23T19:11:30Z] Tapish: Jonty
+[2026-02-23T19:11:32Z] Anurag Bhide: ?
+[2026-02-23T19:11:32Z] Tapish: Inzy
+[2026-02-23T19:11:33Z] Dr.Namrata Srinivasan: 10 to Bhide!!
+[2026-02-23T19:11:39Z] Dr.Namrata Srinivasan: Both right!
+[2026-02-23T19:11:42Z] Kartikey Pradhan: it’s a bird
+[2026-02-23T19:11:46Z] Kartikey Pradhan: it’s a plane
+[2026-02-23T19:11:53Z] Dr.Namrata Srinivasan: Jonty and inzy in 1992 WC
+[2026-02-23T19:12:11Z] Dr.Namrata Srinivasan: Bhide 17.5 KP 22.5 Sid 6 Vats 12 Tapish 31 smit 10
+[2026-02-23T19:12:24Z] Dr.Namrata Srinivasan: tapish wins!! ↵ But so good all of you were🔥🔥🔥
+[2026-02-23T19:12:33Z] Dr.Namrata Srinivasan: ###End
+[2026-02-23T19:12:46Z] Tapish: Highly recommended- there’s a 27 min YT compilation of Inzy run-outs. Please watch it. Specially when high, alag fun bhai. 🙌🙌🙌
+[2026-02-23T19:12:49Z] Abhishek Vats: Great questions @⁨~Dr.Namrata Srinivasan ⁩ ↵ Mast lurn ho gya
+[2026-02-23T19:12:53Z] Anurag Bhide: Fantastic set!
+[2026-02-23T19:12:53Z] Kartikey Pradhan: kaafi badhiya quiz Nams!
+[2026-02-23T19:13:02Z] Smit D Mahajani: Thank you. Guessing a bakchod T20 tournament was a real mind-teaser
+[2026-02-23T19:13:10Z] Abhishek Vats: @⁨~Tapish⁩
+[2026-02-23T19:13:22Z] Smit D Mahajani: Great Qs @⁨~Dr.Namrata Srinivasan ⁩ !
+[2026-02-23T19:13:23Z] Dr.Namrata Srinivasan: TIL jonty almost played hockey for the Olympics
+[2026-02-23T19:13:31Z] Tapish: Super set @⁨~Dr.Namrata Srinivasan ⁩ full lurn and fun, thank you! 🙌
+[2026-02-23T19:13:46Z] Smit D Mahajani: This is quite common in the southern cricketing nations. Warne wanted to play Aussie rules football
+[2026-02-23T19:13:51Z] Dr.Namrata Srinivasan: Correct
+[2026-02-23T19:13:53Z] Dr.Namrata Srinivasan: You’re right
+[2026-02-23T19:13:56Z] Abhishek Vats: Yup before ABD there was Jonty
+[2026-02-23T19:14:00Z] Dr.Namrata Srinivasan: I actually had a connect questions
+[2026-02-23T19:14:11Z] Dr.Namrata Srinivasan: Of players who played both hockey and cricket for their team
+[2026-02-23T19:14:16Z] Tapish: Before Jonty there was Sir Viv
+[2026-02-23T19:14:29Z] Tapish: Before Sir Viv there was Chuni Goswami
+[2026-02-23T19:14:32Z] Smit D Mahajani: ABD also played multiple sports. Perry bhi hai. Aur wo Australian tennis player bhi, I forgot her name
+[2026-02-23T19:14:33Z] Abhishek Vats: Wanted to play aur actually being close to olympics selection mein thoda farak toh hai 😂
+[2026-02-23T19:14:43Z] Kartikey Pradhan: Samson. beech beech mein aisa hi lagta hai ki wo hockey stick se batting kar raha hai
+[2026-02-23T19:14:49Z] Dr.Namrata Srinivasan: Corrext!
+[2026-02-23T19:14:52Z] Abhishek Vats: You bring chunni I raise you Compton 😂
+[2026-02-23T19:15:16Z] Smit D Mahajani: Arre baaki examples de raha tha 😂 ↵ But he did play it at a competitive level
+[2026-02-23T19:15:23Z] Anurag Bhide: Suzie Bates aur Sophie Devine bhi hai. One played basketball other hockey and I always forget which is which
+[2026-02-23T19:15:25Z] Smit D Mahajani: @⁨Abhishek Vats⁩ Ye lo
+[2026-02-23T19:15:37Z] Dr.Namrata Srinivasan: I also had a question on indias mango man ↵ Check him out ↵ Too sleepy to frame a Q now but what a guy
+[2026-02-23T19:15:38Z] Abhishek Vats: Ash barty
+[2026-02-23T19:15:38Z] Smit D Mahajani: Haan inka bhi suna tha
+[2026-02-23T19:15:43Z] Dr.Namrata Srinivasan: He made a hybrid mango after Sachin
+[2026-02-23T19:15:45Z] Smit D Mahajani: Haan wo
+[2026-02-23T19:15:47Z] Dr.Namrata Srinivasan: And has a modi mango too🤣
+[2026-02-23T19:15:47Z] Kartikey Pradhan: MS Dhoni the Van der Sar we never had
+[2026-02-23T19:16:05Z] Abhishek Vats: Aila!
+[2026-02-23T19:16:09Z] Dr.Namrata Srinivasan: And Aishwarya Rai mango
+[2026-02-23T19:16:30Z] Smit D Mahajani: Bhatt ‎<This message was edited>
+[2026-02-23T19:16:51Z] Dr.Namrata Srinivasan: That modi track though🤣🤣🤣 ‎image omitted
+[2026-02-23T19:17:28Z] Smit D Mahajani: Modiji waala mango mitron ke saath share karke khaane ke liye hoga
+[2026-02-23T19:17:36Z] Abhishek Vats: Pr aam aadmi toh kejriwal hai 🙈
+[2026-02-23T19:17:46Z] Dr.Namrata Srinivasan: LOL
+[2026-02-23T19:18:18Z] Dr.Namrata Srinivasan: How on earth do yall remember cricket stats and stuff ↵ Cannot for the life of me
+[2026-02-23T19:18:33Z] Smit D Mahajani: Neither can I
+[2026-02-23T19:18:39Z] Dr.Namrata Srinivasan: Get out
+[2026-02-23T19:18:51Z] Dr.Namrata Srinivasan: All of you do
+[2026-02-23T19:18:54Z] Smit D Mahajani: I guessed a sham tournament as the answer. That says everything
+[2026-02-23T19:19:19Z] Tapish: Cotah Ramaswamy played Test also na?
+[2026-02-23T19:19:25Z] Smit D Mahajani: No really, I'd be at the bottom wrt stats of players, venues etc.
+[2026-02-23T19:19:38Z] Abhishek Vats: @⁨~Shiv Ram⁩ blessed us once 😅
+[2026-02-23T19:19:43Z] Tapish: Tennis and Cricket, shayad first class lekin Test also I think
+[2026-02-23T19:19:48Z] Dr.Namrata Srinivasan: I suck SO MUCH that
+[2026-02-23T19:20:07Z] Smit D Mahajani: Yeah me too. I know the most iconic ones, bas. Aur domestic cricket ka toh negligible
+[2026-02-23T19:20:52Z] Shiv Ram: Abhi aaya tag dekh ke 😅
+[2026-02-23T19:21:04Z] Shiv Ram: There's MJ Gopalan who played hockey and cricket
+[2026-02-23T19:21:05Z] Smit D Mahajani: Achha I've a mini-set of 5 Qs. No points. Bas aise hi answer karo
+[2026-02-23T19:21:12Z] Dr.Namrata Srinivasan: The only number I remember is yuvraj’s 6 6s against broad on Sep 19 2007 🤣
+[2026-02-23T19:21:34Z] Dr.Namrata Srinivasan: You’re correct ↵ I think there’s a tournament after him no?
+[2026-02-23T19:21:41Z] Dr.Namrata Srinivasan: Go for it
+[2026-02-23T19:21:47Z] Smit D Mahajani: This one
+[2026-02-23T19:21:59Z] Shiv Ram: He would have been selected for 1936 Olympic team which Dhyan Chand's team won but chose to skip the trials
+[2026-02-23T19:22:07Z] Tapish: Haan but Cotah Ramaswamy also played Davis Cup for India and Tests I think
+[2026-02-23T19:22:08Z] Smit D Mahajani: Ye padh lo
+[2026-02-23T19:22:10Z] Smit D Mahajani: Sab
+[2026-02-23T19:22:16Z] Shiv Ram: Correct played between Madras and Ceylon
+[2026-02-23T19:22:24Z] Shiv Ram: Correct correct
+[2026-02-23T19:22:24Z] Smit D Mahajani: Aur ye bhi
+[2026-02-23T19:23:06Z] Dr.Namrata Srinivasan: You’re right!
+[2026-02-23T19:23:13Z] Dr.Namrata Srinivasan: I think it’s discontinued no
+[2026-02-23T19:23:27Z] Abhishek Vats: Baaki sab kache khiladi. Modiji poore desh se khelte hain 🙈
+[2026-02-23T19:23:31Z] Dr.Namrata Srinivasan: Or is it still played 😨😨😨
+[2026-02-23T19:23:57Z] Shiv Ram: Yup stopped after Sri Lanka got test status. Got revived in 2000 between Tamil nadu and Colombo district association but again got scrapped
+[2026-02-23T19:24:38Z] Dr.Namrata Srinivasan: Oh ↵ That would’ve been kinda awesome
+[2026-02-23T19:25:28Z] Smit D Mahajani: Chalo main shuru karta hun Qs
+[2026-02-23T19:25:43Z] Smit D Mahajani: 1914 ↵ 1947 ↵ 1949 ↵ 1996
+[2026-02-23T19:27:43Z] KD: KYa batana hai? Connect? Sorry just got in.
+[2026-02-23T19:28:03Z] Tapish: @⁨~KD⁩
+[2026-02-23T19:28:04Z] Smit D Mahajani: @⁨~KD⁩
+[2026-02-23T19:28:32Z] Smit D Mahajani: Koi pts ya FFF nahi hai lekin. Aise hi khel rhe hai
+[2026-02-23T19:29:19Z] KD: Oh, it was very far back 🤣😅thank you guys anyway!
+[2026-02-23T19:29:44Z] Shubhankar: Political hi h?
+[2026-02-23T19:30:04Z] Smit D Mahajani: Haan. Only political milestones of countries, and only when those milestones actually came into effect
+[2026-02-23T19:30:14Z] Smit D Mahajani: Political/administrative milestones
+[2026-02-23T19:30:36Z] Smit D Mahajani: You've to guess which year is wrong, and then give the significance of each year
+[2026-02-23T19:30:50Z] Shubhankar: Ohh got it
+[2026-02-23T19:30:59Z] Shubhankar: Odd one out and logic
+[2026-02-23T19:31:32Z] Smit D Mahajani: Yup
+[2026-02-23T19:31:38Z] Dr.Namrata Srinivasan: This is damn intense🤣
+[2026-02-23T19:31:50Z] Smit D Mahajani: Arre koi pts nahi hai. Kuch bhi bolo
+[2026-02-23T19:32:21Z] Smit D Mahajani: Hint: It's an Asian country
+[2026-02-23T19:33:36Z] KD: India
+[2026-02-23T19:33:39Z] KD: 😅😝
+[2026-02-23T19:33:49Z] Smit D Mahajani: Not India
+[2026-02-23T19:34:01Z] KD: I took kuch bhi bolo too seriously
+[2026-02-23T19:34:09Z] Smit D Mahajani: Haan haan chalega
+[2026-02-23T19:34:12Z] Tapish: Sri Lanka?
+[2026-02-23T19:34:16Z] Smit D Mahajani: No
+[2026-02-23T19:34:23Z] KD: Vietnam
+[2026-02-23T19:34:27Z] Smit D Mahajani: No
+[2026-02-23T19:34:31Z] KD: Afghanistan
+[2026-02-23T19:34:45Z] KD: 96 ka kuch lagra hai
+[2026-02-23T19:35:06Z] KD: Every time the taliban came?
+[2026-02-23T19:35:07Z] Smit D Mahajani: Okay I'll give the significance: ↵ Became a country ↵ Constitution implemented ↵ A new "form" of the country ↵ First truly democratic elections ‎<This message was edited>
+[2026-02-23T19:35:13Z] Smit D Mahajani: Not Afghanistan
+[2026-02-23T19:35:18Z] Shubhankar: Indonesia
+[2026-02-23T19:35:28Z] KD: Iran
+[2026-02-23T19:35:33Z] Smit D Mahajani: No but the region is close
+[2026-02-23T19:35:40Z] KD: Brunei?
+[2026-02-23T19:35:42Z] Smit D Mahajani: Not Iran
+[2026-02-23T19:35:50Z] Smit D Mahajani: It's not SE Asia
+[2026-02-23T19:36:02Z] KD: This is crazy
+[2026-02-23T19:36:03Z] Shubhankar: Malasia?
+[2026-02-23T19:36:11Z] Smit D Mahajani: @⁨~Shubhankar⁩
+[2026-02-23T19:36:16Z] Shubhankar: Oops
+[2026-02-23T19:36:21Z] KD: Nepal!
+[2026-02-23T19:36:30Z] Smit D Mahajani: You guy are circling that country in a way
+[2026-02-23T19:36:40Z] Smit D Mahajani: Not exactly, but kinda
+[2026-02-23T19:36:49Z] Tapish: Fir toh truly Asian country hota 🙈😂
+[2026-02-23T19:37:01Z] Shubhankar: Bygod jab se type kiya h
+[2026-02-23T19:37:06Z] KD: Thailand!
+[2026-02-23T19:37:07Z] Shubhankar: Dimaag me yahi baj raha h ‎<This message was edited>
+[2026-02-23T19:37:15Z] Smit D Mahajani: Arre SE nahi hai
+[2026-02-23T19:37:15Z] Shubhankar: Malasiaaaa… truly asiaaa
+[2026-02-23T19:37:25Z] KD: Isliye nepal bola
+[2026-02-23T19:37:27Z] KD: 🤣
+[2026-02-23T19:37:35Z] Smit D Mahajani: South Asia bhi nahi hai
+[2026-02-23T19:37:42Z] KD: Mongolia
+[2026-02-23T19:37:45Z] Shubhankar: Korea
+[2026-02-23T19:37:56Z] Smit D Mahajani: No but the region is correct
+[2026-02-23T19:38:08Z] KD: Hai
+[2026-02-23T19:38:11Z] KD: China!
+[2026-02-23T19:38:23Z] Shubhankar: Taiwan
+[2026-02-23T19:38:28Z] Smit D Mahajani: Correct in a way
+[2026-02-23T19:38:36Z] KD: Phir toh yeh hai
+[2026-02-23T19:38:37Z] Smit D Mahajani: Wrong year?
+[2026-02-23T19:38:44Z] KD: 96
+[2026-02-23T19:38:46Z] Smit D Mahajani: No
+[2026-02-23T19:38:54Z] Shubhankar: 47?
+[2026-02-23T19:39:01Z] Smit D Mahajani: No
+[2026-02-23T19:39:10Z] Smit D Mahajani: Ab toh 1/2 kar lo 😂
+[2026-02-23T19:39:16Z] Shubhankar: Ab toh 2 hi wire bachi h
+[2026-02-23T19:39:18Z] Shubhankar: 🤣
+[2026-02-23T19:39:18Z] KD: New form
+[2026-02-23T19:39:24Z] KD: Wasn't 49 ?
+[2026-02-23T19:39:38Z] KD: I think it was 60s?
+[2026-02-23T19:39:42Z] Smit D Mahajani: 49 mein it became Taiwan, aur 47 mein constitution bana
+[2026-02-23T19:39:49Z] KD: Ohh
+[2026-02-23T19:40:16Z] Smit D Mahajani: I mean it relocated to Taiwan and became a new version of the same country
+[2026-02-23T19:40:34Z] KD: Mind blasting
+[2026-02-23T19:40:35Z] Smit D Mahajani: Ab toh ek hi bacha hai 😂
+[2026-02-23T19:40:51Z] KD: I know i know!
+[2026-02-23T19:40:56Z] KD: 🤣🤣🤣
+[2026-02-23T19:41:18Z] KD: 1914
+[2026-02-23T19:41:44Z] Smit D Mahajani: Asli year toh bataao
+[2026-02-23T19:42:40Z] KD: 49 right? Became a country
+[2026-02-23T19:43:08Z] Smit D Mahajani: I'll close it. Correct answer is 1912
+[2026-02-23T19:44:02Z] Smit D Mahajani: 1912: ROC was founded ↵ 1947: Constitution was implemented ↵ 1949: It relocated to Taiwan ↵ 1996: Held its first truly democratic election
+[2026-02-23T19:47:14Z] Sidhesh K K: Questions ongoing?
+[2026-02-23T19:48:25Z] Smit D Mahajani: Haan aur log hai toh puchhta hun
+[2026-02-23T19:50:57Z] Smit D Mahajani: Chalo ek aur puchh leta hun
+[2026-02-23T19:51:02Z] Smit D Mahajani: 1945 ↵ 1945 ↵ 1949 ↵ 1950 ↵ 1960
+[2026-02-23T21:49:15Z] Pavan Pamidimarri: Indonesia?
+[2026-02-23T22:20:43Z] Akshay: Which novel and by whom? ‎image omitted
+[2026-02-23T22:17:33Z] Smit D Mahajani: Wrong year?
+[2026-02-23T22:17:55Z] Smit D Mahajani: And logic?
+[2026-02-23T22:23:06Z] Smit D Mahajani: Alice?
+[2026-02-23T22:23:13Z] Akshay: Sukarnos ouster and replacement by suharto was 1965?
+[2026-02-23T22:23:33Z] Smit D Mahajani: Dunning-Kruger?
+[2026-02-23T22:23:37Z] Smit D Mahajani: No
+[2026-02-23T22:24:01Z] Smit D Mahajani: Except one of the years, the others follow the same pattern ‎<This message was edited>
+[2026-02-23T22:25:19Z] Akshay: https://en.wikipedia.org/wiki/Transition_to_the_New_Order?wprov=sfti1#
+[2026-02-23T22:25:21Z] Akshay: 1965
+[2026-02-23T22:25:26Z] Akshay: Ok
+[2026-02-23T22:25:55Z] Smit D Mahajani: Think of a document
+[2026-02-23T22:26:23Z] Smit D Mahajani: So you're saying that 1960 is the wrong year?
+[2026-02-23T22:30:48Z] Akshay: Nope just that the attempted  coup and suharto’s ascent happened in 1965
+[2026-02-23T22:31:19Z] Smit D Mahajani: Wait. Are you answering my Q, or are you saying a factoid independently? ‎<This message was edited>
+[2026-02-23T22:31:43Z] Akshay: Responding to this is all
+[2026-02-23T22:31:50Z] Smit D Mahajani: Ohkay
+[2026-02-23T22:31:53Z] Akshay: Hmm
+[2026-02-23T22:32:07Z] Akshay: 1959? Was this the managed democracy or whatever they called it?
+[2026-02-23T22:32:11Z] Akshay: Or guided democracy?
+[2026-02-23T22:32:18Z] Khandoba: Iska kisiko kuchh aaya?
+[2026-02-23T22:32:22Z] Akshay: Not yets
+[2026-02-23T22:32:33Z] Smit D Mahajani: Not related to any of that
+[2026-02-23T22:32:42Z] Khandoba: Is smit is on the right track? Alice?
+[2026-02-23T22:32:45Z] Smit D Mahajani: All the years, except the first one, are about one common thing
+[2026-02-23T22:32:58Z] Akshay: Not alice, think german authors
+[2026-02-23T22:33:04Z] Smit D Mahajani: Grimm?
+[2026-02-23T22:33:06Z] Khandoba: Grimm
+[2026-02-23T22:33:10Z] Smit D Mahajani: Grimm Brothers?
+[2026-02-23T22:33:23Z] Smit D Mahajani: Hänsel and gretel?
+[2026-02-23T22:33:23Z] Akshay: They were more into short stories i think, think influential novelist
+[2026-02-23T22:33:28Z] Khandoba: Or hans Christian Anderson?
+[2026-02-23T22:34:16Z] Smit D Mahajani: Pied piper?
+[2026-02-23T22:34:35Z] Akshay: Not andersen, think extremely influential german author
+[2026-02-23T22:34:39Z] Akshay: ‘Man of letters’ ‎<This message was edited>
+[2026-02-23T22:35:00Z] Smit D Mahajani: Nietzche?
+[2026-02-23T22:35:02Z] Smit D Mahajani: Tukka
+[2026-02-23T22:35:12Z] Khandoba: Not that early
+[2026-02-23T22:35:14Z] Khandoba: 1774
+[2026-02-23T22:35:21Z] Smit D Mahajani: Haan tukka hi gha
+[2026-02-23T22:35:22Z] Smit D Mahajani: Tha
+[2026-02-23T22:35:35Z] Smit D Mahajani: Alice bhi 19th century mein hi thi
+[2026-02-23T22:35:40Z] Smit D Mahajani: Waise toh
+[2026-02-23T22:35:48Z] Khandoba: Is Goethe an author or a poet?
+[2026-02-23T22:35:58Z] Akshay: Goethe is correct
+[2026-02-23T22:36:25Z] Smit D Mahajani: Goethe effect?
+[2026-02-23T22:36:31Z] Akshay: This contagion was called the ‘X effect’ after the protagonist of the novel ‘The Sorrows of Young X’
+[2026-02-23T22:36:40Z] Khandoba: Only thing I know by him is Faust
+[2026-02-23T22:36:56Z] Smit D Mahajani: Johann?
+[2026-02-23T22:36:59Z] Akshay: Hmm this was a famous novel* too ‎<This message was edited>
+[2026-02-23T22:37:34Z] Smit D Mahajani: Dr. Faustus kuch hai kya
+[2026-02-23T22:38:06Z] Smit D Mahajani: Zhivago?
+[2026-02-23T22:38:13Z] Akshay: Begins with W,
+[2026-02-23T22:38:19Z] Smit D Mahajani: Wolfgang?
+[2026-02-23T22:38:19Z] Akshay: This was his debut novel
+[2026-02-23T22:38:25Z] Akshay: Hahaha nope
+[2026-02-23T22:38:30Z] Akshay: Best to close i guess
+[2026-02-23T22:38:35Z] Smit D Mahajani: William?
+[2026-02-23T22:38:37Z] Smit D Mahajani: Walter?
+[2026-02-23T22:38:40Z] Akshay: German last name
+[2026-02-23T22:39:13Z] Smit D Mahajani: ____mann?
+[2026-02-23T22:39:13Z] Akshay: Will close it
+[2026-02-23T22:39:23Z] Akshay: It’s the Sorrows of Young Werther
+[2026-02-23T22:39:29Z] Akshay: Was like the Tere Naam of its time
+[2026-02-23T22:39:42Z] Smit D Mahajani: Oh
+[2026-02-23T22:39:45Z] Akshay: He wore yellow trousers and then offed himself when the object of his attraction spurned him
+[2026-02-23T22:40:15Z] Akshay: So young men who had similar thoughts would wear yellow pants and start pursuing their love interests and then
+[2026-02-23T22:40:34Z] Khandoba: TIL
+[2026-02-23T22:40:35Z] Akshay: Came to be called the ‘Werther Effect’
+[2026-02-23T22:40:50Z] Smit D Mahajani: Oh achha
+[2026-02-23T22:40:59Z] Khandoba: If I were guessing German names till I ran out of them I still wouldn’t have guessed werther
+[2026-02-23T22:41:05Z] Khandoba: Werner maybe
+[2026-02-23T22:41:35Z] Khandoba: Emobois of Germany
+[2026-02-23T23:16:14Z] Akshay: What was Assad obsessed with, instead of focusing on securing his regime? ‎image omitted
+[2026-02-23T23:20:48Z] Sayu Sekhar: Playing pubg 🤣
+[2026-02-23T23:21:04Z] Sayu Sekhar: Or some other video game ?
+[2026-02-23T23:36:43Z] Akshay: Close
+[2026-02-23T23:37:01Z] Akshay: Think popular general games
+[2026-02-23T23:37:05Z] Sayu Sekhar: Poker ?
+[2026-02-23T23:37:14Z] Akshay: No pubg was good track
+[2026-02-23T23:37:17Z] Akshay: Phone games
+[2026-02-23T23:37:28Z] Sayu Sekhar: Candy crush 🤣
+[2026-02-23T23:37:39Z] Akshay: Candy crush is correct
+[2026-02-23T23:37:45Z] Sayu Sekhar: Whaaaaat 🤯
+[2026-02-24T00:43:38Z] Dhruv: Sincere apologies for the hazy picture but any clues on what this is? ‎image omitted
+[2026-02-24T00:43:39Z] Dhruv: Sincere apologies for the hazy picture but any clues on what this is? ‎image omitted
+[2026-02-24T00:47:51Z] Sayu Sekhar: Sunset ?
+[2026-02-24T00:49:07Z] Nikunj: Is that light or a house on fire?
+[2026-02-24T00:49:08Z] Sayu Sekhar: Sorry but you asking if it’s a movie scene ya kuch ?
+[2026-02-24T00:49:36Z] Dhruv: It's a photo i took
+[2026-02-24T00:49:42Z] Dhruv: From a moving car
+[2026-02-24T00:50:21Z] Sayu Sekhar: Dallas mei hai toh jfk assassination site type kuch ?
+[2026-02-24T00:50:36Z] Dhruv: Yup this is the grassy knoll
+[2026-02-24T00:50:44Z] Sayu Sekhar: Haha 😁
+[2026-02-24T00:50:58Z] Sayu Sekhar: I’m at dfw airport to catch a connection
+[2026-02-24T00:50:59Z] Dhruv: Dealey plaza ‎image omitted
+[2026-02-24T00:51:01Z] Dhruv: Dealey plaza ‎image omitted
+[2026-02-24T00:54:15Z] Dhruv: A better pic ‎image omitted
+[2026-02-24T00:54:17Z] Dhruv: A better pic ‎image omitted
+[2026-02-24T00:54:22Z] Dhruv: Slightly
+[2026-02-24T00:54:52Z] Dhruv: Dallas mein aur kuch ghoomne ke liye nhi hai
+[2026-02-24T01:42:58Z] మాन$: They don't remember the name of the tendon that connects the knee to the calf
+[2026-02-24T01:48:54Z] మాन$: Babushka
+[2026-02-24T01:49:58Z] Sayu Sekhar: A1 response
+[2026-02-24T04:51:01Z] Pavan Pamidimarri: Constitutions — 1959 instead of 1960?
+[2026-02-24T05:08:23Z] Dr.Namrata Srinivasan: Guys I have a set
+[2026-02-24T05:08:29Z] Dr.Namrata Srinivasan: Will run in 30 mins
+[2026-02-24T05:09:29Z] Abhishek Vats: Gandhi at pentangular or Gandhi with a Glock 😂
+[2026-02-24T05:10:27Z] Abhishek Vats: Gandhi at pentangular with a Glock?
+[2026-02-24T05:10:54Z] Khandoba: Gandhi: my experiments with a Glock
+[2026-02-24T05:12:14Z] Abhishek Vats: What happens in the group stays in the group please 🙈
+[2026-02-24T05:12:35Z] Khandoba: Yeah Hope to God
+[2026-02-24T05:13:40Z] Dr.Namrata Srinivasan: Good lord 🤣🤣🤣
+[2026-02-24T05:14:52Z] Abhishek Vats: Good hey ram !
+[2026-02-24T05:15:48Z] Dhruv: Are you able to add Jinnah on the other end of the gun?
+[2026-02-24T05:16:09Z] Khandoba: Let’s not cause riots today
+[2026-02-24T05:16:19Z] Pavan Pamidimarri: He does look very confused with the whole situation he is in.
+[2026-02-24T05:16:37Z] Abhishek Vats: My (gemini) photos are non communal
+[2026-02-24T05:17:35Z] Dhruv: I'm not talking communally
+[2026-02-24T05:17:50Z] Dhruv: Don't care about the community
+[2026-02-24T05:17:57Z] Dhruv: I just dislike the man
+[2026-02-24T05:18:58Z] Abhishek Vats: You can do that on your own 👍🏻
+[2026-02-24T05:19:15Z] Dhruv: Theek hai bhai chill
+[2026-02-24T05:19:19Z] Dhruv: It was a joke
+[2026-02-24T05:19:20Z] Dhruv: Chill
+[2026-02-24T05:20:24Z] Abhishek Vats: Fair and you should take charge of your own jokes 🙂
+[2026-02-24T05:20:52Z] Dhruv: I didn't mean anything bad Abhishek
+[2026-02-24T05:20:57Z] Dhruv: Plz
+[2026-02-24T05:39:10Z] Pavan Pamidimarri: Q.	What was Epstein offered a chance to buy? ‎image omitted
+[2026-02-24T05:40:39Z] Khandoba: Buildings in Gaza?
+[2026-02-24T05:40:46Z] Pavan Pamidimarri: not Gaza
+[2026-02-24T05:42:34Z] Nikhil Borra: Palestinian buildings in Jerusalem?
+[2026-02-24T05:42:45Z] Pavan Pamidimarri: not in Israel or Palestine
+[2026-02-24T05:42:54Z] Pavan Pamidimarri: much more important
+[2026-02-24T05:43:11Z] Pavan Pamidimarri: to the United States
+[2026-02-24T05:43:54Z] Nikhil Borra: NORAD?
+[2026-02-24T05:44:08Z] Srijan Naayak: US Government Buildings?
+[2026-02-24T05:44:13Z] Abhishek Vats: Pentagon
+[2026-02-24T05:44:33Z] Pavan Pamidimarri: Not exactly the Pentagon building, but DoD building in Arlington, VA
+[2026-02-24T05:44:39Z] Pavan Pamidimarri: https://www.aljazeera.com/news/2026/2/19/files-reveal-epstein-was-offered-chance-to-buy-us-pentagon-fbi-buildings
+[2026-02-24T05:58:35Z] Pavan Pamidimarri: are you running this soon?
+[2026-02-24T06:03:17Z] Pavan Pamidimarri: Q.	What was the gunman shot dead in Mar-a-Lago fixated on? ‎image omitted
+[2026-02-24T06:03:37Z] Abhishek S: Melania
+[2026-02-24T06:03:50Z] Pavan Pamidimarri: not the docubribe
+[2026-02-24T06:03:53Z] Pavan Pamidimarri: or the third lady
+[2026-02-24T06:04:01Z] Abhishek S: Ivanka
+[2026-02-24T06:04:09Z] Pavan Pamidimarri: not ivanka
+[2026-02-24T06:04:42Z] Pavan Pamidimarri: Connected to current events
+[2026-02-24T06:05:16Z] Abhishek S: Epstein?
+[2026-02-24T06:06:04Z] Pavan Pamidimarri: Correct, he was fixated on the Epstein situation and a government coverup that let Epstein’s friends get away with it.
+[2026-02-24T06:06:09Z] Pavan Pamidimarri: https://www.the-independent.com/news/world/americas/crime/austin-martin-mar-a-lago-suspect-b2925443.html#
+[2026-02-24T06:17:55Z] మాन$: So he wants the files out and searching for it in the golden bathrooms of maralago
+[2026-02-24T06:33:17Z] Khandoba: https://www.instagram.com/reel/DVIVAQeDSLN/?igsh=cm9vYmttOG9nZGZv
+[2026-02-24T06:34:21Z] Khandoba: This has the exact same energy as
+[2026-02-24T06:34:25Z] Khandoba: https://youtube.com/shorts/gp5a1XpJ2DE?si=TqExjQO_3bzmxo9t
+[2026-02-24T06:38:08Z] Suyash Singh: ________ has since decreased dramatically: in the 2001/2002 season, there were 803 _____; in the 2022/2023 season, there were 334. ↵ FITB
+[2026-02-24T06:38:45Z] Khandoba: I have no idea where to start
+[2026-02-24T06:38:53Z] Khandoba: Migrating flamingoes?
+[2026-02-24T06:39:09Z] Suyash Singh: Sorry. Bad framing.
+[2026-02-24T06:39:12Z] Suyash Singh: Think sports
+[2026-02-24T06:39:59Z] Ankit Choudhury: ice hockey teams in US?
+[2026-02-24T06:40:21Z] Ankit Choudhury: ice hockey rinks rather
+[2026-02-24T06:40:28Z] Suyash Singh: Nope. But the sport is correct.
+[2026-02-24T06:40:41Z] Abhishek Vats: Fights in ice hockey?
+[2026-02-24T06:40:44Z] Suyash Singh: Yes
+[2026-02-24T06:40:56Z] Suyash Singh: This is fights in a season.
+[2026-02-24T06:41:02Z] Khandoba: 🤣
+[2026-02-24T06:41:27Z] Khandoba: Mast funda
+[2026-02-24T06:41:57Z] Sidhesh K K: No wonder Canadians are swearing in other sports
+[2026-02-24T06:42:24Z] Sidhesh K K: Unable to vent out in ice hockey
+[2026-02-24T11:55:58Z] Smit D Mahajani: Q: Connect the following (non-exhaustive): ↵ King Edward VII ↵ John Adams ↵ Bidya Devi Bhandari ↵ Heirich Lübke ↵ S. Radhakrishnan
+[2026-02-24T11:56:24Z] Chinmay Mehta: Second presidents??
+[2026-02-24T11:56:32Z] Smit D Mahajani: Almost there
+[2026-02-24T11:56:41Z] Chinmay Mehta: Just going of Radhakrishnan and Vidya Devi
+[2026-02-24T11:57:00Z] Smit D Mahajani: General word bolo
+[2026-02-24T11:57:12Z] Chinmay Mehta: Vice president?
+[2026-02-24T11:57:17Z] Chinmay Mehta: Or head of state
+[2026-02-24T11:57:43Z] Smit D Mahajani: Countries? Not part of the Q but aise hi puchh raha hun
+[2026-02-24T11:58:18Z] Chinmay Mehta: Uk, us, Nepal, Germany, India
+[2026-02-24T11:58:32Z] Smit D Mahajani: Not UK. Baaki sab sahi hai
+[2026-02-24T11:58:43Z] Chinmay Mehta: Ruled India
+[2026-02-24T11:58:46Z] Chinmay Mehta: Empire
+[2026-02-24T11:58:47Z] Smit D Mahajani: No
+[2026-02-24T11:58:56Z] Chinmay Mehta: Hmm..
+[2026-02-24T11:59:00Z] Smit D Mahajani: I'm not talking about colonies
+[2026-02-24T11:59:22Z] Smit D Mahajani: I mean not in the traditional sense (that's a clue)
+[2026-02-24T11:59:22Z] Chinmay Mehta: Britain?
+[2026-02-24T11:59:33Z] Smit D Mahajani: No
+[2026-02-24T11:59:41Z] Chinmay Mehta: British dominion
+[2026-02-24T11:59:48Z] Smit D Mahajani: Right track
+[2026-02-24T12:00:17Z] Smit D Mahajani: Which one?
+[2026-02-24T12:01:12Z] Chinmay Mehta: Umm.. something to do with us?
+[2026-02-24T12:01:33Z] Smit D Mahajani: No. I'm talking about today's countries
+[2026-02-24T12:01:55Z] Chinmay Mehta: No idea..
+[2026-02-24T12:02:05Z] Smit D Mahajani: Australia
+[2026-02-24T12:02:21Z] Chinmay Mehta: Lurn!
+[2026-02-24T12:02:29Z] Chinmay Mehta: I had no clue, need to read up
+[2026-02-24T12:02:59Z] Smit D Mahajani: Victoria was Australia's first HoS after it became a country
+[2026-02-24T12:03:14Z] Smit D Mahajani: Then Edward VII
+[2026-02-24T13:47:47Z] Akshay: Just watched the full game which i couldnt thanks to ind sa, ekdum mazaaa aagya, mastt bajaya 51st state ka
+[2026-02-24T13:48:19Z] Akshay: Also good revenge for their brazen cheating in curling
+[2026-02-24T13:49:39Z] Sidhesh K K: Which one?
+[2026-02-24T13:50:10Z] Sidhesh K K: Was referring to the swearing post the curlingate
+[2026-02-24T13:50:30Z] Abhishek Vats: Ice hockey
+[2026-02-24T14:01:09Z] Akshay: Ice hockey olympic finals
+[2026-02-24T14:09:28Z] Sidhesh K K: Jaishankar called up Swedish counterpart.... ↵ Bola tha na.. Canada boht ungli karta hai!
+[2026-02-24T14:15:23Z] Sidhesh K K: Anytime I see a news or read up some thing these days, the thought process goes this: ↵ 1. How can I frame a question on this? ↵ 2. Can it be part of a set? Should I save it for gauntlet? ↵ 3. What if it eats into Paavas or someone's set? (Once bitten, twice shy) ↵ 4. Can I settle on a lame pun instead?
+[2026-02-24T14:17:17Z] pratik.s.chandarana: Yeh number 4 ko number 1 pe daalo aur question mark hatao uske aage sey Sid
+[2026-02-24T14:17:43Z] pratik.s.chandarana: Uske baad baaki 3 pe contemplate karo
+[2026-02-24T14:49:04Z] Dr.Namrata Srinivasan: Guys I have a set ↵ Can do in half an hour ↵ Themed
+[2026-02-24T14:58:45Z] Abhishek S: Someone else is doing a set in half an hour too
+[2026-02-24T15:01:04Z] Aditi Bapat: You mean our quiz?? (panicking in case I got the timing wrong again)
+[2026-02-24T15:02:12Z] Abhishek S: Main toh SLB ki movies dekhta bhi nahi 🙈
+[2026-02-24T15:08:20Z] Akshay: For a moment mein sochne laga ki why is schlumberger making movies lol
+[2026-02-24T16:20:01Z] మాन$: Ready of couplets fun?
+[2026-02-24T16:20:18Z] మాन$: I'm here with a new set under the sun
+[2026-02-24T16:22:12Z] Khandoba: Live Kviz going on
+[2026-02-24T16:22:22Z] మాन$: Oh ya. I forgot
+[2026-02-24T16:23:14Z] మాन$: Gone
+[2026-02-24T16:32:54Z] మాन$: Inspired by SLB. Arz karna chahata hoon
+[2026-02-24T16:33:03Z] Dr.Namrata Srinivasan: Loved the live quiz!! ↵ You guys were great! ↵ @⁨Aditi Bapat⁩ @⁨~Abhishek S⁩ @⁨~KD⁩
+[2026-02-24T16:33:48Z] KD: I knew only one answer which was Sal's direct 😅 so no chance at all!
+[2026-02-24T16:33:59Z] KD: But had fun!!! First of many hopefully!
+[2026-02-24T16:34:34Z] మాन$: You will never forget the first ‎<This message was edited>
+[2026-02-24T16:36:04Z] Dr.Namrata Srinivasan: You were such a trip🤣🤣
+[2026-02-24T16:36:24Z] మాन$: Obviously. He is KD
+[2026-02-24T16:36:26Z] Dr.Namrata Srinivasan: Related to much to all your answers @⁨~KD⁩
+[2026-02-24T16:36:27Z] KD: Yeh questions Sanjay khud answer karleta toh I would have been surprised 😂😂
+[2026-02-24T16:36:39Z] KD: I'm glad I was of some use!!
+[2026-02-24T16:37:31Z] Dr.Namrata Srinivasan: @⁨~Abhishek S⁩ I also had Aishwarya rai as my wallpaper for ages ↵ That beauty just transcends genders lol
+[2026-02-24T16:38:14Z] KD: And now i just listened to Silsila, and danced to dola re dola on the side again
+[2026-02-24T16:38:27Z] Dr.Namrata Srinivasan: Ded
+[2026-02-24T16:39:04Z] Khandoba: Important thing is that you will never forget it
+[2026-02-24T16:39:37Z] KD: Yes for sure!! Now I want to keep going , this felt too short even with all the loosing 😅
+[2026-02-24T16:39:43Z] మాन$: Which aish. South ka new bollywood. SLB waala ya kuch aur
+[2026-02-24T16:40:34Z] KD: What does this mean? I feel a bit old just asked 😝😅
+[2026-02-24T16:40:41Z] KD: Asking*
+[2026-02-24T16:40:56Z] మాन$: Its 150
+[2026-02-24T16:41:12Z] KD: Like 1.5?
+[2026-02-24T16:41:15Z] Khandoba: Dead, laughing
+[2026-02-24T16:42:01Z] KD: Ok ok, good that someone is!
+[2026-02-24T16:42:11Z] KD: Phirse LURN 😝
+[2026-02-24T16:42:39Z] మాन$: LURN ke liye can I churn a set?
+[2026-02-24T16:43:23Z] Dr.Namrata Srinivasan: LOL
+[2026-02-24T16:43:24Z] Dr.Namrata Srinivasan: go for it
+[2026-02-24T16:43:57Z] Khandoba: How I feel explaining this ‎GIF omitted
+[2026-02-24T16:44:09Z] మాन$: ###quiz start ↵ Inspired from SLB ‎<This message was edited>
+[2026-02-24T16:44:14Z] మాन$: 1. Village drums and monsoon fields, ↵ Empire’s chains on cricket yields.
+[2026-02-24T16:44:27Z] Khandoba: Lagaan
+[2026-02-24T16:45:29Z] Khandoba: Can’t think of anything else
+[2026-02-24T16:45:59Z] మాन$: Hint for all questions
+[2026-02-24T16:46:06Z] Sidhesh K K: Iqbal?
+[2026-02-24T16:46:27Z] Dr.Namrata Srinivasan: Im confused
+[2026-02-24T16:46:44Z] Khandoba: Welcome to the club
+[2026-02-24T16:46:46Z] KD: Samr
+[2026-02-24T16:46:49Z] KD: Same*
+[2026-02-24T16:46:56Z] Khandoba: The answers are alcohol names or something?
+[2026-02-24T16:46:57Z] Dr.Namrata Srinivasan: @⁨Abhishek Vats⁩ answer for the set ↵ Aishwarya in dholare
+[2026-02-24T16:47:00Z] మాन$: Director ka naam
+[2026-02-24T16:47:07Z] Khandoba: Ouh
+[2026-02-24T16:47:10Z] Khandoba: Gowarikar
+[2026-02-24T16:47:12Z] KD: Ashutosh
+[2026-02-24T16:47:13Z] Sidhesh K K: Gowadoke
+[2026-02-24T16:47:14Z] Abhishek Vats: Dola* re
+[2026-02-24T16:47:15Z] Dr.Namrata Srinivasan: Oh
+[2026-02-24T16:47:34Z] మాन$: Ashutosh gowarikar is correct
+[2026-02-24T16:47:44Z] Khandoba: How could be we possibly figure that out🤣
+[2026-02-24T16:47:53Z] Khandoba: If you don’t tell us
+[2026-02-24T16:47:53Z] Sidhesh K K: 2 peg maarke
+[2026-02-24T16:47:56Z] మాन$: 2. Frames that whisper rather than shout, ↵ Human silences mapped throughout.
+[2026-02-24T16:48:06Z] Khandoba: John krasinski?
+[2026-02-24T16:48:10Z] Dr.Namrata Srinivasan: SLB
+[2026-02-24T16:48:24Z] మాन$: Directors special me director tha
+[2026-02-24T16:48:32Z] మాन$: Indian
+[2026-02-24T16:48:42Z] Khandoba: Ouh
+[2026-02-24T16:49:00Z] Dr.Namrata Srinivasan: This is hard ↵ A director of a silent movie?
+[2026-02-24T16:49:07Z] Sidhesh K K: Satyajit Ray
+[2026-02-24T16:49:22Z] మాन$: Satyajit Ray is correct
+[2026-02-24T16:49:28Z] Abhishek Vats: Since it's directors now the answer changes to kanti shah k angoor 😂
+[2026-02-24T16:49:32Z] Khandoba: If you say so
+[2026-02-24T16:49:35Z] Dr.Namrata Srinivasan: LOL
+[2026-02-24T16:49:36Z] మాन$: 3. Ganglands bloom in coal-dust breath, ↵ Violence choreographed with death.
+[2026-02-24T16:49:48Z] Khandoba: Kashyap
+[2026-02-24T16:49:50Z] Sidhesh K K: Kashyap
+[2026-02-24T16:49:53Z] AntNishu: jha
+[2026-02-24T16:49:55Z] Khandoba: Anurag
+[2026-02-24T16:49:55Z] KD: Anurag
+[2026-02-24T16:50:05Z] మాन$: Anurag kashyap is correct
+[2026-02-24T16:50:22Z] మాन$: 4. Underworld neon, moral blur, ↵ Camera stalks the predator.
+[2026-02-24T16:50:35Z] KD: Karan johar
+[2026-02-24T16:50:37Z] KD: 🤣🤣🤣
+[2026-02-24T16:50:42Z] Abhishek Vats: Rgv
+[2026-02-24T16:50:54Z] KD: I had it typed, so had to send 😝
+[2026-02-24T16:50:57Z] మాन$: RGV is correct
+[2026-02-24T16:51:17Z] మాन$: 5. Myth and muscle, rage and rain, ↵ Epic scaled on rebel grain.
+[2026-02-24T16:51:24Z] Abhishek Vats: Rajamouli ‎<This message was edited>
+[2026-02-24T16:51:26Z] KD: Dangal
+[2026-02-24T16:51:26Z] Khandoba: SSR
+[2026-02-24T16:51:33Z] KD: Crap
+[2026-02-24T16:51:38Z] KD: Aamir?
+[2026-02-24T16:51:50Z] KD: Oh, this is RRR
+[2026-02-24T16:51:51Z] మాन$: Rajamouli is correct
+[2026-02-24T16:52:28Z] మాन$: 6. Desert dust and parallel cries, ↵ Politics seen through poet eyes.
+[2026-02-24T16:52:50Z] Abhishek Vats: Gulzar?
+[2026-02-24T16:53:23Z] pratik.s.chandarana: VB
+[2026-02-24T16:53:26Z] Khandoba: No idea whatsoever
+[2026-02-24T16:53:34Z] pratik.s.chandarana: Vishal Bharadwaj
+[2026-02-24T16:53:47Z] Abhishek Vats: Ye sahi lag raha hai
+[2026-02-24T16:54:36Z] AntNishu: sarfarosh movie director
+[2026-02-24T16:54:49Z] AntNishu: john?
+[2026-02-24T16:54:59Z] మాन$: Hint ‎image omitted
+[2026-02-24T16:55:10Z] Khandoba: Parallel lag raha kuchh
+[2026-02-24T16:55:53Z] Dr.Namrata Srinivasan: What the
+[2026-02-24T16:56:33Z] pratik.s.chandarana: In which case Lakshmikant Parallel
+[2026-02-24T16:56:39Z] Abhishek Vats: Vidhu Vinod Chopra?
+[2026-02-24T16:56:43Z] Abhishek Vats: Eklavya?
+[2026-02-24T16:57:22Z] మాन$: Director known as parallel cinema
+[2026-02-24T16:57:30Z] Khandoba: Ouh
+[2026-02-24T16:57:44Z] Khandoba: Are wo
+[2026-02-24T16:57:46Z] AntNishu: rizvi?
+[2026-02-24T16:57:57Z] Khandoba: Mirch masala
+[2026-02-24T16:58:18Z] Abhishek Vats: Benegal?
+[2026-02-24T16:58:29Z] మాन$: Shyam benegal is correct
+[2026-02-24T16:58:35Z] Khandoba: Naam hi yaad nahi aa raha tha
+[2026-02-24T16:58:50Z] మాन$: 7. Urban lovers, fractured air, ↵ Delhi winters linger there.
+[2026-02-24T16:59:11Z] Shubham: Anurag basu?
+[2026-02-24T16:59:15Z] pratik.s.chandarana: Vanga bway
+[2026-02-24T16:59:22Z] మాन$: NOTA
+[2026-02-24T16:59:32Z] AntNishu: are what was the name of the movie?
+[2026-02-24T17:00:04Z] Abhishek Vats: Gilori khaya karo gulfam ‎image omitted
+[2026-02-24T17:00:31Z] Shubham: Amazing!
+[2026-02-24T17:00:50Z] Abhishek Vats: Rakesh om prakash mehra
+[2026-02-24T17:00:56Z] Abhishek Vats: Dilli 6
+[2026-02-24T17:01:13Z] Dr.Namrata Srinivasan: Maniratnam
+[2026-02-24T17:01:14Z] Dr.Namrata Srinivasan: ?
+[2026-02-24T17:01:20Z] Shubhankar: @⁨Aditi Bapat⁩ @⁨~Abhishek S⁩ @⁨~KD⁩ superb quizzing really loved the live! 🎉🎉🎉🫡
+[2026-02-24T17:01:31Z] Abhishek Vats: Imtiaz Ali?
+[2026-02-24T17:01:35Z] Abhishek Vats: Rockstar?
+[2026-02-24T17:01:50Z] మాन$: Imtiyaz ali is correct
+[2026-02-24T17:02:21Z] మాन$: 8. Swirling cameras, ancestral dread, ↵ _____ nights in crimson spread.
+[2026-02-24T17:02:35Z] Shubhankar: Achha hua bol diya. Main toh ye bolne wala tha ↵ “Tadpaye re tarsaye re, saari raat jagaye re. ↵ Pyaar tera dilli ki sardi” 😂😂😂
+[2026-02-24T17:02:47Z] pratik.s.chandarana: Tandoori
+[2026-02-24T17:03:58Z] pratik.s.chandarana: Priyadarshan?
+[2026-02-24T17:04:18Z] pratik.s.chandarana: Bhool Bhulaiya
+[2026-02-24T17:04:20Z] Shubhankar: Bhool Bhulayia
+[2026-02-24T17:05:12Z] మాन$: 🏁means close to answer. And it's director's only
+[2026-02-24T17:06:00Z] మాन$: Hint. Blank is Tamil
+[2026-02-24T17:06:57Z] మాन$: 8. Refresh ↵ Kashmir’s flame in saffron air, ↵ Terror and tenderness woven with care.
+[2026-02-24T17:07:40Z] Sidhesh K K: Vvc
+[2026-02-24T17:08:30Z] KD: Shankar?
+[2026-02-24T17:08:46Z] KD: Ks ravikumar
+[2026-02-24T17:08:58Z] pratik.s.chandarana: Mani Ratanam
+[2026-02-24T17:09:08Z] KD: Damn, that was my next guess
+[2026-02-24T17:09:11Z] pratik.s.chandarana: Faaaaaaaahhhhhhhh
+[2026-02-24T17:09:13Z] మాन$: Roja movie
+[2026-02-24T17:09:24Z] మాन$: Mani ratnam is correct
+[2026-02-24T17:09:54Z] మాन$: 9. Migrants drift through city haze, ↵ Lonely rooms and yearning gaze.
+[2026-02-24T17:10:07Z] KD: Vivek
+[2026-02-24T17:10:20Z] KD: Agnihotru
+[2026-02-24T17:10:22Z] KD: Tri*
+[2026-02-24T17:10:34Z] KD: ?
+[2026-02-24T17:10:54Z] pratik.s.chandarana: SLB?
+[2026-02-24T17:10:56Z] మాन$: Think NRI
+[2026-02-24T17:10:59Z] KD: That's my nickname for him
+[2026-02-24T17:11:14Z] KD: Mamdani ki mummy
+[2026-02-24T17:11:17Z] pratik.s.chandarana: Yes yes thinking wait 😂 ‎<This message was edited>
+[2026-02-24T17:11:18Z] Nikhil Borra: Kukunoor?
+[2026-02-24T17:11:34Z] Apratim: Gowariker?
+[2026-02-24T17:11:40Z] మాन$: Done
+[2026-02-24T17:11:40Z] Nikhil Borra: Mira Nair?
+[2026-02-24T17:11:47Z] KD: Haan, vahi
+[2026-02-24T17:11:57Z] KD: Forgot her name 😂😂
+[2026-02-24T17:12:07Z] మాन$: 10. City of dreams in sepia ache, ↵ Satire and sorrow in one long take
+[2026-02-24T17:12:25Z] మాन$: Mira Nair is correct
+[2026-02-24T17:12:38Z] KD: So I was right😝
+[2026-02-24T17:13:27Z] KD: Isn't this once upon a time in Mumbai? Or namesake again?
+[2026-02-24T17:13:58Z] pratik.s.chandarana: Life in a metro kisne kari hai direct?
+[2026-02-24T17:14:19Z] Smit D Mahajani: Blcompanu?
+[2026-02-24T17:14:20Z] Smit D Mahajani: Company?*
+[2026-02-24T17:14:31Z] pratik.s.chandarana: RGV
+[2026-02-24T17:14:40Z] Smit D Mahajani: Guess kya karna hai?
+[2026-02-24T17:14:45Z] KD: Director
+[2026-02-24T17:14:45Z] pratik.s.chandarana: Director
+[2026-02-24T17:14:47Z] Smit D Mahajani: Oh
+[2026-02-24T17:15:01Z] pratik.s.chandarana: Satire nahi lekin
+[2026-02-24T17:15:03Z] KD: Indian hi hai ab tak sab
+[2026-02-24T17:15:03Z] మాन$: NOTA
+[2026-02-24T17:15:03Z] pratik.s.chandarana: Company isn’t satire I mean ‎<This message was edited>
+[2026-02-24T17:15:22Z] Smit D Mahajani: Mrs nair?
+[2026-02-24T17:15:24Z] మాन$: 10. Redux ↵ A hug becomes a healing creed, ↵ Laughter plants reform as seed.
+[2026-02-24T17:15:25Z] Smit D Mahajani: Mira Nair?
+[2026-02-24T17:15:36Z] Smit D Mahajani: Munnabhai?
+[2026-02-24T17:15:38Z] Smit D Mahajani: Hirani
+[2026-02-24T17:15:38Z] KD: Arret
+[2026-02-24T17:15:39Z] Smit D Mahajani: ?
+[2026-02-24T17:15:41Z] pratik.s.chandarana: Arey
+[2026-02-24T17:15:43Z] pratik.s.chandarana: Raju
+[2026-02-24T17:15:44Z] KD: Hirani
+[2026-02-24T17:15:52Z] KD: Too fast!
+[2026-02-24T17:16:02Z] మాन$: Raju hirani is correct
+[2026-02-24T17:16:29Z] మాन$: 11. Final ↵ Drums of dissent in campus cry, ↵ Rebels question how heroes die.
+[2026-02-24T17:16:38Z] Smit D Mahajani: Rom
+[2026-02-24T17:16:40Z] KD: Aamir
+[2026-02-24T17:16:40Z] Smit D Mahajani: Mehra
+[2026-02-24T17:16:43Z] pratik.s.chandarana: Raju again
+[2026-02-24T17:16:50Z] KD: Rang
+[2026-02-24T17:16:52Z] Smit D Mahajani: RDB
+[2026-02-24T17:17:03Z] మాन$: Rakesh om prakash mehra is correct
+[2026-02-24T17:17:19Z] మాन$: Quiz ends ###
+[2026-02-24T17:17:31Z] pratik.s.chandarana: Thanks manas - good one
+[2026-02-24T17:17:34Z] Smit D Mahajani: Mast quiz @⁨~మాन$⁩!
+[2026-02-24T17:17:37Z] Dr.Namrata Srinivasan: Loved the format! @⁨~మాन$⁩
+[2026-02-24T17:17:53Z] KD: Thank you!! And great questions once again Manas!
+[2026-02-24T17:18:19Z] KD: He first thought this is my answer, so wrong emojied it😂
+[2026-02-24T17:18:32Z] Dr.Namrata Srinivasan: Would yall be up for a themed set?
+[2026-02-24T17:18:42Z] Smit D Mahajani: What's the theme?
+[2026-02-24T17:19:14Z] Dr.Namrata Srinivasan: A very random theme and all the answers were a lurn for me but fun ↵ It’s musical instruments
+[2026-02-24T17:19:39Z] Smit D Mahajani: Cool. I'm in
+[2026-02-24T17:20:05Z] Dr.Namrata Srinivasan: Ok lesson
+[2026-02-24T17:20:10Z] Dr.Namrata Srinivasan: Lesgo*
+[2026-02-24T17:20:37Z] pratik.s.chandarana: I will try but don’t promise a good performance
+[2026-02-24T17:20:59Z] Smit D Mahajani: That's me in every quiz here so ye quiz kis khet ki muli hai
+[2026-02-24T17:21:29Z] Dr.Namrata Srinivasan: Q1.The X Y is a misleading name for this instrument, as although it is similar in shape to a classical Y, it is actually a type of bass horn. It is also not X, having been invented in France and earning its misnomer from being used in the 18th century in military bands in X. It was developed from the design of the serpent, but the X Y’s vertical length and straight pipe made it easier to play while marching—or even riding horses. It has six finger holes, three keys and a bell at the end that is uniquely painted to look like a dragon. ↵ ID X Y
+[2026-02-24T17:22:05Z] Smit D Mahajani: Naagin ki been
+[2026-02-24T17:22:14Z] Dr.Namrata Srinivasan: LOL
+[2026-02-24T17:22:25Z] Smit D Mahajani: Hint?
+[2026-02-24T17:22:29Z] Dr.Namrata Srinivasan: I think you can try and attempt X
+[2026-02-24T17:22:35Z] Dr.Namrata Srinivasan: X is a place
+[2026-02-24T17:22:41Z] Tapish: Russian Bassoon
+[2026-02-24T17:22:43Z] Tapish: ??
+[2026-02-24T17:22:46Z] Smit D Mahajani: Saxony?
+[2026-02-24T17:22:48Z] Dr.Namrata Srinivasan: Next level
+[2026-02-24T17:22:52Z] Dr.Namrata Srinivasan: Tapish 10
+[2026-02-24T17:23:31Z] Dr.Namrata Srinivasan: Next
+[2026-02-24T17:23:48Z] Smit D Mahajani: Naagin ki been joke answer hi de paya. Kya jhooth ‎<This message was edited>
+[2026-02-24T17:24:09Z] Dr.Namrata Srinivasan: Q2.This majestic instrument, associated with the Hindu deity Shiva, features a distinctive design with two large gourds attached to a bamboo stem and twenty-four frets. The X produces deeply meditative tones that once filled the halls of Mughal courts and ashrams. Today, fewer than twenty maestros worldwide can play this ancient instrument. ↵ ID X
+[2026-02-24T17:24:26Z] pratik.s.chandarana: Shankh ko kya bolte
+[2026-02-24T17:24:29Z] pratik.s.chandarana: English mein
+[2026-02-24T17:24:31Z] Smit D Mahajani: Conch?
+[2026-02-24T17:24:46Z] Dr.Namrata Srinivasan: Read description of the instrument
+[2026-02-24T17:24:54Z] Dr.Namrata Srinivasan: Not a wind instrument
+[2026-02-24T17:24:57Z] Smit D Mahajani: Santoor?
+[2026-02-24T17:24:59Z] pratik.s.chandarana: Damroo
+[2026-02-24T17:25:04Z] Tapish: Veena?
+[2026-02-24T17:25:10Z] pratik.s.chandarana: Ah yes
+[2026-02-24T17:25:11Z] Dr.Namrata Srinivasan: 5 for that
+[2026-02-24T17:25:14Z] Smit D Mahajani: Oh nice
+[2026-02-24T17:25:15Z] Dr.Namrata Srinivasan: Can you improve your answer
+[2026-02-24T17:25:22Z] Smit D Mahajani: Shiv veena
+[2026-02-24T17:25:29Z] Tapish: Rudra Veena?
+[2026-02-24T17:25:38Z] Dr.Namrata Srinivasan: Tapish 20
+[2026-02-24T17:25:57Z] Smit D Mahajani: Bolo shivji ke naam mein bhi galat answer de diya. Aur @⁨~pratik.s.chandarana⁩ ko lagta hai main jhooth bol raha hun ‎<This message was edited>
+[2026-02-24T17:26:48Z] Dr.Namrata Srinivasan: Q3.The X is a miniature analog synthesizer played with a stylus. Invented in 1967 by Brian Jarvis. ↵ That taking-off-into-space keyboard sound on David Bowie’s “Space Oddity” wasn’t something keyboard wizard Rick Wakeman came up with. It was Bowie himself on the X, a weird little music instrument that made a primitive synth-like sound. ↵ ID X
+[2026-02-24T17:26:53Z] Smit D Mahajani: Keyboard?
+[2026-02-24T17:26:57Z] Smit D Mahajani: Synthesizer?
+[2026-02-24T17:27:18Z] Smit D Mahajani: Oh keyboard is already in the Q ‎<This message was edited>
+[2026-02-24T17:27:52Z] Smit D Mahajani: Synthesizer is also in the Q. Waah Smit ‎<This message was edited>
+[2026-02-24T17:27:55Z] Smit D Mahajani: 👏🏻👏🏻
+[2026-02-24T17:28:25Z] Dr.Namrata Srinivasan: There’s a clue in the question
+[2026-02-24T17:28:36Z] Smit D Mahajani: Space guitarm
+[2026-02-24T17:28:38Z] Smit D Mahajani: ?*
+[2026-02-24T17:28:38Z] Apratim: Styloboard 🤣
+[2026-02-24T17:28:48Z] pratik.s.chandarana: Main maan gaya bro - itna convince mat kar 😂
+[2026-02-24T17:28:48Z] Dr.Namrata Srinivasan: I’ll give you 5🤣
+[2026-02-24T17:28:53Z] Dr.Namrata Srinivasan: Can you improve your answer?
+[2026-02-24T17:29:04Z] Apratim: What how
+[2026-02-24T17:29:05Z] Tapish: Stylopad?
+[2026-02-24T17:29:05Z] Smit D Mahajani: Styrofoam. Give me 10 now
+[2026-02-24T17:29:16Z] Dr.Namrata Srinivasan: Almost there
+[2026-02-24T17:29:16Z] pratik.s.chandarana: Stylogram
+[2026-02-24T17:29:19Z] Apratim: Stylosizer
+[2026-02-24T17:29:21Z] Dr.Namrata Srinivasan: Keep going
+[2026-02-24T17:29:23Z] pratik.s.chandarana: Stylokilogram
+[2026-02-24T17:29:28Z] Dr.Namrata Srinivasan: 🤣🤣
+[2026-02-24T17:29:35Z] Smit D Mahajani: Wo Instagram hota hai
+[2026-02-24T17:29:39Z] Dr.Namrata Srinivasan: Xylo____
+[2026-02-24T17:29:44Z] Apratim: Stylophone
+[2026-02-24T17:29:48Z] Apratim: Fairs
+[2026-02-24T17:29:49Z] Tapish: Stylophone
+[2026-02-24T17:29:49Z] Smit D Mahajani: Bina pura Q padhe FFF kar diya 😂 ‎<This message was edited>
+[2026-02-24T17:29:51Z] Dr.Namrata Srinivasan: 10 to you
+[2026-02-24T17:30:02Z] Dr.Namrata Srinivasan: Tapish 20 apratim 10
+[2026-02-24T17:30:09Z] Dr.Namrata Srinivasan: Next level🤣🤣🤣
+[2026-02-24T17:30:36Z] Smit D Mahajani: Very stylish
+[2026-02-24T17:30:52Z] pratik.s.chandarana: Never known this! Hard lurn 🙏🏻
+[2026-02-24T17:30:58Z] Smit D Mahajani: Same
+[2026-02-24T17:31:04Z] Dr.Namrata Srinivasan: Q4.X can be categorized under lamellophones, which is a sub-category of plucked idiophones. The instrument consists of a metal ring in the shape of a horseshoe with two parallel forks that form the frame, and a metal tongue in the middle, between the forks, fixed to the ring at one end and free to vibrate at the other. ↵ Movement of the player's tongue while making nasal sounds is used to change the pitch. ↵ ID X,an Indian instrument ‎<This message was edited>
+[2026-02-24T17:31:48Z] Sidhesh K K: Murchang?
+[2026-02-24T17:32:02Z] Smit D Mahajani: Naam bhi nahi sune ye
+[2026-02-24T17:32:05Z] Dr.Namrata Srinivasan: 10 to Sid!
+[2026-02-24T17:32:16Z] pratik.s.chandarana: Sam to Sam
+[2026-02-24T17:32:17Z] Dr.Namrata Srinivasan: Tapish 20 apratim 10 Sid 10
+[2026-02-24T17:32:28Z] Tapish: Rajasthani?
+[2026-02-24T17:32:32Z] Apratim: This looks dangerous
+[2026-02-24T17:32:37Z] Dr.Namrata Srinivasan: Pretty popular instrument in Carnatic music concerts and stuff
+[2026-02-24T17:32:49Z] Smit D Mahajani: Oh okay
+[2026-02-24T17:32:58Z] Sidhesh K K: Also called jaw harp iirc
+[2026-02-24T17:33:11Z] Smit D Mahajani: Jaw harp dil ka idhar ho raha hai...
+[2026-02-24T17:33:16Z] Sidhesh K K: Popular there too
+[2026-02-24T17:33:20Z] Dr.Namrata Srinivasan: Or Jew’s harp ↵ Idk how that variant came about
+[2026-02-24T17:33:30Z] Dr.Namrata Srinivasan: Lots of variants around the globe for this one
+[2026-02-24T17:34:31Z] Dr.Namrata Srinivasan: Q5.XY was invented in 1928 by the French cellist Maurice Y. ↵ Y had been a radio operator during World War I, and developed the XY in an attempt to replicate the accidental overlaps of tones between military radio oscillators. ↵ It is played with a lateral-vibrato keyboard or by moving a ring tied to a wire, creating "wavering" sounds. ↵ Can be heard on the musical score of Lawrence of Arabia and ghostbusters. ↵ ID XY ‎<This message was edited>
+[2026-02-24T17:36:29Z] pratik.s.chandarana: Sorry no clue at all
+[2026-02-24T17:36:34Z] Smit D Mahajani: Same
+[2026-02-24T17:36:58Z] Apratim: Is there a hint in the question again? Like the stylus? ‎<This message was edited>
+[2026-02-24T17:37:09Z] Dr.Namrata Srinivasan: No this is actually quite random
+[2026-02-24T17:37:25Z] Tapish: Maurice Guitarro
+[2026-02-24T17:37:35Z] Smit D Mahajani: That Namrata toning it down for us. Har baar nahi karegi wo
+[2026-02-24T17:37:45Z] Tapish: Maurice Violini
+[2026-02-24T17:37:48Z] Dr.Namrata Srinivasan: This is actually random AF
+[2026-02-24T17:37:50Z] Dr.Namrata Srinivasan: LOL
+[2026-02-24T17:38:08Z] Pavan Pamidimarri: Martinot or something like that?
+[2026-02-24T17:38:09Z] pratik.s.chandarana: Italian nahi hai woh 😂
+[2026-02-24T17:38:15Z] Smit D Mahajani: Aa gaye Pavan ji
+[2026-02-24T17:38:16Z] Pavan Pamidimarri: Is y?
+[2026-02-24T17:38:18Z] Dr.Namrata Srinivasan: Ondes Martenot
+[2026-02-24T17:38:23Z] Dr.Namrata Srinivasan: Omg ↵ Yes
+[2026-02-24T17:38:28Z] pratik.s.chandarana: Come save us Pavan
+[2026-02-24T17:38:29Z] Dr.Namrata Srinivasan: I’ll give yoh 10
+[2026-02-24T17:38:41Z] Smit D Mahajani: Haan jaise ki he'll give his pts
+[2026-02-24T17:39:02Z] Dr.Namrata Srinivasan: Tapish 20 apratim 10 Sid 10 pavan 10
+[2026-02-24T17:39:14Z] Apratim: Ondes I have nothing to say
+[2026-02-24T17:39:25Z] pratik.s.chandarana: Nahi lekin Namrata ka effort mere joke answers pe waste nahin hoga ‎<This message was edited>
+[2026-02-24T17:39:32Z] Smit D Mahajani: This was the QM venting out after seeing someone who can actually answer her Qs, after seeing the kind of answers so far
+[2026-02-24T17:39:54Z] Dr.Namrata Srinivasan: I also knew none of these,so…🤣🤣
+[2026-02-24T17:40:13Z] Smit D Mahajani: You're the QM. You can claim to know it all idhar
+[2026-02-24T17:41:46Z] Dr.Namrata Srinivasan: Q5.X is a pear-shaped fiddle having strings that are sounded not by a bow but by the rosined rim of a wooden wheel turned by a handle at the instrument’s end. ↵ Notes are made on the one or two melody strings by stopping them with short wooden keys pressed by the left-hand fingers. ↵ The X was first mentioned in the 10th century as the organistrum. It was then a church instrument played by two men, one fingering the keys, one turning the wheel. ↵ Led Zeppelin’s “Gallows Pole” at Page and Plant’s revival for their No Quarter album and tour, saw Page’s playing of  X. ↵ ID X
+[2026-02-24T17:42:32Z] Smit D Mahajani: Harpsichord? ‎<This message was edited>
+[2026-02-24T17:42:44Z] Dr.Namrata Srinivasan: Good guess ↵ But nope
+[2026-02-24T17:42:52Z] Smit D Mahajani: Tukka tha aur kuch nahi
+[2026-02-24T17:42:54Z] Dr.Namrata Srinivasan: It’s kind of an onomatopoeia ↵ That’s the clue
+[2026-02-24T17:43:03Z] Apratim: If I've heard of it then it must not be the answer
+[2026-02-24T17:43:23Z] Smit D Mahajani: Ye hence why I called it tukka as well 😂😂
+[2026-02-24T17:43:23Z] pratik.s.chandarana: Harp k aagey bhi naam hai iss cheez ka?!
+[2026-02-24T17:43:24Z] Pavan Pamidimarri: Is this the hurdy first?
+[2026-02-24T17:43:29Z] Dr.Namrata Srinivasan: Yes!
+[2026-02-24T17:43:30Z] Pavan Pamidimarri: Hurdy gurdy
+[2026-02-24T17:43:33Z] Dr.Namrata Srinivasan: Man you crazy 🤣
+[2026-02-24T17:43:37Z] Dr.Namrata Srinivasan: 10 to pavan!
+[2026-02-24T17:43:57Z] Dr.Namrata Srinivasan: Hurdy Gurdy ‎image omitted
+[2026-02-24T17:44:02Z] Pavan Pamidimarri: Mea culpa
+[2026-02-24T17:44:10Z] Dr.Namrata Srinivasan: Tapish 20 apratim 10 Sid 10 pavan 20
+[2026-02-24T17:44:10Z] pratik.s.chandarana: Pavan makes random quizzing sounds that also gets him points 👏🏽
+[2026-02-24T17:44:23Z] Dr.Namrata Srinivasan: Ahahahah
+[2026-02-24T17:44:55Z] Smit D Mahajani: Ministry of external affairs kahaan se aa gayi isme ‎<This message was edited>
+[2026-02-24T17:45:42Z] Dr.Namrata Srinivasan: Q7.Built by master luthier Linda Manzer, this X Y was made specifically for Pat Metheny. It was inspired by none other than X himself,one of the most iconic artists of the 20th century. The harp guitar has 42 strings, 4 necks, and 2 sound holes.
+[2026-02-24T17:45:55Z] Smit D Mahajani: Hendrix?
+[2026-02-24T17:46:14Z] Smit D Mahajani: Marley?
+[2026-02-24T17:46:25Z] Smit D Mahajani: I vaguely remember reading about this
+[2026-02-24T17:46:25Z] Dr.Namrata Srinivasan: Think painter
+[2026-02-24T17:46:29Z] Smit D Mahajani: Picasso
+[2026-02-24T17:46:30Z] Smit D Mahajani: ?
+[2026-02-24T17:46:36Z] Dr.Namrata Srinivasan: 5
+[2026-02-24T17:46:43Z] Smit D Mahajani: Dushyant
+[2026-02-24T17:46:53Z] pratik.s.chandarana: So not Majnubhai then
+[2026-02-24T17:47:02Z] Dr.Namrata Srinivasan: I’ll give this to you ↵ It’s the pikasso guitar
+[2026-02-24T17:47:18Z] Smit D Mahajani: 2-3 painters ka naam aata hai, usme se 1 20th century ka hai. Classic eliminate chamber
+[2026-02-24T17:47:20Z] Pavan Pamidimarri: Y is guitar?
+[2026-02-24T17:47:35Z] Dr.Namrata Srinivasan: Yeah I just saw that I had mentioned guitar already 🤣🤣
+[2026-02-24T17:47:51Z] Dr.Namrata Srinivasan: Tapish 20 apratim 10 Sid 10 pavan 20 smit 10
+[2026-02-24T17:48:22Z] Smit D Mahajani: Isme you were like "iss chutiye ko specific artistic profession bata deti hu warna kuch bhi bakta rahega ye" ‎<This message was edited>
+[2026-02-24T17:48:35Z] pratik.s.chandarana: It’s okay - Hurdy Gurdy mein ho jata hai 🙈
+[2026-02-24T17:49:10Z] Dr.Namrata Srinivasan: Q8.The term X was conceived by Dr. Barry Gehm, of Lyon College, on June 19, 2007, in a conversation with his friend Bill Higgins. ↵ It is a variety of a solid state Y coil that has been modified to produce musical tones by modulating its spark output. ↵ ID XY
+[2026-02-24T17:49:20Z] Dr.Namrata Srinivasan: EY
+[2026-02-24T17:49:40Z] Smit D Mahajani: Mosquito coil
+[2026-02-24T17:49:52Z] Apratim: Frozen Tesla ?
+[2026-02-24T17:50:03Z] Dr.Namrata Srinivasan: I’ll give you Tesla for Y
+[2026-02-24T17:50:05Z] pratik.s.chandarana: Copper ?
+[2026-02-24T17:50:11Z] Smit D Mahajani: Aluminium
+[2026-02-24T17:50:18Z] Dr.Namrata Srinivasan: Y is Tesla
+[2026-02-24T17:50:22Z] Dr.Namrata Srinivasan: Now guess for XP
+[2026-02-24T17:50:37Z] Dr.Namrata Srinivasan: It’s a singing Tesla coil basically ↵ Aka
+[2026-02-24T17:50:38Z] Smit D Mahajani: We don't know why. You're the QM, you should know ‎<This message was edited>
+[2026-02-24T17:50:40Z] Dr.Namrata Srinivasan: X
+[2026-02-24T17:51:02Z] Pavan Pamidimarri: is the name guessable?
+[2026-02-24T17:51:04Z] pratik.s.chandarana: Nylon?
+[2026-02-24T17:51:13Z] Dr.Namrata Srinivasan: Very
+[2026-02-24T17:51:16Z] Dr.Namrata Srinivasan: Actually
+[2026-02-24T17:51:23Z] Smit D Mahajani: Yeah like hurdy gurdy
+[2026-02-24T17:51:29Z] Dr.Namrata Srinivasan: LOL
+[2026-02-24T17:51:36Z] Smit D Mahajani: Teslasito?
+[2026-02-24T17:51:42Z] Dr.Namrata Srinivasan: LOLLLL
+[2026-02-24T17:51:47Z] Pavan Pamidimarri: is it connected thunderbolt?
+[2026-02-24T17:51:55Z] Pavan Pamidimarri: like thoraphone or something?
+[2026-02-24T17:52:07Z] Dr.Namrata Srinivasan: so close ↵ In fact I’ll give it to you
+[2026-02-24T17:52:14Z] Pavan Pamidimarri: zeus/
+[2026-02-24T17:52:19Z] Dr.Namrata Srinivasan: It’s zeusaphone aka thoramin
+[2026-02-24T17:52:22Z] pratik.s.chandarana: It isn’t mercury by any chance is it?
+[2026-02-24T17:52:36Z] Smit D Mahajani: Koi chance nahi hai bhai
+[2026-02-24T17:52:54Z] Apratim: Zeusaphone Tesla is XY ?
+[2026-02-24T17:52:59Z] Smit D Mahajani: How many Qs more @⁨~Dr.Namrata Srinivasan ⁩? ‎<This message was edited>
+[2026-02-24T17:53:17Z] Dr.Namrata Srinivasan: I meant X and y separately
+[2026-02-24T17:53:20Z] Dr.Namrata Srinivasan: 2 more
+[2026-02-24T17:53:26Z] Kartikey Pradhan: Prestige
+[2026-02-24T17:53:42Z] Dr.Namrata Srinivasan: Tapish 20 apratim 15 Sid 10 pavan 25 smit 10
+[2026-02-24T17:53:42Z] pratik.s.chandarana: Insaan ka kartavya hota hai koshish karna
+[2026-02-24T17:55:02Z] Dr.Namrata Srinivasan: Q9.The instrument's controlling section usually consists of two metal antennas that function not as radio antennas but rather as position sensors. ↵ Each antenna forms one half of a capacitor with each of the player’s hands as the other half of the capacitor. These antennas capacitively sense the relative position of the hands and control oscillators for frequency with one hand, and amplitude (volume) with the other.
+[2026-02-24T17:55:31Z] Sidhesh K K: Theremin
+[2026-02-24T17:55:38Z] Dr.Namrata Srinivasan: 10 to Sid!
+[2026-02-24T17:55:48Z] Dr.Namrata Srinivasan: Tapish 20 apratim 15 Sid 20 pavan 25 smit 10
+[2026-02-24T17:56:11Z] Apratim: Theremin main yu kaise Kiya ...
+[2026-02-24T17:56:14Z] Smit D Mahajani: Theremin there ain't no desire
+[2026-02-24T17:56:15Z] Dr.Namrata Srinivasan: Theremin ‎image omitted
+[2026-02-24T17:56:33Z] Dr.Namrata Srinivasan: LOL
+[2026-02-24T17:56:53Z] Dr.Namrata Srinivasan: Last Q,releasing you from the torment🤣
+[2026-02-24T17:57:00Z] pratik.s.chandarana: Main kabse Santoor type karke baitha hu 😔
+[2026-02-24T17:57:20Z] Pavan Pamidimarri: these are fantastic questions, even though the answers are not familiar
+[2026-02-24T17:57:28Z] Pavan Pamidimarri: the Rudra Veena question is just so so good
+[2026-02-24T17:57:31Z] Sidhesh K K: Subah ghaslena 😜
+[2026-02-24T17:57:36Z] Smit D Mahajani: Uska Q will be: which musical instrument is actually older than you think?
+[2026-02-24T17:57:40Z] Dr.Namrata Srinivasan: Q10.X is believed to have originated in Sri Lanka during the time of the Hela civilization. ↵ The instrument is made up of a bowl-shaped resonator fashioned from a cut coconut shell that is covered with goat hide. A long bamboo body, the Dandi, is attached to the bowl. The principal strings are made of steel and horsehair. ↵ Legend has it that, after the war ended, Hanuman picked up the X  and brought it to North India. The musical instrument enjoyed patronage from kingdoms in Rajasthan and Gujarat and is believed to have been the first instrument that the princes of these western states learned.
+[2026-02-24T17:58:02Z] Pavan Pamidimarri: tambura?
+[2026-02-24T17:58:02Z] Smit D Mahajani: Sarod
+[2026-02-24T17:58:03Z] Smit D Mahajani: ? ‎<This message was edited>
+[2026-02-24T17:58:09Z] pratik.s.chandarana: Jhonsa type kiya hai agar woh ghas liya toh matter ho jayega pagley 😂
+[2026-02-24T17:58:11Z] Sidhesh K K: Ravanhatta
+[2026-02-24T17:58:18Z] Dr.Namrata Srinivasan: Some clues are in the q ↵ This one is deducible
+[2026-02-24T17:58:19Z] Smit D Mahajani: Iska naam suna hai
+[2026-02-24T17:58:24Z] Dr.Namrata Srinivasan: 10 to Sid!
+[2026-02-24T17:58:29Z] Smit D Mahajani: Conch?
+[2026-02-24T17:58:30Z] Pavan Pamidimarri: great crack Sid!
+[2026-02-24T17:58:37Z] Smit D Mahajani: Yeah mast crack
+[2026-02-24T17:58:50Z] Dr.Namrata Srinivasan: Tapish 20 apratim 15 Sid 30 pavan 25 smit 10
+[2026-02-24T17:58:54Z] Dr.Namrata Srinivasan: Sid wins!
+[2026-02-24T17:58:59Z] Dr.Namrata Srinivasan: Pavan what is this behaviour
+[2026-02-24T17:59:21Z] Smit D Mahajani: Mast Qs @⁨~Dr.Namrata Srinivasan ⁩! ‎<This message was edited>
+[2026-02-24T18:00:14Z] Pavan Pamidimarri: great set @⁨~Dr.Namrata Srinivasan ⁩, glad I caught a good chunk of it live
+[2026-02-24T18:00:30Z] pratik.s.chandarana: Too good Namrata; what efforts you be putting in making questions - only lurn for me but fun questions…
+[2026-02-24T18:00:33Z] Smit D Mahajani: Aadhe se aake he's 2nd by just 5 pts. Aur kya chahiye
+[2026-02-24T18:00:43Z] Dr.Namrata Srinivasan: Only lurn for me also 🤣🤣
+[2026-02-24T18:00:44Z] Smit D Mahajani: Agreed
+[2026-02-24T18:01:01Z] Dr.Namrata Srinivasan: I ONLY LURN HERE
+[2026-02-24T18:01:10Z] Dr.Namrata Srinivasan: Whether I’m QM or not
+[2026-02-24T18:01:17Z] Dr.Namrata Srinivasan: Because I truly don’t know anything🤣🤣
+[2026-02-24T18:01:58Z] Pavan Pamidimarri: I have a feeling that you remember more than most QMs here because you write down the key concept first and then type a question out of it.
+[2026-02-24T18:02:00Z] Smit D Mahajani: Arre Jon beta, tum idhar ‎<This message was edited>
+[2026-02-24T18:02:25Z] Dr.Namrata Srinivasan: I do remember my sets because I write stuff down that’s true!!
+[2026-02-24T18:02:35Z] pratik.s.chandarana: I was going to say the same thing - I have seen pictures of your written notes and questions
+[2026-02-24T18:02:45Z] Dr.Namrata Srinivasan: LOLOLOL
+[2026-02-24T18:02:53Z] Smit D Mahajani: Haan coz she sent them
+[2026-02-24T18:03:20Z] Tapish: Super set @⁨~Dr.Namrata Srinivasan ⁩ 🙌🙌🙌 lots of lurn!
+[2026-02-24T18:03:35Z] Smit D Mahajani: Lekin kitne saare musical instruments hai yaar
+[2026-02-24T18:03:41Z] Dr.Namrata Srinivasan: Ikr
+[2026-02-24T18:03:44Z] Dr.Namrata Srinivasan: New goals for 2026
+[2026-02-24T18:03:56Z] Dr.Namrata Srinivasan: Learn how to play the Zeusophone
+[2026-02-24T18:04:20Z] pratik.s.chandarana: I would love to play Pan Flute
+[2026-02-24T18:04:27Z] pratik.s.chandarana: Someday
+[2026-02-24T18:04:51Z] Smit D Mahajani: Tava toh hoga hi ghar pe. Usko baaju mein rakh ke basuri baja, bas ‎<This message was edited>
+[2026-02-24T18:04:52Z] Dr.Namrata Srinivasan: Make it happen!! ↵ Today!
+[2026-02-24T18:04:56Z] pratik.s.chandarana: Leo Rojas does amazing pan flute music
+[2026-02-24T18:05:01Z] Dr.Namrata Srinivasan: What are you waiting for
+[2026-02-24T18:05:10Z] Smit D Mahajani: Christmas
+[2026-02-24T18:05:17Z] Dr.Namrata Srinivasan: Arrey 🤣
+[2026-02-24T18:05:48Z] Smit D Mahajani: Who is he? (Don't say "Pan Flute player")
+[2026-02-24T18:05:58Z] pratik.s.chandarana: Do not ask me existential questions please 😔
+[2026-02-24T18:06:32Z] pratik.s.chandarana: Tava bazu mein rakh k pipudi bajane wala - ja sunle
+[2026-02-24T18:07:24Z] pratik.s.chandarana: https://youtu.be/uOIHHMnI_Ig?si=N9BzvMeImGTM7WHf
+[2026-02-24T18:08:55Z] Smit D Mahajani: This tune is very similar to a Bollywood song
+[2026-02-24T18:09:03Z] Smit D Mahajani: I can't place it
+[2026-02-24T18:09:47Z] pratik.s.chandarana: You might be right - this has been used in a number of places before; this itself is a recreation by Leo Rojas iirc
+[2026-02-24T18:10:24Z] Farhan: Sounds like a few bollywood songs not one 😁
+[2026-02-24T18:10:37Z] Smit D Mahajani: Achha
+[2026-02-24T18:10:47Z] Smit D Mahajani: Yes actually this is more accurate
+[2026-02-24T18:11:25Z] Khandoba: Dani Rojas ka bhai lag raha
+[2026-02-24T18:11:38Z] Smit D Mahajani: But 0:35-0:42 reminds me of a specific Bollywood song. I can't place it ‎<This message was edited>
+[2026-02-24T18:12:12Z] Tapish: Football is life ‎<This message was edited>
+[2026-02-24T18:13:21Z] pratik.s.chandarana: Pata karo daya
+[2026-02-24T18:13:26Z] Smit D Mahajani: Yehi hota hai dimaag ke andar and then it consumes me
+[2026-02-24T18:14:03Z] pratik.s.chandarana: Ecuadorian hai toh ho sakta hai - no clue
+[2026-02-24T18:14:37Z] pratik.s.chandarana: Us brother… Us.
+[2026-02-24T18:15:02Z] pratik.s.chandarana: Mere digital detox ki aaj maine vaise hi vaat lagadi hai
+[2026-02-24T18:15:45Z] Smit D Mahajani: Abhi kuch dino pehle maine ek freestyle dance video mein Royals by Lorde suna, and I still haven't been able to find the song jiska start resembles Royals
+[2026-02-24T18:16:12Z] Smit D Mahajani: Kisiko pata hai toh bataao
+[2026-02-24T18:16:48Z] Dr.Namrata Srinivasan: For a second I thought yoh did a freestyle dance to royals ↵ And was going to ask you to drop that video NOW
+[2026-02-24T18:17:20Z] Abhishek Vats: Great set @⁨~Dr.Namrata Srinivasan ⁩. Now I know 10 more instruments that I don't know how to play 😅 ↵ The default answer for this would have been Jagjit Singh's Harmonium ‎<This message was edited>
+[2026-02-24T18:17:30Z] Dr.Namrata Srinivasan: LOLLL
+[2026-02-24T18:19:24Z] Smit D Mahajani: I can send you the link of that dance. Mere hi chele hai wo sab. Maine dance karna band kar diya hai ab
+[2026-02-24T18:19:44Z] Dr.Namrata Srinivasan: Oh wait are you for real???
+[2026-02-24T18:19:47Z] Tapish: Gandhi at pentangular playing a banger
+[2026-02-24T18:20:01Z] Smit D Mahajani: Do you really think I was being genuine 😂😂
+[2026-02-24T18:20:11Z] Dr.Namrata Srinivasan: I did for a second there!
+[2026-02-24T18:20:20Z] Pavan Pamidimarri: Gandhi with hurdy gurdy
+[2026-02-24T18:20:21Z] Dr.Namrata Srinivasan: Quadrangular!!
+[2026-02-24T18:20:25Z] Abhishek Vats: Is that a signal for me to open Gemini?😂
+[2026-02-24T18:20:37Z] Smit D Mahajani: 😂😂
+[2026-02-24T18:20:38Z] pratik.s.chandarana: Marte hain effort ruk ja thodi daer mein
+[2026-02-24T18:21:00Z] Dr.Namrata Srinivasan: Gandhi with a Hurdy Hurdy at the quadrangular
+[2026-02-24T18:21:07Z] Tapish: Arreyyyy vats shastra uthaao
+[2026-02-24T18:21:08Z] Dr.Namrata Srinivasan: With whiskey and a pistol
+[2026-02-24T18:21:31Z] Dr.Namrata Srinivasan: Which gun was used for his assasination?
+[2026-02-24T18:21:43Z] Dr.Namrata Srinivasan: Not trying to make a dark joke actually curious 🤣🤣🤣
+[2026-02-24T18:21:57Z] Tapish: Godse kiya Glock-se
+[2026-02-24T18:22:01Z] Abhishek Vats: Bs bs gandhi hai, durga mata nahi. 2 hi haath hai 😂
+[2026-02-24T18:22:01Z] Dr.Namrata Srinivasan: I truly hope noone ever sees this group🤣🤣🤣
+[2026-02-24T18:22:06Z] Dr.Namrata Srinivasan: Wah 🤣🤣🤣
+[2026-02-24T18:22:12Z] Tapish: Memo baad mein padha maine
+[2026-02-24T18:22:20Z] Dr.Namrata Srinivasan: LOL
+[2026-02-24T18:22:33Z] Dr.Namrata Srinivasan: LOL PM
+[2026-02-24T18:22:48Z] Smit D Mahajani: https://youtube.com/shorts/1klF8DQGfNg?si=LTCNu6dEbbGF900M ↵ In case you're interested. I don't follow this dance form, but feed pe aata hai toh dekh leta hun. It's good fun ‎<This message was edited>
+[2026-02-24T18:22:50Z] Dr.Namrata Srinivasan: Pavan can hold the whiskey and gun
+[2026-02-24T18:23:05Z] Dr.Namrata Srinivasan: Liquid courage🤣🤣🤣
+[2026-02-24T18:23:29Z] Smit D Mahajani: Ye Keerigan 5 saal ke tha jab maine iska talent pakda tha. Ab dekho kidhar pohoch gaya hai launda ↵ @⁨~Dr.Namrata Srinivasan ⁩
+[2026-02-24T18:24:20Z] pratik.s.chandarana: Lekin Gemini ko thodi na maloom hai yeh
+[2026-02-24T18:24:31Z] Farhan: Sounds a bit in the same territory as the Sholay theme flute part. The AB and JB love theme part.
+[2026-02-24T18:25:26Z] Abhishek Vats: For the ones curious he played raghupati raghav raja ram ‎image omitted
+[2026-02-24T18:25:34Z] Dr.Namrata Srinivasan: OMG 🤣🤣🤣🤣🤣
+[2026-02-24T18:25:37Z] Dr.Namrata Srinivasan: Fainting 🤣🤣🤣
+[2026-02-24T18:25:51Z] Tapish: I am making a set, based on cricket sledges, hogaya abhi ready toh will run it
+[2026-02-24T18:26:07Z] Tapish: 😂😂😂😂😂😂
+[2026-02-24T18:26:10Z] Farhan: Likhte likhte ready ho gaya 😂
+[2026-02-24T18:27:00Z] Pavan Pamidimarri: if Nano Banana is keeping a list of weird pictures being created, it will put Vats on a special list
+[2026-02-24T18:27:06Z] Tapish: Nahi nahi woh thoda shabdon ka her fer hogaya hai. Agar ready hogaya abhi thode time mein toh will run
+[2026-02-24T18:28:27Z] Abhishek Vats: Don't forget this legendary sledge ‎image omitted
+[2026-02-24T18:28:41Z] Farhan: Missing Raja Ram Mohan Roy in the crowd somewhere.
+[2026-02-24T18:29:22Z] Tapish: “Tu run banaa le Ahinsa main dekh lunga “ ‎<This message was edited>
+[2026-02-24T18:29:48Z] Anurag Bhide: Tu set bana bakchodi main dekh lunga
+[2026-02-24T18:30:29Z] Tapish: Jaaaaa raha 😂😂😂😂
+[2026-02-24T18:30:36Z] Farhan: "humne Quit India kiya tha tumse Quit GG nahi ho raha"
+[2026-02-24T18:31:24Z] Dr.Namrata Srinivasan: Need to keep this Gandhi chain going
+[2026-02-24T18:31:45Z] Tapish: Dandi March wahi toh tha
+[2026-02-24T18:31:47Z] Kartikey Pradhan: “Nehru saale covers par bakchodi kare jaa raha hai, point pe aa na”
+[2026-02-24T18:32:11Z] Apratim: Gandhi knew then ki cricket Ka Ahmedabad se bahar jaana zaruri hai.
+[2026-02-24T18:32:43Z] Pavan Pamidimarri: salty
+[2026-02-24T18:32:56Z] Abhishek Vats: Aap log quiz banate raho, theme mein gandhi aur pentangular main fit kar dunga 😂
+[2026-02-24T18:33:19Z] Farhan: Gandhi be like garden me ghum raha hai kya, chal march kar
+[2026-02-24T18:33:28Z] Kartikey Pradhan: What type of innings did Mahatma gandhi play? ↵ Daddy hundreds
+[2026-02-24T18:33:42Z] Abhishek Vats: Aur ye GG ne bapu ko ahmedabad mein nikal dia 😭
+[2026-02-24T18:34:00Z] Smit D Mahajani: March kidhar se shuru karni hai uske liye bohot discussion hua tha. It's called the Ideas of march ‎<This message was edited>
+[2026-02-24T18:34:27Z] Apratim: Feb ke baad hi to hota hai
+[2026-02-24T18:35:36Z] Smit D Mahajani: Why are you all making so many jokes on Axar Patel?
+[2026-02-24T18:37:58Z] Sidhesh K K: Why did Gandhi walk off the field? ↵ He wasn't allowed to chori chauka
+[2026-02-24T18:38:03Z] Tapish: Aksar is duniya mein anjane milte hain ↵ Anjani raahon mein milke kho jaate hain ↵ Lekin hamesha woh yaad aate hain
+[2026-02-24T18:38:20Z] Apratim: Gandhi macha diya ye to
+[2026-02-24T18:38:30Z] Smit D Mahajani: Is this from dhai Axar prem ke?
+[2026-02-24T18:38:54Z] Sidhesh K K: No... sasta great gatsby
+[2026-02-24T18:39:31Z] Tapish: From the rise and rise of Dev!
+[2026-02-24T18:39:59Z] Farhan: Main tumhein bhul jaun, ye ho nahi sakta...
+[2026-02-24T18:41:37Z] pratik.s.chandarana: Also ‎image omitted
+[2026-02-24T18:41:58Z] Kartikey Pradhan: True cultural reference
+[2026-02-24T18:44:13Z] Sidhesh K K: Sunil shetty is a true gandhian btw.... ↵ In the movie Krishna, he says... ↵ Tum mujhe maarte maarte thak jaoge... ↵ Mai maar khate hue nahi thakunga
+[2026-02-24T18:45:08Z] Smit D Mahajani: -- Jinnah
+[2026-02-24T18:45:29Z] Abhishek Vats: Speech bubble asli bapu se hi aa raha hai 😂
+[2026-02-24T18:45:45Z] Smit D Mahajani: Bol wo rahe hai, shabd humaare hai ↵ -- Jinnah ‎<This message was edited>
+[2026-02-24T18:46:24Z] Abhishek Vats: Ye @⁨Akshay⁩ ko dedicated hai 😂
+[2026-02-24T18:47:57Z] Sidhesh K K: Bapu ke baju me monish bahl hai?
+[2026-02-24T18:51:08Z] Abhishek Vats: Abhi @⁨~Tapish⁩ ka quiz nahi aaya toh do cultural references mila dein kya 😂
+[2026-02-24T18:51:27Z] Kartikey Pradhan: Mila do
+[2026-02-24T18:53:09Z] Shyam Gopal: @⁨~Dr.Namrata Srinivasan ⁩ just going through your set now, so much good information and so many new instruments I wanna add to my collection.
+[2026-02-24T18:55:03Z] Sidhesh K K: One can hear this image!
+[2026-02-24T18:55:16Z] Sidhesh K K: Tu yaad na aaye aisa koi din nahi!!!
+[2026-02-24T18:56:18Z] Sidhesh K K: Bapu ke haath me leg piece ho to aur maza ayega
+[2026-02-24T18:58:03Z] pratik.s.chandarana: Yeh woh wala hai - Axarrr dil tujhey yaaannndd karrrtaaan haiiii
+[2026-02-24T19:01:00Z] Tapish: Main nsfw sledges hataa raha question hi nahi Bach rahein 😂
+[2026-02-24T19:02:24Z] Abhishek Vats: "what maan whenever you walk out to bat the score is still zero" ‎<This message was edited>
+[2026-02-24T19:02:51Z] Tapish: Yeh rakhne waala tha ab nahi rakhunga
+[2026-02-24T19:02:58Z] Tapish: Last question nsfw hoga ab
+[2026-02-24T19:04:29Z] Tapish: Chalo set of 10. Easy ekdum. Hints too.
+[2026-02-24T19:04:36Z] Kartikey Pradhan: Kya bataana hai
+[2026-02-24T19:04:52Z] Abhishek Vats: Who said to whom?
+[2026-02-24T19:05:00Z] Kartikey Pradhan: Okay gotcha
+[2026-02-24T19:05:01Z] Tapish: Question mein rahega. A sledge. Either who said or to whom it was said
+[2026-02-24T19:05:31Z] Tapish: ### Quiz starts
+[2026-02-24T19:05:40Z] Kartikey Pradhan: Lezgo
+[2026-02-24T19:06:09Z] Tapish: 1. “Of course it isn’t, you’re here” ↵ Legendary Aussie captain X to Jamie Siddons when Siddons was urging the Aussie skipper to hurry up in a Sheffield Shield match saying ↵ “it’s not a test match”
+[2026-02-24T19:06:22Z] Smit D Mahajani: Waugh?
+[2026-02-24T19:06:29Z] Kartikey Pradhan: Border?
+[2026-02-24T19:06:29Z] Abhishek Vats: Border
+[2026-02-24T19:06:41Z] Tapish: Improve
+[2026-02-24T19:06:43Z] Kartikey Pradhan: Taylor?
+[2026-02-24T19:06:44Z] Sidhesh K K: Kuldeep Singh
+[2026-02-24T19:06:45Z] Smit D Mahajani: Etfve
+[2026-02-24T19:06:45Z] Kartikey Pradhan: Steve
+[2026-02-24T19:06:50Z] Smit D Mahajani: Steve*
+[2026-02-24T19:06:58Z] Tapish: I’ll give it to Smit
+[2026-02-24T19:07:13Z] Abhishek Vats: Ye kaunsi crypto hai
+[2026-02-24T19:07:18Z] Tapish: Smit 10
+[2026-02-24T19:07:19Z] Kartikey Pradhan: I will pretend i didn’t see this
+[2026-02-24T19:07:55Z] Tapish: Next
+[2026-02-24T19:08:00Z] Tapish: 2. Jimmy Ormond when playing for England in the Ashes series of 2001, was on the receiving end of a jibe from Australia’s X who said: ↵ ‘Mate, what are you doing out here, no way are you good enough to play for England.” ↵ To this Ormond replied: ↵ “At least I’m the best player in my family”
+[2026-02-24T19:08:04Z] Kartikey Pradhan: Steve
+[2026-02-24T19:08:05Z] Kartikey Pradhan: Mark
+[2026-02-24T19:08:08Z] Kartikey Pradhan: Waugh
+[2026-02-24T19:08:11Z] Kartikey Pradhan: Mark waugh
+[2026-02-24T19:08:30Z] Tapish: Mark Waugh it is
+[2026-02-24T19:08:36Z] Abhishek S: Mitchel Starc ko bhi same bol sakte hai
+[2026-02-24T19:08:37Z] Tapish: Smit 10 KP 10
+[2026-02-24T19:08:58Z] Abhishek S: Mitchel Starc cricket ka Seth Rollins hai
+[2026-02-24T19:09:33Z] Abhishek Vats: Khud bhi champion wife bhi champion 😂
+[2026-02-24T19:09:38Z] Tapish: Next
+[2026-02-24T19:10:04Z] Tapish: 3. “Put a Mars bar on a good length, that should do it” ↵ X to Y who was bowling to Arjuna Ranatunga, referring to his build.
+[2026-02-24T19:10:12Z] Abhishek S: Warne
+[2026-02-24T19:10:12Z] Smit D Mahajani: Wsrne
+[2026-02-24T19:10:14Z] Smit D Mahajani: Y
+[2026-02-24T19:10:16Z] Abhishek Vats: Marsh
+[2026-02-24T19:10:24Z] Kartikey Pradhan: Mark taylor?
+[2026-02-24T19:10:25Z] Abhishek Vats: Taylor
+[2026-02-24T19:10:27Z] Abhishek S: Healy
+[2026-02-24T19:10:28Z] Tapish: Warne is Y
+[2026-02-24T19:10:35Z] Tapish: Sal gets it all
+[2026-02-24T19:10:45Z] Tapish: Healy is X
+[2026-02-24T19:10:50Z] Kartikey Pradhan: Ozempic le li hai ab Ranatunga ne
+[2026-02-24T19:10:50Z] Abhishek S: Ian Healey
+[2026-02-24T19:10:57Z] Abhishek Vats: Keeper tha yaad tha but galat wire
+[2026-02-24T19:11:04Z] Kartikey Pradhan: Farveez Maharoof jaisa dikhne lag gaya hai
+[2026-02-24T19:11:09Z] Abhishek S: He went on a Gandhi diet
+[2026-02-24T19:11:18Z] Tapish: Smit 10 KP 10 Sal 10
+[2026-02-24T19:11:45Z] Tapish: Next
+[2026-02-24T19:12:38Z] Tapish: 4. “There’s a piece of shit on your bat mate.” ↵ At this point, the batsman would look at the bottom and X would reply: ↵ ‘Wrong end mate.’ ↵ Not just one specific incident, but X had been known to use it multiple times.
+[2026-02-24T19:12:50Z] Smit D Mahajani: I know this yaar
+[2026-02-24T19:12:50Z] Abhishek S: Merv Hughes
+[2026-02-24T19:12:53Z] Abhishek S: Dennis Lillee
+[2026-02-24T19:13:06Z] Tapish: It is Dennis Lillee
+[2026-02-24T19:13:34Z] Tapish: Smit 10 KP 10 Sal 20
+[2026-02-24T19:14:18Z] Tapish: Next
+[2026-02-24T19:14:48Z] Tapish: 5. ↵ “Now, which of you bastards called this bastard a bastard?” ↵ Australian captain Bill Woodfull’s response when England skipper X appeared at the dressing room door during the infamous _____ series. As it happens, X complained that the Australians were swearing at him.
+[2026-02-24T19:14:59Z] Abhishek S: Mike brearly
+[2026-02-24T19:14:59Z] Anurag Bhide: Jardine?
+[2026-02-24T19:15:12Z] Tapish: Bodyline series is the blank
+[2026-02-24T19:15:21Z] Tapish: X is Douglas Jardine
+[2026-02-24T19:15:46Z] Kartikey Pradhan: Iske jaisi kaafi hilarious nsfw story hai mere paas, kabhi mile toh sunaunga 😂😂
+[2026-02-24T19:16:00Z] Tapish: Smit 10 KP 10 Sal 20 Bhide 10
+[2026-02-24T19:16:27Z] Anurag Bhide: Bata do yaar
+[2026-02-24T19:16:39Z] Kartikey Pradhan: Bhai bohot nsfw hai 🙂🙂😂😂
+[2026-02-24T19:16:53Z] Kartikey Pradhan: DM kar dunga
+[2026-02-24T19:17:00Z] Abhishek S: Work toh main kar bhi nahi raha
+[2026-02-24T19:17:11Z] Abhishek Vats: Link? 😂
+[2026-02-24T19:17:34Z] Tapish: Next
+[2026-02-24T19:18:21Z] Tapish: 6. ↵ “Looks like you spent it eating” ↵ X to Y after Y had said he had waited two years to bowl to the South African again.
+[2026-02-24T19:18:26Z] Shiv Ram: Cullinan
+[2026-02-24T19:18:27Z] Shiv Ram: Warne
+[2026-02-24T19:18:28Z] Abhishek Vats: Cullinan
+[2026-02-24T19:18:29Z] Abhishek S: Cullinan
+[2026-02-24T19:18:31Z] Abhishek Vats: Warne
+[2026-02-24T19:18:32Z] Abhishek S: Warne
+[2026-02-24T19:18:48Z] Abhishek S: Shiiiiiiiiv
+[2026-02-24T19:18:52Z] Tapish: And Shiv Ram bhai is here!
+[2026-02-24T19:19:05Z] Tapish: X is Cullinan Y is Warnie
+[2026-02-24T19:19:09Z] Kartikey Pradhan: Ab aaraam se type karunga
+[2026-02-24T19:19:22Z] Tapish: Smit 10 KP 10 Sal 20 Bhide 10 Shiv 10
+[2026-02-24T19:19:30Z] Abhishek S: Ab hume answers nahi bas jokes sochne hai
+[2026-02-24T19:19:59Z] pratik.s.chandarana: Ab main question padhna shuru karunga aur question apne aap upar chale jayega
+[2026-02-24T19:20:53Z] Tapish: Next
+[2026-02-24T19:22:13Z] Shiv Ram: Main ekdum chup  🤐🤐🤐
+[2026-02-24T19:22:32Z] Shiv Ram: This is trippy😂😂
+[2026-02-24T19:22:46Z] Farhan: Yes, silently type karna hai
+[2026-02-24T19:22:52Z] Tapish: 7. ↵ “Look, I don’t mind the others chirping at me, but you’re the bloody bus driver of this team. So you get back on the bus and get ready to drive it home.” ↵ When Justin Langer played his first Ashes, he said a couple of things that might have come off as rude to X. ↵ X replied the above
+[2026-02-24T19:23:01Z] Smit D Mahajani: Vaughfn?
+[2026-02-24T19:23:05Z] Smit D Mahajani: Vaughn*
+[2026-02-24T19:23:16Z] Smit D Mahajani: GilesM
+[2026-02-24T19:23:18Z] Smit D Mahajani: ?*
+[2026-02-24T19:23:24Z] Abhishek S: Mark Ramprakash
+[2026-02-24T19:23:26Z] Abhishek Vats: Hussain
+[2026-02-24T19:23:31Z] Anurag Bhide: Gatting
+[2026-02-24T19:23:42Z] Tapish: Naseer Hussain is correct
+[2026-02-24T19:23:56Z] Tapish: Smit 10 KP 10 Sal 20 Bhide 10 Shiv 10 Vats 10
+[2026-02-24T19:24:18Z] Abhishek Vats: Kaif ko bhi bus driver bola tha na ye?
+[2026-02-24T19:24:28Z] Smit D Mahajani: Watchman
+[2026-02-24T19:24:30Z] Smit D Mahajani: I think
+[2026-02-24T19:24:32Z] Abhishek S: Bus toh nahi chalani chahiye Hussain ko
+[2026-02-24T19:24:33Z] Smit D Mahajani: Ya cleaner ‎<This message was edited>
+[2026-02-24T19:24:36Z] Abhishek S: Bus conductor
+[2026-02-24T19:24:46Z] Shiv Ram: Haa natwest trophy me
+[2026-02-24T19:24:51Z] Tapish: Next
+[2026-02-24T19:24:55Z] Abhishek Vats: Sala joke bhi repeat
+[2026-02-24T19:24:55Z] Anurag Bhide: Bahut classist sledging karta hai ye Hussain
+[2026-02-24T19:24:57Z] Abhishek S: Basically, Rajinikanth bola
+[2026-02-24T19:25:18Z] Tapish: Kaif tab nahi bola “I am Kaif” ? 😂
+[2026-02-24T19:25:21Z] Abhishek Vats: Commentary mein toh ek hi baat bolta hi rehta hai
+[2026-02-24T19:25:37Z] Tapish: Next
+[2026-02-24T19:26:06Z] Tapish: 8. “This is my island, my culture. And in my culture, we bowl” ↵ For once, X was on the wrong end of a sledge. After saying this to Merv Hughes after the Australian was staring him down, the great X was subsequently dismissed. Big Merv retorted with the line: ↵ ‘In my culture we just say F Off.’
+[2026-02-24T19:26:17Z] Smit D Mahajani: Tbompson?
+[2026-02-24T19:26:22Z] Anurag Bhide: Holding?
+[2026-02-24T19:26:25Z] Kartikey Pradhan: Viv
+[2026-02-24T19:26:27Z] Smit D Mahajani: Garner?
+[2026-02-24T19:26:27Z] pratik.s.chandarana: Ambrose
+[2026-02-24T19:26:29Z] Abhishek S: Hadlee
+[2026-02-24T19:26:31Z] Smit D Mahajani: Marshall?
+[2026-02-24T19:26:33Z] Abhishek Vats: Lloyd
+[2026-02-24T19:26:41Z] Tapish: It is Sir Viv.
+[2026-02-24T19:26:49Z] Anurag Bhide: Abe yaar why did I guess a bowler
+[2026-02-24T19:26:57Z] Tapish: Smit 10 KP 20 Sal 20 Bhide 10 Shiv 10 Vats 10
+[2026-02-24T19:27:02Z] pratik.s.chandarana: Oh crap had to be a batter 🤦🏻‍♂️
+[2026-02-24T19:27:09Z] Tapish: Exactly sab bowlers guess karne lag gaye the
+[2026-02-24T19:27:20Z] Smit D Mahajani: Main pura padhta nahi hun isme
+[2026-02-24T19:27:24Z] Shiv Ram: Aap to kuch story type karne wale the na 😛
+[2026-02-24T19:27:34Z] Kartikey Pradhan: Karke bhej bhi di
+[2026-02-24T19:27:35Z] Smit D Mahajani: Koi faayda nahi hai coz tab tak koi answer de dega
+[2026-02-24T19:27:37Z] Kartikey Pradhan: 😂😂😂😂😂
+[2026-02-24T19:27:42Z] pratik.s.chandarana: Main padh paata nahin chahu toh bhi
+[2026-02-24T19:27:45Z] Tapish: Bhai humein bhi 😂
+[2026-02-24T19:28:56Z] Tapish: Next
+[2026-02-24T19:29:20Z] Tapish: 9. In the charged atmosphere of the 2005 Ashes, Australia's fast bowler Brett Lee masterfully escalated the psychological stakes with a pointed barb at England's X. Following a menacing bouncer on X’s first ball, Lee quipped, ↵ "WELCOME TO TEST CRICKET, MATE,"
+[2026-02-24T19:29:28Z] Smit D Mahajani: Pieterse?
+[2026-02-24T19:29:33Z] pratik.s.chandarana: Pitru
+[2026-02-24T19:29:34Z] Smit D Mahajani: Pietersen?*
+[2026-02-24T19:29:42Z] Tapish: @⁨Kartikey Pradhan⁩ is correct
+[2026-02-24T19:30:07Z] Tapish: Smit 20 KP 20 Sal 20 Bhide 10 Shiv 10 Vats 10
+[2026-02-24T19:30:17Z] Tapish: Dev sanrakshanam bhi lagaa do
+[2026-02-24T19:30:51Z] Tapish: Okay last one. Nsfw hi mil rahe so why not.
+[2026-02-24T19:31:15Z] Kartikey Pradhan: Gambhir afridi
+[2026-02-24T19:31:22Z] pratik.s.chandarana: Akmal GG
+[2026-02-24T19:31:23Z] Abhishek S: Brandes, McGrath
+[2026-02-24T19:31:48Z] Abhishek S: Sarwan, McGrath
+[2026-02-24T19:31:52Z] pratik.s.chandarana: Sachin McGrath
+[2026-02-24T19:31:58Z] Kartikey Pradhan: Mcgrath kitni gaali khaya hai bhai
+[2026-02-24T19:32:05Z] pratik.s.chandarana: Pollard Starc
+[2026-02-24T19:32:13Z] Tapish: 10. “I’ll smash you for 30 in an over, pimp” ↵ A beautifully, translated version of a poetic, lyrical masterpiece from the King himself to X. ↵ ID X
+[2026-02-24T19:32:14Z] Kartikey Pradhan: Wo gaali nahi haathapaai thi
+[2026-02-24T19:32:18Z] Kartikey Pradhan: Kohli
+[2026-02-24T19:32:25Z] Smit D Mahajani: Johnson?
+[2026-02-24T19:32:31Z] Smit D Mahajani: Rubel
+[2026-02-24T19:32:32Z] Tapish: Read again
+[2026-02-24T19:32:35Z] Abhishek S: Faulkner
+[2026-02-24T19:32:48Z] Abhishek S: Viv
+[2026-02-24T19:32:54Z] pratik.s.chandarana: Akhtar?
+[2026-02-24T19:32:59Z] Smit D Mahajani: Gul?
+[2026-02-24T19:33:00Z] Tapish: King is Kohli
+[2026-02-24T19:33:02Z] Kartikey Pradhan: Arrre
+[2026-02-24T19:33:04Z] Kartikey Pradhan: Nandre
+[2026-02-24T19:33:04Z] Tapish: Arrey bhai
+[2026-02-24T19:33:06Z] Kartikey Pradhan: Burger
+[2026-02-24T19:33:11Z] Tapish: Yes 😂😂😂😂
+[2026-02-24T19:33:33Z] Tapish: “Tereko ek over mein 30 run maarunga d***e”
+[2026-02-24T19:33:47Z] Anurag Bhide: Are ye toh just last year hi hua tha 😂😂😂
+[2026-02-24T19:34:07Z] Khandoba: 🤌🏾
+[2026-02-24T19:34:21Z] Tapish: Smit 20 KP 30 Sal 20 Bhide 10 Shiv 10 Vats 10
+[2026-02-24T19:34:24Z] Smit D Mahajani: Kaunsi match thi ye?
+[2026-02-24T19:34:28Z] Naman Agarwal: Set khatam?
+[2026-02-24T19:34:31Z] Tapish: That’s all folks!
+[2026-02-24T19:34:39Z] Tapish: Dhanyawaad!
+[2026-02-24T19:34:40Z] Naman Agarwal: 😶
+[2026-02-24T19:34:45Z] Smit D Mahajani: Mast set @⁨~Tapish⁩ !
+[2026-02-24T19:34:56Z] Tapish: India vs SA test
+[2026-02-24T19:35:02Z] pratik.s.chandarana: Yeh toh Shiv bhai ney aaj opt out kiya varna kaam ho gaya tha
+[2026-02-24T19:35:07Z] Smit D Mahajani: Kal ya parso bhi yehi hua tha na tumhaare saath 😂 ‎<This message was edited>
+[2026-02-24T19:35:19Z] Anurag Bhide: Mera favourite wala sledge nahi aaya isliye ek sookha puri -
+[2026-02-24T19:35:24Z] Kartikey Pradhan: Shiv ram chup reh ke humein sledge kar raha hai
+[2026-02-24T19:35:27Z] Smit D Mahajani: Kaunsi lekin?
+[2026-02-24T19:35:41Z] Anurag Bhide: X: So how's your wife and my kids?” ↵ Y: “Wife's fine but the kids are retarded”
+[2026-02-24T19:35:41Z] Shiv Ram: Na na bhai mujhe kuch aata nahi tha 😅😂
+[2026-02-24T19:35:46Z] Shiv Ram: Botham
+[2026-02-24T19:35:48Z] Shiv Ram: Marsh
+[2026-02-24T19:35:48Z] Kartikey Pradhan: Rod marsh
+[2026-02-24T19:36:03Z] Shiv Ram: But Botham later disputed this  saying he never said that
+[2026-02-24T19:36:07Z] Shiv Ram: In some interview
+[2026-02-24T19:36:08Z] Naman Agarwal: I never heard this one
+[2026-02-24T19:36:12Z] Naman Agarwal: But it's awesome
+[2026-02-24T19:36:17Z] Tapish: Botham Marsh
+[2026-02-24T19:36:18Z] Sidhesh K K: He's more like choku!
+[2026-02-24T19:36:18Z] Smit D Mahajani: Main yehi soch raha tha ki ye Q kyun nahi aaya
+[2026-02-24T19:36:33Z] Tapish: Bhai nsfw types hataaye toh issko bhi hataaya
+[2026-02-24T19:36:58Z] Anurag Bhide: Nsfw kya tha isme?
+[2026-02-24T19:37:04Z] Naman Agarwal: Ye NSFW but d**le is not?
+[2026-02-24T19:37:34Z] Tapish: Else this, Brandes McGrath, Sarwan Mcgrath, Ishant Zak, Nehraji sab the 😂
+[2026-02-24T19:37:48Z] Tapish: Nahi nahi, I meant nsfw waale hataaye toh yeh bhi hataa diya bas
+[2026-02-24T19:37:54Z] Khandoba: Nehraji ka bhej do yaar pls
+[2026-02-24T19:37:57Z] Khandoba: Mujhe answer karna hai ‎<This message was edited>
+[2026-02-24T19:38:00Z] Naman Agarwal: Seedhe catch bhi nahi pakadte bc ‎<This message was edited>
+[2026-02-24T19:38:05Z] Smit D Mahajani: Wo toh friendly fire tha
+[2026-02-24T19:38:15Z] Tapish: Nahi nahi, again yeh bas hataa diya tha, and last one I said ek nsfw rakh deta hoon
+[2026-02-24T19:38:29Z] Kartikey Pradhan: Ab Vats trigger hone wala hai
+[2026-02-24T19:39:02Z] Khandoba: So beautiful, so elegant
+[2026-02-24T19:39:02Z] Shiv Ram: https://www.foxsports.com.au/cricket/the-truth-about-crickets-greatest-sledges-from-botham-v-marsh-to-merv-v-miandad-to-waugh-v-gibbs/news-story/7b63f46343ecba0826dbb614de7075c3
+[2026-02-24T19:39:33Z] Anurag Bhide: I can hear this message
+[2026-02-24T19:39:50Z] Tapish: Same 😂😂😂
+[2026-02-24T19:39:56Z] Tapish: Expression bhi yaad hai
+[2026-02-24T19:40:22Z] Anurag Bhide: Greater touchline presence than Jose Mourinho
+[2026-02-24T19:41:07Z] Tapish: Nariyal paani >>>> Sarri ka Sutta
+[2026-02-24T19:41:20Z] Shiv Ram: Since Nehra ji ki itni yaad aa rahi hai to, guess the venue of this match ‎image omitted
+[2026-02-24T19:41:37Z] Tapish: 2003 WC 6-23 Durban? ‎<This message was edited>
+[2026-02-24T19:41:38Z] Kartikey Pradhan: Durban?
+[2026-02-24T19:42:29Z] Anurag Bhide: Puke kiya fir 6 wicket liye
+[2026-02-24T19:42:34Z] Tapish: Bhai kelaa khaa Raha tha, ultiyaan maar raha tha, wicket le raha tha
+[2026-02-24T19:43:01Z] Shiv Ram: Held the best figures by an Indian in men's odi world cup until Shami broke it in 2023.
+[2026-02-24T19:44:46Z] Shiv Ram: As a tribute to GG for the wonderful coaching stint, guess the venue of this match ‎image omitted
+[2026-02-24T19:45:35Z] Tapish: SL tha na?
+[2026-02-24T19:45:39Z] Tapish: Dambulla?
+[2026-02-24T19:45:55Z] Shiv Ram: Niceee 🙏🙏
+[2026-02-24T19:52:05Z] Kartikey Pradhan: This was the same match right jis mein Bhajji aur Shoaib ki bhi ladaai hui thi?
+[2026-02-24T19:52:14Z] Shiv Ram: Haa wahi wala
+[2026-02-24T19:52:28Z] Kartikey Pradhan: What a charged up game
+[2026-02-24T20:15:37Z] pratik.s.chandarana: Just saw the SLB kviz- was such a fun watch @⁨~KD⁩ @⁨~Abhishek S⁩ @⁨Aditi Bapat⁩ 👏🏽 ↵ Best part of the quiz for me was Sal going no filter on SLB 😂
+[2026-02-24T20:18:31Z] Aditi Bapat: If after this, and after his honest opinions about SLB agar Saluji jaake quiz jeet jata toh Delhi aake khud maarti mai 😂 ↵ But the Jahaji Lutera crack was amazing 🙌🏽
+[2026-02-24T20:21:09Z] pratik.s.chandarana: SLB k baapu ko bhi choice of fonts k liyea criticize kar diya 😂
+[2026-02-24T20:37:21Z] Naman Agarwal: Please record this event if it ever happens

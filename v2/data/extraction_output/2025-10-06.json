@@ -1,0 +1,253 @@
+[
+  {
+    "question_timestamp": "2025-10-06T09:13:41Z",
+    "question_text": "Connect the following (non-exhaustive): Natkhat, Nadaan, Naamcheen, Nawazuddin",
+    "question_asker": "Abhishek S",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Seedhe maut",
+    "answer_solver": "Meghna",
+    "answer_timestamp": "2025-10-06T09:14:51Z",
+    "answer_confirmed": false,
+    "confirmation_text": null,
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-10-06T09:14:51Z",
+        "username": "Meghna",
+        "text": "Seedhe maut",
+        "role": "attempt",
+        "is_correct": true
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "medium"
+  },
+  {
+    "question_timestamp": "2025-10-06T10:43:00Z",
+    "question_text": "Which country experiencing a huge revenue spike? [image: unknown]",
+    "question_asker": "Akshay",
+    "has_media": true,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Anguilla",
+    "answer_solver": "Lzafeer Ahmad B F",
+    "answer_timestamp": "2025-10-06T10:43:48Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Correct!",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-10-06T10:43:48Z",
+        "username": "Lzafeer Ahmad B F",
+        "text": "Anguila",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-10-06T10:44:31Z",
+        "username": "Akshay",
+        "text": "Correct!",
+        "role": "confirmation",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-10-06T11:01:54Z",
+    "question_text": "ID the movie from the quote: \"Maybe I'm spending too much of my time starting up clubs and putting on plays. I should probably be trying harder to score chicks. That's the only thing anybody really cares about. But, it's not my forte, unfortunately.\" ...",
+    "question_asker": "Abhishek S",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Rushmore",
+    "answer_solver": "Sidhesh K K",
+    "answer_timestamp": "2025-10-06T12:47:21Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Correcto",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-10-06T12:47:21Z",
+        "username": "Sidhesh K K",
+        "text": "1 is Rushmore",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-10-06T12:47:43Z",
+        "username": "Abhishek S",
+        "text": "Correcto",
+        "role": "confirmation",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-10-06T11:01:54Z",
+    "question_text": "ID the movie from the quote: ... \"It's one of those two, love or revenge, I'm not really sure which one. But it's one of those two that made me throw a cello through somebody's window, so you figure it out.\" ...",
+    "question_asker": "Abhishek S",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": null,
+    "answer_solver": null,
+    "answer_timestamp": null,
+    "answer_confirmed": false,
+    "confirmation_text": null,
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [],
+    "scores_after": null,
+    "extraction_confidence": "low"
+  },
+  {
+    "question_timestamp": "2025-10-06T11:01:54Z",
+    "question_text": "ID the movie from the quote: ... \"This may sound like gibberish to you, but I think I'm in a tragedy.\" ...",
+    "question_asker": "Abhishek S",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Stranger Than Fiction",
+    "answer_solver": "Prathamesh",
+    "answer_timestamp": "2025-10-06T13:17:20Z",
+    "answer_confirmed": true,
+    "confirmation_text": null,
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-10-06T13:17:20Z",
+        "username": "Prathamesh",
+        "text": "3 is Stranger Than Fiction",
+        "role": "attempt",
+        "is_correct": true
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "medium"
+  },
+  {
+    "question_timestamp": "2025-10-06T11:01:54Z",
+    "question_text": "ID the movie from the quote: ... \"You gotta hear this one song, it'll change your life I swear.\" ...",
+    "question_asker": "Abhishek S",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Garden State",
+    "answer_solver": "Lzafeer Ahmad B F",
+    "answer_timestamp": "2025-10-06T11:05:08Z",
+    "answer_confirmed": true,
+    "confirmation_text": null,
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-10-06T11:05:08Z",
+        "username": "Lzafeer Ahmad B F",
+        "text": "4 scene yaad hai",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-10-06T11:05:08Z",
+        "username": "Lzafeer Ahmad B F",
+        "text": "Garden State",
+        "role": "attempt",
+        "is_correct": true
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "medium"
+  },
+  {
+    "question_timestamp": "2025-10-06T13:15:39Z",
+    "question_text": "Clickbait question: This dude got left at the altar before Ted Moseby because of a kid's obsession. Find out how she met her stepmother!",
+    "question_asker": "Sidhesh K K",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "KKHH",
+    "answer_solver": "Lzafeer Ahmad B F",
+    "answer_timestamp": "2025-10-06T13:16:04Z",
+    "answer_confirmed": true,
+    "confirmation_text": null,
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-10-06T13:16:04Z",
+        "username": "Lzafeer Ahmad B F",
+        "text": "Kuch kuch hota ha",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-10-06T13:16:08Z",
+        "username": "Abhishek S",
+        "text": "KKHH",
+        "role": "confirmation",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "medium"
+  },
+  {
+    "question_timestamp": "2025-10-06T17:44:57Z",
+    "question_text": "X's great grandfather played chess with Vinoba Bhave which got an idea into her mother for her to play chess. Her elder sister played badminton but she was considered too small to hold a racquet. Who is the world cup champion we are talking about?",
+    "question_asker": "Abhishek Vats",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Divya Deshmukh",
+    "answer_solver": "Tapish",
+    "answer_timestamp": "2025-10-06T17:47:00Z",
+    "answer_confirmed": true,
+    "confirmation_text": null,
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-10-06T17:47:00Z",
+        "username": "Tapish",
+        "text": "Divya Deshmukh?",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-10-06T17:47:05Z",
+        "username": "Ricky",
+        "text": "Divya deshmukh?",
+        "role": "attempt",
+        "is_correct": true
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "medium"
+  }
+]

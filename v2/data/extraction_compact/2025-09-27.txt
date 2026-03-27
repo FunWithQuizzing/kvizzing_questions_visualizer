@@ -1,0 +1,1005 @@
+[2025-09-27T00:12:00Z] Srikanth Kapali: She has developed AI algorithms that with applications in various scientific domains including weather forecasting, drug discovery, scientific simulations and engineering design She invented Neural Operators that extend deep learning to modeling multi-scale processes in these scientific domains and learn in function spaces and are orders of magnitude faster than traditional simulations. Who is this famous computer scientist ?
+[2025-09-27T00:13:21Z] Naman Agarwal: Anima Anandkumar
+[2025-09-27T00:19:38Z] Ankit Jain: She studied physics at Presidency College, Madras and earned a gold medal. There she caught the attention of Alladi Ramakrishnan, who mentored her and guided her to a doctorate. Then came 1965, that changed her life! A letter arrived from J. Robert Oppenheimer, director of Princeton’s Institute for Advanced Study, personally inviting her to join one of the world’s most elite circles of physicists. Who is this relatively unknown physicist?
+[2025-09-27T00:21:44Z] Srikanth Kapali: Thayoor Radha
+[2025-09-27T00:22:39Z] Srikanth Kapali: Had heard about her from my uncle and grandfather who were both gold medal engineers back in the day
+[2025-09-27T00:33:42Z] Srikanth Kapali: X utilized photographic nuclear emulsion to become the first to detect and identify mesons. The IAU named the star HD 86081 X after her. She was also the first female faculty at TIFR. Who is this famous physicist ? ‎<This message was edited>
+[2025-09-27T00:42:58Z] Pavan Pamidimarri: Bibha Chowdhury
+[2025-09-27T00:44:04Z] Srikanth Kapali: Missed out on a nobel as WW2 broke our right at the time she and Bose were about to order a Cloud chamber to prove her discoveries
+[2025-09-27T02:57:00Z] Akshay: Q: This Indian mathematician and later Professor at TIFR developed one of the earliest efficient algorithms to solve Linear Programming problems in polynomial time. Unlike the classic LP technique of cycling through potential solutions on the boundary of the feasible region, this algorithm traverses the interior to reach the solution in an efficient manner. Name the scientist or the eponymous algorithm.
+[2025-09-27T06:17:48Z] Pavan Pamidimarri: Outside the world of cricket, what is common to: Arun Lal, Diana Eduljee, EAS Prasanna, Narendra Hirwani, and S Venkataraghavan?
+[2025-09-27T06:19:35Z] Abhishek Vats: Mile sur mera tumhara? Just from hirwani singing on the beach
+[2025-09-27T06:19:50Z] Abhishek Vats: And Diana eduljee being there
+[2025-09-27T06:20:30Z] Abhishek Vats: The only thing I know about hirwani outside cricket 😂
+[2025-09-27T06:28:25Z] Pavan Pamidimarri: Yes, absolutely
+[2025-09-27T07:35:25Z] Akshay: While everyone expected the WC winning u19 captain Virat Kohli to be picked by Delhi Daredevils for the inaugural edition of the IPL in 2008, they actually ended up picking another Delhi cricketer, with Kohli ending up at RCB. Who was this player?
+[2025-09-27T07:35:43Z] Anurag Bhide: Pradeep Sangwan?
+[2025-09-27T07:35:50Z] Abhishek Vats: Sangwan
+[2025-09-27T07:35:52Z] Akshay: Finally a Q unanswered???
+[2025-09-27T07:35:57Z] Akshay: Correct!
+[2025-09-27T07:36:03Z] Akshay: Pradeep Sangwan it is
+[2025-09-27T07:36:43Z] Akshay: Follow up : Along with Virat, who was the other u19 cricketer from that squad picked by RCB?
+[2025-09-27T07:36:50Z] Abhishek Vats: As per sehwag they had GG, him, abd, dilshan so didn't feel the requirement
+[2025-09-27T07:36:57Z] Abhishek Vats: Sreevats goswami?
+[2025-09-27T07:37:12Z] Akshay: Correct! Too good
+[2025-09-27T07:37:42Z] Akshay: Yeah and apparently RCB chose him simply because Mallya was like oh captain and picked him
+[2025-09-27T07:37:54Z] Akshay: Fate is funny
+[2025-09-27T07:38:40Z] Abhishek Vats: Mallya's punt went well for once 😂
+[2025-09-27T07:39:16Z] Abhishek Vats: Post him ipl u-19 winning captains have not really had a good ipl season.
+[2025-09-27T07:39:23Z] Abhishek Vats: In sports
+[2025-09-27T07:41:07Z] Sidhesh K K: Narendra Karmarkar?
+[2025-09-27T07:42:09Z] Akshay: Correct! Finally
+[2025-09-27T07:42:19Z] Akshay: I was feeling good thinking for once unanswered
+[2025-09-27T07:45:10Z] Sidhesh K K: And I'm feeling good for finally stumbling onto an unanswered question
+[2025-09-27T07:45:47Z] Sidhesh K K: Else it was a crime master gogo situation. ↵ Haath to aaya, muh na laga
+[2025-09-27T07:48:25Z] Pranshu: Omg!! I completely forgot 🥲
+[2025-09-27T09:34:34Z] Srikanth Kapali: Karmarkar
+[2025-09-27T10:09:16Z] Sidhesh K K: Punt ka pata nahi... pint boht gaye hain
+[2025-09-27T11:24:46Z] Naman Agarwal: I was scrolling down thinking no one answered it :) anyway Karmarkar's idea and algorithm are quite brilliant, first to establish an end to end to polynomial time solution, however the idea of interior point methods started in Russia in the 60s. After Karmarkar in the 90s two Russian mathematicians working in the area of optimization took this idea much further along allowing for interior point methods to work for convex constraint set and not just polytopes. Both have names starting with N. Can we name them? ↵ These mathematicians have influenced the growth of AI significantly as well, making fundamental contributions to the optimization algorithms that are now used to pre-train AI models. ‎<This message was edited>
+[2025-09-27T11:25:54Z] Srikanth Kapali: I was interested in the backlash from other computer scientists that algorithms should not be late yes and even the US supreme Court precedent that you cannot patent mathematical formulae
+[2025-09-27T11:28:40Z] Naman Agarwal: Oh I didn't mean to say there was some sort of 'stealing' or anything at all .. Karmarkar afaiu brought a program to it's first concrete provable result and it remains a huge achievement. The Russia thing was a segue to my eventual question :) ‎<This message was edited>
+[2025-09-27T11:36:01Z] Srikanth Kapali: I know. I read this on his Wikipedia page
+[2025-09-27T14:27:46Z] Akshay: Nestorov and the guy from georgia tech. Nowitzki?
+[2025-09-27T14:27:51Z] Akshay: Or Naminsky
+[2025-09-27T14:28:00Z] Akshay: They have a textbook
+[2025-09-27T14:40:42Z] Akshay: Primarily it was i think him doing the work while working at IBM but it being applied when he moved to work at AT&T and they decided to try patenting it. ↵ *i am not sure what he himself thought or if he had a role ‎<This message was edited>
+[2025-09-27T14:47:21Z] Meghna: Easy one (as I’m in a train journey lined with British cathedrals) ↵ In Britain, medieval cathedrals often come in two striking “styles”: some reach for the heavens with spires, while others have broad, flat-topped towers. ↵ Take Salisbury Cathedral, whose soaring spire remains the tallest in the UK, compared with York Minster, whose towers are famously flat-topped and fortress-like. ↵ So, why do we see this mix of spired and flat-topped cathedrals?
+[2025-09-27T14:48:16Z] Nikhil Borra: Catholic vs Church of England?
+[2025-09-27T14:51:15Z] Srikanth Kapali: Gothic vs post reform
+[2025-09-27T14:51:26Z] Meghna: Nope
+[2025-09-27T14:52:18Z] Meghna: Nope - a much Simpler reason
+[2025-09-27T14:53:19Z] Srikanth Kapali: Ran out of money?
+[2025-09-27T14:54:37Z] Meghna: Yes basically. Making solid and structurally safe spires  (after some incidents) required money and many places weren’t funded for it because they weren’t quite “as important”
+[2025-09-27T14:54:55Z] Srikanth Kapali: Great question
+[2025-09-27T14:55:33Z] Meghna: Always found it quite amusing
+[2025-09-27T16:00:21Z] Akshay: Going to watch it tonight!
+[2025-09-27T16:37:08Z] Naman Agarwal: Nice! Indeed Nesterov and Nemirovski
+[2025-09-27T16:37:48Z] Akshay: Nice! I couldn’t remember the other author. I remember seeing their monograph on interior pt methods in my advisor’s office
+[2025-09-27T16:37:49Z] Akshay: Lol
+[2025-09-27T16:39:14Z] Naman Agarwal: Yup although their greater contribution to our society would be their work on optimization algorithms like gradient descent and a lot of advancements on it which forms one of the bedrock of LLM pretraining today
+[2025-09-27T16:41:04Z] Akshay: Nestorov has the fancy gradient thingy no, in which future estimates of the gradient are used at the current pt?
+[2025-09-27T16:41:28Z] Naman Agarwal: Indeed Nesterov's accelerated gradient descent
+[2025-09-27T16:41:53Z] Naman Agarwal: In modern parlance just shortened to Nesterov
+[2025-09-27T16:42:00Z] Akshay: Nice
+[2025-09-27T16:42:20Z] Akshay: I vaguely remember, never used though
+[2025-09-27T16:43:40Z] Naman Agarwal: So Nesterov's advisor Boris Polyak had the core kernel of the idea, called Polyak's heavy ball momentum
+[2025-09-27T16:44:02Z] Naman Agarwal: ^this has very neat physical interpretations as the name suggests
+[2025-09-27T16:44:43Z] Naman Agarwal: Nesterov's work is more of a tour de force through math to come up with a related method that provably works in all scenarios ‎<This message was edited>
+[2025-09-27T16:46:01Z] Naman Agarwal: But 30 years later people were still peeling that onion, to come up with alternative derivations that might be easier to digest and understand
+[2025-09-27T16:53:59Z] Akshay: I mean these are fundamentally tweaks to the gradient no? Whether we somehow blend past values and/or future estimates, esp for large optimization problems. In many cases they do have nice physical analogies, and even interpretations..
+[2025-09-27T16:55:43Z] Akshay: I am guessing* they will
+[2025-09-27T16:55:54Z] Akshay: I am not even close to an expert lol
+[2025-09-27T16:55:56Z] Sayu Sekhar: Never thought gradient descent and Gafoor 🎶 would appear together in a discussion 😆
+[2025-09-27T16:56:14Z] Naman Agarwal: Yes absolutely, but the fun part is that they make quite a significant difference to the base method
+[2025-09-27T16:57:35Z] Naman Agarwal: And they have connections to even things like damped harmonic oscillators
+[2025-09-27T16:58:02Z] Naman Agarwal: And fundamental results on approximations via polynomials
+[2025-09-27T16:58:49Z] Naman Agarwal: It's quite fun to see the same 'mathematical' phenomenon appear across different unrelated settings
+[2025-09-27T16:59:14Z] Naman Agarwal: Anyway this is getting into spam territory now :)
+[2025-09-27T17:06:58Z] Akshay: It isn’t spam for me ;) i learn a lot
+[2025-09-27T17:15:31Z] Akshay: Here’s a timepass Q: What game is played with 12 players, involves 3 ‘downs’ and involves attempting to advance a pointed oval-shaped ball into the opponent’s ‘endzone’ , at the front of which are located two goal posts?
+[2025-09-27T17:15:57Z] Srikanth Kapali: American football
+[2025-09-27T17:16:04Z] Akshay: Noope
+[2025-09-27T17:16:05Z] Nikhil Borra: American football?
+[2025-09-27T17:16:11Z] Akshay: Trick question !
+[2025-09-27T17:16:23Z] Srikanth Kapali: Quidditch
+[2025-09-27T17:16:23Z] Nikhil Borra: Rugby?
+[2025-09-27T17:16:50Z] Akshay: It’s a variant of American Football
+[2025-09-27T17:16:57Z] Nikhil Borra: Round balls.
+[2025-09-27T17:17:00Z] Akshay: One might say a cousin
+[2025-09-27T17:17:13Z] Nikhil Borra: Canadian Football?
+[2025-09-27T17:17:20Z] Akshay: Yes! Haha
+[2025-09-27T17:17:21Z] Abhishek Vats: Canadian football if to go by this hint
+[2025-09-27T17:17:23Z] Akshay: Canadian Football
+[2025-09-27T17:17:24Z] Khandoba: 3 goalposts
+[2025-09-27T17:17:45Z] Nikunj: Flag Football??
+[2025-09-27T17:17:47Z] Abhishek Vats: My Punjabi bros told me about it but didn't know it was a recognised sport
+[2025-09-27T17:18:46Z] Srikanth Kapali: CFL is where some non drafted American college football players end up
+[2025-09-27T17:19:01Z] Akshay: Yeah i mean it never occurred to me that it was a diff sport, even when i did hear commentators mention it in context of college football it’d be like ‘he’s canadian or he played football in canada’ - only a few months ago did i learn about this
+[2025-09-27T17:19:17Z] Akshay: Yess
+[2025-09-27T17:19:20Z] Abhishek Vats: Same with us Punjabis too 😂 ↵ P.s. just kidding 😅
+[2025-09-27T17:19:45Z] Abhishek Vats: Only instead of draft it's visa 😂
+[2025-09-27T20:03:02Z] Abhishek Vats: X was the first player in history to win World Championships in two different pool disciplines (the WPA World Nine-ball Championship and the WPA World Eight-ball Championship). Known as one of the best kickers in pool history. Guess the Filipino legend X?
+[2025-09-27T20:03:58Z] Abhishek Vats: A bit niche one for the trick shot video fans
+[2025-09-27T20:06:06Z] Khandoba: I have seen some videos of him on Instagram and YT. For the life of me, I can’t remember his name now
+[2025-09-27T20:06:40Z] Abhishek Vats: Exactly I saw so many legendary videos of him that now I finally remember the name 😅
+[2025-09-27T20:07:08Z] Khandoba: Something Reys
+[2025-09-27T20:07:20Z] Abhishek Vats: His "where, where, where" shots are legendary
+[2025-09-27T20:07:23Z] Abhishek Vats: Yes
+[2025-09-27T20:07:27Z] Abhishek Vats: Effren reyes
+[2025-09-27T20:08:08Z] Khandoba: I saw that video where he’s looking at 2 people playing. Someone recognised and asked him to play and he cleared it
+[2025-09-27T20:08:10Z] Abhishek Vats: Think he's the parallel to Ronnie O'sullivan in pool with the technique
+[2025-09-27T20:08:16Z] Khandoba: Then I went down the rabbit hole
+[2025-09-27T20:08:18Z] Abhishek Vats: Yup
+[2025-09-27T20:08:32Z] Abhishek Vats: Same bro same 😂
+[2025-09-27T20:09:45Z] Abhishek Vats: The back story is great too. Could be a plot of a movie 😅
+[2025-09-27T20:10:02Z] Khandoba: Lemme look it up
+[2025-09-27T20:11:28Z] Abhishek Vats: He started in pool tables at a bar he was working at I think
+[2025-09-27T23:19:35Z] Srikanth Kapali: She would therefore have been simultaneously in two different seasons (winter and summer), in two different hemispheres, on two different days, in two different months, in two different years, in two different decades, in two different centuries. What is being talked about here and how was this achieved ?
+[2025-09-27T23:38:01Z] Shubham: Something mythological?
+[2025-09-27T23:38:15Z] Shubham: Since you seem to be interested in that. 😅
+[2025-09-27T23:39:01Z] Srikanth Kapali: Hahaha no. Though some arguments are that it is not verified so might have happened might not have happened
+[2025-09-27T23:39:40Z] Srikanth Kapali: This has been a very popular share on social media and Whatsapp
+[2025-09-27T23:39:53Z] Shubham: Okay, since it is a she, is it a ship?
+[2025-09-27T23:42:18Z] Shubham: Is it the Darwin ship?
+[2025-09-27T23:42:40Z] Srikanth Kapali: No..not the HMS beagle
+[2025-09-27T23:42:59Z] Shubham: Magellan?
+[2025-09-27T23:45:11Z] Srikanth Kapali: SS warrimoo. Positioned at intersection of equator and international date line at an angle on December 31st 1899. So one half of ship in south east and one in north west. One half in 20th century and other in 19th century etc
+[2025-09-27T23:46:26Z] Srikanth Kapali: Some say navigation equipment was not that accurate so no actual data to prove it happened just the word of the ship captain
+[2025-09-27T23:51:48Z] Srikanth Kapali: X Island  and Y Island are two islands and are called A island and B island. Name X, Y, A, and B and the funda for A and B.
+[2025-09-27T23:53:45Z] Srikanth Kapali: X and Y are two words and the first word in each are Antonyms
+[2025-09-27T23:54:09Z] Srikanth Kapali: Second words for x and Y are the same
+[2025-09-27T23:57:03Z] Pavan Pamidimarri: Diomedes, yesterday/tomorrow. On opposite sides of the international date lime
+[2025-09-27T23:57:53Z] Srikanth Kapali: Big diomede in Russia and little diomede in USA. Technically only 2 miles apart
+[2025-09-28T00:24:24Z] Pavan Pamidimarri: Toyota's popular sedan Camry got its name as the anglicized version of the Japanese word kanmuri. What does this word mean?
+[2025-09-28T00:26:32Z] Srikanth Kapali: Samurai headwear ?
+[2025-09-28T00:28:01Z] Pavan Pamidimarri: Yes it is a kind of ceremonial headgear. It can be considered the Japanese equivalent of a crown.
+[2025-09-28T00:29:10Z] Pavan Pamidimarri: Corolla, Corona, Crown - they name a lot of their sedans with crown-like names
+[2025-09-28T00:31:55Z] Srikanth Kapali: Back in the day FORD had a funny acronym expansion related to reliability. What was that acronym/expansion?
+[2025-09-28T00:42:20Z] Shubham: For Off-Road Driving
+[2025-09-28T00:42:23Z] Shubham: Sorry.
+[2025-09-28T00:48:31Z] Srikanth Kapali: Fix or repair daily
+[2025-09-28T01:46:56Z] Ankit Jain: In 1977, the Chauhan Brothers launched this to offset Coca Cola’s exit from India due to government regulations requiring them to reveal their formula and sell 60% equity to a local company. It soon became popular in India until Pepsi launched in 1991 after liberalisation. In 1993, Coca Cola re-entered the market and bought it along with other Parle owned drinks for $60 million. Which famous drink?
+[2025-09-28T01:47:18Z] Srikanth Kapali: Goldspot?
+[2025-09-28T01:47:40Z] Ankit Jain: close.. but no
+[2025-09-28T01:47:52Z] Srikanth Kapali: Thums up?
+[2025-09-28T02:50:56Z] Sayu Sekhar: Thums up
+[2025-09-28T11:52:23Z] Abhishek Vats: X is an Indian legend in her field. However she has also ventured beyond her field with a perfume range -"X Eau de parfum" in 1999. In 2005, she  also designed the "Swaranjali" collection of diamond jewellery for an Indian company called Adora. Each piece featured her laser-imprinted signature, and five pieces from the collection were auctioned at Christie's for £105,000, with the proceeds donated to the 2005 Kashmir earthquake relief fund. Id X?
+[2025-09-28T11:53:45Z] Nikunj: Lata Mangeshkar???
+[2025-09-28T11:54:01Z] Sidhesh K K: Lata mangeshkar
+[2025-09-28T11:54:20Z] Srikanth Kapali: Diamond voice with a diamond collection
+[2025-09-28T11:54:44Z] Abhishek Vats: Correct 🙌🏻
+[2025-09-28T14:16:04Z] Meghna: An interesting one: ↵ In 2019, the Norwegian island of Sommaroy made global headlines when locals framed a petition that gained massive attention, though it was never passed. The idea was inspired by the island’s 69 days of continuous daylight, and while the petition itself didn’t succeed, it boosted tourism. It was later revealed that marketing for tourism was the real goal all along. What unusual proposal did this campaign promote?
+[2025-09-28T14:16:51Z] Sidhesh K K: Time free zone
+[2025-09-28T14:17:24Z] Sidhesh K K: No clocks
+[2025-09-28T14:17:59Z] Meghna: Yes, it was to abolish “time”
+[2025-09-28T14:18:03Z] Akshay: Awesome! How they survive w/o modern day timekeeping
+[2025-09-28T14:18:59Z] Sidhesh K K: Random insta post for knowledge 😂
+[2025-09-28T14:19:59Z] Sidhesh K K: It appears to have been a publicity stunt
+[2025-09-28T14:20:35Z] Meghna: Obviously was a marketing strategy but the concept was the everything including meals will be nature bound and not time bound. People can 2am, food timings based on hunger
+[2025-09-28T14:20:39Z] Meghna: Everything based on feels
+[2025-09-28T14:20:59Z] Meghna: Obviously tho how will planes land without time 😆😆
+[2025-09-28T14:22:22Z] Sidhesh K K: Pilots to land basis body clock? 😜
+[2025-09-28T14:22:47Z] Meghna: Abhi mausam sahi lag raha hai mann kar raha hai chal bhai
+[2025-09-28T14:38:36Z] Pavan Pamidimarri: Makes me wonder if any community tried to live their lives ignoring one of the dimensions of space.
+[2025-09-28T14:39:58Z] Khandoba: The characters in Chetan Bhagat books. 2 dimensional, all of them!
+[2025-09-28T14:42:47Z] Akshay: There’s an oold book on this called ‘flatland’
+[2025-09-28T14:43:07Z] Akshay: Imagines a fictional 2d world
+[2025-09-28T14:43:23Z] Akshay: I forget the authors name - edmund abbott i think
+[2025-09-28T14:43:56Z] Khandoba: Some mathematician right?
+[2025-09-28T14:45:15Z] Akshay: No i think a priest
+[2025-09-28T14:45:18Z] Akshay: And school teacher
+[2025-09-28T14:48:31Z] Pavan Pamidimarri: Flatland https://share.google/zhEGfbUWaMpm5N43P
+[2025-09-28T14:48:38Z] Pavan Pamidimarri: Googled it
+[2025-09-28T14:57:52Z] Aditi Bapat: Hi all. Almost time for the quiz!! Will post a few questions here, and whoever is online (and not intently watching the Ind-Pakistan match🙊) can answer!! ↵ I have my husband on Chitrgupt duties to keep score so I'll try to get a winner at the end of it.
+[2025-09-28T14:58:53Z] Aditi Bapat: We fact checked our questions to the best of our abilities so don't come at me if something is amiss😛
+[2025-09-28T15:00:34Z] Pavan Pamidimarri: You are already exceeding expectations by providing a Chitrgupt
+[2025-09-28T15:01:19Z] Aditi Bapat: Starting with a breezy one. ‎image omitted
+[2025-09-28T15:01:53Z] Akshay: Rock on
+[2025-09-28T15:01:57Z] Abhishek S: Farhan akhtar song
+[2025-09-28T15:02:02Z] Akshay: Laundry ka bill
+[2025-09-28T15:02:04Z] Abhishek S: Meri laundry ka bill etc
+[2025-09-28T15:02:11Z] Abhishek Vats: Damn
+[2025-09-28T15:02:18Z] Khandoba: Nice crack
+[2025-09-28T15:02:39Z] Abhishek Vats: Great crack and the question
+[2025-09-28T15:03:06Z] Akshay: Super Q
+[2025-09-28T15:03:10Z] Abhishek Vats: Stealing this question 🙈
+[2025-09-28T15:03:17Z] Aditi Bapat: Correct!! I had a brainwave while listening to this song when I was in quiz making mode and realized anything is a possible quiz question 😂🙊
+[2025-09-28T15:03:19Z] Tapish: What a question 🙌
+[2025-09-28T15:03:27Z] Sayu Sekhar: earworm for today now
+[2025-09-28T15:04:34Z] Aditi Bapat: Number 2. ↵ Clement Valladingham was a US representative way back in 1863, and not the most popular one thanks to his pro-slavery stance. Vallandigham died in 1871 in Ohio, at the age of 50. During this time he was representing a defendant, Thomas McGehean, in a murder case for killing a man Tom Myers in a barroom brawl in Hamilton, Ohio. Vallandigham’s defense for his client was that Tom Myers had in fact accidentally shot himself while drawing his pistol from a pocket while rising from a kneeling position. ↵ Vallandigham managed to save his client in a very unconventional way. The defendant Thomas McGehean, was acquitted and released from custody. ↵ How did Clement Valladingham manage to demonstrate his client’s innocence?
+[2025-09-28T15:05:41Z] Sumit Gupta: He shot himself while rising from kneeling position?
+[2025-09-28T15:05:44Z] Abhishek Vats: He tried doing it and shot himself ?
+[2025-09-28T15:05:46Z] Khandoba: Replicating the same scene?
+[2025-09-28T15:05:58Z] Akshay: Hahahaah nice!!
+[2025-09-28T15:06:02Z] Pavan Pamidimarri: wow
+[2025-09-28T15:06:14Z] Pavan Pamidimarri: deliberately or accidentally?
+[2025-09-28T15:06:26Z] Aditi Bapat: Correct!! He was demonstrating it to his own legal team and ended up getting a bullet in his pelvis
+[2025-09-28T15:06:30Z] Aditi Bapat: Accidentally
+[2025-09-28T15:06:44Z] Khandoba: One hell of a lawyer if it was deliberate
+[2025-09-28T15:07:03Z] Pavan Pamidimarri: yeah, this was before antibiotics, you could die from a small injury
+[2025-09-28T15:07:11Z] Abhishek Vats: If deliberately then govinda lighting himself on fire kyuki main jhooth nahi bolta is inspired from this 😂😂
+[2025-09-28T15:07:16Z] Abhishek S: Self offence as a defence
+[2025-09-28T15:07:23Z] Akshay: Or emraan hashmi burying himself
+[2025-09-28T15:07:23Z] Sumit Gupta: 😂😂😂
+[2025-09-28T15:07:27Z] Sayu Sekhar: self offence is the best defence
+[2025-09-28T15:08:15Z] Abhishek Vats: And then they say bollywood directors don't do enough research 😂🙈
+[2025-09-28T15:08:25Z] Aditi Bapat: Number 3. ↵ Maybe an easy one. ‎image omitted
+[2025-09-28T15:08:47Z] Abhishek S: Atul Kulkarni
+[2025-09-28T15:08:51Z] Kartikey Pradhan: Atul Kulkarni
+[2025-09-28T15:08:56Z] Tapish: Atul Kulkarni
+[2025-09-28T15:09:45Z] Khandoba: Aditi you didn’t include Marathi movies😭🤣
+[2025-09-28T15:09:54Z] Akshay: Hindi* filmography
+[2025-09-28T15:09:56Z] Aditi Bapat: Bingo!! This was my 'Know your quiz master' question. I had/have a huge crush on him when I was growing up, and I wanted to see how many of my friends remembered 😂
+[2025-09-28T15:10:18Z] Aditi Bapat: Yeah, Natrang would be handing it on a platter 😂
+[2025-09-28T15:10:40Z] Khandoba: वळू all time favorite
+[2025-09-28T15:11:32Z] Aditi Bapat: Yesss! A great recommendation for anyone who wants to see his impressive comic timing.
+[2025-09-28T15:13:50Z] Dhruv: His role in rdb as bismil counterpart was so good
+[2025-09-28T15:13:52Z] Abhishek S: Yaadein only actor
+[2025-09-28T15:14:04Z] Aditi Bapat: Number 4. ↵ Sorry about the font size for this one
+[2025-09-28T15:14:59Z] Akshay: He was bismil iirc
+[2025-09-28T15:15:12Z] Aditi Bapat: Yess!! Guinness world record for least number of people on camera. ONE.
+[2025-09-28T15:15:14Z] Akshay: Classic quiz Q
+[2025-09-28T15:15:34Z] Akshay: I only know this because my partner in college who had no idea about quizzing but was an insane lateral thinker got this
+[2025-09-28T15:15:41Z] Akshay: ‘Ye akela aadmi hoga’
+[2025-09-28T15:16:10Z] Aditi Bapat: Yes the blacked out box says 'forced to live alone'
+[2025-09-28T15:17:02Z] Aditi Bapat: Number 5. Y'all are eating these up. ↵ In a recent American football game, Mike Evans received a 55 yard throw from his teammate that resulted in a touchdown. After the touchdown, Mike threw the ball into the stands at Raymond James Stadium. A person in the crowd caught the ball and decided to auction it. ↵ In the auction, the football sold for $518,628 through New Jersey auction company Lelands. Unfortunately, within 24 hours of the football being bought, it lost almost it’s entire value, and the sale was voided. ↵ What made the football sell for such a high price and why did it lose its value almost instantly?
+[2025-09-28T15:17:19Z] Abhishek S: Record broken?
+[2025-09-28T15:17:27Z] Srikanth Kapali: Here to listen and learn. Excellent quality of questions and great answers
+[2025-09-28T15:17:30Z] Tapish: Record got broken
+[2025-09-28T15:17:38Z] Dhruv: @⁨Akshay⁩ this is built for you
+[2025-09-28T15:17:41Z] Akshay: stolen ball
+[2025-09-28T15:17:49Z] Akshay: The lady who fought and took it?
+[2025-09-28T15:17:51Z] Akshay: The viral video
+[2025-09-28T15:18:03Z] Abhishek Vats: I think it was supposed to be bradys last pass?
+[2025-09-28T15:18:12Z] Srikanth Kapali: Brady's last TD pass
+[2025-09-28T15:18:15Z] Tapish: Makes sense
+[2025-09-28T15:18:32Z] Aditi Bapat: Yesss!! Brady pulled a Shahid Afridi and came back from retirement 😶
+[2025-09-28T15:19:13Z] R: A sentence I never thought of reading
+[2025-09-28T15:19:23Z] Tapish: Cristiano at MUFC inspired him he said. Next season Cristiano left MUFC and Brady was playing for glazers.
+[2025-09-28T15:19:25Z] Khandoba: How many times is that now?
+[2025-09-28T15:19:29Z] Abhishek Vats: My NFL logic is to go with Brady because that's the only thing I know about NFL or hand egg league (just to irk @⁨Akshay⁩ )😂
+[2025-09-28T15:20:00Z] Khandoba: Great questions
+[2025-09-28T15:20:11Z] Aditi Bapat: That and now Travis Kelce thanks to TayTay.
+[2025-09-28T15:20:25Z] Abhishek Vats: Yes 😅
+[2025-09-28T15:21:06Z] Srikanth Kapali: NFL equivalent of Afridi was Brett favre
+[2025-09-28T15:21:09Z] Pavan Pamidimarri: i even learned about a position called tight end due to him
+[2025-09-28T15:21:33Z] Kartikey Pradhan: that's what she said
+[2025-09-28T15:21:51Z] Aditi Bapat: Before I put in the next, I want to say I'm unsurprisingly scared of the speed at which everyone is answering, but also so impressed by everyone!! 🥹
+[2025-09-28T15:22:05Z] Abhishek Vats: I learnt it from office meetings 😂
+[2025-09-28T15:22:11Z] Abhishek Vats: Oh sorry it was dead end 😂🙈
+[2025-09-28T15:22:26Z] Aditi Bapat: Also the position of Taylor haters every time she's on camera during the game.
+[2025-09-28T15:22:35Z] Srikanth Kapali: I learned American football from football for dummies
+[2025-09-28T15:22:48Z] Farhan: So bad at NFL knowledge that I'm reading this as "tight end due to him" position
+[2025-09-28T15:22:52Z] Khandoba: especially that guy
+[2025-09-28T15:22:54Z] Tapish: So did Brady
+[2025-09-28T15:22:59Z] Srikanth Kapali: And going to a college with a good football team helped
+[2025-09-28T15:23:15Z] Dhruv: Same that was the learning experience for me! Go Pokes!
+[2025-09-28T15:23:28Z] Abhishek S: I know Gronk because of Tom Brady roast
+[2025-09-28T15:23:56Z] Pavan Pamidimarri: there’s an NFL stadium called Levi’s Stadium and i have watches a few 49ers games, but still don’t know anything useful about hte game
+[2025-09-28T15:24:19Z] Tapish: RCB fans everywhere. They’re boasting of 49 too much now ‎<This message was edited>
+[2025-09-28T15:24:23Z] Khandoba: i know levi's stadium only because of concerts
+[2025-09-28T15:24:43Z] Khandoba: ye sahi nahi kar rahe aap
+[2025-09-28T15:24:48Z] Pavan Pamidimarri: World Cup matches will be played there
+[2025-09-28T15:24:53Z] Aditi Bapat: Obligatory Nicki Glaser reminder ❤️
+[2025-09-28T15:25:01Z] Khandoba: 😭
+[2025-09-28T15:25:01Z] Srikanth Kapali: 49ers, Bill Walsh, and West Coast offense dominated the 80s
+[2025-09-28T15:25:29Z] Aditi Bapat: And the traffic around the area for those of us living there 🥲
+[2025-09-28T15:25:55Z] Pavan Pamidimarri: oh yeah, i have learned to never drive there for a game.
+[2025-09-28T15:25:57Z] Khandoba: last time i went there i left the uber and walked the last mile and half
+[2025-09-28T15:26:03Z] Abhishek Vats: Legend ❤️
+[2025-09-28T15:26:17Z] Aditi Bapat: Number 6. ↵ This legendary film took almost 11 years in the making with portions being shot, re-shot, edited and so on, as told by the creator (who often abbreviated himself to M.G.S). The plot of the movie goes as follows: ↵ The protagonist lives at 451 Hanover Lane, Clarks Summit, PA 18411. He is trying to overcome the demons of losing his wife, when he is summoned by the President of the United States, President Jackson to save the country from his old nemesis. This nemesis is planning on bombing the NHL all star game. This matter is personal for him after the nemesis attacked the WNBA all star game, and killed his wife. To save the game, he ends up killing innocent people, gets bullets in his brain, heart, back and in other places and yet manages to inform the President about the location of the bomb. In a cruel twist, the third act reveals the President to be behind the entire scheme. The movie ends with the protagonist saving the game, killing his nemesis and trying his best to return to a life of tranquility, with no success ↵ Released on February 17, 2011 with an IMDB rating of 9.3, which movie are we talking about? ‎<This message was edited>
+[2025-09-28T15:26:35Z] Anurag Bhide: Threat lebvel midnight
+[2025-09-28T15:26:39Z] Khandoba: threat kevel midnight
+[2025-09-28T15:27:12Z] Pavan Pamidimarri: first answer i knew, but people answered before i finished reading the question
+[2025-09-28T15:27:23Z] Abhishek S: Michael Scarn
+[2025-09-28T15:27:28Z] Tapish: Michael Scott’s movie
+[2025-09-28T15:27:36Z] Anurag Bhide: Mark Greg Sputnik was enough :P
+[2025-09-28T15:27:38Z] Tapish: Threat level midnight yes
+[2025-09-28T15:27:45Z] Aditi Bapat: The typos are directly proportional to the speed
+[2025-09-28T15:27:51Z] Tapish: I couldn’t remember the name 😂
+[2025-09-28T15:28:02Z] Aditi Bapat: Wasn't that Michael Gary Scott? 😮
+[2025-09-28T15:28:27Z] Anurag Bhide: Wet cement, its drying
+[2025-09-28T15:29:06Z] Tapish: You miss one hundred percent of the shots you don’t take
+[2025-09-28T15:29:19Z] Tapish: -Wayne Gretzky and Michael Scott
+[2025-09-28T15:29:56Z] Farhan: Answer level lightning
+[2025-09-28T15:30:49Z] Aditi Bapat: Number 7. ↵ The 1980 film, Cannibal Holocaust tells the story of a group of documentary filmmakers who go missing after they take a trek into the Amazon rainforest to make a movie about cannibal tribes. The movie was controversial due to several reasons leading to it being banned in some countries. ↵ Ultra-Realistic depiction of human and animal deaths , gore and suffering ↵ An extremely ‘unique’ promotion strategy for the movie, where most of the cast was absent from the promotions ↵ The combination of a and b however, led to some unintended consequences for director Riggoro Deodata. What were the consequences for the director?
+[2025-09-28T15:31:04Z] Abhishek S: It was banned
+[2025-09-28T15:31:40Z] Abhishek S: People thought they were actually dead?
+[2025-09-28T15:31:47Z] Abhishek S: Court case? Prosecution?
+[2025-09-28T15:31:54Z] Srikanth Kapali: R rated ?
+[2025-09-28T15:32:14Z] Kartikey Pradhan: the director was banned from going to amazon ever?
+[2025-09-28T15:32:53Z] Khandoba: got eaten?😅
+[2025-09-28T15:32:57Z] Farhan: Sentenced to be eaten
+[2025-09-28T15:32:59Z] Farhan: 🤔
+[2025-09-28T15:33:41Z] Khandoba: charged with murders?
+[2025-09-28T15:33:43Z] Aditi Bapat: Great guess!! . Yes. ↵ The director was charged with murder, with the suspicion that he took method acting/directing too far. ↵ The actors came out of hiding and testified at his trial and he was acquitted.
+[2025-09-28T15:33:47Z] Srikanth Kapali: Arrested on suspicion of murder
+[2025-09-28T15:34:05Z] Pavan Pamidimarri: wow
+[2025-09-28T15:34:34Z] Abhishek S: Such an entertaining set of questions!
+[2025-09-28T15:34:47Z] Sayu Sekhar: yeah was about to write that..
+[2025-09-28T15:35:56Z] R: And very workable! Kudos is in order
+[2025-09-28T15:36:01Z] Aditi Bapat: I shortlisted 28 from my set of 120 or so. I have to hop on my weekly family Skype call in an hour, but we might actually run through all of them🙊
+[2025-09-28T15:36:29Z] Aditi Bapat: Not 120, my set of 28
+[2025-09-28T15:37:33Z] Aditi Bapat: Number 8. Connect these movies (non exhaustive) ↵ Karz ↵ Armaan ↵ Aitraz ↵ Ek thi Dayan ↵ Andhadhun ↵ Badla ↵ Makdi
+[2025-09-28T15:37:57Z] Srikanth Kapali: Remakes ?
+[2025-09-28T15:38:08Z] Khandoba: French movie remakes?
+[2025-09-28T15:38:13Z] Ricky: Femme fatale?
+[2025-09-28T15:38:17Z] Abhishek S: Honey Irani?
+[2025-09-28T15:38:23Z] Abhishek S: Akhtars?
+[2025-09-28T15:38:52Z] Dhruv: Shabana Azmi?
+[2025-09-28T15:38:54Z] Farhan: Naveen Nischal?
+[2025-09-28T15:39:46Z] Aditi Bapat: Very very close.
+[2025-09-28T15:40:06Z] Ricky: As in female villians... ‎<This message was edited>
+[2025-09-28T15:40:10Z] Aditi Bapat: Actually yes. I had 'female villains' ib my mind
+[2025-09-28T15:40:12Z] Shashank Jalani: Female antagonists
+[2025-09-28T15:40:19Z] Dhruv: Female villains yes
+[2025-09-28T15:40:20Z] Aditi Bapat: You got it👍🏽
+[2025-09-28T15:40:25Z] Khandoba: noice
+[2025-09-28T15:41:29Z] Khandoba: i must clarify, i didn't say nice because females were villains, i just liked the funda
+[2025-09-28T15:41:37Z] Abhishek S: Needed Gupt in there but it would be a spoiler 😀
+[2025-09-28T15:41:45Z] Aditi Bapat: Number 9. ↵ Belinda Jane Clark is an Australian former cricketer and sports administrator. A right-handed batter, she served as the captain of the national women's team for eleven years and was a member of triumphant World Cup campaigns in 1997 and 2005. Widely considered a pioneer of the game and one of the greatest female players ever, Clark was the first woman inducted into the Australian Cricket Hall of Fame and the second in the ICC Cricket Hall of Fame. ↵ She scored ___* against Denmark in the 1997 World Cup in Mumbai, making her the first person to achieve this particular record. She scored a total of 970 runs in the year 1997, which remains a Women's ODI record for the most runs in a single calendar year. ↵ What record did she achieve with the score against Denmark?
+[2025-09-28T15:41:53Z] Kartikey Pradhan: first double
+[2025-09-28T15:41:55Z] Kartikey Pradhan: hundred
+[2025-09-28T15:41:56Z] Abhishek S: 2200
+[2025-09-28T15:41:57Z] Anurag Bhide: Highest odui score
+[2025-09-28T15:41:59Z] Abhishek S: 200
+[2025-09-28T15:41:59Z] Anurag Bhide: 224
+[2025-09-28T15:42:00Z] Naman Agarwal: 200
+[2025-09-28T15:42:00Z] Dhruv: First 200
+[2025-09-28T15:42:03Z] Abhishek Vats: First double hundred
+[2025-09-28T15:42:08Z] Tapish: First 200
+[2025-09-28T15:42:30Z] Aditi Bapat: Yeah yeah I get it, this was too easy 🙄 ‎<This message was edited>
+[2025-09-28T15:42:53Z] Pavan Pamidimarri: not for me
+[2025-09-28T15:42:58Z] Naman Agarwal: Belinda Clark is quizmaster’s sneaky question dream
+[2025-09-28T15:43:01Z] Abhishek Vats: These questions are important for confidence 😀
+[2025-09-28T15:43:16Z] Kartikey Pradhan: Tendlya left the chat
+[2025-09-28T15:43:49Z] Anurag Bhide: Btw Belinda clarks score came at MIG ground where tendlya has played 1000s of times
+[2025-09-28T15:44:06Z] Aditi Bapat: Aee Vedya... ↵ (sorry)
+[2025-09-28T15:44:21Z] Tapish: He’s gone to fetch the grip
+[2025-09-28T15:45:28Z] Anurag Bhide: It is walking distance from where he grew up
+[2025-09-28T15:45:40Z] Aditi Bapat: Number 10.
+[2025-09-28T15:45:57Z] Kartikey Pradhan: dumb ways to die
+[2025-09-28T15:45:58Z] Abhishek S: Dumb ways to die
+[2025-09-28T15:46:00Z] Shashank Jalani: Dumb ways to die
+[2025-09-28T15:46:01Z] Srikanth Kapali: So many ways to die
+[2025-09-28T15:46:17Z] Khandoba: so fast
+[2025-09-28T15:46:17Z] Abhishek Vats: Dumb ways to die
+[2025-09-28T15:46:38Z] Pavan Pamidimarri: dumb ways to die
+[2025-09-28T15:47:28Z] Aditi Bapat: https://youtu.be/IJNR2EpS0jw?si=sMaG7NBU6ZGcWEov ↵ Taking this opportunity to share the cutest video for your new earworm
+[2025-09-28T15:47:57Z] Abhishek S: I was actually singing the answers as they came in
+[2025-09-28T15:48:09Z] Abhishek Vats: We made a promo for action movies when I was working a star movies with this song 😅
+[2025-09-28T15:48:43Z] Aditi Bapat: Number 11. ↵ In September of 1999, after almost 10 months of travel to Mars, the Mars Climate Orbiter burned and broke into pieces, because of  navigation error that caused the spacecraft to burn up in the Martian atmosphere upon attempting to enter orbit. It turned out that there was a miscommunication between the navigation team at the Jet Propulsion Laboratory (JPL) at NASA and the Lockheed Martin Astronautics in Denver, Colorado, which designed and built the spacecraft. What was this miscommunication? ‎<This message was edited>
+[2025-09-28T15:49:00Z] Pavan Pamidimarri: unit conversion
+[2025-09-28T15:49:02Z] Srikanth Kapali: Missed conversion to.meteocn
+[2025-09-28T15:49:07Z] Pavan Pamidimarri: metric to imperial
+[2025-09-28T15:49:13Z] Srikanth Kapali: Tô métric
+[2025-09-28T15:49:50Z] Pavan Pamidimarri: this one is in my list too 🙂
+[2025-09-28T15:50:14Z] Sayu Sekhar: This unit conversion has caused so many headaches… ↵ From students to engineers
+[2025-09-28T15:50:28Z] Aditi Bapat: Yess!! NASA uses metric conversions and Lockheed Martin uses US units.
+[2025-09-28T15:50:52Z] Srikanth Kapali: One time an engineer I know was changing the value of pi due to failed unit conversion
+[2025-09-28T15:50:59Z] Pavan Pamidimarri: I graduated in 1998 with a degree in aerospace engg so this one is very memorable for me
+[2025-09-28T15:52:15Z] Aditi Bapat: Number 12. ↵ During the 1940 Blitzkrieg, the Luftwaffe often struck under the cover of darkness. In order to make it more difficult for the German planes to hit targets, the British government issued city wide blackouts. The Royal Air Force were able to repel the German fighters in part because of the development of a new, secret radar technology. The on-board Airborne Interception Radar (AI), first used by the RAF in 1939, had the ability to pinpoint enemy bombers before they reached the English Channel ↵ To keep this radar technology under wraps, the Allies provided another reason for the success of this operation. This reason is based off a scientific fact that has been stretched into a myth. ↵ What was the reason behind the operational success used by the Allies?
+[2025-09-28T15:52:31Z] Abhishek Vats: Carrots improve eyesight
+[2025-09-28T15:52:33Z] Prathamesh: Carrots
+[2025-09-28T15:52:35Z] Khandoba: carrots ‎<This message was edited>
+[2025-09-28T15:52:40Z] Sayu Sekhar: Carrots
+[2025-09-28T15:52:40Z] Srikanth Kapali: Carrots
+[2025-09-28T15:52:41Z] Pavan Pamidimarri: carrots eyesight
+[2025-09-28T15:53:10Z] Kartikey Pradhan: perpetrated by Allies, adopted by middle class brown parents ffs
+[2025-09-28T15:53:20Z] Aditi Bapat: Sigh. I even removed the hint about 'getting kids to eat healthy'
+[2025-09-28T15:53:48Z] Prathamesh: I just woke up. This is how I am quizzing 😂 ‎image omitted
+[2025-09-28T15:53:49Z] Pavan Pamidimarri: ate too many carrots as a kid because of this
+[2025-09-28T15:54:11Z] Srikanth Kapali: So did Trump I guess
+[2025-09-28T15:54:45Z] Khandoba: he made a paste and applied to his face
+[2025-09-28T15:54:49Z] Abhishek S: He was supposed to eat them, not rub them all over his body
+[2025-09-28T15:55:11Z] Srikanth Kapali: Maybe he misread Cheetos as carrots
+[2025-09-28T15:55:14Z] Sayu Sekhar: Visa holders are leaving the chat 😅
+[2025-09-28T15:55:21Z] Khandoba: no one knows about carrots as much as me
+[2025-09-28T15:55:23Z] Prathamesh: My company’s founder/CEO switched from vegan to paleo diet because his mom commented how his skin is turning yellow because of too much beta carotene 🤣
+[2025-09-28T15:56:38Z] Aditi Bapat: Number 13. ‎image omitted
+[2025-09-28T15:57:26Z] Pavan Pamidimarri: horses to scratch their underbelly
+[2025-09-28T15:57:27Z] Kartikey Pradhan: cats getting entangled in them while climbing...?
+[2025-09-28T15:57:30Z] Sayu Sekhar: Am trying to guess which animal and why
+[2025-09-28T15:57:33Z] Abhishek Vats: Can be used to play tennis? 🙈
+[2025-09-28T15:58:05Z] Abhishek S: Horses are like cats too?
+[2025-09-28T15:58:29Z] Sayu Sekhar: Topologically yes I guess
+[2025-09-28T15:58:43Z] Aditi Bapat: I know you meant it as a serious answer but I'm dying laughing at this😂
+[2025-09-28T15:58:53Z] Tapish: I can only think of sheep jumping over them 😂 ‎<This message was edited>
+[2025-09-28T15:58:57Z] Pavan Pamidimarri: i wasn’t too serious
+[2025-09-28T15:59:03Z] Abhishek Vats: Might be correct thinking of it
+[2025-09-28T15:59:23Z] Abhishek Vats: British are known for doing such things 😅😂
+[2025-09-28T15:59:23Z] Aditi Bapat: Hint: WW II
+[2025-09-28T15:59:24Z] Abhishek S: I really thought it was
+[2025-09-28T15:59:40Z] Kartikey Pradhan: optical illusion?
+[2025-09-28T15:59:46Z] Prathamesh: Spies to scratch their underbelly?
+[2025-09-28T15:59:48Z] Abhishek S: Cause Hitler is short?
+[2025-09-28T16:00:03Z] Khandoba: hitler to scratch his underbelly
+[2025-09-28T16:00:11Z] Tapish: They carried injured soldiers on them?
+[2025-09-28T16:00:13Z] Abhishek Vats: Most of steel was used for weapons?
+[2025-09-28T16:00:14Z] Pavan Pamidimarri: something to do with air raid shelters
+[2025-09-28T16:00:17Z] Tapish: Curved ends as handles?
+[2025-09-28T16:00:23Z] Aditi Bapat: YESSS
+[2025-09-28T16:00:33Z] Abhishek S: Great crack!
+[2025-09-28T16:00:38Z] Pavan Pamidimarri: great crack
+[2025-09-28T16:00:46Z] Abhishek Vats: Great crack 🙌🏻
+[2025-09-28T16:00:48Z] Kartikey Pradhan: scratching bellies or backs in one way or the other
+[2025-09-28T16:00:51Z] Ricky: Maybe it gave an impression that the area has already been attacked/raided
+[2025-09-28T16:01:13Z] Sayu Sekhar: Whoa no animals were involved 😄
+[2025-09-28T16:01:25Z] Abhishek Vats: Also great question 🙌🏻
+[2025-09-28T16:01:27Z] Aditi Bapat: As much as I love all the answers here. ↵ They are called Stretcher Railings I believe. We're used as stretchers during the war.
+[2025-09-28T16:01:44Z] Aditi Bapat: Also heard about helmets being used as pots and cauldrons
+[2025-09-28T16:01:45Z] Sayu Sekhar: Was a great question
+[2025-09-28T16:01:57Z] Aditi Bapat: And no belly scratches
+[2025-09-28T16:02:50Z] Aditi Bapat: Number 14. ↵ X ambled along while its opponent Y paused mid-race with onlookers cheering for it to move forward at a farm in Beijing, China, on September 30 2024. Footage shows spectators urging Y to move, but it appeared too distracted, resting on the ground instead. ↵ In the end, X won the entertaining race, drawing cheers from the audience, while Y lay on the grass, sniffing around. ↵ What are X&Y? What was being tested in this race?
+[2025-09-28T16:03:04Z] Kartikey Pradhan: rabbit and tortoise
+[2025-09-28T16:03:05Z] Sayu Sekhar: Hare vs tortoise ‎<This message was edited>
+[2025-09-28T16:03:10Z] Khandoba: turtle and hare
+[2025-09-28T16:03:27Z] Pavan Pamidimarri: the tortoise and hare story
+[2025-09-28T16:03:57Z] Khandoba: did i say turtle? the aquatic animal
+[2025-09-28T16:03:57Z] Kartikey Pradhan: what a stupid fkn animal for ages now
+[2025-09-28T16:04:09Z] Khandoba: let me find chullu bhar pani
+[2025-09-28T16:04:24Z] Pavan Pamidimarri: for the record, who won?
+[2025-09-28T16:04:28Z] Prathamesh: Wait, who is X and who is Y?
+[2025-09-28T16:04:32Z] Kartikey Pradhan: somebody scratch its back
+[2025-09-28T16:04:37Z] Farhan: X is Hare, Y is Tortoise
+[2025-09-28T16:04:39Z] Tapish: The tortoise
+[2025-09-28T16:04:53Z] Abhishek S: Ambler would be Tortoise I guess
+[2025-09-28T16:05:00Z] Tapish: If I remember correctly
+[2025-09-28T16:05:00Z] Aditi Bapat: Yes. A real life Tortoise and Hare story where the Tortoise won I think. Video exists on YouTube
+[2025-09-28T16:05:27Z] Tapish: Yes the tortoise won I think, saw the clip
+[2025-09-28T16:05:36Z] Pavan Pamidimarri: https://www.youtube.com/watch?v=yq6gMOm6J90
+[2025-09-28T16:05:42Z] Aditi Bapat: Number 15. ‎image omitted
+[2025-09-28T16:05:58Z] Kartikey Pradhan: Mufasa
+[2025-09-28T16:06:05Z] Shashank Jalani: Mufasa
+[2025-09-28T16:06:15Z] Abhishek Vats: Mufasa
+[2025-09-28T16:06:18Z] Tapish: Mufasa
+[2025-09-28T16:06:55Z] Anurag Bhide: Mufasa
+[2025-09-28T16:07:29Z] Prathamesh: Aditi, the variety in your questions is insane!
+[2025-09-28T16:07:45Z] Aditi Bapat: Very very close. ↵ It's the Lion King live action. (I think Aashish Vidyarthi vs Meiyang Chang as Scar)
+[2025-09-28T16:08:21Z] Aditi Bapat: I panicked after everyone answered so confidently, but you all are also right!!
+[2025-09-28T16:08:44Z] Abhishek Vats: Oh yup mufasa was abraam no?
+[2025-09-28T16:08:48Z] Aditi Bapat: At the time I made this question Mufasa hadn't released 🙊
+[2025-09-28T16:08:48Z] Prathamesh: Quizmaster is God!
+[2025-09-28T16:09:00Z] Shashank Jalani: It was Aryan only
+[2025-09-28T16:09:06Z] Anurag Bhide: Shahrukh Aryan dekhke jumped the gun 😅
+[2025-09-28T16:09:10Z] Abhishek S: I also was gonna guess Lion King but everyone else was so confident I didn't 😂
+[2025-09-28T16:09:19Z] Aditi Bapat: But as KV says 'I'll give it to you"
+[2025-09-28T16:09:27Z] Farhan: Same here.
+[2025-09-28T16:09:46Z] Farhan: Haven't seen Mufasa so was mighth confused after the answers
+[2025-09-28T16:10:49Z] Abhishek S: Mudguard 😬
+[2025-09-28T16:10:50Z] Kartikey Pradhan: mudguard
+[2025-09-28T16:10:55Z] Prathamesh: Mudguard
+[2025-09-28T16:11:11Z] Abhishek S: Seems too direct so I'm definitely doubting this
+[2025-09-28T16:11:18Z] Khandoba: Yeah
+[2025-09-28T16:11:40Z] Anurag Bhide: dashboard?
+[2025-09-28T16:11:44Z] Prathamesh: I was confused between this an windshield, but this one seemed more logical ‎<This message was edited>
+[2025-09-28T16:12:08Z] Abhishek S: Yeah dashboard definitely made more sense
+[2025-09-28T16:12:20Z] Aditi Bapat: Bingo. ↵ The mud was a red herring. The position of the board in the carriage is the hint 🙊
+[2025-09-28T16:13:20Z] Aditi Bapat: Number 17. (Non exhaustive) ‎image omitted
+[2025-09-28T16:13:44Z] Lzafeer Ahmad B F: I think this was also a question in one of the KVizzing episodes.
+[2025-09-28T16:13:46Z] Abhishek S: Animals
+[2025-09-28T16:14:16Z] Khandoba: Now you don’t think it’s too direct🤣🤣
+[2025-09-28T16:14:22Z] Kartikey Pradhan: would have guessed sins but they are 8
+[2025-09-28T16:14:31Z] Tapish: Animals in Madagascar movie?
+[2025-09-28T16:14:35Z] Anurag Bhide: Though same but non exhuastive
+[2025-09-28T16:14:41Z] Tapish: Nah! The zebra is missing
+[2025-09-28T16:14:52Z] Abhishek S: Zootopia
+[2025-09-28T16:14:56Z] Khandoba: Jumanji animals?
+[2025-09-28T16:14:56Z] Farhan: Some movie cast though, some animals are plural
+[2025-09-28T16:15:05Z] Aditi Bapat: If I wasn't privy to your otherwise quizzing prowess I would've judged you.
+[2025-09-28T16:15:14Z] Ankit Jain: attenborough documentary?
+[2025-09-28T16:15:32Z] Kartikey Pradhan: disney characters
+[2025-09-28T16:15:40Z] Aditi Bapat: Okay a hint is- these animals are incapable of doing a certain physical activity.
+[2025-09-28T16:15:45Z] Akshay: Underrated pt. I have the Huskies to thank too
+[2025-09-28T16:15:49Z] Prathamesh: Can’t run
+[2025-09-28T16:15:50Z] Abhishek S: Lie down
+[2025-09-28T16:15:55Z] Khandoba: Can’t jump
+[2025-09-28T16:16:01Z] Kartikey Pradhan: overturn
+[2025-09-28T16:16:03Z] Shashank Jalani: Can’t jump
+[2025-09-28T16:16:06Z] Pavan Pamidimarri: jump
+[2025-09-28T16:16:20Z] Pavan Pamidimarri: great question
+[2025-09-28T16:16:22Z] Ankit Jain: can’t roll?
+[2025-09-28T16:16:43Z] Khandoba: I feel like Sloths can jump, they just think it’s nonsense activity
+[2025-09-28T16:16:52Z] Aditi Bapat: Yess! Can't jump. One of the questions where once you know the answer is obvious and fascinating.
+[2025-09-28T16:16:53Z] Prathamesh: I just knew elephants can’t run because they have no knees
+[2025-09-28T16:16:58Z] Kartikey Pradhan: chameleons? :O
+[2025-09-28T16:16:59Z] Pavan Pamidimarri: sloths are not motivated enough to jump
+[2025-09-28T16:17:03Z] Tapish: So does Inzy bhai 😂
+[2025-09-28T16:17:15Z] Abhishek S: Don't they have 4?
+[2025-09-28T16:17:31Z] Abhishek S: The only animal with
+[2025-09-28T16:18:02Z] Prathamesh: Man, the one thing I knew is incorrect!
+[2025-09-28T16:18:25Z] Khandoba: Aunty wo butter knife hai
+[2025-09-28T16:18:36Z] Akshay: Darrk ‎<This message was edited>
+[2025-09-28T16:18:49Z] Aditi Bapat: Number 18. Taking a leaf out of @⁨Akshay⁩ 's book ‎image omitted
+[2025-09-28T16:19:09Z] Kartikey Pradhan: drinking age
+[2025-09-28T16:19:12Z] Pavan Pamidimarri: legal age for driving license
+[2025-09-28T16:19:12Z] Aditi Bapat: What timing to be back
+[2025-09-28T16:19:12Z] Dhruv: Dil dhadkane do
+[2025-09-28T16:19:33Z] Pavan Pamidimarri: no, we do have driving licenses in california
+[2025-09-28T16:19:34Z] Abhishek Vats: Age of marriage,m
+[2025-09-28T16:19:36Z] Abhishek Vats: ?
+[2025-09-28T16:19:38Z] Lzafeer Ahmad B F: Super super questions. Just catching up on all questions.
+[2025-09-28T16:19:43Z] Akshay: Age of consent?
+[2025-09-28T16:19:47Z] Abhishek Vats: Or consent
+[2025-09-28T16:19:59Z] Akshay: Correct marriage seems right!
+[2025-09-28T16:20:00Z] Dhruv: Number of joints you can smoke in a day
+[2025-09-28T16:20:32Z] Khandoba: Those are rookie numbers
+[2025-09-28T16:20:36Z] Abhishek Vats: Just extended the previous guesses 🙈
+[2025-09-28T16:20:48Z] Aditi Bapat: Minimum legal age for marriage. Kinda sad. But at least I'm proud of having lived in Minnesota for 8 years I guess? 🥲
+[2025-09-28T16:20:54Z] Abhishek Vats: Agree 😂
+[2025-09-28T16:21:03Z] Pavan Pamidimarri: no limit in California
+[2025-09-28T16:21:15Z] Dhruv: Makes sense
+[2025-09-28T16:21:22Z] Khandoba: Say no more
+[2025-09-28T16:21:40Z] Prathamesh: These liberals!
+[2025-09-28T16:21:41Z] Aditi Bapat: I think that's what it means, I'm forgetting now and I shall check and confirm after 🫡
+[2025-09-28T16:22:39Z] Aditi Bapat: Number 19. ‎image omitted
+[2025-09-28T16:22:40Z] Pavan Pamidimarri: apparently you can get married as a child in California if you can get a court order
+[2025-09-28T16:22:48Z] Akshay: Insane
+[2025-09-28T16:23:01Z] Khandoba: Grindelwald
+[2025-09-28T16:23:08Z] Khandoba: Dumnledore
+[2025-09-28T16:23:11Z] Khandoba: Snape
+[2025-09-28T16:23:12Z] Khandoba: Harry
+[2025-09-28T16:23:13Z] Akshay: Elder wand
+[2025-09-28T16:23:13Z] Abhishek S: Grindelwald, Voldemort
+[2025-09-28T16:23:15Z] Anurag Bhide: Dumbledore, Malfoy Harry
+[2025-09-28T16:23:18Z] Abhishek Vats: Grindelwald, Dumbledore voldemort harry
+[2025-09-28T16:23:20Z] Sayu Sekhar: Elder wand
+[2025-09-28T16:23:27Z] Abhishek S: Elder wand, yes!
+[2025-09-28T16:23:29Z] Abhishek Vats: Sorry Malfoy and Harry 🙈
+[2025-09-28T16:23:46Z] Tapish: Grindelwald ↵ Dumbledore ↵ Malfoy ↵ Harry
+[2025-09-28T16:23:49Z] Pavan Pamidimarri: i was going to answer “Harry Potter” in the spirit of the previous “animals” answer
+[2025-09-28T16:23:56Z] Prathamesh: I was so wrong. I was thinking people with crazy names like Vlad the Impaler 🤣
+[2025-09-28T16:24:02Z] Khandoba: Damn, it was malfoy
+[2025-09-28T16:24:04Z] Pavan Pamidimarri: because i haven’t read any of those books
+[2025-09-28T16:24:05Z] Aditi Bapat: Yesss! Everyone is correct!!
+[2025-09-28T16:24:19Z] Kartikey Pradhan: i was almost writing the three musketeers
+[2025-09-28T16:24:24Z] Kartikey Pradhan: what a dumbfuck answer
+[2025-09-28T16:24:39Z] Abhishek Vats: Gellert was the confirmation after peverell
+[2025-09-28T16:24:39Z] Prathamesh: Still better than mine
+[2025-09-28T16:24:57Z] Farhan: Tendulkar, Kohli, Gill 😂
+[2025-09-28T16:25:04Z] Prathamesh: I knew one day I’d regret only watching the movies
+[2025-09-28T16:25:05Z] Anurag Bhide: Gregorovitch as well, the Bulgarian wandmaker
+[2025-09-28T16:25:14Z] Abhishek Vats: I did the same mistake as voldemort 🙈
+[2025-09-28T16:25:18Z] Abhishek Vats: Yup
+[2025-09-28T16:25:43Z] Khandoba: You can figure out from movies, if you have watched them enough times😅
+[2025-09-28T16:25:45Z] Aditi Bapat: Number 20. ↵ When competitive sports were a total non-starter at the beginning of COVID, the YouTube channel ‘Jelle’s X runs’ exploded in subscriptions, because it fulfilled the hunger of people to watch competitive races. These races did not involve people-to-people contact and ensured social distancing so they were safe to watch for the audience and safe for the participants as well. Starting with ~ 600K subs on March 09, 2020, they reached 1 million subs within two months in May 2020. Today, the channel has ~ 1.4million subs ↵ The races are often watched live, with teams and players having their sets of loyal fans. Some of the fun team names include like Balls of Chaos, Gliding Glaciers, Raspberry Racers, Rojo Rollers, Snowballs, Savage Speeders etc. The participants have names like Amethyst, Black Night, Wisp of Darkness, Blazing Fireball etc. ↵ The channel, teams and competitors became so popular that John Oliver’s show Last Week Tonight and HBO sponsored the competitions/races on this channel during COVID to make sure they continued during a period where they faced funding issues ↵ What races were featured on this channel, something that continues even today?
+[2025-09-28T16:25:54Z] Abhishek Vats: Marble?
+[2025-09-28T16:25:59Z] Lzafeer Ahmad B F: Marbles
+[2025-09-28T16:26:01Z] Kartikey Pradhan: marble races
+[2025-09-28T16:26:02Z] Lzafeer Ahmad B F: I used to love it
+[2025-09-28T16:26:12Z] Abhishek Vats: Was one of the watchers 😂
+[2025-09-28T16:26:20Z] Lzafeer Ahmad B F: Friends and I used to bet on these races
+[2025-09-28T16:26:22Z] Abhishek Vats: And subscribers 🙈
+[2025-09-28T16:26:24Z] Lzafeer Ahmad B F: 😂
+[2025-09-28T16:26:28Z] Khandoba: Ohh that was one dedicated channel?
+[2025-09-28T16:26:29Z] Lzafeer Ahmad B F: Same!
+[2025-09-28T16:26:30Z] Abhishek Vats: Dream11 😂
+[2025-09-28T16:26:39Z] Khandoba: I thought it was bunch of people doing the same thing
+[2025-09-28T16:26:41Z] Khandoba: TIL
+[2025-09-28T16:26:53Z] Lzafeer Ahmad B F: They even got sponsors
+[2025-09-28T16:26:59Z] Lzafeer Ahmad B F: I think Jimmy Kimmel ?
+[2025-09-28T16:27:03Z] Abhishek Vats: Multiple channels
+[2025-09-28T16:27:07Z] Aditi Bapat: The longer the question, the faster the answer 🫡
+[2025-09-28T16:27:31Z] Abhishek Vats: Deep rooted covid memories in this one 😂
+[2025-09-28T16:27:34Z] Lzafeer Ahmad B F: Or Jimmy Fallon.
+[2025-09-28T16:27:45Z] Lzafeer Ahmad B F: One of the two I think sponsored a “season”
+[2025-09-28T16:28:37Z] Aditi Bapat: Number 21. ‎image omitted
+[2025-09-28T16:28:47Z] Khandoba: Star wars
+[2025-09-28T16:28:47Z] Lzafeer Ahmad B F: Big Bang theaory
+[2025-09-28T16:28:51Z] Lzafeer Ahmad B F: Theory
+[2025-09-28T16:28:55Z] Khandoba: Tbbt
+[2025-09-28T16:28:56Z] Abhishek S: BBT
+[2025-09-28T16:28:56Z] Sayu Sekhar: This
+[2025-09-28T16:28:56Z] Tapish: Big Bang theory cameos
+[2025-09-28T16:29:08Z] Abhishek Vats: TBBT cameos
+[2025-09-28T16:29:09Z] Khandoba: Tbbt seems right
+[2025-09-28T16:29:13Z] Pavan Pamidimarri: big bang theory cameos
+[2025-09-28T16:29:19Z] Khandoba: Damn jumped the gun so fast
+[2025-09-28T16:29:27Z] Khandoba: Didn’t even get to the end
+[2025-09-28T16:29:39Z] Lzafeer Ahmad B F: Leonard Nimoy and Wozniak just popped out
+[2025-09-28T16:29:42Z] Kartikey Pradhan: lesson: just type the bloody abbreviation
+[2025-09-28T16:29:42Z] Aditi Bapat: Speed k chakkar me shortcut toh dekho
+[2025-09-28T16:29:57Z] Akshay: No levar burton? :’(
+[2025-09-28T16:29:58Z] Sayu Sekhar: 🤣
+[2025-09-28T16:30:01Z] Pavan Pamidimarri: will wheaton is missing
+[2025-09-28T16:30:18Z] Khandoba: In my defense the top 3 are Star Wars so I’m sure it was meant to be a red herring
+[2025-09-28T16:30:25Z] Tapish: Sheldon had an on and off thing with him hence 🤣
+[2025-09-28T16:30:27Z] Abhishek S: He kinda became a regular
+[2025-09-28T16:30:27Z] Khandoba: He’s there no?
+[2025-09-28T16:30:54Z] Aditi Bapat: Non exhaustive- a quiz masters eternal cover to people questioning the facts 😌
+[2025-09-28T16:31:03Z] Akshay: Yes he is 😅 i am anpadh
+[2025-09-28T16:31:45Z] Abhishek Vats: You missed a chance to insert the Leclerc meme 😅
+[2025-09-28T16:32:15Z] Aditi Bapat: Number 22. Apologies for the Zooming gymnastics ‎image omitted
+[2025-09-28T16:32:31Z] Abhishek Vats: Ashutosh gowarikar?
+[2025-09-28T16:32:38Z] Abhishek Vats: Just went with cid 😂
+[2025-09-28T16:32:40Z] Akshay: Cid was giveaway!
+[2025-09-28T16:32:41Z] Kartikey Pradhan: gowariker
+[2025-09-28T16:33:03Z] Abhishek Vats: Plus chamatkaar is there too 😀
+[2025-09-28T16:33:10Z] Abhishek S: Ashutosh Gowarikar
+[2025-09-28T16:33:30Z] Kartikey Pradhan: Kabhi Haan Kabhi Naa was my hint
+[2025-09-28T16:33:33Z] Sayu Sekhar: Yes Monty 😆
+[2025-09-28T16:33:50Z] Khandoba: i am an extreme slow reader i am realizing
+[2025-09-28T16:33:59Z] Aditi Bapat: By now everyone has guessed I'm low-key proud of Maharashtrians making it in Hindi films 🙊😛
+[2025-09-28T16:34:03Z] Abhishek S: I took too long to read movie and character names
+[2025-09-28T16:34:13Z] Akshay: There is a pattern, yes :)
+[2025-09-28T16:34:13Z] Shashank Jalani: Me too
+[2025-09-28T16:34:15Z] Khandoba: I did not see kabhi han kabhi na and chamatkar before asnwers popped up
+[2025-09-28T16:34:15Z] Abhishek Vats: Aap Mumbai aa sakte hain 😂
+[2025-09-28T16:34:29Z] Akshay: Aa sakte hain? 😅
+[2025-09-28T16:35:16Z] Abhishek Vats: Indian idol and Marathi speaking politics crossover 😅
+[2025-09-28T16:35:18Z] Aditi Bapat: Number 23. ‎image omitted
+[2025-09-28T16:35:36Z] Kartikey Pradhan: national symbols
+[2025-09-28T16:35:39Z] Akshay: Endemic to only one country? ‎<This message was edited>
+[2025-09-28T16:35:42Z] Lzafeer Ahmad B F: Exclusive to specific countries ?
+[2025-09-28T16:35:43Z] Aditi Bapat: Also a pattern of being fascinated with animals
+[2025-09-28T16:36:02Z] Khandoba: one of them can do kung fu
+[2025-09-28T16:36:08Z] Aditi Bapat: 😂😂😂
+[2025-09-28T16:36:12Z] Lzafeer Ahmad B F: Better phrased. But what I meant to say
+[2025-09-28T16:36:26Z] Abhishek Vats: What's the croc species?
+[2025-09-28T16:36:30Z] Abhishek S: Animals likh diya warna I knew what I was gonna guess
+[2025-09-28T16:36:33Z] Abhishek S: Ghariyal
+[2025-09-28T16:36:48Z] Abhishek Vats: They have a longer snout no?
+[2025-09-28T16:36:50Z] Aditi Bapat: Yess. Endemic to countries. Added the American Alligator as a confusion
+[2025-09-28T16:36:51Z] Akshay: Ghadial
+[2025-09-28T16:36:55Z] Sayu Sekhar: Yep and thinner
+[2025-09-28T16:36:56Z] Lzafeer Ahmad B F: Kabir Bedi’s paaltu
+[2025-09-28T16:36:59Z] Abhishek Vats: Yup
+[2025-09-28T16:37:11Z] Khandoba: khun bhari maang
+[2025-09-28T16:37:12Z] Khandoba: classsic
+[2025-09-28T16:37:22Z] Kartikey Pradhan: 4th time bhari maang
+[2025-09-28T16:37:32Z] Akshay: Ouch
+[2025-09-28T16:37:55Z] Aditi Bapat: Number 24. ↵ The character XY is based on P.L Travers’s book series, and marks Disney’s first film to combine live action and animation in a film. The novels were loved by Walt Disney’s daughters, and Disney spent 20 years trying to purchase the rights of the film. Travers hated the use of animation in the movies and she ruled out any further adaptations of the series. This movie was _____ ______’s first feature film, after an illustrious Broadway career. She however did not appear in the sequel ‘XY Returns, as she wanted audiences to fully appreciate Emily Blunt’s reprisal of the role. ↵ ID the movie.
+[2025-09-28T16:38:11Z] Abhishek Vats: Marry poppins
+[2025-09-28T16:38:12Z] Khandoba: mARY POPPINS
+[2025-09-28T16:38:21Z] Pavan Pamidimarri: Mary Poppins
+[2025-09-28T16:38:25Z] Akshay: Nice!
+[2025-09-28T16:38:30Z] Abhishek S: Julie Andrews is the blank?
+[2025-09-28T16:38:51Z] Aditi Bapat: Yes. This was my 'know thy Disney' question for some of my guy friends in my group 🙊
+[2025-09-28T16:38:52Z] Abhishek Vats: Essential mary poppins meme
+[2025-09-28T16:38:55Z] Khandoba: yondu is my fav marry poppins
+[2025-09-28T16:39:13Z] Aditi Bapat: Okay last one coming!!
+[2025-09-28T16:39:19Z] Khandoba: here we go
+[2025-09-28T16:39:24Z] Kartikey Pradhan: you said 28
+[2025-09-28T16:39:29Z] Kartikey Pradhan: it's 25th only
+[2025-09-28T16:39:35Z] Abhishek Vats: Hahhahahahha
+[2025-09-28T16:39:36Z] Kartikey Pradhan: oh the fam skype thing
+[2025-09-28T16:39:38Z] Khandoba: Dudley Dursley flashback
+[2025-09-28T16:39:39Z] Kartikey Pradhan: sorry
+[2025-09-28T16:39:56Z] Lzafeer Ahmad B F: I am catching up from first but also have fomo on wanting to participate.
+[2025-09-28T16:40:02Z] Aditi Bapat: Number 25. ‎image omitted
+[2025-09-28T16:40:13Z] Abhishek Vats: Quizmaster is God 😅
+[2025-09-28T16:40:26Z] Khandoba: mornings here
+[2025-09-28T16:40:26Z] Akshay: Really? Hahahaa
+[2025-09-28T16:40:29Z] Khandoba: from friends
+[2025-09-28T16:40:44Z] Sayu Sekhar: Are the blanks indicative 🤪
+[2025-09-28T16:40:45Z] Tapish: Mornings here
+[2025-09-28T16:40:46Z] Aditi Bapat: You don't think? 🥲
+[2025-09-28T16:40:47Z] Tapish: Joey
+[2025-09-28T16:40:57Z] Tapish: And his neighbour 🤣
+[2025-09-28T16:41:14Z] Akshay: No i meant as the answer
+[2025-09-28T16:41:38Z] Akshay: QM is God of the Universe
+[2025-09-28T16:41:45Z] Aditi Bapat: Yesss! Kind of a 'signing off for the morning' question 😌
+[2025-09-28T16:42:03Z] Khandoba: what an absolute blast
+[2025-09-28T16:42:05Z] Prathamesh: In case anyone wants more, I have 5 questions for a friend which I can post here for a flash quiz
+[2025-09-28T16:42:10Z] Kartikey Pradhan: 2+5=7 thala for a reason
+[2025-09-28T16:42:17Z] Khandoba: Thank you Aditi🙏🏼
+[2025-09-28T16:42:20Z] Pavan Pamidimarri: great set of questions, lot of fun even though I knew the answers to just a handful of them, thank you for doing this
+[2025-09-28T16:42:27Z] Kartikey Pradhan: fantastic set
+[2025-09-28T16:42:28Z] Abhishek Vats: Great fun @⁨Aditi Bapat⁩ 🙌🏻 ↵ Amazing set of questions
+[2025-09-28T16:42:43Z] Khandoba: convey our thanks to Chitragupt Bapat
+[2025-09-28T16:42:50Z] Tapish: Thank you @⁨Aditi Bapat⁩ ! This was great fun!
+[2025-09-28T16:42:58Z] Kartikey Pradhan: may god bless you with good internet speed during the skype call
+[2025-09-28T16:43:15Z] Abhishek S: This was even more fun than the cricket. Thanks, Aditi!
+[2025-09-28T16:43:18Z] Pavan Pamidimarri: why not? this group is always up for more questions
+[2025-09-28T16:43:27Z] Aditi Bapat: What a beast it has been playing this with you all!!! ↵ I couldn't post the questions fast enough!! 🥹🥹 ↵ I have nothing to do with your intelligence but I'm also somehow proud of everyone 🫡
+[2025-09-28T16:43:45Z] Akshay: Lovely Qs, I learnt a lot!
+[2025-09-28T16:43:44Z] Abhishek Vats: Please do
+[2025-09-28T16:43:50Z] Akshay: Thanks @⁨Aditi Bapat⁩ !! ‎<This message was edited>
+[2025-09-28T16:43:56Z] Aditi Bapat: High praise, thank you! 🫡😌
+[2025-09-28T16:44:10Z] Lzafeer Ahmad B F: Super super set of questions. Very fun!
+[2025-09-28T16:44:30Z] Aditi Bapat: Chitragupt is taking a shower, so we'll try some sort of scoring later in the day.
+[2025-09-28T16:45:08Z] Abhishek S: As KV says, scores really don't matter here
+[2025-09-28T16:45:27Z] Aditi Bapat: Also want to mention that a lot of the questions were made my him, so will relay all of your compliments to him🤗
+[2025-09-28T16:45:51Z] Abhishek S: Please do!
+[2025-09-28T16:46:32Z] Abhishek Vats: @⁨~Prathamesh⁩ we are ready and waiting 😂
+[2025-09-28T16:46:57Z] Prathamesh: Across the world, ancient civilizations have built different types of pyramids that have fascinated explorers and archaeologists for centuries. Some are world-famous, like the ones in Giza, while others remain hidden and are overlooked by most people. Many assume the most iconic examples automatically hold the record for sheer number, but that assumption would be misleading. In fact, one nation holds the surprising title of having the largest number of pyramids on Earth. Which country is it?
+[2025-09-28T16:47:11Z] Abhishek Vats: Mexico
+[2025-09-28T16:47:17Z] Lzafeer Ahmad B F: Mexico
+[2025-09-28T16:47:19Z] Prathamesh: Keep your own scores 😂
+[2025-09-28T16:47:34Z] Abhishek Vats: We will go by this rule 😂
+[2025-09-28T16:47:49Z] Lzafeer Ahmad B F: If you get my reaction notification. Please ignore. I am simultaneously going through questions from the beginning on the laptop. Lol
+[2025-09-28T16:48:24Z] Prathamesh: I’ll wait to see who else answers
+[2025-09-28T16:50:32Z] Abhishek Vats: Now I am thinking if the answer is incorrect 😂
+[2025-09-28T16:50:57Z] Prathamesh: The answer is Sudan. It has around 250 Nubian pyramids
+[2025-09-28T16:51:09Z] Abhishek S: Yeah I know of one pyramid in Mexico
+[2025-09-28T16:52:08Z] Abhishek Vats: I just remembered two countries with pyramids 😂
+[2025-09-28T16:52:17Z] Kartikey Pradhan: Damn
+[2025-09-28T16:52:32Z] Prathamesh: Should I do a proper quiz like Aditi? But only 10-15 question though 😂 ↵ I can make a few more.
+[2025-09-28T16:52:43Z] Kartikey Pradhan: what a question
+[2025-09-28T16:52:57Z] Abhishek Vats: Quizmasters decision is the final decision 😂
+[2025-09-28T16:53:14Z] Abhishek S: Let me know if anyone here objects to more questions
+[2025-09-28T16:54:33Z] Farhan: Object? People here object to hints ‎<This message was edited>
+[2025-09-28T16:54:51Z] Farhan: Not questions
+[2025-09-28T16:55:45Z] Lzafeer Ahmad B F: WOW! WHat a question and crack this was! Proper TIL
+[2025-09-28T16:57:39Z] Pavan Pamidimarri: Sudan
+[2025-09-28T16:58:47Z] Prathamesh: I think I’ll do a proper 10-15 question quiz. I’ll post the details soon.
+[2025-09-28T17:01:21Z] Prathamesh: My wife is the only person who knows this, but I have a (healthy) one sided rivalry with Pavan. She finds it very amusing. ↵ Everytime Pavan answers something others can’t (which is very often), my instinctive reaction is always, “What the hell Pavan” 😂
+[2025-09-28T17:01:56Z] Kartikey Pradhan: A lot of us feel that
+[2025-09-28T17:02:17Z] Dhruv: Us bro us
+[2025-09-28T17:03:11Z] Sidhesh K K: Pavan has a celebrity status in the streets of kvizzing
+[2025-09-28T17:05:25Z] Pavan Pamidimarri: Being from a different generation helps, I know some old stuff that you all are too young to know
+[2025-09-28T17:05:31Z] Lzafeer Ahmad B F: Oh shit. I didn’t realise the later part of the question mentioned about the sponsorship as well. It was John Oliver. Right. My bad.
+[2025-09-28T17:06:02Z] Lzafeer Ahmad B F: All caught up now. Lets quiz
+[2025-09-28T17:06:36Z] Kartikey Pradhan: i am sure you know more than me from my generation also
+[2025-09-28T17:06:52Z] Sumit Gupta: Lets please make sure that there is not a big game at that time ↵ Cant concrntrate on either rn😭 ‎<This message was edited>
+[2025-09-28T17:08:00Z] Prathamesh: Does next Saturday have any game?
+[2025-09-28T17:08:41Z] Akshay: Oklahoma v Texas 😁
+[2025-09-28T17:09:12Z] Akshay: Kidding
+[2025-09-28T17:09:40Z] Prathamesh: I was just going to say that handegg doesn’t count
+[2025-09-28T17:09:47Z] Akshay: I think it’s best to do it with pre scheduling if you have a large no of qns
+[2025-09-28T17:09:59Z] Akshay: If it’s more tp then anytime and those online can try
+[2025-09-28T17:10:36Z] Akshay: Hopefully we get more and more contributions with time so that the sun never sets on the kvizzing empire 😂
+[2025-09-28T17:14:27Z] Abhishek S: A question from something I was researching recently: During his aerial tour, Jimmy Carter said: "Somebody said it looked like a moonscape. But the moon looks like a golf course compared to what's up there" What was he describing?
+[2025-09-28T17:15:43Z] Akshay: Up there suggests arctic circle?
+[2025-09-28T17:15:49Z] Abhishek Vats: Some earthquake ?
+[2025-09-28T17:15:52Z] Akshay: North polar ice cap
+[2025-09-28T17:15:54Z] Pavan Pamidimarri: eruption of Mt St. Helens?
+[2025-09-28T17:16:03Z] Pavan Pamidimarri: from Carter era
+[2025-09-28T17:16:07Z] Akshay: Nice
+[2025-09-28T17:16:08Z] Abhishek S: What the hell, Pavan 😂
+[2025-09-28T17:16:08Z] Akshay: 1980
+[2025-09-28T17:16:19Z] Abhishek S: Yeah, absolutely correct
+[2025-09-28T17:16:27Z] Lzafeer Ahmad B F: Wow. I was going to guess those canyon formations.
+[2025-09-28T17:16:34Z] Akshay: Those are south
+[2025-09-28T17:16:37Z] Akshay: So up there wouldn’t fit
+[2025-09-28T17:16:46Z] Pavan Pamidimarri: my initial guess was Area 51, but thought “why Carter"
+[2025-09-28T17:16:49Z] Prathamesh: Petition to rename the group to this 😂
+[2025-09-28T17:16:57Z] Akshay: Apt
+[2025-09-28T17:17:45Z] Abhishek Vats: I was thinking about this but the description looked a bit eerie so thought might be some disaster
+[2025-09-28T17:18:19Z] Ankit Jain: I was going to say Utah Badlands 😀
+[2025-09-28T17:18:57Z] Lzafeer Ahmad B F: Or Bolivian salt pans would have been my other guess
+[2025-09-28T17:19:17Z] Lzafeer Ahmad B F: Nice question
+[2025-09-28T17:19:37Z] Lzafeer Ahmad B F: Has this image in mind. ‎image omitted
+[2025-09-28T17:19:38Z] Ankit Jain: https://www.columbian.com/news/2013/dec/26/mount-st-helens-eruption-blackburn-lost-roll-film/
+[2025-09-28T17:19:56Z] Ankit Jain: amazing story related to Mt St Helens eruption
+[2025-09-28T17:20:45Z] Akshay: The story of Harry R. Truman is insane too
+[2025-09-28T17:20:54Z] Akshay: He refused to evacuate, perished
+[2025-09-28T17:21:08Z] Pavan Pamidimarri: is he related to Harry S Truman?
+[2025-09-28T17:21:27Z] Akshay: He lived in a small cottage near the volcano.
+[2025-09-28T17:22:33Z] Abhishek S: Yeah, came across this story too while I was looking at this incident. He became a folk hero of sorts for refusing to vacate
+[2025-09-28T17:22:41Z] Abhishek S: https://youtu.be/pO7DNs6LBBA?si=X3mOfoH3VBvXFsIj
+[2025-09-28T17:22:49Z] Abhishek S: This is what led me down the rabbit hole
+[2025-09-28T17:23:10Z] Akshay: https://en.wikipedia.org/wiki/Harry_R._Truman?wprov=sfti1#
+[2025-09-28T17:24:18Z] Akshay: This is incorrect. Apparently no connection to Truman
+[2025-09-28T17:24:45Z] Akshay: I was mistaken because they kept joking around in this podcast ep so i assumed there was a connection
+[2025-09-28T17:27:34Z] Akshay: This one: this is from a now defunct pod called Seattle Files, by a seattle comedian discussing history with other comedian guests, v hard to detect undertones when following along 😅 ↵ https://youtu.be/79E20XWg0D0?si=ZTAJiUR_3ZJFRwQ0
+[2025-09-28T17:28:02Z] Akshay: Was all the rage when i used to live there, even had live shows ‎<This message was edited>
+[2025-09-28T17:29:20Z] Prathamesh: It always makes me feel eerie that Mt. Rainier is technically classified as an active volcano and I can see it from my house 😅
+[2025-09-28T17:32:46Z] Ankit Jain: never tired of looking at Mt Rainier
+[2025-09-28T17:33:42Z] Akshay: Rainier is too far i think to cause major damage to Seattle areas. Maaybe around snoqualmie you could see lehars
+[2025-09-28T17:33:58Z] Akshay: Mt St Helens did send volcanic ash and dust as far up as Renton
+[2025-09-28T17:33:59Z] Ankit Jain: fruitful night out ‎image omitted
+[2025-09-28T17:34:02Z] Ankit Jain: fruitful night out ‎image omitted
+[2025-09-28T17:34:28Z] Lzafeer Ahmad B F: Speaking of mountains. ID this one. ‎image omitted
+[2025-09-28T17:34:46Z] Abhishek S: Ghazipur
+[2025-09-28T17:34:48Z] Lzafeer Ahmad B F: Even the local name will suffice.
+[2025-09-28T17:34:48Z] Abhishek Vats: Is this Ghazipur?
+[2025-09-28T17:34:50Z] Abhishek Vats: 😂
+[2025-09-28T17:34:51Z] Ankit Jain: ghazipur!
+[2025-09-28T17:34:59Z] Meghna: Lolol
+[2025-09-28T17:35:03Z] Lzafeer Ahmad B F: Correct! Ghazipur Garbage mountain
+[2025-09-28T17:35:11Z] Abhishek Vats: Good you omitted beautiful mountains 😂
+[2025-09-28T17:35:17Z] Ankit Jain: from rainier to ghazipur.. what a trajectory 😀
+[2025-09-28T17:36:11Z] Abhishek Vats: Beauty lies in the eye of the beholder 😂
+[2025-09-28T17:36:58Z] Meghna: I still remember looking at this from far away in a car while I was in school and thinking “wow hills” and then we drove closer and the smell and the crows made me realize what it actually is!
+[2025-09-28T17:39:24Z] Farhan: This is the only option in Delhi.
+[2025-09-28T17:40:23Z] Akshay: Ghitorni is there
+[2025-09-28T17:43:42Z] Abhishek S: Identify the blanked out educational institute ‎image omitted
+[2025-09-28T17:44:00Z] Khandoba: Reyansh
+[2025-09-28T17:44:02Z] Abhishek Vats: Is this that restaurant one!
+[2025-09-28T17:44:05Z] Abhishek Vats: Yes
+[2025-09-28T17:44:09Z] Kartikey Pradhan: IIPM
+[2025-09-28T17:44:40Z] Abhishek S: College of Hotel Management!
+[2025-09-28T17:44:47Z] Ricky: Hotel Management one... Itirating reels
+[2025-09-28T17:45:03Z] Pavan Pamidimarri: i don’t recognize most of the names
+[2025-09-28T17:45:20Z] Lzafeer Ahmad B F: You are inviting an earworm
+[2025-09-28T17:45:21Z] Abhishek S: Earworm of a song, though
+[2025-09-28T17:45:35Z] Kartikey Pradhan: my serious guess would have been that crazy english language school where kids only debate
+[2025-09-28T17:46:03Z] Lzafeer Ahmad B F: And not to forget the kids in the background who go
+[2025-09-28T17:46:05Z] Pavan Pamidimarri: now i am intrigued
+[2025-09-28T17:46:15Z] Kartikey Pradhan: and it's all about winning crowd points
+[2025-09-28T17:46:23Z] Meghna: But the world was at Sharda, and it didn’t make the list 🥲
+[2025-09-28T17:46:57Z] Abhishek Vats: Surprisingly amity also 😂
+[2025-09-28T17:47:04Z] Lzafeer Ahmad B F: Time stamped for you. https://youtu.be/gDS3UVdjOKg?si=5inSiR_Q3wb5JBdN&t=25
+[2025-09-28T17:47:33Z] Farhan: Song of the year..
+[2025-09-28T17:48:19Z] Akshay: THE COLLEGE IS NAMED REYANSH???
+[2025-09-28T17:48:21Z] Akshay: Hahahahaahhahahaha
+[2025-09-28T17:49:02Z] Lzafeer Ahmad B F: We have the benefit of having Pavan who could probably translate what the lyrics say
+[2025-09-28T17:49:14Z] Pavan Pamidimarri: 🤣🤣🤣 the song is in Telugu and from my home state of Telangana and i never came across it
+[2025-09-28T17:49:30Z] Kartikey Pradhan: what the hell pavan
+[2025-09-28T17:49:41Z] Abhishek Vats: Your social algorithm is safe then 😂😅
+[2025-09-28T17:50:21Z] Abhishek S: Not how we use it, but okay 😂
+[2025-09-28T17:50:44Z] Pavan Pamidimarri: the lyrics are inspiring: ↵ Reyansh College of Hotel Management ↵ It’s in Nizamabad ↵ O dear parents!
+[2025-09-28T18:10:09Z] Prathamesh: I don’t know Telugu, but I obviously know the Telugu lyrics 😂
+[2025-09-28T18:10:52Z] Prathamesh: Which is basically 1 sentence 😅
+[2025-09-28T18:44:02Z] Dhruv: What's this map represent? ‎image omitted
+[2025-09-28T18:46:54Z] Khandoba: Has this got something to do with temples?
+[2025-09-28T18:47:11Z] Pavan Pamidimarri: H-1B visa applications 🙂
+[2025-09-28T18:47:16Z] Meghna: There should be enough in Jammu Then
+[2025-09-28T18:47:18Z] Farhan: I'm trying to figure something on the same lines
+[2025-09-28T18:48:09Z] Sumit Gupta: Data is from Indian gov, so i doubt
+[2025-09-28T18:48:22Z] Pavan Pamidimarri: i was just kidding
+[2025-09-28T18:48:40Z] Sumit Gupta: I would have believed it if it was from US gov
+[2025-09-28T18:49:00Z] Akshay: Doubt they record by state anyway
+[2025-09-28T18:49:06Z] Akshay: May be by consulate
+[2025-09-28T18:49:30Z] Lzafeer Ahmad B F: It says postal coordinates
+[2025-09-28T18:49:41Z] Khandoba: Yeah
+[2025-09-28T18:49:51Z] Meghna: I thought it’s all the pujo pandals
+[2025-09-28T18:49:52Z] Lzafeer Ahmad B F: Is it postal savings account branches?
+[2025-09-28T18:49:54Z] Akshay: I am going to say vishnu temples
+[2025-09-28T18:50:03Z] Khandoba: Are there so many?
+[2025-09-28T18:50:08Z] Sidhesh K K: Towns/places named after lord Vishnu ‎<This message was edited>
+[2025-09-28T18:50:09Z] Abhishek S: All the places Modi has a gehra rishta with
+[2025-09-28T18:50:17Z] Pavan Pamidimarri: there are more vishnu temples in India than will fit on a map of India
+[2025-09-28T18:50:33Z] Abhishek Vats: I am trying to figure why such high density towards the eastern coast
+[2025-09-28T18:50:35Z] Khandoba: But like in different form?
+[2025-09-28T18:50:50Z] Akshay: I mean not counting small temples ‎<This message was edited>
+[2025-09-28T18:50:58Z] Akshay: Ones run by the govt mayhaps
+[2025-09-28T18:51:08Z] Tapish: Major railway stations?
+[2025-09-28T18:51:13Z] Khandoba: Not just eastern, I think Kerala got wiped by that wayward line
+[2025-09-28T18:51:26Z] Pavan Pamidimarri: no UP and Bihar have more railway stations than Telangana
+[2025-09-28T18:51:29Z] Dhruv: Yes related
+[2025-09-28T18:51:39Z] Abhishek Vats: Yup
+[2025-09-28T18:51:40Z] Khandoba: Temple post offices?
+[2025-09-28T18:51:44Z] Dhruv: Related
+[2025-09-28T18:51:56Z] Akshay: Towns named after Ram
+[2025-09-28T18:52:03Z] Akshay: Like Ramnagar etc?
+[2025-09-28T18:52:06Z] Dhruv: You're almost there
+[2025-09-28T18:52:10Z] Akshay: Hmmmm
+[2025-09-28T18:52:14Z] Khandoba: Towns named after Vishnu avatars
+[2025-09-28T18:52:19Z] Sidhesh K K: This
+[2025-09-28T18:52:33Z] Dhruv: Sorry yes
+[2025-09-28T18:52:40Z] Pavan Pamidimarri: nice
+[2025-09-28T18:52:44Z] Pavan Pamidimarri: good question
+[2025-09-28T18:52:46Z] Meghna: Nice 👌
+[2025-09-28T18:53:19Z] Pavan Pamidimarri: didn’t realize such a stark diff between eastern and western UP
+[2025-09-28T18:53:48Z] Akshay: Hmm
+[2025-09-28T18:53:50Z] Abhishek Vats: Oh so these towns are not in any danger of getting renamed then 😅
+[2025-09-28T18:54:02Z] Akshay: I don’t know how they count vishnu avatars
+[2025-09-28T18:54:18Z] Pavan Pamidimarri: is Gautama Buddha nagar counted, or not?
+[2025-09-28T18:54:29Z] Akshay: I mean is Ranchoddpur also in this list? For eg
+[2025-09-28T18:54:49Z] Abhishek Vats: Also modinagar?🙈
+[2025-09-28T18:54:58Z] Khandoba: India in pixels ka email dhundho
+[2025-09-28T18:55:10Z] Akshay: We aren’t counting kalki avatar just yet 😁
+[2025-09-28T18:55:10Z] Abhishek Vats: But they are famous for shikanji not chai 😅
+[2025-09-28T18:55:11Z] Dhruv: This is the actual image ‎image omitted
+[2025-09-28T18:55:12Z] Dhruv: This is the actual image ‎image omitted
+[2025-09-28T18:55:14Z] Pavan Pamidimarri: i am a member of that channel also, really like his work
+[2025-09-28T18:56:39Z] Akshay: Seems like only a subset of vishnu names
+[2025-09-28T18:56:46Z] Khandoba: I award myself part points for temple funda
+[2025-09-28T18:56:48Z] Akshay: Hari, Narayan, Vitthal
+[2025-09-28T18:57:35Z] Meghna: Technically Baramulla in J&K also named after vishnu’s avatar Varaha (comes from Varaha Mula)
+[2025-09-28T18:57:37Z] Akshay: So it’s actually Rahul Modinagar then 😂😂😂😂 iykyk
+[2025-09-28T18:57:57Z] Khandoba: Like shivnarayanpur
+[2025-09-28T18:58:18Z] Pavan Pamidimarri: Apropos question: The modern name of this city sounds like “<a specific number of> preachers.” It is an ancient city at the edge of a famous valley, and its original name means “boar’s molar.” The city was visited by the Chinese pilgrim Xuanzang and the Mughal emperors Akbar and Jahangir. What are the modern and ancient names of this city?
+[2025-09-28T18:58:44Z] Meghna: But I guess it’s not counted?
+[2025-09-28T18:59:02Z] Akshay: Don’t seem to be.
+[2025-09-28T18:59:04Z] Meghna: Bara mulla lol
+[2025-09-28T18:59:04Z] Sidhesh K K: Baramulla
+[2025-09-28T18:59:05Z] Akshay: Only some names
+[2025-09-28T18:59:21Z] Pavan Pamidimarri: yes! Meghna beat me to it
+[2025-09-28T19:00:37Z] Pavan Pamidimarri: from the map, it looks like Baramulla IS counted
+[2025-09-28T19:01:07Z] Meghna: Aaah I guess it is
+[2025-09-28T19:01:12Z] Meghna: Just not written
+[2025-09-28T19:01:15Z] Pavan Pamidimarri: it is at the western end of the valley
+[2025-09-28T19:01:17Z] Khandoba: I was gonna go with varah ka daant “verdant” (I know that doesn’t exist)
+[2025-09-28T19:01:57Z] Akshay: What are the different color dots?
+[2025-09-28T19:02:08Z] Khandoba: Extra Vishnu towns
+[2025-09-28T19:02:30Z] Dhruv: Different color nahi hai, i believe when its neighboring towns, blue on blue making dark blue
+[2025-09-28T19:02:31Z] Meghna: I thought Mula was for mool like origin so the origin of Varaha instead of the tooth/molar
+[2025-09-28T19:03:35Z] Meghna: But I guess it makes sense either way
+[2025-09-28T19:04:00Z] Pavan Pamidimarri: possible. i remember reading about a hill in the town that looks like a boar’s molar
+[2025-09-28T20:13:25Z] Pavan Pamidimarri: Attu is an American island at latitude 53 degrees north and longitude 173 degrees east. Something happened there in the 1940s that hasn’t happened anywhere else in the US in over 200 years. What?
+[2025-09-28T20:15:22Z] Akshay: Ww2
+[2025-09-28T20:15:25Z] Akshay: Battle
+[2025-09-28T20:15:29Z] Abhishek Vats: US Japan?
+[2025-09-28T20:15:35Z] Abhishek Vats: Battle
+[2025-09-28T20:15:40Z] Pavan Pamidimarri: looking for a specific answer
+[2025-09-28T20:15:48Z] Abhishek Vats: On land
+[2025-09-28T20:15:50Z] Pavan Pamidimarri: yes connected to WW2 and US-Japan
+[2025-09-28T20:15:50Z] Khandoba: Only land batttle
+[2025-09-28T20:15:54Z] Pavan Pamidimarri: correct
+[2025-09-28T20:15:55Z] Abhishek Vats: On American territory
+[2025-09-28T20:16:38Z] Pavan Pamidimarri: only territory of one of the 50 states where they had to fight to dislodge an occupying enemy
+[2025-09-28T20:16:46Z] Akshay: Guam? ‎<This message was edited>
+[2025-09-28T20:17:09Z] Pavan Pamidimarri: not one of the 50 states
+[2025-09-28T20:17:17Z] Akshay: Alaska wasnt too no?
+[2025-09-28T20:17:24Z] Akshay: Or was it
+[2025-09-28T20:17:25Z] Akshay: Wait
+[2025-09-28T20:17:27Z] Akshay: Chking
+[2025-09-28T20:17:30Z] Pavan Pamidimarri: yeah at that time it wasn't
+[2025-09-28T20:17:36Z] Pavan Pamidimarri: it became a state in teh 1950s
+[2025-09-28T20:17:44Z] Akshay: Awesome qn
+[2025-09-28T20:18:09Z] Akshay: Some time back i’d asked the taj mahal camouflage q
+[2025-09-28T20:18:37Z] Akshay: I found this apparently from 1940s ‎image omitted
+[2025-09-28T20:18:49Z] Abhishek Vats: Ww2
+[2025-09-28T20:18:57Z] Akshay: To protect against japanese bombers
+[2025-09-28T20:19:07Z] Akshay: Not sure of provenance
+[2025-09-28T20:19:09Z] Pavan Pamidimarri: nice find!!!
+[2025-09-28T20:19:28Z] Pavan Pamidimarri: althougth Japanese bombers got nowhere near north India
+[2025-09-28T20:19:36Z] Akshay: I had the same Q
+[2025-09-28T20:19:42Z] Pavan Pamidimarri: Calcutta and Madras had air raid alerts etc.
+[2025-09-28T20:19:47Z] Pavan Pamidimarri: after Singapore fell
+[2025-09-28T20:20:02Z] Akshay: One answer i got from a friend is that back then it was hard to get a reliable estimate of opposing firepower
+[2025-09-28T20:20:06Z] Pavan Pamidimarri: so this picture may be a fabrication — or from another time
+[2025-09-28T20:20:28Z] Pavan Pamidimarri: and i don’t think the Brits would have spent much time or money or protecting the Taj during that war
+[2025-09-28T20:21:34Z] Akshay: I dont think they cared abt taj mahal per se more to prevent it from being used as a landmark to hit nearby airbases
+[2025-09-28T20:22:26Z] Akshay: Kheria airbase in Agra was critical for recon, resupply, early warning
+[2025-09-28T20:22:42Z] Akshay: This is def possible
+[2025-09-28T20:24:20Z] Pavan Pamidimarri: interesting… my grandfather-in-law joined the RIAF around that time, apparently it was really small in the early 1940s, with very few planes until later in the war when they started airlifting supplies to the Kuomintang in China
+[2025-09-28T20:25:10Z] Akshay: India was a major stopover pt for aircraft going from ME to pacific theatres
+[2025-09-28T20:25:19Z] Pavan Pamidimarri: btw the shipment of supplies to China during that war resulted in a unique feature being built in Kharagpur, India. what?
+[2025-09-28T20:25:40Z] Abhishek Vats: Longest platform
+[2025-09-28T20:25:42Z] Akshay: Worlds longest platform
+[2025-09-28T20:25:44Z] Akshay: ?
+[2025-09-28T20:25:44Z] Abhishek Vats: ?
+[2025-09-28T20:25:47Z] Pavan Pamidimarri: yup
+[2025-09-28T20:26:00Z] Pavan Pamidimarri: world’s longest railway platform, still in use in Kharagpur Junction
+[2025-09-28T20:26:23Z] Pavan Pamidimarri: a simple sign used to mark it back in teh 1990s when i was there
+[2025-09-28T20:26:32Z] Abhishek Vats: Got to see it when we went there for Inter IIT
+[2025-09-28T20:26:52Z] Akshay: This was asked in the OG KBC is how i came to know
+[2025-09-28T20:58:03Z] Prathamesh: A girl in a YouTube video said that life in the 4 big American cities is different from life in other places in American. Of course, the comment section was fun because she did not mention which 4 cities and nobody could agree. ↵ The question is, what do you all think are the 4 big American cities and why?
+[2025-09-28T20:58:48Z] Pavan Pamidimarri: NY, Chicago, LA are for sure. We can all argue about what’s number 4
+[2025-09-28T20:58:57Z] Prathamesh: I’d say Miami
+[2025-09-28T20:58:58Z] Pavan Pamidimarri: I propose the Bay Area as 4
+[2025-09-28T20:59:31Z] Prathamesh: I don’t know why everyone says Chicago. I can’t seem to wrap my head around it
+[2025-09-28T20:59:49Z] Pavan Pamidimarri: because of hte outsized impact it has on America’s — and the world’s — economy as an innovation engine ‎<This message was edited>
+[2025-09-28T21:00:05Z] Pavan Pamidimarri: population, for one. and a lot of business is still based there
+[2025-09-28T21:00:41Z] Prathamesh: One of the criteria my friends and I were discussing is how many times the cities were mentioned by rappers and hip hop artists 🤣
+[2025-09-28T21:01:01Z] Khandoba: Chicago would be pretty high then
+[2025-09-28T21:01:04Z] Pavan Pamidimarri: Chicago is the only non-coastal city that is big enough to become a hub in teh middle
+[2025-09-28T21:01:16Z] Prathamesh: I’d say Detroit too
+[2025-09-28T21:01:40Z] Pavan Pamidimarri: by that metric, Detroit for sure, but otherwise that city has been on the decline for too long
+[2025-09-28T21:01:53Z] Khandoba: But extend this definition and say pop culture representation. Chicago might come #2 after NYC
+[2025-09-28T21:02:11Z] Khandoba: Maybe a tough fight with LA for second
+[2025-09-28T21:02:11Z] Prathamesh: I said Miami because of its cultural and artistic impact
+[2025-09-28T21:02:40Z] Pavan Pamidimarri: and incidentally, Chicago’s access to the ocean via the St. Lawrence Seaway played a big role in its growth
+[2025-09-28T21:02:43Z] Prathamesh: Someone pointed out that some of the best American chefs are all trained in Chicago
+[2025-09-28T21:02:55Z] Meghna: Chicago is a huggggeee commercial, financial and corporate hub.
+[2025-09-28T21:02:55Z] Pavan Pamidimarri: there is no pop culture without LA and NY
+[2025-09-28T21:03:13Z] Pavan Pamidimarri: in that order
+[2025-09-28T21:04:11Z] Pavan Pamidimarri: Bay Area also because it ranks high on the index that matters: desi presence
+[2025-09-28T21:09:14Z] Ankit Jain: there has to be a Texas city somewhere in the mix 😀
+[2025-09-28T21:09:39Z] Pavan Pamidimarri: they have too many similar-sized agglomerations
+[2025-09-28T21:09:43Z] Khandoba: If only for representation
+[2025-09-28T21:09:48Z] Pavan Pamidimarri: Houston may be
+[2025-09-28T21:10:21Z] Meghna: https://www.worldsbestcities.com/rankings/americas-best-cities/
+[2025-09-28T21:10:26Z] Pavan Pamidimarri: may be desi list is NY, Dallas, Bay Area, Miami?
+[2025-09-28T21:11:55Z] Prathamesh: NYC, LA, Miami and Chicago (begrudgingly) ↵ Alternative to Chicago is Austin
+[2025-09-28T21:12:30Z] Meghna: Desis are everywhere! There’s no escaping
+[2025-09-28T21:13:18Z] Meghna: Not the right metric
+[2025-09-28T21:13:22Z] Meghna: 😅
+[2025-09-28T21:14:32Z] Pavan Pamidimarri: Yeah, my list is: NY, LA, Chicago, SF Bay Area
+[2025-09-28T21:14:53Z] Pavan Pamidimarri: also coincides with where i have spent the most time among the major contenders
+[2025-09-28T21:17:52Z] Meghna: Being a biotech/pharma person my top city is Boston but obviously I’m biased (also because I like the English architecture and old town/slightly sleepy feels in specific parts)
+[2025-09-28T21:18:03Z] Pavan Pamidimarri: What do the numbers represent in this chart? ‎image omitted
+[2025-09-28T21:18:26Z] Meghna: Literacy?
+[2025-09-28T21:18:35Z] Pavan Pamidimarri: no
+[2025-09-28T21:21:21Z] Meghna: Prosperity?
+[2025-09-28T21:21:33Z] Prathamesh: Cars in the state as a % of population?
+[2025-09-28T21:21:40Z] Meghna: Well seems too low for Telangana
+[2025-09-28T21:21:47Z] Pavan Pamidimarri: No
+[2025-09-28T21:22:02Z] Pavan Pamidimarri: Somewhat related to this
+[2025-09-28T21:22:17Z] Prathamesh: College graduates?
+[2025-09-28T21:22:36Z] Meghna: Percentage of people who have completed schooling?
+[2025-09-28T21:22:48Z] Pavan Pamidimarri: Very close
+[2025-09-28T21:22:54Z] Khandoba: High school
+[2025-09-28T21:23:01Z] Meghna: Have passed 10th board exams
+[2025-09-28T21:23:04Z] Prathamesh: 10th grade passed
+[2025-09-28T21:23:20Z] Khandoba: 10+2 maybe
+[2025-09-28T21:23:36Z] Pavan Pamidimarri: Not how many go, but how good the results are
+[2025-09-28T21:23:48Z] Meghna: Board passing %
+[2025-09-28T21:23:55Z] Prathamesh: First class in 10th standard?
+[2025-09-28T21:24:02Z] Pavan Pamidimarri: School education quality index
+[2025-09-28T21:24:08Z] Meghna: Oooh
+[2025-09-28T21:24:22Z] Pavan Pamidimarri: TIL
+[2025-09-28T21:25:03Z] Khandoba: But if it’s in percent, it should be a ratio of X to Y na
+[2025-09-28T21:25:10Z] Pavan Pamidimarri: My state is doing a horrible job
+[2025-09-28T21:25:13Z] Khandoba: Any idea how they calculate
+[2025-09-28T21:25:16Z] Prathamesh: What does the % indicate?
+[2025-09-28T21:25:24Z] Meghna: Didn’t expected Telangana being that low
+[2025-09-28T21:25:29Z] Pavan Pamidimarri: Looking into it
+[2025-09-28T21:25:44Z] Meghna: Didn’t expect it to nearly match Bihar
+[2025-09-28T21:26:05Z] Meghna: Being from Bihar and having lived in Hyderabad it makes me question the reality
+[2025-09-28T21:26:13Z] Prathamesh: It’s quality, not quantity. Unless we know how it was measured, it is all arbitrary
+[2025-09-28T21:27:02Z] Khandoba: Also I don’t know just how representative of Telangana Hyderabad is ‎<This message was edited>
+[2025-09-28T21:28:41Z] Pavan Pamidimarri: It isn't, the urban rural divide is big, as in other states
+[2025-09-28T21:35:46Z] Meghna: Yaa I meant it as a joke because of the perception that exists (and all the amazing cheating scandals Bihar schools have been famous for, which again, isn’t representative of the entire state but still) 😅 ‎<This message was edited>
+[2025-09-28T23:15:08Z] Pavan Pamidimarri: seqi_document_0.pdf https://share.google/ECbIS7FpezQlvLmBW
+[2025-09-28T23:15:14Z] Pavan Pamidimarri: More on the index
+[2025-09-28T23:19:55Z] Khandoba: If all these slots work for you, you can let people select multiple options. Then you can do it at the time most people are available
+[2025-09-28T23:20:19Z] Prathamesh: Let me do the poll again. Can’t edit it
+[2025-09-28T23:43:03Z] Shvetal: Uffff! I was right about 1000 + messages but what a joy to read. And thank god for a teaching break to read them in!
+[2025-09-28T23:56:10Z] Naman Maheshwari: Beautiful, i have a very similar picture from 2 years ago.
+[2025-09-28T23:56:19Z] Naman Maheshwari: I was also at Rainier yesterday haha
+[2025-09-28T23:58:39Z] Naman Maheshwari: It does get pretty close though - Tacoma is 30-45 mins away. ‎image omitted

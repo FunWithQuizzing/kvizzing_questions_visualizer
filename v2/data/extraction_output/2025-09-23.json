@@ -1,0 +1,537 @@
+[
+  {
+    "question_timestamp": "2025-09-23T19:25:40Z",
+    "question_text": "Inaugural question: The repeal of the English Corn Laws in 1846 was the first major victory bringing this principle into practice. Ulysses S. Grant predicted that \"within 200 years, when America has gotten out of ___ all that it can offer, it too will adopt\" this principle. Karl Marx said tongue-in-cheek that \"those who wish for it desire it in order to alleviate the condition of the working class.\" America adopted the principle about 100 years after Grant's prediction, not 200 years. Name this economic principle that is facing heavy resistance in the 2020s.",
+    "question_asker": "Pavan Pamidimarri",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Free trade",
+    "answer_solver": "Akshay",
+    "answer_timestamp": "2025-09-23T19:26:26Z",
+    "answer_confirmed": true,
+    "confirmation_text": "correct",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-09-23T19:26:01Z",
+        "username": "Akshay",
+        "text": "Tariffs?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-23T19:26:11Z",
+        "username": "Pavan Pamidimarri",
+        "text": "not quite",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-23T19:26:26Z",
+        "username": "Akshay",
+        "text": "Free trade?",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-23T19:26:30Z",
+        "username": "Pavan Pamidimarri",
+        "text": "correct",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-23T19:27:22Z",
+        "username": "Pavan Pamidimarri",
+        "text": "the blank is 'protectionism', the opposite of 'free trade'",
+        "role": "answer_reveal",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-09-23T19:39:02Z",
+    "question_text": "Architect Paul Revere Williams was born in LA in 1894. This LA legend helped build and shape modern LA as we know it today, with his work spanning nearly six decades. Williams was a pioneer in a field with very few architects of color. To deal with conditions in the times when Williams was an architect, he developed a special skill to work on projects in 'different neighborhoods' with a 'different set of people'. What skill did he develop, which is somewhat unique even today?",
+    "question_asker": "Aditi Bapat",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Drawing/sketching upside down (so clients who were uncomfortable sitting next to a Black man would sit opposite him)",
+    "answer_solver": "Akshay",
+    "answer_timestamp": "2025-09-23T19:41:36Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Yess! Many of his white clients felt uncomfortable sitting next to a black man.",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-09-23T19:41:27Z",
+        "username": "Abhishek Vats",
+        "text": "Mirror drawing ?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-23T19:41:30Z",
+        "username": "Lzafeer Ahmad B F",
+        "text": "He was the first to do scale models?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-23T19:41:36Z",
+        "username": "Akshay",
+        "text": "I think i've read about this - he would draw ulta?",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-23T19:41:46Z",
+        "username": "Pavan Pamidimarri",
+        "text": "he had to draw upside down",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-23T19:41:52Z",
+        "username": "Abhishek Vats",
+        "text": "Because people would sit opposite him",
+        "role": "chat",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-23T19:41:58Z",
+        "username": "Pavan Pamidimarri",
+        "text": "because he couldn't stand on the same side as his colleagues",
+        "role": "chat",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-23T19:42:14Z",
+        "username": "Aditi Bapat",
+        "text": "Yess! Many of his white clients felt uncomfortable sitting next to a black man.",
+        "role": "confirmation",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-09-23T19:49:49Z",
+    "question_text": "Although there is a patent issued in 1938 to John Jordent for an improved version of this invention, no one knows who the very first inventor is, since the original patent was lost in a fire in the US Patent Office in 1936. We will never know the inventor of which life saving invention?",
+    "question_asker": "Aditi Bapat",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Fire hydrant",
+    "answer_solver": "Lzafeer Ahmad B F",
+    "answer_timestamp": "2025-09-23T19:51:49Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Bingo",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-09-23T19:50:20Z",
+        "username": "Shubham",
+        "text": "CPR?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-23T19:50:43Z",
+        "username": "Aditi Bapat",
+        "text": "Not quite. Some hints in the question. 🙊",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-23T19:51:03Z",
+        "username": "Akshay",
+        "text": "Extinguisher 🧯",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-23T19:51:13Z",
+        "username": "Aditi Bapat",
+        "text": "Very close",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-23T19:51:49Z",
+        "username": "Lzafeer Ahmad B F",
+        "text": "Fire Hydrant",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-23T19:52:01Z",
+        "username": "Aditi Bapat",
+        "text": "Bingo",
+        "role": "confirmation",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-09-23T19:56:10Z",
+    "question_text": "One meaning for the name of this place is 'a word that ends in a vowel.' It is located in a ravine formed by the Waghora river in Central India. The place was abandoned in medieval times and became forgotten. It was rediscovered in the 19th century by a British officer of Madras Presidency while hunting tiger. Name this place.",
+    "question_asker": "Pavan Pamidimarri",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Ajanta",
+    "answer_solver": "Khandoba",
+    "answer_timestamp": "2025-09-23T19:58:38Z",
+    "answer_confirmed": true,
+    "confirmation_text": "correct",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-09-23T19:57:59Z",
+        "username": "Shubham",
+        "text": "Bageshawat?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-23T19:58:05Z",
+        "username": "Pavan Pamidimarri",
+        "text": "no",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-23T19:58:07Z",
+        "username": "Srikanth Kapali",
+        "text": "Ellora",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-23T19:58:11Z",
+        "username": "Pavan Pamidimarri",
+        "text": "no",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-23T19:58:33Z",
+        "username": "Pavan Pamidimarri",
+        "text": "but close",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-23T19:58:38Z",
+        "username": "Khandoba",
+        "text": "Ajanta",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-23T19:58:49Z",
+        "username": "Pavan Pamidimarri",
+        "text": "correct",
+        "role": "confirmation",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-09-23T22:36:40Z",
+    "question_text": "Connect this exhaustive list: Ben Bailey, Cameron Jones, Katherine Spies, Anna Menon, Erin Overcash, Adam Fuhrmann, Dr. Lauren Edgar, Yuri Kubo, Rebecca Lawler, and Dr. Imelda Muller.",
+    "question_asker": "Srikanth Kapali",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "NASA Astronaut class of 2025, selected from 8000 candidates",
+    "answer_solver": "Akshay",
+    "answer_timestamp": "2025-09-23T22:37:44Z",
+    "answer_confirmed": false,
+    "confirmation_text": null,
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-09-23T22:37:44Z",
+        "username": "Akshay",
+        "text": "Astronauts",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-23T22:37:51Z",
+        "username": "Akshay",
+        "text": "Selected from public i think",
+        "role": "chat",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-23T22:38:05Z",
+        "username": "Srikanth Kapali",
+        "text": "Class of 2025 selected from 8000 candidates",
+        "role": "answer_reveal",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "medium"
+  },
+  {
+    "question_timestamp": "2025-09-23T22:20:36Z",
+    "question_text": "A patent filed in the 2000s, made for situations where you can't easily get up and walk away, designed with comfort in mind — however potential users would call the idea bizarre over practical. What is this invention?",
+    "question_asker": "Srikanth Kapali",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Airplane seat with built-in toilet",
+    "answer_solver": null,
+    "answer_timestamp": null,
+    "answer_confirmed": false,
+    "confirmation_text": null,
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-09-23T22:42:24Z",
+        "username": "Meghna",
+        "text": "Idk. Adult diapers?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-23T22:42:35Z",
+        "username": "Srikanth Kapali",
+        "text": "Very close",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-23T22:43:38Z",
+        "username": "Meghna",
+        "text": "Portable toilet or something?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-23T22:43:51Z",
+        "username": "Khandoba",
+        "text": "The closest thing is one of the organs",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-23T22:43:52Z",
+        "username": "Srikanth Kapali",
+        "text": "Airplane seats with built in toilet",
+        "role": "answer_reveal",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "medium"
+  },
+  {
+    "question_timestamp": "2025-09-23T22:39:21Z",
+    "question_text": "Here's a meta question. What's blacked out? [image: KVizzing quiz slide photographed at AMS airport, Dec 2024 — a quiz question about an Indian national park with the answer blacked out]",
+    "question_asker": "Akshay",
+    "has_media": true,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Kaziranga",
+    "answer_solver": "Srikanth Kapali",
+    "answer_timestamp": "2025-09-23T22:42:52Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Correct!",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-09-23T22:39:30Z",
+        "username": "Akshay",
+        "text": "Snapped at AMS, Dec 2024 - before this was referenced FYI",
+        "role": "chat",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-23T22:40:24Z",
+        "username": "Srikanth Kapali",
+        "text": "Yellowstone?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-23T22:40:31Z",
+        "username": "Akshay",
+        "text": "Nope. Think Meta",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-23T22:40:50Z",
+        "username": "Akshay",
+        "text": "Can call it a metakvizzing question ;)",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-23T22:42:52Z",
+        "username": "Srikanth Kapali",
+        "text": "Kaziranga",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-09-23T22:43:14Z",
+        "username": "Akshay",
+        "text": "Correct!",
+        "role": "confirmation",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-09-23T23:20:37Z",
+    "question_text": "Next question: king _ takes his daughter _ to __. They return _ years later and _ marries _. Second and fifth blanks are the same. Bonus points if you can identify what is this an example of.",
+    "question_asker": "Srikanth Kapali",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "King Kakudmi takes his daughter Revathi to Brahma Loka. They return 116 million years later and Revathi marries Balarama. This is one of the earliest examples of time dilation in ancient texts (from the Bhagavata Purana).",
+    "answer_solver": null,
+    "answer_timestamp": null,
+    "answer_confirmed": false,
+    "confirmation_text": null,
+    "answer_is_collaborative": true,
+    "answer_parts": [
+      {
+        "label": "King",
+        "text": "Kakudmi",
+        "solver": null
+      },
+      {
+        "label": "Daughter",
+        "text": "Revathi",
+        "solver": "Shvetal"
+      },
+      {
+        "label": "Destination",
+        "text": "Brahma Loka",
+        "solver": null
+      },
+      {
+        "label": "Years",
+        "text": "116 million years",
+        "solver": null
+      },
+      {
+        "label": "Marries",
+        "text": "Balarama",
+        "solver": null
+      },
+      {
+        "label": "Phenomenon",
+        "text": "Time dilation (from ancient texts)",
+        "solver": null
+      }
+    ],
+    "discussion": [
+      {
+        "timestamp": "2025-09-23T23:47:32Z",
+        "username": "Shvetal",
+        "text": "This is a great question. I have no idea and all sorts of random answers are occurring to me.",
+        "role": "chat",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-23T23:48:29Z",
+        "username": "Shubham",
+        "text": "Is this one of those things, there was once a boy in Nantucket something. I forgot what they are called. Limericks?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-23T23:49:48Z",
+        "username": "Srikanth Kapali",
+        "text": "One of the answers is Krishna's brother and then that will help fill the two matching blanks",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-23T23:49:58Z",
+        "username": "Srikanth Kapali",
+        "text": "Not a limerick",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-23T23:50:00Z",
+        "username": "Shvetal",
+        "text": "Balram is the brother? I cant remember the name of his wife.",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-09-23T23:52:37Z",
+        "username": "Srikanth Kapali",
+        "text": "Revathi",
+        "role": "answer_reveal",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-23T23:52:51Z",
+        "username": "Srikanth Kapali",
+        "text": "Balaram and revathi",
+        "role": "answer_reveal",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-23T23:56:59Z",
+        "username": "Srikanth Kapali",
+        "text": "Need her dad's name, where they went, and how long",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-09-24T00:03:01Z",
+        "username": "Srikanth Kapali",
+        "text": "king Kakudmi takes his daughter revathi to brahma loka. They return 116 million years later and revathi marries balarama. One of the earliest examples of time dilation on ancient texts. In brahma loka brahma is in a music concert and by the time concert ends (15 minutes) 116 million years have passed on earth so balarama avatar is there",
+        "role": "answer_reveal",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "medium"
+  }
+]

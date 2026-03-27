@@ -57,10 +57,11 @@ PROVIDERS = {
         "delay":       1.0,   # seconds between calls (free tier: 15 RPM)
     },
     "claude": {
-        "model":       "claude-haiku-4-5-20251001",
-        "env_key":     "ANTHROPIC_API_KEY",
-        "max_tokens":  8192,
-        "delay":       1.0,
+        "model":          "claude-haiku-4-5-20251001",
+        "fallback_model": "claude-sonnet-4-6",  # used if Haiku truncates; chunking used if Sonnet also truncates
+        "env_key":        "ANTHROPIC_API_KEY",
+        "max_tokens":     8192,
+        "delay":          1.0,
     },
     "groq": {
         "model":       "llama-3.3-70b-versatile",
@@ -161,6 +162,8 @@ The timestamp of answer_solver's is_correct=true entry in discussion. NOT the as
 
 ### answer_parts
 Use for any multi-part question (X/Y/Z, identify A and B, etc.), regardless of how many people solved it.
+If answer_parts is present, answer_text must NOT be null — always provide a combined answer string.
+If answer_parts entries have more than one distinct solver, answer_is_collaborative must be true.
 
 ### discussion roles
 - attempt: participant's answer try — is_correct must be true or false (NEVER null)
@@ -169,6 +172,10 @@ Use for any multi-part question (X/Y/Z, identify A and B, etc.), regardless of h
 - chat: banter, reactions, off-topic
 - answer_reveal: asker reveals the answer after a confirm or when no one got it
 - All non-attempt roles: is_correct must be null (NEVER true or false)
+
+Discussion entries must be in chronological order (ascending by timestamp).
+No discussion entry may have a timestamp earlier than question_timestamp.
+answer_solver must appear as a username in the discussion array.
 
 ### is_correct logic
 - true: this attempt directly led to the asker's explicit confirmation
@@ -220,6 +227,10 @@ NOTE: extraction_confidence="high" if and only if answer_confirmed=true. Never "
 6. Is answer_confirmed=true only when the ASKER gave explicit text confirmation?
 7. Is extraction_confidence="high" if and only if answer_confirmed=true?
 8. Are there any ↵ artifacts, media markers, or edit artifacts in text fields?
+9. Are discussion entries in chronological order with no entry before question_timestamp?
+10. Does answer_solver appear in the discussion array?
+11. If answer_parts is present, is answer_text non-null?
+12. If answer_parts has multiple distinct solvers, is answer_is_collaborative=true?
 
 ---
 
@@ -259,22 +270,77 @@ def call_gemini(date: str, file_content: str, cfg: dict) -> str:
     return response.choices[0].message.content
 
 
+def _claude_single(client, model: str, max_tokens: int, date: str, file_content: str) -> tuple[str, str]:
+    """Make one Claude call. Returns (text, stop_reason)."""
+    response = client.messages.create(
+        model=model,
+        max_tokens=max_tokens,
+        system=SYSTEM_PROMPT,
+        messages=[{"role": "user", "content": _user_message(date, file_content)}],
+        temperature=0.0,
+    )
+    return response.content[0].text, response.stop_reason
+
+
+def _claude_chunked(client, model: str, max_tokens: int, date: str, file_content: str) -> str:
+    """Split file into 2 overlapping halves, extract each, merge by question_timestamp."""
+    lines = file_content.splitlines()
+    mid = len(lines) // 2
+    overlap = 100  # lines of lookahead context for first chunk
+
+    chunk1 = "\n".join(lines[:mid + overlap])
+    chunk2 = "\n".join(lines[mid:])
+
+    print(f"\n    ↳ chunking into 2 halves ({len(lines[:mid + overlap])} / {len(lines[mid:])} lines)…", end=" ", flush=True)
+
+    text1, _ = _claude_single(client, model, max_tokens, date, chunk1)
+    time.sleep(1.0)
+    text2, _ = _claude_single(client, model, max_tokens, date, chunk2)
+
+    # Merge: parse both, deduplicate by question_timestamp (keep entry with more discussion)
+    try:
+        pairs1 = json.loads(text1.strip()) if text1.strip() else []
+        pairs2 = json.loads(text2.strip()) if text2.strip() else []
+    except json.JSONDecodeError:
+        # Return whichever chunk parsed successfully
+        try:
+            return text1
+        except Exception:
+            return text2
+
+    seen: dict[str, dict] = {}
+    for p in pairs1 + pairs2:
+        key = p.get("question_timestamp", "")
+        if key not in seen or len(p.get("discussion", [])) > len(seen[key].get("discussion", [])):
+            seen[key] = p
+
+    return json.dumps(list(seen.values()), ensure_ascii=False)
+
+
 def call_claude(date: str, file_content: str, cfg: dict) -> str:
     import anthropic
     api_key = os.environ.get(cfg["env_key"])
     if not api_key:
         raise RuntimeError(f"{cfg['env_key']} environment variable not set.")
     client = anthropic.Anthropic(api_key=api_key)
-    response = client.messages.create(
-        model=cfg["model"],
-        max_tokens=cfg["max_tokens"],
-        system=SYSTEM_PROMPT,
-        messages=[
-            {"role": "user", "content": _user_message(date, file_content)},
-        ],
-        temperature=0.0,
-    )
-    return response.content[0].text
+
+    primary_model   = cfg["model"]
+    fallback_model  = cfg.get("fallback_model", primary_model)
+    max_tokens      = cfg["max_tokens"]
+
+    # 1. Try primary model
+    text, stop_reason = _claude_single(client, primary_model, max_tokens, date, file_content)
+    if stop_reason != "max_tokens":
+        return text
+
+    # 2. Try fallback model
+    print(f"\n    ↳ truncated — retrying with {fallback_model}…", end=" ", flush=True)
+    text, stop_reason = _claude_single(client, fallback_model, max_tokens, date, file_content)
+    if stop_reason != "max_tokens":
+        return text
+
+    # 3. Chunk the file and extract in two halves
+    return _claude_chunked(client, fallback_model, max_tokens, date, file_content)
 
 
 def call_groq(date: str, file_content: str, cfg: dict) -> str:

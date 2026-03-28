@@ -142,7 +142,7 @@
       </div>
       <button
         onclick={surpriseMe}
-        class="flex-shrink-0 px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm rounded-lg transition-colors shadow-sm cursor-pointer"
+        class="flex-shrink-0 px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white font-semibold text-sm rounded-lg transition-colors shadow-sm cursor-pointer"
       >
         🎲 <span class="hidden sm:inline">Random question</span>
       </button>

@@ -123,9 +123,13 @@
       {#each filtered as session}
         <a
           href="/session/{session.id}"
-          class="block bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-orange-200 transition-all p-5 group"
+          class="relative overflow-hidden block bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-orange-200 transition-all p-5 group"
         >
-          <div class="flex items-start justify-between gap-4">
+          <div
+            class="absolute inset-0 bg-cover bg-center opacity-[0.07] dark:opacity-[0.12] transition-opacity group-hover:opacity-[0.12]"
+            style="background-image: url('/images/sessions/{session.id}.jpg')"
+          ></div>
+          <div class="relative flex items-start justify-between gap-4">
             <div class="flex-1 min-w-0">
               <!-- Title -->
               <div class="flex items-center gap-2 mb-1">

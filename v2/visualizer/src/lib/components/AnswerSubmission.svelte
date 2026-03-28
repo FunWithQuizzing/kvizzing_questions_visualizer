@@ -3,11 +3,13 @@
 
   let {
     correctAnswer,
+    solver = null,
     hints = [],
     maxAttempts = 3,
     onReveal,
   }: {
     correctAnswer: string;
+    solver?: string | null;
     hints?: string[];
     maxAttempts?: number;
     onReveal?: () => void;
@@ -171,9 +173,12 @@
       <p class="text-xs text-gray-500 mt-0.5">in {attempts.length} attempt{attempts.length !== 1 ? 's' : ''}</p>
     </div>
   {:else if revealed || done}
-    <div class="px-4 py-3 bg-indigo-50 border border-indigo-200 rounded-lg">
-      <p class="text-xs font-medium text-indigo-500 uppercase tracking-wide mb-1">Answer</p>
-      <p class="text-base font-semibold text-indigo-900">{correctAnswer}</p>
+    <div class="px-4 py-3 bg-green-50 dark:bg-green-900/30 border border-green-200 dark:border-green-800 rounded-lg">
+      <p class="text-xs font-medium text-green-600 dark:text-green-400 uppercase tracking-wide mb-1">Answer</p>
+      <p class="text-base font-semibold text-green-900 dark:text-green-200">{correctAnswer}</p>
+      {#if solver}
+        <p class="text-xs text-green-600 dark:text-green-400 mt-1">Answered by <span class="font-semibold">{solver}</span></p>
+      {/if}
     </div>
   {/if}
 </div>

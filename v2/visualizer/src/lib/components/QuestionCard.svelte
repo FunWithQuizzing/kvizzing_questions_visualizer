@@ -76,13 +76,15 @@
             #{question.session.question_number} {question.session.theme ?? 'Session'}
           </a>
         {/if}
-        {#if q.topic}
-          <button
-            onclick={(e) => { e.stopPropagation(); goto(`/?topic=${q.topic}`); }}
-            class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium transition-colors {topicCls(q.topic)}"
-          >
-            {topicLabel(q.topic)}
-          </button>
+        {#if revealed}
+          {#each q.topics ?? [] as topic}
+            <button
+              onclick={(e) => { e.stopPropagation(); goto(`/?topic=${topic}`); }}
+              class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium transition-colors {topicCls(topic)}"
+            >
+              {topicLabel(topic)}
+            </button>
+          {/each}
         {/if}
         {#if q.has_media}
           <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-700">
@@ -98,6 +100,18 @@
         {q.text}
       </p>
     </a>
+
+    <!-- Tags -->
+    {#if q.tags && q.tags.length > 0}
+      <div class="flex gap-1.5 mt-2.5 flex-wrap">
+        {#each q.tags as tag}
+          <button
+            onclick={(e) => { e.stopPropagation(); goto(`/?tag=${encodeURIComponent(tag)}`); }}
+            class="text-xs px-2 py-0.5 bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-400 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
+          >{tag}</button>
+        {/each}
+      </div>
+    {/if}
 
     <!-- Stats row -->
     <div class="flex items-center gap-4 mt-3 text-xs text-gray-400 dark:text-gray-500">
@@ -131,21 +145,19 @@
   <!-- Answer reveal strip -->
   <div class="border-t border-gray-100 dark:border-gray-700">
     {#if revealed}
-      <div class="px-4 py-3 bg-green-50 dark:bg-green-900/30 flex items-center justify-between gap-2">
-        <div class="flex items-center gap-2">
-          <span class="text-xs font-medium text-green-600 dark:text-green-400 uppercase tracking-wide">Answer</span>
-          <span class="text-sm font-semibold text-green-800 dark:text-green-200">{a?.text ?? '—'}</span>
-        </div>
-        <div class="flex items-center gap-2">
+      <div class="px-4 py-3 bg-green-50 dark:bg-green-900/30 flex flex-wrap items-center gap-x-3 gap-y-1">
+        <span class="text-xs font-medium text-green-600 dark:text-green-400 uppercase tracking-wide flex-shrink-0">Answer</span>
+        <span class="text-sm font-semibold text-green-800 dark:text-green-200 flex-1 min-w-0">{a?.text ?? '—'}</span>
+        <div class="flex items-center gap-2 flex-shrink-0 ml-auto">
           {#if a?.solver}
             <div class="flex items-center gap-1.5 text-xs text-green-600 dark:text-green-400">
               <MemberAvatar username={a.solver} size="xs" />
-              {a.solver}
+              <span class="hidden sm:inline">{a.solver}</span>
             </div>
           {/if}
           <button
             onclick={() => { revealed = false; result = null; input = ''; }}
-            class="text-xs text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors ml-2"
+            class="text-xs text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
           >Hide</button>
         </div>
       </div>
@@ -162,39 +174,35 @@
           {/each}
         </div>
       {/if}
-      <div class="px-4 py-2.5 flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+      <div class="px-3 py-2.5 flex items-center gap-2">
         <input
           type="text"
           placeholder="Your answer…"
           bind:value={input}
           onkeydown={(e) => { if (e.key === 'Enter') submitGuess(); }}
-          class="flex-1 min-w-0 px-2.5 py-1.5 text-xs border rounded-lg focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 transition-all
+          class="flex-1 min-w-0 px-2.5 py-2 text-xs border rounded-lg focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 transition-all
             {result === 'correct' ? 'border-green-300 bg-green-50 dark:bg-green-900/30' : result === 'almost' ? 'border-amber-300 bg-amber-50 dark:bg-amber-900/30' : result === 'wrong' ? 'border-red-300 bg-red-50' : 'border-gray-200 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 dark:placeholder-gray-400'}"
           autocomplete="off" spellcheck="false"
           title={result === 'almost' ? 'Close! Try again.' : result === 'wrong' ? 'Not quite. Try again or reveal.' : ''}
         />
-        <div class="flex items-center gap-2 flex-shrink-0">
-          <button
-            onclick={submitGuess}
-            class="px-3 py-1.5 text-xs font-medium bg-primary-500 text-white rounded-lg hover:bg-primary-600 dark:bg-primary-600 transition-colors"
-          >Submit</button>
-          <button
-            onclick={() => hintsShown = Math.min(hintsShown + 1, hints.length)}
-            disabled={hints.length === 0 || hintsShown >= hints.length}
-            title={hints.length === 0 ? 'No hints available' : hintsShown >= hints.length ? 'No more hints' : `Hint ${hintsShown + 1} of ${hints.length}`}
-            class="flex items-center gap-1 text-xs font-medium transition-colors {hints.length === 0 || hintsShown >= hints.length ? 'text-gray-300 cursor-default' : 'text-amber-500 hover:text-amber-600'}"
-          >
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-            </svg>
-            Hint
-          </button>
-          <span class="text-gray-200 dark:text-gray-600">|</span>
-          <button
-            onclick={() => revealed = true}
-            class="text-xs text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 font-medium transition-colors"
-          >Reveal</button>
-        </div>
+        <button
+          onclick={submitGuess}
+          class="px-3 py-2 text-xs font-medium bg-primary-500 text-white rounded-lg hover:bg-primary-600 dark:bg-primary-600 transition-colors flex-shrink-0"
+        >Submit</button>
+        <button
+          onclick={() => hintsShown = Math.min(hintsShown + 1, hints.length)}
+          disabled={hints.length === 0 || hintsShown >= hints.length}
+          title={hints.length === 0 ? 'No hints available' : hintsShown >= hints.length ? 'No more hints' : `Hint ${hintsShown + 1} of ${hints.length}`}
+          class="p-2 rounded-lg flex-shrink-0 transition-colors {hints.length === 0 || hintsShown >= hints.length ? 'text-gray-300 cursor-default' : 'text-amber-500 hover:bg-amber-50 dark:hover:bg-amber-900/20'}"
+        >
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+          </svg>
+        </button>
+        <button
+          onclick={() => revealed = true}
+          class="p-2 text-xs text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 font-medium transition-colors flex-shrink-0"
+        >Reveal</button>
       </div>
     {/if}
   </div>

@@ -11,8 +11,7 @@
 
   const store = getContext<QuestionStore>('store');
   const stats = store.getTotalStats();
-  // URL-driven filters — initialised from URL and kept in sync on every navigation
-  // (initial values are empty; $effect below syncs from URL after mount, avoiding prerender issues)
+
   let searchQuery = $state('');
   let filterAsker = $state('');
   let filterSolver = $state('');
@@ -20,10 +19,13 @@
   let filterDateTo = $state('');
   let filterHasMedia = $state(undefined as boolean | undefined);
   let filterSessionId = $state('');
-  let filterTag = $state('');
+  let filterTags = $state(new Set<string>());
   let filterTopics = $state(new Set<string>());
 
-  // Re-sync whenever the URL changes (e.g. calendar navigation while already on this page)
+  // Tag combobox state
+  let tagInput = $state('');
+  let tagInputFocused = $state(false);
+
   $effect(() => {
     const p = $page.url.searchParams;
     searchQuery = p.get('q') ?? '';
@@ -33,8 +35,12 @@
     filterDateTo = p.get('dateTo') ?? '';
     filterHasMedia = p.get('has_media') === '1' ? true : undefined as boolean | undefined;
     filterSessionId = p.get('session') ?? '';
-    filterTag = p.get('tag') ?? '';
-    // Support ?topic=X (from card badge clicks) and ?topics=X,Y (multi-select)
+    // ?tag=X from detail page tag clicks (single), or ?tags=X,Y for multi
+    const singleTag = p.get('tag') ?? '';
+    const multiTags = p.get('tags') ?? '';
+    const rawTags = multiTags || singleTag;
+    filterTags = new Set(rawTags.split(',').filter(Boolean));
+    // Topics
     const single = p.get('topic') ?? '';
     const multi = p.get('topics') ?? '';
     const raw = multi || single;
@@ -46,6 +52,20 @@
     if (next.has(id)) next.delete(id); else next.add(id);
     filterTopics = next;
   }
+
+  function addTag(tag: string) {
+    const next = new Set(filterTags);
+    next.add(tag);
+    filterTags = next;
+    tagInput = '';
+  }
+
+  function removeTag(tag: string) {
+    const next = new Set(filterTags);
+    next.delete(tag);
+    filterTags = next;
+  }
+
   let showMoreFilters = $state(false);
   let sortBy = $state<SortOption>('newest');
 
@@ -53,8 +73,24 @@
   const solvers = store.getSolvers();
   const allSessions = store.getSessions();
 
-  // Build fuse index once
   const allQuestions = store.getQuestions();
+
+  // Tags sorted by frequency
+  const tagFreq = new Map<string, number>();
+  for (const q of allQuestions) {
+    for (const tag of q.question.tags ?? []) {
+      tagFreq.set(tag, (tagFreq.get(tag) ?? 0) + 1);
+    }
+  }
+  const allTags = [...tagFreq.entries()].sort((a, b) => b[1] - a[1]).map(([t]) => t);
+
+  // Live tag suggestions
+  const tagSuggestions = $derived(
+    tagInput.trim().length > 0
+      ? allTags.filter(t => t.toLowerCase().includes(tagInput.toLowerCase()) && !filterTags.has(t)).slice(0, 8)
+      : allTags.filter(t => !filterTags.has(t)).slice(0, 8)
+  );
+
   const fuse = new Fuse(allQuestions, {
     keys: [
       { name: 'question.text', weight: 0.7 },
@@ -76,22 +112,18 @@
 
     let results = store.getQuestions(filters, sortBy);
 
-    // Tag filter
-    if (filterTag) {
-      const tag = filterTag.toLowerCase();
-      results = results.filter(q => q.question.tags?.some(t => t.toLowerCase() === tag));
+    if (filterTags.size > 0) {
+      results = results.filter(q => [...filterTags].every(tag => q.question.tags?.includes(tag)));
     }
 
-    // Multi-topic filter (applied after store query)
     if (filterTopics.size > 0) {
-      results = results.filter(q => filterTopics.has(q.question.topic ?? ''));
+      results = results.filter(q => q.question.topics?.some(t => filterTopics.has(t)));
     }
 
     if (searchQuery.trim()) {
       const fuseResults = fuse.search(searchQuery.trim());
       const matchedIds = new Set(fuseResults.map(r => r.item.id));
       results = results.filter(q => matchedIds.has(q.id));
-      // Re-sort by fuse score if searching
       if (sortBy === 'newest') {
         const scoreMap = new Map(fuseResults.map(r => [r.item.id, r.score ?? 1]));
         results = results.sort((a, b) => (scoreMap.get(a.id) ?? 1) - (scoreMap.get(b.id) ?? 1));
@@ -114,17 +146,20 @@
     filterDateTo = '';
     filterHasMedia = undefined;
     filterSessionId = '';
-    filterTag = '';
+    filterTags = new Set();
     filterTopics = new Set();
+    tagInput = '';
   }
 
   const hasActiveFilters = $derived(
     searchQuery || filterAsker || filterSolver ||
-    filterDateFrom || filterDateTo || filterHasMedia !== undefined || filterSessionId || filterTag || filterTopics.size > 0
+    filterDateFrom || filterDateTo || filterHasMedia !== undefined ||
+    filterSessionId || filterTags.size > 0 || filterTopics.size > 0
   );
 
   const sinceDate = stats.earliestDate ? formatDate(stats.earliestDate) : '';
-  const selectCls = "w-36 text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 dark:focus:ring-primary-900 text-gray-600";
+  const selectCls = "flex-1 min-w-[7rem] sm:flex-none sm:w-32 text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 dark:focus:ring-primary-900 text-gray-600";
+  const filterBtnCls = "flex-1 min-w-[7rem] sm:flex-none sm:w-32 text-sm border rounded-lg px-3 py-1.5 leading-5 transition-colors inline-flex items-center gap-1.5 justify-center";
 </script>
 
 <div class="space-y-6">
@@ -185,7 +220,6 @@
 
     <!-- Primary filters -->
     <div class="flex flex-wrap gap-2">
-      <!-- Asker -->
       <select bind:value={filterAsker} class={selectCls}>
         <option value="">All askers</option>
         {#each askers as asker}
@@ -193,7 +227,6 @@
         {/each}
       </select>
 
-      <!-- Solver -->
       <select bind:value={filterSolver} class={selectCls}>
         <option value="">All solvers</option>
         {#each solvers as solver}
@@ -201,7 +234,6 @@
         {/each}
       </select>
 
-      <!-- Sort -->
       <select bind:value={sortBy} class={selectCls}>
         <option value="newest">Newest first</option>
         <option value="oldest">Oldest first</option>
@@ -209,7 +241,6 @@
         <option value="quickest">Quickest solve</option>
       </select>
 
-      <!-- Session -->
       <select bind:value={filterSessionId} class={selectCls}>
         <option value="">All sessions</option>
         {#each allSessions as s}
@@ -217,43 +248,70 @@
         {/each}
       </select>
 
-      <!-- Has media toggle -->
       <button
         onclick={() => filterHasMedia = filterHasMedia === true ? undefined : true}
-        class="text-sm border rounded-lg px-3 py-1.5 transition-colors {filterHasMedia === true ? 'bg-primary-500 border-primary-500 text-white' : 'border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600'}"
+        class="{filterBtnCls} {filterHasMedia === true ? 'bg-primary-500 border-primary-500 text-white' : 'border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600'}"
       >
         📎 Has media
       </button>
 
-      <!-- Date range toggle -->
       <button
         onclick={() => showMoreFilters = !showMoreFilters}
-        class="text-sm border rounded-lg px-3 py-1.5 transition-colors flex items-center gap-1.5 {showMoreFilters ? 'bg-primary-500 border-primary-500 text-white' : 'border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600'}"
+        class="{filterBtnCls} {showMoreFilters ? 'bg-primary-500 border-primary-500 text-white' : 'border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600'}"
       >
         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
         </svg>
         Date range
       </button>
-
     </div>
 
-    <!-- Topic filter: dropdown + selected chips -->
+    <!-- Tag + Topic filters -->
     <div class="flex flex-wrap items-center gap-2">
-      {#if filterTag}
+      <!-- Tag combobox -->
+      <div class="relative">
+        <input
+          bind:value={tagInput}
+          onfocus={() => tagInputFocused = true}
+          onblur={() => setTimeout(() => tagInputFocused = false, 150)}
+          type="text"
+          placeholder="Filter by tag…"
+          class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 w-36 bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-200 placeholder:text-gray-600 dark:placeholder:text-gray-400 focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 dark:focus:ring-primary-900"
+        />
+        {#if tagInputFocused && tagSuggestions.length > 0}
+          <div class="absolute z-20 top-full mt-1 left-0 w-48 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg shadow-lg overflow-hidden">
+            {#each tagSuggestions as tag}
+              <!-- svelte-ignore a11y_click_events_have_key_events -->
+              <!-- svelte-ignore a11y_no_static_element_interactions -->
+              <div
+                onclick={() => addTag(tag)}
+                class="px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer flex items-center justify-between"
+              >
+                <span>{tag}</span>
+                <span class="text-xs text-gray-400">{tagFreq.get(tag)}</span>
+              </div>
+            {/each}
+          </div>
+        {/if}
+      </div>
+
+      <!-- Active tag chips -->
+      {#each [...filterTags] as tag}
         <span class="inline-flex items-center gap-1 pl-3 pr-1.5 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 ring-2 ring-gray-300 dark:ring-gray-500">
-          #{filterTag}
+          #{tag}
           <button
-            onclick={() => filterTag = ''}
+            onclick={() => removeTag(tag)}
             class="ml-0.5 rounded-full p-0.5 opacity-80 hover:opacity-100 transition-opacity"
-            aria-label="Remove tag filter"
+            aria-label="Remove {tag} filter"
           >
             <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </span>
-      {/if}
+      {/each}
+
+      <!-- Topic filter -->
       <select
         value=""
         onchange={(e) => { const v = (e.target as HTMLSelectElement).value; if (v) toggleTopic(v); (e.target as HTMLSelectElement).value = ''; }}

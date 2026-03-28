@@ -14,7 +14,7 @@ export interface QuestionData {
   type: string;
   has_media: boolean;
   media: string | null;
-  topic: string | null;
+  topics: string[];
   tags: string[];
 }
 

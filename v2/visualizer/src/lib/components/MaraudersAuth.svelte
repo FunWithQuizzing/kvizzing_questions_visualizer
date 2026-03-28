@@ -1,5 +1,5 @@
 <svelte:head>
-  <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&family=Almendra&display=swap" rel="stylesheet" />
 </svelte:head>
 
 <script lang="ts">
@@ -82,7 +82,7 @@
         type="text"
         bind:value={input}
         onkeydown={handleKeydown}
-        placeholder="type the words..."
+        placeholder="say the right words..."
         autocomplete="off"
         spellcheck="false"
         autofocus
@@ -367,21 +367,21 @@
   .instructions input {
     background: transparent;
     border: none;
-    border-bottom: 1px solid #d1d5db;
-    color: #111827;
-    font: 15px ui-sans-serif, system-ui, -apple-system, sans-serif;
+    border-bottom: 1px solid #c9b99a;
+    color: #3b2a1a;
+    font: 18px 'Almendra', serif;
     text-align: center;
     width: 320px;
     padding: 6px 0;
     outline: none;
-    caret-color: #F97316;
+    caret-color: #3b2a1a;
     transition: border-color 0.2s;
   }
   .instructions input:focus {
-    border-bottom-color: #F97316;
+    border-bottom-color: #3b2a1a;
   }
   .instructions input::placeholder {
-    color: #9ca3af;
+    color: #a0856a;
   }
   .instructions input.shake {
     animation: shake 0.4s ease;

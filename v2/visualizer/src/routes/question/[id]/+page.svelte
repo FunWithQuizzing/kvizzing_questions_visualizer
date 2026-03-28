@@ -55,7 +55,7 @@
   </div>
 
   <!-- Context bar -->
-  <div class="flex items-center gap-3 flex-wrap">
+  <div class="flex items-center justify-between gap-3 flex-wrap">
     <div class="flex items-center gap-2">
       <MemberAvatar username={q.asker} size="sm" />
       <div>
@@ -64,7 +64,7 @@
       </div>
     </div>
 
-    <div class="flex items-center gap-2 ml-auto flex-wrap">
+    <div class="flex items-center gap-2 flex-wrap justify-end">
       {#if question.session}
         <a
           href="/session/{question.session.id}"
@@ -73,11 +73,11 @@
           #{question.session.question_number} {question.session.theme ?? 'Session'}
         </a>
       {/if}
-      {#if q.topic}
-        <a href="/?topic={q.topic}" class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium {topicCls(q.topic)} hover:opacity-80 transition-opacity">
-          {topicLabel(q.topic)}
+      {#each q.topics ?? [] as topic}
+        <a href="/?topic={topic}" class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium {topicCls(topic)} hover:opacity-80 transition-opacity">
+          {topicLabel(topic)}
         </a>
-      {/if}
+      {/each}
     </div>
   </div>
 
@@ -102,6 +102,7 @@
   {#if a?.text}
     <AnswerSubmission
       correctAnswer={a.text}
+      solver={a.solver ?? null}
       hints={filterHints(question.discussion?.filter((d: {role: string}) => d.role === 'hint').map((d: {text: string}) => d.text) ?? [])}
       maxAttempts={3}
       onReveal={onAnswerReveal}

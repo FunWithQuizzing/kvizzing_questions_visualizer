@@ -35,7 +35,7 @@ export class QuestionStore {
         results = results.filter(q => q.stats?.difficulty === filters.difficulty);
       }
       if (filters.topic) {
-        results = results.filter(q => q.question.topic === filters.topic);
+        results = results.filter(q => q.question.topics?.includes(filters.topic!));
       }
       if (filters.has_media !== undefined) {
         results = results.filter(q => q.question.has_media === filters.has_media);
@@ -116,7 +116,7 @@ export class QuestionStore {
 
   getTopics(): string[] {
     const topics = new Set(
-      this.questions.filter(q => q.question.topic).map(q => q.question.topic!)
+      this.questions.flatMap(q => q.question.topics ?? [])
     );
     return [...topics].sort();
   }

@@ -171,21 +171,19 @@
           <!-- Answer area -->
           <div class="border-t border-gray-100 dark:border-gray-700">
             {#if isRevealed}
-              <div class="px-4 py-3 bg-green-50 dark:bg-green-900/30 flex items-center justify-between gap-2">
-                <div class="flex items-center gap-2">
-                  <span class="text-xs font-medium text-green-600 dark:text-green-400 uppercase tracking-wide">Answer</span>
-                  <span class="text-sm font-semibold text-green-800 dark:text-green-200">{question.answer?.text ?? '—'}</span>
-                </div>
-                <div class="flex items-center gap-2">
+              <div class="px-4 py-3 bg-green-50 dark:bg-green-900/30 flex flex-wrap items-center gap-x-3 gap-y-1">
+                <span class="text-xs font-medium text-green-600 dark:text-green-400 uppercase tracking-wide flex-shrink-0">Answer</span>
+                <span class="text-sm font-semibold text-green-800 dark:text-green-200 flex-1 min-w-0">{question.answer?.text ?? '—'}</span>
+                <div class="flex items-center gap-2 flex-shrink-0 ml-auto">
                   {#if question.answer?.solver}
                     <div class="flex items-center gap-1.5 text-xs text-green-600 dark:text-green-400">
                       <MemberAvatar username={question.answer.solver} size="xs" />
-                      {question.answer.solver}
+                      <span class="hidden sm:inline">{question.answer.solver}</span>
                     </div>
                   {/if}
                   <button
                     onclick={() => hideQuestion(question.id)}
-                    class="text-xs text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors ml-2"
+                    class="text-xs text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
                   >Hide</button>
                 </div>
               </div>
@@ -205,40 +203,36 @@
                   {/each}
                 </div>
               {/if}
-              <div class="px-4 py-2.5 flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+              <div class="px-3 py-2.5 flex items-center gap-2">
                 <input
                   type="text"
                   placeholder="Your answer…"
                   value={inputs.get(question.id) ?? ''}
                   oninput={(e) => { inputs = new Map(inputs).set(question.id, (e.target as HTMLInputElement).value); }}
                   onkeydown={(e) => { if (e.key === 'Enter') submitGuess(question.id, question.answer?.text ?? ''); }}
-                  class="flex-1 min-w-0 px-2.5 py-1.5 text-xs border rounded-lg focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 transition-all
+                  class="flex-1 min-w-0 px-2.5 py-2 text-xs border rounded-lg focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 transition-all
                     {result === 'correct' ? 'border-green-300 bg-green-50 dark:bg-green-900/30' : result === 'almost' ? 'border-amber-300 bg-amber-50 dark:bg-amber-900/30' : result === 'wrong' ? 'border-red-300 bg-red-50' : 'border-gray-200 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 dark:placeholder-gray-400'}"
                   autocomplete="off" spellcheck="false"
                   title={result === 'almost' ? 'Close! Try again.' : result === 'wrong' ? 'Not quite. Try again or reveal.' : ''}
                 />
-                <div class="flex items-center gap-2 flex-shrink-0">
-                  <button
-                    onclick={() => submitGuess(question.id, question.answer?.text ?? '')}
-                    class="px-3 py-1.5 text-xs font-medium bg-primary-500 text-white rounded-lg hover:bg-primary-600 dark:bg-primary-600 transition-colors"
-                  >Submit</button>
-                  <button
-                    onclick={() => hintsShown = new Map(hintsShown).set(question.id, Math.min(shown + 1, hints.length))}
-                    disabled={hints.length === 0 || shown >= hints.length}
-                    title={hints.length === 0 ? 'No hints available' : shown >= hints.length ? 'No more hints' : `Hint ${shown + 1} of ${hints.length}`}
-                    class="flex items-center gap-1 text-xs font-medium transition-colors {hints.length === 0 || shown >= hints.length ? 'text-gray-300 cursor-default' : 'text-amber-500 hover:text-amber-600'}"
-                  >
-                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                    </svg>
-                    Hint
-                  </button>
-                  <span class="text-gray-200 dark:text-gray-600">|</span>
-                  <button
-                    onclick={() => toggleReveal(question.id)}
-                    class="text-xs text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 font-medium transition-colors"
-                  >Reveal</button>
-                </div>
+                <button
+                  onclick={() => submitGuess(question.id, question.answer?.text ?? '')}
+                  class="px-3 py-2 text-xs font-medium bg-primary-500 text-white rounded-lg hover:bg-primary-600 dark:bg-primary-600 transition-colors flex-shrink-0"
+                >Submit</button>
+                <button
+                  onclick={() => hintsShown = new Map(hintsShown).set(question.id, Math.min(shown + 1, hints.length))}
+                  disabled={hints.length === 0 || shown >= hints.length}
+                  title={hints.length === 0 ? 'No hints available' : shown >= hints.length ? 'No more hints' : `Hint ${shown + 1} of ${hints.length}`}
+                  class="p-2 rounded-lg flex-shrink-0 transition-colors {hints.length === 0 || shown >= hints.length ? 'text-gray-300 cursor-default' : 'text-amber-500 hover:bg-amber-50 dark:hover:bg-amber-900/20'}"
+                >
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                </button>
+                <button
+                  onclick={() => toggleReveal(question.id)}
+                  class="p-2 text-xs text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 font-medium transition-colors flex-shrink-0"
+                >Reveal</button>
               </div>
             {/if}
           </div>
@@ -248,15 +242,15 @@
   {/if}
 
   <!-- Prev / Next session navigation -->
-  <div class="flex justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
+  <div class="flex justify-between pt-4 border-t border-gray-200 dark:border-gray-700 gap-4">
     {#if adj.next}
-      <a href="/session/{adj.next.id}" class="flex items-center gap-2 text-sm text-gray-500 hover:text-primary-600 dark:hover:text-primary-400 transition-colors group">
-        <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <a href="/session/{adj.next.id}" class="flex items-center gap-2 text-sm text-gray-500 hover:text-primary-600 dark:hover:text-primary-400 transition-colors group max-w-[45%]">
+        <svg class="w-4 h-4 flex-shrink-0 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
         </svg>
-        <div>
+        <div class="min-w-0">
           <p class="text-xs text-gray-400 dark:text-gray-500">Older</p>
-          <p class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600">{adj.next.theme ?? `${adj.next.quizmaster}'s Quiz`}</p>
+          <p class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600 truncate">{adj.next.theme ?? `${adj.next.quizmaster}'s Quiz`}</p>
         </div>
       </a>
     {:else}
@@ -264,12 +258,12 @@
     {/if}
 
     {#if adj.prev}
-      <a href="/session/{adj.prev.id}" class="flex items-center gap-2 text-sm text-gray-500 hover:text-primary-600 dark:hover:text-primary-400 transition-colors group text-right">
-        <div>
+      <a href="/session/{adj.prev.id}" class="flex items-center gap-2 text-sm text-gray-500 hover:text-primary-600 dark:hover:text-primary-400 transition-colors group text-right max-w-[45%]">
+        <div class="min-w-0">
           <p class="text-xs text-gray-400 dark:text-gray-500">Newer</p>
-          <p class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400">{adj.prev.theme ?? `${adj.prev.quizmaster}'s Quiz`}</p>
+          <p class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 truncate">{adj.prev.theme ?? `${adj.prev.quizmaster}'s Quiz`}</p>
         </div>
-        <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-4 h-4 flex-shrink-0 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
         </svg>
       </a>

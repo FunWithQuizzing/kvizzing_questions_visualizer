@@ -9,8 +9,10 @@
       "type": "fill_in_blank",
       "has_media": false,
       "media": null,
-      "topic": "history",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "history"
+      ]
     },
     "answer": {
       "text": "Free trade",
@@ -90,8 +92,10 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "history",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "history"
+      ]
     },
     "answer": {
       "text": "Drawing/sketching upside down (so clients who were uncomfortable sitting next to a Black man would sit opposite him)",
@@ -187,8 +191,10 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "technology",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "technology"
+      ]
     },
     "answer": {
       "text": "Fire hydrant",
@@ -276,8 +282,10 @@
       "type": "unknown",
       "has_media": false,
       "media": null,
-      "topic": "geography",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "geography"
+      ]
     },
     "answer": {
       "text": "Ajanta",
@@ -373,8 +381,10 @@
       "type": "identify",
       "has_media": false,
       "media": null,
-      "topic": "technology",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "technology"
+      ]
     },
     "answer": {
       "text": "Airplane seat with built-in toilet",
@@ -454,11 +464,13 @@
       "type": "connect",
       "has_media": false,
       "media": null,
-      "topic": "science",
       "tags": [
         "nasa",
         "astronauts",
         "space"
+      ],
+      "topics": [
+        "science"
       ]
     },
     "answer": {
@@ -523,8 +535,10 @@
       "type": "factual",
       "has_media": true,
       "media": null,
-      "topic": "geography",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "geography"
+      ]
     },
     "answer": {
       "text": "Kaziranga",
@@ -612,12 +626,14 @@
       "type": "multi_part",
       "has_media": false,
       "media": null,
-      "topic": "history",
       "tags": [
         "books",
         "mythology",
         "india",
         "time dilation"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -761,11 +777,13 @@
       "type": "identify",
       "has_media": false,
       "media": null,
-      "topic": "sports",
       "tags": [
         "cricket",
         "india",
         "lords"
+      ],
+      "topics": [
+        "sports"
       ]
     },
     "answer": {
@@ -822,8 +840,10 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "entertainment",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "entertainment"
+      ]
     },
     "answer": {
       "text": "Rock and roll",
@@ -903,10 +923,12 @@
       "type": "multi_part",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "flags",
         "british india"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -1019,10 +1041,12 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "flags",
         "india"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -1103,11 +1127,13 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "flags",
         "east india company",
         "usa"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -1188,11 +1214,13 @@
       "type": "factual",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "flags",
         "marvel",
         "comics"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -1281,11 +1309,13 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "flags",
         "madras",
         "british india"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -1350,8 +1380,10 @@
       "type": "factual",
       "has_media": true,
       "media": null,
-      "topic": "history",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "history"
+      ]
     },
     "answer": {
       "text": "Govind Vallabh Mavlankar — first Speaker of the elected Lok Sabha (popularly called Dadasaheb Mavlankar)",
@@ -1447,8 +1479,10 @@
       "type": "factual",
       "has_media": true,
       "media": null,
-      "topic": "history",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "history"
+      ]
     },
     "answer": {
       "text": "Gerrymandering — portmanteau of Governor Elbridge Gerry and 'salamander', from the shape of the first artificially drawn district in Boston",
@@ -1512,8 +1546,10 @@
       "type": "factual",
       "has_media": true,
       "media": null,
-      "topic": "sports",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "sports"
+      ]
     },
     "answer": {
       "text": "Arsenal FC's first crest (their original heraldic crest, before the current cannon design)",
@@ -1609,11 +1645,13 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "flags",
         "sikkim",
         "india"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -1694,8 +1732,10 @@
       "type": "connect",
       "has_media": false,
       "media": null,
-      "topic": "entertainment",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "entertainment"
+      ]
     },
     "answer": {
       "text": "India's official entries to the Oscars (Best Foreign Language Film) that featured Amitabh Bachchan",
@@ -1791,11 +1831,13 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "flags",
         "balochistan",
         "pakistan"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -1876,11 +1918,13 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "flags",
         "travancore",
         "india"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -1985,11 +2029,13 @@
       "type": "fill_in_blank",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "flags",
         "vijayanagar",
         "india"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -2062,11 +2108,13 @@
       "type": "factual",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "flags",
         "punjab",
         "british india"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -2139,11 +2187,13 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "business",
       "tags": [
         "cars",
         "porsche",
         "naming"
+      ],
+      "topics": [
+        "business"
       ]
     },
     "answer": {
@@ -2224,11 +2274,13 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "technology",
       "tags": [
         "cars",
         "tesla",
         "lotus"
+      ],
+      "topics": [
+        "technology"
       ]
     },
     "answer": {
@@ -2309,11 +2361,13 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "science",
       "tags": [
         "medicine",
         "india",
         "ivf"
+      ],
+      "topics": [
+        "science"
       ]
     },
     "answer": {
@@ -2378,11 +2432,13 @@
       "type": "multi_part",
       "has_media": true,
       "media": null,
-      "topic": "geography",
       "tags": [
         "flags",
         "chagos islands",
         "british"
+      ],
+      "topics": [
+        "geography"
       ]
     },
     "answer": {
@@ -2495,8 +2551,10 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "business",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "business"
+      ]
     },
     "answer": {
       "text": "Lehman Brothers bankruptcy / 2008 global financial crisis",
@@ -2576,10 +2634,12 @@
       "type": "multi_part",
       "has_media": false,
       "media": null,
-      "topic": "science",
       "tags": [
         "mathematics",
         "number theory"
+      ],
+      "topics": [
+        "science"
       ]
     },
     "answer": {
@@ -2692,8 +2752,10 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "geography",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "geography"
+      ]
     },
     "answer": {
       "text": "Singapore — name derives from Sanskrit 'Singapura' (lion city); lions never naturally inhabited Singapore; Syonan was the Japanese name during WWII occupation",
@@ -2757,10 +2819,12 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "science",
       "tags": [
         "astronomy",
         "moon"
+      ],
+      "topics": [
+        "science"
       ]
     },
     "answer": {
@@ -2809,11 +2873,13 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "geography",
       "tags": [
         "flags",
         "pacific",
         "islands"
+      ],
+      "topics": [
+        "geography"
       ]
     },
     "answer": {
@@ -2894,11 +2960,13 @@
       "type": "multi_part",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "flags",
         "india",
         "independence"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -3008,11 +3076,13 @@
       "type": "multi_part",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "flags",
         "bombay",
         "british india"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -3205,11 +3275,13 @@
       "type": "identify",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "flags",
         "aden",
         "british india"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -3343,11 +3415,13 @@
       "type": "factual",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "flags",
         "karnataka",
         "india"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -3420,11 +3494,13 @@
       "type": "fill_in_blank",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "flags",
         "maratha",
         "gwalior"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -3510,8 +3586,10 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "history",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "history"
+      ]
     },
     "answer": {
       "text": "First circumnavigation of the globe; expedition was led by Ferdinand Magellan (Portuguese, sailing for Spain)",
@@ -3591,8 +3669,10 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "geography",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "geography"
+      ]
     },
     "answer": {
       "text": "Philippines",
@@ -3704,11 +3784,13 @@
       "type": "multi_part",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "flags",
         "uttar pradesh",
         "british india"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -3810,8 +3892,10 @@
       "type": "factual",
       "has_media": true,
       "media": null,
-      "topic": "business",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "business"
+      ]
     },
     "answer": {
       "text": "Costco",
@@ -3939,8 +4023,10 @@
       "type": "connect",
       "has_media": false,
       "media": null,
-      "topic": "entertainment",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "entertainment"
+      ]
     },
     "answer": {
       "text": "Films featuring character actor Iftikhar as a police officer/inspector",
@@ -4060,10 +4146,12 @@
       "type": "factual",
       "has_media": true,
       "media": null,
-      "topic": "sports",
       "tags": [
         "cricket",
         "lords"
+      ],
+      "topics": [
+        "sports"
       ]
     },
     "answer": {
@@ -4128,11 +4216,13 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "flags",
         "bastar",
         "india"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -4242,11 +4332,13 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "flags",
         "hyderabad",
         "nizam"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -4316,12 +4408,14 @@
       "type": "fill_in_blank",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "flags",
         "bjp",
         "india",
         "politics"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -4423,11 +4517,13 @@
       "type": "factual",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "flags",
         "bombay",
         "india"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -4537,11 +4633,13 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "flags",
         "mughal",
         "india"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -4611,8 +4709,10 @@
       "type": "multi_part",
       "has_media": false,
       "media": null,
-      "topic": "entertainment",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "entertainment"
+      ]
     },
     "answer": {
       "text": "X = Werner Herzog (director), Y = Klaus Kinski (actor)",
@@ -4703,8 +4803,10 @@
       "type": "unknown",
       "has_media": false,
       "media": null,
-      "topic": "general",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "general"
+      ]
     },
     "answer": {
       "text": "Play-Doh",
@@ -4752,8 +4854,10 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "history",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "history"
+      ]
     },
     "answer": {
       "text": "The Netherlands (United Provinces of the Netherlands)",
@@ -4809,8 +4913,10 @@
       "type": "multi_part",
       "has_media": false,
       "media": null,
-      "topic": "history",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "history"
+      ]
     },
     "answer": {
       "text": "United Provinces of Agra and Oudh",
@@ -4909,8 +5015,10 @@
       "type": "multi_part",
       "has_media": false,
       "media": null,
-      "topic": "history",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "history"
+      ]
     },
     "answer": {
       "text": "Capital was Calcutta (Kolkata); Delhi was part of the Punjab province",
@@ -5033,11 +5141,13 @@
       "type": "identify",
       "has_media": false,
       "media": null,
-      "topic": "literature",
       "tags": [
         "books",
         "rk narayan",
         "india"
+      ],
+      "topics": [
+        "literature"
       ]
     },
     "answer": {
@@ -5134,11 +5244,13 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "india",
         "emergency",
         "politics"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -5203,11 +5315,13 @@
       "type": "identify",
       "has_media": false,
       "media": null,
-      "topic": "history",
       "tags": [
         "india",
         "buddhism",
         "philosophy"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -5312,8 +5426,10 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "history",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "history"
+      ]
     },
     "answer": {
       "text": "Come and take it (original Greek: Molon Labe — said by Leonidas at Thermopylae, used by 2A advocates in the US)",
@@ -5385,11 +5501,13 @@
       "type": "fill_in_blank",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "flags",
         "manipur",
         "india"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -5486,11 +5604,13 @@
       "type": "factual",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "flags",
         "assam",
         "ahom"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -5547,11 +5667,13 @@
       "type": "factual",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "flags",
         "cooch behar",
         "india"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -5600,11 +5722,13 @@
       "type": "identify",
       "has_media": false,
       "media": null,
-      "topic": "science",
       "tags": [
         "women in science",
         "ai",
         "india"
+      ],
+      "topics": [
+        "science"
       ]
     },
     "answer": {
@@ -5653,11 +5777,13 @@
       "type": "identify",
       "has_media": false,
       "media": null,
-      "topic": "science",
       "tags": [
         "women in science",
         "physics",
         "india"
+      ],
+      "topics": [
+        "science"
       ]
     },
     "answer": {
@@ -5706,11 +5832,13 @@
       "type": "multi_part",
       "has_media": false,
       "media": null,
-      "topic": "science",
       "tags": [
         "women in science",
         "physics",
         "india"
+      ],
+      "topics": [
+        "science"
       ]
     },
     "answer": {
@@ -5759,11 +5887,13 @@
       "type": "identify",
       "has_media": false,
       "media": null,
-      "topic": "science",
       "tags": [
         "mathematics",
         "algorithms",
         "india"
+      ],
+      "topics": [
+        "science"
       ]
     },
     "answer": {
@@ -5820,12 +5950,14 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "music",
         "india",
         "tv",
         "cricket"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -5890,10 +6022,12 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "sports",
       "tags": [
         "cricket",
         "ipl"
+      ],
+      "topics": [
+        "sports"
       ]
     },
     "answer": {
@@ -5958,11 +6092,13 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "sports",
       "tags": [
         "cricket",
         "ipl",
         "rcb"
+      ],
+      "topics": [
+        "sports"
       ]
     },
     "answer": {
@@ -6019,8 +6155,10 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "art_culture",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "art_culture"
+      ]
     },
     "answer": {
       "text": "Making solid and structurally safe spires (after some incidents) required money and many places weren't funded for it because they weren't quite \"as important\"",
@@ -6108,8 +6246,10 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "sports",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "sports"
+      ]
     },
     "answer": {
       "text": "Canadian Football",
@@ -6229,8 +6369,10 @@
       "type": "multi_part",
       "has_media": false,
       "media": null,
-      "topic": "sports",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "sports"
+      ]
     },
     "answer": {
       "text": "Effren Reyes",
@@ -6294,8 +6436,10 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "history",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "history"
+      ]
     },
     "answer": {
       "text": "SS Warrimoo positioned at intersection of equator and international date line at an angle on December 31st 1899. One half of ship in south east and one in north west. One half in 20th century and other in 19th century etc.",
@@ -6399,8 +6543,10 @@
       "type": "multi_part",
       "has_media": false,
       "media": null,
-      "topic": "geography",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "geography"
+      ]
     },
     "answer": {
       "text": "Big Diomede in Russia and Little Diomede in USA. Technically only 2 miles apart. Called Yesterday and Tomorrow Island because they are on opposite sides of the international date line.",
@@ -6456,11 +6602,13 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "general",
       "tags": [
         "etymology",
         "language",
         "japan"
+      ],
+      "topics": [
+        "general"
       ]
     },
     "answer": {
@@ -6525,11 +6673,13 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "general",
       "tags": [
         "etymology",
         "language",
         "wordplay"
+      ],
+      "topics": [
+        "general"
       ]
     },
     "answer": {
@@ -6586,11 +6736,13 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "business",
       "tags": [
         "india",
         "cola wars",
         "brands"
+      ],
+      "topics": [
+        "business"
       ]
     },
     "answer": {
@@ -6663,8 +6815,10 @@
       "type": "multi_part",
       "has_media": false,
       "media": null,
-      "topic": "entertainment",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "entertainment"
+      ]
     },
     "answer": {
       "text": "Lata Mangeshkar",
@@ -6736,8 +6890,10 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "general",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "general"
+      ]
     },
     "answer": {
       "text": "To abolish time and become a \"time-free zone\" (no clocks).",
@@ -6833,11 +6989,13 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "bollywood",
         "music",
         "lyrics"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -6907,7 +7065,7 @@
       "id": "2025-09-28-aditi",
       "quizmaster": "Aditi Bapat",
       "question_number": 1,
-      "theme": null
+      "theme": "Aditi's General Trivia"
     },
     "scores_after": null,
     "reactions": null,
@@ -6923,8 +7081,10 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "history",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "history"
+      ]
     },
     "answer": {
       "text": "He accidentally shot himself while demonstrating how the victim might have accidentally shot himself.",
@@ -6985,7 +7145,7 @@
       "id": "2025-09-28-aditi",
       "quizmaster": "Aditi Bapat",
       "question_number": 2,
-      "theme": null
+      "theme": "Aditi's General Trivia"
     },
     "scores_after": null,
     "reactions": null,
@@ -7001,10 +7161,12 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "bollywood",
         "actors"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -7058,7 +7220,7 @@
       "id": "2025-09-28-aditi",
       "quizmaster": "Aditi Bapat",
       "question_number": 3,
-      "theme": null
+      "theme": "Aditi's General Trivia"
     },
     "scores_after": null,
     "reactions": null,
@@ -7074,10 +7236,12 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "bollywood",
         "records"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -7123,7 +7287,7 @@
       "id": "2025-09-28-aditi",
       "quizmaster": "Aditi Bapat",
       "question_number": 4,
-      "theme": null
+      "theme": "Aditi's General Trivia"
     },
     "scores_after": null,
     "reactions": null,
@@ -7139,8 +7303,8 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": null,
-      "tags": []
+      "tags": [],
+      "topics": []
     },
     "answer": {
       "text": "Yaadein (2003, directed by Sunil Dutt)",
@@ -7185,7 +7349,7 @@
       "id": "2025-09-28-aditi",
       "quizmaster": "Aditi Bapat",
       "question_number": 5,
-      "theme": null
+      "theme": "Aditi's General Trivia"
     },
     "scores_after": null,
     "reactions": null,
@@ -7201,8 +7365,10 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "sports",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "sports"
+      ]
     },
     "answer": {
       "text": "It was thought to be Tom Brady's final touchdown pass before his retirement, but he announced his return to the NFL shortly after.",
@@ -7255,7 +7421,7 @@
       "id": "2025-09-28-aditi",
       "quizmaster": "Aditi Bapat",
       "question_number": 6,
-      "theme": null
+      "theme": "Aditi's General Trivia"
     },
     "scores_after": null,
     "reactions": null,
@@ -7271,11 +7437,13 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "bollywood",
         "the office",
         "tv"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -7337,7 +7505,7 @@
       "id": "2025-09-28-aditi",
       "quizmaster": "Aditi Bapat",
       "question_number": 7,
-      "theme": null
+      "theme": "Aditi's General Trivia"
     },
     "scores_after": null,
     "reactions": null,
@@ -7353,8 +7521,10 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "entertainment",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "entertainment"
+      ]
     },
     "answer": {
       "text": "He was arrested and charged with murder, as authorities believed the on-screen deaths were real since the actors were contractually obligated to stay out of the public eye for a year.",
@@ -7415,7 +7585,7 @@
       "id": "2025-09-28-aditi",
       "quizmaster": "Aditi Bapat",
       "question_number": 8,
-      "theme": null
+      "theme": "Aditi's General Trivia"
     },
     "scores_after": null,
     "reactions": null,
@@ -7431,10 +7601,12 @@
       "type": "connect",
       "has_media": false,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "bollywood",
         "connect"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -7504,7 +7676,7 @@
       "id": "2025-09-28-aditi",
       "quizmaster": "Aditi Bapat",
       "question_number": 9,
-      "theme": null
+      "theme": "Aditi's General Trivia"
     },
     "scores_after": null,
     "reactions": null,
@@ -7520,11 +7692,13 @@
       "type": "fill_in_blank",
       "has_media": false,
       "media": null,
-      "topic": "sports",
       "tags": [
         "cricket",
         "womens",
         "records"
+      ],
+      "topics": [
+        "sports"
       ]
     },
     "answer": {
@@ -7586,7 +7760,7 @@
       "id": "2025-09-28-aditi",
       "quizmaster": "Aditi Bapat",
       "question_number": 10,
-      "theme": null
+      "theme": "Aditi's General Trivia"
     },
     "scores_after": null,
     "reactions": null,
@@ -7602,8 +7776,10 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "entertainment"
+      ]
     },
     "answer": {
       "text": "Dumb Ways to Die (Melbourne Metro Rail safety campaign)",
@@ -7656,7 +7832,7 @@
       "id": "2025-09-28-aditi",
       "quizmaster": "Aditi Bapat",
       "question_number": 11,
-      "theme": null
+      "theme": "Aditi's General Trivia"
     },
     "scores_after": null,
     "reactions": null,
@@ -7672,11 +7848,13 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "science",
       "tags": [
         "space",
         "nasa",
         "unit conversion"
+      ],
+      "topics": [
+        "science"
       ]
     },
     "answer": {
@@ -7738,7 +7916,7 @@
       "id": "2025-09-28-aditi",
       "quizmaster": "Aditi Bapat",
       "question_number": 12,
-      "theme": null
+      "theme": "Aditi's General Trivia"
     },
     "scores_after": null,
     "reactions": null,
@@ -7754,8 +7932,10 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "history",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "history"
+      ]
     },
     "answer": {
       "text": "The claim that eating carrots improved the night vision of pilots.",
@@ -7808,7 +7988,7 @@
       "id": "2025-09-28-aditi",
       "quizmaster": "Aditi Bapat",
       "question_number": 13,
-      "theme": null
+      "theme": "Aditi's General Trivia"
     },
     "scores_after": null,
     "reactions": null,
@@ -7824,8 +8004,10 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "history",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "history"
+      ]
     },
     "answer": {
       "text": "They are former WW2 stretcher railings, repurposed as fencing; the curved parts were handles.",
@@ -7894,7 +8076,7 @@
       "id": "2025-09-28-aditi",
       "quizmaster": "Aditi Bapat",
       "question_number": 14,
-      "theme": null
+      "theme": "Aditi's General Trivia"
     },
     "scores_after": null,
     "reactions": null,
@@ -7910,8 +8092,10 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "general",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "general"
+      ]
     },
     "answer": {
       "text": "X is a Tortoise and Y is a Hare; the race tested the fable of the Tortoise and the Hare in real life (the tortoise won).",
@@ -7972,7 +8156,7 @@
       "id": "2025-09-28-aditi",
       "quizmaster": "Aditi Bapat",
       "question_number": 15,
-      "theme": null
+      "theme": "Aditi's General Trivia"
     },
     "scores_after": null,
     "reactions": null,
@@ -7988,10 +8172,12 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "bollywood",
         "disney"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -8061,7 +8247,7 @@
       "id": "2025-09-28-aditi",
       "quizmaster": "Aditi Bapat",
       "question_number": 16,
-      "theme": null
+      "theme": "Aditi's General Trivia"
     },
     "scores_after": null,
     "reactions": null,
@@ -8077,8 +8263,10 @@
       "type": "factual",
       "has_media": true,
       "media": null,
-      "topic": "general",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "general"
+      ]
     },
     "answer": {
       "text": "Dashboard",
@@ -8147,7 +8335,7 @@
       "id": "2025-09-28-aditi",
       "quizmaster": "Aditi Bapat",
       "question_number": 17,
-      "theme": null
+      "theme": "Aditi's General Trivia"
     },
     "scores_after": null,
     "reactions": null,
@@ -8163,8 +8351,10 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "science",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "science"
+      ]
     },
     "answer": {
       "text": "Animals that are physically incapable of jumping.",
@@ -8233,7 +8423,7 @@
       "id": "2025-09-28-aditi",
       "quizmaster": "Aditi Bapat",
       "question_number": 18,
-      "theme": null
+      "theme": "Aditi's General Trivia"
     },
     "scores_after": null,
     "reactions": null,
@@ -8249,8 +8439,10 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "general",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "general"
+      ]
     },
     "answer": {
       "text": "The minimum legal age for marriage (often with parental/judicial consent) in different US states.",
@@ -8311,7 +8503,7 @@
       "id": "2025-09-28-aditi",
       "quizmaster": "Aditi Bapat",
       "question_number": 19,
-      "theme": null
+      "theme": "Aditi's General Trivia"
     },
     "scores_after": null,
     "reactions": null,
@@ -8327,11 +8519,13 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "literature",
       "tags": [
         "books",
         "harry potter",
         "fantasy"
+      ],
+      "topics": [
+        "literature"
       ]
     },
     "answer": {
@@ -8393,7 +8587,7 @@
       "id": "2025-09-28-aditi",
       "quizmaster": "Aditi Bapat",
       "question_number": 20,
-      "theme": null
+      "theme": "Aditi's General Trivia"
     },
     "scores_after": null,
     "reactions": null,
@@ -8409,8 +8603,10 @@
       "type": "multi_part",
       "has_media": false,
       "media": null,
-      "topic": "general",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "general"
+      ]
     },
     "answer": {
       "text": "Marble races (Jelle's Marble Runs)",
@@ -8463,7 +8659,7 @@
       "id": "2025-09-28-aditi",
       "quizmaster": "Aditi Bapat",
       "question_number": 21,
-      "theme": null
+      "theme": "Aditi's General Trivia"
     },
     "scores_after": null,
     "reactions": null,
@@ -8479,8 +8675,10 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "entertainment"
+      ]
     },
     "answer": {
       "text": "Notable cameos on the TV show The Big Bang Theory.",
@@ -8541,7 +8739,7 @@
       "id": "2025-09-28-aditi",
       "quizmaster": "Aditi Bapat",
       "question_number": 22,
-      "theme": null
+      "theme": "Aditi's General Trivia"
     },
     "scores_after": null,
     "reactions": null,
@@ -8557,8 +8755,10 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "entertainment"
+      ]
     },
     "answer": {
       "text": "Ashutosh Gowariker (listing characters he played in movies and TV shows like CID).",
@@ -8611,7 +8811,7 @@
       "id": "2025-09-28-aditi",
       "quizmaster": "Aditi Bapat",
       "question_number": 23,
-      "theme": null
+      "theme": "Aditi's General Trivia"
     },
     "scores_after": null,
     "reactions": null,
@@ -8627,8 +8827,10 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "science",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "science"
+      ]
     },
     "answer": {
       "text": "Animals that are endemic to a single specific country (e.g., Giant Panda to China, Red Kangaroo to Australia).",
@@ -8689,7 +8891,7 @@
       "id": "2025-09-28-aditi",
       "quizmaster": "Aditi Bapat",
       "question_number": 24,
-      "theme": null
+      "theme": "Aditi's General Trivia"
     },
     "scores_after": null,
     "reactions": null,
@@ -8705,10 +8907,12 @@
       "type": "fill_in_blank",
       "has_media": false,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "hollywood",
         "disney"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -8762,7 +8966,7 @@
       "id": "2025-09-28-aditi",
       "quizmaster": "Aditi Bapat",
       "question_number": 25,
-      "theme": null
+      "theme": "Aditi's General Trivia"
     },
     "scores_after": null,
     "reactions": null,
@@ -8778,8 +8982,10 @@
       "type": "fill_in_blank",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "entertainment"
+      ]
     },
     "answer": {
       "text": "Joey Tribbiani's catchphrase \"How you doin'\" from the show Friends.",
@@ -8832,7 +9038,7 @@
       "id": "2025-09-28-aditi",
       "quizmaster": "Aditi Bapat",
       "question_number": 26,
-      "theme": null
+      "theme": "Aditi's General Trivia"
     },
     "scores_after": null,
     "reactions": null,
@@ -8848,8 +9054,10 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "geography",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "geography"
+      ]
     },
     "answer": {
       "text": "Sudan",
@@ -8905,8 +9113,10 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "history",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "history"
+      ]
     },
     "answer": {
       "text": "The eruption and aftermath of Mt. St. Helens in 1980.",
@@ -8978,8 +9188,10 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "geography",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "geography"
+      ]
     },
     "answer": {
       "text": "Ghazipur Garbage mountain (landfill) in Delhi.",
@@ -9043,8 +9255,10 @@
       "type": "identify",
       "has_media": true,
       "media": null,
-      "topic": "general",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "general"
+      ]
     },
     "answer": {
       "text": "Reyansh College of Hotel Management (in Nizamabad, Telangana)",
@@ -9116,8 +9330,10 @@
       "type": "factual",
       "has_media": true,
       "media": null,
-      "topic": "history",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "history"
+      ]
     },
     "answer": {
       "text": "Towns and places in India named after Lord Vishnu or his avatars.",
@@ -9197,12 +9413,14 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "geography",
       "tags": [
         "etymology",
         "language",
         "india",
         "kashmir"
+      ],
+      "topics": [
+        "geography"
       ]
     },
     "answer": {
@@ -9267,11 +9485,13 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "history",
       "tags": [
         "battle",
         "ww2",
         "usa"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -9360,8 +9580,10 @@
       "type": "factual",
       "has_media": true,
       "media": null,
-      "topic": "general",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "general"
+      ]
     },
     "answer": {
       "text": "School Education Quality Index (SEQI).",
@@ -9433,12 +9655,14 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "science",
       "tags": [
         "astronomy",
         "prague",
         "kepler",
         "brahe"
+      ],
+      "topics": [
+        "science"
       ]
     },
     "answer": {
@@ -9543,8 +9767,10 @@
       "type": "identify",
       "has_media": true,
       "media": null,
-      "topic": "technology",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "technology"
+      ]
     },
     "answer": {
       "text": "Arrattai (a messaging app by Zoho)",
@@ -9624,8 +9850,10 @@
       "type": "factual",
       "has_media": true,
       "media": null,
-      "topic": "history",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "history"
+      ]
     },
     "answer": {
       "text": "Washington D.C., USA (Martin Luther King Jr. Memorial)",
@@ -9721,8 +9949,10 @@
       "type": "unknown",
       "has_media": false,
       "media": null,
-      "topic": "history",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "history"
+      ]
     },
     "answer": {
       "text": "Roads in Delhi named after foreign leaders",
@@ -9786,8 +10016,10 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "history",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "history"
+      ]
     },
     "answer": {
       "text": "Westminster Abbey, London, United Kingdom",
@@ -9875,8 +10107,10 @@
       "type": "factual",
       "has_media": true,
       "media": null,
-      "topic": "geography",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "geography"
+      ]
     },
     "answer": {
       "text": "San Francisco, USA",
@@ -9964,10 +10198,12 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "bollywood",
         "records"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -10021,7 +10257,7 @@
       "id": "2025-09-29-aditi",
       "quizmaster": "Aditi Bapat",
       "question_number": 14,
-      "theme": null
+      "theme": "Aditi's Quick Quiz"
     },
     "scores_after": null,
     "reactions": null,
@@ -10037,8 +10273,10 @@
       "type": "connect",
       "has_media": false,
       "media": null,
-      "topic": "sports",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "sports"
+      ]
     },
     "answer": {
       "text": "Flag bearers for India at the Olympics opening ceremonies",
@@ -10099,7 +10337,7 @@
       "id": "2025-09-29-aditi",
       "quizmaster": "Aditi Bapat",
       "question_number": 15,
-      "theme": null
+      "theme": "Aditi's Quick Quiz"
     },
     "scores_after": null,
     "reactions": null,
@@ -10115,11 +10353,13 @@
       "type": "identify",
       "has_media": true,
       "media": null,
-      "topic": "literature",
       "tags": [
         "books",
         "jk rowling",
         "pseudonym"
+      ],
+      "topics": [
+        "literature"
       ]
     },
     "answer": {
@@ -10189,7 +10429,7 @@
       "id": "2025-09-29-aditi",
       "quizmaster": "Aditi Bapat",
       "question_number": 17,
-      "theme": null
+      "theme": "Aditi's Quick Quiz"
     },
     "scores_after": null,
     "reactions": null,
@@ -10205,8 +10445,10 @@
       "type": "connect",
       "has_media": false,
       "media": null,
-      "topic": "entertainment",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "entertainment"
+      ]
     },
     "answer": {
       "text": "Comedians in the lineup for the Riyadh Comedy Festival",
@@ -10318,12 +10560,14 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "battle",
         "kargil",
         "india",
         "pakistan"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -10380,11 +10624,13 @@
       "type": "factual",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "battle",
         "ww2",
         "britain"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -10449,11 +10695,13 @@
       "type": "identify",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "battle",
         "ukraine",
         "russia"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -10518,10 +10766,12 @@
       "type": "factual",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "battle",
         "napoleon"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -10586,8 +10836,10 @@
       "type": "unknown",
       "has_media": false,
       "media": null,
-      "topic": "general",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "general"
+      ]
     },
     "answer": {
       "text": "Battle of Baghpat (also known as the Chaat Wars), featuring 'Einstein Chacha'",
@@ -10667,11 +10919,13 @@
       "type": "multi_part",
       "has_media": false,
       "media": null,
-      "topic": "business",
       "tags": [
         "cricket",
         "brands",
         "fashion"
+      ],
+      "topics": [
+        "business"
       ]
     },
     "answer": {
@@ -10720,8 +10974,10 @@
       "type": "factual",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "entertainment"
+      ]
     },
     "answer": {
       "text": "Ed Sheeran",
@@ -10785,11 +11041,13 @@
       "type": "multi_part",
       "has_media": false,
       "media": null,
-      "topic": "business",
       "tags": [
         "finance",
         "music",
         "ceo"
+      ],
+      "topics": [
+        "business"
       ]
     },
     "answer": {
@@ -10873,8 +11131,10 @@
       "type": "multi_part",
       "has_media": false,
       "media": null,
-      "topic": "entertainment",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "entertainment"
+      ]
     },
     "answer": {
       "text": "Frankie Muniz (known for Malcolm in the Middle)",
@@ -10946,8 +11206,10 @@
       "type": "identify",
       "has_media": false,
       "media": null,
-      "topic": "entertainment",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "entertainment"
+      ]
     },
     "answer": {
       "text": "Keanu Reeves",
@@ -11019,11 +11281,13 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "literature",
       "tags": [
         "books",
         "kafka",
         "wordplay"
+      ],
+      "topics": [
+        "literature"
       ]
     },
     "answer": {
@@ -11088,11 +11352,13 @@
       "type": "factual",
       "has_media": true,
       "media": null,
-      "topic": "literature",
       "tags": [
         "books",
         "shakespeare",
         "wordplay"
+      ],
+      "topics": [
+        "literature"
       ]
     },
     "answer": {
@@ -11141,11 +11407,13 @@
       "type": "factual",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "battle",
         "alamo",
         "usa"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -11210,11 +11478,13 @@
       "type": "identify",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "bollywood",
         "politics",
         "tamil"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -11287,12 +11557,14 @@
       "type": "identify",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "battle",
         "ahom",
         "mughal",
         "india"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -11373,11 +11645,13 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "battle",
         "sikh",
         "british india"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -11466,10 +11740,12 @@
       "type": "factual",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "hollywood",
         "records"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -11582,11 +11858,13 @@
       "type": "factual",
       "has_media": true,
       "media": null,
-      "topic": "literature",
       "tags": [
         "books",
         "wordplay",
         "pun"
+      ],
+      "topics": [
+        "literature"
       ]
     },
     "answer": {
@@ -11659,12 +11937,14 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "music",
         "rock",
         "nirvana",
         "lyrics"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -11721,11 +12001,13 @@
       "type": "fill_in_blank",
       "has_media": false,
       "media": null,
-      "topic": "business",
       "tags": [
         "cars",
         "branding",
         "logo"
+      ],
+      "topics": [
+        "business"
       ]
     },
     "answer": {
@@ -11790,11 +12072,13 @@
       "type": "identify",
       "has_media": false,
       "media": null,
-      "topic": "literature",
       "tags": [
         "books",
         "classic",
         "bronte"
+      ],
+      "topics": [
+        "literature"
       ]
     },
     "answer": {
@@ -11843,8 +12127,10 @@
       "type": "identify",
       "has_media": true,
       "media": null,
-      "topic": "geography",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "geography"
+      ]
     },
     "answer": {
       "text": "Nicosia, Cyprus",
@@ -11921,11 +12207,13 @@
       "type": "identify",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "music",
         "pop",
         "taylor swift"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -11987,11 +12275,13 @@
       "type": "identify",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "music",
         "rock",
         "lyrics"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -12061,11 +12351,13 @@
       "type": "identify",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "music",
         "rock",
         "lyrics"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -12143,11 +12435,13 @@
       "type": "identify",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "music",
         "rock",
         "lyrics"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -12217,12 +12511,14 @@
       "type": "identify",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "music",
         "pop",
         "spice girls",
         "lyrics"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -12300,10 +12596,12 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "general",
       "tags": [
         "anagram",
         "world leaders"
+      ],
+      "topics": [
+        "general"
       ]
     },
     "answer": {
@@ -12389,10 +12687,12 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "general",
       "tags": [
         "anagram",
         "world leaders"
+      ],
+      "topics": [
+        "general"
       ]
     },
     "answer": {
@@ -12462,10 +12762,12 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "general",
       "tags": [
         "anagram",
         "world leaders"
+      ],
+      "topics": [
+        "general"
       ]
     },
     "answer": {
@@ -12535,10 +12837,12 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "general",
       "tags": [
         "anagram",
         "world leaders"
+      ],
+      "topics": [
+        "general"
       ]
     },
     "answer": {
@@ -12616,10 +12920,12 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "general",
       "tags": [
         "anagram",
         "world leaders"
+      ],
+      "topics": [
+        "general"
       ]
     },
     "answer": {
@@ -12689,8 +12995,10 @@
       "type": "identify",
       "has_media": true,
       "media": null,
-      "topic": "general",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "general"
+      ]
     },
     "answer": {
       "text": "Arabic",
@@ -12767,8 +13075,10 @@
       "type": "factual",
       "has_media": true,
       "media": null,
-      "topic": "general",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "general"
+      ]
     },
     "answer": {
       "text": "Portuguese",
@@ -12869,8 +13179,10 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "general",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "general"
+      ]
     },
     "answer": {
       "text": "Polish",
@@ -12955,8 +13267,10 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "general",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "general"
+      ]
     },
     "answer": {
       "text": "Korean",
@@ -13049,8 +13363,10 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "general",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "general"
+      ]
     },
     "answer": {
       "text": "Thai",
@@ -13151,8 +13467,10 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "food_drink",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "food_drink"
+      ]
     },
     "answer": {
       "text": "Old Fashioned",
@@ -13221,8 +13539,10 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "food_drink",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "food_drink"
+      ]
     },
     "answer": {
       "text": "Margarita",
@@ -13315,8 +13635,10 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "food_drink",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "food_drink"
+      ]
     },
     "answer": {
       "text": "White Russian",
@@ -13393,8 +13715,10 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "food_drink",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "food_drink"
+      ]
     },
     "answer": {
       "text": "Negroni",
@@ -13463,8 +13787,10 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "food_drink",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "food_drink"
+      ]
     },
     "answer": {
       "text": "Mai Tai",
@@ -13533,10 +13859,12 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "general",
       "tags": [
         "anagram",
         "cities"
+      ],
+      "topics": [
+        "general"
       ]
     },
     "answer": {
@@ -13606,10 +13934,12 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "general",
       "tags": [
         "anagram",
         "cities"
+      ],
+      "topics": [
+        "general"
       ]
     },
     "answer": {
@@ -13679,10 +14009,12 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "general",
       "tags": [
         "anagram",
         "cities"
+      ],
+      "topics": [
+        "general"
       ]
     },
     "answer": {
@@ -13744,10 +14076,12 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "general",
       "tags": [
         "anagram",
         "cities"
+      ],
+      "topics": [
+        "general"
       ]
     },
     "answer": {
@@ -13801,10 +14135,12 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "general",
       "tags": [
         "anagram",
         "cities"
+      ],
+      "topics": [
+        "general"
       ]
     },
     "answer": {
@@ -13874,10 +14210,12 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "anagram",
         "actors"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -13939,10 +14277,12 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "anagram",
         "actors"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -14004,10 +14344,12 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "anagram",
         "actors"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -14069,10 +14411,12 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "anagram",
         "actors"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -14150,10 +14494,12 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "anagram",
         "actors"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -14207,8 +14553,10 @@
       "type": "factual",
       "has_media": true,
       "media": null,
-      "topic": "general",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "general"
+      ]
     },
     "answer": {
       "text": "The different names used for fuel/gasoline in different countries (e.g., Petrol vs Gasoline vs Essence vs Benzene).",
@@ -14320,8 +14668,10 @@
       "type": "unknown",
       "has_media": false,
       "media": null,
-      "topic": "history",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "history"
+      ]
     },
     "answer": {
       "text": "Biju Patnaik",
@@ -14385,11 +14735,13 @@
       "type": "unknown",
       "has_media": false,
       "media": null,
-      "topic": "general",
       "tags": [
         "airports",
         "iata",
         "usa"
+      ],
+      "topics": [
+        "general"
       ]
     },
     "answer": {
@@ -14454,11 +14806,13 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "general",
       "tags": [
         "airports",
         "iata",
         "canada"
+      ],
+      "topics": [
+        "general"
       ]
     },
     "answer": {
@@ -14523,11 +14877,13 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "general",
       "tags": [
         "airports",
         "iata",
         "italy"
+      ],
+      "topics": [
+        "general"
       ]
     },
     "answer": {
@@ -14584,11 +14940,13 @@
       "type": "unknown",
       "has_media": false,
       "media": null,
-      "topic": "general",
       "tags": [
         "airports",
         "iata",
         "india"
+      ],
+      "topics": [
+        "general"
       ]
     },
     "answer": {
@@ -14637,11 +14995,13 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "general",
       "tags": [
         "airports",
         "iata",
         "india"
+      ],
+      "topics": [
+        "general"
       ]
     },
     "answer": {
@@ -14730,11 +15090,13 @@
       "type": "multi_part",
       "has_media": false,
       "media": null,
-      "topic": "technology",
       "tags": [
         "airports",
         "etymology",
         "wikipedia"
+      ],
+      "topics": [
+        "technology"
       ]
     },
     "answer": {
@@ -14791,11 +15153,13 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "general",
       "tags": [
         "airports",
         "iata",
         "usa"
+      ],
+      "topics": [
+        "general"
       ]
     },
     "answer": {
@@ -14844,8 +15208,10 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "sports",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "sports"
+      ]
     },
     "answer": {
       "text": "Usain Bolt",
@@ -14925,8 +15291,10 @@
       "type": "identify",
       "has_media": true,
       "media": null,
-      "topic": "sports",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "sports"
+      ]
     },
     "answer": {
       "text": "Michael Phelps",
@@ -14982,8 +15350,10 @@
       "type": "identify",
       "has_media": true,
       "media": null,
-      "topic": "sports",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "sports"
+      ]
     },
     "answer": {
       "text": "Serena Williams",
@@ -15039,8 +15409,10 @@
       "type": "identify",
       "has_media": true,
       "media": null,
-      "topic": "sports",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "sports"
+      ]
     },
     "answer": {
       "text": "Simone Biles",
@@ -15096,11 +15468,13 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "general",
       "tags": [
         "airports",
         "iata",
         "india"
+      ],
+      "topics": [
+        "general"
       ]
     },
     "answer": {
@@ -15165,12 +15539,14 @@
       "type": "unknown",
       "has_media": false,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "bollywood",
         "music",
         "lyrics",
         "tamil"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -15235,11 +15611,13 @@
       "type": "identify",
       "has_media": false,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "bollywood",
         "music",
         "lyrics"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -15312,11 +15690,13 @@
       "type": "unknown",
       "has_media": false,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "bollywood",
         "music",
         "lyrics"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -15389,11 +15769,13 @@
       "type": "fill_in_blank",
       "has_media": false,
       "media": null,
-      "topic": "general",
       "tags": [
         "airports",
         "iata",
         "usa"
+      ],
+      "topics": [
+        "general"
       ]
     },
     "answer": {
@@ -15474,11 +15856,13 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "general",
       "tags": [
         "airports",
         "iata",
         "weird"
+      ],
+      "topics": [
+        "general"
       ]
     },
     "answer": {
@@ -15543,11 +15927,13 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "general",
       "tags": [
         "airports",
         "iata",
         "weird"
+      ],
+      "topics": [
+        "general"
       ]
     },
     "answer": {
@@ -15604,11 +15990,13 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "general",
       "tags": [
         "airports",
         "iata",
         "wordplay"
+      ],
+      "topics": [
+        "general"
       ]
     },
     "answer": {
@@ -15673,10 +16061,12 @@
       "type": "connect",
       "has_media": false,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "hollywood",
         "cameos"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -15757,8 +16147,10 @@
       "type": "factual",
       "has_media": true,
       "media": null,
-      "topic": "general",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "general"
+      ]
     },
     "answer": {
       "text": "20 Rupee coin",
@@ -15814,8 +16206,10 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "general",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "general"
+      ]
     },
     "answer": {
       "text": "Aluminum (used because it was a cheaper option as metal prices rose)",
@@ -15879,8 +16273,10 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "history",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "history"
+      ]
     },
     "answer": {
       "text": "The intrinsic value of the metal in the coins became higher than their face value, leading people to melt them down and sell the metal for profit.",
@@ -15944,11 +16340,13 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "literature",
       "tags": [
         "books",
         "usa",
         "social satire"
+      ],
+      "topics": [
+        "literature"
       ]
     },
     "answer": {
@@ -16029,8 +16427,10 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "entertainment",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "entertainment"
+      ]
     },
     "answer": {
       "text": "Donald Trump",
@@ -16126,8 +16526,10 @@
       "type": "unknown",
       "has_media": false,
       "media": null,
-      "topic": "entertainment",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "entertainment"
+      ]
     },
     "answer": {
       "text": "Death of a Nation and Fahrenheit 11/9",
@@ -16215,12 +16617,14 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "history",
       "tags": [
         "etymology",
         "language",
         "politics",
         "watergate"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -16317,8 +16721,10 @@
       "type": "unknown",
       "has_media": false,
       "media": null,
-      "topic": "sports",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "sports"
+      ]
     },
     "answer": {
       "text": "Bloodgate",
@@ -16382,8 +16788,10 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "entertainment",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "entertainment"
+      ]
     },
     "answer": {
       "text": "Watergate-gate",
@@ -16455,8 +16863,10 @@
       "type": "multi_part",
       "has_media": false,
       "media": null,
-      "topic": "general",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "general"
+      ]
     },
     "answer": {
       "text": "Raghuram Rajan and Jayant Sinha",
@@ -16555,11 +16965,13 @@
       "type": "multi_part",
       "has_media": false,
       "media": null,
-      "topic": "history",
       "tags": [
         "india",
         "constitution",
         "ambedkar"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -16685,11 +17097,13 @@
       "type": "identify",
       "has_media": false,
       "media": null,
-      "topic": "history",
       "tags": [
         "history",
         "calendar",
         "religion"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -16754,11 +17168,13 @@
       "type": "factual",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "india",
         "constitution",
         "dalit"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -16823,11 +17239,13 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "history",
       "tags": [
         "india",
         "ashoka",
         "ancient"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -16892,8 +17310,10 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "general",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "general"
+      ]
     },
     "answer": {
       "text": "Hajmola",
@@ -16949,8 +17369,10 @@
       "type": "unknown",
       "has_media": false,
       "media": null,
-      "topic": "art_culture",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "art_culture"
+      ]
     },
     "answer": {
       "text": "Ludwig van Beethoven",
@@ -17046,8 +17468,10 @@
       "type": "unknown",
       "has_media": false,
       "media": null,
-      "topic": "general",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "general"
+      ]
     },
     "answer": {
       "text": "Finland",
@@ -17127,11 +17551,13 @@
       "type": "factual",
       "has_media": true,
       "media": null,
-      "topic": "history",
       "tags": [
         "india",
         "dalit",
         "constitution"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -17188,11 +17614,13 @@
       "type": "identify",
       "has_media": false,
       "media": null,
-      "topic": "history",
       "tags": [
         "politics",
         "british",
         "etymology"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -17257,10 +17685,12 @@
       "type": "factual",
       "has_media": true,
       "media": null,
-      "topic": "science",
       "tags": [
         "aviation",
         "weather",
+        "science"
+      ],
+      "topics": [
         "science"
       ]
     },
@@ -17342,11 +17772,13 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "etymology",
       "tags": [
         "etymology",
         "language",
         "technology"
+      ],
+      "topics": [
+        "etymology"
       ]
     },
     "answer": {
@@ -17403,11 +17835,13 @@
       "type": "multi_part",
       "has_media": false,
       "media": null,
-      "topic": "history",
       "tags": [
         "etymology",
         "language",
         "india"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -17531,8 +17965,10 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "entertainment",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "entertainment"
+      ]
     },
     "answer": {
       "text": "Captain Marvel (original) to Shazam (new name)",
@@ -17604,11 +18040,13 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "business",
       "tags": [
         "books",
         "publishing",
         "logo"
+      ],
+      "topics": [
+        "business"
       ]
     },
     "answer": {
@@ -17681,8 +18119,10 @@
       "type": "unknown",
       "has_media": false,
       "media": null,
-      "topic": "entertainment",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "entertainment"
+      ]
     },
     "answer": {
       "text": "Kevin Bacon (Six Degrees of Kevin Bacon)",
@@ -17746,8 +18186,10 @@
       "type": "unknown",
       "has_media": false,
       "media": null,
-      "topic": "history",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "history"
+      ]
     },
     "answer": {
       "text": "Pre-independence flag bearers for India at the Olympics",
@@ -17827,13 +18269,15 @@
       "type": "fill_in_blank",
       "has_media": false,
       "media": null,
-      "topic": "sports",
       "tags": [
         "cricket",
         "hockey",
         "olympics",
         "india",
         "pakistan"
+      ],
+      "topics": [
+        "sports"
       ]
     },
     "answer": {
@@ -17890,8 +18334,10 @@
       "type": "fill_in_blank",
       "has_media": false,
       "media": null,
-      "topic": "history",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "history"
+      ]
     },
     "answer": {
       "text": "Cambodia and (Henry) Kissinger",
@@ -17971,10 +18417,12 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "bollywood",
         "locations"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -18052,10 +18500,12 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "bollywood",
         "opera"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -18173,10 +18623,12 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "bollywood",
         "locations"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -18238,10 +18690,12 @@
       "type": "multi_part",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "bollywood",
         "wordplay"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -18354,9 +18808,11 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "bollywood"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -18418,10 +18874,12 @@
       "type": "unknown",
       "has_media": false,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "bollywood",
         "real life"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -18555,10 +19013,12 @@
       "type": "unknown",
       "has_media": false,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "bollywood",
         "badly explained"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -18628,10 +19088,12 @@
       "type": "unknown",
       "has_media": false,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "bollywood",
         "badly explained"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -18701,10 +19163,12 @@
       "type": "unknown",
       "has_media": false,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "bollywood",
         "badly explained"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -18782,10 +19246,12 @@
       "type": "unknown",
       "has_media": false,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "bollywood",
         "badly explained"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -18879,10 +19345,12 @@
       "type": "unknown",
       "has_media": false,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "bollywood",
         "badly explained"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -18952,9 +19420,11 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "bollywood"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -19016,8 +19486,8 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": null,
-      "tags": []
+      "tags": [],
+      "topics": []
     },
     "answer": {
       "text": "Padman",
@@ -19078,10 +19548,12 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "bollywood",
         "music"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -19151,8 +19623,8 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": null,
-      "tags": []
+      "tags": [],
+      "topics": []
     },
     "answer": {
       "text": "Delhi Belly (Bhag D.K. Bose)",
@@ -19221,10 +19693,12 @@
       "type": "multi_part",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "bollywood",
         "music"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -19313,8 +19787,8 @@
       "type": "multi_part",
       "has_media": true,
       "media": null,
-      "topic": null,
-      "tags": []
+      "tags": [],
+      "topics": []
     },
     "answer": {
       "text": "Queen (Hungama Ho Gaya)",
@@ -19402,9 +19876,11 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "bollywood"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -19474,8 +19950,8 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": null,
-      "tags": []
+      "tags": [],
+      "topics": []
     },
     "answer": {
       "text": "Dum Laga Ke Haisha",
@@ -19544,9 +20020,11 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "bollywood"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -19608,8 +20086,8 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": null,
-      "tags": []
+      "tags": [],
+      "topics": []
     },
     "answer": {
       "text": "Thappad",
@@ -19670,9 +20148,11 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": "entertainment",
       "tags": [
         "bollywood"
+      ],
+      "topics": [
+        "entertainment"
       ]
     },
     "answer": {
@@ -19742,8 +20222,8 @@
       "type": "unknown",
       "has_media": true,
       "media": null,
-      "topic": null,
-      "tags": []
+      "tags": [],
+      "topics": []
     },
     "answer": {
       "text": "Munnabhai M.B.B.S.",
@@ -19812,8 +20292,10 @@
       "type": "multi_part",
       "has_media": true,
       "media": null,
-      "topic": "general",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "general"
+      ]
     },
     "answer": {
       "text": "Kohinoor (X) and Magnets/Magnetism (Y)",
@@ -19928,8 +20410,10 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "entertainment",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "entertainment"
+      ]
     },
     "answer": {
       "text": "Franco Nero (the original Django from the 1966 film)",
@@ -19993,8 +20477,10 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "general",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "general"
+      ]
     },
     "answer": {
       "text": "Teahouse",
@@ -20066,11 +20552,13 @@
       "type": "factual",
       "has_media": true,
       "media": null,
-      "topic": "business",
       "tags": [
         "india",
         "economy",
         "ambani"
+      ],
+      "topics": [
+        "business"
       ]
     },
     "answer": {
@@ -20167,8 +20655,10 @@
       "type": "fill_in_blank",
       "has_media": false,
       "media": null,
-      "topic": "sports",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "sports"
+      ]
     },
     "answer": {
       "text": "The Curse of the Bambino (referring to Babe Ruth being traded from Red Sox to Yankees)",
@@ -20232,11 +20722,13 @@
       "type": "unknown",
       "has_media": false,
       "media": null,
-      "topic": "science",
       "tags": [
         "women in science",
         "mathematics",
         "ancient"
+      ],
+      "topics": [
+        "science"
       ]
     },
     "answer": {
@@ -20301,8 +20793,10 @@
       "type": "multi_part",
       "has_media": false,
       "media": null,
-      "topic": "geography",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "geography"
+      ]
     },
     "answer": {
       "text": "Isthmus of Corinth, Greece",
@@ -20385,8 +20879,10 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "geography",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "geography"
+      ]
     },
     "answer": {
       "text": "Sound",
@@ -20450,8 +20946,10 @@
       "type": "fill_in_blank",
       "has_media": false,
       "media": null,
-      "topic": "history",
-      "tags": []
+      "tags": [],
+      "topics": [
+        "history"
+      ]
     },
     "answer": {
       "text": "John F. Kennedy (JFK); the proposal to go to the Moon (Apollo program)",
@@ -20523,11 +21021,13 @@
       "type": "factual",
       "has_media": false,
       "media": null,
-      "topic": "history",
       "tags": [
         "india",
         "politics",
         "books"
+      ],
+      "topics": [
+        "history"
       ]
     },
     "answer": {
@@ -20576,10 +21076,12 @@
       "type": "factual",
       "has_media": true,
       "media": null,
-      "topic": "science",
       "tags": [
         "aviation",
         "weather",
+        "science"
+      ],
+      "topics": [
         "science"
       ]
     },

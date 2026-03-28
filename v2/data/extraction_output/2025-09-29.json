@@ -1,0 +1,2980 @@
+[
+    {
+        "question_timestamp": "2025-09-29T01:53:28Z",
+        "question_text": "I want to try out a new type of question. I will share a picture with some clues in it. You have to guess which city and country the picture was taken in. I can give hints about the country or city depending on how it goes. Here is the first. [image: statue of two men with celestial globes and scientific instruments]",
+        "question_asker": "Pavan Pamidimarri",
+        "has_media": true,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Prague, Czech Republic (celebrating the collaboration of Tycho Brahe and Johannes Kepler)",
+        "answer_solver": "Srikanth Kapali",
+        "answer_timestamp": "2025-09-29T01:54:43Z",
+        "answer_confirmed": true,
+        "confirmation_text": "correct, it celebrates their collaboration. near a fantastic view point over the city as well",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T01:53:55Z",
+                "username": "Srikanth Kapali",
+                "text": "Copenhagen",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T01:54:06Z",
+                "username": "Pavan Pamidimarri",
+                "text": "Good guess, but no.",
+                "role": "confirmation",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-29T01:54:43Z",
+                "username": "Srikanth Kapali",
+                "text": "Prague?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T01:54:44Z",
+                "username": "Naman Agarwal",
+                "text": "Kepler was German no?",
+                "role": "chat",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-29T01:57:11Z",
+                "username": "Naren Iyer",
+                "text": "This is Prague right??",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T01:59:43Z",
+                "username": "Pavan Pamidimarri",
+                "text": "Yes",
+                "role": "confirmation",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-29T01:59:51Z",
+                "username": "Pavan Pamidimarri",
+                "text": "Prague",
+                "role": "answer_reveal",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-29T02:01:17Z",
+                "username": "Pavan Pamidimarri",
+                "text": "correct, it celebrates their collaboration. near a fantastic view point over the city as well",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T02:53:03Z",
+        "question_text": "Simple. What is this? [image: a logo consisting of the Tamil character 'அ' (a)]",
+        "question_asker": "Akshay",
+        "has_media": true,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Arrattai (a messaging app by Zoho)",
+        "answer_solver": "Pavan Pamidimarri",
+        "answer_timestamp": "2025-09-29T03:01:04Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Arrattai by Zoho it is",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T02:58:50Z",
+                "username": "Shubham",
+                "text": "Is this some new AI chatbot?",
+                "role": "chat",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-29T03:00:19Z",
+                "username": "Akshay",
+                "text": "It’s a desi messaging app from a a desi software co",
+                "role": "hint",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-29T03:00:59Z",
+                "username": "Shubham",
+                "text": "Is it Zoho?",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T03:01:04Z",
+                "username": "Pavan Pamidimarri",
+                "text": "Oh arratai or something like that?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T03:01:23Z",
+                "username": "Akshay",
+                "text": "Arrattai by Zoho it is",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T02:53:23Z",
+        "question_text": "Which city and country? [image: plaque with a quote from Martin Luther King Jr.'s Nobel Peace Prize acceptance speech: \"I refuse to accept the cynical notion that nation after nation must spiral down a militaristic stairway into the hell of thermonuclear destruction.\"]",
+        "question_asker": "Pavan Pamidimarri",
+        "has_media": true,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Washington D.C., USA (Martin Luther King Jr. Memorial)",
+        "answer_solver": "Srikanth Kapali",
+        "answer_timestamp": "2025-09-29T02:56:52Z",
+        "answer_confirmed": true,
+        "confirmation_text": "DC it is MLK Memorial",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T02:54:46Z",
+                "username": "Akshay",
+                "text": "So i am going to say - his acceptance speech in oslo For the peace prize?",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T02:55:25Z",
+                "username": "Akshay",
+                "text": "This is philly? The constitution center?",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T02:55:40Z",
+                "username": "Pavan Pamidimarri",
+                "text": "The city is not Oslo. This is indeed a quote from his Nobel acceptance speech.",
+                "role": "hint",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-29T02:56:13Z",
+                "username": "Srikanth Kapali",
+                "text": "Atlanta, USA",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T02:56:52Z",
+                "username": "Srikanth Kapali",
+                "text": "Memphis or DC are my next guesses",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T02:57:08Z",
+                "username": "Akshay",
+                "text": "Then DC",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T02:57:09Z",
+                "username": "Pavan Pamidimarri",
+                "text": "DC it is MLK Memorial",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T03:10:14Z",
+        "question_text": "Very easy and simple question. What connects:- 1. Olof Palme, 2. Ho Chi Minh, 3. Archbishop Makarios 4. Benito Juárez 5. Josip Tito 6. Mustafa Kemal Ataturk (Non - exhaustive)",
+        "question_asker": "Lzafeer Ahmad B F",
+        "has_media": false,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Roads in Delhi named after foreign leaders",
+        "answer_solver": "Akshay",
+        "answer_timestamp": "2025-09-29T03:10:33Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Roads in Delhi. That’s right.",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T03:10:33Z",
+                "username": "Akshay",
+                "text": "Roads in the Dalhi :)",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T03:10:43Z",
+                "username": "Shubham",
+                "text": "Roads?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T03:12:02Z",
+                "username": "Lzafeer Ahmad B F",
+                "text": "Roads in Delhi. That’s right.",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T03:14:23Z",
+        "question_text": "For this one, you have to specify the place where this picture was taken, the city and the country. [image: a floor slab engraved with 'CHARLES DARWIN BORN 12 FEBRUARY 1809 DIED 19 APRIL 1882']",
+        "question_asker": "Pavan Pamidimarri",
+        "has_media": true,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Westminster Abbey, London, United Kingdom",
+        "answer_solver": "Srikanth Kapali",
+        "answer_timestamp": "2025-09-29T03:17:22Z",
+        "answer_confirmed": true,
+        "confirmation_text": "It is London. This is a picture of his final resting place.",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T03:14:59Z",
+                "username": "Akshay",
+                "text": "Quito, Ecuador 😄",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T03:17:22Z",
+                "username": "Srikanth Kapali",
+                "text": "Westminster Abbey, London?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T03:18:58Z",
+                "username": "Dhruv",
+                "text": "Madagascar?",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T03:22:59Z",
+                "username": "Dhruv",
+                "text": "Is it by any chance London? Resting place of Darwin is Westminster Abbey",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T03:23:14Z",
+                "username": "Pavan Pamidimarri",
+                "text": "Sorry I stepped away. It is London",
+                "role": "confirmation",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-29T03:23:51Z",
+                "username": "Pavan Pamidimarri",
+                "text": "This is a picture of his final resting place.",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T03:27:56Z",
+        "question_text": "This statue of Mahatma Gandhi was given red eyes, and made to look kinda like Batman, in 2019. Any guesses on the location? [image: Mahatma Gandhi statue with red glowing eyes]",
+        "question_asker": "Dhruv",
+        "has_media": true,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "San Francisco, USA",
+        "answer_solver": "Abhishek Vats",
+        "answer_timestamp": "2025-09-29T03:29:53Z",
+        "answer_confirmed": true,
+        "confirmation_text": "It's sf only Vats guessed it",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T03:29:03Z",
+                "username": "Abhishek Vats",
+                "text": "US?",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T03:29:14Z",
+                "username": "Dhruv",
+                "text": "Yes, was looking for city",
+                "role": "hint",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-29T03:29:47Z",
+                "username": "Srikanth Kapali",
+                "text": "NYC or DC again",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T03:29:53Z",
+                "username": "Abhishek Vats",
+                "text": "SF.",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T03:31:08Z",
+                "username": "Dhruv",
+                "text": "It's sf only",
+                "role": "confirmation",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-29T03:31:16Z",
+                "username": "Dhruv",
+                "text": "Vats guessed it",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T03:58:49Z",
+        "question_text": "Love and God (also known as \"Kais Aur Laila\") is a 1986 film K. Asif. The film had a long and troubled production history with shooting starting in 1963 with Guru Dutt as Kais and Nimmi as Laila. However Guru Dutt's sudden death in 1964 left the film incomplete and it was shelved. Then, Asif recast Sanjeev Kumar as Kais and resumed production of the film in 1970. Unfortunately, the director K. Asif died on 9 March 1971 at the age of 49 and the film was once again left incomplete. Fifteen years later, Asif's senior widow Akhtar Asif decided to release the incomplete film with the help of producer-director-distributor K. C. Bokadia. In a few months, they managed to salvage some usable portions of the incomplete film from three different studios and pieced them together. This cut-paste incomplete version was finally released on 27 May 1986. By the time of the film's release, several of the film's cast members had died, including its leading actor Sanjeev Kumar, who died in 1985. What unique Guinness record is held by this movie?",
+        "question_asker": "Aditi Bapat",
+        "has_media": false,
+        "is_session_question": true,
+        "session_quizmaster": "Aditi Bapat",
+        "session_theme": null,
+        "session_question_number": 14,
+        "answer_text": "Longest production time for a Bollywood movie",
+        "answer_solver": "Nikhil Borra",
+        "answer_timestamp": "2025-09-29T03:59:35Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Correct. Longest production time for a Bollywood movie, 20 something years.",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T03:59:28Z",
+                "username": "Khandoba",
+                "text": "Fewest alive cast members by the time of release?",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T03:59:35Z",
+                "username": "Nikhil Borra",
+                "text": "Longest production time?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T04:01:14Z",
+                "username": "Aditi Bapat",
+                "text": "Correct. Longest production time for a Bollywood movie, 20 something years.",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T04:02:06Z",
+        "question_text": "Connect the following- Non exhaustive Leander Paes Anju Bobby George Rajyavardhan Singh Rathore Sushil Kumar Abhinav Bindra Mary Kom Manpreet Singh",
+        "question_asker": "Aditi Bapat",
+        "has_media": false,
+        "is_session_question": true,
+        "session_quizmaster": "Aditi Bapat",
+        "session_theme": null,
+        "session_question_number": 15,
+        "answer_text": "Flag bearers for India at the Olympics opening ceremonies",
+        "answer_solver": "Abhishek S",
+        "answer_timestamp": "2025-09-29T04:02:38Z",
+        "answer_confirmed": true,
+        "confirmation_text": "JK. I knew you got it.",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T04:02:20Z",
+                "username": "Abhishek Vats",
+                "text": "Flag bearers at olympics closing",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T04:02:38Z",
+                "username": "Abhishek S",
+                "text": "Not opening?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T04:06:08Z",
+                "username": "Lzafeer Ahmad B F",
+                "text": "We’ll give it to you. Flag bearers and Olympics were the keywords we were looking for",
+                "role": "confirmation",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-29T04:07:22Z",
+                "username": "Aditi Bapat",
+                "text": "JK. I knew you got it.",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T04:04:48Z",
+        "question_text": "Identify the author/series from the image. [image: book cover of 'The Cuckoo's Calling' by Robert Galbraith]",
+        "question_asker": "Aditi Bapat",
+        "has_media": true,
+        "is_session_question": true,
+        "session_quizmaster": "Aditi Bapat",
+        "session_theme": null,
+        "session_question_number": 17,
+        "answer_text": "The Strike series by Robert Galbraith (pseudonym of J.K. Rowling)",
+        "answer_solver": "Nikhil Borra",
+        "answer_timestamp": "2025-09-29T04:05:05Z",
+        "answer_confirmed": true,
+        "confirmation_text": "JK. I knew you got it.",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T04:05:05Z",
+                "username": "Nikhil Borra",
+                "text": "Strike series.",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T04:05:06Z",
+                "username": "Abhishek S",
+                "text": "JK",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T04:05:11Z",
+                "username": "Nikhil Borra",
+                "text": "Galbraith.",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T04:05:40Z",
+                "username": "Nikhil Borra",
+                "text": "Pseudonym of JK Rowling.",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T04:07:22Z",
+                "username": "Aditi Bapat",
+                "text": "JK. I knew you got it.",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T04:28:52Z",
+        "question_text": "Connect this non-exhaustive list: Mo Amer Aziz Ansari Hannibal Buress Bill Burr Jimmy Carr Dave Chappelle Louis C.K. Whitney Cummings Pete Davidson Zarna Garg Kevin Hart Gabriel Iglesias Jim Jefferies Mark Normand Russell Peters Andrew Schulz Jack Whitehall",
+        "question_asker": "Abhishek S",
+        "has_media": false,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Comedians in the lineup for the Riyadh Comedy Festival",
+        "answer_solver": "Aditi Bapat",
+        "answer_timestamp": "2025-09-29T04:40:52Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Yup, Riyadh Comedy Festival line up",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T04:29:29Z",
+                "username": "Shubham",
+                "text": "MSG?",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T04:32:00Z",
+                "username": "Shubham",
+                "text": "Oh Tonight show?",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T04:32:03Z",
+                "username": "Lzafeer Ahmad B B",
+                "text": "Comedians who have their own shows?",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T04:32:32Z",
+                "username": "Nikhil Borra",
+                "text": "SNL skits?",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T04:37:39Z",
+                "username": "Shabeer Ahmad",
+                "text": "Joe Rogan",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T04:38:15Z",
+                "username": "Abhishek S",
+                "text": "This show/event is a one time thing, and not a series",
+                "role": "hint",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-29T04:38:39Z",
+                "username": "Lzafeer Ahmad B F",
+                "text": "Presidential campaign",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T04:40:52Z",
+                "username": "Aditi Bapat",
+                "text": "Saudi comedy festival",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T04:41:06Z",
+                "username": "Abhishek S",
+                "text": "Yup, Riyadh Comedy Festival line up",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T05:47:54Z",
+        "question_text": "ID the battle from the list of belligerents [image: Wikipedia infobox showing India vs Pakistan during the Kargil War]",
+        "question_asker": "Akshay",
+        "has_media": true,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Battle of Tiger Hill",
+        "answer_solver": "Sidhesh K K",
+        "answer_timestamp": "2025-09-29T05:48:27Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Correct!",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T05:48:27Z",
+                "username": "Sidhesh K K",
+                "text": "Tiger hill",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T05:49:26Z",
+                "username": "Akshay",
+                "text": "Correct!",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T05:54:49Z",
+        "question_text": "How about this one? [image: Wikipedia infobox showing United Kingdom vs Germany and Italy during World War II]",
+        "question_asker": "Akshay",
+        "has_media": true,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Battle of Britain",
+        "answer_solver": "Nikhil Borra",
+        "answer_timestamp": "2025-09-29T05:55:11Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Battle of Britain is correct!",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T05:55:09Z",
+                "username": "Khandoba",
+                "text": "Dunkirk",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T05:55:11Z",
+                "username": "Nikhil Borra",
+                "text": "Battle of Britain",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T05:55:21Z",
+                "username": "Akshay",
+                "text": "Battle of Britain is correct!",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T06:08:23Z",
+        "question_text": "How about this one? Only a partial list of units involved, more than enough info to identify [image: Wikipedia infobox showing units like the Azov Regiment, 36th Separate Marine Brigade (Ukraine) vs 810th Guards Naval Infantry Brigade (Russia) and Kadyrovites]",
+        "question_asker": "Akshay",
+        "has_media": true,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Siege of Mariupol (2022)",
+        "answer_solver": "Sidhesh K K",
+        "answer_timestamp": "2025-09-29T06:09:45Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Correct! Siege of mariupol is correct",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T06:09:45Z",
+                "username": "Lzafeer Ahmad B F",
+                "text": "2013-14 Crimean crisis",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T06:09:45Z",
+                "username": "Sidhesh K K",
+                "text": "Mariupol seige",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T06:10:00Z",
+                "username": "Akshay",
+                "text": "Correct! Siege of mariupol is correct",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T06:15:52Z",
+        "question_text": "Here’s a fun one. Can anyone id this from list of countries alone? If not, i’ll share list of commanders too [image: Wikipedia infobox showing the First French Empire vs the Seventh Coalition (UK, Prussia, Netherlands, etc.)]",
+        "question_asker": "Akshay",
+        "has_media": true,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Battle of Waterloo",
+        "answer_solver": "Nikhil Borra",
+        "answer_timestamp": "2025-09-29T06:17:09Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Correct!",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T06:16:22Z",
+                "username": "Nikhil Borra",
+                "text": "Napoleonic wars?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T06:17:09Z",
+                "username": "Nikhil Borra",
+                "text": "Waterloo?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T06:17:13Z",
+                "username": "Akshay",
+                "text": "Correct!",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T06:21:32Z",
+        "question_text": "The two belligerent factions - SCB and its supporters and NDC and its supporters. The battle played out on the Atithi Bhawan Street. One of the prominent figures was Einstein",
+        "question_asker": "Lzafeer Ahmad B F",
+        "has_media": false,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Battle of Baghpat (also known as the Chaat Wars), featuring 'Einstein Chacha'",
+        "answer_solver": "Akshay",
+        "answer_timestamp": "2025-09-29T06:24:23Z",
+        "answer_confirmed": true,
+        "confirmation_text": "My god Akshay Wow",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T06:24:23Z",
+                "username": "Akshay",
+                "text": "Battle of Baghpat?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T06:24:29Z",
+                "username": "Akshay",
+                "text": "The one with the frizzy hair",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T06:24:32Z",
+                "username": "Akshay",
+                "text": "Einstein?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T06:24:33Z",
+                "username": "Lzafeer Ahmad B F",
+                "text": "My god Akshay",
+                "role": "confirmation",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-29T06:24:35Z",
+                "username": "Lzafeer Ahmad B F",
+                "text": "Wow",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T06:33:28Z",
+        "question_text": "Souragya is a new premium ethnic wear brand launched in partnership with X and Myntra. The partnership is a 50-50 joint venture, leveraging X's personal vision and Myntra's design and brand-building expertise to tap into the expanding Indian ethnic wear market. Identify X.",
+        "question_asker": "Ricky",
+        "has_media": false,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Sourav Ganguly",
+        "answer_solver": "Akshay",
+        "answer_timestamp": "2025-09-29T06:35:42Z",
+        "answer_confirmed": false,
+        "confirmation_text": null,
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T06:35:42Z",
+                "username": "Akshay",
+                "text": "Sourav ganguly 🤣",
+                "role": "attempt",
+                "is_correct": true
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "medium"
+    },
+    {
+        "question_timestamp": "2025-09-29T08:34:03Z",
+        "question_text": "Pictured here is the Patek Philippe world timer. This particular pictured edition has a minor change with London replaced by Framlingham. Q:- Who was this made for? [image: Patek Philippe World Time watch]",
+        "question_asker": "Lzafeer Ahmad B F",
+        "has_media": true,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Ed Sheeran",
+        "answer_solver": "Ricky",
+        "answer_timestamp": "2025-09-29T08:35:49Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Correct!",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T08:34:39Z",
+                "username": "Ricky",
+                "text": "Anant Ambani?",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T08:35:49Z",
+                "username": "Ricky",
+                "text": "Ed Sheeran?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T08:36:14Z",
+                "username": "Lzafeer Ahmad B F",
+                "text": "Correct!",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T10:39:26Z",
+        "question_text": "DJ DSol produces EDM music with performances in popular music festivals. In 2018, he released a cover of Fleetwood Mac's Don't Stop and his spotify profile attracts about 550000 listeners. His day job however, is at the helm of a wall street giant where he took charge as CEO in 2018. Name the company/CEO",
+        "question_asker": "Sidhesh K K",
+        "has_media": false,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Goldman Sachs (David Solomon)",
+        "answer_solver": "Kartikey Pradhan",
+        "answer_timestamp": "2025-09-29T10:40:04Z",
+        "answer_confirmed": false,
+        "confirmation_text": null,
+        "answer_is_collaborative": true,
+        "answer_parts": [
+            {
+                "label": "Company",
+                "solver": "Kartikey Pradhan",
+                "text": "GS (Goldman Sachs)"
+            },
+            {
+                "label": "CEO",
+                "solver": "Kartikey Pradhan",
+                "text": "David Solomon"
+            }
+        ],
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T10:40:04Z",
+                "username": "Kartikey Pradhan",
+                "text": "GS",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T10:40:08Z",
+                "username": "Sumit Gupta",
+                "text": "Goldman Sachs",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T10:40:08Z",
+                "username": "Kartikey Pradhan",
+                "text": "David Solomon",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T10:40:17Z",
+                "username": "Sumit Gupta",
+                "text": "David Solomon",
+                "role": "attempt",
+                "is_correct": true
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "medium"
+    },
+    {
+        "question_timestamp": "2025-09-29T12:46:13Z",
+        "question_text": "X, a former child star, rose to fame for his role in a Fox sitcom from the early 2000s. But despite a promising career, he quit Hollywood at 21 to pursue a career in motor racing, which he continues to this day. Beyond racing, X has dabbled in music as a drummer for indie rock bands, owns an olive oil shop with his wife, and occasionally returns to acting, including an upcoming reunion project with his former TV family. Who is X?",
+        "question_asker": "Abhishek S",
+        "has_media": false,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Frankie Muniz (known for Malcolm in the Middle)",
+        "answer_solver": "Sidhesh K K",
+        "answer_timestamp": "2025-09-29T12:47:22Z",
+        "answer_confirmed": false,
+        "confirmation_text": null,
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T12:47:15Z",
+                "username": "Tapish",
+                "text": "Jake from two and a Half men?",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T12:47:22Z",
+                "username": "Sidhesh K K",
+                "text": "Frankie Muniz",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T12:48:10Z",
+                "username": "Sidhesh K K",
+                "text": "The cody banks guy",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T12:48:41Z",
+                "username": "Abhishek Vats",
+                "text": "Series malcolm in the middle",
+                "role": "chat",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "medium"
+    },
+    {
+        "question_timestamp": "2025-09-29T13:01:18Z",
+        "question_text": "Talking of actors into motor racing, this action star seems to have a need for speed. In 2024, debuted in Toyota Gazoo racing in 2024 at the Indianapolis Motor Speedway, placing 25th on Day 1 and 24th on Day 2. Who is he?",
+        "question_asker": "Abhishek S",
+        "has_media": false,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Keanu Reeves",
+        "answer_solver": "Abhishek Vats",
+        "answer_timestamp": "2025-09-29T13:02:11Z",
+        "answer_confirmed": false,
+        "confirmation_text": null,
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T13:02:00Z",
+                "username": "Lzafeer Ahmad B F",
+                "text": "Tom Cruise?",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T13:02:09Z",
+                "username": "Abhishek Vats",
+                "text": "Neo",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T13:02:11Z",
+                "username": "Abhishek Vats",
+                "text": "Keanu",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T13:02:52Z",
+                "username": "Abhishek S",
+                "text": "Yeah, should have focused on only 'speed' instead of 'need for speed' :D",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "medium"
+    },
+    {
+        "question_timestamp": "2025-09-29T13:09:57Z",
+        "question_text": "Guess the book based on how it’d read as a series of tweets. [image: tweet text: 'I just woke up and I am a bug. This is very inconvenient for work and family relations. Oh no, a giant apple. #MondayFeelings']",
+        "question_asker": "Lzafeer Ahmad B F",
+        "has_media": true,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "The Metamorphosis by Franz Kafka",
+        "answer_solver": "Abhishek S",
+        "answer_timestamp": "2025-09-29T13:11:21Z",
+        "answer_confirmed": false,
+        "confirmation_text": null,
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T13:11:21Z",
+                "username": "Abhishek S",
+                "text": "Metamorphosis",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T13:12:09Z",
+                "username": "Abhishek S",
+                "text": "Read bug, typed answer 😀",
+                "role": "chat",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-29T13:12:28Z",
+                "username": "Lzafeer Ahmad B F",
+                "text": "Yeah. Removed user handle to make it little more challenging",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "medium"
+    },
+    {
+        "question_timestamp": "2025-09-29T13:11:03Z",
+        "question_text": "Easy one. [image: tweet text: '2bornt2b. that is the ?']",
+        "question_asker": "Lzafeer Ahmad B F",
+        "has_media": true,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Hamlet (referencing 'To be or not to be')",
+        "answer_solver": "Abhishek S",
+        "answer_timestamp": "2025-09-29T13:12:31Z",
+        "answer_confirmed": false,
+        "extraction_confidence": "medium",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T13:12:31Z",
+                "username": "Abhishek S",
+                "text": "Hamlet",
+                "role": "attempt",
+                "is_correct": true
+            }
+        ],
+        "scores_after": null
+    },
+    {
+        "question_timestamp": "2025-09-29T13:30:15Z",
+        "question_text": "Which battle? Some clues and pop culture refs [image: James Bowie, Davy Crockett, William B. Travis, and the Alamo mission building]",
+        "question_asker": "Akshay",
+        "has_media": true,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Battle of the Alamo",
+        "answer_solver": "Sidhesh K K",
+        "answer_timestamp": "2025-09-29T13:31:43Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Correct! Alamo it is",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T13:31:43Z",
+                "username": "Sidhesh K K",
+                "text": "The Alamo?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T13:31:48Z",
+                "username": "Akshay",
+                "text": "Correct!",
+                "role": "confirmation",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-29T13:31:51Z",
+                "username": "Akshay",
+                "text": "Alamo it is",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T16:57:46Z",
+        "question_text": "ID the movie and who is the movie inspired from. Incredible soundtrack. [image: film poster of 'Iruvar' featuring Mohanlal and Aishwarya Rai]",
+        "question_asker": "Lzafeer Ahmad B F",
+        "has_media": true,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Iruvar; inspired by M.G. Ramachandran (MGR) and M. Karunanidhi",
+        "answer_solver": "Abhishek Vats",
+        "answer_timestamp": "2025-09-29T16:59:19Z",
+        "answer_confirmed": true,
+        "confirmation_text": "But. Yeah.",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T16:58:17Z",
+                "username": "Akshay",
+                "text": "Mouna Ragam?",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T16:59:19Z",
+                "username": "Abhishek Vats",
+                "text": "Iruvar and karunanidhi?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T16:59:38Z",
+                "username": "Lzafeer Ahmad B F",
+                "text": "I’d have said MGR, Karunanidhi and Jayalalita",
+                "role": "hint",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-29T16:59:48Z",
+                "username": "Lzafeer Ahmad B F",
+                "text": "But. Yeah.",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T17:28:11Z",
+        "question_text": "Who was on the other side in this battle/or name the battle? [image: Wikipedia infobox showing a coalition led by the Mughal Empire and Koch Bihar vs an unknown opponent (the Ahom Kingdom)]",
+        "question_asker": "Akshay",
+        "has_media": true,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Ahom Kingdom (Battle of Saraighat)",
+        "answer_solver": "Lzafeer Ahmad B F",
+        "answer_timestamp": "2025-09-29T17:33:24Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Correct! Battle of Saraighat",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T17:32:50Z",
+                "username": "Lzafeer Ahmad B F",
+                "text": "Koch Behar. So someone on the eastern side.",
+                "role": "hint",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-29T17:33:11Z",
+                "username": "Lzafeer Ahmad B F",
+                "text": "Bengal?",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T17:33:24Z",
+                "username": "Lzafeer Ahmad B F",
+                "text": "Or Ahom",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T17:33:38Z",
+                "username": "Akshay",
+                "text": "Correct!",
+                "role": "confirmation",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-29T17:33:38Z",
+                "username": "Akshay",
+                "text": "Battle of Saraighat",
+                "role": "answer_reveal",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T17:38:41Z",
+        "question_text": "This battle, easy if you recognize some features. can add more clues [image: Wikipedia infobox showing the British Raj (36th Sikhs) vs Afghan tribes during a famous last stand]",
+        "question_asker": "Akshay",
+        "has_media": true,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Battle of Saragarhi",
+        "answer_solver": "Abhishek Vats",
+        "answer_timestamp": "2025-09-29T17:40:55Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Battle of Saragarhi",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T17:39:28Z",
+                "username": "Abhishek Vats",
+                "text": "Sanjigrahi?",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T17:39:34Z",
+                "username": "Abhishek Vats",
+                "text": "Sannigrahi?",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T17:40:02Z",
+                "username": "Abhishek Vats",
+                "text": "The battle in kesari 1 🙈",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T17:40:47Z",
+                "username": "Abhishek Vats",
+                "text": "Starts with S and ends with garhi",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T17:40:55Z",
+                "username": "Abhishek Vats",
+                "text": "Sargarhi",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T17:40:56Z",
+                "username": "Akshay",
+                "text": "Battle of Saragarhi",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T17:46:43Z",
+        "question_text": "#1 ? [image: chart showing production costs and ticket sales for the film Cleopatra (1963) over time]",
+        "question_asker": "Kartikey Pradhan",
+        "has_media": true,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Cleopatra (1963 film)",
+        "answer_solver": "Abhishek Vats",
+        "answer_timestamp": "2025-09-29T17:51:56Z",
+        "answer_confirmed": false,
+        "confirmation_text": null,
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T17:46:56Z",
+                "username": "Abhishek Vats",
+                "text": "Ramayana",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T17:48:51Z",
+                "username": "Abhishek Vats",
+                "text": "Ben Hur or any of the 50-60s historicals?",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T17:49:03Z",
+                "username": "Akshay",
+                "text": "Lawrence of Arabia?",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T17:50:52Z",
+                "username": "Abhishek Vats",
+                "text": "Was thinking Tora Tora Tora but that was 70 I think",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T17:51:03Z",
+                "username": "Abhishek S",
+                "text": "Heaven's Gate?",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T17:51:21Z",
+                "username": "Abhishek Vats",
+                "text": "Spartacus?",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T17:51:56Z",
+                "username": "Abhishek Vats",
+                "text": "Cleopatra?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T17:52:03Z",
+                "username": "Kartikey Pradhan",
+                "text": "Think this and think a woman centric plot",
+                "role": "hint",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-29T17:52:08Z",
+                "username": "Kartikey Pradhan",
+                "text": "Closed",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "medium"
+    },
+    {
+        "question_timestamp": "2025-09-29T18:06:06Z",
+        "question_text": "What’s blocked out? (A literary pun) [image: comic panel where a psychic asks someone to think of 'any random number' but the word 'any' is replaced with 'Ayn']",
+        "question_asker": "Kartikey Pradhan",
+        "has_media": true,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Ayn Rand (the pun is 'Ayn Random Number Generator')",
+        "answer_solver": "Abhishek Vats",
+        "answer_timestamp": "2025-09-29T18:08:57Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Closed lol It’s Ayn Random number generator",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T18:08:26Z",
+                "username": "Abhishek Vats",
+                "text": "I don't know why the mind readers saying think of a random number is going on my mind 😂",
+                "role": "chat",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-29T18:08:57Z",
+                "username": "Abhishek Vats",
+                "text": "Wait is it any random and Ayn rand om?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T18:09:05Z",
+                "username": "Kartikey Pradhan",
+                "text": "Closed lol",
+                "role": "confirmation",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-29T18:09:22Z",
+                "username": "Kartikey Pradhan",
+                "text": "It’s Ayn Random number generator",
+                "role": "answer_reveal",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T18:21:04Z",
+        "question_text": "A question stolen from X [image: bottle of pills with the label partially visible; text reads 'I'm so happy 'cause today I've found my friends...']",
+        "question_asker": "Abhishek Vats",
+        "has_media": true,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Lithium (by Nirvana)",
+        "answer_solver": "Akshay",
+        "answer_timestamp": "2025-09-29T18:21:26Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Closed 😂",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T18:21:26Z",
+                "username": "Akshay",
+                "text": "Lithium",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T18:21:33Z",
+                "username": "Abhishek Vats",
+                "text": "Closed 😂",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T18:28:51Z",
+        "question_text": "Another one which I think will be closed before it is asked In late 2024, a new minimalist wordmark logo and a carless teaser video, sparked widespread controversy and negative backlash due to its departure from the brand's powerful luxury and performance heritage. Critics argued the new aesthetic felt more like a health supplement brand, while others felt the minimalistic design abandoned the brand's eccentricity and emotional connection. The controversy also stemmed from a lack of _____ in the teaser video, leading to accusations of being \"woke\" and out of touch with its core audience. Which brand?",
+        "question_asker": "Abhishek Vats",
+        "has_media": false,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Jaguar",
+        "answer_solver": "Akshay",
+        "answer_timestamp": "2025-09-29T18:29:10Z",
+        "answer_confirmed": true,
+        "confirmation_text": "As I said closed before it's asked 😂",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T18:29:10Z",
+                "username": "Akshay",
+                "text": "Jaguar?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T18:29:16Z",
+                "username": "Akshay",
+                "text": "The pink logo",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T18:29:26Z",
+                "username": "Abhishek Vats",
+                "text": "As I said closed before it's asked 😂",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T18:38:21Z",
+        "question_text": "Here’s a simple question. Identify the book by its opening line: ‘There was no possibility of a walk that day.’",
+        "question_asker": "Shvetal",
+        "has_media": false,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Jane Eyre (by Charlotte Brontë)",
+        "answer_solver": "Akshay",
+        "answer_timestamp": "2025-09-29T18:39:27Z",
+        "answer_confirmed": false,
+        "confirmation_text": null,
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T18:39:27Z",
+                "username": "Akshay",
+                "text": "Jane eyre :)",
+                "role": "attempt",
+                "is_correct": true
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "medium"
+    },
+    {
+        "question_timestamp": "2025-09-29T19:29:36Z",
+        "question_text": "River Capitals... [image: question asking to identify the capital city and country based on a map with a river]",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": true,
+        "session_quizmaster": "Abhishek S",
+        "session_theme": "River Capitals",
+        "session_question_number": 50,
+        "answer_text": "Nicosia, Cyprus",
+        "answer_solver": "Akshay",
+        "answer_timestamp": "2025-09-29T19:31:29Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Cyprus is correct.",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T19:30:12Z",
+                "username": "Akshay",
+                "text": "Lisbon",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T19:30:37Z",
+                "username": "Akshay",
+                "text": "Malta? 😀",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T19:31:29Z",
+                "username": "Akshay",
+                "text": "Cyprus then",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T19:32:03Z",
+                "username": "Abhishek S",
+                "text": "Cyprus is correct.",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T19:35:14Z",
+        "question_text": "Pop Philosophy. All questions in this category are song lyrics. You need to name the pop/rock group or artist. [image: lyrics shown: 'It’s me, hi, I’m the problem, it’s me']",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": true,
+        "session_quizmaster": "Abhishek S",
+        "session_theme": "Pop Philosophy",
+        "session_question_number": 10,
+        "answer_text": "Taylor Swift",
+        "answer_solver": "Naman Agarwal",
+        "answer_timestamp": "2025-09-29T19:36:19Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Yup :)",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T19:36:19Z",
+                "username": "Naman Agarwal",
+                "text": "Taylor Swift?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T19:37:29Z",
+                "username": "Abhishek S",
+                "text": "Yup :)",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T19:37:33Z",
+        "question_text": "Identify the artist from the lyrics. [image: lyrics shown: 'Dream of Californication']",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": true,
+        "session_quizmaster": "Abhishek S",
+        "session_theme": "Pop Philosophy",
+        "session_question_number": 20,
+        "answer_text": "Red Hot Chili Peppers",
+        "answer_solver": "Naman Agarwal",
+        "answer_timestamp": "2025-09-29T19:38:04Z",
+        "answer_confirmed": true,
+        "confirmation_text": "20 points!",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T19:38:00Z",
+                "username": "Naman Agarwal",
+                "text": "Californication",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T19:38:04Z",
+                "username": "Naman Agarwal",
+                "text": "Rhcp",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T19:38:32Z",
+                "username": "Abhishek S",
+                "text": "20 points!",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T19:39:00Z",
+        "question_text": "Identify the artist from the lyrics. [image: lyrics shown: 'You can't always get what you want']",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": true,
+        "session_quizmaster": "Abhishek S",
+        "session_theme": "Pop Philosophy",
+        "session_question_number": 30,
+        "answer_text": "The Rolling Stones",
+        "answer_solver": "Nikhil Borra",
+        "answer_timestamp": "2025-09-29T19:39:47Z",
+        "answer_confirmed": true,
+        "confirmation_text": "30 pts!",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T19:39:00Z",
+                "username": "Srikanth Kapali",
+                "text": "3 doors down",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T19:39:22Z",
+                "username": "Srikanth Kapali",
+                "text": "Coldplay",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T19:39:47Z",
+                "username": "Nikhil Borra",
+                "text": "Rollling Stones?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T19:40:03Z",
+                "username": "Abhishek S",
+                "text": "30 pts!",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T19:40:34Z",
+        "question_text": "Identify the artist from the lyrics. [image: lyrics shown: 'Tell me, did you sail across the sun?']",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": true,
+        "session_quizmaster": "Abhishek S",
+        "session_theme": "Pop Philosophy",
+        "session_question_number": 40,
+        "answer_text": "Train (the song is 'Drops of Jupiter')",
+        "answer_solver": "Srikanth Kapali",
+        "answer_timestamp": "2025-09-29T19:41:17Z",
+        "answer_confirmed": true,
+        "confirmation_text": "40 points! Drops of Jupiter, it is",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T19:41:17Z",
+                "username": "Srikanth Kapali",
+                "text": "Train",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T19:41:33Z",
+                "username": "Abhishek S",
+                "text": "40 points!",
+                "role": "confirmation",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-29T19:41:40Z",
+                "username": "Abhishek S",
+                "text": "Drops of Jupiter, it is",
+                "role": "answer_reveal",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T19:42:35Z",
+        "question_text": "Identify the artist from the lyrics. [image: lyrics shown: 'I'm independent...']",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": true,
+        "session_quizmaster": "Abhishek S",
+        "session_theme": "Pop Philosophy",
+        "session_question_number": 50,
+        "answer_text": "Melanie C (Mel C)",
+        "answer_solver": "Srikanth Kapali",
+        "answer_timestamp": "2025-09-29T19:45:45Z",
+        "answer_confirmed": true,
+        "confirmation_text": "50 points!",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T19:42:52Z",
+                "username": "Akshay",
+                "text": "Bon Jovi",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T19:44:46Z",
+                "username": "Srikanth Kapali",
+                "text": "Mel spice",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T19:45:45Z",
+                "username": "Srikanth Kapali",
+                "text": "Mel C",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T19:45:57Z",
+                "username": "Abhishek S",
+                "text": "50 points!",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T19:48:07Z",
+        "question_text": "Anagram Leaders. World Leaders, past and present, in Anagram, with a clue. [image: anagram 'I JIN PING XI']",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": true,
+        "session_quizmaster": "Abhishek S",
+        "session_theme": "Anagram Leaders",
+        "session_question_number": 10,
+        "answer_text": "Xi Jinping",
+        "answer_solver": "Khandoba",
+        "answer_timestamp": "2025-09-29T19:48:47Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Everybody Jinping the gun :D",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T19:48:45Z",
+                "username": "Srikanth Kapali",
+                "text": "Xi panda",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T19:48:45Z",
+                "username": "Akshay",
+                "text": "Eleven :)",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T19:48:47Z",
+                "username": "Khandoba",
+                "text": "Xi jinping",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T19:48:47Z",
+                "username": "Ricky",
+                "text": "Jinping XI",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T19:49:03Z",
+                "username": "Abhishek S",
+                "text": "Everybody Jinping the gun :D",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T19:50:00Z",
+        "question_text": "Anagram Leaders. [image: anagram 'I TRUST JADE UN']",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": true,
+        "session_quizmaster": "Abhishek S",
+        "session_theme": "Anagram Leaders",
+        "session_question_number": 20,
+        "answer_text": "Justin Trudeau",
+        "answer_solver": "Akshay",
+        "answer_timestamp": "2025-09-29T19:50:08Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Trudeau gets 20",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T19:50:08Z",
+                "username": "Akshay",
+                "text": "Trudeau",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T19:50:09Z",
+                "username": "Shubham",
+                "text": "Treudeau",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T19:50:34Z",
+                "username": "Abhishek S",
+                "text": "Trudeau gets 20",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T19:51:54Z",
+        "question_text": "Anagram Leaders. [image: anagram 'ARE THE MAN TRAGIC']",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": true,
+        "session_quizmaster": "Abhishek S",
+        "session_theme": "Anagram Leaders",
+        "session_question_number": 30,
+        "answer_text": "Margaret Thatcher",
+        "answer_solver": "Akshay",
+        "answer_timestamp": "2025-09-29T19:52:04Z",
+        "answer_confirmed": true,
+        "confirmation_text": "And that was the hint which I thankfully removed!",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T19:52:04Z",
+                "username": "Akshay",
+                "text": "Thatcher",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T19:52:06Z",
+                "username": "Akshay",
+                "text": "Iron lady",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T19:52:25Z",
+                "username": "Abhishek S",
+                "text": "And that was the hint which I thankfully removed!",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T19:54:02Z",
+        "question_text": "Anagram Leaders. [image: anagram 'A BRAHAM LINCOLN']",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": true,
+        "session_quizmaster": "Abhishek S",
+        "session_theme": "Anagram Leaders",
+        "session_question_number": 40,
+        "answer_text": "Abraham Lincoln",
+        "answer_solver": "Abhishek Vats",
+        "answer_timestamp": "2025-09-29T19:54:49Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Yup, Abraham Lincoln it is!",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T19:54:49Z",
+                "username": "Abhishek Vats",
+                "text": "Lincoln?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T19:54:59Z",
+                "username": "Naman Agarwal",
+                "text": "Abe Lincoln",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T19:55:00Z",
+                "username": "Akshay",
+                "text": "Abraham lincoln",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T19:55:15Z",
+                "username": "Abhishek S",
+                "text": "Yup, Abraham Lincoln it is!",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T19:56:38Z",
+        "question_text": "Anagram Leaders. [image: anagram 'NELSON MANDELA']",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": true,
+        "session_quizmaster": "Abhishek S",
+        "session_theme": "Anagram Leaders",
+        "session_question_number": 50,
+        "answer_text": "Nelson Mandela",
+        "answer_solver": "Sidhesh K K",
+        "answer_timestamp": "2025-09-29T19:56:44Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Of the eponymous effect would have been the hint!",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T19:56:44Z",
+                "username": "Sidhesh K K",
+                "text": "Nelson mandela",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T19:56:48Z",
+                "username": "Shubham",
+                "text": "Mandela?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T19:57:02Z",
+                "username": "Abhishek S",
+                "text": "Of the eponymous effect would have been the hint!",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T20:00:56Z",
+        "question_text": "Foreign languages, where the clue will be in a foreign language script and you just need to identify the language. [image: text shown in Arabic script]",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": true,
+        "session_quizmaster": "Abhishek S",
+        "session_theme": "Foreign Languages",
+        "session_question_number": 10,
+        "answer_text": "Arabic",
+        "answer_solver": "Abhishek Vats",
+        "answer_timestamp": "2025-09-29T20:01:46Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Easy 10.",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T20:01:46Z",
+                "username": "Abhishek Vats",
+                "text": "Arabic",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:01:47Z",
+                "username": "Sidhesh K K",
+                "text": "Arabic",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:01:48Z",
+                "username": "Nikhil Borra",
+                "text": "Arabic",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:02:23Z",
+                "username": "Abhishek S",
+                "text": "Easy 10.",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T20:04:09Z",
+        "question_text": "Foreign Languages. [image: text shown in Portuguese: 'Onde está minha mente?']",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": true,
+        "session_quizmaster": "Abhishek S",
+        "session_theme": "Foreign Languages",
+        "session_question_number": 20,
+        "answer_text": "Portuguese",
+        "answer_solver": "Srikanth Kapali",
+        "answer_timestamp": "2025-09-29T20:04:10Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Yup, Portuguese it is!",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T20:04:10Z",
+                "username": "Abhishek Vats",
+                "text": "Spanish?",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T20:04:10Z",
+                "username": "Shubham",
+                "text": "Spanish?",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T20:04:10Z",
+                "username": "Srikanth Kapali",
+                "text": "Portuguese",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:04:10Z",
+                "username": "Shvetal",
+                "text": "Spanish?",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T20:04:12Z",
+                "username": "Akshay",
+                "text": "Nope",
+                "role": "hint",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-29T20:04:14Z",
+                "username": "Akshay",
+                "text": "Portuguese",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:04:29Z",
+                "username": "Abhishek S",
+                "text": "Yup, Portuguese it is!",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T20:05:32Z",
+        "question_text": "Foreign Languages. [image: text shown in Polish script]",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": true,
+        "session_quizmaster": "Abhishek S",
+        "session_theme": "Foreign Languages",
+        "session_question_number": 30,
+        "answer_text": "Polish",
+        "answer_solver": "Dhruva",
+        "answer_timestamp": "2025-09-29T20:06:43Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Polish it is!",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T20:06:43Z",
+                "username": "Dhruva",
+                "text": "Polish?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:06:44Z",
+                "username": "Nikhil Borra",
+                "text": "Czech?",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T20:06:44Z",
+                "username": "Srikanth Kapali",
+                "text": "Slavic",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T20:06:45Z",
+                "username": "Sidhesh K K",
+                "text": "Czech?",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T20:06:57Z",
+                "username": "Abhishek S",
+                "text": "Polish it is!",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T20:07:47Z",
+        "question_text": "Foreign Languages. [image: text shown in Hangul (Korean): '오징어 게임을 하자']",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": true,
+        "session_quizmaster": "Abhishek S",
+        "session_theme": "Foreign Languages",
+        "session_question_number": 40,
+        "answer_text": "Korean",
+        "answer_solver": "Aditi Bapat",
+        "answer_timestamp": "2025-09-29T20:08:53Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Korean is correct!",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T20:08:53Z",
+                "username": "Aditi Bapat",
+                "text": "Korean",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:08:53Z",
+                "username": "Abhishek Vats",
+                "text": "Korean",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:08:54Z",
+                "username": "Dhruva",
+                "text": "Korean?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:08:55Z",
+                "username": "Srikanth Kapali",
+                "text": "Korean",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:08:55Z",
+                "username": "Nikhil Borra",
+                "text": "Korean",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:09:08Z",
+                "username": "Abhishek S",
+                "text": "Korean is correct!",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T20:11:14Z",
+        "question_text": "Foreign Languages. [image: text shown in Thai script: 'กัญชาถูกกฎหมายที่นี่']",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": true,
+        "session_quizmaster": "Abhishek S",
+        "session_theme": "Foreign Languages",
+        "session_question_number": 50,
+        "answer_text": "Thai",
+        "answer_solver": "Srikanth Kapali",
+        "answer_timestamp": "2025-09-29T20:11:36Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Yup :)",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T20:11:15Z",
+                "username": "Akshay",
+                "text": "Sanskrit",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T20:11:28Z",
+                "username": "Sidhesh K K",
+                "text": "Tamil?",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T20:11:36Z",
+                "username": "Srikanth Kapali",
+                "text": "Thai",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:11:37Z",
+                "username": "Nikhil Borra",
+                "text": "Thai",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:11:37Z",
+                "username": "Neehaarika",
+                "text": "Thai",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:11:38Z",
+                "username": "Akshay",
+                "text": "Thai",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:12:15Z",
+                "username": "Abhishek S",
+                "text": "Yup :)",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T20:15:29Z",
+        "question_text": "Potent Potables. This is the classic jeopardy category, Potent potables. Easy questions for this group, so hands on your keypads. [image: question about the 'Old Fashioned' cocktail]",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": true,
+        "session_quizmaster": "Abhishek S",
+        "session_theme": "Potent Potables",
+        "session_question_number": 10,
+        "answer_text": "Old Fashioned",
+        "answer_solver": "Dhruva",
+        "answer_timestamp": "2025-09-29T20:16:04Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Yup, 10 points!",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T20:16:04Z",
+                "username": "Dhruva",
+                "text": "Old fashioned",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:16:09Z",
+                "username": "Srikanth Kapali",
+                "text": "Old fashioned",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:16:29Z",
+                "username": "Abhishek S",
+                "text": "Yup, 10 points!",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T20:16:56Z",
+        "question_text": "Potent Potables. [image: question about the 'Margarita' cocktail]",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": true,
+        "session_quizmaster": "Abhishek S",
+        "session_theme": "Potent Potables",
+        "session_question_number": 20,
+        "answer_text": "Margarita",
+        "answer_solver": "Aditi Bapat",
+        "answer_timestamp": "2025-09-29T20:17:07Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Everyone is correct, of course.",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T20:17:07Z",
+                "username": "Aditi Bapat",
+                "text": "Margaeita",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:17:08Z",
+                "username": "Srikanth Kapali",
+                "text": "Margarita",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:17:11Z",
+                "username": "Nikhil Borra",
+                "text": "Margarita",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:17:12Z",
+                "username": "Abhishek Vats",
+                "text": "Margarita*",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:17:15Z",
+                "username": "Sidhesh K K",
+                "text": "Margarita",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:17:36Z",
+                "username": "Abhishek S",
+                "text": "Everyone is correct, of course.",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T20:17:54Z",
+        "question_text": "Potent Potables. [image: question about the 'White Russian' cocktail]",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": true,
+        "session_quizmaster": "Abhishek S",
+        "session_theme": "Potent Potables",
+        "session_question_number": 30,
+        "answer_text": "White Russian",
+        "answer_solver": "Dhruva",
+        "answer_timestamp": "2025-09-29T20:17:54Z",
+        "answer_confirmed": true,
+        "confirmation_text": "The Dude Abides. White Russian gets 30.",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T20:17:54Z",
+                "username": "Dhruva",
+                "text": "White russian",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:17:56Z",
+                "username": "Srikanth Kapali",
+                "text": "Kahlua",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T20:17:58Z",
+                "username": "Abhishek Vats",
+                "text": "White Russian",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:18:16Z",
+                "username": "Abhishek S",
+                "text": "The Dude Abides. White Russian gets 30.",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T20:19:41Z",
+        "question_text": "Potent Potables. [image: question about the 'Negroni' cocktail]",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": true,
+        "session_quizmaster": "Abhishek S",
+        "session_theme": "Potent Potables",
+        "session_question_number": 40,
+        "answer_text": "Negroni",
+        "answer_solver": "Sidhesh K K",
+        "answer_timestamp": "2025-09-29T20:19:41Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Negroni is correct",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T20:19:41Z",
+                "username": "Sidhesh K K",
+                "text": "Negroni",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:19:41Z",
+                "username": "Dhruva",
+                "text": "Negroni?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:20:02Z",
+                "username": "Abhishek S",
+                "text": "Negroni is correct",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T20:21:13Z",
+        "question_text": "Potent Potables. [image: question about the 'Mai Tai' cocktail]",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": true,
+        "session_quizmaster": "Abhishek S",
+        "session_theme": "Potent Potables",
+        "session_question_number": 50,
+        "answer_text": "Mai Tai",
+        "answer_solver": "Aditi Bapat",
+        "answer_timestamp": "2025-09-29T20:21:28Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Mai Tai is correct!",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T20:21:28Z",
+                "username": "Aditi Bapat",
+                "text": "Mai Tai",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:21:44Z",
+                "username": "Abhishek S",
+                "text": "Mai Tai is correct!",
+                "role": "confirmation",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-29T20:22:02Z",
+                "username": "Sidhesh K K",
+                "text": "Mai Tai",
+                "role": "attempt",
+                "is_correct": true
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T20:32:59Z",
+        "question_text": "Anagram City names. [image: anagram 'TEN LOW GLIN']",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": true,
+        "session_quizmaster": "Abhishek S",
+        "session_theme": "Anagram City names",
+        "session_question_number": 10,
+        "answer_text": "Wellington",
+        "answer_solver": "Abhishek Vats",
+        "answer_timestamp": "2025-09-29T20:33:14Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Yep, 10 points!",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T20:33:14Z",
+                "username": "Abhishek Vats",
+                "text": "Wellington",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:33:15Z",
+                "username": "Dhruv Nath",
+                "text": "Wellington",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:33:50Z",
+                "username": "Abhishek S",
+                "text": "Yep, 10 points!",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T20:34:06Z",
+        "question_text": "Anagram City names. [image: anagram 'CLEAN ROB A']",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": true,
+        "session_quizmaster": "Abhishek S",
+        "session_theme": "Anagram City names",
+        "session_question_number": 20,
+        "answer_text": "Barcelona",
+        "answer_solver": "Nikhil Borra",
+        "answer_timestamp": "2025-09-29T20:34:06Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Too easy for this group!",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T20:34:06Z",
+                "username": "Nikhil Borra",
+                "text": "Barcelona",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:34:08Z",
+                "username": "Abhishek Vats",
+                "text": "Barcelona",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:34:22Z",
+                "username": "Abhishek S",
+                "text": "Too easy for this group!",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T20:34:57Z",
+        "question_text": "Anagram City names. [image: anagram 'HI DWELL EN']",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": true,
+        "session_quizmaster": "Abhishek S",
+        "session_theme": "Anagram City names",
+        "session_question_number": 30,
+        "answer_text": "New Delhi",
+        "answer_solver": "Dhruv Nath",
+        "answer_timestamp": "2025-09-29T20:34:57Z",
+        "answer_confirmed": false,
+        "confirmation_text": null,
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T20:34:57Z",
+                "username": "Dhruv Nath",
+                "text": "New delhi",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:34:57Z",
+                "username": "Abhishek Vats",
+                "text": "New delhi",
+                "role": "attempt",
+                "is_correct": true
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "medium"
+    },
+    {
+        "question_timestamp": "2025-09-29T20:35:50Z",
+        "question_text": "Anagram City names. [image: anagram 'C CAP ULO']",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": true,
+        "session_quizmaster": "Abhishek S",
+        "session_theme": "Anagram City names",
+        "session_question_number": 40,
+        "answer_text": "Acapulco",
+        "answer_solver": "Naman Agarwal",
+        "answer_timestamp": "2025-09-29T20:35:50Z",
+        "answer_confirmed": false,
+        "confirmation_text": null,
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T20:35:50Z",
+                "username": "Naman Agarwal",
+                "text": "Acapulco",
+                "role": "attempt",
+                "is_correct": true
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "medium"
+    },
+    {
+        "question_timestamp": "2025-09-29T20:39:03Z",
+        "question_text": "Anagram City names. [image: anagram 'MAA RAAD LESS']",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": true,
+        "session_quizmaster": "Abhishek S",
+        "session_theme": "Anagram City names",
+        "session_question_number": 50,
+        "answer_text": "Dar es Salaam",
+        "answer_solver": "Dhruv Nath",
+        "answer_timestamp": "2025-09-29T20:39:03Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Perfect, yes!",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T20:39:03Z",
+                "username": "Dhruv Nath",
+                "text": "Dar es salaam",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:39:07Z",
+                "username": "Naman Agarwal",
+                "text": "Dar es salaam",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:39:15Z",
+                "username": "Abhishek S",
+                "text": "Perfect, yes!",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T20:41:35Z",
+        "question_text": "Anagram Actors. [image: anagram 'MOT HOLLAND']",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": true,
+        "session_quizmaster": "Abhishek S",
+        "session_theme": "Anagram Actors",
+        "session_question_number": 10,
+        "answer_text": "Tom Holland",
+        "answer_solver": "Sidhesh K K",
+        "answer_timestamp": "2025-09-29T20:41:53Z",
+        "answer_confirmed": true,
+        "confirmation_text": "So quick, even without me adding Avengers: Infinity War as hint",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T20:41:53Z",
+                "username": "Sidhesh K K",
+                "text": "Tom holland",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:42:29Z",
+                "username": "Abhishek S",
+                "text": "So quick, even without me adding Avengers: Infinity War as hint",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T20:44:13Z",
+        "question_text": "Anagram Actors. [image: anagram 'ENCORE HUG PILF']",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": true,
+        "session_quizmaster": "Abhishek S",
+        "session_theme": "Anagram Actors",
+        "session_question_number": 20,
+        "answer_text": "Florence Pugh",
+        "answer_solver": "Aditi Bapat",
+        "answer_timestamp": "2025-09-29T20:44:47Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Yup!",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T20:44:47Z",
+                "username": "Aditi Bapat",
+                "text": "Florence Pugh",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:44:59Z",
+                "username": "Abhishek S",
+                "text": "Yup!",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T20:46:56Z",
+        "question_text": "Anagram Actors. [image: anagram 'RACIAL DOPE']",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": true,
+        "session_quizmaster": "Abhishek S",
+        "session_theme": "Anagram Actors",
+        "session_question_number": 30,
+        "answer_text": "Leonardo DiCaprio",
+        "answer_solver": "Abhishek Vats",
+        "answer_timestamp": "2025-09-29T20:46:56Z",
+        "answer_confirmed": true,
+        "confirmation_text": "You got it!",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T20:46:56Z",
+                "username": "Abhishek Vats",
+                "text": "Di caprio",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:47:05Z",
+                "username": "Abhishek S",
+                "text": "You got it!",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T20:50:07Z",
+        "question_text": "Anagram Actors. [image: anagram 'BEHERA HARM CANTO']",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": true,
+        "session_quizmaster": "Abhishek S",
+        "session_theme": "Anagram Actors",
+        "session_question_number": 40,
+        "answer_text": "Helena Bonham Carter",
+        "answer_solver": "Aditi Bapat",
+        "answer_timestamp": "2025-09-29T20:51:52Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Yep!",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T20:50:07Z",
+                "username": "Dhruva",
+                "text": "Timothee",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-29T20:51:37Z",
+                "username": "Abhishek S",
+                "text": "Harry Potter and the Order of Phoenix",
+                "role": "hint",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-29T20:51:52Z",
+                "username": "Aditi Bapat",
+                "text": "Helena Bonham Carter",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-29T20:52:03Z",
+                "username": "Abhishek S",
+                "text": "Yep!",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-29T20:54:14Z",
+        "question_text": "Anagram Actors. (Three words) [image: anagram 'I HELL POOM ROUGH SNAFF']",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": true,
+        "session_quizmaster": "Abhishek S",
+        "session_theme": "Anagram Actors",
+        "session_question_number": 50,
+        "answer_text": "Philip Seymour Hoffman",
+        "answer_solver": "Abhishek Vats",
+        "answer_timestamp": "2025-09-29T20:54:57Z",
+        "answer_confirmed": false,
+        "confirmation_text": null,
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-29T20:54:57Z",
+                "username": "Abhishek Vats",
+                "text": "Philip seymour hoffman",
+                "role": "attempt",
+                "is_correct": true
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "medium"
+    }
+]

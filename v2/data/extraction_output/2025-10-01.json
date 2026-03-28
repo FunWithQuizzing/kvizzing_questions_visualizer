@@ -1,0 +1,944 @@
+[
+  {
+    "question_timestamp": "2025-10-01T11:42:37Z",
+    "question_text": "Originally conceived as a serial in the style of Charles Dickens' writings, this book has often been called the quintessential novel of the 80s. It was later adapted into a movie which was a box office disaster, as well as an opera. What is the title of this book, named for a historical event from late 15th century in Italy?",
+    "question_asker": "Abhishek S",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "The Bonfire of the Vanities",
+    "answer_solver": "Kartikey Pradhan",
+    "answer_timestamp": "2025-10-01T11:56:37Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Yup, that's correct.",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-10-01T11:45:37Z",
+        "username": "Sapan",
+        "text": "Helen of Troy?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-10-01T11:54:42Z",
+        "username": "Kartikey Pradhan",
+        "text": "any hints?",
+        "role": "chat",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-10-01T11:56:22Z",
+        "username": "Abhishek S",
+        "text": "I went down this rabbit hole while discussing Brian de Palma with a friend, and remembered this movie that used to air a lot on HBO when it launched in India. He's the one that directed the box office disaster.",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-10-01T11:56:37Z",
+        "username": "Kartikey Pradhan",
+        "text": "bonfire of the vanities?",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-10-01T11:57:32Z",
+        "username": "Abhishek S",
+        "text": "Yup, that's correct. My next hint would also have been about them burning cosmetics and books in Italy in the 15th century.",
+        "role": "confirmation",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-10-01T12:02:20Z",
+    "question_text": "Bonfire of the vanities was nominated for Golden Raspberry Awards for the worst film of the year, though luckily for them it didn't win. "Ghosts can't do it" won the award. Who featured in Ghosts can't do it, eventually winning the worst supporting actor award in the same year?",
+    "question_asker": "Kartikey Pradhan",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Donald Trump",
+    "answer_solver": "Nikunj",
+    "answer_timestamp": "2025-10-01T12:05:02Z",
+    "answer_confirmed": true,
+    "confirmation_text": "lmao yes",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-10-01T12:03:48Z",
+        "username": "Shubham",
+        "text": "Sandra",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-10-01T12:03:50Z",
+        "username": "Shubham",
+        "text": "Bullock?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-10-01T12:04:05Z",
+        "username": "Shubham",
+        "text": "Or was it Halle? BERRY?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-10-01T12:04:35Z",
+        "username": "Kartikey Pradhan",
+        "text": "Hint: they played themselves. take the simplest guess from today's world, who'd win the worst acting award for playing themselves",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-10-01T12:05:02Z",
+        "username": "Nikunj",
+        "text": "Trump?",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-10-01T12:05:04Z",
+        "username": "Shubham",
+        "text": "Donald Trump?",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-10-01T12:05:10Z",
+        "username": "Kartikey Pradhan",
+        "text": "lmao yes",
+        "role": "confirmation",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-10-01T12:07:44Z",
+    "question_text": "FUQ: This isn't the only time Trump has won a Razzie. He has won multiple awards. Just guess the 2 movies for which he got Worst Actor award twice.",
+    "question_asker": "Kartikey Pradhan",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Death of a Nation and Fahrenheit 11/9",
+    "answer_solver": null,
+    "answer_timestamp": null,
+    "answer_confirmed": false,
+    "confirmation_text": null,
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-10-01T12:08:30Z",
+        "username": "Kartikey Pradhan",
+        "text": "Hint: won it during his first presidential term lol",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-10-01T12:09:59Z",
+        "username": "Shubham",
+        "text": "Borat 2?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-10-01T12:10:40Z",
+        "username": "Abhishek S",
+        "text": "The only movie I remember him in apart from Home Alone 2 is Zoolander, which is way before 2016.",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-10-01T12:12:01Z",
+        "username": "Shubham",
+        "text": "Was it the Stormy Daniels movie?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-10-01T12:14:12Z",
+        "username": "Kartikey Pradhan",
+        "text": "both are documentaries",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-10-01T12:15:14Z",
+        "username": "Kartikey Pradhan",
+        "text": "I will close it - Death of a nation and Fahrenheit 11/9",
+        "role": "answer_reveal",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "medium"
+  },
+  {
+    "question_timestamp": "2025-10-01T12:32:35Z",
+    "question_text": "This suffix emerged from a hugely infamous political event of 70s, as a libfix to embellish a noun to suggest existence of a far-reaching scandal. Thus, what appropriate name, generally a metaphor, could have been given to a scandal involving a series of allegations of corruption, mismanagement, and irregularities in the disaster control projects in the Philippines during and before the administration of President Bongbong Marcos?",
+    "question_asker": "Kartikey Pradhan",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Floodgate",
+    "answer_solver": "Abhishek S",
+    "answer_timestamp": "2025-10-01T12:35:51Z",
+    "answer_confirmed": true,
+    "confirmation_text": "closed",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-10-01T12:32:48Z",
+        "username": "Abhishek S",
+        "text": "Gate?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-10-01T12:32:51Z",
+        "username": "Nikhil Borra",
+        "text": "Gate.",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-10-01T12:33:46Z",
+        "username": "Nikhil Borra",
+        "text": "Bondoggle?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-10-01T12:34:47Z",
+        "username": "Kartikey Pradhan",
+        "text": "I'd say look at the specifics of the scandal, that might send you in the right direction",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-10-01T12:35:51Z",
+        "username": "Abhishek S",
+        "text": "Was it like floodgate?",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-10-01T12:35:57Z",
+        "username": "Kartikey Pradhan",
+        "text": "Floodgate",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-10-01T12:35:58Z",
+        "username": "Kartikey Pradhan",
+        "text": "closed",
+        "role": "confirmation",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-10-01T12:44:21Z",
+    "question_text": "Another gate ques just for fun: The events surrounding a faked injury to Tom Williams of English rugby union side Harlequins in a 2008–09 Heineken Cup quarterfinal against eventual champions Leinster. Specifically, Williams faked his injury to dupe the referee into allowing Harlequins to send in a replacement, at the instigation of Harlequins coach Dean Richards and team physiotherapist Steph Brennan. Williams later admitted that his mouth had been cut open immediately after the match in an attempt to cover up the fake injury. Richards was ultimately banned from rugby for three years and Brennan for two; Williams was initially banned for one year, but his ban was reduced to four months for his role in revealing the full extent of the scheme.",
+    "question_asker": "Kartikey Pradhan",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Bloodgate",
+    "answer_solver": "Lzafeer Ahmad B F",
+    "answer_timestamp": "2025-10-01T12:45:39Z",
+    "answer_confirmed": true,
+    "confirmation_text": "lol yes",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-10-01T12:44:35Z",
+        "username": "Lzafeer Ahmad B F",
+        "text": "Inflategate",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-10-01T12:45:39Z",
+        "username": "Lzafeer Ahmad B F",
+        "text": "Blood gate?",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-10-01T12:45:42Z",
+        "username": "Kartikey Pradhan",
+        "text": "lol yes",
+        "role": "confirmation",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-10-01T12:50:41Z",
+    "question_text": "Last gate ques 😂 That Mitchell and Webb Look is a British sketch comedy television series starring David Mitchell and Robert Webb that ran from 2006 to 2010. In an episode in first season, Webb's character says that had the Nixon scandal been renamed retroactively, it should have been called X instead of Watergate, because else it can irk the linguistic puritans. What's X?",
+    "question_asker": "Kartikey Pradhan",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Watergate-gate",
+    "answer_solver": "Lzafeer Ahmad B F",
+    "answer_timestamp": "2025-10-01T13:18:06Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Bingo",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-10-01T13:16:52Z",
+        "username": "Akshay",
+        "text": "Rivergate?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-10-01T13:18:02Z",
+        "username": "Abhishek S",
+        "text": "Water's Gate?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-10-01T13:18:06Z",
+        "username": "Lzafeer Ahmad B F",
+        "text": "Watergate-Gate",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-10-01T13:18:10Z",
+        "username": "Kartikey Pradhan",
+        "text": "Bingo",
+        "role": "confirmation",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-10-01T13:12:26Z",
+    "question_text": "Urban legend probs, but this pic reminds of the inaugural Quiz Time winning team factoid from IIT Delhi. Can anyone name the two members? Hint: Both active in public life, one is a politician, i call the other ‘an aspiring politician’ 😄. One is a BJP politician and son of a former Finance Minister.",
+    "question_asker": "Akshay",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Raghuram Rajan and Jayant Sinha",
+    "answer_solver": "Lzafeer Ahmad B F",
+    "answer_timestamp": "2025-10-01T13:37:02Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Correct",
+    "answer_is_collaborative": false,
+    "answer_parts": [
+      {
+        "label": "Academic",
+        "text": "Raghuram Rajan",
+        "solver": "Lzafeer Ahmad B F"
+      },
+      {
+        "label": "Politician",
+        "text": "Jayant Sinha",
+        "solver": "Lzafeer Ahmad B F"
+      }
+    ],
+    "discussion": [
+      {
+        "timestamp": "2025-10-01T13:27:10Z",
+        "username": "Lzafeer Ahmad B F",
+        "text": "I’ll guess:- Kejriwal",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-10-01T13:31:43Z",
+        "username": "Lzafeer Ahmad B F",
+        "text": "Sundar Pichai? Lol",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-10-01T13:35:28Z",
+        "username": "Lzafeer Ahmad B F",
+        "text": "Raghuram Rajan ?",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-10-01T13:36:23Z",
+        "username": "Akshay",
+        "text": "Raghuram rajan is one, who is the other member of this duo? BJP pol Son of a former fin min Former* MP from Jharkhand",
+        "role": "hint",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-10-01T13:37:02Z",
+        "username": "Lzafeer Ahmad B F",
+        "text": "Jayant Sinha",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-10-01T13:37:20Z",
+        "username": "Akshay",
+        "text": "Correct",
+        "role": "confirmation",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-10-01T16:51:20Z",
+    "question_text": "FITB in this quote: "The Hindus wanted ______, and they sent for _______, who was not a caste Hindu. The Hindus wanted an epic, and they sent for ______, an untouchable. The Hindus wanted a _______, and they have sent for me".",
+    "question_asker": "Akshay",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "The Vedas, Vyasa, Valmiki, and a Constitution",
+    "answer_solver": "Lzafeer Ahmad B F",
+    "answer_timestamp": "2025-10-01T16:54:12Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Constitution is correct! ... Correct! ... Correct!",
+    "answer_is_collaborative": true,
+    "answer_parts": [
+      {
+        "label": "Blank 1",
+        "text": "the Vedas",
+        "solver": "Lzafeer Ahmad B F"
+      },
+      {
+        "label": "Blank 2",
+        "text": "Vyasa",
+        "solver": null
+      },
+      {
+        "label": "Blank 3",
+        "text": "Valmiki",
+        "solver": "Pavan Pamidimarri"
+      },
+      {
+        "label": "Blank 4",
+        "text": "Constitution",
+        "solver": "Nikhil Borra"
+      }
+    ],
+    "discussion": [
+      {
+        "timestamp": "2025-10-01T16:52:59Z",
+        "username": "Pavan Pamidimarri",
+        "text": "third blank is Valmiki",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-10-01T16:53:03Z",
+        "username": "Nikhil Borra",
+        "text": "Salvation, Krishna, Mahabharata, Vyas, Constitution?",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-10-01T16:53:05Z",
+        "username": "Akshay",
+        "text": "Correct!",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-10-01T16:53:30Z",
+        "username": "Akshay",
+        "text": "Vyasa wasn’t a dalit, technically Constitution is correct!",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-10-01T16:54:02Z",
+        "username": "Lzafeer Ahmad B F",
+        "text": "So first will be Vedas?",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-10-01T16:54:10Z",
+        "username": "Akshay",
+        "text": "Correct!",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-10-01T16:54:12Z",
+        "username": "Lzafeer Ahmad B F",
+        "text": "Third is Valmiki?",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-10-01T16:54:30Z",
+        "username": "Akshay",
+        "text": "Vedas, Vyasa, Valmiki, Constitution",
+        "role": "answer_reveal",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-10-01T16:55:17Z",
+    "question_text": "Dionysius Exiguus (Dennis the Humble) was a Scythian monk who lived in Rome in the 6th century. ... His most famous invention, however, was the result of a scheme he used to identify the correct date of Easter in his times. What did humble Dennis invent?",
+    "question_asker": "Pavan Pamidimarri",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "The BC/AD dating system (specifically Anno Domini)",
+    "answer_solver": "Sidhesh K K",
+    "answer_timestamp": "2025-10-01T16:58:40Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Correct, Dennis invented the way of numbering years that we use today. He called it AD",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-10-01T16:56:21Z",
+        "username": "Lzafeer Ahmad B F",
+        "text": "Calendar?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-10-01T16:58:40Z",
+        "username": "Sidhesh K K",
+        "text": "The BC AD dating?",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-10-01T16:59:13Z",
+        "username": "Pavan Pamidimarri",
+        "text": "Correct, Dennis invented the way of numbering years that we use today. He called it AD",
+        "role": "confirmation",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-10-01T17:32:40Z",
+    "question_text": "Which individual, the only SC woman member of the Constituent Assembly? [image: Dakshayani Velayudhan]",
+    "question_asker": "Akshay",
+    "has_media": true,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Dakshayani Velayudhan",
+    "answer_solver": "Pavan Pamidimarri",
+    "answer_timestamp": "2025-10-01T17:35:57Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Correct! Dakshayani Velayudhan",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-10-01T17:35:57Z",
+        "username": "Pavan Pamidimarri",
+        "text": "Dakshayani was her first name, don’t remember last name",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-10-01T17:37:04Z",
+        "username": "Akshay",
+        "text": "Correct!",
+        "role": "confirmation",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-10-01T17:37:11Z",
+        "username": "Akshay",
+        "text": "Dakshayani Velayudhan",
+        "role": "answer_reveal",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-10-01T17:50:48Z",
+    "question_text": "In his formal written messages, this ruler styled himself dEvAnAm piya rAjA piyadasi (“beloved of the gods, king good-to-look-at”). His better known name features in the Vishnu, Matsya, Vayu, and Brahmanda puranas. His accomplishments were lost to history, but were rediscovered in modern times, and the dating of his reign is partly based on those puranic mentions. What do you know him as?",
+    "question_asker": "Pavan Pamidimarri",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Ashoka (Emperor Ashoka)",
+    "answer_solver": "Abhishek Vats",
+    "answer_timestamp": "2025-10-01T17:52:02Z",
+    "answer_confirmed": true,
+    "confirmation_text": "yes.",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-10-01T17:51:59Z",
+        "username": "Akshay",
+        "text": "SRk 😄",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-10-01T17:52:02Z",
+        "username": "Abhishek Vats",
+        "text": "Ashoka?",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-10-01T17:52:54Z",
+        "username": "Pavan Pamidimarri",
+        "text": "yes. i think i ahve plugged this before, but if you get a chance to read Charles Allen’s book Ashoka, please do. excellent read",
+        "role": "confirmation",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-10-01T17:55:41Z",
+    "question_text": "Ety question: what household name product was originally sold as ‘kshudhavardhak’ before its manufacturers decided to adopt its simpler and more memorable name we all know?",
+    "question_asker": "Akshay",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Hajmola",
+    "answer_solver": "Pavan Pamidimarri",
+    "answer_timestamp": "2025-10-01T17:56:15Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Correct!",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-10-01T17:56:15Z",
+        "username": "Pavan Pamidimarri",
+        "text": "Hajmola?",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-10-01T17:56:21Z",
+        "username": "Akshay",
+        "text": "Correct!",
+        "role": "confirmation",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-10-01T18:18:02Z",
+    "question_text": "X was notoriously particular about his coffee preparation, insisting on using exactly 60 coffee beans for each cup he brewed. This precision also reflects the meticulous nature that characterized his musical compositions. ID X.",
+    "question_asker": "Abhishek S",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Ludwig van Beethoven",
+    "answer_solver": "Lzafeer Ahmad B F",
+    "answer_timestamp": "2025-10-01T18:18:39Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Beethoven is correct",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-10-01T18:18:24Z",
+        "username": "Akshay",
+        "text": "Mozart?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-10-01T18:18:32Z",
+        "username": "Akshay",
+        "text": "Or Wagner",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-10-01T18:18:39Z",
+        "username": "Lzafeer Ahmad B F",
+        "text": "If not MOzart I’l;ll take Beethoven",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-10-01T18:19:05Z",
+        "username": "Khandoba",
+        "text": "I’ll take Bach",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-10-01T18:19:19Z",
+        "username": "Abhishek S",
+        "text": "Akshay ne do baar galat wire kaat di",
+        "role": "chat",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-10-01T18:19:51Z",
+        "username": "Pavan Pamidimarri",
+        "text": "Gustav Mahler?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-10-01T18:20:00Z",
+        "username": "Abhishek S",
+        "text": "Beethoven is correct",
+        "role": "confirmation",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-10-01T18:22:50Z",
+    "question_text": "This country consumes more coffee per capita than any other country, with an average of around 12 kg per person per year. ID these coffee paglus.",
+    "question_asker": "Abhishek S",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Finland",
+    "answer_solver": "Lzafeer Ahmad B F",
+    "answer_timestamp": "2025-10-01T18:24:14Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Finland is correct 😂",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-10-01T18:23:40Z",
+        "username": "Lzafeer Ahmad B F",
+        "text": "Norway or Finland?",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-10-01T18:23:45Z",
+        "username": "Abhishek Vats",
+        "text": "Iceland",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-10-01T18:23:52Z",
+        "username": "Abhishek Vats",
+        "text": "Sweden",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-10-01T18:24:14Z",
+        "username": "Lzafeer Ahmad B F",
+        "text": "Finland",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-10-01T18:24:17Z",
+        "username": "Abhishek S",
+        "text": "Finland is correct 😂",
+        "role": "confirmation",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-10-01T19:47:31Z",
+    "question_text": "Which Dalit leader and pioneer? [image: Jogendra Nath Mandal]",
+    "question_asker": "Akshay",
+    "has_media": true,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Jogendra Nath Mandal",
+    "answer_solver": "Shvetal",
+    "answer_timestamp": "2025-10-01T19:56:24Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Correct! JN Mandal it is",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-10-01T19:56:24Z",
+        "username": "Shvetal",
+        "text": "And is this Mandal?",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-10-01T19:56:55Z",
+        "username": "Akshay",
+        "text": "Correct! JN Mandal it is",
+        "role": "confirmation",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-10-01T22:31:40Z",
+    "question_text": "This term was originally coined by detractors of a particularly powerful First Lord of the Treasury. They used it as a scary phrase to describe his office. The only official residence allotted to this office is Chequers, a country house in Buckinghamshire outside London. It was first mentioned officially in a royal warrant in 1905. In recent times, every holder of this office has also concurrently been the First Lord of the Treasury. What is this office in British government?",
+    "question_asker": "Pavan Pamidimarri",
+    "has_media": false,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Prime Minister of the United Kingdom",
+    "answer_solver": "Akshay",
+    "answer_timestamp": "2025-10-01T22:34:47Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Yes prime Minister",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-10-01T22:33:13Z",
+        "username": "Akshay",
+        "text": "Chancellor of the Exchequer?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-10-01T22:34:47Z",
+        "username": "Akshay",
+        "text": "Is this the PM? Lol",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-10-01T22:47:26Z",
+        "username": "Pavan Pamidimarri",
+        "text": "Yes prime Minister",
+        "role": "confirmation",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  },
+  {
+    "question_timestamp": "2025-10-01T23:33:17Z",
+    "question_text": "What somewhat scary feature does this map depict? [image: unknown]",
+    "question_asker": "Akshay",
+    "has_media": true,
+    "is_session_question": false,
+    "session_quizmaster": null,
+    "session_theme": null,
+    "session_question_number": null,
+    "answer_text": "Clear Air Turbulence (CAT) / High-altitude wind patterns",
+    "answer_solver": "Pavan Pamidimarri",
+    "answer_timestamp": "2025-10-01T23:55:57Z",
+    "answer_confirmed": true,
+    "confirmation_text": "Correct!",
+    "answer_is_collaborative": false,
+    "answer_parts": null,
+    "discussion": [
+      {
+        "timestamp": "2025-10-01T23:37:36Z",
+        "username": "Naman Maheshwari",
+        "text": "El Nino/La Nina effects?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-10-01T23:52:53Z",
+        "username": "Srikanth Kapali",
+        "text": "Ocean dead zones where all oxygen has been depleted?",
+        "role": "attempt",
+        "is_correct": false
+      },
+      {
+        "timestamp": "2025-10-01T23:55:57Z",
+        "username": "Pavan Pamidimarri",
+        "text": "ah, wind speeds at 30k type altitudes that are used by jetliners",
+        "role": "attempt",
+        "is_correct": true
+      },
+      {
+        "timestamp": "2025-10-01T23:56:19Z",
+        "username": "Pavan Pamidimarri",
+        "text": "Japan has more bullet trains because more turbulence in inter-city flights",
+        "role": "chat",
+        "is_correct": null
+      },
+      {
+        "timestamp": "2025-10-01T23:56:25Z",
+        "username": "Akshay",
+        "text": "Correct!",
+        "role": "confirmation",
+        "is_correct": null
+      }
+    ],
+    "scores_after": null,
+    "extraction_confidence": "high"
+  }
+]

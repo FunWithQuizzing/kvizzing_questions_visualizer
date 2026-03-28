@@ -1,0 +1,1094 @@
+[
+    {
+        "question_timestamp": "2025-09-30T03:12:50Z",
+        "question_text": "whats this map representing? [image: Map with countries colored categorically based on terms used for fuel]",
+        "question_asker": "Dhruv",
+        "has_media": true,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "The different names used for fuel/gasoline in different countries (e.g., Petrol vs Gasoline vs Essence vs Benzene).",
+        "answer_solver": "Lzafeer Ahmad B F",
+        "answer_timestamp": "2025-09-30T03:18:08Z",
+        "answer_confirmed": true,
+        "confirmation_text": "yes",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-30T03:13:33Z",
+                "username": "Khandoba",
+                "text": "Is there a gradient here? Red to green?",
+                "role": "chat",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-30T03:14:44Z",
+                "username": "Abhishek Vats",
+                "text": "Something to do with cricket?",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-30T03:15:08Z",
+                "username": "Sumit Gupta",
+                "text": "I am thinking about Gujjus migration",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-30T03:15:15Z",
+                "username": "Dhruv",
+                "text": "its about something thats called different in different countries",
+                "role": "hint",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-30T03:15:36Z",
+                "username": "Shashank Jalani",
+                "text": "Football vs soccer",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-30T03:18:08Z",
+                "username": "Lzafeer Ahmad B F",
+                "text": "Petrol pumps / gas station / fuel pump / fuel station",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T03:19:11Z",
+                "username": "Lzafeer Ahmad B F",
+                "text": "Gasoline / Petrol ?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T03:19:13Z",
+                "username": "Shashank Jalani",
+                "text": "Petrol / gasoline",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T03:19:15Z",
+                "username": "Dhruv",
+                "text": "yes",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-30T03:33:05Z",
+        "question_text": "During WW2, this Indian pilot joined the Royal Indian Air Force and became the head of its transport command. When India decided to airlift soldiers to Kashmir in October 1947, he piloted the first IAF plane to land in Srinagar. He assisted the fledgling nation of Indonesia in 1947, and was rewarded for his efforts with honorary citizenship and the country’s highest award. He named Megawati Sukarnoputri at Sukarno’s request. Name this person.",
+        "question_asker": "Pavan Pamidimarri",
+        "has_media": false,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Biju Patnaik",
+        "answer_solver": "Lzafeer Ahmad B F",
+        "answer_timestamp": "2025-09-30T03:33:27Z",
+        "answer_confirmed": true,
+        "confirmation_text": "nice crack 🙂",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-30T03:33:27Z",
+                "username": "Lzafeer Ahmad B F",
+                "text": "Biju Patnaik",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T03:33:33Z",
+                "username": "Khandoba",
+                "text": "Biju Patnaik",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T03:34:34Z",
+                "username": "Pavan Pamidimarri",
+                "text": "nice crack 🙂",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-30T03:38:38Z",
+        "question_text": "Here’s an easy one- NYT crosswords favourite airport Appeared thrice in the last month",
+        "question_asker": "Lzafeer Ahmad B F",
+        "has_media": false,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "ORD (O'Hare International Airport)",
+        "answer_solver": "Pavan Pamidimarri",
+        "answer_timestamp": "2025-09-30T03:38:57Z",
+        "answer_confirmed": true,
+        "confirmation_text": "ORD it is",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-30T03:38:57Z",
+                "username": "Nikhil Borra",
+                "text": "LAX?",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-30T03:38:57Z",
+                "username": "Pavan Pamidimarri",
+                "text": "ORD for O’Hare?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T03:39:08Z",
+                "username": "Lzafeer Ahmad B F",
+                "text": "ORD it is",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-30T03:39:35Z",
+        "question_text": "YYZ — which airport?",
+        "question_asker": "Pavan Pamidimarri",
+        "has_media": false,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Toronto Pearson International Airport",
+        "answer_solver": "Lzafeer Ahmad B F",
+        "answer_timestamp": "2025-09-30T03:39:57Z",
+        "answer_confirmed": true,
+        "confirmation_text": "good track",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-30T03:39:53Z",
+                "username": "Sumit Gupta",
+                "text": "Montreal?",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-30T03:39:57Z",
+                "username": "Lzafeer Ahmad B F",
+                "text": "Trrrronto",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T03:40:00Z",
+                "username": "Pavan Pamidimarri",
+                "text": "good track",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-30T03:41:58Z",
+        "question_text": "FCO - what is it?",
+        "question_asker": "Pavan Pamidimarri",
+        "has_media": false,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Leonardo da Vinci–Fiumicino Airport (Rome)",
+        "answer_solver": "Akshay",
+        "answer_timestamp": "2025-09-30T03:42:37Z",
+        "answer_confirmed": false,
+        "confirmation_text": null,
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-30T03:42:37Z",
+                "username": "Akshay",
+                "text": "Rome",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T03:42:41Z",
+                "username": "Akshay",
+                "text": "Fimuncino",
+                "role": "attempt",
+                "is_correct": true
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "medium"
+    },
+    {
+        "question_timestamp": "2025-09-30T03:47:18Z",
+        "question_text": "IXC - which airport is this",
+        "question_asker": "Sumit Gupta",
+        "has_media": false,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Shaheed Bhagat Singh International Airport (Chandigarh)",
+        "answer_solver": "Lzafeer Ahmad B F",
+        "answer_timestamp": "2025-09-30T03:47:23Z",
+        "answer_confirmed": false,
+        "confirmation_text": null,
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-30T03:47:23Z",
+                "username": "Lzafeer Ahmad B F",
+                "text": "Chandigarh",
+                "role": "attempt",
+                "is_correct": true
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "medium"
+    },
+    {
+        "question_timestamp": "2025-09-30T03:49:23Z",
+        "question_text": "Guess IXD?",
+        "question_asker": "Lzafeer Ahmad B F",
+        "has_media": false,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Prayagraj Airport (formerly Allahabad)",
+        "answer_solver": "Sumit Gupta",
+        "answer_timestamp": "2025-09-30T03:56:07Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Correct",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-30T03:53:53Z",
+                "username": "Sumit Gupta",
+                "text": "Now called? A city with name change in last ~half century",
+                "role": "chat",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-30T03:55:41Z",
+                "username": "Sumit Gupta",
+                "text": "Temporary or permanent?",
+                "role": "chat",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-30T03:56:07Z",
+                "username": "Sumit Gupta",
+                "text": "Allahabad?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T03:56:07Z",
+                "username": "Pavan Pamidimarri",
+                "text": "oh Allahabad",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T03:56:12Z",
+                "username": "Lzafeer Ahmad B F",
+                "text": "Correct",
+                "role": "confirmation",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-30T03:56:13Z",
+                "username": "Sumit Gupta",
+                "text": "Prayagraj!",
+                "role": "chat",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-30T04:26:37Z",
+        "question_text": "The shuttle in the Honolulu airport is called X X shuttle, and in Hawaiian it means “very fast” shuttle. It inspired the name of a website you all know. What is the shuttle called?",
+        "question_asker": "Pavan Pamidimarri",
+        "has_media": false,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Wiki Wiki Shuttle (inspired the name Wikipedia/Wiki)",
+        "answer_solver": "Akshay",
+        "answer_timestamp": "2025-09-30T04:26:48Z",
+        "answer_confirmed": false,
+        "confirmation_text": null,
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-30T04:26:48Z",
+                "username": "Akshay",
+                "text": "Wikiwiki",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T04:26:48Z",
+                "username": "Nikhil Borra",
+                "text": "Wiki wiki",
+                "role": "attempt",
+                "is_correct": true
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "medium"
+    },
+    {
+        "question_timestamp": "2025-09-30T04:59:28Z",
+        "question_text": "What is the code for Fort Worth airport, which is in ft worth proper?",
+        "question_asker": "Akshay",
+        "has_media": false,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "AFW (Fort Worth Alliance Airport)",
+        "answer_solver": null,
+        "answer_timestamp": null,
+        "answer_confirmed": false,
+        "confirmation_text": null,
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-30T04:59:28Z",
+                "username": "Akshay",
+                "text": "Surprised ppl didnt get this. DFW is Dallas Fort Worth but AFW is the code for Fort Worth airport, which is in ft worth proper",
+                "role": "answer_reveal",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "medium"
+    },
+    {
+        "question_timestamp": "2025-09-30T05:06:41Z",
+        "question_text": "[image: emojis of a lightning bolt and animal paws]",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Usain Bolt",
+        "answer_solver": "Naman Maheshwari",
+        "answer_timestamp": "2025-09-30T05:09:47Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Quick and easy for you guys!",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-30T05:09:47Z",
+                "username": "Naman Maheshwari",
+                "text": "Usain Bolt",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T05:10:16Z",
+                "username": "Naman Maheshwari",
+                "text": "I kept thinking cricket because of the bat",
+                "role": "chat",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-30T05:10:17Z",
+                "username": "Akshay",
+                "text": "Bolt",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T05:12:51Z",
+                "username": "Abhishek S",
+                "text": "Not Ronaldo, no",
+                "role": "chat",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-30T05:17:08Z",
+                "username": "Abhishek S",
+                "text": "Quick and easy for you guys!",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-30T05:12:51Z",
+        "question_text": "Identify the athlete from emojis (continued batch). [image: swimmer/water emojis]",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Michael Phelps",
+        "answer_solver": "Abhishek Vats",
+        "answer_timestamp": "2025-09-30T05:14:19Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Quick and easy for you guys!",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-30T05:14:19Z",
+                "username": "Abhishek Vats",
+                "text": "Micheal phelps",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T05:17:08Z",
+                "username": "Abhishek S",
+                "text": "Quick and easy for you guys!",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-30T05:12:51Z",
+        "question_text": "Identify the athlete from emojis (continued batch). [image: tennis emojis]",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Serena Williams",
+        "answer_solver": "Gautham Sista",
+        "answer_timestamp": "2025-09-30T05:15:30Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Quick and easy for you guys!",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-30T05:15:30Z",
+                "username": "Gautham Sista",
+                "text": "Serena Williams",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T05:17:08Z",
+                "username": "Abhishek S",
+                "text": "Quick and easy for you guys!",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-30T05:12:51Z",
+        "question_text": "Identify the athlete from emojis (continued batch). [image: goat/gymnastics emojis]",
+        "question_asker": "Abhishek S",
+        "has_media": true,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Simone Biles",
+        "answer_solver": "Gautham Sista",
+        "answer_timestamp": "2025-09-30T05:16:42Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Quick and easy for you guys!",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-30T05:16:42Z",
+                "username": "Gautham Sista",
+                "text": "Simone Biles",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T05:17:08Z",
+                "username": "Abhishek S",
+                "text": "Quick and easy for you guys!",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-30T06:37:17Z",
+        "question_text": "Which airport has the IATA code DXN?",
+        "question_asker": "Akshay",
+        "has_media": false,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Noida International Airport (also known as Jewar Airport)",
+        "answer_solver": "Shashank Jalani",
+        "answer_timestamp": "2025-09-30T06:38:03Z",
+        "answer_confirmed": false,
+        "confirmation_text": null,
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-30T06:38:03Z",
+                "username": "Shashank Jalani",
+                "text": "The new Noida airport?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T06:38:59Z",
+                "username": "Shashank Jalani",
+                "text": "Jewar",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T06:42:02Z",
+                "username": "Abhishek S",
+                "text": "Hmm, yeah that logic makes sense.",
+                "role": "chat",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "medium"
+    },
+    {
+        "question_timestamp": "2025-09-30T08:01:02Z",
+        "question_text": "ID the song from these lyrics: Phul mala do rupaiya, Teri zulf me saja phul sau rupaiya Jo mithaai ek rupiya, tumne munh laga ke mujhko di to lakh rupaiya",
+        "question_asker": "Abhishek S",
+        "has_media": false,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Urvashi Urvashi (from the film Kadhalan/Humse Hai Muqabala)",
+        "answer_solver": "Nikunj",
+        "answer_timestamp": "2025-09-30T08:01:27Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Too quick!",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-30T08:01:27Z",
+                "username": "Nikunj",
+                "text": "Premika ne pyar se",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-30T08:01:39Z",
+                "username": "Nikhil Borra",
+                "text": "Urvashi urvashi.",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T08:01:55Z",
+                "username": "Abhishek S",
+                "text": "Too quick!",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-30T09:09:44Z",
+        "question_text": "Slightly changing the tone, can anyone identify this classic song from this stanza: Panchhi Se Chhudakar Uska Ghar Tum Apne Ghar Par Le Aaye Ye Pyar Ka Pinjara Man Bhaaya Hum Ji Bhar Bhar Kar Musakaye Jab Pyar Hua Is Pinjare Se Tum Kahne Lage Aazaad Raho Hum Kaise Bhulaye Pyar Tera Tum Apni Zubaan Se Ye Na Kaho",
+        "question_asker": "Abhishek S",
+        "has_media": false,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Hum tere pyar me saara alam (kho baithe)",
+        "answer_solver": "Sidhesh K K",
+        "answer_timestamp": "2025-09-30T09:15:34Z",
+        "answer_confirmed": true,
+        "confirmation_text": "kho baithe, but yes :)",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-30T09:11:24Z",
+                "username": "Nikunj",
+                "text": "Is this pyare panchi from hindustani??",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-30T09:15:34Z",
+                "username": "Sidhesh K K",
+                "text": "Hum tere pyar me saara alam chhod aaye",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T09:15:58Z",
+                "username": "Sidhesh K K",
+                "text": "Sorry kho baithe",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T09:15:59Z",
+                "username": "Abhishek S",
+                "text": "kho baithe, but yes :)",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-30T09:23:46Z",
+        "question_text": "This song was written sung and composed by amongst the best in the business. All 3 revered in their craft ID by lyrics: Raat Christmas ki thi, Na tere bas ki thi, Na mere bas ki thi, Chaand sajde me tha, Aur me girje me thi, Tune lab choo liye, Jab main sajde me thi!",
+        "question_asker": "Sidhesh K K",
+        "has_media": false,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Raat Christmas Ki Thi (from the album 'Dil Padosi Hai', by Gulzar, Asha Bhosle, and RD Burman)",
+        "answer_solver": "Abhishek S",
+        "answer_timestamp": "2025-09-30T09:33:34Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Super question!",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-30T09:30:16Z",
+                "username": "Abhishek S",
+                "text": "Quirky lyrics could mean Kishore Kumar as singer and RD Burman as the music director",
+                "role": "chat",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-30T09:31:01Z",
+                "username": "Lzafeer Ahmad B F",
+                "text": "For some reason. Jaanam samjha karo is popping into my head",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-30T09:33:34Z",
+                "username": "Abhishek S",
+                "text": "Lol, the only one I can think of who would mix English words into Urdu - Gulzar",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T09:34:12Z",
+                "username": "Abhishek S",
+                "text": "Super question!",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-30T12:23:39Z",
+        "question_text": "Which US airport code reflects the fact that it was originally called Geiger Field after Harold Geiger, a mil aviation legend? The airport has retained its original IATA code even after being renamed to _____ Int’l airport",
+        "question_asker": "Akshay",
+        "has_media": false,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "GEG (Spokane International Airport)",
+        "answer_solver": "Prathamesh",
+        "answer_timestamp": "2025-09-30T12:30:59Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Correct!",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-30T12:26:20Z",
+                "username": "Nikhil Borra",
+                "text": "Guam?",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-30T12:30:14Z",
+                "username": "Sumit Gupta",
+                "text": "TAC",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-30T12:30:59Z",
+                "username": "Prathamesh",
+                "text": "Spokane",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T12:32:14Z",
+                "username": "Akshay",
+                "text": "Correct!",
+                "role": "confirmation",
+                "is_correct": null
+            },
+            {
+                "timestamp": "2025-09-30T12:32:18Z",
+                "username": "Akshay",
+                "text": "Spokane has GEG",
+                "role": "answer_reveal",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-30T12:43:07Z",
+        "question_text": "When the whole Gaya GAY thing blew up, ppl on social media and elsewhere started sharing their favorite weird IATA codes. One airport that often bears the brunt of snarky jokes is Butler Memorial Airport in Missouri, USA, just outside Kansas City. What might be so funny about its IATA code?",
+        "question_asker": "Akshay",
+        "has_media": false,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "BUM",
+        "answer_solver": "Nikhil Borra",
+        "answer_timestamp": "2025-09-30T12:44:09Z",
+        "answer_confirmed": true,
+        "confirmation_text": "BUM is correct",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-30T12:44:05Z",
+                "username": "Shubham",
+                "text": "Is it BUTT?",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-30T12:44:09Z",
+                "username": "Nikhil Borra",
+                "text": "BUT or BUM?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T12:44:16Z",
+                "username": "Akshay",
+                "text": "BUM is correct",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-30T12:50:21Z",
+        "question_text": "Sioux Gateway Airport in Iowa has also faced a similar problem. What do you reckon it's airport code is?",
+        "question_asker": "Abhishek S",
+        "has_media": false,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "SUX",
+        "answer_solver": "Nikhil Borra",
+        "answer_timestamp": "2025-09-30T12:51:08Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Yup :)",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-30T12:51:08Z",
+                "username": "Nikhil Borra",
+                "text": "SUX?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T12:51:20Z",
+                "username": "Abhishek S",
+                "text": "Yup :)",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-30T13:59:16Z",
+        "question_text": "If you're going from DAD to MOM, from which country to which are you travelling?",
+        "question_asker": "Abhishek S",
+        "has_media": false,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Vietnam to Mauritania (Da Nang to Letfotar)",
+        "answer_solver": "Sidhesh K K",
+        "answer_timestamp": "2025-09-30T14:00:33Z",
+        "answer_confirmed": false,
+        "confirmation_text": null,
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-30T13:59:45Z",
+                "username": "Kartikey Pradhan",
+                "text": "DAD is in Vietnam...?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T14:00:33Z",
+                "username": "Sidhesh K K",
+                "text": "Vietnam to Mauritania",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T14:03:09Z",
+                "username": "Abhishek S",
+                "text": "De Nang, Vietnam to Letfotar, Mauritania",
+                "role": "answer_reveal",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "medium"
+    },
+    {
+        "question_timestamp": "2025-09-30T16:23:33Z",
+        "question_text": "Connect Steven Speilberg, Tom Cruise, Kevin Spacey, Gwyneth Paltrow",
+        "question_asker": "Lzafeer Ahmad B F",
+        "has_media": false,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Austin Powers in Goldmember (they all have cameos in the opening 'Austinpussy' movie-within-a-movie sequence)",
+        "answer_solver": "Abhishek Vats",
+        "answer_timestamp": "2025-09-30T16:29:04Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Goldmember is right",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-30T16:27:17Z",
+                "username": "Pavan Pamidimarri",
+                "text": "cameo in some movie?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T16:28:01Z",
+                "username": "Pavan Pamidimarri",
+                "text": "not sure if Kevin Spacey was there, but the rest were definitely in an Austin Powers movie",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T16:28:50Z",
+                "username": "Pavan Pamidimarri",
+                "text": "I will say International Man of Mystery",
+                "role": "attempt",
+                "is_correct": false
+            },
+            {
+                "timestamp": "2025-09-30T16:29:04Z",
+                "username": "Abhishek Vats",
+                "text": "Think it was Goldmember",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T16:29:20Z",
+                "username": "Lzafeer Ahmad B F",
+                "text": "Goldmember is right",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-30T16:41:07Z",
+        "question_text": "What’s this? [image: 20 Rupee coin]",
+        "question_asker": "Akshay",
+        "has_media": true,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "20 Rupee coin",
+        "answer_solver": "Lzafeer Ahmad B F",
+        "answer_timestamp": "2025-09-30T16:41:36Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Correct!",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-30T16:41:36Z",
+                "username": "Lzafeer Ahmad B F",
+                "text": "20 Rs coin?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T16:41:51Z",
+                "username": "Akshay",
+                "text": "Correct!",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-30T17:15:48Z",
+        "question_text": "Q1: What metal were these coins made of until the late 80s and why?",
+        "question_asker": "Akshay",
+        "has_media": false,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "Aluminum (used because it was a cheaper option as metal prices rose)",
+        "answer_solver": "Sidhesh K K",
+        "answer_timestamp": "2025-09-30T17:16:08Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Correct",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-30T17:16:08Z",
+                "username": "Sidhesh K K",
+                "text": "Aluminum?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T17:16:11Z",
+                "username": "Pavan Pamidimarri",
+                "text": "aluminum?",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T17:16:13Z",
+                "username": "Akshay",
+                "text": "Correct",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    },
+    {
+        "question_timestamp": "2025-09-30T17:22:46Z",
+        "question_text": "Q2: In the late 80s, the RBI and govt decided to switch to smaller coins of mainly stainless steel due to what weird quirk related to inflation, which created a major smuggling problem that in turn substantially reduced coin supply?",
+        "question_asker": "Akshay",
+        "has_media": false,
+        "is_session_question": false,
+        "session_quizmaster": null,
+        "session_theme": null,
+        "session_question_number": null,
+        "answer_text": "The intrinsic value of the metal in the coins became higher than their face value, leading people to melt them down and sell the metal for profit.",
+        "answer_solver": "Lzafeer Ahmad B F",
+        "answer_timestamp": "2025-09-30T17:23:11Z",
+        "answer_confirmed": true,
+        "confirmation_text": "Correct!",
+        "answer_is_collaborative": false,
+        "answer_parts": null,
+        "discussion": [
+            {
+                "timestamp": "2025-09-30T17:23:11Z",
+                "username": "Lzafeer Ahmad B F",
+                "text": "The value of metal was higher than the currency value",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T17:23:25Z",
+                "username": "Nikhil Borra",
+                "text": "Metal was more valuable than the value.",
+                "role": "attempt",
+                "is_correct": true
+            },
+            {
+                "timestamp": "2025-09-30T17:24:02Z",
+                "username": "Akshay",
+                "text": "Correct!",
+                "role": "confirmation",
+                "is_correct": null
+            }
+        ],
+        "scores_after": null,
+        "extraction_confidence": "high"
+    }
+]

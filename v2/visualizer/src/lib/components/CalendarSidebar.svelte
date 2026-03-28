@@ -196,7 +196,7 @@
         onkeydown={(e) => { if (e.key === 'Enter') handleDayClick(cell); }}
         role={hasActivity ? 'button' : undefined}
         tabindex={hasActivity ? 0 : undefined}
-        class="flex flex-col items-center py-1 px-0.5 rounded-lg transition-colors
+        class="flex flex-col items-center py-1 px-0.5 rounded-lg transition-colors h-[52px]
           {hasActivity ? 'cursor-pointer hover:bg-orange-50 dark:hover:bg-orange-900/20' : 'cursor-default'}
           {!cell.inMonth ? 'opacity-20' : ''}"
       >

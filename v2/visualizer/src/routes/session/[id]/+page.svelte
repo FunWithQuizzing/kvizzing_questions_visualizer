@@ -1,5 +1,6 @@
 <script lang="ts">
   import { getContext } from 'svelte';
+  import { goto } from '$app/navigation';
   import type { QuestionStore } from '$lib/stores/questionStore';
   import type { Question } from '$lib/types';
   import { formatDate, formatTime } from '$lib/utils/time';
@@ -17,6 +18,7 @@
 
   let revealAll = $state(false);
   let revealedIds = $state(new Set<string>());
+  let hiddenIds = $state(new Set<string>());
   let inputs = $state(new Map<string, string>());
   let results = $state(new Map<string, 'correct' | 'almost' | 'wrong'>());
   let hintsShown = $state(new Map<string, number>());
@@ -26,6 +28,20 @@
     if (next.has(id)) next.delete(id);
     else next.add(id);
     revealedIds = next;
+  }
+
+  function hideQuestion(id: string) {
+    if (revealAll) {
+      hiddenIds = new Set(hiddenIds).add(id);
+    } else {
+      const next = new Set(revealedIds);
+      next.delete(id);
+      revealedIds = next;
+    }
+    const nextResults = new Map(results);
+    nextResults.delete(id);
+    results = nextResults;
+    inputs = new Map(inputs).set(id, '');
   }
 
   function submitGuess(id: string, correctAnswer: string) {
@@ -103,7 +119,7 @@
   <div class="flex items-center justify-between">
     <p class="text-sm text-gray-500 dark:text-gray-400">{sessionQuestions.length} question{sessionQuestions.length !== 1 ? 's' : ''}</p>
     <button
-      onclick={() => { revealAll = !revealAll; revealedIds = new Set(); }}
+      onclick={() => { revealAll = !revealAll; revealedIds = new Set(); hiddenIds = new Set(); }}
       class="px-4 py-2 text-sm font-medium rounded-lg border transition-colors {revealAll ? 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 border-gray-200 dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-600' : 'bg-primary-500 text-white border-primary-500 hover:bg-primary-600 dark:bg-primary-600 dark:border-primary-600'}"
     >
       {revealAll ? 'Hide all answers' : 'Reveal all answers'}
@@ -119,8 +135,13 @@
   {:else}
     <div class="grid gap-4">
       {#each sessionQuestions as question, i (question.id)}
-        {@const isRevealed = revealAll || revealedIds.has(question.id)}
-        <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
+        {@const isRevealed = (revealAll && !hiddenIds.has(question.id)) || revealedIds.has(question.id)}
+        <!-- svelte-ignore a11y_no_static_element_interactions -->
+        <!-- svelte-ignore a11y_click_events_have_key_events -->
+        <div
+          class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden hover:shadow-md hover:border-gray-300 dark:hover:border-gray-600 transition-all cursor-pointer"
+          onclick={(e) => { if (!(e.target as HTMLElement).closest('a,button,input')) goto(`/question/${question.id}`); }}
+        >
           <!-- Question number badge + link -->
           <div class="p-4">
             <div class="flex items-start gap-3">
@@ -155,12 +176,18 @@
                   <span class="text-xs font-medium text-green-600 dark:text-green-400 uppercase tracking-wide">Answer</span>
                   <span class="text-sm font-semibold text-green-800 dark:text-green-200">{question.answer?.text ?? '—'}</span>
                 </div>
-                {#if question.answer?.solver}
-                  <div class="flex items-center gap-1.5 text-xs text-green-600 dark:text-green-400">
-                    <MemberAvatar username={question.answer.solver} size="xs" />
-                    {question.answer.solver}
-                  </div>
-                {/if}
+                <div class="flex items-center gap-2">
+                  {#if question.answer?.solver}
+                    <div class="flex items-center gap-1.5 text-xs text-green-600 dark:text-green-400">
+                      <MemberAvatar username={question.answer.solver} size="xs" />
+                      {question.answer.solver}
+                    </div>
+                  {/if}
+                  <button
+                    onclick={() => hideQuestion(question.id)}
+                    class="text-xs text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors ml-2"
+                  >Hide</button>
+                </div>
               </div>
             {:else}
               {@const result = results.get(question.id)}

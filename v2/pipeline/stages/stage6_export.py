@@ -80,6 +80,22 @@ def build_questions(conn: sqlite3.Connection) -> list[dict]:
     payloads = _load_payloads(conn)
     scores_by_qid = _load_scores_after(conn)
 
+    # Fix duplicate question numbers within a session — the LLM often returns
+    # null which stage3 coerces to 1, giving every question number=1.
+    # Only reassign sequentially (by timestamp) when duplicates are detected;
+    # sessions with already-unique numbers keep their LLM-extracted values.
+    by_session: dict[str, list[dict]] = defaultdict(list)
+    for q in payloads:
+        if q.get("session"):
+            by_session[q["session"]["id"]].append(q)
+
+    for session_qs in by_session.values():
+        nums = [q["session"]["question_number"] for q in session_qs]
+        if len(nums) != len(set(nums)):  # duplicates — reassign sequentially
+            session_qs.sort(key=lambda q: (q.get("question") or {}).get("timestamp") or q.get("date") or "")
+            for i, q in enumerate(session_qs, start=1):
+                q["session"]["question_number"] = i
+
     for q in payloads:
         qid = q["id"]
         session = q.get("session")

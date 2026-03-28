@@ -1,10 +1,20 @@
 <script lang="ts">
   import { getContext } from 'svelte';
+  import { goto } from '$app/navigation';
   import type { QuestionStore } from '$lib/stores/questionStore';
   import { formatDate, formatTime } from '$lib/utils/time';
 
   const store = getContext<QuestionStore>('store');
   const sessions = store.getSessions();
+  const stats = store.getTotalStats();
+  const sessionQuestionCount = sessions.reduce((sum, s) => sum + s.question_count, 0);
+  const sinceDate = stats.earliestDate ? formatDate(stats.earliestDate) : '';
+
+  function randomQuiz() {
+    if (sessions.length === 0) return;
+    const s = sessions[Math.floor(Math.random() * sessions.length)];
+    goto(`/session/${s.id}`);
+  }
 
   const quizmasters = [...new Set(sessions.map(s => s.quizmaster))].sort();
 
@@ -37,10 +47,33 @@
 </script>
 
 <div class="space-y-6">
-  <!-- Header -->
-  <div>
-    <h1 class="text-2xl font-bold text-gray-900 dark:text-gray-100">Quiz sessions</h1>
-    <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Curated quiz sessions hosted by group members</p>
+  <!-- Hero -->
+  <div class="bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl p-6 text-white shadow-lg relative">
+    {#if sinceDate}
+      <div class="absolute top-4 right-4 flex items-center gap-1.5 text-xs text-primary-100">
+        <span class="relative flex h-2.5 w-2.5">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-90"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-400"></span>
+        </span>
+        since {sinceDate}
+      </div>
+    {/if}
+    <h1 class="text-2xl font-bold mb-1">Quiz Sessions</h1>
+    <p class="text-primary-100 text-sm mb-4">Curated quiz sessions hosted by group members</p>
+    <div class="flex items-center justify-between gap-3">
+      <div class="flex flex-wrap gap-x-4 gap-y-1 text-sm">
+        <span class="font-semibold">{stats.sessions} quiz sessions</span>
+        <span class="text-primary-200 hidden sm:inline">·</span>
+        <span class="font-semibold">{sessionQuestionCount} questions</span>
+      </div>
+      <button
+        onclick={randomQuiz}
+        class="flex-shrink-0 inline-flex items-center gap-1.5 px-4 py-2 bg-white hover:bg-primary-50 text-primary-600 dark:bg-slate-700 dark:hover:bg-slate-600 dark:text-white font-semibold text-sm rounded-lg transition-colors shadow-sm cursor-pointer"
+      >
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
+        <span class="hidden sm:inline">Random quiz</span>
+      </button>
+    </div>
   </div>
 
   <!-- Search + filters -->
@@ -73,7 +106,7 @@
     <div class="flex flex-wrap gap-2">
       <select
         bind:value={filterQuizmaster}
-        class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 dark:focus:ring-primary-900 text-gray-600"
+        class="w-40 text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 dark:focus:ring-primary-900 text-gray-600"
       >
         <option value="">All quizmasters</option>
         {#each quizmasters as qm}
@@ -83,7 +116,7 @@
 
       <select
         bind:value={sortBy}
-        class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 dark:focus:ring-primary-900 text-gray-600"
+        class="w-40 text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 dark:focus:ring-primary-900 text-gray-600"
       >
         <option value="newest">Newest first</option>
         <option value="oldest">Oldest first</option>

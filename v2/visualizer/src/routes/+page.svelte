@@ -125,13 +125,13 @@
   <div class="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl p-6 text-white shadow-lg">
     <h1 class="text-2xl font-bold mb-1">KVizzing</h1>
     <p class="text-orange-100 text-sm mb-4">Every question the group ever asked. Right here.</p>
-    <div class="flex flex-wrap items-center gap-3">
-      <div class="flex gap-4 text-sm">
+    <div class="flex items-center justify-between gap-3">
+      <div class="flex flex-wrap gap-x-4 gap-y-1 text-sm">
         <span class="font-semibold">{stats.total} questions</span>
-        <span class="text-orange-200">·</span>
+        <span class="text-orange-200 hidden sm:inline">·</span>
         <span class="font-semibold">{stats.sessions} sessions</span>
         {#if sinceDate}
-          <span class="text-orange-200">·</span>
+          <span class="text-orange-200 hidden sm:inline">·</span>
           <span class="text-orange-100 flex items-center gap-1.5">
             <span class="relative flex h-2 w-2">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -143,9 +143,9 @@
       </div>
       <button
         onclick={surpriseMe}
-        class="ml-auto px-4 py-2 bg-white text-orange-600 font-semibold text-sm rounded-lg hover:bg-orange-50 transition-colors shadow-sm"
+        class="flex-shrink-0 px-4 py-2 bg-white text-orange-600 font-semibold text-sm rounded-lg hover:bg-orange-50 transition-colors shadow-sm"
       >
-        🎲 Random question
+        🎲 <span class="hidden sm:inline">Random question</span>
       </button>
     </div>
   </div>
@@ -153,26 +153,26 @@
   <!-- Recent Sessions strip -->
   {#if recentSessions.length > 0}
     <div>
-      <h2 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Recent Quiz sessions</h2>
+      <h2 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-3">Recent Quiz sessions</h2>
       <div class="flex gap-3 overflow-x-auto pb-1">
         {#each recentSessions as session}
           <a
             href="/session/{session.id}"
-            class="flex-shrink-0 bg-white border border-gray-200 rounded-xl px-4 py-3 hover:border-orange-300 hover:shadow-sm transition-all min-w-[180px]"
+            class="flex-shrink-0 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 hover:border-orange-300 hover:shadow-sm transition-all min-w-[180px]"
           >
             <div class="flex items-center gap-2 mb-1">
               <span class="w-2 h-2 rounded-full bg-orange-400"></span>
-              <span class="text-xs font-semibold text-gray-700 truncate">
+              <span class="text-xs font-semibold text-gray-700 dark:text-gray-300 truncate">
                 {session.theme ?? `${session.quizmaster}'s Quiz`}
               </span>
             </div>
-            <p class="text-xs text-gray-500">{session.quizmaster} · {formatDate(session.date)}</p>
-            <p class="text-xs text-gray-400 mt-0.5">{session.question_count} questions</p>
+            <p class="text-xs text-gray-500 dark:text-gray-400">{session.quizmaster} · {formatDate(session.date)}</p>
+            <p class="text-xs text-gray-400 dark:text-gray-500 mt-0.5">{session.question_count} questions</p>
           </a>
         {/each}
         <a
           href="/sessions"
-          class="flex-shrink-0 border-2 border-dashed border-gray-200 rounded-xl px-4 py-3 hover:border-orange-300 transition-colors flex items-center text-sm text-gray-400 hover:text-orange-500 min-w-[120px] justify-center"
+          class="flex-shrink-0 border-2 border-dashed border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 hover:border-orange-300 transition-colors flex items-center text-sm text-gray-400 dark:text-gray-500 hover:text-orange-500 min-w-[120px] justify-center"
         >
           All sessions →
         </a>
@@ -191,7 +191,7 @@
         bind:value={searchQuery}
         type="text"
         placeholder="Search questions and answers…"
-        class="w-full pl-9 pr-4 py-2.5 text-sm border border-gray-200 rounded-xl focus:outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-100 bg-white shadow-sm transition-all"
+        class="w-full pl-9 pr-4 py-2.5 text-sm border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-100 dark:focus:ring-orange-900 bg-white dark:bg-gray-700 dark:text-gray-200 dark:placeholder-gray-400 shadow-sm transition-all"
       />
       {#if searchQuery}
         <button
@@ -211,7 +211,7 @@
       <!-- Asker -->
       <select
         bind:value={filterAsker}
-        class="text-sm border border-gray-200 rounded-lg px-3 py-1.5 bg-white focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-100 text-gray-600"
+        class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-100 dark:focus:ring-orange-900 text-gray-600"
       >
         <option value="">All askers</option>
         {#each askers as asker}
@@ -222,7 +222,7 @@
       <!-- Solver -->
       <select
         bind:value={filterSolver}
-        class="text-sm border border-gray-200 rounded-lg px-3 py-1.5 bg-white focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-100 text-gray-600"
+        class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-100 dark:focus:ring-orange-900 text-gray-600"
       >
         <option value="">All solvers</option>
         {#each solvers as solver}
@@ -233,7 +233,7 @@
       <!-- Sort -->
       <select
         bind:value={sortBy}
-        class="text-sm border border-gray-200 rounded-lg px-3 py-1.5 bg-white focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-100 text-gray-600"
+        class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-100 dark:focus:ring-orange-900 text-gray-600"
       >
         <option value="newest">Newest first</option>
         <option value="oldest">Oldest first</option>
@@ -244,7 +244,7 @@
       <!-- More filters toggle -->
       <button
         onclick={() => showMoreFilters = !showMoreFilters}
-        class="text-sm border border-gray-200 rounded-lg px-3 py-1.5 bg-white text-gray-600 hover:bg-gray-50 transition-colors flex items-center gap-1.5"
+        class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors flex items-center gap-1.5"
       >
         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L13 13.414V19a1 1 0 01-.553.894l-4 2A1 1 0 017 21v-7.586L3.293 6.707A1 1 0 013 6V4z" />
@@ -276,7 +276,7 @@
       <select
         value=""
         onchange={(e) => { const v = (e.target as HTMLSelectElement).value; if (v) toggleTopic(v); (e.target as HTMLSelectElement).value = ''; }}
-        class="text-sm border border-gray-200 rounded-lg px-3 py-1.5 bg-white focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-100 text-gray-600"
+        class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-100 dark:focus:ring-orange-900 text-gray-600"
       >
         <option value="">Filter by topic…</option>
         {#each TOPICS as t}
@@ -304,35 +304,35 @@
 
     <!-- Secondary filters -->
     {#if showMoreFilters}
-      <div class="flex flex-wrap gap-2 p-3 bg-gray-50 rounded-xl border border-gray-200">
+      <div class="flex flex-wrap gap-2 p-3 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
         <div class="flex items-center gap-2">
-          <label for="filter-date-from" class="text-xs text-gray-500 font-medium">From</label>
+          <label for="filter-date-from" class="text-xs text-gray-500 dark:text-gray-400 font-medium">From</label>
           <input
             id="filter-date-from"
             bind:value={filterDateFrom}
             type="date"
-            class="text-sm border border-gray-200 rounded-lg px-2 py-1 bg-white focus:outline-none focus:border-orange-400"
+            class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-2 py-1 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-orange-400"
           />
         </div>
         <div class="flex items-center gap-2">
-          <label for="filter-date-to" class="text-xs text-gray-500 font-medium">To</label>
+          <label for="filter-date-to" class="text-xs text-gray-500 dark:text-gray-400 font-medium">To</label>
           <input
             id="filter-date-to"
             bind:value={filterDateTo}
             type="date"
-            class="text-sm border border-gray-200 rounded-lg px-2 py-1 bg-white focus:outline-none focus:border-orange-400"
+            class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-2 py-1 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-orange-400"
           />
         </div>
         <select
           bind:value={filterSessionId}
-          class="text-sm border border-gray-200 rounded-lg px-3 py-1.5 bg-white focus:outline-none focus:border-orange-400 text-gray-600"
+          class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-orange-400 text-gray-600"
         >
           <option value="">All sessions</option>
           {#each allSessions as s}
             <option value={s.id}>{s.theme ?? `${s.quizmaster}'s Quiz`} ({formatDate(s.date)})</option>
           {/each}
         </select>
-        <label class="flex items-center gap-2 text-sm text-gray-600 cursor-pointer">
+        <label class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300 cursor-pointer">
           <input
             type="checkbox"
             checked={filterHasMedia === true}
@@ -347,14 +347,14 @@
 
   <!-- Results count -->
   <div class="flex items-center justify-between">
-    <p class="text-sm text-gray-500">
+    <p class="text-sm text-gray-500 dark:text-gray-400">
       {filteredQuestions.length} question{filteredQuestions.length !== 1 ? 's' : ''}
       {#if hasActiveFilters}<span class="text-orange-500 font-medium"> (filtered)</span>{/if}
     </p>
   </div>
 
   <!-- Question cards -->
-  <div class="space-y-4">
+  <div class="max-h-[60vh] overflow-y-auto space-y-4 pr-1">
     {#each filteredQuestions as question (question.id)}
       <QuestionCard {question} />
     {:else}

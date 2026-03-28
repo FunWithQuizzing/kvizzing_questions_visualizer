@@ -45,7 +45,7 @@
   }
 </script>
 
-<article class="bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md hover:border-gray-300 transition-all duration-200 overflow-hidden group">
+<article class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-gray-300 transition-all duration-200 overflow-hidden group">
   <!-- Clickable card body -->
   <!-- svelte-ignore a11y_no_static_element_interactions -->
   <!-- svelte-ignore a11y_click_events_have_key_events -->
@@ -61,8 +61,8 @@
       <div class="flex items-center gap-2 flex-wrap">
         <MemberAvatar username={q.asker} />
         <div>
-          <span class="text-sm font-medium text-gray-900">{q.asker}</span>
-          <span class="text-xs text-gray-400 ml-1.5">{formatDate(question.date)}</span>
+          <span class="text-sm font-medium text-gray-900 dark:text-gray-100">{q.asker}</span>
+          <span class="text-xs text-gray-400 dark:text-gray-500 ml-1.5">{formatDate(question.date)}</span>
         </div>
       </div>
       <div class="flex items-center gap-1.5 flex-shrink-0 flex-wrap justify-end">
@@ -92,13 +92,13 @@
 
     <!-- Question text -->
     <a href="/question/{question.id}" class="block">
-      <p class="text-gray-800 text-sm leading-relaxed group-hover:text-gray-900 {compact ? 'line-clamp-3' : ''}">
+      <p class="text-gray-800 dark:text-gray-200 text-sm leading-relaxed group-hover:text-gray-900 dark:group-hover:text-gray-100 {compact ? 'line-clamp-3' : ''}">
         {q.text}
       </p>
     </a>
 
     <!-- Stats row -->
-    <div class="flex items-center gap-4 mt-3 text-xs text-gray-400">
+    <div class="flex items-center gap-4 mt-3 text-xs text-gray-400 dark:text-gray-500">
       {#if stats?.time_to_answer_seconds}
         <span class="flex items-center gap-1">
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -127,31 +127,31 @@
   </div>
 
   <!-- Answer reveal strip -->
-  <div class="border-t border-gray-100">
+  <div class="border-t border-gray-100 dark:border-gray-700">
     {#if revealed}
-      <div class="px-4 py-3 bg-green-50 flex items-center justify-between gap-2">
+      <div class="px-4 py-3 bg-green-50 dark:bg-green-900/30 flex items-center justify-between gap-2">
         <div class="flex items-center gap-2">
-          <span class="text-xs font-medium text-green-600 uppercase tracking-wide">Answer</span>
-          <span class="text-sm font-semibold text-green-800">{a?.text ?? '—'}</span>
+          <span class="text-xs font-medium text-green-600 dark:text-green-400 uppercase tracking-wide">Answer</span>
+          <span class="text-sm font-semibold text-green-800 dark:text-green-200">{a?.text ?? '—'}</span>
         </div>
         <div class="flex items-center gap-2">
           {#if a?.solver}
-            <div class="flex items-center gap-1.5 text-xs text-green-600">
+            <div class="flex items-center gap-1.5 text-xs text-green-600 dark:text-green-400">
               <MemberAvatar username={a.solver} size="xs" />
               {a.solver}
             </div>
           {/if}
           <button
             onclick={() => { revealed = false; result = null; input = ''; }}
-            class="text-xs text-gray-400 hover:text-gray-600 transition-colors ml-2"
+            class="text-xs text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors ml-2"
           >Hide</button>
         </div>
       </div>
     {:else}
       {#if hintsShown > 0}
-        <div class="px-5 py-2 bg-amber-50 border-b border-amber-100 space-y-1">
+        <div class="px-5 py-2 bg-amber-50 dark:bg-amber-900/30 border-b border-amber-100 dark:border-amber-800 space-y-1">
           {#each hints.slice(0, hintsShown) as hint}
-            <p class="text-xs text-amber-700 flex items-start gap-1.5">
+            <p class="text-xs text-amber-700 dark:text-amber-300 flex items-start gap-1.5">
               <svg class="w-3.5 h-3.5 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
               </svg>
@@ -160,37 +160,39 @@
           {/each}
         </div>
       {/if}
-      <div class="px-4 py-2.5 flex items-center gap-2">
+      <div class="px-4 py-2.5 flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
         <input
           type="text"
           placeholder="Your answer…"
           bind:value={input}
           onkeydown={(e) => { if (e.key === 'Enter') submitGuess(); }}
           class="flex-1 min-w-0 px-2.5 py-1.5 text-xs border rounded-lg focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-100 transition-all
-            {result === 'correct' ? 'border-green-300 bg-green-50' : result === 'almost' ? 'border-amber-300 bg-amber-50' : result === 'wrong' ? 'border-red-300 bg-red-50' : 'border-gray-200'}"
+            {result === 'correct' ? 'border-green-300 bg-green-50 dark:bg-green-900/30' : result === 'almost' ? 'border-amber-300 bg-amber-50 dark:bg-amber-900/30' : result === 'wrong' ? 'border-red-300 bg-red-50' : 'border-gray-200 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 dark:placeholder-gray-400'}"
           autocomplete="off" spellcheck="false"
           title={result === 'almost' ? 'Close! Try again.' : result === 'wrong' ? 'Not quite. Try again or reveal.' : ''}
         />
-        <button
-          onclick={submitGuess}
-          class="px-3 py-1.5 text-xs font-medium bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors flex-shrink-0"
-        >Submit</button>
-        <button
-          onclick={() => hintsShown = Math.min(hintsShown + 1, hints.length)}
-          disabled={hints.length === 0 || hintsShown >= hints.length}
-          title={hints.length === 0 ? 'No hints available' : hintsShown >= hints.length ? 'No more hints' : `Hint ${hintsShown + 1} of ${hints.length}`}
-          class="flex-shrink-0 flex items-center gap-1 text-xs font-medium transition-colors {hints.length === 0 || hintsShown >= hints.length ? 'text-gray-300 cursor-default' : 'text-amber-500 hover:text-amber-600'}"
-        >
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-          </svg>
-          Hint
-        </button>
-        <span class="text-gray-200 flex-shrink-0">|</span>
-        <button
-          onclick={() => revealed = true}
-          class="text-xs text-gray-600 hover:text-gray-900 font-medium transition-colors flex-shrink-0"
-        >Reveal</button>
+        <div class="flex items-center gap-2 flex-shrink-0">
+          <button
+            onclick={submitGuess}
+            class="px-3 py-1.5 text-xs font-medium bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors"
+          >Submit</button>
+          <button
+            onclick={() => hintsShown = Math.min(hintsShown + 1, hints.length)}
+            disabled={hints.length === 0 || hintsShown >= hints.length}
+            title={hints.length === 0 ? 'No hints available' : hintsShown >= hints.length ? 'No more hints' : `Hint ${hintsShown + 1} of ${hints.length}`}
+            class="flex items-center gap-1 text-xs font-medium transition-colors {hints.length === 0 || hintsShown >= hints.length ? 'text-gray-300 cursor-default' : 'text-amber-500 hover:text-amber-600'}"
+          >
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+            Hint
+          </button>
+          <span class="text-gray-200 dark:text-gray-600">|</span>
+          <button
+            onclick={() => revealed = true}
+            class="text-xs text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 font-medium transition-colors"
+          >Reveal</button>
+        </div>
       </div>
     {/if}
   </div>

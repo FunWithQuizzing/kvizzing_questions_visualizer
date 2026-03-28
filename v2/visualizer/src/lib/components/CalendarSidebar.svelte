@@ -114,45 +114,45 @@
   {@const popSessions = activityByDate.get(popoverDate)?.sessions ?? []}
   <!-- svelte-ignore a11y_no_static_element_interactions -->
   <div
-    class="fixed z-50 bg-white border border-gray-200 rounded-xl shadow-xl py-1.5 min-w-[170px]"
+    class="fixed z-50 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-xl py-1.5 min-w-[170px]"
     style="top: {popoverTop}px; left: {popoverLeft}px;"
     onmouseenter={cancelClose}
     onmouseleave={scheduleClose}
   >
-    <p class="text-[10px] font-semibold text-gray-400 uppercase tracking-wide px-3 pb-1">Quiz sessions</p>
+    <p class="text-[10px] font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wide px-3 pb-1">Quiz sessions</p>
     {#each popSessions as s}
       <a
         href="/session/{s.id}"
-        class="flex items-center gap-2 px-3 py-1.5 hover:bg-orange-50 transition-colors"
+        class="flex items-center gap-2 px-3 py-1.5 hover:bg-orange-50 dark:hover:bg-orange-900/20 transition-colors"
       >
         <span class="w-5 h-5 rounded bg-orange-500 text-white text-[9px] font-bold flex items-center justify-center flex-shrink-0">
           {s.label}
         </span>
-        <span class="text-xs text-gray-700 leading-snug">{s.tooltip}</span>
+        <span class="text-xs text-gray-700 dark:text-gray-300 leading-snug">{s.tooltip}</span>
       </a>
     {/each}
   </div>
 {/if}
 
-<div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+<div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
   <!-- Header -->
   <div class="px-4 pt-4 pb-2 flex items-center justify-center">
     <div class="flex items-center gap-1">
       <button
         onclick={prevMonth}
-        class="p-1 rounded hover:bg-gray-100 text-gray-500 transition-colors"
+        class="p-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-500 dark:text-gray-400 transition-colors"
         aria-label="Previous month"
       >
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
         </svg>
       </button>
-      <span class="text-sm font-semibold text-gray-800 w-36 text-center">
+      <span class="text-sm font-semibold text-gray-800 dark:text-gray-200 w-36 text-center">
         {MONTH_NAMES[month - 1]} {year}
       </span>
       <button
         onclick={nextMonth}
-        class="p-1 rounded hover:bg-gray-100 text-gray-500 transition-colors"
+        class="p-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-500 dark:text-gray-400 transition-colors"
         aria-label="Next month"
       >
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -165,12 +165,14 @@
   <!-- Weekday headers -->
   <div class="grid grid-cols-7 px-2">
     {#each WEEKDAYS as wd}
-      <div class="text-center text-[11px] font-medium text-gray-400 py-1">{wd}</div>
+      <div class="text-center text-[11px] font-medium text-gray-400 dark:text-gray-500 py-1">{wd}</div>
     {/each}
   </div>
 
   <!-- Day grid -->
-  <div class="grid grid-cols-7 px-2 pb-3 gap-y-0.5">
+  <div class="grid grid-cols-7 px-2 pb-3 gap-y-0.5"
+    style="mask-image: linear-gradient(to bottom, transparent, black 18%, black 82%, transparent), linear-gradient(to right, transparent, black 8%, black 92%, transparent); mask-composite: intersect; -webkit-mask-image: linear-gradient(to bottom, transparent, black 18%, black 82%, transparent), linear-gradient(to right, transparent, black 8%, black 92%, transparent); -webkit-mask-composite: destination-in;"
+  >
     {#each grid as cell}
       {@const activity = activityByDate.get(cell.dateStr)}
       {@const isToday = cell.dateStr === todayStr}
@@ -185,13 +187,13 @@
         role={hasActivity ? 'button' : undefined}
         tabindex={hasActivity ? 0 : undefined}
         class="flex flex-col items-center py-1 px-0.5 rounded-lg transition-colors
-          {hasActivity ? 'cursor-pointer hover:bg-orange-50' : 'cursor-default'}
+          {hasActivity ? 'cursor-pointer hover:bg-orange-50 dark:hover:bg-orange-900/20' : 'cursor-default'}
           {!cell.inMonth ? 'opacity-20' : ''}"
       >
         <!-- Date number -->
         <span class="
           text-xs font-medium w-6 h-6 flex items-center justify-center rounded-full mb-0.5
-          {isToday ? 'bg-orange-500 text-white' : hasActivity ? 'text-gray-800 font-semibold' : 'text-gray-400'}
+          {isToday ? 'bg-orange-500 text-white' : hasActivity ? 'text-gray-800 dark:text-gray-200 font-semibold' : 'text-gray-400 dark:text-gray-500'}
         ">
           {cell.day}
         </span>
@@ -222,14 +224,14 @@
   </div>
 
   <!-- Legend -->
-  <div class="px-4 pb-3 flex items-center gap-4 border-t border-gray-100 pt-2">
+  <div class="px-4 pb-3 flex items-center gap-4 border-t border-gray-100 dark:border-gray-700 pt-2">
     <div class="flex items-center gap-1.5">
       <span class="w-4 h-4 rounded bg-blue-100"></span>
-      <span class="text-xs text-gray-500">Ad-hoc questions</span>
+      <span class="text-xs text-gray-500 dark:text-gray-400">Ad-hoc questions</span>
     </div>
     <div class="flex items-center gap-1.5">
       <span class="w-4 h-4 rounded bg-orange-500"></span>
-      <span class="text-xs text-gray-500">Quiz sessions</span>
+      <span class="text-xs text-gray-500 dark:text-gray-400">Quiz sessions</span>
     </div>
   </div>
 </div>

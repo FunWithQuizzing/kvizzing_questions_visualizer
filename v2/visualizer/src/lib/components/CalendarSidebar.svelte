@@ -202,33 +202,37 @@
       >
         <!-- Date number -->
         <span class="
-          text-xs font-medium w-6 h-6 flex items-center justify-center rounded-full mb-0.5
+          text-xs font-medium w-6 h-6 flex items-center justify-center rounded-full mb-0.5 flex-shrink-0
           {isToday ? 'bg-orange-500 dark:bg-orange-600 text-white' : hasActivity ? 'text-gray-800 dark:text-gray-200 font-semibold' : 'text-gray-400 dark:text-gray-500'}
         ">
           {cell.day}
         </span>
 
-        <!-- Question count pill (always on top) -->
-        {#if questionCount > 0 && cell.inMonth}
-          <span
-            title="{questionCount} question{questionCount > 1 ? 's' : ''}"
-            class="w-full text-center text-[10px] font-semibold leading-none px-0.5 py-[3px] mb-[2px] rounded bg-blue-100 text-blue-700"
-          >
-            {questionCount}
-          </span>
-        {/if}
+        <!-- Question count pill slot (always reserved) -->
+        <div class="w-full h-[18px] mb-[2px] flex-shrink-0">
+          {#if questionCount > 0 && cell.inMonth}
+            <span
+              title="{questionCount} question{questionCount > 1 ? 's' : ''}"
+              class="block w-full text-center text-[10px] font-semibold leading-none px-0.5 py-[3px] rounded bg-blue-100 text-blue-700"
+            >
+              {questionCount}
+            </span>
+          {/if}
+        </div>
 
-        <!-- Session pill (below questions) -->
-        {#if sessionInfos.length > 0 && cell.inMonth}
-          <button
-            onmouseenter={(e) => openPopover(e, cell.dateStr)}
-            onmouseleave={scheduleClose}
-            onclick={(e) => { e.stopPropagation(); goto(`/?dateFrom=${cell.dateStr}&dateTo=${cell.dateStr}`); }}
-            class="w-full text-center text-[10px] font-bold leading-none px-0.5 py-[3px] rounded bg-orange-500 dark:bg-orange-600 text-white hover:bg-orange-600 dark:hover:bg-orange-700 transition-colors"
-          >
-            {sessionInfos.length}
-          </button>
-        {/if}
+        <!-- Session pill slot (always reserved) -->
+        <div class="w-full h-[18px] flex-shrink-0">
+          {#if sessionInfos.length > 0 && cell.inMonth}
+            <button
+              onmouseenter={(e) => openPopover(e, cell.dateStr)}
+              onmouseleave={scheduleClose}
+              onclick={(e) => { e.stopPropagation(); goto(`/?dateFrom=${cell.dateStr}&dateTo=${cell.dateStr}`); }}
+              class="w-full text-center text-[10px] font-bold leading-none px-0.5 py-[3px] rounded bg-orange-500 dark:bg-orange-600 text-white hover:bg-orange-600 dark:hover:bg-orange-700 transition-colors"
+            >
+              {sessionInfos.length}
+            </button>
+          {/if}
+        </div>
       </div>
     {/each}
   </div>

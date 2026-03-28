@@ -181,7 +181,7 @@
 
   <!-- Day grid -->
   <div class="grid grid-cols-7 px-2 pb-3 gap-y-0.5"
-    style="mask-image: linear-gradient(to bottom, transparent, black 18%, black 82%, transparent), linear-gradient(to right, transparent, black 8%, black 92%, transparent); mask-composite: intersect; -webkit-mask-image: linear-gradient(to bottom, transparent, black 18%, black 82%, transparent), linear-gradient(to right, transparent, black 8%, black 92%, transparent); -webkit-mask-composite: destination-in;"
+    style="mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);"
   >
     {#each grid as cell}
       {@const activity = activityByDate.get(cell.dateStr)}

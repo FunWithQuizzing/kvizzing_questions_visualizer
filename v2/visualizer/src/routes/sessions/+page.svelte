@@ -126,9 +126,10 @@
           class="relative overflow-hidden block bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-orange-200 transition-all p-5 group"
         >
           <div
-            class="absolute inset-0 bg-cover bg-center opacity-[0.07] dark:opacity-[0.12] transition-opacity group-hover:opacity-[0.12]"
+            class="absolute inset-0 bg-cover bg-center opacity-30 dark:opacity-30 transition-opacity group-hover:opacity-40"
             style="background-image: url('/images/sessions/{session.id}.jpg')"
           ></div>
+          <div class="absolute inset-0 bg-white/60 dark:bg-gray-800/60"></div>
           <div class="relative flex items-start justify-between gap-4">
             <div class="flex-1 min-w-0">
               <!-- Title -->
@@ -142,44 +143,44 @@
                   <h2 class="text-base font-semibold text-gray-900 dark:text-gray-100 group-hover:text-orange-600 transition-colors">
                     {session.theme ?? `${session.quizmaster}'s Quiz`}
                   </h2>
-                  <p class="text-xs text-gray-500 dark:text-gray-400">Hosted by {session.quizmaster} · {formatDate(session.date)}</p>
+                  <p class="text-xs text-gray-700 dark:text-gray-300">Hosted by {session.quizmaster} · {formatDate(session.date)}</p>
                 </div>
               </div>
 
               <!-- Stats row -->
               <div class="flex flex-wrap gap-4 mt-3 text-sm">
-                <div class="flex items-center gap-1.5 text-gray-600 dark:text-gray-300">
-                  <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="flex items-center gap-1.5 text-gray-800 dark:text-gray-200">
+                  <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <span class="font-medium">{session.question_count}</span>
-                  <span class="text-gray-400 dark:text-gray-500">questions</span>
+                  <span class="text-gray-600 dark:text-gray-400">questions</span>
                 </div>
                 {#if session.participant_count > 0}
-                  <div class="flex items-center gap-1.5 text-gray-600 dark:text-gray-300">
-                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div class="flex items-center gap-1.5 text-gray-800 dark:text-gray-200">
+                    <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                     <span class="font-medium">{session.participant_count}</span>
-                    <span class="text-gray-400 dark:text-gray-500">participants</span>
+                    <span class="text-gray-600 dark:text-gray-400">participants</span>
                   </div>
                 {/if}
                 {#if session.avg_time_to_answer_seconds}
-                  <div class="flex items-center gap-1.5 text-gray-600 dark:text-gray-300">
-                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div class="flex items-center gap-1.5 text-gray-800 dark:text-gray-200">
+                    <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span class="font-medium">{formatTime(session.avg_time_to_answer_seconds)}</span>
-                    <span class="text-gray-400 dark:text-gray-500">avg solve</span>
+                    <span class="text-gray-600 dark:text-gray-400">avg solve</span>
                   </div>
                 {/if}
                 {#if session.avg_wrong_attempts}
-                  <div class="flex items-center gap-1.5 text-gray-600 dark:text-gray-300">
-                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div class="flex items-center gap-1.5 text-gray-800 dark:text-gray-200">
+                    <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                     <span class="font-medium">{session.avg_wrong_attempts.toFixed(1)}</span>
-                    <span class="text-gray-400 dark:text-gray-500">avg wrong</span>
+                    <span class="text-gray-600 dark:text-gray-400">avg wrong</span>
                   </div>
                 {/if}
               </div>

@@ -16,6 +16,16 @@
   // svelte-ignore state_referenced_locally
   const store = new QuestionStore(data.questions, data.sessions, data.members);
   setContext('store', store);
+  const sidebarSessions = store.getSessions();
+  const sidebarQuestions = store.getQuestions();
+
+  const MONTHS_SHORT = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function ordinalDate(dateStr: string): string {
+    const [y, m, d] = dateStr.split('-').map(Number);
+    const suffix = [11,12,13].includes(d) ? 'th'
+      : d % 10 === 1 ? 'st' : d % 10 === 2 ? 'nd' : d % 10 === 3 ? 'rd' : 'th';
+    return `${d}${suffix} ${MONTHS_SHORT[m - 1]} ${y}`;
+  }
 
   let authenticated = $state<boolean | null>(null);
   let darkMode = $state(false);
@@ -170,8 +180,70 @@
 
         <!-- Calendar sidebar — desktop only -->
         <aside class="hidden lg:block w-80 flex-shrink-0">
-          <div class="sticky top-6">
+          <div class="sticky top-6 space-y-4">
             <CalendarSidebar {store} />
+
+            {#if $page.url.pathname === '/sessions'}
+              <!-- Questions list (shown on /sessions page) -->
+              {#if sidebarQuestions.length > 0}
+                <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
+                  <div class="px-4 py-3 border-b border-gray-100 dark:border-gray-700 flex items-center justify-between">
+                    <h2 class="text-xs font-semibold text-gray-500 dark:text-gray-400">All Questions</h2>
+                    <a href="/" class="text-xs text-primary-500 dark:text-primary-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors">Feed →</a>
+                  </div>
+                  <div class="relative">
+                    <div class="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-white dark:from-gray-800 to-transparent z-10"></div>
+                    <div class="divide-y divide-gray-100 dark:divide-gray-700 max-h-80 overflow-y-auto">
+                      {#each sidebarQuestions as question}
+                        <a
+                          href="/question/{question.id}"
+                          class="flex items-center gap-3 px-4 py-2.5 hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors group"
+                        >
+                          <span class="text-[10px] text-gray-400 dark:text-gray-500 flex-shrink-0 w-20">{ordinalDate(question.date)}</span>
+                          <div class="min-w-0 flex-1 text-right">
+                            <p class="text-xs font-semibold text-gray-700 dark:text-gray-300 truncate group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                              {question.question.text}
+                            </p>
+                            <p class="text-xs text-gray-400 dark:text-gray-500">{question.question.asker}</p>
+                          </div>
+                        </a>
+                      {/each}
+                    </div>
+                  </div>
+                </div>
+              {/if}
+            {:else}
+              <!-- Sessions list (shown on all other pages) -->
+              {#if sidebarSessions.length > 0}
+                <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
+                  <div class="px-4 py-3 border-b border-gray-100 dark:border-gray-700 flex items-center justify-between">
+                    <h2 class="text-xs font-semibold text-gray-500 dark:text-gray-400">Quiz Sessions</h2>
+                    <a href="/sessions" class="text-xs text-primary-500 dark:text-primary-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors">All →</a>
+                  </div>
+                  <div class="relative">
+                    <div class="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-white dark:from-gray-800 to-transparent z-10"></div>
+                    <div class="divide-y divide-gray-100 dark:divide-gray-700 max-h-80 overflow-y-auto">
+                      {#each sidebarSessions as session}
+                        <a
+                          href="/session/{session.id}"
+                          class="relative overflow-hidden flex items-center gap-3 px-4 py-2.5 hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors group"
+                        >
+                          <div class="absolute inset-0 bg-cover bg-center opacity-30 dark:opacity-30 transition-opacity group-hover:opacity-40" style="background-image: url('/images/sessions/{session.id}.jpg')"></div>
+                          <div class="absolute inset-0 bg-white/70 dark:bg-gray-800/70"></div>
+                          <span class="relative text-[10px] text-gray-400 dark:text-gray-500 flex-shrink-0 w-20">{ordinalDate(session.date)}</span>
+                          <div class="relative min-w-0 flex-1 text-right">
+                            <p class="text-xs font-semibold text-gray-700 dark:text-gray-300 truncate group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                              {session.theme ?? `${session.quizmaster}'s Quiz`}
+                            </p>
+                            <p class="text-xs text-gray-400 dark:text-gray-500 truncate">{session.question_count} questions</p>
+                          </div>
+                        </a>
+                      {/each}
+                    </div>
+                  </div>
+                </div>
+              {/if}
+            {/if}
           </div>
         </aside>
       </div>

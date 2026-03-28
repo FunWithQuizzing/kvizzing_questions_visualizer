@@ -75,7 +75,8 @@
     for (let d = 1; d <= daysInMonth; d++) {
       cells.push({ day: d, dateStr: `${y}-${String(m).padStart(2,'0')}-${String(d).padStart(2,'0')}`, inMonth: true });
     }
-    const remaining = 42 - cells.length;
+    // Fill only to the end of the last partial week
+    const remaining = (7 - (cells.length % 7)) % 7;
     const nm = m === 12 ? 1 : m + 1;
     const ny = m === 12 ? y + 1 : y;
     for (let d = 1; d <= remaining; d++) {
@@ -212,7 +213,7 @@
         <span
           title="{questionCount} question{questionCount > 1 ? 's' : ''}"
           class="w-full text-center text-[10px] font-semibold leading-none px-0.5 py-[2px] rounded mt-px
-            {questionCount > 0 && cell.inMonth ? 'bg-blue-100 text-blue-700' : 'invisible'}"
+            {questionCount > 0 && cell.inMonth ? 'bg-primary-100 text-primary-600 dark:bg-primary-900/40 dark:text-primary-300' : 'invisible'}"
         >
           {questionCount}
         </span>
@@ -231,15 +232,4 @@
     {/each}
   </div>
 
-  <!-- Legend -->
-  <div class="px-4 pb-3 flex items-center gap-4 border-t border-gray-100 dark:border-gray-700 pt-2">
-    <div class="flex items-center gap-1.5">
-      <span class="w-4 h-4 rounded bg-blue-100"></span>
-      <span class="text-xs text-gray-500 dark:text-gray-400">Ad-hoc questions</span>
-    </div>
-    <div class="flex items-center gap-1.5">
-      <span class="w-4 h-4 rounded bg-primary-500 dark:bg-primary-600"></span>
-      <span class="text-xs text-gray-500 dark:text-gray-400">Quiz sessions</span>
-    </div>
-  </div>
 </div>

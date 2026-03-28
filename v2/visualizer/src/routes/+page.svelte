@@ -11,9 +11,6 @@
 
   const store = getContext<QuestionStore>('store');
   const stats = store.getTotalStats();
-  const sessions = store.getSessions();
-  const recentSessions = sessions;
-
   // URL-driven filters — initialised from URL and kept in sync on every navigation
   // (initial values are empty; $effect below syncs from URL after mount, avoiding prerender issues)
   let searchQuery = $state('');
@@ -23,6 +20,7 @@
   let filterDateTo = $state('');
   let filterHasMedia = $state(undefined as boolean | undefined);
   let filterSessionId = $state('');
+  let filterTag = $state('');
   let filterTopics = $state(new Set<string>());
 
   // Re-sync whenever the URL changes (e.g. calendar navigation while already on this page)
@@ -35,6 +33,7 @@
     filterDateTo = p.get('dateTo') ?? '';
     filterHasMedia = p.get('has_media') === '1' ? true : undefined as boolean | undefined;
     filterSessionId = p.get('session') ?? '';
+    filterTag = p.get('tag') ?? '';
     // Support ?topic=X (from card badge clicks) and ?topics=X,Y (multi-select)
     const single = p.get('topic') ?? '';
     const multi = p.get('topics') ?? '';
@@ -77,6 +76,12 @@
 
     let results = store.getQuestions(filters, sortBy);
 
+    // Tag filter
+    if (filterTag) {
+      const tag = filterTag.toLowerCase();
+      results = results.filter(q => q.question.tags?.some(t => t.toLowerCase() === tag));
+    }
+
     // Multi-topic filter (applied after store query)
     if (filterTopics.size > 0) {
       results = results.filter(q => filterTopics.has(q.question.topic ?? ''));
@@ -109,15 +114,17 @@
     filterDateTo = '';
     filterHasMedia = undefined;
     filterSessionId = '';
+    filterTag = '';
     filterTopics = new Set();
   }
 
   const hasActiveFilters = $derived(
     searchQuery || filterAsker || filterSolver ||
-    filterDateFrom || filterDateTo || filterHasMedia !== undefined || filterSessionId || filterTopics.size > 0
+    filterDateFrom || filterDateTo || filterHasMedia !== undefined || filterSessionId || filterTag || filterTopics.size > 0
   );
 
   const sinceDate = stats.earliestDate ? formatDate(stats.earliestDate) : '';
+  const selectCls = "w-36 text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 dark:focus:ring-primary-900 text-gray-600";
 </script>
 
 <div class="space-y-6">
@@ -132,65 +139,23 @@
         since {sinceDate}
       </div>
     {/if}
-    <h1 class="text-2xl font-bold mb-1">KVizzing</h1>
+    <h1 class="text-2xl font-bold mb-1">All Questions</h1>
     <p class="text-primary-100 text-sm mb-4">Every question the group ever asked. Right here.</p>
     <div class="flex items-center justify-between gap-3">
       <div class="flex flex-wrap gap-x-4 gap-y-1 text-sm">
-        <span class="font-semibold">{stats.total} questions</span>
+        <span class="font-semibold">{stats.total} total questions</span>
         <span class="text-primary-200 hidden sm:inline">·</span>
-        <a href="/sessions" class="font-semibold hover:text-primary-100 transition-colors cursor-pointer">{stats.sessions} sessions</a>
+        <a href="/sessions" class="font-semibold hover:text-primary-100 transition-colors cursor-pointer">{stats.sessions} quiz sessions</a>
       </div>
       <button
         onclick={surpriseMe}
         class="flex-shrink-0 inline-flex items-center gap-1.5 px-4 py-2 bg-white hover:bg-primary-50 text-primary-600 dark:bg-slate-700 dark:hover:bg-slate-600 dark:text-white font-semibold text-sm rounded-lg transition-colors shadow-sm cursor-pointer"
       >
-        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm4 0v2m0 4v2m4-8v2m0 4v2m4-8v2m0 4v2" /></svg>
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
         <span class="hidden sm:inline">Random question</span>
       </button>
     </div>
   </div>
-
-  <!-- Recent Sessions strip -->
-  {#if recentSessions.length > 0}
-    <div>
-      <h2 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-3">Recent Quiz sessions</h2>
-      <div class="flex gap-3 items-stretch">
-        <!-- Scrollable sessions -->
-        <div class="relative flex-1 min-w-0">
-          <!-- Right fade overlay -->
-          <div class="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-gray-50 dark:from-gray-900 to-transparent z-10"></div>
-          <div class="flex gap-3 overflow-x-auto pb-1 scrollbar-hide">
-            {#each recentSessions as session}
-              <a
-                href="/session/{session.id}"
-                class="relative overflow-hidden flex-shrink-0 w-[200px] bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 hover:border-primary-300 hover:shadow-sm transition-all group"
-              >
-                <div class="absolute inset-0 bg-cover bg-top opacity-20 dark:opacity-20 transition-opacity group-hover:opacity-30" style="background-image: url('/images/sessions/{session.id}.jpg')"></div>
-                <div class="absolute inset-0 bg-white/60 dark:bg-gray-800/60"></div>
-                <div class="relative">
-                  <div class="flex items-center gap-2 mb-1">
-                    <span class="w-2 h-2 rounded-full bg-primary-400 dark:bg-primary-500 flex-shrink-0"></span>
-                    <span class="text-xs font-semibold text-gray-700 dark:text-gray-300 truncate">
-                      {session.theme ?? `${session.quizmaster}'s Quiz`}
-                    </span>
-                  </div>
-                  <p class="text-xs text-gray-500 dark:text-gray-400 truncate">{session.quizmaster} · {formatDate(session.date)}</p>
-                  <p class="text-xs text-gray-400 dark:text-gray-500">{session.question_count} questions</p>
-                </div>
-              </a>
-            {/each}
-          </div>
-        </div>
-        <!-- Always-visible All sessions button -->
-        <a
-          href="/sessions"
-          class="flex-shrink-0 w-[100px] border-2 border-dashed border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 hover:border-primary-300 transition-colors flex items-end justify-end text-sm text-gray-400 dark:text-gray-500 hover:text-primary-500 dark:hover:text-primary-400"
-        >
-          All sessions →
-        </a>
-      </div>
-    </div>
-  {/if}
 
   <!-- Search + Filters -->
   <div class="space-y-3">
@@ -221,10 +186,7 @@
     <!-- Primary filters -->
     <div class="flex flex-wrap gap-2">
       <!-- Asker -->
-      <select
-        bind:value={filterAsker}
-        class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 dark:focus:ring-primary-900 text-gray-600"
-      >
+      <select bind:value={filterAsker} class={selectCls}>
         <option value="">All askers</option>
         {#each askers as asker}
           <option value={asker}>{asker}</option>
@@ -232,10 +194,7 @@
       </select>
 
       <!-- Solver -->
-      <select
-        bind:value={filterSolver}
-        class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 dark:focus:ring-primary-900 text-gray-600"
-      >
+      <select bind:value={filterSolver} class={selectCls}>
         <option value="">All solvers</option>
         {#each solvers as solver}
           <option value={solver}>{solver}</option>
@@ -243,48 +202,58 @@
       </select>
 
       <!-- Sort -->
-      <select
-        bind:value={sortBy}
-        class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 dark:focus:ring-primary-900 text-gray-600"
-      >
+      <select bind:value={sortBy} class={selectCls}>
         <option value="newest">Newest first</option>
         <option value="oldest">Oldest first</option>
         <option value="most_discussed">Most discussed</option>
         <option value="quickest">Quickest solve</option>
       </select>
 
-      <!-- More filters toggle -->
+      <!-- Session -->
+      <select bind:value={filterSessionId} class={selectCls}>
+        <option value="">All sessions</option>
+        {#each allSessions as s}
+          <option value={s.id}>{s.theme ?? `${s.quizmaster}'s Quiz`}</option>
+        {/each}
+      </select>
+
+      <!-- Has media toggle -->
       <button
-        onclick={() => showMoreFilters = !showMoreFilters}
-        class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors flex items-center gap-1.5"
+        onclick={() => filterHasMedia = filterHasMedia === true ? undefined : true}
+        class="text-sm border rounded-lg px-3 py-1.5 transition-colors {filterHasMedia === true ? 'bg-primary-500 border-primary-500 text-white' : 'border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600'}"
       >
-        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L13 13.414V19a1 1 0 01-.553.894l-4 2A1 1 0 017 21v-7.586L3.293 6.707A1 1 0 013 6V4z" />
-        </svg>
-        More filters
-        {#if showMoreFilters}
-          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-          </svg>
-        {:else}
-          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        {/if}
+        📎 Has media
       </button>
 
-      {#if hasActiveFilters}
-        <button
-          onclick={clearFilters}
-          class="text-sm text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 px-2 py-1.5 transition-colors"
-        >
-          Clear all
-        </button>
-      {/if}
+      <!-- Date range toggle -->
+      <button
+        onclick={() => showMoreFilters = !showMoreFilters}
+        class="text-sm border rounded-lg px-3 py-1.5 transition-colors flex items-center gap-1.5 {showMoreFilters ? 'bg-primary-500 border-primary-500 text-white' : 'border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600'}"
+      >
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+        Date range
+      </button>
+
     </div>
 
     <!-- Topic filter: dropdown + selected chips -->
     <div class="flex flex-wrap items-center gap-2">
+      {#if filterTag}
+        <span class="inline-flex items-center gap-1 pl-3 pr-1.5 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 ring-2 ring-gray-300 dark:ring-gray-500">
+          #{filterTag}
+          <button
+            onclick={() => filterTag = ''}
+            class="ml-0.5 rounded-full p-0.5 opacity-80 hover:opacity-100 transition-opacity"
+            aria-label="Remove tag filter"
+          >
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </span>
+      {/if}
       <select
         value=""
         onchange={(e) => { const v = (e.target as HTMLSelectElement).value; if (v) toggleTopic(v); (e.target as HTMLSelectElement).value = ''; }}
@@ -312,9 +281,18 @@
           </button>
         </span>
       {/each}
+
+      {#if hasActiveFilters}
+        <button
+          onclick={clearFilters}
+          class="text-sm text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 px-2 py-1 transition-colors"
+        >
+          Clear all
+        </button>
+      {/if}
     </div>
 
-    <!-- Secondary filters -->
+    <!-- Date range filter -->
     {#if showMoreFilters}
       <div class="flex flex-wrap gap-2 p-3 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
         <div class="flex items-center gap-2">
@@ -335,24 +313,6 @@
             class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-2 py-1 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-primary-400"
           />
         </div>
-        <select
-          bind:value={filterSessionId}
-          class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-primary-400 text-gray-600"
-        >
-          <option value="">All sessions</option>
-          {#each allSessions as s}
-            <option value={s.id}>{s.theme ?? `${s.quizmaster}'s Quiz`} ({formatDate(s.date)})</option>
-          {/each}
-        </select>
-        <label class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300 cursor-pointer">
-          <input
-            type="checkbox"
-            checked={filterHasMedia === true}
-            onchange={(e) => filterHasMedia = e.currentTarget.checked ? true : undefined}
-            class="rounded border-gray-300 text-primary-500 focus:ring-primary-200"
-          />
-          Has media
-        </label>
       </div>
     {/if}
   </div>
@@ -370,7 +330,7 @@
   <div class="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-gray-50 dark:from-gray-900 to-transparent z-10"></div>
   <div class="max-h-[80vh] overflow-y-auto space-y-4 pr-1 scrollbar-hide">
     {#each filteredQuestions as question (question.id)}
-      <QuestionCard {question} />
+      <QuestionCard {question} hideSession={!!filterSessionId} />
     {:else}
       <div class="text-center py-16 text-gray-400">
         <div class="text-4xl mb-3">🔍</div>

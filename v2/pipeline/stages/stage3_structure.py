@@ -39,6 +39,7 @@ from schema import (
     Difficulty,
     ExtractionConfidence,
     QuestionType,
+    TopicCategory,
 )
 
 UTC = ZoneInfo("UTC")
@@ -151,6 +152,15 @@ def _map_scores_after(scores: Optional[list[dict]]) -> Optional[list[Score]]:
     return [Score(username=s["username"], score=s["score"]) for s in scores]
 
 
+def _parse_topic(raw_topic: str | None) -> TopicCategory | None:
+    if not raw_topic:
+        return None
+    try:
+        return TopicCategory(raw_topic.strip().lower())
+    except ValueError:
+        return None
+
+
 def _infer_question_type(text: str) -> QuestionType:
     text_lower = text.lower()
     if re.search(r"\b(x|y|z)\b.*\band\b", text_lower):
@@ -203,7 +213,7 @@ def structure(
             type=q_type,
             has_media=bool(raw.get("has_media", False)),
             media=None,
-            topic=None,
+            topic=_parse_topic(raw.get("topic")),
             tags=[],
         )
 

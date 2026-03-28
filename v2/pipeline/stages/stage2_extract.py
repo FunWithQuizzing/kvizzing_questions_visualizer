@@ -130,6 +130,7 @@ For each Q&A pair, output a JSON object with this exact schema:
   "question_timestamp": "ISO8601 UTC string",
   "question_text": "full question text",
   "question_asker": "username",
+  "topic": "one of: history, science, literature, technology, sports, geography, entertainment, food_drink, art_culture, business, etymology, general",
   "has_media": true/false,
   "is_session_question": true/false,
   "session_quizmaster": "username or null",
@@ -156,6 +157,7 @@ For each Q&A pair, output a JSON object with this exact schema:
 }
 
 Rules:
+- topic: classify the question's subject; use "general" if it doesn't clearly fit another category
 - extraction_confidence "high": asker gave explicit text confirmation (e.g. "Correct!", "Bingo", "Yes!")
 - extraction_confidence "medium": strong contextual signal but not explicit confirmation
 - extraction_confidence "low": no confirmation found; include anyway

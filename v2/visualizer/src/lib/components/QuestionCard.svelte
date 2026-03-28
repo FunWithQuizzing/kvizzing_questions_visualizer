@@ -11,10 +11,12 @@
     question,
     showAnswer = false,
     compact = false,
+    hideSession = false,
   }: {
     question: Question;
     showAnswer?: boolean;
     compact?: boolean;
+    hideSession?: boolean;
   } = $props();
 
   // showAnswer is a one-time initial prop — intentional
@@ -66,7 +68,7 @@
         </div>
       </div>
       <div class="flex items-center gap-1.5 flex-shrink-0 flex-wrap justify-end">
-        {#if question.session}
+        {#if question.session && !hideSession}
           <a
             href="/session/{question.session.id}"
             class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-primary-100 text-primary-700 hover:bg-primary-200 dark:bg-primary-900/40 dark:text-primary-300 dark:hover:bg-primary-900/40 transition-colors"

@@ -6,6 +6,7 @@ Run from v2/pipeline/:
   python3 pipeline.py backfill          # process all dates not yet in the store
   python3 pipeline.py incremental       # process only dates after last_stored_date
   python3 pipeline.py export            # re-export JSON from questions.db (no LLM)
+  python3 pipeline.py generate-images   # generate background images for new sessions
   python3 pipeline.py enrich-reactions --db PATH/TO/ChatStorage.sqlite
   python3 pipeline.py enrich-media     --media-dir PATH/TO/WhatsApp/Media
 
@@ -48,6 +49,7 @@ from stages.stage3_structure import run as stage3
 from stages.stage4_enrich import run as stage4
 from stages.stage5_store import run as stage5
 from stages.stage6_export import run as stage6
+from generate_session_images import main as _generate_images_main
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
@@ -186,6 +188,12 @@ def _run_export() -> None:
 
 # ── Enrichment stubs ──────────────────────────────────────────────────────────
 
+def _run_generate_images() -> None:
+    log.info("[generate-images] Generating session background images…")
+    _generate_images_main()
+    log.info("[generate-images] Done.")
+
+
 def _run_enrich_reactions(db_path: str) -> None:
     log.error("enrich-reactions: not yet implemented.  Source DB: %s", db_path)
     sys.exit(1)
@@ -208,6 +216,7 @@ def main() -> None:
     sub.add_parser("backfill",    help="Process all dates not yet in the store")
     sub.add_parser("incremental", help="Process only new dates since last run")
     sub.add_parser("export",      help="Re-export JSON files from questions.db")
+    sub.add_parser("generate-images", help="Generate background images for new sessions (via Stable Horde)")
 
     p_reactions = sub.add_parser("enrich-reactions", help="Enrich reactions from WhatsApp SQLite backup")
     p_reactions.add_argument("--db", required=True, metavar="PATH", help="Path to ChatStorage.sqlite")
@@ -221,6 +230,8 @@ def main() -> None:
         _run_pipeline(args.command)
     elif args.command == "export":
         _run_export()
+    elif args.command == "generate-images":
+        _run_generate_images()
     elif args.command == "enrich-reactions":
         _run_enrich_reactions(args.db)
     elif args.command == "enrich-media":

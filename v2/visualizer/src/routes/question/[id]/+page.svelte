@@ -49,7 +49,7 @@
       onclick={() => { const q = store.random(); if (q) goto(`/question/${q.id}`); }}
       class="ml-auto inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium bg-primary-500 dark:bg-primary-600 text-white hover:bg-primary-600 dark:hover:bg-primary-700 rounded-lg transition-colors cursor-pointer flex-shrink-0"
     >
-      <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm4 0v2m0 4v2m4-8v2m0 4v2m4-8v2m0 4v2" /></svg>
+      <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
       <span class="hidden sm:inline">Random question</span>
     </button>
   </div>
@@ -78,11 +78,6 @@
           {topicLabel(q.topic)}
         </a>
       {/if}
-      {#if q.type && q.type !== 'unknown'}
-        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-400">
-          {q.type.replace(/_/g, ' ')}
-        </span>
-      {/if}
     </div>
   </div>
 
@@ -94,10 +89,10 @@
         <span>📎</span> This question has media attached
       </p>
     {/if}
-    {#if revealed && q.tags && q.tags.length > 0}
+    {#if q.tags && q.tags.length > 0}
       <div class="flex gap-2 mt-3 flex-wrap">
         {#each q.tags as tag}
-          <span class="text-xs px-2 py-0.5 bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-400 rounded-full">{tag}</span>
+          <a href="/?tag={encodeURIComponent(tag)}" class="text-xs px-2 py-0.5 bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-400 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 hover:text-gray-700 dark:hover:text-gray-200 transition-colors">{tag}</a>
         {/each}
       </div>
     {/if}

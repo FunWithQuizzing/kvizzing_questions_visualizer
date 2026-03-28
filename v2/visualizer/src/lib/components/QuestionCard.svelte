@@ -76,16 +76,14 @@
             #{question.session.question_number} {question.session.theme ?? 'Session'}
           </a>
         {/if}
-        {#if revealed}
-          {#each q.topics ?? [] as topic}
-            <button
-              onclick={(e) => { e.stopPropagation(); goto(`/?topic=${topic}`); }}
-              class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium transition-colors {topicCls(topic)}"
-            >
-              {topicLabel(topic)}
-            </button>
-          {/each}
-        {/if}
+        {#each q.topics ?? [] as topic}
+          <button
+            onclick={(e) => { e.stopPropagation(); goto(`/?topic=${topic}`); }}
+            class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium transition-colors {topicCls(topic)}"
+          >
+            {topicLabel(topic)}
+          </button>
+        {/each}
         {#if q.has_media}
           <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-700">
             📎 media
@@ -101,8 +99,8 @@
       </p>
     </a>
 
-    <!-- Tags -->
-    {#if q.tags && q.tags.length > 0}
+    <!-- Tags (only shown after reveal) -->
+    {#if revealed && q.tags && q.tags.length > 0}
       <div class="flex gap-1.5 mt-2.5 flex-wrap">
         {#each q.tags as tag}
           <button

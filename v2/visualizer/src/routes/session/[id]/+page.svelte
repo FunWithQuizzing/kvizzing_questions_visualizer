@@ -155,9 +155,9 @@
                     <MemberAvatar username={question.question.asker} size="xs" />
                     <span class="text-xs font-medium text-gray-700 dark:text-gray-300">{question.question.asker}</span>
                   </div>
-                  {#if question.question.topic}
-                    <a href="/?topic={question.question.topic}" class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium {topicCls(question.question.topic)} hover:opacity-80 transition-opacity flex-shrink-0">
-                      {topicLabel(question.question.topic)}
+                  {#if question.question.topics?.[0]}
+                    <a href="/?topic={question.question.topics[0]}" class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium {topicCls(question.question.topics[0])} hover:opacity-80 transition-opacity flex-shrink-0">
+                      {topicLabel(question.question.topics[0])}
                     </a>
                   {/if}
                 </div>

@@ -109,13 +109,50 @@
     .sort((a, b) => (b.stats?.wrong_attempts ?? 0) - (a.stats?.wrong_attempts ?? 0))
     .slice(0, 5);
 
-  type Tab = 'leaderboard' | 'topics' | 'moments';
+  const memes = [
+    "/images/memes/WhatsApp%20Image%202026-03-28%20at%2011.55.00.jpeg",
+    "/images/memes/WhatsApp%20Image%202026-03-28%20at%2012.34.31.jpeg",
+    "/images/memes/WhatsApp%20Image%202026-03-28%20at%2012.35.57.jpeg",
+    "/images/memes/WhatsApp%20Image%202026-03-28%20at%2012.37.29.jpeg",
+    "/images/memes/WhatsApp%20Image%202026-03-28%20at%2012.41.02.jpeg",
+    "/images/memes/WhatsApp%20Image%202026-03-28%20at%2012.42.49.jpeg",
+    "/images/memes/WhatsApp%20Image%202026-03-28%20at%2012.44.44.jpeg",
+    "/images/memes/WhatsApp%20Image%202026-03-28%20at%2012.50.00.jpeg",
+    "/images/memes/WhatsApp%20Image%202026-03-28%20at%2012.53.24.jpeg",
+    "/images/memes/WhatsApp%20Image%202026-03-28%20at%2012.56.42.jpeg",
+    "/images/memes/WhatsApp%20Image%202026-03-28%20at%2013.00.55.jpeg",
+    "/images/memes/WhatsApp%20Image%202026-03-28%20at%2013.01.37.jpeg",
+    "/images/memes/WhatsApp%20Image%202026-03-28%20at%2013.01.54.jpeg",
+    "/images/memes/WhatsApp%20Image%202026-03-28%20at%2013.01.57.jpeg",
+    "/images/memes/WhatsApp%20Image%202026-03-28%20at%2013.02.01.jpeg",
+    "/images/memes/WhatsApp%20Image%202026-03-28%20at%2013.02.06.jpeg",
+    "/images/memes/WhatsApp%20Image%202026-03-28%20at%2013.02.11.jpeg",
+    "/images/memes/WhatsApp%20Image%202026-03-28%20at%2013.02.16.jpeg",
+    "/images/memes/WhatsApp%20Image%202026-03-28%20at%2013.02.21.jpeg",
+    "/images/memes/WhatsApp%20Image%202026-03-28%20at%2013.02.26.jpeg",
+    "/images/memes/WhatsApp%20Image%202026-03-28%20at%2013.02.31.jpeg",
+    "/images/memes/WhatsApp%20Image%202026-03-28%20at%2013.02.36.jpeg",
+    "/images/memes/WhatsApp%20Image%202026-03-28%20at%2013.02.42.jpeg",
+    "/images/memes/WhatsApp%20Image%202026-03-28%20at%2013.02.47.jpeg",
+    "/images/memes/WhatsApp%20Image%202026-03-28%20at%2013.02.53.jpeg",
+    "/images/memes/WhatsApp%20Image%202026-03-28%20at%2013.03.12.jpeg",
+    "/images/memes/WhatsApp%20Image%202026-03-28%20at%2013.03.19.jpeg",
+    "/images/memes/WhatsApp%20Image%202026-03-28%20at%2013.03.26.jpeg",
+    "/images/memes/WhatsApp%20Image%202026-03-28%20at%2013.03.33.jpeg",
+    "/images/memes/WhatsApp%20Video%202026-03-28%20at%2013.00.54.mp4",
+    "/images/memes/WhatsApp%20Video%202026-03-28%20at%2013.01.28.mp4",
+    "/images/memes/WhatsApp%20Video%202026-03-28%20at%2013.03.43.mp4",
+  ];
+
+  let lightbox = $state<string | null>(null);
+
+  type Tab = 'leaderboard' | 'topics' | 'memes';
   let activeTab = $state<Tab>('topics');
 
   const tabs: { id: Tab; label: string }[] = [
     { id: 'topics', label: 'Tags & Topics' },
-    { id: 'moments', label: 'Best Moments' },
-    { id: 'leaderboard', label: 'Leaderboard' },
+    { id: 'memes', label: 'Wall of Fame' },
+    { id: 'leaderboard', label: 'Wall of Fun' },
   ];
 </script>
 
@@ -127,7 +164,7 @@
   <!-- Header -->
   <div>
     <h1 class="text-2xl font-bold text-gray-900 dark:text-gray-100">Highlights</h1>
-    <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">The group's story, in numbers</p>
+    <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">The group's story</p>
   </div>
 
   <!-- Quick stats row -->
@@ -245,6 +282,77 @@
           </div>
         </div>
       {/if}
+
+      <!-- Best Moments -->
+      <div class="grid sm:grid-cols-2 gap-6 lg:col-span-3 mt-2">
+        <!-- Most discussed -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
+          <div class="px-5 py-4 border-b border-gray-100 dark:border-gray-700">
+            <h2 class="font-semibold text-gray-900 dark:text-gray-100 flex items-center gap-2">
+              <span class="text-lg">💬</span> Most Discussed
+            </h2>
+          </div>
+          <div class="divide-y divide-gray-50 dark:divide-gray-700">
+            {#each mostDiscussed as q}
+              <a href="/question/{q.id}" class="px-5 py-3 flex items-start gap-3 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors block">
+                <div class="flex-1 min-w-0">
+                  <p class="text-sm text-gray-700 dark:text-gray-300 line-clamp-2">{q.question.text}</p>
+                  <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">{q.question.asker}</p>
+                </div>
+                <span class="text-sm font-semibold text-indigo-600 flex-shrink-0">{q.discussion?.length ?? 0}</span>
+              </a>
+            {/each}
+          </div>
+        </div>
+
+        <!-- Quickest solves -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
+          <div class="px-5 py-4 border-b border-gray-100 dark:border-gray-700">
+            <h2 class="font-semibold text-gray-900 dark:text-gray-100 flex items-center gap-2">
+              <span class="text-lg">⚡</span> Quickest Solves
+            </h2>
+          </div>
+          <div class="divide-y divide-gray-50 dark:divide-gray-700">
+            {#each quickest as q}
+              <a href="/question/{q.id}" class="px-5 py-3 flex items-start gap-3 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors block">
+                <div class="flex-1 min-w-0">
+                  <p class="text-sm text-gray-700 dark:text-gray-300 line-clamp-2">{q.question.text}</p>
+                  <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">{q.answer?.solver ?? '—'}</p>
+                </div>
+                <span class="text-sm font-semibold text-green-600 flex-shrink-0">{formatTime(q.stats?.time_to_answer_seconds)}</span>
+              </a>
+            {/each}
+          </div>
+        </div>
+
+        <!-- Trickiest questions -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden sm:col-span-2">
+          <div class="px-5 py-4 border-b border-gray-100 dark:border-gray-700">
+            <h2 class="font-semibold text-gray-900 dark:text-gray-100 flex items-center gap-2">
+              <span class="text-lg">🧩</span> Trickiest Questions
+            </h2>
+            <p class="text-xs text-gray-400 dark:text-gray-500 mt-0.5">Most wrong attempts</p>
+          </div>
+          <div class="divide-y divide-gray-50 dark:divide-gray-700">
+            {#each trickiest as q}
+              <a href="/question/{q.id}" class="px-5 py-3 flex items-start gap-3 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors block">
+                <div class="flex-1 min-w-0">
+                  <p class="text-sm text-gray-700 dark:text-gray-300 line-clamp-2">{q.question.text}</p>
+                  <div class="flex items-center gap-2 mt-1">
+                    <p class="text-xs text-gray-400 dark:text-gray-500">{q.question.asker}</p>
+                    {#each q.question.topics?.slice(0, 1) ?? [] as t}
+                      <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium {topicCls(t)}">
+                        {topicLabel(t)}
+                      </span>
+                    {/each}
+                  </div>
+                </div>
+                <span class="text-sm font-semibold text-red-500 flex-shrink-0">{q.stats?.wrong_attempts} wrong</span>
+              </a>
+            {/each}
+          </div>
+        </div>
+      </div>
     </div>
   {/if}
 
@@ -330,76 +438,73 @@
     </div>
   {/if}
 
-  <!-- Best Moments tab -->
-  {#if activeTab === 'moments'}
-    <div class="grid sm:grid-cols-2 gap-6">
-      <!-- Most discussed -->
-      <div class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
-        <div class="px-5 py-4 border-b border-gray-100 dark:border-gray-700">
-          <h2 class="font-semibold text-gray-900 dark:text-gray-100 flex items-center gap-2">
-            <span class="text-lg">💬</span> Most Discussed
-          </h2>
-        </div>
-        <div class="divide-y divide-gray-50 dark:divide-gray-700">
-          {#each mostDiscussed as q}
-            <a href="/question/{q.id}" class="px-5 py-3 flex items-start gap-3 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors block">
-              <div class="flex-1 min-w-0">
-                <p class="text-sm text-gray-700 dark:text-gray-300 line-clamp-2">{q.question.text}</p>
-                <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">{q.question.asker}</p>
-              </div>
-              <span class="text-sm font-semibold text-indigo-600 flex-shrink-0">{q.discussion?.length ?? 0}</span>
-            </a>
-          {/each}
-        </div>
-      </div>
-
-      <!-- Quickest solves -->
-      <div class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
-        <div class="px-5 py-4 border-b border-gray-100 dark:border-gray-700">
-          <h2 class="font-semibold text-gray-900 dark:text-gray-100 flex items-center gap-2">
-            <span class="text-lg">⚡</span> Quickest Solves
-          </h2>
-        </div>
-        <div class="divide-y divide-gray-50 dark:divide-gray-700">
-          {#each quickest as q}
-            <a href="/question/{q.id}" class="px-5 py-3 flex items-start gap-3 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors block">
-              <div class="flex-1 min-w-0">
-                <p class="text-sm text-gray-700 dark:text-gray-300 line-clamp-2">{q.question.text}</p>
-                <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">{q.answer?.solver ?? '—'}</p>
-              </div>
-              <span class="text-sm font-semibold text-green-600 flex-shrink-0">{formatTime(q.stats?.time_to_answer_seconds)}</span>
-            </a>
-          {/each}
-        </div>
-      </div>
-
-      <!-- Trickiest questions -->
-      <div class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden sm:col-span-2">
-        <div class="px-5 py-4 border-b border-gray-100 dark:border-gray-700">
-          <h2 class="font-semibold text-gray-900 dark:text-gray-100 flex items-center gap-2">
-            <span class="text-lg">🧩</span> Trickiest Questions
-          </h2>
-          <p class="text-xs text-gray-400 dark:text-gray-500 mt-0.5">Most wrong attempts</p>
-        </div>
-        <div class="divide-y divide-gray-50 dark:divide-gray-700">
-          {#each trickiest as q}
-            <a href="/question/{q.id}" class="px-5 py-3 flex items-start gap-3 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors block">
-              <div class="flex-1 min-w-0">
-                <p class="text-sm text-gray-700 dark:text-gray-300 line-clamp-2">{q.question.text}</p>
-                <div class="flex items-center gap-2 mt-1">
-                  <p class="text-xs text-gray-400 dark:text-gray-500">{q.question.asker}</p>
-                  {#each q.question.topics?.slice(0, 1) ?? [] as t}
-                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium {topicCls(t)}">
-                      {topicLabel(t)}
-                    </span>
-                  {/each}
-                </div>
-              </div>
-              <span class="text-sm font-semibold text-red-500 flex-shrink-0">{q.stats?.wrong_attempts} wrong</span>
-            </a>
-          {/each}
-        </div>
-      </div>
+  <!-- Memes tab -->
+  {#if activeTab === 'memes'}
+    <div class="columns-2 sm:columns-3 lg:columns-4 gap-3 space-y-3">
+      {#each memes as src}
+        {#if src.endsWith('.mp4')}
+          <div class="break-inside-avoid">
+            <video
+              {src}
+              controls
+              playsinline
+              class="w-full rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm cursor-zoom-in"
+              onclick={() => lightbox = src}
+            ></video>
+          </div>
+        {:else}
+          <div class="break-inside-avoid">
+            <img
+              {src}
+              alt="meme"
+              loading="lazy"
+              class="w-full rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow cursor-zoom-in"
+              onclick={() => lightbox = src}
+            />
+          </div>
+        {/if}
+      {/each}
     </div>
   {/if}
+
+  <!-- Lightbox -->
+  {#if lightbox}
+    <!-- svelte-ignore a11y_no_static_element_interactions -->
+    <!-- svelte-ignore a11y_click_events_have_key_events -->
+    <div
+      class="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
+      onclick={() => lightbox = null}
+    >
+      <button
+        class="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
+        onclick={() => lightbox = null}
+        aria-label="Close"
+      >
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      {#if lightbox.endsWith('.mp4')}
+        <!-- svelte-ignore a11y_click_events_have_key_events -->
+        <!-- svelte-ignore a11y_no_static_element_interactions -->
+        <video
+          src={lightbox}
+          controls
+          autoplay
+          playsinline
+          class="max-h-[90vh] max-w-[90vw] rounded-xl"
+          onclick={(e) => e.stopPropagation()}
+        ></video>
+      {:else}
+        <img
+          src={lightbox}
+          alt="meme"
+          class="max-h-[90vh] max-w-[90vw] rounded-xl object-contain"
+          onclick={(e) => e.stopPropagation()}
+        />
+      {/if}
+    </div>
+  {/if}
+
+
 </div>

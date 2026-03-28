@@ -50,6 +50,7 @@ from stages.stage4_enrich import run as stage4
 from stages.stage5_store import run as stage5
 from stages.stage6_export import run as stage6
 from generate_session_images import main as _generate_images_main
+from preserve_topics import main as _preserve_topics
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
@@ -73,6 +74,8 @@ def _run_pipeline(mode: str) -> None:
     errors_dir = data_dir / "errors"
     state_path = data_dir / "pipeline_state.json"
     members_config = _PIPELINE_DIR / "config" / "members.json"
+    session_overrides_config = _PIPELINE_DIR / "config" / "session_overrides.json"
+    extraction_output_dir = data_dir / "extraction_output"
 
     data_dir.mkdir(parents=True, exist_ok=True)
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -93,7 +96,7 @@ def _run_pipeline(mode: str) -> None:
         if not lines:
             log.info("  No new dates to process.")
             log.info("[Stage 6] Exporting JSON files…")
-            counts = stage6(db, output_dir, members_config_path=members_config, state_path=state_path)
+            counts = stage6(db, output_dir, members_config_path=members_config, session_overrides_path=session_overrides_config, state_path=state_path)
             _log_counts(counts)
             return
         log.info("  %s lines in window.", f"{len(lines):,}")
@@ -112,19 +115,37 @@ def _run_pipeline(mode: str) -> None:
 
         total_stored = 0
 
+        import json as _json
         for date_str in target_dates:
-            next_day = str(
-                Date(int(date_str[:4]), int(date_str[5:7]), int(date_str[8:]))
-                + timedelta(days=1)
-            )
-            window = by_date.get(date_str, []) + by_date.get(next_day, [])
+            # If a manually-verified extraction file exists for this date,
+            # use it instead of running LLM extraction (stage 2). This ensures
+            # manual corrections survive DB rebuilds.
+            extraction_file = extraction_output_dir / f"{date_str}.json"
+            if extraction_file.exists():
+                try:
+                    candidates = _json.loads(extraction_file.read_text(encoding="utf-8"))
+                    if not candidates:
+                        log.info("  [%s] extraction_output file empty — skipping.", date_str)
+                        continue
+                    log.info("  [%s] Using extraction_output file (%d entries, skipping LLM).", date_str, len(candidates))
+                except (OSError, _json.JSONDecodeError) as e:
+                    log.warning("  [%s] Failed to read extraction_output file: %s — falling back to LLM.", date_str, e)
+                    candidates = None
+            else:
+                candidates = None
 
-            # Stage 2 — Extract
-            log.debug("  [%s] Stage 2: extracting from %d messages…", date_str, len(window))
-            candidates = stage2(window, config, llm_client=client)
-            if not candidates:
-                log.info("  [%s] 0 candidates.", date_str)
-                continue
+            if candidates is None:
+                next_day = str(
+                    Date(int(date_str[:4]), int(date_str[5:7]), int(date_str[8:]))
+                    + timedelta(days=1)
+                )
+                window = by_date.get(date_str, []) + by_date.get(next_day, [])
+                # Stage 2 — Extract
+                log.debug("  [%s] Stage 2: extracting from %d messages…", date_str, len(window))
+                candidates = stage2(window, config, llm_client=client)
+                if not candidates:
+                    log.info("  [%s] 0 candidates.", date_str)
+                    continue
 
             # Stage 3 — Structure
             questions = stage3(candidates, config, errors_dir=errors_dir)
@@ -137,6 +158,32 @@ def _run_pipeline(mode: str) -> None:
             # Stage 4 — Enrich
             questions = stage4(questions, config, llm_client=client)
 
+            # Write enriched topics/tags back to extraction_output file so they
+            # survive future DB rebuilds. Keyed by question_timestamp.
+            if extraction_file.exists():
+                try:
+                    raw_entries = _json.loads(extraction_file.read_text(encoding="utf-8"))
+                    enriched_by_ts = {
+                        q.question.timestamp: q for q in questions
+                        if q.question.timestamp
+                    }
+                    updated = False
+                    for entry in raw_entries:
+                        ts = entry.get("question_timestamp")
+                        q = enriched_by_ts.get(ts)
+                        if q and q.question.topic and not entry.get("topic"):
+                            entry["topic"] = q.question.topic.value
+                            entry["tags"] = q.question.tags or []
+                            updated = True
+                    if updated:
+                        extraction_file.write_text(
+                            _json.dumps(raw_entries, ensure_ascii=False, indent=2),
+                            encoding="utf-8",
+                        )
+                        log.debug("  [%s] Wrote enriched topics/tags back to extraction_output file.", date_str)
+                except Exception as e:
+                    log.warning("  [%s] Could not write back enrichment to extraction_output: %s", date_str, e)
+
             # Stage 5 — Store
             count = stage5(questions, db, state_path=state_path)
             total_stored += count
@@ -147,8 +194,12 @@ def _run_pipeline(mode: str) -> None:
 
         # Stage 6 — Export
         log.info("[Stage 6] Exporting JSON files…")
-        counts = stage6(db, output_dir, members_config_path=members_config, state_path=state_path)
+        counts = stage6(db, output_dir, members_config_path=members_config, session_overrides_path=session_overrides_config, state_path=state_path)
         _log_counts(counts)
+
+        # Preserve manually-curated topics (converts singular topic → topics[])
+        log.info("[Post-export] Preserving topic overrides…")
+        _preserve_topics()
 
     except Exception:
         log.exception("Pipeline crashed.")
@@ -167,6 +218,7 @@ def _run_export() -> None:
     db_path = data_dir / "questions.db"
     state_path = data_dir / "pipeline_state.json"
     members_config = _PIPELINE_DIR / "config" / "members.json"
+    session_overrides_config = _PIPELINE_DIR / "config" / "session_overrides.json"
 
     if not db_path.exists():
         log.error("questions.db not found at %s — run backfill first.", db_path)
@@ -176,8 +228,10 @@ def _run_export() -> None:
     db = sqlite3.connect(str(db_path))
     try:
         log.info("[Stage 6] Exporting JSON files…")
-        counts = stage6(db, output_dir, members_config_path=members_config, state_path=state_path)
+        counts = stage6(db, output_dir, members_config_path=members_config, session_overrides_path=session_overrides_config, state_path=state_path)
         _log_counts(counts)
+        log.info("[Post-export] Preserving topic overrides…")
+        _preserve_topics()
         log.info("Export complete.")
     except Exception:
         log.exception("Export crashed.")

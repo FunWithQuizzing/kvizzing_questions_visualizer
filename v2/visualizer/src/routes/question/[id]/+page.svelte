@@ -41,13 +41,13 @@
     </a>
     {#if question.session}
       <span class="text-gray-300 dark:text-gray-600">/</span>
-      <a href="/session/{question.session.id}" class="text-sm text-orange-500 hover:text-orange-600 transition-colors">
+      <a href="/session/{question.session.id}" class="text-sm text-orange-500 dark:text-orange-400 hover:text-orange-600 dark:hover:text-orange-300 transition-colors">
         {question.session.theme ?? 'Session'} #{question.session.question_number}
       </a>
     {/if}
     <button
       onclick={() => { const q = store.random(); if (q) goto(`/question/${q.id}`); }}
-      class="ml-auto inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium bg-orange-500 text-white hover:bg-orange-600 rounded-lg transition-colors"
+      class="ml-auto inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium bg-orange-500 dark:bg-orange-600 text-white hover:bg-orange-600 dark:hover:bg-orange-700 rounded-lg transition-colors"
     >
       🎲 <span class="hidden sm:inline">Random question</span>
     </button>
@@ -67,7 +67,7 @@
       {#if question.session}
         <a
           href="/session/{question.session.id}"
-          class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-orange-100 text-orange-700 hover:bg-orange-200 transition-colors"
+          class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-orange-100 dark:bg-orange-900/40 text-orange-700 dark:text-orange-300 hover:bg-orange-200 dark:hover:bg-orange-900/60 transition-colors"
         >
           #{question.session.question_number} {question.session.theme ?? 'Session'}
         </a>
@@ -190,13 +190,13 @@
   <!-- Prev / Next navigation -->
   <div class="flex justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
     {#if adj.next}
-      <a href="/question/{adj.next.id}" class="flex items-center gap-2 text-sm text-gray-500 hover:text-orange-600 transition-colors group max-w-[45%]">
+      <a href="/question/{adj.next.id}" class="flex items-center gap-2 text-sm text-gray-500 hover:text-orange-600 dark:hover:text-orange-400 transition-colors group max-w-[45%]">
         <svg class="w-4 h-4 flex-shrink-0 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
         </svg>
         <div>
           <p class="text-xs text-gray-400 dark:text-gray-500">Previous</p>
-          <p class="text-xs font-medium text-gray-700 dark:text-gray-300 group-hover:text-orange-600 line-clamp-2">{adj.next.question.text.slice(0, 60)}…</p>
+          <p class="text-xs font-medium text-gray-700 dark:text-gray-300 group-hover:text-orange-600 dark:group-hover:text-orange-400 line-clamp-2">{adj.next.question.text.slice(0, 60)}…</p>
         </div>
       </a>
     {:else}
@@ -204,10 +204,10 @@
     {/if}
 
     {#if adj.prev}
-      <a href="/question/{adj.prev.id}" class="flex items-center gap-2 text-sm text-gray-500 hover:text-orange-600 transition-colors group text-right max-w-[45%]">
+      <a href="/question/{adj.prev.id}" class="flex items-center gap-2 text-sm text-gray-500 hover:text-orange-600 dark:hover:text-orange-400 transition-colors group text-right max-w-[45%]">
         <div>
           <p class="text-xs text-gray-400 dark:text-gray-500">Next</p>
-          <p class="text-xs font-medium text-gray-700 dark:text-gray-300 group-hover:text-orange-600 line-clamp-2">{adj.prev.question.text.slice(0, 60)}…</p>
+          <p class="text-xs font-medium text-gray-700 dark:text-gray-300 group-hover:text-orange-600 dark:group-hover:text-orange-400 line-clamp-2">{adj.prev.question.text.slice(0, 60)}…</p>
         </div>
         <svg class="w-4 h-4 flex-shrink-0 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />

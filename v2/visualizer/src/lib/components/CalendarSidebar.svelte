@@ -196,7 +196,7 @@
         onkeydown={(e) => { if (e.key === 'Enter') handleDayClick(cell); }}
         role={hasActivity ? 'button' : undefined}
         tabindex={hasActivity ? 0 : undefined}
-        class="flex flex-col items-center py-1 px-0.5 rounded-lg transition-colors h-[52px]
+        class="flex flex-col items-center py-1 px-0.5 rounded-lg transition-colors h-[44px]
           {hasActivity ? 'cursor-pointer hover:bg-orange-50 dark:hover:bg-orange-900/20' : 'cursor-default'}
           {!cell.inMonth ? 'opacity-20' : ''}"
       >
@@ -209,11 +209,11 @@
         </span>
 
         <!-- Question count pill slot (always reserved) -->
-        <div class="w-full h-[18px] mb-[2px] flex-shrink-0">
+        <div class="w-full h-[14px] mb-px flex-shrink-0">
           {#if questionCount > 0 && cell.inMonth}
             <span
               title="{questionCount} question{questionCount > 1 ? 's' : ''}"
-              class="block w-full text-center text-[10px] font-semibold leading-none px-0.5 py-[3px] rounded bg-blue-100 text-blue-700"
+              class="block w-full text-center text-[10px] font-semibold leading-none px-0.5 py-[2px] rounded bg-blue-100 text-blue-700"
             >
               {questionCount}
             </span>
@@ -221,13 +221,13 @@
         </div>
 
         <!-- Session pill slot (always reserved) -->
-        <div class="w-full h-[18px] flex-shrink-0">
+        <div class="w-full h-[14px] flex-shrink-0">
           {#if sessionInfos.length > 0 && cell.inMonth}
             <button
               onmouseenter={(e) => openPopover(e, cell.dateStr)}
               onmouseleave={scheduleClose}
               onclick={(e) => { e.stopPropagation(); goto(`/?dateFrom=${cell.dateStr}&dateTo=${cell.dateStr}`); }}
-              class="w-full text-center text-[10px] font-bold leading-none px-0.5 py-[3px] rounded bg-orange-500 dark:bg-orange-600 text-white hover:bg-orange-600 dark:hover:bg-orange-700 transition-colors"
+              class="w-full text-center text-[10px] font-bold leading-none px-0.5 py-[2px] rounded bg-orange-500 dark:bg-orange-600 text-white hover:bg-orange-600 dark:hover:bg-orange-700 transition-colors"
             >
               {sessionInfos.length}
             </button>

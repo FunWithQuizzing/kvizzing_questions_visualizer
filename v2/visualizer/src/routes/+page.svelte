@@ -174,8 +174,7 @@
                       {session.theme ?? `${session.quizmaster}'s Quiz`}
                     </span>
                   </div>
-                  <p class="text-xs text-gray-500 dark:text-gray-400">{session.quizmaster}</p>
-                  <p class="text-xs text-gray-500 dark:text-gray-400">{formatDate(session.date)}</p>
+                  <p class="text-xs text-gray-500 dark:text-gray-400 truncate">{session.quizmaster} · {formatDate(session.date)}</p>
                   <p class="text-xs text-gray-400 dark:text-gray-500">{session.question_count} questions</p>
                 </div>
               </a>

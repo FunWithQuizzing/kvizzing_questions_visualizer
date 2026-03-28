@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-orange: #F97316;
+    --color-blue: #3B82F6;
+    --color-green: #10B981;
+    --color-purple: #8B5CF6;
+    --color-red: #EF4444;
+    --color-amber: #F59E0B;
+    --color-cyan: #06B6D4;
+    --color-pink: #EC4899;
+    --color-lime: #84CC16;
+    --color-indigo: #6366F1;
+    --color-teal: #14B8A6;
+    --color-rose: #F43F5E;
+  }
+}
+
+/* FullCalendar overrides */
+.fc {
+  font-family: inherit;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.fc .fc-button {
+  background-color: #f3f4f6;
+  border-color: #e5e7eb;
+  color: #374151;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.fc .fc-button:hover {
+  background-color: #e5e7eb;
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active,
+.fc .fc-button-primary:not(:disabled):active {
+  background-color: #F97316;
+  border-color: #F97316;
+  color: white;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+  background-color: #fff7ed;
+}
+
+.fc .fc-daygrid-event {
+  border-radius: 4px;
+  font-size: 0.7rem;
+}
+
+.fc-event-session {
+  background-color: #F97316 !important;
+  border-color: #ea6c10 !important;
+}
+
+.fc-event-adhoc {
+  background-color: #3B82F6 !important;
+  border-color: #2563eb !important;
+  font-size: 0.65rem !important;
+}

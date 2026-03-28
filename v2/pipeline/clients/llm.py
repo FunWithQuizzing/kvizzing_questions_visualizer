@@ -59,14 +59,42 @@ class GroqClient:
         return _Response(response.choices[0].message.content)
 
 
+# ── Anthropic client ───────────────────────────────────────────────────────────
+
+_ANTHROPIC_MODEL = "claude-haiku-4-5-20251001"
+
+
+class AnthropicClient:
+    """Drop-in replacement using the Anthropic API (ANTHROPIC_API_KEY)."""
+
+    def __init__(self):
+        import anthropic
+        api_key = os.environ.get("ANTHROPIC_API_KEY")
+        if not api_key:
+            raise RuntimeError("Set ANTHROPIC_API_KEY environment variable.")
+        self._client = anthropic.Anthropic(api_key=api_key)
+        self.messages = _Messages(self._create)
+
+    def _create(self, *, model: str, max_tokens: int, system: str, messages: list) -> _Response:
+        response = self._client.messages.create(
+            model=_ANTHROPIC_MODEL,
+            max_tokens=max_tokens,
+            system=system,
+            messages=messages,
+        )
+        return _Response(response.content[0].text)
+
+
 # ── Factory ────────────────────────────────────────────────────────────────────
 
 def get_client():
-    """Return a GroqClient, or None if GROQ_API_KEY is not set."""
+    """Return a GroqClient or AnthropicClient, whichever key is available."""
     import logging
     log = logging.getLogger("kvizzing")
-    try:
-        return GroqClient()
-    except (ImportError, RuntimeError) as e:
-        log.warning("No LLM client available: %s", e)
-        return None
+    for cls in (GroqClient, AnthropicClient):
+        try:
+            return cls()
+        except (ImportError, RuntimeError):
+            pass
+    log.warning("No LLM client available: Set GROQ_API_KEY or ANTHROPIC_API_KEY.")
+    return None

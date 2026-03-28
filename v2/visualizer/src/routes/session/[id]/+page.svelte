@@ -74,7 +74,7 @@
   <!-- Session header -->
   <div class="relative overflow-hidden bg-gray-900 rounded-2xl p-6 text-white shadow-lg">
     <div
-      class="absolute inset-0 bg-cover bg-center opacity-40 transition-opacity"
+      class="absolute inset-0 bg-cover bg-center opacity-50 transition-opacity"
       style="background-image: url('/images/sessions/{session.id}.jpg')"
     ></div>
     <div class="relative">

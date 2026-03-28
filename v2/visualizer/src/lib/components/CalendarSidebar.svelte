@@ -34,16 +34,24 @@
 
   // Start on most recent date with activity
   const allDates = [...activityByDate.keys()].sort();
+  const earliestDate = allDates.at(0) ?? new Date().toISOString().slice(0, 10);
   const latestDate = allDates.at(-1) ?? new Date().toISOString().slice(0, 10);
   const [initYear, initMonth] = latestDate.split('-').map(Number);
+  const [minYear, minMonth] = earliestDate.split('-').map(Number);
+  const [maxYear, maxMonth] = latestDate.split('-').map(Number);
 
   let year = $state(initYear);
   let month = $state(initMonth);
 
+  const canGoPrev = $derived(year > minYear || (year === minYear && month > minMonth));
+  const canGoNext = $derived(year < maxYear || (year === maxYear && month < maxMonth));
+
   function prevMonth() {
+    if (!canGoPrev) return;
     if (month === 1) { year--; month = 12; } else month--;
   }
   function nextMonth() {
+    if (!canGoNext) return;
     if (month === 12) { year++; month = 1; } else month++;
   }
 
@@ -140,7 +148,8 @@
     <div class="flex items-center gap-1">
       <button
         onclick={prevMonth}
-        class="p-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-500 dark:text-gray-400 transition-colors"
+        disabled={!canGoPrev}
+        class="p-1 rounded transition-colors {canGoPrev ? 'hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-500 dark:text-gray-400' : 'text-gray-200 dark:text-gray-600 cursor-default'}"
         aria-label="Previous month"
       >
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -152,7 +161,8 @@
       </span>
       <button
         onclick={nextMonth}
-        class="p-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-500 dark:text-gray-400 transition-colors"
+        disabled={!canGoNext}
+        class="p-1 rounded transition-colors {canGoNext ? 'hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-500 dark:text-gray-400' : 'text-gray-200 dark:text-gray-600 cursor-default'}"
         aria-label="Next month"
       >
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

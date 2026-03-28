@@ -21,4 +21,5 @@ v2/data/questions.db
 v2/data/errors/
 v2/data/pipeline_state.json
 v2/data/extraction_input/
+v2/data/extraction_compact/
 v2/pipeline/logs/

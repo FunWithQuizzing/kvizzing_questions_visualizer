@@ -158,7 +158,7 @@
   );
 
   const sinceDate = stats.earliestDate ? formatDate(stats.earliestDate) : '';
-  const selectCls = "flex-1 min-w-[7rem] sm:flex-none sm:w-34 text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 dark:focus:ring-primary-900 text-gray-600";
+  const selectCls = "flex-1 min-w-[7rem] sm:flex-none sm:w-35 text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 dark:focus:ring-primary-900 text-gray-600";
   const filterBtnCls = "flex-1 min-w-[7rem] sm:flex-none sm:w-34 text-sm border rounded-lg px-3 py-1.5 leading-5 transition-colors inline-flex items-center gap-1.5 justify-center";
 </script>
 

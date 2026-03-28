@@ -1,8 +1,5 @@
 node_modules
 
-# Data (single source of truth is v2/data/ — copied at build time, symlinked in dev)
-/static/data
-
 # Output
 .output
 .vercel

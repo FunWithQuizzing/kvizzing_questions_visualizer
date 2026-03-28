@@ -15,16 +15,15 @@
   const recentSessions = sessions.slice(0, 3);
 
   // URL-driven filters — initialised from URL and kept in sync on every navigation
-  let searchQuery = $state($page.url.searchParams.get('q') ?? '');
-  let filterAsker = $state($page.url.searchParams.get('asker') ?? '');
-  let filterSolver = $state($page.url.searchParams.get('solver') ?? '');
-  let filterDateFrom = $state($page.url.searchParams.get('dateFrom') ?? '');
-  let filterDateTo = $state($page.url.searchParams.get('dateTo') ?? '');
-  let filterHasMedia = $state($page.url.searchParams.get('has_media') === '1' ? true : undefined as boolean | undefined);
-  let filterSessionId = $state($page.url.searchParams.get('session') ?? '');
-  let filterTopics = $state(new Set<string>(
-    ($page.url.searchParams.get('topics') ?? '').split(',').filter(Boolean)
-  ));
+  // (initial values are empty; $effect below syncs from URL after mount, avoiding prerender issues)
+  let searchQuery = $state('');
+  let filterAsker = $state('');
+  let filterSolver = $state('');
+  let filterDateFrom = $state('');
+  let filterDateTo = $state('');
+  let filterHasMedia = $state(undefined as boolean | undefined);
+  let filterSessionId = $state('');
+  let filterTopics = $state(new Set<string>());
 
   // Re-sync whenever the URL changes (e.g. calendar navigation while already on this page)
   $effect(() => {

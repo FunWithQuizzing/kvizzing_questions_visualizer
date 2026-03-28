@@ -1,5 +1,5 @@
 [build]
-  command = "rm -rf static/data && cp -r ../data static/data && npm run build"
+  command = "npm run build"
   publish = "build"
 
 [[redirects]]

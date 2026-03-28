@@ -66,12 +66,14 @@ def _run_pipeline(mode: str) -> None:
     aliases = load_aliases(_PIPELINE_DIR / "config")
 
     data_dir = V2_DIR / "data"
+    output_dir = V2_DIR / "visualizer" / "static" / "data"
     db_path = data_dir / "questions.db"
     errors_dir = data_dir / "errors"
     state_path = data_dir / "pipeline_state.json"
     members_config = _PIPELINE_DIR / "config" / "members.json"
 
     data_dir.mkdir(parents=True, exist_ok=True)
+    output_dir.mkdir(parents=True, exist_ok=True)
 
     client = get_client()
     if client is None:
@@ -89,7 +91,7 @@ def _run_pipeline(mode: str) -> None:
         if not lines:
             log.info("  No new dates to process.")
             log.info("[Stage 6] Exporting JSON files…")
-            counts = stage6(db, data_dir, members_config_path=members_config, state_path=state_path)
+            counts = stage6(db, output_dir, members_config_path=members_config, state_path=state_path)
             _log_counts(counts)
             return
         log.info("  %s lines in window.", f"{len(lines):,}")
@@ -143,7 +145,7 @@ def _run_pipeline(mode: str) -> None:
 
         # Stage 6 — Export
         log.info("[Stage 6] Exporting JSON files…")
-        counts = stage6(db, data_dir, members_config_path=members_config, state_path=state_path)
+        counts = stage6(db, output_dir, members_config_path=members_config, state_path=state_path)
         _log_counts(counts)
 
     except Exception:
@@ -159,6 +161,7 @@ def _run_pipeline(mode: str) -> None:
 def _run_export() -> None:
     config = load_config(_PIPELINE_DIR / "config")
     data_dir = V2_DIR / "data"
+    output_dir = V2_DIR / "visualizer" / "static" / "data"
     db_path = data_dir / "questions.db"
     state_path = data_dir / "pipeline_state.json"
     members_config = _PIPELINE_DIR / "config" / "members.json"
@@ -167,10 +170,11 @@ def _run_export() -> None:
         log.error("questions.db not found at %s — run backfill first.", db_path)
         sys.exit(1)
 
+    output_dir.mkdir(parents=True, exist_ok=True)
     db = sqlite3.connect(str(db_path))
     try:
         log.info("[Stage 6] Exporting JSON files…")
-        counts = stage6(db, data_dir, members_config_path=members_config, state_path=state_path)
+        counts = stage6(db, output_dir, members_config_path=members_config, state_path=state_path)
         _log_counts(counts)
         log.info("Export complete.")
     except Exception:

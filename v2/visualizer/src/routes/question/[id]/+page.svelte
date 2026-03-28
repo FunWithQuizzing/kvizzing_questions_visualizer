@@ -47,7 +47,7 @@
     {/if}
     <button
       onclick={() => { const q = store.random(); if (q) goto(`/question/${q.id}`); }}
-      class="ml-auto inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium bg-orange-500 dark:bg-orange-600 text-white hover:bg-orange-600 dark:hover:bg-orange-700 rounded-lg transition-colors"
+      class="ml-auto inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium bg-orange-500 dark:bg-orange-600 text-white hover:bg-orange-600 dark:hover:bg-orange-700 rounded-lg transition-colors cursor-pointer"
     >
       🎲 <span class="hidden sm:inline">Random question</span>
     </button>

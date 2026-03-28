@@ -33,7 +33,7 @@
     filterSolver = p.get('solver') ?? '';
     filterDateFrom = p.get('dateFrom') ?? '';
     filterDateTo = p.get('dateTo') ?? '';
-    filterHasMedia = p.get('has_media') === '1' ? true : undefined as boolean | undefined;
+    filterHasMedia = p.get('has_media') === '0' ? false : undefined as boolean | undefined;
     filterSessionId = p.get('session') ?? '';
     // ?tag=X from detail page tag clicks (single), or ?tags=X,Y for multi
     const singleTag = p.get('tag') ?? '';
@@ -249,10 +249,10 @@
       </select>
 
       <button
-        onclick={() => filterHasMedia = filterHasMedia === true ? undefined : true}
-        class="{filterBtnCls} {filterHasMedia === true ? 'bg-primary-500 border-primary-500 text-white' : 'border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600'}"
+        onclick={() => filterHasMedia = filterHasMedia === false ? undefined : false}
+        class="{filterBtnCls} {filterHasMedia === false ? 'bg-primary-500 border-primary-500 text-white' : 'border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600'}"
       >
-        📎 Has media
+        No attachments
       </button>
 
       <button

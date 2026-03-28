@@ -122,28 +122,27 @@
 
 <div class="space-y-6">
   <!-- Hero -->
-  <div class="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl p-6 text-white shadow-lg">
+  <div class="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl p-6 text-white shadow-lg relative">
+    {#if sinceDate}
+      <div class="absolute top-4 right-4 flex items-center gap-1.5 text-xs text-orange-100">
+        <span class="relative flex h-2.5 w-2.5">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-90"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-400"></span>
+        </span>
+        since {sinceDate}
+      </div>
+    {/if}
     <h1 class="text-2xl font-bold mb-1">KVizzing</h1>
     <p class="text-orange-100 text-sm mb-4">Every question the group ever asked. Right here.</p>
     <div class="flex items-center justify-between gap-3">
       <div class="flex flex-wrap gap-x-4 gap-y-1 text-sm">
         <span class="font-semibold">{stats.total} questions</span>
         <span class="text-orange-200 hidden sm:inline">·</span>
-        <span class="font-semibold">{stats.sessions} sessions</span>
-        {#if sinceDate}
-          <span class="text-orange-200 hidden sm:inline">·</span>
-          <span class="text-orange-100 flex items-center gap-1.5">
-            <span class="relative flex h-2 w-2">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span>
-            </span>
-            since {sinceDate}
-          </span>
-        {/if}
+        <a href="/sessions" class="font-semibold hover:text-orange-100 transition-colors cursor-pointer">{stats.sessions} sessions</a>
       </div>
       <button
         onclick={surpriseMe}
-        class="flex-shrink-0 px-4 py-2 bg-black text-white font-semibold text-sm rounded-lg hover:bg-gray-900 transition-colors shadow-sm cursor-pointer"
+        class="flex-shrink-0 px-4 py-2 bg-white/20 hover:bg-white/30 text-white font-semibold text-sm rounded-lg transition-colors shadow-sm cursor-pointer border border-white/30"
       >
         🎲 <span class="hidden sm:inline">Random question</span>
       </button>

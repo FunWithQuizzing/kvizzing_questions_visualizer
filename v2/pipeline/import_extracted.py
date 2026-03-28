@@ -51,10 +51,12 @@ def main() -> None:
 
     input_dir = V2_DIR / "data" / "extraction_output"
     data_dir = V2_DIR / "data"
+    output_dir = V2_DIR / "visualizer" / "static" / "data"
     db_path = data_dir / "questions.db"
     errors_dir = data_dir / "errors"
     state_path = data_dir / "pipeline_state.json"
     members_config = _PIPELINE_DIR / "config" / "members.json"
+    output_dir.mkdir(parents=True, exist_ok=True)
 
     if not input_dir.exists():
         log.error("extraction_output/ not found at %s", input_dir)
@@ -110,7 +112,7 @@ def main() -> None:
 
         # Stage 6 — Export JSON files
         log.info("[Stage 6] Exporting JSON files…")
-        counts = stage6(db, data_dir, members_config_path=members_config, state_path=state_path)
+        counts = stage6(db, output_dir, members_config_path=members_config, state_path=state_path)
         for key, val in counts.items():
             log.info("  %s: %s", key, f"{val:,}")
 

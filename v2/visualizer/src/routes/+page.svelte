@@ -161,7 +161,7 @@
             class="flex-shrink-0 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 hover:border-orange-300 hover:shadow-sm transition-all min-w-[180px]"
           >
             <div class="flex items-center gap-2 mb-1">
-              <span class="w-2 h-2 rounded-full bg-orange-400"></span>
+              <span class="w-2 h-2 rounded-full bg-orange-400 dark:bg-orange-500"></span>
               <span class="text-xs font-semibold text-gray-700 dark:text-gray-300 truncate">
                 {session.theme ?? `${session.quizmaster}'s Quiz`}
               </span>
@@ -172,7 +172,7 @@
         {/each}
         <a
           href="/sessions"
-          class="flex-shrink-0 border-2 border-dashed border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 hover:border-orange-300 transition-colors flex items-center text-sm text-gray-400 dark:text-gray-500 hover:text-orange-500 min-w-[120px] justify-center"
+          class="flex-shrink-0 border-2 border-dashed border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 hover:border-orange-300 transition-colors flex items-center text-sm text-gray-400 dark:text-gray-500 hover:text-orange-500 dark:hover:text-orange-400 min-w-[120px] justify-center"
         >
           All sessions →
         </a>
@@ -264,7 +264,7 @@
       {#if hasActiveFilters}
         <button
           onclick={clearFilters}
-          class="text-sm text-orange-600 hover:text-orange-700 px-2 py-1.5 transition-colors"
+          class="text-sm text-orange-600 dark:text-orange-400 hover:text-orange-700 dark:hover:text-orange-300 px-2 py-1.5 transition-colors"
         >
           Clear all
         </button>
@@ -349,7 +349,7 @@
   <div class="flex items-center justify-between">
     <p class="text-sm text-gray-500 dark:text-gray-400">
       {filteredQuestions.length} question{filteredQuestions.length !== 1 ? 's' : ''}
-      {#if hasActiveFilters}<span class="text-orange-500 font-medium"> (filtered)</span>{/if}
+      {#if hasActiveFilters}<span class="text-orange-500 dark:text-orange-400 font-medium"> (filtered)</span>{/if}
     </p>
   </div>
 
@@ -361,7 +361,7 @@
       <div class="text-center py-16 text-gray-400">
         <div class="text-4xl mb-3">🔍</div>
         <p class="font-medium">No questions match your filters</p>
-        <button onclick={clearFilters} class="mt-2 text-sm text-orange-500 hover:text-orange-600">
+        <button onclick={clearFilters} class="mt-2 text-sm text-orange-500 dark:text-orange-400 hover:text-orange-600 dark:hover:text-orange-300">
           Clear filters
         </button>
       </div>

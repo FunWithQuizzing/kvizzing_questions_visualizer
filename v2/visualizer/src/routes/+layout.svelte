@@ -82,7 +82,7 @@
             <a
               href={link.href}
               class="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors {isActive(link.href, $page.url.pathname)
-                ? 'bg-orange-50 text-orange-600'
+                ? 'bg-orange-50 text-orange-600 dark:bg-orange-500/20 dark:text-orange-400'
                 : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-700'}"
             >
               {link.label}
@@ -131,7 +131,7 @@
           <a
             href={link.href}
             class="block px-3 py-2 rounded-lg text-sm font-medium transition-colors {isActive(link.href, $page.url.pathname)
-              ? 'bg-orange-50 text-orange-600'
+              ? 'bg-orange-50 text-orange-600 dark:bg-orange-500/20 dark:text-orange-400'
               : 'text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700'}"
             onclick={() => mobileMenuOpen = false}
           >
@@ -178,8 +178,8 @@
     </div>
 
     <!-- Footer -->
-    <footer class="mt-8 px-6 py-8 bg-orange-500 text-white text-center">
-      <p class="text-base font-semibold tracking-wide">Apes together strong 🦍</p>
+    <footer class="mt-8 px-6 py-4 bg-orange-500 text-white text-center">
+      <p class="text-sm font-medium tracking-wide">Apes together strong 🦍</p>
     </footer>
   </div>
 

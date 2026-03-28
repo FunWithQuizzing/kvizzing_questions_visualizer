@@ -69,7 +69,7 @@
         {#if question.session}
           <a
             href="/session/{question.session.id}"
-            class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-orange-100 text-orange-700 hover:bg-orange-200 transition-colors"
+            class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-orange-100 text-orange-700 hover:bg-orange-200 dark:bg-orange-900/40 dark:text-orange-300 dark:hover:bg-orange-900/40 transition-colors"
           >
             #{question.session.question_number} {question.session.theme ?? 'Session'}
           </a>
@@ -174,7 +174,7 @@
         <div class="flex items-center gap-2 flex-shrink-0">
           <button
             onclick={submitGuess}
-            class="px-3 py-1.5 text-xs font-medium bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors"
+            class="px-3 py-1.5 text-xs font-medium bg-orange-500 text-white rounded-lg hover:bg-orange-600 dark:bg-orange-600 transition-colors"
           >Submit</button>
           <button
             onclick={() => hintsShown = Math.min(hintsShown + 1, hints.length)}

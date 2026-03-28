@@ -82,7 +82,7 @@
         type="text"
         bind:value={input}
         onkeydown={handleKeydown}
-        placeholder="say the right words..."
+        placeholder="Gotta type the right words to enter in.."
         autocomplete="off"
         spellcheck="false"
         autofocus

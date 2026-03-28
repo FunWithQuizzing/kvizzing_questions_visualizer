@@ -35,6 +35,14 @@ THEME_PROMPTS: dict[str, str] = {
         "whimsical collage of famous movie scenes depicted in confusing abstract ways, "
         "pop art style, vibrant colors, wide banner"
     ),
+    "Top 10 most populated cities in India": (
+        "aerial panorama of Indian megacities skyline, Mumbai Delhi Bangalore Hyderabad, "
+        "golden hour light, modern architecture meets ancient temples, wide banner"
+    ),
+    "Prathamesh's Quiz": (
+        "eclectic collage of science geography history art, planets ocean waves ancient maps, "
+        "rich jewel tones teal amber indigo, painterly illustration, wide banner"
+    ),
 }
 
 FALLBACK_PROMPT = (

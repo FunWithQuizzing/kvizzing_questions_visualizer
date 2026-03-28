@@ -30,11 +30,39 @@
   let authenticated = $state<boolean | null>(null);
   let darkMode = $state(false);
 
+  const THEMES = [
+    { id: 'sky',     label: 'Blue',   color: '#0ea5e9' },
+    { id: 'violet',  label: 'Violet', color: '#8b5cf6' },
+    { id: 'emerald', label: 'Green',  color: '#10b981' },
+    { id: 'rose',    label: 'Rose',   color: '#f43f5e' },
+    { id: 'amber',   label: 'Amber',  color: '#f59e0b' },
+  ];
+  let colorTheme = $state('sky');
+
   onMount(() => {
     authenticated = localStorage.getItem('kvizzing_auth') === 'true';
     darkMode = localStorage.getItem('kvizzing_dark') === 'true';
     if (darkMode) document.documentElement.classList.add('dark');
+    const saved = localStorage.getItem('kvizzing_theme') ?? 'sky';
+    colorTheme = saved;
+    applyTheme(saved);
   });
+
+  function applyTheme(id: string) {
+    if (id === 'sky') {
+      document.documentElement.removeAttribute('data-theme');
+    } else {
+      document.documentElement.setAttribute('data-theme', id);
+    }
+  }
+
+  function cycleTheme() {
+    const idx = THEMES.findIndex(t => t.id === colorTheme);
+    const next = THEMES[(idx + 1) % THEMES.length];
+    colorTheme = next.id;
+    localStorage.setItem('kvizzing_theme', next.id);
+    applyTheme(next.id);
+  }
 
   function toggleDark() {
     darkMode = !darkMode;
@@ -98,6 +126,26 @@
               {link.label}
             </a>
           {/each}
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeFsl3cKK7Tf3-iuzkPxPWmWkvRpZfB3U27PeZDun9NIqAt6A/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-700 transition-colors"
+            aria-label="Give feedback"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+            </svg>
+            <span class="text-sm font-medium">Feedback</span>
+          </a>
+          <button
+            onclick={cycleTheme}
+            class="p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+            aria-label="Change color theme"
+            title="Theme: {THEMES.find(t => t.id === colorTheme)?.label}"
+          >
+            <span class="block w-4 h-4 rounded-full border-2 border-white dark:border-gray-800 ring-1 ring-gray-300 dark:ring-gray-600 shadow-sm" style="background-color: {THEMES.find(t => t.id === colorTheme)?.color}"></span>
+          </button>
           <button
             onclick={toggleDark}
             class="p-1.5 rounded-lg text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 transition-colors"
@@ -148,6 +196,25 @@
             {link.label}
           </a>
         {/each}
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSeFsl3cKK7Tf3-iuzkPxPWmWkvRpZfB3U27PeZDun9NIqAt6A/viewform"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 transition-colors flex items-center gap-2"
+          onclick={() => mobileMenuOpen = false}
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+          </svg>
+          Give feedback
+        </a>
+        <button
+          onclick={cycleTheme}
+          class="w-full text-left px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 transition-colors flex items-center gap-2"
+        >
+          <span class="w-4 h-4 rounded-full border-2 border-white dark:border-gray-800 ring-1 ring-gray-300 dark:ring-gray-600 flex-shrink-0" style="background-color: {THEMES.find(t => t.id === colorTheme)?.color}"></span>
+          Theme: {THEMES.find(t => t.id === colorTheme)?.label}
+        </button>
         <button
           onclick={toggleDark}
           class="w-full text-left px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 transition-colors flex items-center gap-2"
@@ -228,14 +295,14 @@
                           href="/session/{session.id}"
                           class="relative overflow-hidden flex items-center gap-3 px-4 py-2.5 hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors group"
                         >
-                          <div class="absolute inset-0 bg-cover bg-center opacity-30 dark:opacity-30 transition-opacity group-hover:opacity-40" style="background-image: url('/images/sessions/{session.id}.jpg')"></div>
+                          <div class="absolute inset-0 bg-cover bg-center opacity-40 dark:opacity-40 transition-opacity group-hover:opacity-50" style="background-image: url('/images/sessions/{session.id}.jpg')"></div>
                           <div class="absolute inset-0 bg-white/70 dark:bg-gray-800/70"></div>
                           <span class="relative text-[10px] text-gray-400 dark:text-gray-500 flex-shrink-0 w-20">{ordinalDate(session.date)}</span>
                           <div class="relative min-w-0 flex-1 text-right">
                             <p class="text-xs font-semibold text-gray-700 dark:text-gray-300 truncate group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
                               {session.theme ?? `${session.quizmaster}'s Quiz`}
                             </p>
-                            <p class="text-xs text-gray-400 dark:text-gray-500 truncate">{session.question_count} questions</p>
+                            <p class="text-xs text-gray-400 dark:text-gray-500 truncate">{session.quizmaster} · {session.question_count} questions</p>
                           </div>
                         </a>
                       {/each}

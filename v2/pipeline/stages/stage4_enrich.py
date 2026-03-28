@@ -136,8 +136,8 @@ def enrich(
     batch_size: int = config["stage4"]["llm_batch_size"]
 
     # Separate questions that need enrichment from those already done
-    to_enrich = [q for q in questions if q.question.topic is None]
-    already_done = {q.id: q for q in questions if q.question.topic is not None}
+    to_enrich = [q for q in questions if not q.question.topics]
+    already_done = {q.id: q for q in questions if q.question.topics}
 
     # Build an id→result map for the enriched ones
     enriched_map: dict[str, KVizzingQuestion] = dict(already_done)

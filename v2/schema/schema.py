@@ -43,6 +43,7 @@ class TopicCategory(str, Enum):
     food_drink    = "food_drink"
     art_culture   = "art_culture"
     business      = "business"
+    etymology     = "etymology"
     general       = "general"
 
 
@@ -123,9 +124,9 @@ class Question(BaseModel):
                     "WhatsApp backup. Null when unavailable (e.g. plain .txt export). "
                     "has_media=True with media=null means: file exists but not yet extracted."
     )
-    topic: Optional[TopicCategory] = Field(
-        default=None,
-        description="Topic category. Null if not yet classified. Best assigned via LLM."
+    topics: list[TopicCategory] = Field(
+        default_factory=list,
+        description="Topic categories. Empty list if not yet classified. A question can belong to multiple topics."
     )
     tags: list[str] = Field(
         default_factory=list,

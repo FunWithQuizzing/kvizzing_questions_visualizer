@@ -31,11 +31,21 @@ log = logging.getLogger("kvizzing")
 # ── JSON helpers ──────────────────────────────────────────────────────────────
 
 def _parse_json(text: str) -> list:
-    """Parse JSON from LLM output, stripping markdown fences if present."""
+    """Parse JSON from LLM output, stripping markdown fences if present.
+    Falls back to a best-effort repair for unescaped quotes inside strings."""
     text = text.strip()
     text = re.sub(r"^```(?:json)?\s*", "", text)
     text = re.sub(r"\s*```$", "", text)
-    return json.loads(text.strip())
+    text = text.strip()
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        # Best-effort repair: replace smart/curly quotes and try again
+        repaired = text.replace("\u201c", '\\"').replace("\u201d", '\\"')
+        try:
+            return json.loads(repaired)
+        except json.JSONDecodeError:
+            raise
 
 
 def _parse_retry_delay(err_str: str) -> float | None:
@@ -130,7 +140,7 @@ For each Q&A pair, output a JSON object with this exact schema:
   "question_timestamp": "ISO8601 UTC string",
   "question_text": "full question text",
   "question_asker": "username",
-  "topic": "one of: history, science, literature, technology, sports, geography, entertainment, food_drink, art_culture, business, etymology, general",
+  "topics": ["primary category first, then secondary — from: history, science, literature, technology, sports, geography, entertainment, food_drink, art_culture, business, etymology, general"],
   "has_media": true/false,
   "is_session_question": true/false,
   "session_quizmaster": "username or null",
@@ -157,7 +167,7 @@ For each Q&A pair, output a JSON object with this exact schema:
 }
 
 Rules:
-- topic: classify the question's subject; use "general" if it doesn't clearly fit another category
+- topics: list all applicable categories with the most relevant (primary) category first; use ["general"] only if none of the specific categories fit
 - extraction_confidence "high": asker gave explicit text confirmation (e.g. "Correct!", "Bingo", "Yes!")
 - extraction_confidence "medium": strong contextual signal but not explicit confirmation
 - extraction_confidence "low": no confirmation found; include anyway
@@ -166,8 +176,12 @@ Rules:
 - For multi-part questions (X/Y/Z style), populate answer_parts; set answer_is_collaborative if
   different people solved different parts
 
-Return ONLY a valid JSON array of Q&A pair objects. No explanation, no markdown fences.
-If no genuine Q&A pairs are found, return an empty array: []
+Output format rules — CRITICAL:
+- Return ONLY a valid JSON array. No explanation, no markdown fences, no code blocks.
+- If no genuine Q&A pairs are found, return an empty array: []
+- All string values MUST be valid JSON strings: escape any double quotes inside strings as \", escape backslashes as \\, escape newlines as \n.
+- Do NOT include raw double quotes (") inside string values — always escape them.
+- Do NOT truncate or wrap long strings across multiple lines in the JSON output.
 """
 
 

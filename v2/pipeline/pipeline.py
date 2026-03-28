@@ -171,8 +171,8 @@ def _run_pipeline(mode: str) -> None:
                     for entry in raw_entries:
                         ts = entry.get("question_timestamp")
                         q = enriched_by_ts.get(ts)
-                        if q and q.question.topic and not entry.get("topic"):
-                            entry["topic"] = q.question.topic.value
+                        if q and q.question.topics and not entry.get("topics"):
+                            entry["topics"] = [t.value for t in q.question.topics]
                             entry["tags"] = q.question.tags or []
                             updated = True
                     if updated:

@@ -90,7 +90,7 @@ def _to_row(q: KVizzingQuestion) -> tuple:
         q.question.asker,
         q.answer.solver,
         q.session.id if q.session else None,
-        q.question.topic.value if q.question.topic else None,
+        q.question.topics[0].value if q.question.topics else None,
         q.stats.difficulty.value if q.stats.difficulty else None,
         q.extraction_confidence.value,
         1 if q.question.has_media else 0,

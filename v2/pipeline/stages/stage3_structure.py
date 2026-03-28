@@ -152,13 +152,18 @@ def _map_scores_after(scores: Optional[list[dict]]) -> Optional[list[Score]]:
     return [Score(username=s["username"], score=s["score"]) for s in scores]
 
 
-def _parse_topic(raw_topic: str | None) -> TopicCategory | None:
-    if not raw_topic:
-        return None
-    try:
-        return TopicCategory(raw_topic.strip().lower())
-    except ValueError:
-        return None
+def _parse_topics(raw_topics: list | str | None) -> list[TopicCategory]:
+    if not raw_topics:
+        return []
+    if isinstance(raw_topics, str):
+        raw_topics = [raw_topics]
+    result = []
+    for t in raw_topics:
+        try:
+            result.append(TopicCategory(t.strip().lower()))
+        except ValueError:
+            pass
+    return result
 
 
 def _infer_question_type(text: str) -> QuestionType:
@@ -213,8 +218,8 @@ def structure(
             type=q_type,
             has_media=bool(raw.get("has_media", False)),
             media=None,
-            topic=_parse_topic(raw.get("topic")),
-            tags=[],
+            topics=_parse_topics(raw.get("topics") or raw.get("topic")),
+            tags=[t for t in (raw.get("tags") or []) if isinstance(t, str)],
         )
 
         answer = Answer(

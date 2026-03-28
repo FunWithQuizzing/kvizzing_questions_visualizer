@@ -346,17 +346,13 @@
           "description": "Actual media attachments, populated when files are extracted from a WhatsApp backup. Null when unavailable (e.g. plain .txt export). has_media=True with media=null means: file exists but not yet extracted.",
           "title": "Media"
         },
-        "topic": {
-          "anyOf": [
-            {
-              "$ref": "#/$defs/TopicCategory"
-            },
-            {
-              "type": "null"
-            }
-          ],
-          "default": null,
-          "description": "Topic category. Null if not yet classified. Best assigned via LLM."
+        "topics": {
+          "description": "Topic categories. Empty list if not yet classified. A question can belong to multiple topics.",
+          "items": {
+            "$ref": "#/$defs/TopicCategory"
+          },
+          "title": "Topics",
+          "type": "array"
         },
         "tags": {
           "description": "Free-form tags for fine-grained categorisation (e.g. ['India', 'architecture', 'colonial'])",
@@ -578,6 +574,7 @@
         "food_drink",
         "art_culture",
         "business",
+        "etymology",
         "general"
       ],
       "title": "TopicCategory",

@@ -72,7 +72,10 @@ def _load_final_scores(conn: sqlite3.Connection) -> dict[str, list[dict]]:
 
 # ── questions.json ────────────────────────────────────────────────────────────
 
-def build_questions(conn: sqlite3.Connection) -> list[dict]:
+def build_questions(
+    conn: sqlite3.Connection,
+    session_overrides: dict[str, dict] | None = None,
+) -> list[dict]:
     """
     Load all questions from DB, inject per-question scores_after from
     session_scores table, return sorted by question.timestamp.
@@ -89,12 +92,16 @@ def build_questions(conn: sqlite3.Connection) -> list[dict]:
         if q.get("session"):
             by_session[q["session"]["id"]].append(q)
 
-    for session_qs in by_session.values():
+    for session_id, session_qs in by_session.items():
         nums = [q["session"]["question_number"] for q in session_qs]
         if len(nums) != len(set(nums)):  # duplicates — reassign sequentially
             session_qs.sort(key=lambda q: (q.get("question") or {}).get("timestamp") or q.get("date") or "")
             for i, q in enumerate(session_qs, start=1):
                 q["session"]["question_number"] = i
+        # Apply session-level overrides to each question's session block
+        if session_overrides and session_id in session_overrides:
+            for q in session_qs:
+                q["session"].update(session_overrides[session_id])
 
     for q in payloads:
         qid = q["id"]
@@ -109,7 +116,10 @@ def build_questions(conn: sqlite3.Connection) -> list[dict]:
 
 # ── sessions.json ─────────────────────────────────────────────────────────────
 
-def build_sessions(conn: sqlite3.Connection) -> list[dict]:
+def build_sessions(
+    conn: sqlite3.Connection,
+    session_overrides: dict[str, dict] | None = None,
+) -> list[dict]:
     """
     Build a session index with aggregate metadata and final scores.
     One entry per unique session_id, sorted by date.
@@ -146,10 +156,11 @@ def build_sessions(conn: sqlite3.Connection) -> list[dict]:
                 if entry.get("role") == "attempt" and entry.get("username"):
                     participants.add(entry["username"])
 
+        overrides = (session_overrides or {}).get(session_id, {})
         sessions.append({
             "id": session_id,
-            "quizmaster": s.get("quizmaster"),
-            "theme": s.get("theme"),
+            "quizmaster": overrides.get("quizmaster", s.get("quizmaster")),
+            "theme": overrides.get("theme", s.get("theme")),
             "date": questions[0].get("date"),
             "question_count": len(questions),
             "avg_time_to_answer_seconds": (
@@ -311,6 +322,7 @@ def run(
     conn: sqlite3.Connection,
     output_dir: pathlib.Path,
     members_config_path: Optional[pathlib.Path] = None,
+    session_overrides_path: Optional[pathlib.Path] = None,
     state_path: Optional[pathlib.Path] = None,
 ) -> dict[str, int]:
     """
@@ -319,8 +331,15 @@ def run(
     """
     output_dir = pathlib.Path(output_dir)
 
+    # Load session overrides (manual corrections for theme, quizmaster, etc.)
+    session_overrides: dict[str, dict] = {}
+    if session_overrides_path and pathlib.Path(session_overrides_path).exists():
+        session_overrides = json.loads(
+            pathlib.Path(session_overrides_path).read_text(encoding="utf-8")
+        )
+
     # Load questions once — reused by stats, tags, members
-    questions = build_questions(conn)
+    questions = build_questions(conn, session_overrides=session_overrides)
 
     # Load members config
     config_members: list[dict] = []
@@ -329,7 +348,7 @@ def run(
             pathlib.Path(members_config_path).read_text(encoding="utf-8")
         )
 
-    sessions = build_sessions(conn)
+    sessions = build_sessions(conn, session_overrides=session_overrides)
     stats = build_stats(questions)
     tags = build_tags(questions)
     members = build_members(questions, config_members)

@@ -56,6 +56,7 @@ def main() -> None:
     errors_dir = data_dir / "errors"
     state_path = data_dir / "pipeline_state.json"
     members_config = _PIPELINE_DIR / "config" / "members.json"
+    session_overrides_config = _PIPELINE_DIR / "config" / "session_overrides.json"
     output_dir.mkdir(parents=True, exist_ok=True)
 
     if not input_dir.exists():
@@ -102,6 +103,31 @@ def main() -> None:
             # Stage 4 — Enrich (topic + tags)
             questions = stage4(questions, config, llm_client=llm_client)
 
+            # Write enriched topics/tags back into the extraction_output file
+            # so they survive future DB rebuilds.
+            try:
+                raw_entries = json.loads(path.read_text(encoding="utf-8"))
+                enriched_by_ts = {
+                    q.question.timestamp: q for q in questions
+                    if q.question.timestamp
+                }
+                updated = False
+                for entry in raw_entries:
+                    ts = entry.get("question_timestamp")
+                    q = enriched_by_ts.get(ts)
+                    if q and q.question.topics and not entry.get("topics"):
+                        entry["topics"] = [t.value for t in q.question.topics]
+                        entry["tags"] = q.question.tags or []
+                        updated = True
+                if updated:
+                    path.write_text(
+                        json.dumps(raw_entries, ensure_ascii=False, indent=2),
+                        encoding="utf-8",
+                    )
+                    log.debug("  [%s] Wrote enriched topics/tags back to extraction_output file.", date_str)
+            except Exception as e:
+                log.warning("  [%s] Could not write back enrichment: %s", date_str, e)
+
             # Stage 5 — Store
             count = stage5(questions, db, state_path=state_path)
             total_stored += count
@@ -112,7 +138,7 @@ def main() -> None:
 
         # Stage 6 — Export JSON files
         log.info("[Stage 6] Exporting JSON files…")
-        counts = stage6(db, output_dir, members_config_path=members_config, state_path=state_path)
+        counts = stage6(db, output_dir, members_config_path=members_config, session_overrides_path=session_overrides_config, state_path=state_path)
         for key, val in counts.items():
             log.info("  %s: %s", key, f"{val:,}")
 

@@ -105,7 +105,7 @@
     <p class="text-sm text-gray-500 dark:text-gray-400">{sessionQuestions.length} question{sessionQuestions.length !== 1 ? 's' : ''}</p>
     <button
       onclick={() => { revealAll = !revealAll; revealedIds = new Set(); }}
-      class="px-4 py-2 text-sm font-medium rounded-lg border transition-colors {revealAll ? 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 border-gray-200 dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-600' : 'bg-orange-500 text-white border-orange-500 hover:bg-orange-600'}"
+      class="px-4 py-2 text-sm font-medium rounded-lg border transition-colors {revealAll ? 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 border-gray-200 dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-600' : 'bg-orange-500 text-white border-orange-500 hover:bg-orange-600 dark:bg-orange-600 dark:border-orange-600'}"
     >
       {revealAll ? 'Hide all answers' : 'Reveal all answers'}
     </button>
@@ -126,7 +126,7 @@
           <div class="p-4">
             <div class="flex items-start gap-3">
               <!-- Number badge -->
-              <div class="w-7 h-7 rounded-lg bg-orange-100 text-orange-600 font-bold text-sm flex items-center justify-center flex-shrink-0 mt-0.5">
+              <div class="w-7 h-7 rounded-lg bg-orange-100 text-orange-600 dark:bg-orange-900/40 dark:text-orange-300 font-bold text-sm flex items-center justify-center flex-shrink-0 mt-0.5">
                 {i + 1}
               </div>
               <div class="flex-1 min-w-0">
@@ -194,7 +194,7 @@
                 <div class="flex items-center gap-2 flex-shrink-0">
                   <button
                     onclick={() => submitGuess(question.id, question.answer?.text ?? '')}
-                    class="px-3 py-1.5 text-xs font-medium bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors"
+                    class="px-3 py-1.5 text-xs font-medium bg-orange-500 text-white rounded-lg hover:bg-orange-600 dark:bg-orange-600 transition-colors"
                   >Submit</button>
                   <button
                     onclick={() => hintsShown = new Map(hintsShown).set(question.id, Math.min(shown + 1, hints.length))}

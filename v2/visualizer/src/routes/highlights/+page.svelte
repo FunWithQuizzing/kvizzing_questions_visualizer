@@ -62,7 +62,7 @@
 
   const tabs: { id: Tab; label: string }[] = [
     { id: 'leaderboard', label: 'Leaderboard' },
-    { id: 'topics', label: 'Difficulty & Topics' },
+    <!-- { id: 'topics', label: 'Difficulty & Topics' }, -->
     { id: 'moments', label: 'Best Moments' },
   ];
 </script>

@@ -142,9 +142,10 @@
       </div>
       <button
         onclick={surpriseMe}
-        class="flex-shrink-0 px-4 py-2 bg-white hover:bg-orange-50 text-orange-600 dark:bg-slate-700 dark:hover:bg-slate-600 dark:text-white font-semibold text-sm rounded-lg transition-colors shadow-sm cursor-pointer"
+        class="flex-shrink-0 inline-flex items-center gap-1.5 px-4 py-2 bg-white hover:bg-orange-50 text-orange-600 dark:bg-slate-700 dark:hover:bg-slate-600 dark:text-white font-semibold text-sm rounded-lg transition-colors shadow-sm cursor-pointer"
       >
-        🎲 <span class="hidden sm:inline">Random question</span>
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm4 0v2m0 4v2m4-8v2m0 4v2m4-8v2m0 4v2" /></svg>
+        <span class="hidden sm:inline">Random question</span>
       </button>
     </div>
   </div>

@@ -70,7 +70,7 @@
       <div class="flex items-center justify-between h-14">
         <!-- Logo -->
         <a href="/" class="flex items-center gap-2 group">
-          <div class="w-8 h-8 rounded-lg bg-orange-500 flex items-center justify-center text-white font-bold text-sm group-hover:bg-orange-600 transition-colors">
+          <div class="w-8 h-8 rounded-lg bg-primary-500 flex items-center justify-center text-white font-bold text-sm group-hover:bg-primary-600 transition-colors">
             KV
           </div>
           <span class="font-bold text-gray-900 dark:text-white text-lg tracking-tight">KVizzing</span>
@@ -82,7 +82,7 @@
             <a
               href={link.href}
               class="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors {isActive(link.href, $page.url.pathname)
-                ? 'bg-orange-50 text-orange-600 dark:bg-orange-500/20 dark:text-orange-400'
+                ? 'bg-primary-50 text-primary-600 dark:bg-primary-500/20 dark:text-primary-400'
                 : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-700'}"
             >
               {link.label}
@@ -131,7 +131,7 @@
           <a
             href={link.href}
             class="block px-3 py-2 rounded-lg text-sm font-medium transition-colors {isActive(link.href, $page.url.pathname)
-              ? 'bg-orange-50 text-orange-600 dark:bg-orange-500/20 dark:text-orange-400'
+              ? 'bg-primary-50 text-primary-600 dark:bg-primary-500/20 dark:text-primary-400'
               : 'text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700'}"
             onclick={() => mobileMenuOpen = false}
           >
@@ -178,7 +178,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="mt-8 px-6 py-4 bg-orange-500 text-white text-center">
+    <footer class="mt-8 px-6 py-4 bg-primary-500 text-white text-center">
       <p class="text-sm font-medium tracking-wide">Apes together strong 🦍</p>
     </footer>
   </div>

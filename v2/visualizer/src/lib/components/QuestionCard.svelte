@@ -69,7 +69,7 @@
         {#if question.session}
           <a
             href="/session/{question.session.id}"
-            class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-orange-100 text-orange-700 hover:bg-orange-200 dark:bg-orange-900/40 dark:text-orange-300 dark:hover:bg-orange-900/40 transition-colors"
+            class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-primary-100 text-primary-700 hover:bg-primary-200 dark:bg-primary-900/40 dark:text-primary-300 dark:hover:bg-primary-900/40 transition-colors"
           >
             #{question.session.question_number} {question.session.theme ?? 'Session'}
           </a>
@@ -166,7 +166,7 @@
           placeholder="Your answer…"
           bind:value={input}
           onkeydown={(e) => { if (e.key === 'Enter') submitGuess(); }}
-          class="flex-1 min-w-0 px-2.5 py-1.5 text-xs border rounded-lg focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-100 transition-all
+          class="flex-1 min-w-0 px-2.5 py-1.5 text-xs border rounded-lg focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 transition-all
             {result === 'correct' ? 'border-green-300 bg-green-50 dark:bg-green-900/30' : result === 'almost' ? 'border-amber-300 bg-amber-50 dark:bg-amber-900/30' : result === 'wrong' ? 'border-red-300 bg-red-50' : 'border-gray-200 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 dark:placeholder-gray-400'}"
           autocomplete="off" spellcheck="false"
           title={result === 'almost' ? 'Close! Try again.' : result === 'wrong' ? 'Not quite. Try again or reveal.' : ''}
@@ -174,7 +174,7 @@
         <div class="flex items-center gap-2 flex-shrink-0">
           <button
             onclick={submitGuess}
-            class="px-3 py-1.5 text-xs font-medium bg-orange-500 text-white rounded-lg hover:bg-orange-600 dark:bg-orange-600 transition-colors"
+            class="px-3 py-1.5 text-xs font-medium bg-primary-500 text-white rounded-lg hover:bg-primary-600 dark:bg-primary-600 transition-colors"
           >Submit</button>
           <button
             onclick={() => hintsShown = Math.min(hintsShown + 1, hints.length)}

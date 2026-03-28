@@ -12,7 +12,7 @@
   const store = getContext<QuestionStore>('store');
   const stats = store.getTotalStats();
   const sessions = store.getSessions();
-  const recentSessions = sessions.slice(0, 3);
+  const recentSessions = sessions;
 
   // URL-driven filters — initialised from URL and kept in sync on every navigation
   // (initial values are empty; $effect below syncs from URL after mount, avoiding prerender issues)
@@ -122,9 +122,9 @@
 
 <div class="space-y-6">
   <!-- Hero -->
-  <div class="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl p-6 text-white shadow-lg relative">
+  <div class="bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl p-6 text-white shadow-lg relative">
     {#if sinceDate}
-      <div class="absolute top-4 right-4 flex items-center gap-1.5 text-xs text-orange-100">
+      <div class="absolute top-4 right-4 flex items-center gap-1.5 text-xs text-primary-100">
         <span class="relative flex h-2.5 w-2.5">
           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-90"></span>
           <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-400"></span>
@@ -133,16 +133,16 @@
       </div>
     {/if}
     <h1 class="text-2xl font-bold mb-1">KVizzing</h1>
-    <p class="text-orange-100 text-sm mb-4">Every question the group ever asked. Right here.</p>
+    <p class="text-primary-100 text-sm mb-4">Every question the group ever asked. Right here.</p>
     <div class="flex items-center justify-between gap-3">
       <div class="flex flex-wrap gap-x-4 gap-y-1 text-sm">
         <span class="font-semibold">{stats.total} questions</span>
-        <span class="text-orange-200 hidden sm:inline">·</span>
-        <a href="/sessions" class="font-semibold hover:text-orange-100 transition-colors cursor-pointer">{stats.sessions} sessions</a>
+        <span class="text-primary-200 hidden sm:inline">·</span>
+        <a href="/sessions" class="font-semibold hover:text-primary-100 transition-colors cursor-pointer">{stats.sessions} sessions</a>
       </div>
       <button
         onclick={surpriseMe}
-        class="flex-shrink-0 inline-flex items-center gap-1.5 px-4 py-2 bg-white hover:bg-orange-50 text-orange-600 dark:bg-slate-700 dark:hover:bg-slate-600 dark:text-white font-semibold text-sm rounded-lg transition-colors shadow-sm cursor-pointer"
+        class="flex-shrink-0 inline-flex items-center gap-1.5 px-4 py-2 bg-white hover:bg-primary-50 text-primary-600 dark:bg-slate-700 dark:hover:bg-slate-600 dark:text-white font-semibold text-sm rounded-lg transition-colors shadow-sm cursor-pointer"
       >
         <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm4 0v2m0 4v2m4-8v2m0 4v2m4-8v2m0 4v2" /></svg>
         <span class="hidden sm:inline">Random question</span>
@@ -154,25 +154,38 @@
   {#if recentSessions.length > 0}
     <div>
       <h2 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-3">Recent Quiz sessions</h2>
-      <div class="flex gap-3 overflow-x-auto pb-1">
-        {#each recentSessions as session}
-          <a
-            href="/session/{session.id}"
-            class="flex-shrink-0 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 hover:border-orange-300 hover:shadow-sm transition-all min-w-[180px]"
-          >
-            <div class="flex items-center gap-2 mb-1">
-              <span class="w-2 h-2 rounded-full bg-orange-400 dark:bg-orange-500"></span>
-              <span class="text-xs font-semibold text-gray-700 dark:text-gray-300 truncate">
-                {session.theme ?? `${session.quizmaster}'s Quiz`}
-              </span>
-            </div>
-            <p class="text-xs text-gray-500 dark:text-gray-400">{session.quizmaster} · {formatDate(session.date)}</p>
-            <p class="text-xs text-gray-400 dark:text-gray-500 mt-0.5">{session.question_count} questions</p>
-          </a>
-        {/each}
+      <div class="flex gap-3 items-stretch">
+        <!-- Scrollable sessions -->
+        <div class="relative flex-1 min-w-0">
+          <!-- Right fade overlay -->
+          <div class="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-gray-50 dark:from-gray-900 to-transparent z-10"></div>
+          <div class="flex gap-3 overflow-x-auto pb-1 scrollbar-hide">
+            {#each recentSessions as session}
+              <a
+                href="/session/{session.id}"
+                class="relative overflow-hidden flex-shrink-0 w-[200px] bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 hover:border-primary-300 hover:shadow-sm transition-all group"
+              >
+                <div class="absolute inset-0 bg-cover bg-top opacity-20 dark:opacity-20 transition-opacity group-hover:opacity-30" style="background-image: url('/images/sessions/{session.id}.jpg')"></div>
+                <div class="absolute inset-0 bg-white/60 dark:bg-gray-800/60"></div>
+                <div class="relative">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="w-2 h-2 rounded-full bg-primary-400 dark:bg-primary-500 flex-shrink-0"></span>
+                    <span class="text-xs font-semibold text-gray-700 dark:text-gray-300 truncate">
+                      {session.theme ?? `${session.quizmaster}'s Quiz`}
+                    </span>
+                  </div>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">{session.quizmaster}</p>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">{formatDate(session.date)}</p>
+                  <p class="text-xs text-gray-400 dark:text-gray-500">{session.question_count} questions</p>
+                </div>
+              </a>
+            {/each}
+          </div>
+        </div>
+        <!-- Always-visible All sessions button -->
         <a
           href="/sessions"
-          class="flex-shrink-0 border-2 border-dashed border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 hover:border-orange-300 transition-colors flex items-center text-sm text-gray-400 dark:text-gray-500 hover:text-orange-500 dark:hover:text-orange-400 min-w-[120px] justify-center"
+          class="flex-shrink-0 w-[100px] border-2 border-dashed border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 hover:border-primary-300 transition-colors flex items-end justify-end text-sm text-gray-400 dark:text-gray-500 hover:text-primary-500 dark:hover:text-primary-400"
         >
           All sessions →
         </a>
@@ -191,7 +204,7 @@
         bind:value={searchQuery}
         type="text"
         placeholder="Search questions and answers…"
-        class="w-full pl-9 pr-4 py-2.5 text-sm border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-100 dark:focus:ring-orange-900 bg-white dark:bg-gray-700 dark:text-gray-200 dark:placeholder-gray-400 shadow-sm transition-all"
+        class="w-full pl-9 pr-4 py-2.5 text-sm border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:border-primary-400 focus:ring-2 focus:ring-primary-100 dark:focus:ring-primary-900 bg-white dark:bg-gray-700 dark:text-gray-200 dark:placeholder-gray-400 shadow-sm transition-all"
       />
       {#if searchQuery}
         <button
@@ -211,7 +224,7 @@
       <!-- Asker -->
       <select
         bind:value={filterAsker}
-        class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-100 dark:focus:ring-orange-900 text-gray-600"
+        class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 dark:focus:ring-primary-900 text-gray-600"
       >
         <option value="">All askers</option>
         {#each askers as asker}
@@ -222,7 +235,7 @@
       <!-- Solver -->
       <select
         bind:value={filterSolver}
-        class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-100 dark:focus:ring-orange-900 text-gray-600"
+        class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 dark:focus:ring-primary-900 text-gray-600"
       >
         <option value="">All solvers</option>
         {#each solvers as solver}
@@ -233,7 +246,7 @@
       <!-- Sort -->
       <select
         bind:value={sortBy}
-        class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-100 dark:focus:ring-orange-900 text-gray-600"
+        class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 dark:focus:ring-primary-900 text-gray-600"
       >
         <option value="newest">Newest first</option>
         <option value="oldest">Oldest first</option>
@@ -264,7 +277,7 @@
       {#if hasActiveFilters}
         <button
           onclick={clearFilters}
-          class="text-sm text-orange-600 dark:text-orange-400 hover:text-orange-700 dark:hover:text-orange-300 px-2 py-1.5 transition-colors"
+          class="text-sm text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 px-2 py-1.5 transition-colors"
         >
           Clear all
         </button>
@@ -276,7 +289,7 @@
       <select
         value=""
         onchange={(e) => { const v = (e.target as HTMLSelectElement).value; if (v) toggleTopic(v); (e.target as HTMLSelectElement).value = ''; }}
-        class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-100 dark:focus:ring-orange-900 text-gray-600"
+        class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 dark:focus:ring-primary-900 text-gray-600"
       >
         <option value="">Filter by topic…</option>
         {#each TOPICS as t}
@@ -311,7 +324,7 @@
             id="filter-date-from"
             bind:value={filterDateFrom}
             type="date"
-            class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-2 py-1 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-orange-400"
+            class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-2 py-1 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-primary-400"
           />
         </div>
         <div class="flex items-center gap-2">
@@ -320,12 +333,12 @@
             id="filter-date-to"
             bind:value={filterDateTo}
             type="date"
-            class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-2 py-1 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-orange-400"
+            class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-2 py-1 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-primary-400"
           />
         </div>
         <select
           bind:value={filterSessionId}
-          class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-orange-400 text-gray-600"
+          class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-primary-400 text-gray-600"
         >
           <option value="">All sessions</option>
           {#each allSessions as s}
@@ -337,7 +350,7 @@
             type="checkbox"
             checked={filterHasMedia === true}
             onchange={(e) => filterHasMedia = e.currentTarget.checked ? true : undefined}
-            class="rounded border-gray-300 text-orange-500 focus:ring-orange-200"
+            class="rounded border-gray-300 text-primary-500 focus:ring-primary-200"
           />
           Has media
         </label>
@@ -349,22 +362,25 @@
   <div class="flex items-center justify-between">
     <p class="text-sm text-gray-500 dark:text-gray-400">
       {filteredQuestions.length} question{filteredQuestions.length !== 1 ? 's' : ''}
-      {#if hasActiveFilters}<span class="text-orange-500 dark:text-orange-400 font-medium"> (filtered)</span>{/if}
+      {#if hasActiveFilters}<span class="text-primary-500 dark:text-primary-400 font-medium"> (filtered)</span>{/if}
     </p>
   </div>
 
   <!-- Question cards -->
-  <div class="max-h-[60vh] overflow-y-auto space-y-4 pr-1">
+  <div class="relative">
+  <div class="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-gray-50 dark:from-gray-900 to-transparent z-10"></div>
+  <div class="max-h-[80vh] overflow-y-auto space-y-4 pr-1 scrollbar-hide">
     {#each filteredQuestions as question (question.id)}
       <QuestionCard {question} />
     {:else}
       <div class="text-center py-16 text-gray-400">
         <div class="text-4xl mb-3">🔍</div>
         <p class="font-medium">No questions match your filters</p>
-        <button onclick={clearFilters} class="mt-2 text-sm text-orange-500 dark:text-orange-400 hover:text-orange-600 dark:hover:text-orange-300">
+        <button onclick={clearFilters} class="mt-2 text-sm text-primary-500 dark:text-primary-400 hover:text-primary-600 dark:hover:text-primary-300">
           Clear filters
         </button>
       </div>
     {/each}
+  </div>
   </div>
 </div>

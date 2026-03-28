@@ -86,7 +86,7 @@
 
 <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm p-5">
   <h3 class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-4 flex items-center gap-2">
-    <span class="w-6 h-6 bg-orange-100 dark:bg-orange-900/40 text-orange-600 dark:text-orange-400 rounded-full flex items-center justify-center text-xs">?</span>
+    <span class="w-6 h-6 bg-primary-100 dark:bg-primary-900/40 text-primary-600 dark:text-primary-400 rounded-full flex items-center justify-center text-xs">?</span>
     Try to answer
   </h3>
 
@@ -113,7 +113,7 @@
         onkeydown={handleKeydown}
         type="text"
         placeholder="Your answer…"
-        class="flex-1 px-3 py-2 text-sm border border-gray-200 dark:border-gray-600 rounded-lg focus:outline-none focus:border-orange-400 dark:focus:border-orange-500 focus:ring-2 focus:ring-orange-100 dark:focus:ring-orange-900 bg-white dark:bg-gray-700 dark:text-gray-200 dark:placeholder-gray-400 transition-all"
+        class="flex-1 px-3 py-2 text-sm border border-gray-200 dark:border-gray-600 rounded-lg focus:outline-none focus:border-primary-400 dark:focus:border-primary-500 focus:ring-2 focus:ring-primary-100 dark:focus:ring-primary-900 bg-white dark:bg-gray-700 dark:text-gray-200 dark:placeholder-gray-400 transition-all"
         autocomplete="off"
         autocorrect="off"
         spellcheck="false"
@@ -121,7 +121,7 @@
       <button
         onclick={submit}
         disabled={!input.trim()}
-        class="px-4 py-2 bg-orange-500 dark:bg-orange-600 text-white text-sm font-medium rounded-lg hover:bg-orange-600 dark:hover:bg-orange-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+        class="px-4 py-2 bg-primary-500 dark:bg-primary-600 text-white text-sm font-medium rounded-lg hover:bg-primary-600 dark:hover:bg-primary-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
       >
         Submit
       </button>

@@ -54,7 +54,7 @@
         bind:value={search}
         type="text"
         placeholder="Search by theme or quizmaster…"
-        class="w-full pl-9 pr-4 py-2.5 text-sm border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-100 dark:focus:ring-orange-900 bg-white dark:bg-gray-700 dark:text-gray-200 dark:placeholder-gray-400 shadow-sm transition-all"
+        class="w-full pl-9 pr-4 py-2.5 text-sm border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:border-primary-400 focus:ring-2 focus:ring-primary-100 dark:focus:ring-primary-900 bg-white dark:bg-gray-700 dark:text-gray-200 dark:placeholder-gray-400 shadow-sm transition-all"
       />
       {#if search}
         <button
@@ -73,7 +73,7 @@
     <div class="flex flex-wrap gap-2">
       <select
         bind:value={filterQuizmaster}
-        class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-100 dark:focus:ring-orange-900 text-gray-600"
+        class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 dark:focus:ring-primary-900 text-gray-600"
       >
         <option value="">All quizmasters</option>
         {#each quizmasters as qm}
@@ -83,7 +83,7 @@
 
       <select
         bind:value={sortBy}
-        class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-100 dark:focus:ring-orange-900 text-gray-600"
+        class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 dark:focus:ring-primary-900 text-gray-600"
       >
         <option value="newest">Newest first</option>
         <option value="oldest">Oldest first</option>
@@ -93,7 +93,7 @@
       {#if hasFilters}
         <button
           onclick={clearFilters}
-          class="text-sm text-orange-600 dark:text-orange-400 hover:text-orange-700 dark:hover:text-orange-300 px-2 py-1.5 transition-colors"
+          class="text-sm text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 px-2 py-1.5 transition-colors"
         >
           Clear all
         </button>
@@ -104,7 +104,7 @@
   <!-- Results count -->
   <p class="text-sm text-gray-500 dark:text-gray-400">
     {filtered.length} session{filtered.length !== 1 ? 's' : ''}
-    {#if hasFilters}<span class="text-orange-500 font-medium"> (filtered)</span>{/if}
+    {#if hasFilters}<span class="text-primary-500 font-medium"> (filtered)</span>{/if}
   </p>
 
   {#if sessions.length === 0}
@@ -116,14 +116,14 @@
     <div class="text-center py-16 text-gray-400">
       <div class="text-4xl mb-3">🔍</div>
       <p class="font-medium">No sessions match your filters</p>
-      <button onclick={clearFilters} class="mt-2 text-sm text-orange-500 hover:text-orange-600">Clear filters</button>
+      <button onclick={clearFilters} class="mt-2 text-sm text-primary-500 hover:text-primary-600">Clear filters</button>
     </div>
   {:else}
     <div class="space-y-4">
       {#each filtered as session}
         <a
           href="/session/{session.id}"
-          class="relative overflow-hidden block bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-orange-200 transition-all p-5 group"
+          class="relative overflow-hidden block bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-primary-200 transition-all p-5 group"
         >
           <div
             class="absolute inset-0 bg-cover bg-center opacity-30 dark:opacity-30 transition-opacity group-hover:opacity-40"
@@ -134,13 +134,13 @@
             <div class="flex-1 min-w-0">
               <!-- Title -->
               <div class="flex items-center gap-2 mb-1">
-                <div class="w-8 h-8 rounded-lg bg-orange-500 flex items-center justify-center flex-shrink-0">
+                <div class="w-8 h-8 rounded-lg bg-primary-500 flex items-center justify-center flex-shrink-0">
                   <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                   </svg>
                 </div>
                 <div>
-                  <h2 class="text-base font-semibold text-gray-900 dark:text-gray-100 group-hover:text-orange-600 transition-colors">
+                  <h2 class="text-base font-semibold text-gray-900 dark:text-gray-100 group-hover:text-primary-600 transition-colors">
                     {session.theme ?? `${session.quizmaster}'s Quiz`}
                   </h2>
                   <p class="text-xs text-gray-700 dark:text-gray-300">Hosted by {session.quizmaster} · {formatDate(session.date)}</p>
@@ -186,7 +186,7 @@
               </div>
             </div>
 
-            <div class="flex-shrink-0 text-gray-300 group-hover:text-orange-400 transition-colors">
+            <div class="flex-shrink-0 text-gray-300 group-hover:text-primary-400 transition-colors">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
               </svg>

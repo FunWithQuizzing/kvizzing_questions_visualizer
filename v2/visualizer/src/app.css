@@ -1,9 +1,30 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
+/*
+ * ─── PRIMARY BRAND COLOR ───────────────────────────────────────────────────
+ * To change the site's color scheme, update ONLY this block.
+ * Swap every var(--color-orange-*) reference to the desired Tailwind color,
+ * e.g. var(--color-green-*) for green, var(--color-blue-*) for blue, etc.
+ * ───────────────────────────────────────────────────────────────────────────
+ */
+@theme {
+  --color-primary-50:  var(--color-orange-50);
+  --color-primary-100: var(--color-orange-100);
+  --color-primary-200: var(--color-orange-200);
+  --color-primary-300: var(--color-orange-300);
+  --color-primary-400: var(--color-orange-400);
+  --color-primary-500: var(--color-orange-500);
+  --color-primary-600: var(--color-orange-600);
+  --color-primary-700: var(--color-orange-700);
+  --color-primary-800: var(--color-orange-800);
+  --color-primary-900: var(--color-orange-900);
+  --color-primary-950: var(--color-orange-950);
+}
+
 @layer base {
   :root {
-    --color-orange: #F97316;
+    --color-orange: var(--color-primary-500);
     --color-blue: #3B82F6;
     --color-green: #10B981;
     --color-purple: #8B5CF6;
@@ -16,6 +37,14 @@
     --color-teal: #14B8A6;
     --color-rose: #F43F5E;
   }
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
 
 /* FullCalendar overrides */
@@ -42,8 +71,8 @@
 
 .fc .fc-button-primary:not(:disabled).fc-button-active,
 .fc .fc-button-primary:not(:disabled):active {
-  background-color: #F97316;
-  border-color: #F97316;
+  background-color: var(--color-primary-500);
+  border-color: var(--color-primary-500);
   color: white;
 }
 
@@ -57,8 +86,8 @@
 }
 
 .fc-event-session {
-  background-color: #F97316 !important;
-  border-color: #ea6c10 !important;
+  background-color: var(--color-primary-500) !important;
+  border-color: var(--color-primary-600) !important;
 }
 
 .fc-event-adhoc {

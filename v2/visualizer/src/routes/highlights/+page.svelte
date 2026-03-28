@@ -81,7 +81,7 @@
   <!-- Quick stats row -->
   <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
     <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 shadow-sm text-center">
-      <p class="text-2xl font-bold text-orange-500 dark:text-orange-400">{questions.length}</p>
+      <p class="text-2xl font-bold text-primary-500 dark:text-primary-400">{questions.length}</p>
       <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">Total questions</p>
     </div>
     <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 shadow-sm text-center">
@@ -158,7 +158,7 @@
               <div class="flex-1 min-w-0">
                 <p class="text-sm font-medium text-gray-800 dark:text-gray-200 truncate">{member.display_name}</p>
               </div>
-              <span class="text-sm font-semibold text-orange-500 dark:text-orange-400">{member.questions_asked}</span>
+              <span class="text-sm font-semibold text-primary-500 dark:text-primary-400">{member.questions_asked}</span>
             </div>
           {/each}
         </div>
@@ -227,7 +227,7 @@
               {@const count = questions.filter(q => q.question.topic === topic).length}
               <a
                 href="/?topic={encodeURIComponent(topic)}"
-                class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm text-gray-700 dark:text-gray-300 hover:border-orange-300 hover:bg-orange-50 dark:hover:bg-orange-900/30 transition-colors"
+                class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-sm text-gray-700 dark:text-gray-300 hover:border-primary-300 hover:bg-primary-50 dark:hover:bg-primary-900/30 transition-colors"
               >
                 <span>{topic}</span>
                 <span class="text-xs text-gray-400 dark:text-gray-500 bg-gray-100 dark:bg-gray-600 px-1.5 py-0.5 rounded">{count}</span>

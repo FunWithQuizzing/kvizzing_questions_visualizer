@@ -66,32 +66,32 @@
       <h1 class="text-xl font-bold mb-1">
         {session.theme ?? `${session.quizmaster}'s Quiz`}
       </h1>
-      <p class="text-orange-100 text-sm">
+      <p class="text-primary-100 text-sm">
         Hosted by {session.quizmaster} · {formatDate(session.date)}
       </p>
     </div>
 
     <!-- Stats row -->
-    <div class="flex flex-wrap gap-6 mt-4 pt-4 border-t border-orange-400">
+    <div class="flex flex-wrap gap-6 mt-4 pt-4 border-t border-primary-400">
       <div>
-        <p class="text-orange-200 text-xs">Questions</p>
+        <p class="text-primary-200 text-xs">Questions</p>
         <p class="text-xl font-bold">{session.question_count}</p>
       </div>
       {#if session.participant_count}
         <div>
-          <p class="text-orange-200 text-xs">Participants</p>
+          <p class="text-primary-200 text-xs">Participants</p>
           <p class="text-xl font-bold">{session.participant_count}</p>
         </div>
       {/if}
       {#if session.avg_time_to_answer_seconds}
         <div>
-          <p class="text-orange-200 text-xs">Avg solve time</p>
+          <p class="text-primary-200 text-xs">Avg solve time</p>
           <p class="text-xl font-bold">{formatTime(session.avg_time_to_answer_seconds)}</p>
         </div>
       {/if}
       {#if session.avg_wrong_attempts}
         <div>
-          <p class="text-orange-200 text-xs">Avg wrong guesses</p>
+          <p class="text-primary-200 text-xs">Avg wrong guesses</p>
           <p class="text-xl font-bold">{session.avg_wrong_attempts.toFixed(1)}</p>
         </div>
       {/if}
@@ -104,7 +104,7 @@
     <p class="text-sm text-gray-500 dark:text-gray-400">{sessionQuestions.length} question{sessionQuestions.length !== 1 ? 's' : ''}</p>
     <button
       onclick={() => { revealAll = !revealAll; revealedIds = new Set(); }}
-      class="px-4 py-2 text-sm font-medium rounded-lg border transition-colors {revealAll ? 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 border-gray-200 dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-600' : 'bg-orange-500 text-white border-orange-500 hover:bg-orange-600 dark:bg-orange-600 dark:border-orange-600'}"
+      class="px-4 py-2 text-sm font-medium rounded-lg border transition-colors {revealAll ? 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 border-gray-200 dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-600' : 'bg-primary-500 text-white border-primary-500 hover:bg-primary-600 dark:bg-primary-600 dark:border-primary-600'}"
     >
       {revealAll ? 'Hide all answers' : 'Reveal all answers'}
     </button>
@@ -125,7 +125,7 @@
           <div class="p-4">
             <div class="flex items-start gap-3">
               <!-- Number badge -->
-              <div class="w-7 h-7 rounded-lg bg-orange-100 text-orange-600 dark:bg-orange-900/40 dark:text-orange-300 font-bold text-sm flex items-center justify-center flex-shrink-0 mt-0.5">
+              <div class="w-7 h-7 rounded-lg bg-primary-100 text-primary-600 dark:bg-primary-900/40 dark:text-primary-300 font-bold text-sm flex items-center justify-center flex-shrink-0 mt-0.5">
                 {i + 1}
               </div>
               <div class="flex-1 min-w-0">
@@ -140,7 +140,7 @@
                     </a>
                   {/if}
                 </div>
-                <a href="/question/{question.id}" class="text-sm text-gray-800 dark:text-gray-200 hover:text-orange-600 transition-colors leading-relaxed line-clamp-4 block">
+                <a href="/question/{question.id}" class="text-sm text-gray-800 dark:text-gray-200 hover:text-primary-600 transition-colors leading-relaxed line-clamp-4 block">
                   {question.question.text}
                 </a>
               </div>
@@ -185,7 +185,7 @@
                   value={inputs.get(question.id) ?? ''}
                   oninput={(e) => { inputs = new Map(inputs).set(question.id, (e.target as HTMLInputElement).value); }}
                   onkeydown={(e) => { if (e.key === 'Enter') submitGuess(question.id, question.answer?.text ?? ''); }}
-                  class="flex-1 min-w-0 px-2.5 py-1.5 text-xs border rounded-lg focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-100 transition-all
+                  class="flex-1 min-w-0 px-2.5 py-1.5 text-xs border rounded-lg focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 transition-all
                     {result === 'correct' ? 'border-green-300 bg-green-50 dark:bg-green-900/30' : result === 'almost' ? 'border-amber-300 bg-amber-50 dark:bg-amber-900/30' : result === 'wrong' ? 'border-red-300 bg-red-50' : 'border-gray-200 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 dark:placeholder-gray-400'}"
                   autocomplete="off" spellcheck="false"
                   title={result === 'almost' ? 'Close! Try again.' : result === 'wrong' ? 'Not quite. Try again or reveal.' : ''}
@@ -193,7 +193,7 @@
                 <div class="flex items-center gap-2 flex-shrink-0">
                   <button
                     onclick={() => submitGuess(question.id, question.answer?.text ?? '')}
-                    class="px-3 py-1.5 text-xs font-medium bg-orange-500 text-white rounded-lg hover:bg-orange-600 dark:bg-orange-600 transition-colors"
+                    class="px-3 py-1.5 text-xs font-medium bg-primary-500 text-white rounded-lg hover:bg-primary-600 dark:bg-primary-600 transition-colors"
                   >Submit</button>
                   <button
                     onclick={() => hintsShown = new Map(hintsShown).set(question.id, Math.min(shown + 1, hints.length))}
@@ -223,13 +223,13 @@
   <!-- Prev / Next session navigation -->
   <div class="flex justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
     {#if adj.next}
-      <a href="/session/{adj.next.id}" class="flex items-center gap-2 text-sm text-gray-500 hover:text-orange-600 dark:hover:text-orange-400 transition-colors group">
+      <a href="/session/{adj.next.id}" class="flex items-center gap-2 text-sm text-gray-500 hover:text-primary-600 dark:hover:text-primary-400 transition-colors group">
         <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
         </svg>
         <div>
           <p class="text-xs text-gray-400 dark:text-gray-500">Older</p>
-          <p class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-orange-600">{adj.next.theme ?? `${adj.next.quizmaster}'s Quiz`}</p>
+          <p class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600">{adj.next.theme ?? `${adj.next.quizmaster}'s Quiz`}</p>
         </div>
       </a>
     {:else}
@@ -237,10 +237,10 @@
     {/if}
 
     {#if adj.prev}
-      <a href="/session/{adj.prev.id}" class="flex items-center gap-2 text-sm text-gray-500 hover:text-orange-600 dark:hover:text-orange-400 transition-colors group text-right">
+      <a href="/session/{adj.prev.id}" class="flex items-center gap-2 text-sm text-gray-500 hover:text-primary-600 dark:hover:text-primary-400 transition-colors group text-right">
         <div>
           <p class="text-xs text-gray-400 dark:text-gray-500">Newer</p>
-          <p class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-orange-600 dark:group-hover:text-orange-400">{adj.prev.theme ?? `${adj.prev.quizmaster}'s Quiz`}</p>
+          <p class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400">{adj.prev.theme ?? `${adj.prev.quizmaster}'s Quiz`}</p>
         </div>
         <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />

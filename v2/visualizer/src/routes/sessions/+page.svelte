@@ -159,7 +159,7 @@
           class="relative overflow-hidden block bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-primary-200 transition-all p-5 group"
         >
           <div
-            class="absolute inset-0 bg-cover bg-center opacity-30 dark:opacity-30 transition-opacity group-hover:opacity-40"
+            class="absolute inset-0 bg-cover bg-center opacity-40 dark:opacity-40 transition-opacity group-hover:opacity-50"
             style="background-image: url('/images/sessions/{session.id}.jpg')"
           ></div>
           <div class="absolute inset-0 bg-white/60 dark:bg-gray-800/60"></div>

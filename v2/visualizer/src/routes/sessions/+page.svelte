@@ -93,7 +93,7 @@
       {#if hasFilters}
         <button
           onclick={clearFilters}
-          class="text-sm text-orange-600 hover:text-orange-700 px-2 py-1.5 transition-colors"
+          class="text-sm text-orange-600 dark:text-orange-400 hover:text-orange-700 dark:hover:text-orange-300 px-2 py-1.5 transition-colors"
         >
           Clear all
         </button>

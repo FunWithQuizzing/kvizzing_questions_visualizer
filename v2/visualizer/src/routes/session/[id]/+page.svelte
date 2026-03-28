@@ -224,7 +224,7 @@
   <!-- Prev / Next session navigation -->
   <div class="flex justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
     {#if adj.next}
-      <a href="/session/{adj.next.id}" class="flex items-center gap-2 text-sm text-gray-500 hover:text-orange-600 transition-colors group">
+      <a href="/session/{adj.next.id}" class="flex items-center gap-2 text-sm text-gray-500 hover:text-orange-600 dark:hover:text-orange-400 transition-colors group">
         <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
         </svg>
@@ -238,10 +238,10 @@
     {/if}
 
     {#if adj.prev}
-      <a href="/session/{adj.prev.id}" class="flex items-center gap-2 text-sm text-gray-500 hover:text-orange-600 transition-colors group text-right">
+      <a href="/session/{adj.prev.id}" class="flex items-center gap-2 text-sm text-gray-500 hover:text-orange-600 dark:hover:text-orange-400 transition-colors group text-right">
         <div>
           <p class="text-xs text-gray-400 dark:text-gray-500">Newer</p>
-          <p class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-orange-600">{adj.prev.theme ?? `${adj.prev.quizmaster}'s Quiz`}</p>
+          <p class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-orange-600 dark:group-hover:text-orange-400">{adj.prev.theme ?? `${adj.prev.quizmaster}'s Quiz`}</p>
         </div>
         <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />

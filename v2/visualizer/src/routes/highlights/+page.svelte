@@ -81,7 +81,7 @@
   <!-- Quick stats row -->
   <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
     <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 shadow-sm text-center">
-      <p class="text-2xl font-bold text-orange-500">{questions.length}</p>
+      <p class="text-2xl font-bold text-orange-500 dark:text-orange-400">{questions.length}</p>
       <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">Total questions</p>
     </div>
     <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 shadow-sm text-center">
@@ -158,7 +158,7 @@
               <div class="flex-1 min-w-0">
                 <p class="text-sm font-medium text-gray-800 dark:text-gray-200 truncate">{member.display_name}</p>
               </div>
-              <span class="text-sm font-semibold text-orange-500">{member.questions_asked}</span>
+              <span class="text-sm font-semibold text-orange-500 dark:text-orange-400">{member.questions_asked}</span>
             </div>
           {/each}
         </div>

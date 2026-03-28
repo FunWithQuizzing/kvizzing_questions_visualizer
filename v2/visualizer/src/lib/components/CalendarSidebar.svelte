@@ -125,7 +125,7 @@
         href="/session/{s.id}"
         class="flex items-center gap-2 px-3 py-1.5 hover:bg-orange-50 dark:hover:bg-orange-900/20 transition-colors"
       >
-        <span class="w-5 h-5 rounded bg-orange-500 text-white text-[9px] font-bold flex items-center justify-center flex-shrink-0">
+        <span class="w-5 h-5 rounded bg-orange-500 dark:bg-orange-600 text-white text-[9px] font-bold flex items-center justify-center flex-shrink-0">
           {s.label}
         </span>
         <span class="text-xs text-gray-700 dark:text-gray-300 leading-snug">{s.tooltip}</span>
@@ -193,7 +193,7 @@
         <!-- Date number -->
         <span class="
           text-xs font-medium w-6 h-6 flex items-center justify-center rounded-full mb-0.5
-          {isToday ? 'bg-orange-500 text-white' : hasActivity ? 'text-gray-800 dark:text-gray-200 font-semibold' : 'text-gray-400 dark:text-gray-500'}
+          {isToday ? 'bg-orange-500 dark:bg-orange-600 text-white' : hasActivity ? 'text-gray-800 dark:text-gray-200 font-semibold' : 'text-gray-400 dark:text-gray-500'}
         ">
           {cell.day}
         </span>
@@ -214,7 +214,7 @@
             onmouseenter={(e) => openPopover(e, cell.dateStr)}
             onmouseleave={scheduleClose}
             onclick={(e) => { e.stopPropagation(); goto(`/?dateFrom=${cell.dateStr}&dateTo=${cell.dateStr}`); }}
-            class="w-full text-center text-[10px] font-bold leading-none px-0.5 py-[3px] rounded bg-orange-500 text-white hover:bg-orange-600 transition-colors"
+            class="w-full text-center text-[10px] font-bold leading-none px-0.5 py-[3px] rounded bg-orange-500 dark:bg-orange-600 text-white hover:bg-orange-600 dark:hover:bg-orange-700 transition-colors"
           >
             {sessionInfos.length}
           </button>
@@ -230,7 +230,7 @@
       <span class="text-xs text-gray-500 dark:text-gray-400">Ad-hoc questions</span>
     </div>
     <div class="flex items-center gap-1.5">
-      <span class="w-4 h-4 rounded bg-orange-500"></span>
+      <span class="w-4 h-4 rounded bg-orange-500 dark:bg-orange-600"></span>
       <span class="text-xs text-gray-500 dark:text-gray-400">Quiz sessions</span>
     </div>
   </div>

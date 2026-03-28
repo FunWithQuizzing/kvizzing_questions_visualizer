@@ -84,9 +84,9 @@
   };
 </script>
 
-<div class="bg-white rounded-xl border border-gray-200 shadow-sm p-5">
-  <h3 class="text-sm font-semibold text-gray-700 mb-4 flex items-center gap-2">
-    <span class="w-6 h-6 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center text-xs">?</span>
+<div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm p-5">
+  <h3 class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-4 flex items-center gap-2">
+    <span class="w-6 h-6 bg-orange-100 dark:bg-orange-900/40 text-orange-600 dark:text-orange-400 rounded-full flex items-center justify-center text-xs">?</span>
     Try to answer
   </h3>
 
@@ -113,7 +113,7 @@
         onkeydown={handleKeydown}
         type="text"
         placeholder="Your answer…"
-        class="flex-1 px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-100 transition-all"
+        class="flex-1 px-3 py-2 text-sm border border-gray-200 dark:border-gray-600 rounded-lg focus:outline-none focus:border-orange-400 dark:focus:border-orange-500 focus:ring-2 focus:ring-orange-100 dark:focus:ring-orange-900 bg-white dark:bg-gray-700 dark:text-gray-200 dark:placeholder-gray-400 transition-all"
         autocomplete="off"
         autocorrect="off"
         spellcheck="false"
@@ -121,14 +121,14 @@
       <button
         onclick={submit}
         disabled={!input.trim()}
-        class="px-4 py-2 bg-orange-500 text-white text-sm font-medium rounded-lg hover:bg-orange-600 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+        class="px-4 py-2 bg-orange-500 dark:bg-orange-600 text-white text-sm font-medium rounded-lg hover:bg-orange-600 dark:hover:bg-orange-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
       >
         Submit
       </button>
     </div>
 
     <div class="flex items-center justify-between mt-2">
-      <p class="text-xs text-gray-400">
+      <p class="text-xs text-gray-400 dark:text-gray-500">
         {remainingAttempts} attempt{remainingAttempts !== 1 ? 's' : ''} remaining
       </p>
       <div class="flex items-center gap-3">

@@ -1,7 +1,10 @@
 <script lang="ts">
+  import { getContext } from 'svelte';
   import type { DiscussionEntry } from '$lib/types';
-  import { formatTimestamp } from '$lib/utils/time';
+  import { formatTimestampTz } from '$lib/utils/time';
   import MemberAvatar from './MemberAvatar.svelte';
+
+  const tz = getContext<{ value: string }>('timezone');
 
   let { entries }: { entries: DiscussionEntry[] } = $props();
 
@@ -61,7 +64,7 @@
           {#if entry.role === 'attempt' && entry.is_correct === true}
             <span class="text-[10px] px-1.5 py-0.5 rounded font-medium text-green-600 bg-green-100">✓ correct</span>
           {/if}
-          <span class="text-[10px] text-gray-400 ml-auto">{formatTimestamp(entry.timestamp)}</span>
+          <span class="text-[10px] text-gray-400 ml-auto">{formatTimestampTz(entry.timestamp, tz?.value ?? 'Europe/London')}</span>
         </div>
         <div
           class="rounded-lg border px-3 py-2 text-sm {roleStyle(entry.role, entry.is_correct)} {entry.role === 'hint' ? 'italic' : ''}"

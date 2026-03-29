@@ -10,6 +10,7 @@
   import { TOPICS } from '$lib/utils/topicColors';
 
   const store = getContext<QuestionStore>('store');
+  const tzCtx = getContext<{ value: string }>('timezone');
   const stats = store.getTotalStats();
 
   let searchQuery = $state('');
@@ -107,6 +108,7 @@
     if (filterSolver) filters.solver = filterSolver;
     if (filterDateFrom) filters.dateFrom = filterDateFrom;
     if (filterDateTo) filters.dateTo = filterDateTo;
+    if (filterDateFrom || filterDateTo) filters.tz = tzCtx?.value;
     if (filterHasMedia !== undefined) filters.has_media = filterHasMedia;
     if (filterSessionId) filters.session_id = filterSessionId;
 
@@ -250,8 +252,11 @@
 
       <button
         onclick={() => filterHasMedia = filterHasMedia === false ? undefined : false}
-        class="{filterBtnCls} {filterHasMedia === false ? 'bg-primary-500 border-primary-500 text-white' : 'border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600'}"
+        class="flex-1 min-w-[9.5rem] sm:flex-none sm:w-auto text-sm border rounded-lg px-3 py-1.5 leading-5 transition-colors inline-flex items-center gap-1.5 justify-center whitespace-nowrap {filterHasMedia === false ? 'bg-primary-500 border-primary-500 text-white' : 'border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600'}"
       >
+        <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" />
+        </svg>
         No attachments
       </button>
 

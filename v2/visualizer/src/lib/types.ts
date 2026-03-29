@@ -84,6 +84,10 @@ export interface Member {
 export interface QuestionFilters {
   dateFrom?: string;
   dateTo?: string;
+  /** IANA timezone string (e.g. 'Asia/Kolkata'). When provided, date comparisons
+   *  use the question's full timestamp converted to this timezone rather than the
+   *  stored UTC date string. */
+  tz?: string;
   asker?: string;
   solver?: string;
   difficulty?: 'easy' | 'medium' | 'hard' | '';

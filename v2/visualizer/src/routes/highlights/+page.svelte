@@ -92,6 +92,40 @@
     .slice(0, 25);
   const maxTagCount = topTags[0]?.[1] ?? 1;
 
+  // Bubble chart
+  let bubbleContainerW = $state(500);
+  const BUBBLE_H = 420;
+  let hoveredBubble = $state<{ tag: string; count: number; x: number; y: number; r: number } | null>(null);
+
+  function computeBubbles(W: number) {
+    const H = BUBBLE_H;
+    const totalCount = topTags.reduce((s, [, c]) => s + c, 0);
+    // Scale radii so total bubble area ≈ 22% of SVG area (ensures all 25 fit)
+    const k = Math.sqrt((W * H * 0.22) / (Math.PI * totalCount));
+    const items = topTags.map(([tag, count]) => ({
+      tag, count,
+      r: Math.max(10, k * Math.sqrt(count))
+    }));
+    const placed: Array<{ tag: string; count: number; r: number; x: number; y: number }> = [];
+    for (const item of items) {
+      let bestX = W / 2, bestY = H / 2, found = false;
+      for (let i = 0; i < 5000; i++) {
+        const cx = W / 2 + 2.5 * Math.sqrt(i) * Math.cos(i * 2.399963229);
+        const cy = H / 2 + 2.5 * Math.sqrt(i) * Math.sin(i * 2.399963229);
+        if (cx - item.r < 4 || cx + item.r > W - 4 || cy - item.r < 4 || cy + item.r > H - 4) continue;
+        let ok = true;
+        for (const p of placed) {
+          if (Math.sqrt((cx - p.x) ** 2 + (cy - p.y) ** 2) < item.r + p.r + 3) { ok = false; break; }
+        }
+        if (ok) { bestX = cx; bestY = cy; found = true; break; }
+      }
+      if (found) placed.push({ ...item, x: bestX, y: bestY });
+    }
+    return placed;
+  }
+
+  const bubbles = $derived(computeBubbles(bubbleContainerW));
+
   // Most discussed questions
   const mostDiscussed = [...questions]
     .sort((a, b) => (b.discussion?.length ?? 0) - (a.discussion?.length ?? 0))
@@ -419,20 +453,68 @@
         </div>
       {/if}
 
-      <!-- Tags distribution -->
+      <!-- Tags distribution bubble chart -->
       <div class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm p-5">
         <h2 class="font-semibold text-gray-900 dark:text-gray-100 mb-4">Top Tags</h2>
-        <div class="space-y-2">
-          {#each topTags as [tag, count]}
-            {@const pct = Math.round(count / maxTagCount * 100)}
-            <div class="flex items-center gap-3">
-              <a href="/?tag={encodeURIComponent(tag)}" class="w-28 text-xs font-medium text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors truncate flex-shrink-0">{tag}</a>
-              <div class="flex-1 h-2 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
-                <div class="h-full bg-primary-400 dark:bg-primary-500 rounded-full" style="width: {pct}%"></div>
-              </div>
-              <span class="text-xs text-gray-400 dark:text-gray-500 w-6 text-right flex-shrink-0">{count}</span>
+        <div bind:clientWidth={bubbleContainerW} class="relative">
+          {#if hoveredBubble}
+            {@const tx = Math.min(hoveredBubble.x, bubbleContainerW - 120)}
+            {@const ty = hoveredBubble.y - hoveredBubble.r - 10}
+            <div
+              class="pointer-events-none absolute z-10 -translate-x-1/2 -translate-y-full rounded-lg bg-gray-900 dark:bg-gray-700 px-2.5 py-1.5 text-xs text-white shadow-lg whitespace-nowrap"
+              style="left:{hoveredBubble.x}px;top:{ty}px"
+            >
+              <span class="font-semibold">{hoveredBubble.tag}</span>
+              <span class="ml-1.5 text-gray-300">{hoveredBubble.count}</span>
             </div>
-          {/each}
+          {/if}
+          <svg width={bubbleContainerW} height={BUBBLE_H}>
+            {#each bubbles as b, i}
+              {@const opacity = 0.35 + 0.65 * Math.sqrt(b.count / maxTagCount)}
+              {@const fs = Math.max(8, Math.min(13, b.r * 0.36))}
+              {@const maxChars = Math.floor(b.r * 2 / (fs * 0.62))}
+              {@const label = b.tag.length > maxChars ? b.tag.slice(0, maxChars) + '…' : b.tag}
+              {@const showCount = b.r > 26}
+              {@const floatDur = 3.5 + (i * 0.61) % 3}
+              {@const floatDelay = (i * 0.43) % 3.5}
+              {@const floatDist = 6 + (i * 3) % 9}
+              <g
+                class="bubble-float"
+                style="--dur:{floatDur}s;--delay:{floatDelay}s;--dist:-{floatDist}px"
+                onmouseenter={() => hoveredBubble = { tag: b.tag, count: b.count, x: b.x, y: b.y, r: b.r }}
+                onmouseleave={() => hoveredBubble = null}
+              >
+                <a href="/?tag={encodeURIComponent(b.tag)}" class="bubble-link" style="text-decoration:none;cursor:pointer" style:--cx="{b.x}px" style:--cy="{b.y}px">
+                  <circle cx={b.x} cy={b.y} r={b.r} fill="var(--color-primary-400)" fill-opacity={opacity} class="bubble-circle" />
+                  {#if b.r > 14}
+                    <text
+                      x={b.x}
+                      y={showCount ? b.y - fs * 0.65 : b.y}
+                      text-anchor="middle"
+                      dominant-baseline="middle"
+                      font-size={fs}
+                      font-weight="600"
+                      fill="white"
+                      pointer-events="none"
+                      style="user-select:none"
+                    >{label}</text>
+                    {#if showCount}
+                      <text
+                        x={b.x}
+                        y={b.y + fs * 0.85}
+                        text-anchor="middle"
+                        dominant-baseline="middle"
+                        font-size={Math.max(7, fs * 0.78)}
+                        fill="rgba(255,255,255,0.7)"
+                        pointer-events="none"
+                        style="user-select:none"
+                      >{b.count}</text>
+                    {/if}
+                  {/if}
+                </a>
+              </g>
+            {/each}
+          </svg>
         </div>
       </div>
     </div>
@@ -508,3 +590,26 @@
 
 
 </div>
+
+<style>
+  @keyframes bubble-float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(var(--dist)); }
+  }
+  .bubble-float {
+    animation: bubble-float var(--dur) ease-in-out var(--delay) infinite;
+  }
+  .bubble-link {
+    transform-origin: var(--cx) var(--cy);
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .bubble-link:hover {
+    transform: scale(1.15);
+  }
+  .bubble-link:hover .bubble-circle {
+    fill-opacity: 1;
+  }
+  .bubble-circle {
+    transition: fill-opacity 0.2s ease;
+  }
+</style>

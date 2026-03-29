@@ -9,12 +9,17 @@
   let mapOpen = $state(false);
   let error = $state(false);
 
-  function handleKeydown(e: KeyboardEvent) {
-    if (e.key !== 'Enter') return;
+  function handleInput(e: Event) {
     const val = (e.target as HTMLInputElement).value.toLowerCase().replace(/\s+/g, ' ').trim();
     if (val === 'mischief managed') {
       onAuthenticated();
-    } else {
+    }
+  }
+
+  function handleKeydown(e: KeyboardEvent) {
+    if (e.key !== 'Enter') return;
+    const val = (e.target as HTMLInputElement).value.toLowerCase().replace(/\s+/g, ' ').trim();
+    if (val !== 'mischief managed') {
       error = true;
       setTimeout(() => { error = false; }, 600);
     }
@@ -81,6 +86,7 @@
       <input
         type="text"
         bind:value={input}
+        oninput={handleInput}
         onkeydown={handleKeydown}
         placeholder="Gotta type the right words to enter in.."
         autocomplete="off"

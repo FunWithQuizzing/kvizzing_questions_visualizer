@@ -1,50 +1,75 @@
 <script lang="ts">
   import { goto } from '$app/navigation';
   import type { QuestionStore } from '$lib/stores/questionStore';
+  import { dateInTz } from '$lib/utils/time';
 
-  let { store }: { store: QuestionStore } = $props();
+  let { store, tz = 'Europe/London' }: { store: QuestionStore; tz?: string } = $props();
 
   const allSessions = store.getSessions();
   const questions = store.getQuestions();
 
   type SessionInfo = { id: string; label: string; tooltip: string };
   type DayActivity = { sessions: SessionInfo[]; questionCount: number };
-  const activityByDate = new Map<string, DayActivity>();
 
   function initials(name: string): string {
     return name.split(' ').map(w => w[0] ?? '').join('').slice(0, 2).toUpperCase();
   }
 
-  for (const session of allSessions) {
-    if (!activityByDate.has(session.date)) {
-      activityByDate.set(session.date, { sessions: [], questionCount: 0 });
-    }
-    const label = initials(session.quizmaster);
-    const tooltip = session.theme
-      ? `${session.quizmaster} — ${session.theme}`
-      : `${session.quizmaster}'s Quiz`;
-    activityByDate.get(session.date)!.sessions.push({ id: session.id, label, tooltip });
-  }
-  for (const q of questions) {
-    if (!activityByDate.has(q.date)) {
-      activityByDate.set(q.date, { sessions: [], questionCount: 0 });
-    }
-    activityByDate.get(q.date)!.questionCount++;
-  }
+  const activityByDate = $derived.by(() => {
+    const map = new Map<string, DayActivity>();
 
-  // Start on most recent date with activity
-  const allDates = [...activityByDate.keys()].sort();
-  const earliestDate = allDates.at(0) ?? new Date().toISOString().slice(0, 10);
-  const latestDate = allDates.at(-1) ?? new Date().toISOString().slice(0, 10);
-  const [initYear, initMonth] = latestDate.split('-').map(Number);
-  const [minYear, minMonth] = earliestDate.split('-').map(Number);
-  const [maxYear, maxMonth] = latestDate.split('-').map(Number);
+    // Derive each session's date from its earliest question timestamp in the selected tz
+    const sessionEarliestTs = new Map<string, string>();
+    for (const q of questions) {
+      if (q.session?.id && q.question?.timestamp) {
+        const existing = sessionEarliestTs.get(q.session.id);
+        if (!existing || q.question.timestamp < existing) {
+          sessionEarliestTs.set(q.session.id, q.question.timestamp);
+        }
+      }
+    }
+
+    for (const session of allSessions) {
+      const ts = sessionEarliestTs.get(session.id);
+      const d = ts ? dateInTz(ts, tz) : session.date;
+      if (!map.has(d)) map.set(d, { sessions: [], questionCount: 0 });
+      const label = initials(session.quizmaster);
+      const tooltip = session.theme
+        ? `${session.quizmaster} — ${session.theme}`
+        : `${session.quizmaster}'s Quiz`;
+      map.get(d)!.sessions.push({ id: session.id, label, tooltip });
+    }
+
+    for (const q of questions) {
+      const d = q.question?.timestamp ? dateInTz(q.question.timestamp, tz) : q.date;
+      if (!map.has(d)) map.set(d, { sessions: [], questionCount: 0 });
+      map.get(d)!.questionCount++;
+    }
+
+    return map;
+  });
+
+  // Start on most recent date with activity — recompute when tz changes
+  const initView = $derived.by(() => {
+    const allDates = [...activityByDate.keys()].sort();
+    const earliest = allDates.at(0) ?? new Date().toISOString().slice(0, 10);
+    const latest = allDates.at(-1) ?? new Date().toISOString().slice(0, 10);
+    return { earliest, latest };
+  });
+
+  const [initYear, initMonth] = initView.latest.split('-').map(Number);
 
   let year = $state(initYear);
   let month = $state(initMonth);
 
-  const canGoPrev = $derived(year > minYear || (year === minYear && month > minMonth));
-  const canGoNext = $derived(year < maxYear || (year === maxYear && month < maxMonth));
+  const canGoPrev = $derived.by(() => {
+    const [minY, minM] = initView.earliest.split('-').map(Number);
+    return year > minY || (year === minY && month > minM);
+  });
+  const canGoNext = $derived.by(() => {
+    const [maxY, maxM] = initView.latest.split('-').map(Number);
+    return year < maxY || (year === maxY && month < maxM);
+  });
 
   function prevMonth() {
     if (!canGoPrev) return;
@@ -86,7 +111,7 @@
   }
 
   const grid = $derived(buildGrid(year, month));
-  const todayStr = new Date().toISOString().slice(0, 10);
+  const todayStr = $derived(dateInTz(new Date().toISOString(), tz));
 
   function handleDayClick(cell: Cell) {
     if (!cell.inMonth) return;

@@ -1,4 +1,5 @@
 import type { Question, Session, Member, QuestionFilters, SortOption } from '$lib/types';
+import { dateInTz } from '$lib/utils/time';
 
 export class QuestionStore {
   private questions: Question[];
@@ -15,11 +16,17 @@ export class QuestionStore {
     let results = this.questions.filter(q => q.extraction_confidence !== 'low');
 
     if (filters) {
-      if (filters.dateFrom) {
-        results = results.filter(q => q.date >= filters.dateFrom!);
-      }
-      if (filters.dateTo) {
-        results = results.filter(q => q.date <= filters.dateTo!);
+      if (filters.dateFrom || filters.dateTo) {
+        results = results.filter(q => {
+          // If a timezone is provided, compare against the question's timestamp
+          // converted to that timezone; otherwise fall back to the stored UTC date.
+          const d = filters.tz && q.question?.timestamp
+            ? dateInTz(q.question.timestamp, filters.tz)
+            : q.date;
+          if (filters.dateFrom && d < filters.dateFrom) return false;
+          if (filters.dateTo && d > filters.dateTo) return false;
+          return true;
+        });
       }
       if (filters.asker) {
         results = results.filter(q =>

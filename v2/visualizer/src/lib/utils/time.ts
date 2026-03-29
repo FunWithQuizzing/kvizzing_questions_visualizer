@@ -46,6 +46,39 @@ export function formatTimestamp(ts: string): string {
   }
 }
 
+export function formatTimestampTz(ts: string, tz: string): string {
+  try {
+    return new Intl.DateTimeFormat('en-US', {
+      hour: 'numeric',
+      minute: '2-digit',
+      hour12: true,
+      timeZone: tz,
+    }).format(new Date(ts));
+  } catch {
+    return ts;
+  }
+}
+
+/** Returns YYYY-MM-DD in the given timezone for a full ISO timestamp. */
+export function dateInTz(isoTs: string, tz: string): string {
+  try {
+    // en-CA locale formats as YYYY-MM-DD natively
+    return new Intl.DateTimeFormat('en-CA', { timeZone: tz }).format(new Date(isoTs));
+  } catch {
+    return isoTs.slice(0, 10);
+  }
+}
+
+export function tzAbbr(tz: string): string {
+  try {
+    return new Intl.DateTimeFormat('en', { timeZone: tz, timeZoneName: 'shortOffset' })
+      .formatToParts(new Date())
+      .find(p => p.type === 'timeZoneName')?.value ?? tz;
+  } catch {
+    return tz;
+  }
+}
+
 export function getDurationBetween(start: string, end: string): string {
   try {
     const s = parseISO(start);

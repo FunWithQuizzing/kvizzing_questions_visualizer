@@ -205,7 +205,7 @@
                 </div>
                 <div>
                   <div class="flex items-center gap-2">
-                    <h2 class="text-base font-semibold text-primary-800 dark:text-primary-200 group-hover:text-primary-600 dark:group-hover:text-primary-300 transition-colors">
+                    <h2 class="text-base font-semibold text-primary-700 dark:text-primary-200 group-hover:text-primary-800 dark:group-hover:text-primary-100 transition-colors">
                       {session.quiz_type === 'connect' ? `${session.quizmaster}'s Connect Quiz` : (session.theme ?? `${session.quizmaster}'s Quiz`)}
                     </h2>
                     {#if session.quiz_type === 'connect'}
@@ -228,33 +228,33 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <span class="font-medium">{session.question_count}</span>
-                  <span class="text-primary-600 dark:text-primary-300">questions</span>
+                  <span class="text-gray-700 dark:text-gray-300">questions</span>
                 </div>
                 {#if session.participant_count > 0}
                   <div class="flex items-center gap-1.5 text-gray-800 dark:text-gray-200">
-                    <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-4 h-4 text-primary-300 dark:text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                     <span class="font-medium">{session.participant_count}</span>
-                    <span class="text-primary-600 dark:text-primary-300">participants</span>
+                    <span class="text-gray-700 dark:text-gray-300">participants</span>
                   </div>
                 {/if}
                 {#if session.avg_time_to_answer_seconds}
                   <div class="flex items-center gap-1.5 text-gray-800 dark:text-gray-200">
-                    <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-4 h-4 text-primary-300 dark:text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span class="font-medium">{formatTime(session.avg_time_to_answer_seconds)}</span>
-                    <span class="text-primary-600 dark:text-primary-300">avg solve</span>
+                    <span class="text-gray-700 dark:text-gray-300">avg solve</span>
                   </div>
                 {/if}
                 {#if session.avg_wrong_attempts}
                   <div class="flex items-center gap-1.5 text-gray-800 dark:text-gray-200">
-                    <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-4 h-4 text-primary-300 dark:text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                     <span class="font-medium">{session.avg_wrong_attempts.toFixed(1)}</span>
-                    <span class="text-primary-600 dark:text-primary-300">avg wrong</span>
+                    <span class="text-gray-700 dark:text-gray-300">avg wrong</span>
                   </div>
                 {/if}
               </div>

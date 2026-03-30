@@ -47,7 +47,7 @@ describe('dateInTz', () => {
   });
 
   it('handles AEST (UTC+10/+11)', () => {
-    // 14:00 UTC Jan 15 = 00:00 Jan 16 AEDT (UTC+11 in summer)
+    // 13:00 UTC Jan 15 = 00:00 Jan 16 AEDT (UTC+11 in summer)
     expect(dateInTz('2024-01-15T13:00:00Z', 'Australia/Sydney')).toBe('2024-01-16');
   });
 });

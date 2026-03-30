@@ -66,7 +66,7 @@ def _make_question(timestamp_offset: int = 0, topic=None) -> KVizzingQuestion:
         c["discussion"][0]["timestamp"] = c["answer_timestamp"]
     q = structure(c, BASE_CONFIG, Counter())
     if topic is not None:
-        updated = q.question.model_copy(update={"topic": topic})
+        updated = q.question.model_copy(update={"topics": [topic]})
         q = q.model_copy(update={"question": updated})
     return q
 
@@ -93,7 +93,7 @@ class TestApplyEnrichment:
     def test_topic_applied(self):
         q = _make_question()
         enriched = _apply_enrichment(q, {"id": q.id, "topic": "history", "tags": ["economics"]})
-        assert enriched.question.topic == TopicCategory.history
+        assert enriched.question.topics == [TopicCategory.history]
 
     def test_tags_applied(self):
         q = _make_question()
@@ -103,12 +103,12 @@ class TestApplyEnrichment:
     def test_unknown_topic_falls_back_to_general(self):
         q = _make_question()
         enriched = _apply_enrichment(q, {"id": q.id, "topic": "bogus_category", "tags": []})
-        assert enriched.question.topic == TopicCategory.general
+        assert enriched.question.topics == [TopicCategory.general]
 
     def test_original_question_not_mutated(self):
         q = _make_question()
         _apply_enrichment(q, {"id": q.id, "topic": "science", "tags": ["physics"]})
-        assert q.question.topic is None
+        assert not q.question.topics
 
 
 class TestBuildBatchPrompt:
@@ -135,7 +135,7 @@ class TestEnrich:
         q = _make_question()
         llm = _mock_llm([[{"id": q.id, "topic": "history", "tags": ["economics"]}]])
         results = enrich([q], BASE_CONFIG, llm)
-        assert results[0].question.topic == TopicCategory.history
+        assert results[0].question.topics == [TopicCategory.history]
 
     def test_tags_assigned(self):
         q = _make_question()
@@ -148,7 +148,7 @@ class TestEnrich:
         llm = _mock_llm([])
         results = enrich([q], BASE_CONFIG, llm)
         # LLM not called — topic unchanged
-        assert results[0].question.topic == TopicCategory.science
+        assert results[0].question.topics == [TopicCategory.science]
         llm.messages.create.assert_not_called()
 
     def test_order_preserved(self):
@@ -182,7 +182,7 @@ class TestEnrich:
         q = _make_question()
         llm = _mock_llm([[]])  # LLM returns empty array
         results = enrich([q], BASE_CONFIG, llm)
-        assert results[0].question.topic is None
+        assert not results[0].question.topics
 
     def test_partial_llm_response(self):
         """LLM returns result for only some questions in the batch."""
@@ -190,8 +190,8 @@ class TestEnrich:
         q2 = _make_question(timestamp_offset=200)
         llm = _mock_llm([[{"id": q1.id, "topic": "history", "tags": []}]])
         results = enrich([q1, q2], BASE_CONFIG, llm)
-        assert results[0].question.topic == TopicCategory.history
-        assert results[1].question.topic is None  # not in response
+        assert results[0].question.topics == [TopicCategory.history]
+        assert not results[1].question.topics  # not in response
 
     def test_mixed_enriched_and_unenriched(self):
         """Already-enriched questions are preserved; unenriched ones get enriched."""
@@ -199,22 +199,22 @@ class TestEnrich:
         q_todo = _make_question(timestamp_offset=200)
         llm = _mock_llm([[{"id": q_todo.id, "topic": "science", "tags": ["physics"]}]])
         results = enrich([q_done, q_todo], BASE_CONFIG, llm)
-        assert results[0].question.topic == TopicCategory.sports
-        assert results[1].question.topic == TopicCategory.science
+        assert results[0].question.topics == [TopicCategory.sports]
+        assert results[1].question.topics == [TopicCategory.science]
 
 
 class TestRun:
     def test_no_llm_returns_unchanged(self):
         q = _make_question()
         results = run([q], BASE_CONFIG, llm_client=None)
-        assert results[0].question.topic is None
+        assert not results[0].question.topics
         assert results[0].id == q.id
 
     def test_with_llm_enriches(self):
         q = _make_question()
         llm = _mock_llm([[{"id": q.id, "topic": "geography", "tags": ["europe"]}]])
         results = run([q], BASE_CONFIG, llm_client=llm)
-        assert results[0].question.topic == TopicCategory.geography
+        assert results[0].question.topics == [TopicCategory.geography]
 
     def test_empty_input(self):
         results = run([], BASE_CONFIG, llm_client=None)

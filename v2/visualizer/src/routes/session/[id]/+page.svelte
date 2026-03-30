@@ -3,18 +3,22 @@
   import { goto } from '$app/navigation';
   import type { QuestionStore } from '$lib/stores/questionStore';
   import type { Question } from '$lib/types';
-  import { formatDate, formatTime } from '$lib/utils/time';
+  import { formatDateTz, formatTime } from '$lib/utils/time';
   import MemberAvatar from '$lib/components/MemberAvatar.svelte';
   import { topicCls, topicLabel } from '$lib/utils/topicColors';
   import { isCorrect, isAlmost } from '$lib/utils/fuzzy';
   import { filterHints } from '$lib/utils/hints';
+  import { SESSION_IMAGE_OPACITY } from '$lib/config/ui';
 
   let { data } = $props();
   const store = getContext<QuestionStore>('store');
+  const tzCtx = getContext<{ value: string }>('timezone');
 
   const session = $derived(data.session);
   const sessionQuestions = $derived(data.sessionQuestions);
   const adj = $derived(store.getAdjacentSessions(session.id));
+
+  const isConnect = $derived(session.quiz_type === 'connect');
 
   let revealAll = $state(false);
   let revealedIds = $state(new Set<string>());
@@ -22,6 +26,19 @@
   let inputs = $state(new Map<string, string>());
   let results = $state(new Map<string, 'correct' | 'almost' | 'wrong'>());
   let hintsShown = $state(new Map<string, number>());
+
+  // Connect quiz state
+  let connectGuess = $state('');
+  let connectResult = $state<'correct' | 'almost' | 'wrong' | null>(null);
+  let connectRevealed = $state(false);
+
+  function submitConnectGuess() {
+    const input = connectGuess.trim();
+    if (!input || !session.theme) return;
+    if (isCorrect(input, session.theme)) { connectResult = 'correct'; connectRevealed = true; }
+    else if (isAlmost(input, session.theme)) connectResult = 'almost';
+    else connectResult = 'wrong';
+  }
 
   function toggleReveal(id: string) {
     const next = new Set(revealedIds);
@@ -59,7 +76,7 @@
 </script>
 
 <svelte:head>
-  <title>{session.theme ?? `${session.quizmaster}'s Quiz`} — KVizzing</title>
+  <title>{isConnect && !connectRevealed ? `${session.quizmaster}'s Connect Quiz` : (session.theme ?? `${session.quizmaster}'s Quiz`)} — KVizzing</title>
 </svelte:head>
 
 <div class="space-y-6">
@@ -74,16 +91,30 @@
   <!-- Session header -->
   <div class="relative overflow-hidden bg-gray-900 rounded-2xl p-6 text-white shadow-lg">
     <div
-      class="absolute inset-0 bg-cover bg-center opacity-50 transition-opacity"
-      style="background-image: url('/images/sessions/{session.id}.jpg')"
+      class="absolute inset-0 bg-cover bg-center transition-opacity"
+      style="background-image: url('{session.quiz_type === 'connect' ? '/images/connect-quiz-bg.png' : '/images/sessions/' + session.id + '.jpg'}'); opacity: {SESSION_IMAGE_OPACITY.header}"
     ></div>
     <div class="relative">
     <div>
+      <div class="flex items-center gap-2 mb-1">
+        {#if isConnect}
+          <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-white/20 text-white border border-white/30">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+            </svg>
+            Connect Quiz
+          </span>
+        {/if}
+      </div>
       <h1 class="text-xl font-bold mb-1">
-        {session.theme ?? `${session.quizmaster}'s Quiz`}
+        {#if isConnect && !connectRevealed}
+          {session.quizmaster}'s Connect Quiz
+        {:else}
+          {session.theme ?? `${session.quizmaster}'s Quiz`}
+        {/if}
       </h1>
       <p class="text-primary-100 text-sm">
-        Hosted by {session.quizmaster} · {formatDate(session.date)}
+        Hosted by {session.quizmaster} · {formatDateTz(sessionQuestions[0]?.question?.timestamp ?? session.date, tzCtx?.value ?? 'Europe/London')}
       </p>
     </div>
 
@@ -139,7 +170,7 @@
         <!-- svelte-ignore a11y_no_static_element_interactions -->
         <!-- svelte-ignore a11y_click_events_have_key_events -->
         <div
-          class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden hover:shadow-md hover:border-gray-300 dark:hover:border-gray-600 transition-all cursor-pointer"
+          class="bg-ui-card rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden hover:shadow-md hover:border-gray-300 dark:hover:border-gray-600 transition-all cursor-pointer"
           onclick={(e) => { if (!(e.target as HTMLElement).closest('a,button,input')) goto(`/question/${question.id}`); }}
         >
           <!-- Question number badge + link -->
@@ -241,6 +272,53 @@
     </div>
   {/if}
 
+  <!-- Connect: guess the theme panel -->
+  {#if isConnect}
+    <div class="rounded-xl border-2 {connectRevealed ? 'border-green-300 dark:border-green-700 bg-green-50 dark:bg-green-900/20' : 'border-dashed border-primary-300 dark:border-primary-700 bg-primary-50/50 dark:bg-primary-900/10'} p-5">
+      <div class="flex items-center gap-2 mb-3">
+        <svg class="w-4 h-4 {connectRevealed ? 'text-green-500' : 'text-primary-500'}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+        </svg>
+        <h3 class="text-sm font-semibold {connectRevealed ? 'text-green-700 dark:text-green-300' : 'text-primary-700 dark:text-primary-300'}">
+          {connectRevealed ? 'Connect revealed!' : 'Guess the connect'}
+        </h3>
+      </div>
+
+      {#if connectRevealed}
+        <p class="text-lg font-bold text-green-800 dark:text-green-200">{session.theme}</p>
+        {#if connectResult === 'correct'}
+          <p class="text-xs text-green-600 dark:text-green-400 mt-1">You got it!</p>
+        {/if}
+      {:else}
+        <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">What's the common theme connecting all these questions?</p>
+        <div class="flex gap-2">
+          <input
+            type="text"
+            bind:value={connectGuess}
+            placeholder="Your guess…"
+            onkeydown={(e) => { if (e.key === 'Enter') submitConnectGuess(); }}
+            class="flex-1 min-w-0 px-3 py-2 text-sm border rounded-lg focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 transition-all
+              {connectResult === 'almost' ? 'border-amber-300 bg-amber-50 dark:bg-amber-900/30 dark:border-amber-700' : connectResult === 'wrong' ? 'border-red-300 bg-red-50 dark:bg-red-900/30 dark:border-red-700' : 'border-gray-200 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 dark:placeholder-gray-400'}"
+            autocomplete="off" spellcheck="false"
+          />
+          <button
+            onclick={submitConnectGuess}
+            class="px-4 py-2 text-sm font-medium bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors flex-shrink-0"
+          >Guess</button>
+          <button
+            onclick={() => { connectRevealed = true; connectResult = null; }}
+            class="px-3 py-2 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 font-medium transition-colors flex-shrink-0"
+          >Reveal</button>
+        </div>
+        {#if connectResult === 'almost'}
+          <p class="text-xs text-amber-600 dark:text-amber-400 mt-2">Close! Try again.</p>
+        {:else if connectResult === 'wrong'}
+          <p class="text-xs text-red-500 dark:text-red-400 mt-2">Not quite. Keep trying!</p>
+        {/if}
+      {/if}
+    </div>
+  {/if}
+
   <!-- Prev / Next session navigation -->
   <div class="flex justify-between pt-4 border-t border-gray-200 dark:border-gray-700 gap-4">
     {#if adj.next}
@@ -250,7 +328,7 @@
         </svg>
         <div class="min-w-0">
           <p class="text-xs text-gray-400 dark:text-gray-500">Older</p>
-          <p class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600 truncate">{adj.next.theme ?? `${adj.next.quizmaster}'s Quiz`}</p>
+          <p class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600 truncate">{adj.next.quiz_type === 'connect' ? `${adj.next.quizmaster}'s Connect Quiz` : (adj.next.theme ?? `${adj.next.quizmaster}'s Quiz`)}</p>
         </div>
       </a>
     {:else}
@@ -261,7 +339,7 @@
       <a href="/session/{adj.prev.id}" class="flex items-center gap-2 text-sm text-gray-500 hover:text-primary-600 dark:hover:text-primary-400 transition-colors group text-right max-w-[45%]">
         <div class="min-w-0">
           <p class="text-xs text-gray-400 dark:text-gray-500">Newer</p>
-          <p class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 truncate">{adj.prev.theme ?? `${adj.prev.quizmaster}'s Quiz`}</p>
+          <p class="font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 truncate">{adj.prev.quiz_type === 'connect' ? `${adj.prev.quizmaster}'s Connect Quiz` : (adj.prev.theme ?? `${adj.prev.quizmaster}'s Quiz`)}</p>
         </div>
         <svg class="w-4 h-4 flex-shrink-0 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />

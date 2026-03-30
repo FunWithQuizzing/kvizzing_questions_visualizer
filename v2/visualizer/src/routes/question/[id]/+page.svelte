@@ -2,7 +2,7 @@
   import { getContext } from 'svelte';
   import { goto } from '$app/navigation';
   import type { QuestionStore } from '$lib/stores/questionStore';
-  import { formatDate, formatTime, formatTimestamp } from '$lib/utils/time';
+  import { formatDateTz, formatTime } from '$lib/utils/time';
   import { topicCls, topicLabel } from '$lib/utils/topicColors';
   import { filterHints } from '$lib/utils/hints';
   import MemberAvatar from '$lib/components/MemberAvatar.svelte';
@@ -11,6 +11,7 @@
 
   let { data } = $props();
   const store = getContext<QuestionStore>('store');
+  const tzCtx = getContext<{ value: string }>('timezone');
 
   const question = $derived(data.question);
   const q = $derived(question.question);
@@ -42,7 +43,7 @@
     {#if question.session}
       <span class="text-gray-300 dark:text-gray-600">/</span>
       <a href="/session/{question.session.id}" class="text-sm text-primary-500 dark:text-primary-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors">
-        {question.session.theme ?? 'Session'} #{question.session.question_number}
+        {question.session.quiz_type === 'connect' ? `${question.session.quizmaster}'s Connect Quiz` : (question.session.theme ?? 'Session')} #{question.session.question_number}
       </a>
     {/if}
     <button
@@ -60,7 +61,7 @@
       <MemberAvatar username={q.asker} size="sm" />
       <div>
         <p class="text-sm font-semibold text-gray-800 dark:text-gray-200">{q.asker}</p>
-        <p class="text-xs text-gray-400 dark:text-gray-500">{formatDate(question.date)}</p>
+        <p class="text-xs text-gray-400 dark:text-gray-500">{formatDateTz(question.question.timestamp ?? question.date, tzCtx?.value ?? 'Europe/London')}</p>
       </div>
     </div>
 
@@ -70,7 +71,7 @@
           href="/session/{question.session.id}"
           class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-primary-100 dark:bg-primary-900/40 text-primary-700 dark:text-primary-300 hover:bg-primary-200 dark:hover:bg-primary-900/60 transition-colors"
         >
-          #{question.session.question_number} {question.session.theme ?? 'Session'}
+          #{question.session.question_number} {question.session.quiz_type === 'connect' ? `${question.session.quizmaster}'s Connect Quiz` : (question.session.theme ?? 'Session')}
         </a>
       {/if}
       {#each q.topics ?? [] as topic}
@@ -82,7 +83,7 @@
   </div>
 
   <!-- Question card -->
-  <div class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm p-6">
+  <div class="bg-ui-card rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm p-6">
     <p class="text-gray-900 dark:text-gray-100 text-base leading-relaxed font-medium">{q.text}</p>
     {#if q.has_media}
       <p class="mt-2 text-sm text-purple-500 flex items-center gap-1">
@@ -113,23 +114,23 @@
   {#if stats}
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
       {#if stats.time_to_answer_seconds}
-        <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-3 text-center shadow-sm">
+        <div class="bg-ui-card rounded-xl border border-gray-200 dark:border-gray-700 p-3 text-center shadow-sm">
           <p class="text-lg font-bold text-gray-900 dark:text-gray-100">{formatTime(stats.time_to_answer_seconds)}</p>
           <p class="text-xs text-gray-400 dark:text-gray-500 mt-0.5">Solve time</p>
         </div>
       {/if}
-      <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-3 text-center shadow-sm">
+      <div class="bg-ui-card rounded-xl border border-gray-200 dark:border-gray-700 p-3 text-center shadow-sm">
         <p class="text-lg font-bold text-gray-900 dark:text-gray-100">{stats.wrong_attempts}</p>
         <p class="text-xs text-gray-400 dark:text-gray-500 mt-0.5">Wrong attempts</p>
       </div>
       {#if stats.hints_given > 0}
-        <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-3 text-center shadow-sm">
+        <div class="bg-ui-card rounded-xl border border-gray-200 dark:border-gray-700 p-3 text-center shadow-sm">
           <p class="text-lg font-bold text-gray-900 dark:text-gray-100">{stats.hints_given}</p>
           <p class="text-xs text-gray-400 dark:text-gray-500 mt-0.5">Hints given</p>
         </div>
       {/if}
       {#if stats.unique_participants > 0}
-        <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-3 text-center shadow-sm">
+        <div class="bg-ui-card rounded-xl border border-gray-200 dark:border-gray-700 p-3 text-center shadow-sm">
           <p class="text-lg font-bold text-gray-900 dark:text-gray-100">{stats.unique_participants}</p>
           <p class="text-xs text-gray-400 dark:text-gray-500 mt-0.5">Participants</p>
         </div>
@@ -157,7 +158,7 @@
 
   <!-- Discussion thread -->
   {#if question.discussion?.length > 0}
-    <div class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
+    <div class="bg-ui-card rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
       <button
         class="w-full px-5 py-4 flex items-center justify-between text-left hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
         onclick={() => discussionVisible = !discussionVisible}

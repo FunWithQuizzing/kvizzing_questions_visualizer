@@ -86,7 +86,7 @@
   };
 </script>
 
-<div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm p-5">
+<div class="bg-ui-card rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm p-5">
   <h3 class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-4 flex items-center gap-2">
     <span class="w-6 h-6 bg-primary-100 dark:bg-primary-900/40 text-primary-600 dark:text-primary-400 rounded-full flex items-center justify-center text-xs">?</span>
     Try to answer

@@ -6,7 +6,7 @@
   import type { QuestionStore } from '$lib/stores/questionStore';
   import type { Question, QuestionFilters, SortOption } from '$lib/types';
   import QuestionCard from '$lib/components/QuestionCard.svelte';
-  import { formatDate } from '$lib/utils/time';
+  import { formatDateTz } from '$lib/utils/time';
   import { TOPICS } from '$lib/utils/topicColors';
 
   const store = getContext<QuestionStore>('store');
@@ -18,7 +18,7 @@
   let filterSolver = $state('');
   let filterDateFrom = $state('');
   let filterDateTo = $state('');
-  let filterHasMedia = $state(undefined as boolean | undefined);
+  let filterHasMedia = $state(false as boolean | undefined);
   let filterSessionId = $state('');
   let filterTags = $state(new Set<string>());
   let filterTopics = $state(new Set<string>());
@@ -34,7 +34,8 @@
     filterSolver = p.get('solver') ?? '';
     filterDateFrom = p.get('dateFrom') ?? '';
     filterDateTo = p.get('dateTo') ?? '';
-    filterHasMedia = p.get('has_media') === '0' ? false : undefined as boolean | undefined;
+    const hm = p.get('has_media');
+    filterHasMedia = hm === '0' ? false : hm === '1' ? true : undefined as boolean | undefined;
     filterSessionId = p.get('session') ?? '';
     // ?tag=X from detail page tag clicks (single), or ?tags=X,Y for multi
     const singleTag = p.get('tag') ?? '';
@@ -146,7 +147,7 @@
     filterSolver = '';
     filterDateFrom = '';
     filterDateTo = '';
-    filterHasMedia = undefined;
+    filterHasMedia = false;
     filterSessionId = '';
     filterTags = new Set();
     filterTopics = new Set();
@@ -159,9 +160,9 @@
     filterSessionId || filterTags.size > 0 || filterTopics.size > 0
   );
 
-  const sinceDate = stats.earliestDate ? formatDate(stats.earliestDate) : '';
-  const selectCls = "flex-1 min-w-[7rem] sm:flex-none sm:w-35 text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 dark:focus:ring-primary-900 text-gray-600";
-  const filterBtnCls = "flex-1 min-w-[7rem] sm:flex-none sm:w-35 text-sm border rounded-lg px-3 py-1.5 leading-5 transition-colors inline-flex items-center gap-1.5 justify-center";
+  const sinceDate = $derived(stats.earliestTimestamp ? formatDateTz(stats.earliestTimestamp, tzCtx?.value ?? 'Europe/London') : '');
+  const selectCls = "flex-none w-32 text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 dark:focus:ring-primary-900 text-gray-600";
+  const filterBtnCls = "flex-none text-sm border rounded-lg px-3 py-1.5 leading-5 transition-colors inline-flex items-center gap-1.5 justify-center whitespace-nowrap";
 </script>
 
 <div class="space-y-6">
@@ -221,7 +222,7 @@
     </div>
 
     <!-- Primary filters -->
-    <div class="flex flex-wrap gap-2">
+    <div class="flex gap-2 overflow-x-auto pb-0.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
       <select bind:value={filterAsker} class={selectCls}>
         <option value="">All askers</option>
         {#each askers as asker}
@@ -250,19 +251,20 @@
         {/each}
       </select>
 
-      <button
-        onclick={() => filterHasMedia = filterHasMedia === false ? undefined : false}
-        class="flex-1 min-w-[9.5rem] sm:flex-none sm:w-auto text-sm border rounded-lg px-3 py-1.5 leading-5 transition-colors inline-flex items-center gap-1.5 justify-center whitespace-nowrap {filterHasMedia === false ? 'bg-primary-500 border-primary-500 text-white' : 'border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600'}"
-      >
-        <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" />
-        </svg>
-        No attachments
-      </button>
+      <div class="flex-none inline-flex rounded-lg border border-stone-200/90 dark:border-zinc-600 overflow-hidden text-sm">
+        {#each ([undefined, true, false] as const) as val, i}
+          <button
+            onclick={() => filterHasMedia = val}
+            class="px-2.5 py-1.5 leading-5 whitespace-nowrap transition-colors
+              {filterHasMedia === val ? 'bg-primary-500 text-white' : 'bg-ui-card text-gray-600 dark:text-gray-200 hover:bg-stone-100 dark:hover:bg-zinc-800'}
+              {i > 0 ? 'border-l border-stone-200/90 dark:border-zinc-600' : ''}"
+          >{val === undefined ? 'All' : val ? 'Media' : 'No Media'}</button>
+        {/each}
+      </div>
 
       <button
         onclick={() => showMoreFilters = !showMoreFilters}
-        class="{filterBtnCls} {showMoreFilters ? 'bg-primary-500 border-primary-500 text-white' : 'border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600'}"
+        class="{filterBtnCls} {showMoreFilters ? 'bg-primary-500 border-primary-500 text-white' : 'border-stone-200/90 dark:border-zinc-600 bg-ui-card text-gray-600 dark:text-gray-200 hover:bg-stone-100 dark:hover:bg-zinc-800'}"
       >
         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -284,12 +286,12 @@
           class="text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 w-36 bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-200 placeholder:text-gray-600 dark:placeholder:text-gray-400 focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 dark:focus:ring-primary-900"
         />
         {#if tagInputFocused && tagSuggestions.length > 0}
-          <div class="absolute z-20 top-full mt-1 left-0 w-48 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg shadow-lg overflow-hidden">
+          <div class="absolute z-20 top-full mt-1 left-0 w-48 bg-ui-card border border-gray-200 dark:border-gray-600 rounded-lg shadow-lg overflow-hidden">
             {#each tagSuggestions as tag}
               <!-- svelte-ignore a11y_click_events_have_key_events -->
               <!-- svelte-ignore a11y_no_static_element_interactions -->
               <div
-                onclick={() => addTag(tag)}
+                onmousedown={(e) => { e.preventDefault(); addTag(tag); }}
                 class="px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer flex items-center justify-between"
               >
                 <span>{tag}</span>
@@ -357,7 +359,7 @@
 
     <!-- Date range filter -->
     {#if showMoreFilters}
-      <div class="flex flex-wrap gap-2 p-3 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
+      <div class="flex flex-wrap gap-2 p-3 bg-ui-inset rounded-xl border border-stone-200/80 dark:border-zinc-700/80">
         <div class="flex items-center gap-2">
           <label for="filter-date-from" class="text-xs text-gray-500 dark:text-gray-400 font-medium">From</label>
           <input

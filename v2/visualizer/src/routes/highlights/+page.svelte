@@ -203,19 +203,19 @@
 
   <!-- Quick stats row -->
   <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-    <a href="/" class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 shadow-sm text-center hover:border-primary-300 hover:shadow-md transition-all">
+    <a href="/" class="bg-ui-card rounded-xl border border-gray-200 dark:border-gray-700 p-4 shadow-sm text-center hover:border-primary-300 hover:shadow-md transition-all">
       <p class="text-2xl font-bold text-primary-500 dark:text-primary-400">{questions.length}</p>
       <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">Total questions</p>
     </a>
-    <a href="/sessions" class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 shadow-sm text-center hover:border-blue-300 hover:shadow-md transition-all">
+    <a href="/sessions" class="bg-ui-card rounded-xl border border-gray-200 dark:border-gray-700 p-4 shadow-sm text-center hover:border-blue-300 hover:shadow-md transition-all">
       <p class="text-2xl font-bold text-blue-500">{store.getSessions().length}</p>
       <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">Quiz sessions</p>
     </a>
-    <a href="/?asker=" class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 shadow-sm text-center hover:border-green-300 hover:shadow-md transition-all">
+    <a href="/?asker=" class="bg-ui-card rounded-xl border border-gray-200 dark:border-gray-700 p-4 shadow-sm text-center hover:border-green-300 hover:shadow-md transition-all">
       <p class="text-2xl font-bold text-green-500">{store.getAskers().length}</p>
       <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">Askers</p>
     </a>
-    <a href="/?solver=" class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4 shadow-sm text-center hover:border-purple-300 hover:shadow-md transition-all">
+    <a href="/?solver=" class="bg-ui-card rounded-xl border border-gray-200 dark:border-gray-700 p-4 shadow-sm text-center hover:border-purple-300 hover:shadow-md transition-all">
       <p class="text-2xl font-bold text-purple-500">{store.getSolvers().length}</p>
       <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">Solvers</p>
     </a>
@@ -237,7 +237,7 @@
   {#if activeTab === 'leaderboard'}
     <div class="grid gap-6 lg:grid-cols-3">
       <!-- Top Solvers -->
-      <div class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
+      <div class="bg-ui-card rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
         <div class="px-5 py-4 border-b border-gray-100 dark:border-gray-700">
           <h2 class="font-semibold text-gray-900 dark:text-gray-100 flex items-center gap-2">
             <span class="text-lg">🏆</span> Top Solvers
@@ -264,7 +264,7 @@
       </div>
 
       <!-- Top Askers -->
-      <div class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
+      <div class="bg-ui-card rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
         <div class="px-5 py-4 border-b border-gray-100 dark:border-gray-700">
           <h2 class="font-semibold text-gray-900 dark:text-gray-100 flex items-center gap-2">
             <span class="text-lg">💡</span> Top Askers
@@ -292,7 +292,7 @@
 
       <!-- Speed leaderboard -->
       {#if speedLeaderboard.length > 0}
-        <div class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
+        <div class="bg-ui-card rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
           <div class="px-5 py-4 border-b border-gray-100 dark:border-gray-700">
             <h2 class="font-semibold text-gray-900 dark:text-gray-100 flex items-center gap-2">
               <span class="text-lg">⚡</span> Speed Leaderboard
@@ -320,7 +320,7 @@
       <!-- Best Moments -->
       <div class="grid sm:grid-cols-2 gap-6 lg:col-span-3 mt-2">
         <!-- Most discussed -->
-        <div class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
+        <div class="bg-ui-card rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
           <div class="px-5 py-4 border-b border-gray-100 dark:border-gray-700">
             <h2 class="font-semibold text-gray-900 dark:text-gray-100 flex items-center gap-2">
               <span class="text-lg">💬</span> Most Discussed
@@ -340,7 +340,7 @@
         </div>
 
         <!-- Quickest solves -->
-        <div class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
+        <div class="bg-ui-card rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
           <div class="px-5 py-4 border-b border-gray-100 dark:border-gray-700">
             <h2 class="font-semibold text-gray-900 dark:text-gray-100 flex items-center gap-2">
               <span class="text-lg">⚡</span> Quickest Solves
@@ -360,7 +360,7 @@
         </div>
 
         <!-- Trickiest questions -->
-        <div class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden sm:col-span-2">
+        <div class="bg-ui-card rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden sm:col-span-2">
           <div class="px-5 py-4 border-b border-gray-100 dark:border-gray-700">
             <h2 class="font-semibold text-gray-900 dark:text-gray-100 flex items-center gap-2">
               <span class="text-lg">🧩</span> Trickiest Questions
@@ -395,7 +395,7 @@
     <div class="space-y-5">
       <!-- Categories pie chart -->
       {#if pieSlices.length > 0}
-        <div class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm p-5">
+        <div class="bg-ui-card rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm p-5">
           <h2 class="font-semibold text-gray-900 dark:text-gray-100 mb-5">Categories</h2>
           <div class="flex flex-col sm:flex-row items-center gap-6">
             <!-- Donut SVG -->
@@ -454,7 +454,7 @@
       {/if}
 
       <!-- Tags distribution bubble chart -->
-      <div class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm p-5">
+      <div class="bg-ui-card rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm p-5">
         <h2 class="font-semibold text-gray-900 dark:text-gray-100 mb-4">Top Tags</h2>
         <div bind:clientWidth={bubbleContainerW} class="relative">
           {#if hoveredBubble}

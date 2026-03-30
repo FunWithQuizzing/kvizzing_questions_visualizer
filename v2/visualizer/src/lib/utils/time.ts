@@ -79,6 +79,18 @@ export function tzAbbr(tz: string): string {
   }
 }
 
+/** Formats a date for display in the given timezone.
+ *  Accepts either a full ISO timestamp (with 'T') or a plain YYYY-MM-DD string.
+ *  When a full timestamp is given, the date shown reflects the calendar date in `tz`. */
+export function formatDateTz(tsOrDate: string, tz: string): string {
+  try {
+    const dateStr = tsOrDate.includes('T') ? dateInTz(tsOrDate, tz) : tsOrDate;
+    return format(parseISO(dateStr), 'MMM d, yyyy');
+  } catch {
+    return tsOrDate;
+  }
+}
+
 export function getDurationBetween(start: string, end: string): string {
   try {
     const s = parseISO(start);

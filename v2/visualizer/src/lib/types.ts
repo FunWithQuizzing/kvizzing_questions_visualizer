@@ -41,6 +41,7 @@ export interface SessionRef {
   quizmaster: string;
   question_number: number;
   theme: string | null;
+  quiz_type?: 'connect' | null;
 }
 
 export interface Question {
@@ -67,6 +68,8 @@ export interface Session {
   avg_wrong_attempts: number | null;
   participant_count: number;
   scores: unknown;
+  /** If 'connect', the theme is the answer to a connect quiz and should be hidden until revealed. */
+  quiz_type?: 'connect' | null;
 }
 
 export interface Member {

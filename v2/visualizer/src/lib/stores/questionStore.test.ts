@@ -5,7 +5,6 @@ import type { Question, Session, Member } from '$lib/types';
 // Minimal factories — only populate fields relevant to the tests
 function makeQuestion(overrides: Partial<Question> & { id: string }): Question {
   return {
-    id: overrides.id,
     date: overrides.date ?? '2024-01-15',
     question: {
       timestamp: overrides.question?.timestamp ?? '2024-01-15T12:00:00Z',

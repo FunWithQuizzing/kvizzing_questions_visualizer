@@ -15,6 +15,12 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
+FORMAT_TAGS = {
+    "identify", "anagram", "wordplay", "connect", "clickbait",
+    "real life", "naming", "weird", "pun", "battle",
+    "fill in the blank", "multi-part", "factual",
+}
+
 EXPLICIT_CONFIRMS = [
     "correct", "yes", "bingo", "right", "yep", "yess", "yup",
     "✅", "👍", "💯", "perfect", "well done", "!", "exactly",
@@ -185,6 +191,16 @@ def audit(path: Path) -> list[str]:
         # 21. answer_solver set but answer_timestamp is null
         if solver and not ans_ts:
             issues.append(f"SOLVER_NO_TIMESTAMP {label}: {solver!r}")
+
+        # 22. tags contain question-format descriptors (not subject categories)
+        for tag in q.get("tags") or []:
+            if tag.lower() in FORMAT_TAGS:
+                issues.append(f"FORMAT_TAG          {label}: {tag!r}")
+
+        # 23. "badly explained" variant inconsistency
+        tags_lower = [t.lower() for t in (q.get("tags") or [])]
+        if "badly explained plots" in tags_lower:
+            issues.append(f"TAG_VARIANT         {label}: use 'badly explained' not 'badly explained plots'")
 
     return issues
 

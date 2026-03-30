@@ -2,6 +2,7 @@
   import { goto } from '$app/navigation';
   import type { QuestionStore } from '$lib/stores/questionStore';
   import { dateInTz } from '$lib/utils/time';
+  import { CALENDAR_PILL } from '$lib/config/ui';
 
   let { store, tz = 'Europe/London' }: { store: QuestionStore; tz?: string } = $props();
 
@@ -34,9 +35,11 @@
       const d = ts ? dateInTz(ts, tz) : session.date;
       if (!map.has(d)) map.set(d, { sessions: [], questionCount: 0 });
       const label = initials(session.quizmaster);
-      const tooltip = session.theme
-        ? `${session.quizmaster} — ${session.theme}`
-        : `${session.quizmaster}'s Quiz`;
+      const tooltip = session.quiz_type === 'connect'
+        ? `${session.quizmaster}'s Connect Quiz`
+        : session.theme
+          ? `${session.quizmaster} — ${session.theme}`
+          : `${session.quizmaster}'s Quiz`;
       map.get(d)!.sessions.push({ id: session.id, label, tooltip });
     }
 
@@ -148,7 +151,7 @@
   {@const popSessions = activityByDate.get(popoverDate)?.sessions ?? []}
   <!-- svelte-ignore a11y_no_static_element_interactions -->
   <div
-    class="fixed z-50 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-xl py-1.5 min-w-[170px]"
+    class="fixed z-50 bg-ui-card border border-gray-200 dark:border-gray-700 rounded-xl shadow-xl py-1.5 min-w-[170px]"
     style="top: {popoverTop}px; left: {popoverLeft}px;"
     onmouseenter={cancelClose}
     onmouseleave={scheduleClose}
@@ -168,7 +171,9 @@
   </div>
 {/if}
 
-<div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
+<div class="relative bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
+  <div class="absolute inset-0 bg-cover bg-center opacity-[0.07] dark:opacity-[0.05]"></div>
+  <div class="relative">
   <!-- Header -->
   <div class="px-4 pt-4 pb-2 flex items-center justify-center">
     <div class="flex items-center gap-1">
@@ -238,7 +243,7 @@
         <span
           title="{questionCount} question{questionCount > 1 ? 's' : ''}"
           class="w-full text-center text-[10px] font-semibold leading-none px-0.5 py-[2px] rounded mt-px
-            {questionCount > 0 && cell.inMonth ? 'bg-primary-100 text-primary-600 dark:bg-primary-900/40 dark:text-primary-300' : 'invisible'}"
+            {questionCount > 0 && cell.inMonth ? `${CALENDAR_PILL.questions.bg} ${CALENDAR_PILL.questions.text}` : 'invisible'}"
         >
           {questionCount}
         </span>
@@ -249,12 +254,25 @@
           onmouseleave={scheduleClose}
           onclick={(e) => { e.stopPropagation(); if (sessionInfos.length > 0 && cell.inMonth) goto(`/?dateFrom=${cell.dateStr}&dateTo=${cell.dateStr}`); }}
           class="w-full text-center text-[10px] font-bold leading-none px-0.5 py-[2px] rounded mt-px transition-colors
-            {sessionInfos.length > 0 && cell.inMonth ? 'bg-primary-500 dark:bg-primary-600 text-white hover:bg-primary-600 dark:hover:bg-primary-700' : 'invisible'}"
+            {sessionInfos.length > 0 && cell.inMonth ? `${CALENDAR_PILL.sessions.bg} ${CALENDAR_PILL.sessions.text} ${CALENDAR_PILL.sessions.hover}` : 'invisible'}"
         >
           {sessionInfos.length}
         </button>
       </div>
     {/each}
+  </div>
+
+  <!-- Legend -->
+  <div class="px-3 pb-3 flex items-center gap-3 justify-center">
+    <div class="flex items-center gap-1.5">
+      <span class="inline-block w-5 h-3.5 rounded {CALENDAR_PILL.questions.bg}"></span>
+      <span class="text-[10px] text-gray-600 dark:text-gray-300">Questions</span>
+    </div>
+    <div class="flex items-center gap-1.5">
+      <span class="inline-block w-5 h-3.5 rounded {CALENDAR_PILL.sessions.bg}"></span>
+      <span class="text-[10px] text-gray-600 dark:text-gray-300">Quiz sessions</span>
+    </div>
+  </div>
   </div>
 
 </div>

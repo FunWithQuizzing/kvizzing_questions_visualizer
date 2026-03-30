@@ -2,13 +2,21 @@
   import { getContext } from 'svelte';
   import { goto } from '$app/navigation';
   import type { QuestionStore } from '$lib/stores/questionStore';
-  import { formatDate, formatTime } from '$lib/utils/time';
+  import { formatDateTz, formatTime } from '$lib/utils/time';
+  import { SESSION_IMAGE_OPACITY } from '$lib/config/ui';
 
   const store = getContext<QuestionStore>('store');
+  const tzCtx = getContext<{ value: string }>('timezone');
   const sessions = store.getSessions();
   const stats = store.getTotalStats();
+  const sessionTs = store.getSessionEarliestTimestamps();
+
+  function sessionDate(session: { id: string; date: string }): string {
+    const ts = sessionTs.get(session.id);
+    return formatDateTz(ts ?? session.date, tzCtx?.value ?? 'Europe/London');
+  }
   const sessionQuestionCount = sessions.reduce((sum, s) => sum + s.question_count, 0);
-  const sinceDate = stats.earliestDate ? formatDate(stats.earliestDate) : '';
+  const sinceDate = $derived(stats.earliestTimestamp ? formatDateTz(stats.earliestTimestamp, tzCtx?.value ?? 'Europe/London') : '');
 
   function randomQuiz() {
     if (sessions.length === 0) return;
@@ -20,13 +28,20 @@
 
   let search = $state('');
   let filterQuizmaster = $state('');
+  let filterConnect = $state<'all' | 'connect' | 'regular'>('all');
   let sortBy = $state<'newest' | 'oldest' | 'most_questions'>('newest');
 
   const filtered = $derived.by(() => {
     let results = sessions.filter(s => {
       const q = search.trim().toLowerCase();
-      if (q && !(s.theme?.toLowerCase().includes(q) || s.quizmaster.toLowerCase().includes(q))) return false;
+      // Don't match on theme for connect quizzes — the theme is the answer
+      const searchable = s.quiz_type === 'connect'
+        ? s.quizmaster.toLowerCase()
+        : (s.theme?.toLowerCase() ?? '') + ' ' + s.quizmaster.toLowerCase();
+      if (q && !searchable.includes(q)) return false;
       if (filterQuizmaster && s.quizmaster !== filterQuizmaster) return false;
+      if (filterConnect === 'connect' && s.quiz_type !== 'connect') return false;
+      if (filterConnect === 'regular' && s.quiz_type === 'connect') return false;
       return true;
     });
 
@@ -37,11 +52,12 @@
     return results;
   });
 
-  const hasFilters = $derived(search || filterQuizmaster || sortBy !== 'newest');
+  const hasFilters = $derived(search || filterQuizmaster || filterConnect !== 'all' || sortBy !== 'newest');
 
   function clearFilters() {
     search = '';
     filterQuizmaster = '';
+    filterConnect = 'all';
     sortBy = 'newest';
   }
 </script>
@@ -123,6 +139,19 @@
         <option value="most_questions">Most questions</option>
       </select>
 
+      <!-- Connect quiz filter toggle -->
+      <div class="flex items-center rounded-lg border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-sm overflow-hidden flex-shrink-0">
+        {#each [['all', 'All'], ['connect', 'Connect'], ['regular', 'Regular']] as [val, label]}
+          <button
+            onclick={() => filterConnect = val as typeof filterConnect}
+            class="px-3 py-1.5 transition-colors
+              {filterConnect === val
+                ? 'bg-primary-500 text-white'
+                : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600'}"
+          >{label}</button>
+        {/each}
+      </div>
+
       {#if hasFilters}
         <button
           onclick={clearFilters}
@@ -156,13 +185,15 @@
       {#each filtered as session}
         <a
           href="/session/{session.id}"
-          class="relative overflow-hidden block bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-primary-200 transition-all p-5 group"
+          class="relative overflow-hidden block bg-ui-card rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-primary-200 transition-all p-5 group"
+          onmouseenter={(e) => { const bg = e.currentTarget.querySelector('.session-bg') as HTMLElement | null; if (bg) bg.style.opacity = String(SESSION_IMAGE_OPACITY.card.hover); }}
+          onmouseleave={(e) => { const bg = e.currentTarget.querySelector('.session-bg') as HTMLElement | null; if (bg) bg.style.opacity = String(SESSION_IMAGE_OPACITY.card.default); }}
         >
           <div
-            class="absolute inset-0 bg-cover bg-center opacity-50 dark:opacity-50 transition-opacity group-hover:opacity-70"
-            style="background-image: url('/images/sessions/{session.id}.jpg')"
+            class="session-bg absolute inset-0 bg-cover bg-center transition-opacity"
+            style="background-image: url('{session.quiz_type === 'connect' ? '/images/connect-quiz-bg.png' : '/images/sessions/' + session.id + '.jpg'}'); opacity: {SESSION_IMAGE_OPACITY.card.default}"
           ></div>
-          <div class="absolute inset-0 bg-white/60 dark:bg-gray-800/60"></div>
+
           <div class="relative flex items-start justify-between gap-4">
             <div class="flex-1 min-w-0">
               <!-- Title -->
@@ -173,21 +204,31 @@
                   </svg>
                 </div>
                 <div>
-                  <h2 class="text-base font-semibold text-gray-900 dark:text-gray-100 group-hover:text-primary-600 transition-colors">
-                    {session.theme ?? `${session.quizmaster}'s Quiz`}
-                  </h2>
-                  <p class="text-xs text-gray-700 dark:text-gray-300">Hosted by {session.quizmaster} · {formatDate(session.date)}</p>
+                  <div class="flex items-center gap-2">
+                    <h2 class="text-base font-semibold text-primary-800 dark:text-primary-200 group-hover:text-primary-600 dark:group-hover:text-primary-300 transition-colors">
+                      {session.quiz_type === 'connect' ? `${session.quizmaster}'s Connect Quiz` : (session.theme ?? `${session.quizmaster}'s Quiz`)}
+                    </h2>
+                    {#if session.quiz_type === 'connect'}
+                      <span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full text-[10px] font-semibold bg-primary-100 text-primary-600 dark:bg-primary-900/40 dark:text-primary-300 flex-shrink-0">
+                        <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                        </svg>
+                        Connect
+                      </span>
+                    {/if}
+                  </div>
+                  <p class="text-xs text-gray-700 dark:text-gray-300">Hosted by {session.quizmaster} · {sessionDate(session)}</p>
                 </div>
               </div>
 
               <!-- Stats row -->
               <div class="flex flex-wrap gap-4 mt-3 text-sm">
                 <div class="flex items-center gap-1.5 text-gray-800 dark:text-gray-200">
-                  <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg class="w-4 h-4 text-primary-300 dark:text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <span class="font-medium">{session.question_count}</span>
-                  <span class="text-gray-600 dark:text-gray-400">questions</span>
+                  <span class="text-primary-600 dark:text-primary-300">questions</span>
                 </div>
                 {#if session.participant_count > 0}
                   <div class="flex items-center gap-1.5 text-gray-800 dark:text-gray-200">
@@ -195,7 +236,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                     <span class="font-medium">{session.participant_count}</span>
-                    <span class="text-gray-600 dark:text-gray-400">participants</span>
+                    <span class="text-primary-600 dark:text-primary-300">participants</span>
                   </div>
                 {/if}
                 {#if session.avg_time_to_answer_seconds}
@@ -204,7 +245,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span class="font-medium">{formatTime(session.avg_time_to_answer_seconds)}</span>
-                    <span class="text-gray-600 dark:text-gray-400">avg solve</span>
+                    <span class="text-primary-600 dark:text-primary-300">avg solve</span>
                   </div>
                 {/if}
                 {#if session.avg_wrong_attempts}
@@ -213,7 +254,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                     <span class="font-medium">{session.avg_wrong_attempts.toFixed(1)}</span>
-                    <span class="text-gray-600 dark:text-gray-400">avg wrong</span>
+                    <span class="text-primary-600 dark:text-primary-300">avg wrong</span>
                   </div>
                 {/if}
               </div>

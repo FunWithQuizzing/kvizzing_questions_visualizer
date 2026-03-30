@@ -6,7 +6,8 @@
   import { goto } from '$app/navigation';
   import favicon from '$lib/assets/favicon.svg';
   import { QuestionStore } from '$lib/stores/questionStore';
-  import { tzAbbr } from '$lib/utils/time';
+  import { tzAbbr, dateInTz, formatDateTz } from '$lib/utils/time';
+  import { SESSION_IMAGE_OPACITY } from '$lib/config/ui';
   import CalendarSidebar from '$lib/components/CalendarSidebar.svelte';
   import MaraudersAuth from '$lib/components/MaraudersAuth.svelte';
 
@@ -59,8 +60,10 @@
 
   const tz = $state({ value: 'Europe/London' });
   setContext('timezone', tz);
+
   const sidebarSessions = store.getSessions();
   const sidebarQuestions = store.getQuestions();
+  const sidebarSessionTs = store.getSessionEarliestTimestamps();
 
   const MONTHS_SHORT = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   function ordinalDate(dateStr: string): string {
@@ -71,7 +74,7 @@
   }
 
   let authenticated = $state<boolean | null>(null);
-  let darkMode = $state(false);
+  const dm = $state({ value: false });
   let showTzPicker = $state(false);
   let tzSearch = $state('');
 
@@ -86,8 +89,8 @@
 
   onMount(() => {
     authenticated = localStorage.getItem('kvizzing_auth') === 'true';
-    darkMode = localStorage.getItem('kvizzing_dark') === 'true';
-    if (darkMode) document.documentElement.classList.add('dark');
+    dm.value = localStorage.getItem('kvizzing_dark') === 'true';
+    if (dm.value) document.documentElement.classList.add('dark');
     const saved = localStorage.getItem('kvizzing_theme') ?? 'sky';
     colorTheme = saved;
     applyTheme(saved);
@@ -119,9 +122,9 @@
   }
 
   function toggleDark() {
-    darkMode = !darkMode;
-    localStorage.setItem('kvizzing_dark', String(darkMode));
-    document.documentElement.classList.toggle('dark', darkMode);
+    dm.value = !dm.value;
+    localStorage.setItem('kvizzing_dark', String(dm.value));
+    document.documentElement.classList.toggle('dark', dm.value);
   }
 
   function onAuthenticated() {
@@ -155,9 +158,9 @@
   <MaraudersAuth {onAuthenticated} />
 {:else}
 
-<div class="h-screen flex flex-col bg-gray-50 dark:bg-gray-900 overflow-hidden">
+<div class="h-screen flex flex-col bg-ui-parchment overflow-hidden">
   <!-- Top nav -->
-  <nav class="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 flex-shrink-0 z-40 shadow-sm">
+  <nav class="bg-white/97 dark:bg-zinc-900/88 backdrop-blur-md border-b border-stone-200/90 dark:border-zinc-700/70 flex-shrink-0 z-40 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div class="flex items-center justify-between h-14">
         <!-- Logo -->
@@ -195,10 +198,10 @@
             class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 transition-colors"
             aria-label="Give feedback"
           >
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
             </svg>
-            <span class="text-sm font-medium">Feedback</span>
+            <span class="text-xs font-medium">Feedback</span>
           </a>
 
           <!-- Divider -->
@@ -213,7 +216,7 @@
             <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <span class="text-xs font-medium">{tzAbbr(tz.value)}</span>
+            <span class="text-xs font-medium">{TIMEZONES.find(z => z.id === tz.value)?.label ?? tzAbbr(tz.value)}</span>
           </button>
 
           <!-- Color theme -->
@@ -232,7 +235,7 @@
             class="p-1.5 rounded-lg text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 transition-colors"
             aria-label="Toggle dark mode"
           >
-            {#if darkMode}
+            {#if dm.value}
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
               </svg>
@@ -263,7 +266,7 @@
 
     <!-- Mobile menu dropdown -->
     {#if mobileMenuOpen}
-      <div class="sm:hidden border-t border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-800 px-4 py-2">
+      <div class="sm:hidden border-t border-stone-200/80 dark:border-zinc-700/80 bg-white/[0.99] dark:bg-zinc-900/95 px-4 py-2">
         {#each navLinks as link}
           <a
             href={link.href}
@@ -313,7 +316,7 @@
           class="w-full text-left px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 transition-colors flex items-center gap-2"
           aria-label="Toggle dark mode"
         >
-          {#if darkMode}
+          {#if dm.value}
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
             </svg>
@@ -336,6 +339,10 @@
         <!-- Main content -->
         <main class="flex-1 min-w-0">
           {@render children()}
+          <!-- Calendar — mobile only (below content) -->
+          <div class="lg:hidden mt-6">
+            <CalendarSidebar {store} tz={tz.value} />
+          </div>
         </main>
 
         <!-- Calendar sidebar — desktop only -->
@@ -346,25 +353,31 @@
             {#if $page.url.pathname === '/sessions'}
               <!-- Questions list (shown on /sessions page) -->
               {#if sidebarQuestions.length > 0}
-                <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
-                  <div class="px-4 py-3 border-b border-gray-100 dark:border-gray-700 flex items-center justify-between">
+                <div class="bg-ui-card rounded-xl border border-stone-200/80 dark:border-zinc-600/80 shadow-sm overflow-hidden">
+                  <div class="px-4 py-3 border-b border-stone-100 dark:border-zinc-700/80 flex items-center justify-between">
                     <h2 class="text-xs font-semibold text-gray-500 dark:text-gray-400">All Questions</h2>
                     <a href="/" class="text-xs text-primary-500 dark:text-primary-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors">Feed →</a>
                   </div>
                   <div class="relative">
-                    <div class="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-white dark:from-gray-800 to-transparent z-10"></div>
-                    <div class="divide-y divide-gray-100 dark:divide-gray-700 max-h-80 overflow-y-auto">
+                    <div class="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-white dark:from-[#1c1c1c] to-transparent z-10"></div>
+                    <div class="divide-y divide-stone-100 dark:divide-zinc-700/80 max-h-80 overflow-y-auto">
                       {#each sidebarQuestions as question}
                         <a
                           href="/question/{question.id}"
-                          class="flex items-center gap-3 px-4 py-2.5 hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors group"
+                          class="relative overflow-hidden flex items-center gap-3 px-4 py-2.5 hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors group"
                         >
-                          <span class="text-[10px] text-gray-400 dark:text-gray-500 flex-shrink-0 w-20">{ordinalDate(question.date)}</span>
-                          <div class="min-w-0 flex-1 text-right">
+                          <div
+                            class="absolute inset-0 transition-opacity"
+                            style="background-image: url('/images/question-bg.png'), url('/images/yellow-bg.png'); background-size: auto 100%, cover; background-position: left center, center; background-repeat: no-repeat, no-repeat; opacity: {SESSION_IMAGE_OPACITY.sidebar.default}"
+                            onmouseenter={(e) => { (e.currentTarget as HTMLElement).style.opacity = String(SESSION_IMAGE_OPACITY.sidebar.hover); }}
+                            onmouseleave={(e) => { (e.currentTarget as HTMLElement).style.opacity = String(SESSION_IMAGE_OPACITY.sidebar.default); }}
+                          ></div>
+                          <span class="relative text-[10px] text-gray-600 dark:text-gray-400 flex-shrink-0 w-20">{ordinalDate(question.question?.timestamp ? dateInTz(question.question.timestamp, tz.value) : question.date)}</span>
+                          <div class="relative min-w-0 flex-1 text-right">
                             <p class="text-xs font-semibold text-gray-700 dark:text-gray-300 truncate group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
                               {question.question.text}
                             </p>
-                            <p class="text-xs text-gray-400 dark:text-gray-500">{question.question.asker}</p>
+                            <p class="text-xs text-gray-600 dark:text-gray-400">{question.question.asker}</p>
                           </div>
                         </a>
                       {/each}
@@ -375,27 +388,32 @@
             {:else}
               <!-- Sessions list (shown on all other pages) -->
               {#if sidebarSessions.length > 0}
-                <div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
-                  <div class="px-4 py-3 border-b border-gray-100 dark:border-gray-700 flex items-center justify-between">
+                <div class="bg-ui-card rounded-xl border border-stone-200/80 dark:border-zinc-600/80 shadow-sm overflow-hidden">
+                  <div class="px-4 py-3 border-b border-stone-100 dark:border-zinc-700/80 flex items-center justify-between">
                     <h2 class="text-xs font-semibold text-gray-500 dark:text-gray-400">Quiz Sessions</h2>
                     <a href="/sessions" class="text-xs text-primary-500 dark:text-primary-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors">All →</a>
                   </div>
                   <div class="relative">
-                    <div class="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-white dark:from-gray-800 to-transparent z-10"></div>
-                    <div class="divide-y divide-gray-100 dark:divide-gray-700 max-h-80 overflow-y-auto">
+                    <div class="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-white dark:from-[#1c1c1c] to-transparent z-10"></div>
+                    <div class="divide-y divide-stone-100 dark:divide-zinc-700/80 max-h-80 overflow-y-auto">
                       {#each sidebarSessions as session}
                         <a
                           href="/session/{session.id}"
                           class="relative overflow-hidden flex items-center gap-3 px-4 py-2.5 hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors group"
+                          onmouseenter={(e) => { const bg = e.currentTarget.querySelector('.session-bg') as HTMLElement | null; if (bg) bg.style.opacity = String(SESSION_IMAGE_OPACITY.sidebar.hover); }}
+                          onmouseleave={(e) => { const bg = e.currentTarget.querySelector('.session-bg') as HTMLElement | null; if (bg) bg.style.opacity = String(SESSION_IMAGE_OPACITY.sidebar.default); }}
                         >
-                          <div class="absolute inset-0 bg-cover bg-center opacity-40 dark:opacity-40 transition-opacity group-hover:opacity-50" style="background-image: url('/images/sessions/{session.id}.jpg')"></div>
-                          <div class="absolute inset-0 bg-white/70 dark:bg-gray-800/70"></div>
-                          <span class="relative text-[10px] text-gray-400 dark:text-gray-500 flex-shrink-0 w-20">{ordinalDate(session.date)}</span>
+                          <div
+                            class="session-bg absolute inset-0 bg-cover bg-center transition-opacity"
+                            style="background-image: url('{session.quiz_type === 'connect' ? '/images/connect-quiz-bg.png' : '/images/sessions/' + session.id + '.jpg'}'); opacity: {SESSION_IMAGE_OPACITY.sidebar.default}"
+                          ></div>
+
+                          <span class="relative text-[10px] text-gray-600 dark:text-gray-400 flex-shrink-0 w-20">{ordinalDate(dateInTz(sidebarSessionTs.get(session.id) ?? session.date, tz.value))}</span>
                           <div class="relative min-w-0 flex-1 text-right">
                             <p class="text-xs font-semibold text-gray-700 dark:text-gray-300 truncate group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
-                              {session.theme ?? `${session.quizmaster}'s Quiz`}
+                              {session.quiz_type === 'connect' ? `${session.quizmaster}'s Connect Quiz` : (session.theme ?? `${session.quizmaster}'s Quiz`)}
                             </p>
-                            <p class="text-xs text-gray-400 dark:text-gray-500 truncate">{session.quizmaster} · {session.question_count} questions</p>
+                            <p class="text-xs text-gray-600 dark:text-gray-400 truncate">{session.quizmaster} · {session.question_count} questions</p>
                           </div>
                         </a>
                       {/each}
@@ -426,7 +444,7 @@
     class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm"
     onclick={(e) => { if (e.target === e.currentTarget && localStorage.getItem('kvizzing_tz')) showTzPicker = false; }}
   >
-    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 w-full max-w-sm mx-4">
+    <div class="bg-ui-card rounded-2xl shadow-xl p-6 w-full max-w-sm mx-4">
       <div class="flex items-center gap-2 mb-1">
         <svg class="w-5 h-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />

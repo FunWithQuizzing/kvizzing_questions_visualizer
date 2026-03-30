@@ -1,7 +1,9 @@
 <script lang="ts">
   import type { Question } from '$lib/types';
+  import { getContext } from 'svelte';
   import { goto } from '$app/navigation';
-  import { formatDate, formatTime } from '$lib/utils/time';
+  import { formatDateTz, formatTime } from '$lib/utils/time';
+  const tzCtx = getContext<{ value: string } | undefined>('timezone');
   import MemberAvatar from './MemberAvatar.svelte';
   import { topicCls, topicLabel } from '$lib/utils/topicColors';
   import { filterHints } from '$lib/utils/hints';
@@ -47,7 +49,7 @@
   }
 </script>
 
-<article class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-gray-300 transition-all duration-200 overflow-hidden group">
+<article class="bg-ui-card rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-gray-300 transition-all duration-200 overflow-hidden group">
   <!-- Clickable card body -->
   <!-- svelte-ignore a11y_no_static_element_interactions -->
   <!-- svelte-ignore a11y_click_events_have_key_events -->
@@ -64,7 +66,7 @@
         <MemberAvatar username={q.asker} />
         <div>
           <span class="text-sm font-medium text-gray-900 dark:text-gray-100">{q.asker}</span>
-          <span class="text-xs text-gray-400 dark:text-gray-500 ml-1.5">{formatDate(question.date)}</span>
+          <span class="text-xs text-gray-400 dark:text-gray-500 ml-1.5">{formatDateTz(question.question.timestamp ?? question.date, tzCtx?.value ?? 'Europe/London')}</span>
         </div>
       </div>
       <div class="flex items-center gap-1.5 flex-shrink-0 flex-wrap justify-end">
@@ -73,7 +75,7 @@
             href="/session/{question.session.id}"
             class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-primary-100 text-primary-700 hover:bg-primary-200 dark:bg-primary-900/40 dark:text-primary-300 dark:hover:bg-primary-900/40 transition-colors"
           >
-            #{question.session.question_number} {question.session.theme ?? 'Session'}
+            #{question.session.question_number} {question.session.quiz_type === 'connect' ? `${question.session.quizmaster}'s Connect Quiz` : (question.session.theme ?? 'Session')}
           </a>
         {/if}
         {#each q.topics ?? [] as topic}

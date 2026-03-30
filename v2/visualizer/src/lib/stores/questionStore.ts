@@ -62,9 +62,9 @@ export class QuestionStore {
     const q = [...questions];
     switch (sort) {
       case 'newest':
-        return q.sort((a, b) => b.date.localeCompare(a.date));
+        return q.sort((a, b) => (b.question?.timestamp ?? b.date).localeCompare(a.question?.timestamp ?? a.date));
       case 'oldest':
-        return q.sort((a, b) => a.date.localeCompare(b.date));
+        return q.sort((a, b) => (a.question?.timestamp ?? a.date).localeCompare(b.question?.timestamp ?? b.date));
       case 'most_discussed':
         return q.sort((a, b) => (b.discussion?.length ?? 0) - (a.discussion?.length ?? 0));
       case 'quickest':
@@ -128,12 +128,34 @@ export class QuestionStore {
     return [...topics].sort();
   }
 
+  /** Returns a map of session ID → earliest question ISO timestamp in that session. */
+  getSessionEarliestTimestamps(): Map<string, string> {
+    const map = new Map<string, string>();
+    for (const q of this.questions) {
+      if (q.session?.id && q.question?.timestamp) {
+        const existing = map.get(q.session.id);
+        if (!existing || q.question.timestamp < existing) {
+          map.set(q.session.id, q.question.timestamp);
+        }
+      }
+    }
+    return map;
+  }
+
   getTotalStats() {
     const questions = this.questions.filter(q => q.extraction_confidence !== 'low');
+    const earliest = questions.reduce<Question | null>(
+      (min, q) => {
+        const ts = q.question?.timestamp ?? q.date;
+        const minTs = min?.question?.timestamp ?? min?.date ?? '';
+        return !min || ts < minTs ? q : min;
+      }, null
+    );
     return {
       total: questions.length,
       sessions: this.sessions.length,
-      earliestDate: questions.reduce((min, q) => q.date < min ? q.date : min, questions[0]?.date ?? ''),
+      earliestDate: earliest?.date ?? '',
+      earliestTimestamp: earliest?.question?.timestamp ?? earliest?.date ?? '',
     };
   }
 

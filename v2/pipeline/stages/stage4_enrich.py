@@ -3,11 +3,11 @@ Stage 4 — Enrich
 
 Assigns topic and tags to each KVizzingQuestion via LLM.
 
-Questions that already have a topic are skipped (idempotent).
+Questions that already have topic(s) are skipped (idempotent).
 Questions are sent to the LLM in batches for efficiency.
 
 Input:  list of KVizzingQuestion objects from Stage 3
-Output: list of KVizzingQuestion objects with topic + tags populated
+Output: list of KVizzingQuestion objects with topics + tags populated
 """
 
 from __future__ import annotations
@@ -40,8 +40,17 @@ You are classifying quiz questions from a WhatsApp trivia group.
 For each question you receive, assign:
 1. topic — one of: history, science, literature, technology, sports, geography,
    entertainment, food_drink, art_culture, business, general
-2. tags — 2–5 lowercase free-form tags for fine-grained categorisation
+2. tags — 2–5 lowercase subject/category tags for fine-grained categorisation
    (e.g. ["india", "colonial history", "economics"])
+
+Tag rules — CRITICAL:
+- Tags must describe the SUBJECT MATTER of the question (what it is about), never the question format or style.
+- NEVER use question-format words as tags: identify, anagram, wordplay, connect, fill in the blank,
+  multi-part, factual, battle, clickbait, pun, puns, weird, real life, naming, or any other
+  descriptor that describes how the question is asked rather than what it is about.
+- Exception: "badly explained" is an accepted subject-style tag for questions in that format.
+- Tags should be specific enough to be useful (e.g. "bollywood" not just "india", "ww2" not just "war").
+- Use consistent singular/plural forms and avoid near-duplicates (e.g. only "puns", not both "pun" and "puns").
 
 You will receive a JSON array of questions. Return a JSON array of the same length,
 in the same order, where each element is:
@@ -108,7 +117,7 @@ def _apply_enrichment(
     question: KVizzingQuestion,
     enrichment: dict,
 ) -> KVizzingQuestion:
-    """Return a copy of question with topic and tags applied."""
+    """Return a copy of question with primary topic (topics[0]) and tags applied."""
     topic_str = enrichment.get("topic", "")
     tags = enrichment.get("tags", [])
 
@@ -119,7 +128,7 @@ def _apply_enrichment(
 
     # Pydantic v2: model_copy(update=...) for nested field replacement
     updated_question = question.question.model_copy(
-        update={"topic": topic, "tags": tags}
+        update={"topics": [topic], "tags": tags}
     )
     return question.model_copy(update={"question": updated_question})
 
@@ -130,8 +139,8 @@ def enrich(
     llm_client,
 ) -> list[KVizzingQuestion]:
     """
-    Enrich a list of questions with topic and tags via LLM.
-    Already-enriched questions (topic is not None) are skipped.
+    Enrich a list of questions with topics and tags via LLM.
+    Already-enriched questions (non-empty ``question.topics``) are skipped.
     """
     batch_size: int = config["stage4"]["llm_batch_size"]
 

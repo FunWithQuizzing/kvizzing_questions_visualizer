@@ -26,7 +26,7 @@
   }
 </script>
 
-<div class="auth-wrap">
+<div class="auth-wrap bg-ui-parchment">
   <div class="title-text">
     <p>I solemnly swear that I am up to no good.</p>
   </div>
@@ -101,7 +101,6 @@
 <style>
   .auth-wrap {
     min-height: 100vh;
-    background: #f9fafb;
     font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
     display: flex;
     flex-direction: column;

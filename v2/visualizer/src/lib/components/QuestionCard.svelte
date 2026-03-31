@@ -12,18 +12,22 @@
   let {
     question,
     showAnswer = false,
+    revealAll = false,
     compact = false,
     hideSession = false,
   }: {
     question: Question;
     showAnswer?: boolean;
+    revealAll?: boolean;
     compact?: boolean;
     hideSession?: boolean;
   } = $props();
 
-  // showAnswer is a one-time initial prop — intentional
-  // svelte-ignore state_referenced_locally
   let revealed = $state(showAnswer);
+
+  $effect(() => {
+    revealed = revealAll || showAnswer;
+  });
   let hintsShown = $state(0);
   let input = $state('');
   let result = $state<'correct' | 'almost' | 'wrong' | null>(null);
@@ -109,43 +113,43 @@
       </p>
     </a>
 
-    <!-- Tags (only shown after reveal) -->
-    {#if revealed && q.tags && q.tags.length > 0}
-      <div class="flex gap-1.5 mt-2.5 flex-wrap">
-        {#each q.tags as tag}
-          <button
-            onclick={(e) => { e.stopPropagation(); goto(`/?tag=${encodeURIComponent(tag)}`); }}
-            class="text-xs px-2 py-0.5 bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-400 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
-          >{tag}</button>
-        {/each}
+    <!-- Stats row + tags -->
+    <div class="flex items-center justify-between gap-3 mt-3">
+      <div class="flex items-center gap-4 text-xs text-gray-400 dark:text-gray-500 min-w-0">
+        {#if stats?.time_to_answer_seconds}
+          <span class="flex items-center gap-1 flex-shrink-0">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            {formatTime(stats.time_to_answer_seconds)}
+          </span>
+        {/if}
+        {#if stats?.wrong_attempts > 0}
+          <span class="flex items-center gap-1 flex-shrink-0">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+            {stats.wrong_attempts} wrong
+          </span>
+        {/if}
+        {#if question.discussion?.length > 0}
+          <span class="flex items-center gap-1 flex-shrink-0">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
+            {question.discussion.length} messages
+          </span>
+        {/if}
       </div>
-    {/if}
-
-    <!-- Stats row -->
-    <div class="flex items-center gap-4 mt-3 text-xs text-gray-400 dark:text-gray-500">
-      {#if stats?.time_to_answer_seconds}
-        <span class="flex items-center gap-1">
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          {formatTime(stats.time_to_answer_seconds)}
-        </span>
-      {/if}
-      {#if stats?.wrong_attempts > 0}
-        <span class="flex items-center gap-1">
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-          {stats.wrong_attempts} wrong
-        </span>
-      {/if}
-      {#if question.discussion?.length > 0}
-        <span class="flex items-center gap-1">
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-          </svg>
-          {question.discussion.length} messages
-        </span>
+      {#if revealed && q.tags && q.tags.length > 0}
+        <div class="flex gap-1 flex-wrap justify-end">
+          {#each q.tags as tag}
+            <button
+              onclick={(e) => { e.stopPropagation(); goto(`/?tag=${encodeURIComponent(tag)}`); }}
+              class="text-xs px-2 py-0.5 bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-400 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 hover:text-gray-700 dark:hover:text-gray-200 transition-colors whitespace-nowrap"
+            >{tag}</button>
+          {/each}
+        </div>
       {/if}
     </div>
   </div>
@@ -153,7 +157,7 @@
   <!-- Answer reveal strip -->
   <div class="border-t border-gray-100 dark:border-gray-700">
     {#if revealed}
-      <div class="px-4 py-3 bg-green-50 dark:bg-green-900/30 flex flex-wrap items-center gap-x-3 gap-y-1">
+      <div class="px-3 py-2.5 min-h-[48px] bg-green-50 dark:bg-green-900/30 flex flex-wrap items-center gap-x-3 gap-y-1">
         <span class="text-xs font-medium text-green-600 dark:text-green-400 uppercase tracking-wide flex-shrink-0">Answer</span>
         <span class="text-sm font-semibold text-green-800 dark:text-green-200 flex-1 min-w-0">{a?.text ?? '—'}</span>
         <div class="flex items-center gap-2 flex-shrink-0 ml-auto">

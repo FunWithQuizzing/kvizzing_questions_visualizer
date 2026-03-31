@@ -50,6 +50,7 @@
   let showMoreFilters = $state(false);
   let mobileFiltersOpen = $state(false);
   let sortBy = $state<SortOption>('newest');
+  let revealAll = $state(false);
 
   const activeFilterCount = $derived(
     [filterAsker, filterSolver, filterSessionId].filter(Boolean).length +
@@ -145,12 +146,13 @@
     mq.addEventListener('change', e => { isMobile = e.matches; });
   });
 
-  // Reset mobile limit when filters change
+  // Reset mobile limit and revealAll when filters change
   $effect(() => {
     // touch all filter deps
     searchQuery; filterAsker; filterSolver; filterDateFrom; filterDateTo;
     filterHasMedia; filterSessionId; filterTags; filterTopics;
     mobileLimit = MOBILE_PAGE_SIZE;
+    revealAll = false;
   });
 
   let questionsAtBottom = $state(false);
@@ -159,7 +161,8 @@
     questionsAtBottom = el.scrollHeight - el.scrollTop - el.clientHeight < 8;
   }
 
-  const selectCls = "flex-1 basis-[calc(50%-4px)] lg:flex-none lg:w-32 text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 dark:focus:ring-primary-900 text-gray-600";
+  const selectCls = "flex-1 basis-[calc(50%-4px)] lg:flex-none lg:w-[129px] text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 dark:focus:ring-primary-900 text-gray-600";
+  const filterSizeCls = "flex-1 basis-[calc(50%-4px)] lg:flex-none lg:w-[129px]";
   const filterBtnCls = "flex-none text-sm border rounded-lg px-3 py-1.5 leading-5 transition-colors inline-flex items-center gap-1.5 justify-center whitespace-nowrap";
 </script>
 
@@ -170,73 +173,79 @@
     <div class="flex gap-2">
       <SearchInput bind:value={searchQuery} placeholder="Search questions and answers…" />
       <FiltersToggleButton bind:open={mobileFiltersOpen} count={activeFilterCount} />
-    </div>
-
-    <!-- Primary filters (always visible on desktop, hidden on mobile until Filters tapped) -->
-    <div class="{isMobile && !mobileFiltersOpen ? 'hidden' : ''}">
-    <div class="grid grid-cols-2 gap-2 lg:flex lg:flex-nowrap lg:overflow-x-auto lg:pb-0.5 lg:[scrollbar-width:none] lg:[&::-webkit-scrollbar]:hidden">
-      <select bind:value={filterAsker} class={selectCls}>
-        <option value="">All askers</option>
-        {#each askers as asker}
-          <option value={asker}>{asker}</option>
-        {/each}
-      </select>
-
-      <select bind:value={filterSolver} class={selectCls}>
-        <option value="">All solvers</option>
-        {#each solvers as solver}
-          <option value={solver}>{solver}</option>
-        {/each}
-      </select>
-
-      <select bind:value={sortBy} class={selectCls}>
-        <option value="newest">Newest first</option>
-        <option value="oldest">Oldest first</option>
-        <option value="most_discussed">Most discussed</option>
-        <option value="quickest">Quickest solve</option>
-      </select>
-
-      <select bind:value={filterSessionId} class={selectCls}>
-        <option value="">All sessions</option>
-        {#each allSessions as s}
-          <option value={s.id}>{s.theme ?? `${s.quizmaster}'s Quiz`}</option>
-        {/each}
-      </select>
-
-      <div class="col-span-2 lg:col-auto lg:w-auto lg:flex-none inline-flex rounded-lg border border-gray-200 dark:border-gray-600 overflow-hidden text-sm">
-        {#each ([undefined, true, false] as const) as val, i}
-          <button
-            onclick={() => filterHasMedia = val}
-            class="flex-1 lg:flex-none px-2.5 py-1.5 leading-5 whitespace-nowrap transition-colors
-              {filterHasMedia === val ? 'bg-primary-500 text-white' : 'bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600'}
-              {i > 0 ? 'border-l border-gray-200 dark:border-gray-600' : ''}"
-          >{val === undefined ? 'All' : val ? 'Media' : 'No Media'}</button>
-        {/each}
-      </div>
-
       <button
-        onclick={() => showMoreFilters = !showMoreFilters}
-        class="col-span-2 lg:col-auto w-full lg:w-auto {filterBtnCls} {showMoreFilters ? 'bg-primary-500 border-primary-500 text-white' : 'border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600'}"
+        onclick={() => revealAll = !revealAll}
+        class="flex-none px-4 py-2 text-sm font-medium rounded-xl border transition-colors {revealAll ? 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 border-gray-200 dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-600' : 'bg-primary-500 text-white border-primary-500 hover:bg-primary-600 dark:bg-primary-600 dark:border-primary-600'}"
       >
-        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-        </svg>
-        Date range
+        {revealAll ? 'Hide all' : 'Reveal all'}
       </button>
     </div>
 
-    <!-- Tag + Topic filters -->
-    <div class="flex flex-wrap items-center gap-2">
-      {#if !isMobile || mobileFiltersOpen}
-        <TagFilter bind:tags={filterTags} {allTags} {tagFreq} />
-        <TopicFilter bind:topics={filterTopics} />
-      {/if}
-      <ActiveFilterChips bind:tags={filterTags} bind:topics={filterTopics} hasFilters={!!hasActiveFilters} onClear={clearFilters} />
+    <!-- Primary filters — shown when filters open -->
+    {#if mobileFiltersOpen}
+    <div class="space-y-2">
+      <!-- Row 1: main filters -->
+      <div class="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap">
+        <select bind:value={filterAsker} class={selectCls}>
+          <option value="">All askers</option>
+          {#each askers as asker}
+            <option value={asker}>{asker}</option>
+          {/each}
+        </select>
+
+        <select bind:value={filterSolver} class={selectCls}>
+          <option value="">All solvers</option>
+          {#each solvers as solver}
+            <option value={solver}>{solver}</option>
+          {/each}
+        </select>
+
+        <select bind:value={sortBy} class={selectCls}>
+          <option value="newest">Newest first</option>
+          <option value="oldest">Oldest first</option>
+          <option value="most_discussed">Most discussed</option>
+          <option value="quickest">Quickest solve</option>
+        </select>
+
+        <select bind:value={filterSessionId} class={selectCls}>
+          <option value="">All sessions</option>
+          {#each allSessions as s}
+            <option value={s.id}>{s.theme ?? `${s.quizmaster}'s Quiz`}</option>
+          {/each}
+        </select>
+
+        <div class="col-span-2 sm:col-auto sm:flex-none inline-flex rounded-lg border border-gray-200 dark:border-gray-600 overflow-hidden text-sm">
+          {#each ([undefined, true, false] as const) as val, i}
+            <button
+              onclick={() => filterHasMedia = val}
+              class="flex-1 sm:flex-none px-2.5 py-1.5 leading-5 whitespace-nowrap transition-colors
+                {filterHasMedia === val ? 'bg-primary-500 text-white' : 'bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600'}
+                {i > 0 ? 'border-l border-gray-200 dark:border-gray-600' : ''}"
+            >{val === undefined ? 'All' : val ? 'Media' : 'No Media'}</button>
+          {/each}
+        </div>
+
+        <button
+          onclick={() => showMoreFilters = !showMoreFilters}
+          class="col-span-2 sm:col-auto sm:w-auto {filterBtnCls} {showMoreFilters ? 'bg-primary-500 border-primary-500 text-white' : 'border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600'}"
+        >
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          Date range
+        </button>
+      </div>
+
+      <!-- Row 2: tag + topic filters -->
+      <div class="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap">
+        <TagFilter bind:tags={filterTags} {allTags} {tagFreq} class={filterSizeCls} />
+        <TopicFilter bind:topics={filterTopics} class={selectCls} />
+      </div>
     </div>
-    </div>
+    {/if}
 
     <!-- Date range filter -->
-    {#if showMoreFilters && (!isMobile || mobileFiltersOpen)}
+    {#if showMoreFilters && mobileFiltersOpen}
       <div class="flex flex-wrap gap-2 p-3 bg-ui-inset rounded-xl border border-stone-200/80 dark:border-zinc-700/80">
         <div class="flex items-center gap-2">
           <label for="filter-date-from" class="text-xs text-gray-500 dark:text-gray-400 font-medium">From</label>
@@ -258,6 +267,8 @@
         </div>
       </div>
     {/if}
+
+    <ActiveFilterChips bind:tags={filterTags} bind:topics={filterTopics} hasFilters={!!hasActiveFilters} onClear={clearFilters} />
   </div>
 
   <!-- Results count -->
@@ -284,7 +295,7 @@
       </div>
     {:else}
       {#each (isMobile ? filteredQuestions.slice(0, mobileLimit) : filteredQuestions) as question (question.id)}
-        <QuestionCard {question} hideSession={!!filterSessionId} />
+        <QuestionCard {question} hideSession={!!filterSessionId} {revealAll} />
       {/each}
       {#if isMobile && mobileLimit < filteredQuestions.length}
         <button

@@ -274,7 +274,7 @@
 
   <!-- Question cards -->
   <div class="relative">
-  {#if !questionsAtBottom}
+  {#if !questionsAtBottom && filteredQuestions.length > 0}
     <div class="hidden lg:block pointer-events-none absolute inset-x-0 bottom-0 h-50 bg-gradient-to-t from-gray-50 dark:from-gray-900 to-transparent z-10 transition-opacity duration-300"></div>
   {/if}
   <div class="lg:max-h-[92vh] lg:overflow-y-auto space-y-4 pr-1 scrollbar-hide" onscroll={onQuestionsScroll}>

@@ -33,16 +33,8 @@ MEDIA_MARKERS = [
 ARTIFACTS = ["<this message was edited>", "↵"]
 
 
-def audit(path: Path) -> list[str]:
+def audit_data(data: list) -> list[str]:
     issues: list[str] = []
-
-    try:
-        data = json.loads(path.read_text(encoding="utf-8"))
-    except (json.JSONDecodeError, OSError) as e:
-        return [f"PARSE_ERROR: {e}"]
-
-    if not isinstance(data, list):
-        return ["NOT_A_LIST: root element must be a JSON array"]
 
     if not data:
         return []  # empty file is valid (no Q&A that day)
@@ -202,7 +194,44 @@ def audit(path: Path) -> list[str]:
         if "badly explained plots" in tags_lower:
             issues.append(f"TAG_VARIANT         {label}: use 'badly explained' not 'badly explained plots'")
 
+        # 24. ans_ts < question_timestamp
+        q_ts = q.get("question_timestamp")
+        if ans_ts and q_ts and ans_ts < q_ts:
+            issues.append(f"CHRONOLOGY_ERROR    {label}: answer ({ans_ts[11:19]}) before question ({q_ts[11:19]})")
+
+        # 25. question_asker missing
+        if not q.get("question_asker"):
+            issues.append(f"MISSING_ASKER       {label}: question_asker is critically missing")
+
+        # 26. Empty discussion for answered question
+        if q.get("answer_text") and not disc:
+            issues.append(f"EMPTY_DISCUSSION    {label}: answered question has no discussion elements")
+
+        # 27. Topic format must be exact
+        valid_topics = {"history", "science", "literature", "technology", "sports", "geography", "entertainment", "food_drink", "art_culture", "business", "etymology", "general"}
+        for t in (q.get("topics") or []):
+            if t.lower() not in valid_topics:
+                issues.append(f"INVALID_TOPIC       {label}: '{t}' is not a permitted schema topic value")
+                
+        # 28. Orphaned session fields
+        if not q.get("is_session_question"):
+            for f in ["session_quizmaster", "session_theme", "session_quiz_type", "session_question_number"]:
+                if q.get(f):
+                    issues.append(f"ORPHAN_SESSION_VAR  {label}: '{f}' is populated but is_session_question is false")
+
     return issues
+
+
+def audit(path: Path) -> list[str]:
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError) as e:
+        return [f"PARSE_ERROR: {e}"]
+
+    if not isinstance(data, list):
+        return ["NOT_A_LIST: root element must be a JSON array"]
+
+    return audit_data(data)
 
 
 def main() -> None:

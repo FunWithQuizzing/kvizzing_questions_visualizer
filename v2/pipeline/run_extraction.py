@@ -14,7 +14,7 @@ Default provider: gemini
 
 Reads:  v2/data/extraction_compact/YYYY-MM-DD.txt
 Writes: v2/data/extraction_output/YYYY-MM-DD.json
-Audits: v2/pipeline/audit_extraction.py after each date
+Audits: v2/pipeline/utils/audit_extraction.py after each date
 
 Skips dates that already have an output file unless --force is passed.
 """
@@ -35,7 +35,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).parent.parent.parent  # KVizzing/
 COMPACT_DIR = REPO_ROOT / "v2" / "data" / "extraction_compact"
 OUTPUT_DIR = REPO_ROOT / "v2" / "data" / "extraction_output"
-AUDIT_SCRIPT = REPO_ROOT / "v2" / "pipeline" / "audit_extraction.py"
+AUDIT_SCRIPT = REPO_ROOT / "v2" / "pipeline" / "utils" / "audit_extraction.py"
 
 ALL_DATES = [
     "2025-09-25", "2025-09-26", "2025-09-27", "2025-09-28",

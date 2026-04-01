@@ -55,7 +55,7 @@ from stages.stage6_export import run as stage6
 from stages.stage4_enrich import enrich as _stage4_enrich, _normalize_tags
 from stages.stage5_store import load_all as _load_all, upsert as _upsert
 from utils.topic_rules import assign_topics as _assign_topics
-from generate_session_images import main as _generate_images_main
+from utils.generate_session_images import main as _generate_images_main
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────

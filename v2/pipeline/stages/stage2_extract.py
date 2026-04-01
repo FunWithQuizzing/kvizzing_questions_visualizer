@@ -399,7 +399,7 @@ def _call_llm(messages: list[dict], date_str: str, config: dict, llm_client) -> 
         return []
 
     # ── Self-Healing Audit Loop ──
-    from audit_extraction import audit_data
+    from utils.audit_extraction import audit_data
     candidates = initial_candidates
     self_heal_retries = 3
     

@@ -1,0 +1,43 @@
+{
+  "source_timezone": "America/Chicago",
+  "chat_file": "data/raw/_chat.txt",
+
+  "stage0": {
+    "lookahead_hours": 4
+  },
+
+  "stage1": {
+    "locale_formats": ["%m/%d/%y, %H:%M:%S", "%m/%d/%y, %I:%M:%S %p", "%d/%m/%Y, %H:%M:%S"]
+  },
+
+  "stage2": {
+    "heuristic_reply_window_minutes": 15,
+    "heuristic_min_replies": 2,
+    "llm_request_delay_seconds": 2.5,
+    "llm_model": "qwen3.5:latest",
+    "llm_max_retries": 10,
+    "llm_retry_base_delay_seconds": 2
+  },
+
+  "stage3": {
+    "difficulty": {
+      "easy_max_wrong_attempts": 0,
+      "medium_max_wrong_attempts": 10
+    }
+  },
+
+  "stage4": {
+    "llm_model": "qwen3.5:latest",
+    "llm_batch_size": 6,
+    "llm_max_retries": 3,
+    "llm_retry_base_delay_seconds": 2
+  },
+
+  "reactions_enrichment": {
+    "timestamp_tolerance_seconds": 1
+  },
+
+  "media_enrichment": {
+    "match_window_seconds": 150
+  }
+}

@@ -22,9 +22,17 @@ import copy
 import json
 import logging
 import re
+import sys
 import time
 from datetime import datetime, timedelta
+from pathlib import Path
 from typing import Optional
+
+sys.path.insert(0, str(Path(__file__).parent.parent.parent / "schema"))
+from schema import TopicCategory
+
+_ALL_TOPICS = {t.value for t in TopicCategory}
+_TOPIC_LIST_STR = ", ".join(t.value for t in TopicCategory)
 
 log = logging.getLogger("kvizzing")
 
@@ -33,13 +41,18 @@ log = logging.getLogger("kvizzing")
 
 def _parse_json(text: str) -> list:
     """Parse JSON from LLM output, stripping markdown fences if present.
+    Handles both plain arrays and {extracted, rejected} objects.
     Falls back to a best-effort repair for unescaped quotes inside strings."""
     text = text.strip()
     text = re.sub(r"^```(?:json)?\s*", "", text)
     text = re.sub(r"\s*```$", "", text)
     text = text.strip()
     try:
-        return json.loads(text)
+        parsed = json.loads(text)
+        # Handle new format: {"extracted": [...], "rejected": [...]}
+        if isinstance(parsed, dict) and "extracted" in parsed:
+            return parsed
+        return parsed
     except json.JSONDecodeError:
         # Best-effort repair: replace smart/curly quotes and try again
         repaired = text.replace("\u201c", '\\"').replace("\u201d", '\\"')
@@ -153,8 +166,14 @@ Media markers appear inline: `image omitted`, `GIF omitted`, `video omitted`, `a
 Include: direct trivia questions, session questions (numbered sequences), questions never \
 answered or revealed by asker.
 
-Exclude: general chat/memes, questions with zero replies, duplicate posts, questions whose \
-timestamp does NOT start with the given DATE.
+Exclude:
+- General chat, memes, jokes shared for fun (not as a question to be answered)
+- Messages that explicitly say they are NOT a question (e.g. "just sharing this", "reminded me of", \
+"not a question but", "putting this as a question just to share")
+- Questions with zero replies
+- Duplicate posts
+- Questions whose timestamp does NOT start with the given DATE
+- Rhetorical questions, opinions phrased as questions, meta-discussion about the group
 
 ---
 
@@ -166,12 +185,13 @@ Return a JSON array. Each element is a flat object with EXACTLY these fields:
   "question_timestamp": "ISO8601Z string — copy verbatim from input",
   "question_text": "full text after cleaning; if has_media, append [image: brief description inferred from discussion, or 'unknown']",
   "question_asker": "username exactly as in chat",
-  "topics": ["primary category first — from: history, science, literature, technology, sports, geography, entertainment, food_drink, art_culture, business, etymology, general"],
+  "topics": ["primary category first — from: """ + _TOPIC_LIST_STR + """"],
   "has_media": true if question message had image/GIF/video/audio/document omitted,
   "is_session_question": true if part of a numbered quizmaster session,
   "session_quizmaster": "username or null",
   "session_theme": "announced theme string or null",
   "session_quiz_type": "connect" or null,
+  "session_announcement": "the quizmaster's introductory message announcing/describing the session, or null",
   "session_question_number": integer (quizmaster's label) or null,
   "answer_text": "clean enriched answer string, or null if never revealed",
   "answer_solver": "username of first correct solver, or null",
@@ -184,9 +204,9 @@ Return a JSON array. Each element is a flat object with EXACTLY these fields:
     "timestamp": "ISO8601Z",
     "username": "string",
     "text": "string",
-    "role": "attempt|hint|confirmation|chat|answer_reveal",
+    "role": "attempt|hint|confirmation|chat|answer_reveal|elaboration",
     "is_correct": true/false/null,
-    "has_media": true if this message had image/GIF/video/audio/document omitted (hint and answer_reveal only; false for all other roles)
+    "has_media": true if this message had image/GIF/video/audio/document omitted (hint, answer_reveal, and elaboration only; false for all other roles)
   } ],
   "scores_after": null or [{"username": "string", "score": integer}],
   "extraction_confidence": "high|medium|low"
@@ -197,16 +217,35 @@ Return a JSON array. Each element is a flat object with EXACTLY these fields:
 ## FIELD-BY-FIELD RULES
 
 ### topics
-List the most relevant category first. Use ["general"] only if no specific category fits.
-Valid categories: history, science, literature, technology, sports, geography, entertainment, food_drink, art_culture, business, etymology, general.
+List the most relevant category first (up to 3). Use ["general"] ONLY as a last resort when no specific category fits.
+Valid categories: """ + _TOPIC_LIST_STR + """.
+- Use "meme" for jokes, puns, visual puns, "complete the joke", "caption this", humour-based questions.
+- Use "etymology" for language identification, word origins, acronyms, foreign language questions.
+- Use "geography" for maps, airports, IATA codes, city/country identification, flags.
+- Use "mythology" for myths, fables, legends, epics, religious stories.
+- Use "politics" for elections, leaders, geopolitics, diplomacy, governance, sanctions, treaties.
+- Prefer a specific topic over "general" — most questions have a clear domain.
 
 ### question_text
 After cleaning, append [image: brief description inferred from discussion] if has_media=true. \
 If nothing can be inferred, write [image: unknown].
 
 ### is_session_question / session detection
-A session has: (1) quizmaster announcement, (2) explicitly numbered questions, (3) quizmaster \
-confirming each answer. Mark is_session_question=true for all questions in such a session.
+A session is a series of related questions asked by ONE person (the quizmaster). Sessions can be:
+- **Formal**: quizmaster announces a quiz, numbers questions (Q1, Q2…), confirms answers.
+- **Informal**: one person asks 4+ questions in a row within a few hours, often with a theme \
+(e.g. "badly explained plots", "identify" questions, "guess the song", emoji puzzles, etc.) \
+even without explicit numbering or announcements.
+
+Mark is_session_question=true for ALL questions in such a session. Set session_quizmaster to \
+the person asking the questions. Set session_theme if a theme is apparent (announced or inferred \
+from the pattern). Set session_question_number based on the order within the session.
+
+### session_announcement
+The quizmaster's introductory message before/at the start of the session. This is the message \
+where they announce the quiz, describe the theme, set rules, or introduce the format. \
+Copy the full text (cleaned). Only set on the FIRST question of the session (session_question_number=1). \
+Set to null for subsequent questions and non-session questions.
 
 ### session_quiz_type
 Set to "connect" if this is a connect quiz — a series of questions sharing a hidden connecting \
@@ -219,9 +258,10 @@ Do not copy verbatim if sloppy or hedged. If never answered and never revealed, 
 
 ### answer_confirmed
 true ONLY if the asker sent an explicit text confirmation. Explicit confirms include:
-  "correct", "yes", "bingo", "right", "yep", "yess", "yesss", "yeas", "yeasss", "yeah", "exactly", \
-"indeed", "spot on", "perfect", "well done", "✅", "👍", "💯", "give it to you", \
-"giving it to you", "will give", "get it", "full points", "bonus for", "nailed", "closed", \
+  "correct", "correcto", "yes", "bingo", "right", "yep", "yup", "yess", "yesss", "yeas", "yeasss", "yeah", "exactly", \
+"indeed", "spot on", "perfect", "well done", "superb", "haan", "ho gaya", "✅", "👍", "💯", \
+"give it to you", "giving it to you", "will give", "I'll give", "get it", "full points", \
+"bonus for", "nailed", "closed", "exact answer", "answer is", "is the answer", \
 or any message containing "!"
 
 Do NOT set true if:
@@ -248,11 +288,16 @@ If answer_parts entries have more than one distinct solver, answer_is_collaborat
 - confirmation: asker's direct yes/no with no new information
 - chat: banter, reactions, off-topic
 - answer_reveal: asker reveals the answer after a confirm or when no one got it
+- elaboration: additional context, trivia, or explanation about the answer/question posted \
+AFTER the answer is confirmed or revealed — by the asker OR any participant. Examples: \
+"Fun fact: this was also...", "The full story is...", "This is because...", historical context, \
+related trivia, corrections, or interesting follow-up information.
 - All non-attempt roles: is_correct must be null (NEVER true or false)
 
 ### has_media (discussion entries)
-Set has_media=true ONLY on hint and answer_reveal entries whose original message included a media
-marker ("image omitted", "GIF omitted", "video omitted", "audio omitted", "document omitted").
+Set has_media=true ONLY on hint, answer_reveal, and elaboration entries whose original message \
+included a media marker ("image omitted", "GIF omitted", "video omitted", "audio omitted", \
+"document omitted").
 Set has_media=false for ALL other roles (attempt, confirmation, chat), even if they had media —
 reactions and memes are intentionally excluded. Omit the field or set false when no media present.
 
@@ -296,12 +341,31 @@ NOTE: extraction_confidence="high" if and only if answer_confirmed=true.
 10. Does answer_solver appear in the discussion array?
 11. If answer_parts is present, is answer_text non-null?
 12. If answer_parts has multiple distinct solvers, is answer_is_collaborative=true?
-13. Does has_media=true on every hint/answer_reveal entry that had a media marker? Is has_media=false (or absent) for all other roles?
+13. Does has_media=true on every hint/answer_reveal/elaboration entry that had a media marker? Is has_media=false (or absent) for all other roles?
+14. If is_session_question=true, is session_quizmaster set? Is session_question_number correct?
+15. Is session_announcement set ONLY on the first question of each session (session_question_number=1)?
+16. Are session fields (session_quizmaster, session_theme, etc.) null for non-session questions?
 
 ---
 
-Return ONLY a valid JSON array. No markdown fences, no explanation, no preamble.
-If no Q&A pairs found for this date, return: []
+Return a JSON object with two keys:
+{
+  "extracted": [ ...array of Q&A objects as described above... ],
+  "rejected": [
+    {
+      "timestamp": "ISO8601Z — the message timestamp",
+      "username": "who said it",
+      "text": "the message text (first 200 chars)",
+      "reason": "brief reason why this was NOT extracted (e.g. 'rhetorical question', 'no replies', 'general chat', 'duplicate', 'follow-up to extracted Q')"
+    }
+  ]
+}
+
+The "rejected" array should contain messages that LOOK like trivia questions (end with ?, \
+have quiz-like phrasing, or got replies from multiple people) but you chose NOT to extract. \
+This helps us audit what was missed. Include 0–20 most plausible rejected candidates. \
+Skip obvious non-questions (greetings, reactions, links). \
+If no Q&A pairs found, return: {"extracted": [], "rejected": [...]}
 """
 
 _FIX_SYSTEM_PROMPT = """\
@@ -382,6 +446,18 @@ def _merge_extractions(existing: dict, new: dict) -> dict:
     # Sort chronologically
     merged_disc.sort(key=lambda e: e.get("timestamp", ""))
     merged["discussion"] = merged_disc
+
+    # Recompute answer_solver/answer_timestamp from merged discussion
+    # so they match the actual first correct attempt after combining chunks.
+    if merged.get("answer_solver"):
+        first_correct = next(
+            (e for e in merged_disc if e.get("is_correct") is True),
+            None,
+        )
+        if first_correct:
+            merged["answer_solver"] = first_correct["username"]
+            merged["answer_timestamp"] = first_correct["timestamp"]
+
     return merged
 
 
@@ -419,7 +495,8 @@ def _call_llm_chunked(messages: list[dict], date_str: str, model: str, llm_clien
         log.debug("  Chunk %d/%d: messages %d–%d (%d msgs)", ci + 1, n_chunks, start, end - 1, end - start)
         try:
             raw = _llm_call_once(chunk_text, date_str, model, llm_client)
-            pairs = _parse_json(raw) if raw.strip() else []
+            parsed = _parse_json(raw) if raw.strip() else []
+            pairs = _extract_rejected(parsed, date_str) if isinstance(parsed, dict) else (parsed if isinstance(parsed, list) else [])
             for p in pairs:
                 key = p.get("question_timestamp", "")
                 if key in seen:
@@ -432,6 +509,25 @@ def _call_llm_chunked(messages: list[dict], date_str: str, model: str, llm_clien
             time.sleep(13)  # Gemini free tier: 5 RPM
 
     return list(seen.values())
+
+
+# Module-level storage for rejected candidates from the LLM
+_last_rejected: dict[str, list[dict]] = {}  # date_str → list of rejected candidate dicts
+
+
+def get_rejected(date_str: str) -> list[dict]:
+    """Retrieve rejected candidates from the last LLM call for a date."""
+    return _last_rejected.pop(date_str, [])
+
+
+def _extract_rejected(parsed: object, date_str: str) -> list[dict]:
+    """If the LLM returned {extracted, rejected}, split them and store rejected."""
+    if isinstance(parsed, dict) and "extracted" in parsed:
+        rejected = parsed.get("rejected") or []
+        _last_rejected[date_str] = rejected
+        return parsed["extracted"]
+    # Old format — plain array, no rejected
+    return parsed if isinstance(parsed, list) else []
 
 
 def _call_llm(messages: list[dict], date_str: str, config: dict, llm_client) -> list[dict]:
@@ -452,7 +548,8 @@ def _call_llm(messages: list[dict], date_str: str, config: dict, llm_client) -> 
     for attempt in range(max_retries):
         try:
             raw_text = _llm_call_once(messages_text, date_str, model, llm_client)
-            initial_candidates = _parse_json(raw_text)
+            parsed = _parse_json(raw_text)
+            initial_candidates = _extract_rejected(parsed, date_str)
             break
         except json.JSONDecodeError as e:
             log.warning(
@@ -476,7 +573,7 @@ def _call_llm(messages: list[dict], date_str: str, config: dict, llm_client) -> 
             return []
         except Exception as e:
             err_str = str(e)
-            if "429" in err_str or "rate_limit" in err_str.lower() or "resource_exhausted" in err_str.lower():
+            if "429" in err_str or "503" in err_str or "rate_limit" in err_str.lower() or "resource_exhausted" in err_str.lower() or "unavailable" in err_str.lower():
                 if attempt < max_retries - 1:
                     delay = _parse_retry_delay(err_str) or base_delay * (2 ** attempt)
                     log.warning("Stage2 rate-limited — retrying in %.1fs (attempt %d/%d)…", delay, attempt + 1, max_retries)
@@ -505,42 +602,407 @@ def _call_llm(messages: list[dict], date_str: str, config: dict, llm_client) -> 
         "food": "food_drink", "drink": "food_drink", "cuisine": "food_drink",
         "cooking": "food_drink",
         "culture": "art_culture", "art": "art_culture", "religion": "art_culture",
-        "politics": "history", "military": "history",
+        "military": "history",
         "math": "science", "mathematics": "science", "medicine": "science",
         "biology": "science", "physics": "science", "chemistry": "science",
         "economics": "business", "finance": "business",
         "language": "etymology", "linguistics": "etymology",
         "nature": "geography", "travel": "geography",
+        "memes": "meme", "joke": "meme", "humor": "meme", "humour": "meme",
+        "political": "politics", "election": "politics", "government": "politics",
+        "parliament": "politics", "democracy": "politics", "geopolitics": "politics",
+        "diplomacy": "politics", "geopolitical": "politics",
     }
     for entry in initial_candidates:
         if "topics" in entry and isinstance(entry["topics"], list):
             entry["topics"] = [_TOPIC_ALIASES.get(t.lower(), t) for t in entry["topics"]]
 
-    # ── Self-Healing Audit Loop ──
+    # ── Auto-fix consistency constraints ──
+    _MEDIA_MARKERS_LOWER = {"image omitted", "gif omitted", "video omitted",
+                            "audio omitted", "document omitted"}
+    _FORMAT_TAGS = {"identify", "anagram", "wordplay", "connect", "clickbait",
+                    "real life", "naming", "weird", "pun", "battle",
+                    "fill in the blank", "multi-part", "factual"}
+    for entry in initial_candidates:
+        disc = entry.get("discussion", [])
+
+        # Fix FORMAT_TAG — remove format descriptors from tags
+        tags = entry.get("tags") or []
+        clean_tags = [t for t in tags if t.lower() not in _FORMAT_TAGS]
+        if len(clean_tags) != len(tags):
+            entry["tags"] = clean_tags
+
+        # Fix TAG_VARIANT — normalize tag names
+        if entry.get("tags"):
+            entry["tags"] = ["badly explained" if t.lower() == "badly explained plots" else t
+                             for t in entry["tags"]]
+
+        # Fix ARTIFACT — strip ↵ and edit markers from text fields
+        for field in ("question_text", "answer_text", "confirmation_text"):
+            val = entry.get(field) or ""
+            if val:
+                cleaned = val.replace(" ↵ ", " ").replace("↵", "").replace("<This message was edited>", "").strip()
+                if cleaned != val:
+                    entry[field] = cleaned if cleaned else None
+        for e in disc:
+            val = e.get("text") or ""
+            if val:
+                cleaned = val.replace(" ↵ ", " ").replace("↵", "").replace("<This message was edited>", "").strip()
+                if cleaned != val:
+                    e["text"] = cleaned
+
+        # Fix COLLAB_MISMATCH
+        parts = entry.get("answer_parts") or []
+        if parts and not entry.get("answer_is_collaborative"):
+            solvers = {p["solver"] for p in parts if p.get("solver")}
+            if len(solvers) > 1:
+                entry["answer_is_collaborative"] = True
+
+        # Fix WRONG_CONFIRMER — non-asker confirmation
+        asker = entry.get("question_asker")
+        if asker:
+            for e in disc:
+                if e.get("role") == "confirmation" and e.get("username") != asker:
+                    e["role"] = "chat"
+                    e["is_correct"] = None
+
+        # Fix HIGH_NOT_CONFIRMED / MEDIUM_BUT_CONFIRMED oscillation
+        if entry.get("answer_confirmed"):
+            if entry.get("extraction_confidence") != "high":
+                entry["extraction_confidence"] = "high"
+        else:
+            if entry.get("extraction_confidence") == "high":
+                entry["extraction_confidence"] = "medium"
+
+        # Fix ORPHAN_SESSION_VAR — clear session fields on non-session questions
+        if not entry.get("is_session_question"):
+            for f in ("session_quizmaster", "session_theme", "session_quiz_type", "session_question_number", "session_announcement"):
+                if entry.get(f):
+                    entry[f] = None
+
+        # Fix SOLVER_MISMATCH / TIMESTAMP_MISMATCH from discussion data
+        solver = entry.get("answer_solver")
+        if solver and not entry.get("answer_is_collaborative") and disc:
+            first_correct = next(
+                (e for e in disc if e.get("is_correct") is True), None
+            )
+            if first_correct:
+                if first_correct["username"] != solver:
+                    entry["answer_solver"] = first_correct["username"]
+                if first_correct.get("timestamp") != entry.get("answer_timestamp"):
+                    entry["answer_timestamp"] = first_correct["timestamp"]
+
+        # Fix MEDIA_MARKER in confirmation_text
+        ct = entry.get("confirmation_text") or ""
+        if ct:
+            ct_clean = ct
+            for marker in _MEDIA_MARKERS_LOWER:
+                ct_clean = ct_clean.replace(marker, "").replace(marker.title(), "")
+            ct_clean = ct_clean.strip()
+            if ct_clean != ct:
+                entry["confirmation_text"] = ct_clean if ct_clean else None
+
+        # Fix DISC_MEDIA_ROLE — clear has_media on non-hint/non-reveal entries
+        for e in disc:
+            if e.get("has_media") and e.get("role") not in ("hint", "answer_reveal", "elaboration"):
+                e["has_media"] = False
+
+        # Fix CONFIRM_NO_ROLE — if confirmed but no confirmation role in discussion,
+        # try to find the matching chat entry from the asker and reclassify it.
+        # If no match found, the confirmation is invalid — set answer_confirmed=false.
+        if entry.get("answer_confirmed") and not any(e.get("role") == "confirmation" for e in disc):
+            conf_text = (entry.get("confirmation_text") or "").strip()
+            asker = entry.get("question_asker")
+            matched = False
+            for e in disc:
+                if (e.get("role") == "chat" and e.get("username") == asker
+                        and (not conf_text or e.get("text", "").strip() == conf_text)):
+                    e["role"] = "confirmation"
+                    e["is_correct"] = None
+                    matched = True
+                    break
+            if not matched:
+                entry["answer_confirmed"] = False
+                entry["confirmation_text"] = None
+                entry["extraction_confidence"] = "medium"
+
+        # Fix CONFIRM_TEXT_FALSE — clear confirmation_text when answer_confirmed=false
+        if entry.get("confirmation_text") and not entry.get("answer_confirmed"):
+            entry["confirmation_text"] = None
+
+        # Fix DISC_NOT_SORTED — sort discussion chronologically
+        if disc:
+            entry["discussion"] = sorted(disc, key=lambda e: e.get("timestamp", ""))
+
+        # Fix INVALID_TOPIC — remap invalid topics to "general"
+        if entry.get("topics"):
+            entry["topics"] = [t if t.lower() in _VALID_TOPICS else "general" for t in entry["topics"]]
+
+    # ── Targeted LLM micro-calls for ambiguous confirmations ──
     from utils.audit_extraction import audit_data
+    llm_accepted_labels: set[str] = set()  # HH:MM:SS labels the targeted LLM accepted
+    issues = audit_data(initial_candidates)
+    implicit_issues = [i for i in issues if i.startswith("CONFIRM_IMPLICIT")]
+    if implicit_issues and llm_client:
+        # Build lookup: audit uses [HH:MM:SS] labels derived from question_timestamp[11:19]
+        entries_by_time: dict[str, dict] = {}
+        for entry in initial_candidates:
+            ts = entry.get("question_timestamp", "")
+            if len(ts) >= 19:
+                time_key = ts[11:19]
+                # Don't overwrite — if two entries share HH:MM:SS, skip the second
+                if time_key not in entries_by_time:
+                    entries_by_time[time_key] = entry
+
+        # Build index for finding original messages by nearest timestamp
+        msg_timestamps = [m["timestamp"] for m in messages]
+
+        def _find_nearest_msg_idx(target_ts: str) -> int | None:
+            """Find the message index closest to target_ts (ISO timestamp)."""
+            for idx, mts in enumerate(msg_timestamps):
+                if mts == target_ts:
+                    return idx
+            target_prefix = target_ts[:19]
+            for idx, mts in enumerate(msg_timestamps):
+                if mts[:19] == target_prefix:
+                    return idx
+            return None
+
+        resolved = 0
+        for ci, issue_str in enumerate(implicit_issues):
+            # Parse label from "CONFIRM_IMPLICIT    [HH:MM:SS]: "text""
+            label = issue_str.split("]")[0].split("[")[-1]
+            entry = entries_by_time.get(label)
+            if not entry:
+                continue
+
+            conf_text = entry.get("confirmation_text") or ""
+            q_text = entry.get("question_text") or ""
+            asker = entry.get("question_asker") or ""
+            solver = entry.get("answer_solver") or ""
+            answer = entry.get("answer_text") or ""
+
+            # Get ~10 messages around the confirmation for context
+            conf_disc_entries = [
+                e for e in entry.get("discussion", [])
+                if e.get("role") == "confirmation"
+            ]
+            context_lines = ""
+            if conf_disc_entries:
+                conf_msg_idx = _find_nearest_msg_idx(conf_disc_entries[0].get("timestamp", ""))
+                if conf_msg_idx is not None:
+                    start = max(0, conf_msg_idx - 5)
+                    end = min(len(messages), conf_msg_idx + 6)
+                    context_lines = "\n".join(
+                        f"[{messages[i]['timestamp']}] {messages[i]['username']}: {messages[i]['text'][:200]}"
+                        for i in range(start, end)
+                    )
+
+            prompt = (
+                f"Question: \"{q_text}\"\n"
+                f"Asker: {asker}\n"
+                f"Answer given by {solver}: \"{answer}\"\n"
+                f"Asker's message: \"{conf_text}\"\n"
+            )
+            if context_lines:
+                prompt += f"\nChat context around the confirmation:\n{context_lines}\n"
+            prompt += (
+                f"\nIs \"{conf_text}\" an EXPLICIT confirmation by the asker ({asker}) that the answer is correct? "
+                f"Explicit means clearly saying yes/correct/right/etc or awarding points. "
+                f"Answer reveals (explaining the answer) also count as confirmation. "
+                f"Amazement (\"wow\", \"great crack\") without saying correct does NOT count.\n\n"
+                f"Reply ONLY with a JSON object: {{\"confirmed\": true/false, \"reason\": \"brief explanation\"}}"
+            )
+
+            try:
+                resp = llm_client.messages.create(
+                    model=model,
+                    max_tokens=256,
+                    system="You are a precise judge of quiz confirmations. Answer only with JSON.",
+                    messages=[{"role": "user", "content": prompt}],
+                )
+                raw = (resp.content[0].text or "").strip()
+                raw = re.sub(r"^```(?:json)?\s*", "", raw)
+                raw = re.sub(r"\s*```$", "", raw).strip()
+                if not raw:
+                    raise ValueError("LLM returned empty response")
+                result = json.loads(raw)
+                if result.get("confirmed") is True:
+                    log.info("  LLM confirmed [%s] \"%s\" — reason: %s",
+                             label, conf_text, result.get("reason", ""))
+                    llm_accepted_labels.add(label)
+                    resolved += 1
+                else:
+                    log.info("  LLM rejected [%s] \"%s\" — reason: %s",
+                             label, conf_text, result.get("reason", ""))
+                    entry["answer_confirmed"] = False
+                    entry["confirmation_text"] = None
+                    entry["extraction_confidence"] = "medium"
+                    # Reclassify all confirmation discussion entries — if the LLM
+                    # says this isn't a confirmation, no confirmation is valid.
+                    for e in entry.get("discussion", []):
+                        if e.get("role") == "confirmation":
+                            e["role"] = "chat"
+                            e["is_correct"] = None
+                    resolved += 1
+            except Exception as e:
+                log.warning("  Targeted confirm check failed for [%s]: %s", label, e)
+
+            # Rate limit between micro-calls
+            if ci < len(implicit_issues) - 1:
+                time.sleep(13)
+
+        if resolved:
+            log.info("Stage2 resolved %d/%d CONFIRM_IMPLICIT issues via targeted LLM calls.",
+                     resolved, len(implicit_issues))
+            # Re-run confidence consistency after targeted fixes
+            for entry in initial_candidates:
+                if entry.get("answer_confirmed"):
+                    entry["extraction_confidence"] = "high"
+                elif entry.get("extraction_confidence") == "high":
+                    entry["extraction_confidence"] = "medium"
+
+    # ── Self-Healing Audit Loop (for remaining issues) ──
+    def _filter_accepted(raw_issues: list[str]) -> list[str]:
+        """Remove CONFIRM_IMPLICIT issues for labels the targeted LLM already accepted."""
+        if not llm_accepted_labels:
+            return raw_issues
+        filtered = []
+        for issue in raw_issues:
+            if issue.startswith("CONFIRM_IMPLICIT") and "[" in issue:
+                issue_label = issue.split("]")[0].split("[")[-1]
+                if issue_label in llm_accepted_labels:
+                    continue
+            filtered.append(issue)
+        return filtered
+
+    def _apply_auto_fixes(entries: list[dict]) -> None:
+        """Re-apply ALL programmatic fixes after self-healing rewrite."""
+        for entry in entries:
+            # Topics
+            if "topics" in entry and isinstance(entry["topics"], list):
+                entry["topics"] = [_TOPIC_ALIASES.get(t.lower(), t) for t in entry["topics"]]
+            disc = entry.get("discussion", [])
+            # Format tags
+            tags = entry.get("tags") or []
+            clean_tags = [t for t in tags if t.lower() not in _FORMAT_TAGS]
+            if len(clean_tags) != len(tags):
+                entry["tags"] = clean_tags
+            # Tag variants
+            if entry.get("tags"):
+                entry["tags"] = ["badly explained" if t.lower() == "badly explained plots" else t
+                                 for t in entry["tags"]]
+            # Artifacts
+            for field in ("question_text", "answer_text", "confirmation_text"):
+                val = entry.get(field) or ""
+                if val:
+                    cleaned = val.replace(" ↵ ", " ").replace("↵", "").replace("<This message was edited>", "").strip()
+                    if cleaned != val:
+                        entry[field] = cleaned if cleaned else None
+            for e in disc:
+                val = e.get("text") or ""
+                if val:
+                    cleaned = val.replace(" ↵ ", " ").replace("↵", "").replace("<This message was edited>", "").strip()
+                    if cleaned != val:
+                        e["text"] = cleaned
+            # Collab mismatch
+            parts = entry.get("answer_parts") or []
+            if parts and not entry.get("answer_is_collaborative"):
+                solvers = {p["solver"] for p in parts if p.get("solver")}
+                if len(solvers) > 1:
+                    entry["answer_is_collaborative"] = True
+            # Wrong confirmer
+            asker = entry.get("question_asker")
+            if asker:
+                for e in disc:
+                    if e.get("role") == "confirmation" and e.get("username") != asker:
+                        e["role"] = "chat"
+                        e["is_correct"] = None
+            # Confidence / confirmed consistency
+            if entry.get("answer_confirmed"):
+                if entry.get("extraction_confidence") != "high":
+                    entry["extraction_confidence"] = "high"
+            else:
+                if entry.get("extraction_confidence") == "high":
+                    entry["extraction_confidence"] = "medium"
+            # Orphan session fields
+            if not entry.get("is_session_question"):
+                for f in ("session_quizmaster", "session_theme", "session_quiz_type", "session_question_number", "session_announcement"):
+                    if entry.get(f):
+                        entry[f] = None
+            # Solver / timestamp from discussion
+            solver = entry.get("answer_solver")
+            if solver and not entry.get("answer_is_collaborative") and disc:
+                first_correct = next(
+                    (e for e in disc if e.get("is_correct") is True), None
+                )
+                if first_correct:
+                    if first_correct["username"] != solver:
+                        entry["answer_solver"] = first_correct["username"]
+                    if first_correct.get("timestamp") != entry.get("answer_timestamp"):
+                        entry["answer_timestamp"] = first_correct["timestamp"]
+            # Media markers in confirmation_text
+            ct = entry.get("confirmation_text") or ""
+            if ct:
+                ct_clean = ct
+                for marker in _MEDIA_MARKERS_LOWER:
+                    ct_clean = ct_clean.replace(marker, "").replace(marker.title(), "")
+                ct_clean = ct_clean.strip()
+                if ct_clean != ct:
+                    entry["confirmation_text"] = ct_clean if ct_clean else None
+            # has_media on wrong roles
+            for e in disc:
+                if e.get("has_media") and e.get("role") not in ("hint", "answer_reveal", "elaboration"):
+                    e["has_media"] = False
+            # CONFIRM_NO_ROLE
+            if entry.get("answer_confirmed") and not any(e.get("role") == "confirmation" for e in disc):
+                conf_text = (entry.get("confirmation_text") or "").strip()
+                asker = entry.get("question_asker")
+                matched = False
+                for e in disc:
+                    if (e.get("role") == "chat" and e.get("username") == asker
+                            and (not conf_text or e.get("text", "").strip() == conf_text)):
+                        e["role"] = "confirmation"
+                        e["is_correct"] = None
+                        matched = True
+                        break
+                if not matched:
+                    entry["answer_confirmed"] = False
+                    entry["confirmation_text"] = None
+                    entry["extraction_confidence"] = "medium"
+            # confirmation_text when not confirmed
+            if entry.get("confirmation_text") and not entry.get("answer_confirmed"):
+                entry["confirmation_text"] = None
+            # Sort discussion chronologically
+            if disc:
+                entry["discussion"] = sorted(disc, key=lambda e: e.get("timestamp", ""))
+            # Remap invalid topics to "general"
+            if entry.get("topics"):
+                entry["topics"] = [t if t.lower() in _VALID_TOPICS else "general" for t in entry["topics"]]
+
     candidates = initial_candidates
     self_heal_retries = 3
-    
+
     for heal_attempt in range(1, self_heal_retries + 1):
-        issues = audit_data(candidates)
+        issues = _filter_accepted(audit_data(candidates))
         if not issues:
             if heal_attempt > 1:
                 log.info("Stage2 self-healing succeeded! Clean data achieved.")
             return candidates
-            
+
         log.warning("Stage2 found %d audit issues on heal attempt %d/%d:", len(issues), heal_attempt, self_heal_retries)
         for issue in issues:
             log.warning("  %s", issue)
-            
+
         if heal_attempt == self_heal_retries:
-            break  # Don't spend the last attempt looping, just fall through to raise the error
-            
+            break
+
         fix_prompt = (
             "Here is the JSON you previously generated:\n```json\n" + json.dumps(candidates, indent=2, ensure_ascii=False) +
             "\n```\n\nThe automated audit system flagged the following issues:\n" + "\n".join(f"- {i}" for i in issues) +
             "\n\nPlease rewrite and return the ENTIRE JSON array, specifically fixing these issues while preserving all other properties."
         )
-        
+
         try:
             log.info("Stage2 dispatching self-healing LLM call...")
             fix_resp = llm_client.messages.create(
@@ -550,15 +1012,16 @@ def _call_llm(messages: list[dict], date_str: str, config: dict, llm_client) -> 
                 messages=[{"role": "user", "content": fix_prompt}]
             )
             candidates = _parse_json(fix_resp.content[0].text)
+            _apply_auto_fixes(candidates)  # re-apply after LLM rewrite
         except Exception as e:
             log.error("Stage2 self-healing LLM call failed or returned unparseable JSON: %s", e)
 
     # Final enforcement after retries
-    final_issues = audit_data(candidates)
+    final_issues = _filter_accepted(audit_data(candidates))
     if final_issues:
         error_msg = f"Stage2 failed to resolve {len(final_issues)} audit issues after {self_heal_retries} self-healing attempts:\n" + "\n".join(f"  {i}" for i in final_issues)
         raise RuntimeError(error_msg)
-        
+
     return candidates
 
 
@@ -622,7 +1085,7 @@ def detect_session_scores(
             return None
         except Exception as e:
             err_str = str(e)
-            if "429" in err_str or "rate_limit" in err_str.lower() or "resource_exhausted" in err_str.lower():
+            if "429" in err_str or "503" in err_str or "rate_limit" in err_str.lower() or "resource_exhausted" in err_str.lower() or "unavailable" in err_str.lower():
                 if attempt < max_retries - 1:
                     delay = _parse_retry_delay(err_str) or base_delay * (2 ** attempt)
                     log.warning("Stage2 session-score rate-limited — retrying in %.1fs…", delay)

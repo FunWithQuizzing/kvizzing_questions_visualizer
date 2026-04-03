@@ -164,7 +164,7 @@
         },
         "has_media": {
           "default": false,
-          "description": "True if this discussion message included an image/video/audio/document attachment in the original chat. Only tracked for hint and answer_reveal roles — reaction GIFs and memes in chat/attempt/confirmation entries are intentionally excluded.",
+          "description": "True if this discussion message included an image/video/audio/document attachment in the original chat. Only tracked for hint, answer_reveal, and elaboration roles — reaction GIFs and memes in chat/attempt/confirmation entries are intentionally excluded.",
           "title": "Has Media",
           "type": "boolean"
         },
@@ -200,7 +200,8 @@
         "hint",
         "confirmation",
         "chat",
-        "answer_reveal"
+        "answer_reveal",
+        "elaboration"
       ],
       "title": "DiscussionRole",
       "type": "string"
@@ -488,6 +489,19 @@
           "default": null,
           "description": "Quiz format: 'connect' for connect quizzes (multiple questions share a hidden connecting theme), null for regular quizzes",
           "title": "Quiz Type"
+        },
+        "announcement": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Quizmaster's introductory message announcing the session (only on Q1)",
+          "title": "Announcement"
         }
       },
       "required": [
@@ -585,17 +599,26 @@
       "enum": [
         "history",
         "science",
-        "literature",
+        "mathematics",
         "technology",
         "sports",
         "geography",
         "entertainment",
+        "music",
+        "cinema",
         "food_drink",
         "art_culture",
+        "literature",
         "business",
         "etymology",
         "mythology",
-        "geology",
+        "politics",
+        "medicine",
+        "military",
+        "religion",
+        "linguistics",
+        "nature",
+        "meme",
         "general"
       ],
       "title": "TopicCategory",

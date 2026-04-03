@@ -67,6 +67,7 @@ def run(
     config: dict,
     db_conn: Optional[sqlite3.Connection],
     mode: str = "backfill",
+    extraction_output_dir: Optional[Path] = None,
 ) -> list[str]:
     """
     Return the filtered list of raw chat lines to process.
@@ -75,6 +76,7 @@ def run(
         config: parsed pipeline_config.json
         db_conn: open sqlite3 connection, or None (implies full backfill)
         mode: "backfill" or "incremental"
+        extraction_output_dir: path to extraction_output/ dir (for detecting missing files)
 
     Returns:
         List of raw text lines (including continuation lines) covering the
@@ -98,6 +100,14 @@ def run(
             if d:
                 file_dates.add(d)
         target_dates = file_dates - stored
+
+        # Also include dates that are in DB but missing their extraction_output
+        # file, so the pipeline can regenerate it (needed for DB rebuilds).
+        if extraction_output_dir and extraction_output_dir.is_dir():
+            for d in stored:
+                ext_file = extraction_output_dir / f"{d.isoformat()}.json"
+                if not ext_file.exists() and d in file_dates:
+                    target_dates.add(d)
     else:
         # Incremental: dates strictly after last_stored_date
         try:

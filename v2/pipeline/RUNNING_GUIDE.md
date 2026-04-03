@@ -10,6 +10,12 @@
 | `reenrich [--dry-run]` | Re-run LLM enrichment on questions with fewer than 2 topics |
 | `normalize-tags [--dry-run]` | Strip format tags, fix near-duplicate tag names in the DB |
 | `assign-topics [--dry-run]` | Assign primary + secondary topics via rules (no LLM) |
+| `enrich-media --media-dir PATH [--dry-run]` | Match exported media files to questions by timestamp |
+| `upload-media --media-dir PATH [--dry-run]` | Upload matched media files to Cloudflare R2 |
+| `cleanup-r2 [--dry-run]` | Delete R2 objects not referenced by any question in the DB |
+| `check-r2` | Check R2 free-tier usage; warns at 80% of each limit |
+| `export-rejected` | Export rejected candidates from .txt files to JSON |
+| `check-coverage` | Check for missed dates or suspiciously low extraction counts |
 | `generate-images` | Generate background images for new sessions |
 
 All commands are run from `v2/pipeline/`:
@@ -74,7 +80,7 @@ python3 pipeline.py export
 ```
 Use this after manually editing `extraction_output/` files or making direct DB edits.
 
-### Fix topics on questions that only have 1 (rule-based, no LLM)
+### Fix topics on questions that have 0 or 1 (rule-based, no LLM)
 ```bash
 python3 pipeline.py assign-topics --dry-run   # preview first
 python3 pipeline.py assign-topics
@@ -85,7 +91,7 @@ python3 pipeline.py assign-topics
 python3 pipeline.py reenrich --dry-run   # shows how many qualify
 python3 pipeline.py reenrich
 ```
-Requires `GROQ_API_KEY`, `ANTHROPIC_API_KEY`, or `USE_OLLAMA=1`.
+Requires `GEMINI_API_KEY`, `GROQ_API_KEY`, `ANTHROPIC_API_KEY`, or `USE_OLLAMA=1`.
 
 ### Strip format tags / rename near-duplicate tags
 ```bash
@@ -93,30 +99,97 @@ python3 pipeline.py normalize-tags --dry-run
 python3 pipeline.py normalize-tags
 ```
 
+### Match media files to questions
+```bash
+python3 pipeline.py enrich-media --media-dir ../data/raw/ --dry-run   # preview matches
+python3 pipeline.py enrich-media --media-dir ../data/raw/
+```
+
+Scans the export directory for `NNNNNN-PHOTO/VIDEO/GIF-YYYY-MM-DD-HH-MM-SS.ext` files and
+matches them to questions with `has_media=True` by timestamp proximity (default ±90 s window).
+Populates `question.media[].filename` in the DB; `url` stays `null` until files are uploaded to a CDN.
+
+Near-duplicate burst shots (perceptual hash distance ≤ 8) are automatically dropped so only
+visually distinct images are stored. Requires `imagehash` + `Pillow` (`pip3 install imagehash`);
+dedup is skipped silently if the packages are absent.
+
+Tune the match window in `config/pipeline_config.json` → `media_enrichment.match_window_seconds`
+if you see unmatched questions (the WhatsApp filename timestamp runs ~39 s before the chat timestamp).
+
+### Upload matched media to Cloudflare R2
+Credentials are loaded automatically from `v2/pipeline/.env` (gitignored).
+Fill in `R2_PUBLIC_URL` once you enable public access on the bucket, then:
+
+```bash
+python3 pipeline.py upload-media --media-dir ../data/raw/ --dry-run   # preview first
+python3 pipeline.py upload-media --media-dir ../data/raw/             # upload
+```
+
+Env vars in `.env` are never overridden by the file if already set in the shell,
+so you can still pass one-off overrides on the command line.
+
+After uploading, `question.media[].url` is populated in the DB and re-exported to JSON.
+The usage check runs automatically after each upload. You can also run it standalone:
+
+### Re-run deduplication on already-matched questions
+
+If you've already run `enrich-media` and `upload-media` but want to apply perceptual dedup
+to questions already in the DB, run this sequence from `v2/pipeline/`:
+
+```bash
+# 1. Clear matched media from the DB (doesn't touch R2)
+sqlite3 ../data/questions.db "UPDATE questions SET payload = json_set(payload, '$.question.media', json('null')) WHERE has_media = 1;"
+
+# 2. Re-match with dedup applied
+python3 pipeline.py enrich-media --media-dir ../data/raw/
+
+# 3. Upload any newly-referenced files (already-uploaded files are skipped)
+python3 pipeline.py upload-media --media-dir ../data/raw/
+
+# 4. Delete orphaned objects from R2 (files no longer referenced after dedup)
+python3 pipeline.py cleanup-r2 --dry-run   # preview first
+python3 pipeline.py cleanup-r2             # delete
+```
+
+```bash
+# Storage check (no extra token needed):
+R2_ACCOUNT_ID=xxx R2_ACCESS_KEY_ID=xxx R2_SECRET_ACCESS_KEY=xxx R2_BUCKET=kvizzing-media \
+python3 pipeline.py check-r2
+
+# Full check including Class A/B operation counts (requires Cloudflare API token
+# with "Account Analytics:Read" permission — create at dash.cloudflare.com → My Profile → API Tokens):
+CLOUDFLARE_API_TOKEN=xxx ... python3 pipeline.py check-r2
+```
+
+Free-tier limits (warnings fire at 80%):
+- Storage: 10 GB/month
+- Class A ops (writes/lists): 1 million/month
+- Class B ops (reads): 10 million/month
+
 ---
 
 ## Overriding existing data
 
 ### Nuke everything and start fresh
 ```bash
-rm v2/data/questions.db
-rm v2/data/pipeline_state.json
+rm ../data/questions.db
+rm ../data/pipeline_state.json
 python3 pipeline.py backfill
 ```
 Reprocesses every date. Cached `extraction_output/` files are reused; everything else is re-run.
 
 ### Reprocess specific dates (keep extraction cache)
 ```bash
-sqlite3 v2/data/questions.db "DELETE FROM questions WHERE date IN ('2024-11-15', '2024-11-16');"
-sqlite3 v2/data/questions.db "DELETE FROM questions_fts WHERE id NOT IN (SELECT id FROM questions);"
+sqlite3 ../data/questions.db "DELETE FROM questions WHERE date IN ('2024-11-15', '2024-11-16');"
+sqlite3 ../data/questions.db "DELETE FROM questions_fts WHERE id NOT IN (SELECT id FROM questions);"
 python3 pipeline.py backfill
 ```
 
 ### Reprocess a date AND re-run LLM extraction
 ```bash
-rm v2/data/extraction_output/2024-11-15.json
-sqlite3 v2/data/questions.db "DELETE FROM questions WHERE date = '2024-11-15';"
-sqlite3 v2/data/questions.db "DELETE FROM questions_fts WHERE id NOT IN (SELECT id FROM questions);"
+rm ../data/extraction_output/2024-11-15.json
+sqlite3 ../data/questions.db "DELETE FROM questions WHERE date = '2024-11-15';"
+sqlite3 ../data/questions.db "DELETE FROM questions_fts WHERE id NOT IN (SELECT id FROM questions);"
 python3 pipeline.py backfill
 ```
 
@@ -124,6 +197,24 @@ python3 pipeline.py backfill
 ```bash
 python3 pipeline.py reenrich        # LLM-based
 python3 pipeline.py assign-topics   # rule-based, no LLM needed
+```
+
+### Bulk extraction of historical compact files
+If you have many `data/extraction_compact/YYYY-MM-DD.txt` files without corresponding
+`extraction_output/` files, `backfill` handles them all:
+```bash
+GEMINI_API_KEY=your_key python3 pipeline.py backfill
+```
+The pipeline checks for an existing `extraction_output/YYYY-MM-DD.json` before calling
+the LLM — so already-extracted dates are skipped automatically. Gemini's 1M token context
+handles the largest days without chunking and is free.
+
+To re-extract a specific date from scratch:
+```bash
+rm ../data/extraction_output/2024-11-15.json
+sqlite3 ../data/questions.db "DELETE FROM questions WHERE date = '2024-11-15';"
+sqlite3 ../data/questions.db "DELETE FROM questions_fts WHERE id NOT IN (SELECT id FROM questions);"
+python3 pipeline.py backfill
 ```
 
 ---

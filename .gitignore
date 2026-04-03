@@ -29,3 +29,4 @@ v2/data/members.json
 v2/data/stats.json
 v2/data/tags.json
 v2/pipeline/logs/
+v2/pipeline/.env

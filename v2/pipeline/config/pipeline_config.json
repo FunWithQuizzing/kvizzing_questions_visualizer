@@ -15,14 +15,14 @@
     "heuristic_min_replies": 2,
     "llm_request_delay_seconds": 2.5,
     "llm_model": "qwen3.5:latest",
-    "llm_max_retries": 3,
+    "llm_max_retries": 10,
     "llm_retry_base_delay_seconds": 2
   },
 
   "stage3": {
     "difficulty": {
       "easy_max_wrong_attempts": 0,
-      "medium_max_wrong_attempts": 3
+      "medium_max_wrong_attempts": 10
     }
   },
 
@@ -38,6 +38,6 @@
   },
 
   "media_enrichment": {
-    "match_window_seconds": 30
+    "match_window_seconds": 150
   }
 }

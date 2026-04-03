@@ -7,10 +7,11 @@
 export const prerender = true;
 
 export async function load({ fetch }) {
-  const [questions, sessions, members] = await Promise.all([
+  const [questions, sessions, members, r2Usage] = await Promise.all([
     fetch('/data/questions.json').then(r => r.json()),
     fetch('/data/sessions.json').then(r => r.json()),
     fetch('/data/members.json').then(r => r.json()),
+    fetch('/data/r2_usage.json').then(r => r.ok ? r.json() : null).catch(() => null),
   ]);
-  return { questions, sessions, members };
+  return { questions, sessions, members, r2Usage };
 }

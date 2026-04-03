@@ -72,6 +72,79 @@
   function surpriseMe() { const q = store.random(); if (q) goto(`/question/${q.id}`); }
   function randomQuiz() { if (sidebarSessions.length === 0) return; const s = sidebarSessions[Math.floor(Math.random() * sidebarSessions.length)]; goto(`/session/${s.id}`); }
 
+  // ── Review sidebar data ────────────────────────────────────────────────────
+  type ReviewThread = { id: string; date: string; candidates: { timestamp: string; username: string; text: string }[] };
+
+  let reviewThreads = $state<ReviewThread[]>([]);
+
+  onMount(() => {
+    fetch('/data/rejected_candidates.json')
+      .then(r => r.ok ? r.json() : [])
+      .then(d => { reviewThreads = d; })
+      .catch(() => {});
+  });
+
+  // Review calendar month navigation
+  let reviewCalendarMonth = $state('');  // '' = auto-detect first month with data
+
+  // Review calendar data: dates → { total, threads with any votes }
+  let reviewAllVotes = $state<{ thread_id: string; status: string }[]>([]);
+
+  // Load votes for calendar (runs on mount)
+  $effect(() => {
+    if (reviewThreads.length > 0 && reviewAllVotes.length === 0) {
+      import('$lib/supabase').then(({ supabase: sb }) => {
+        sb.from('votes').select('thread_id, status').then(({ data: rows }) => {
+          if (rows) reviewAllVotes = rows;
+        });
+      }).catch(() => {});
+    }
+  });
+
+  const reviewDateStats = $derived(() => {
+    const map = new Map<string, { total: number; reviewed: number; valid: number; maybe: number; notValid: number }>();
+    for (const t of reviewThreads) {
+      if (!map.has(t.date)) map.set(t.date, { total: 0, reviewed: 0, valid: 0, maybe: 0, notValid: 0 });
+      const s = map.get(t.date)!;
+      s.total++;
+      // Count threads that have at least one vote
+      const threadVotes = reviewAllVotes.filter(v => v.thread_id === t.id);
+      if (threadVotes.length > 0) {
+        s.reviewed++;
+        // Use majority vote for color
+        const validCount = threadVotes.filter(v => v.status === 'valid').length;
+        const maybeCount = threadVotes.filter(v => v.status === 'maybe').length;
+        const notCount = threadVotes.filter(v => v.status === 'not_valid').length;
+        if (validCount >= maybeCount && validCount >= notCount) s.valid++;
+        else if (maybeCount >= notCount) s.maybe++;
+        else s.notValid++;
+      }
+    }
+    return map;
+  });
+
+  // Review leaderboard from Supabase
+  let reviewLeaderboardData = $state<{ reviewer: string; count: number }[]>([]);
+
+  onMount(async () => {
+    if (typeof window !== 'undefined') {
+      try {
+        const { supabase: sb } = await import('$lib/supabase');
+        const { data: rows } = await sb.from('votes').select('reviewer');
+        if (rows) {
+          const counts = new Map<string, number>();
+          for (const r of rows) counts.set(r.reviewer, (counts.get(r.reviewer) || 0) + 1);
+          const allMembers = store.getAskers();
+          const board = allMembers.map(name => ({ reviewer: name, count: counts.get(name) ?? 0 }));
+          for (const [name, count] of counts) {
+            if (!allMembers.includes(name)) board.push({ reviewer: name, count });
+          }
+          reviewLeaderboardData = board.sort((a, b) => b.count - a.count || a.reviewer.localeCompare(b.reviewer));
+        }
+      } catch {}
+    }
+  });
+
   const MONTHS_SHORT = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   function ordinalDate(dateStr: string): string {
     const [y, m, d] = dateStr.split('-').map(Number);
@@ -83,6 +156,22 @@
   let authenticated = $state<boolean | null>(null);
   const dm = $state({ value: false });
   let showTzPicker = $state(false);
+
+  // R2 free-tier usage alert (75% threshold)
+  const R2_WARN_PCT = 75;
+  let r2AlertDismissed = $state(false);
+  const r2Alerts = $derived.by(() => {
+    const u = data.r2Usage;
+    if (!u) return [];
+    const alerts: { label: string; pct: number; used: string; limit: string }[] = [];
+    if (u.storage_pct >= R2_WARN_PCT)
+      alerts.push({ label: 'Storage', pct: u.storage_pct, used: `${(u.storage_bytes / 1024 ** 3).toFixed(2)} GB`, limit: '10 GB' });
+    if (u.class_a_pct >= R2_WARN_PCT)
+      alerts.push({ label: 'Class A ops', pct: u.class_a_pct, used: u.class_a_ops.toLocaleString(), limit: '1M' });
+    if (u.class_b_pct >= R2_WARN_PCT)
+      alerts.push({ label: 'Class B ops', pct: u.class_b_pct, used: u.class_b_ops.toLocaleString(), limit: '10M' });
+    return alerts;
+  });
   let tzSearch = $state('');
   let showThemePicker = $state(false);
 
@@ -154,6 +243,94 @@
   }
 </script>
 
+{#snippet reviewSidebar()}
+  <!-- Review Calendar -->
+  {@const stats = reviewDateStats()}
+  {@const dates = [...stats.keys()].sort()}
+  {@const months = [...new Set(dates.map(d => d.slice(0, 7)))].sort()}
+  {@const activeMonth = reviewCalendarMonth || (months.length > 0 ? months[0] : new Date().toISOString().slice(0, 7))}
+  {@const monthIdx = months.indexOf(activeMonth)}
+  {@const [calY, calM] = activeMonth.split('-')}
+  {@const firstDay = new Date(Number(calY), Number(calM) - 1, 1).getDay()}
+  {@const daysInMonth = new Date(Number(calY), Number(calM), 0).getDate()}
+  <div class="bg-ui-card rounded-xl border border-stone-200/80 dark:border-zinc-600/80 shadow-sm overflow-hidden">
+    <div class="px-4 py-3 border-b border-stone-100 dark:border-zinc-700/80 flex items-center justify-between">
+      <button
+        onclick={() => { if (monthIdx > 0) reviewCalendarMonth = months[monthIdx - 1]; }}
+        disabled={monthIdx <= 0}
+        class="p-1 rounded transition-colors {monthIdx > 0 ? 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200' : 'text-gray-200 dark:text-gray-700 cursor-default'}"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+      </button>
+      <h2 class="text-xs font-semibold text-gray-700 dark:text-gray-300">{new Date(Number(calY), Number(calM) - 1).toLocaleString('en', { month: 'long', year: 'numeric' })}</h2>
+      <button
+        onclick={() => { if (monthIdx < months.length - 1) reviewCalendarMonth = months[monthIdx + 1]; }}
+        disabled={monthIdx >= months.length - 1}
+        class="p-1 rounded transition-colors {monthIdx < months.length - 1 ? 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200' : 'text-gray-200 dark:text-gray-700 cursor-default'}"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+      </button>
+    </div>
+    <div class="px-3 py-3">
+      <div class="grid grid-cols-7 gap-1 text-center">
+        {#each ['S','M','T','W','T','F','S'] as day}
+          <span class="text-[9px] text-gray-400 dark:text-gray-500 font-medium pb-1">{day}</span>
+        {/each}
+        {#each Array(firstDay) as _}
+          <span></span>
+        {/each}
+        {#each Array(daysInMonth) as _, i}
+          {@const dayStr = `${activeMonth}-${String(i + 1).padStart(2, '0')}`}
+          {@const dayStat = stats.get(dayStr)}
+          {#if dayStat}
+            {@const pct = dayStat.total > 0 ? dayStat.reviewed / dayStat.total : 0}
+            <a
+              href="/review?date={dayStr}"
+              class="rounded-lg py-1 text-center transition-all hover:shadow-md hover:scale-105
+                {pct === 1 ? 'bg-green-100 dark:bg-green-900/40' :
+                 pct > 0 ? 'bg-amber-100 dark:bg-amber-900/40' :
+                 'bg-primary-50 dark:bg-primary-900/20 hover:bg-primary-100 dark:hover:bg-primary-900/30'}"
+              title="{dayStr}: {dayStat.reviewed}/{dayStat.total} reviewed"
+            >
+              <span class="text-[11px] font-semibold {pct === 1 ? 'text-green-700 dark:text-green-300' : pct > 0 ? 'text-amber-700 dark:text-amber-300' : 'text-primary-700 dark:text-primary-300'}">{i + 1}</span>
+              <p class="text-[8px] font-medium {pct === 1 ? 'text-green-600 dark:text-green-400' : pct > 0 ? 'text-amber-600 dark:text-amber-400' : 'text-primary-500 dark:text-primary-400'}">{dayStat.reviewed}/{dayStat.total}</p>
+            </a>
+          {:else}
+            <div class="rounded-lg py-1 text-center">
+              <span class="text-[11px] text-gray-300 dark:text-gray-600">{i + 1}</span>
+            </div>
+          {/if}
+        {/each}
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Reviewers -->
+  {@const leaderboard = reviewLeaderboardData}
+  <div class="bg-ui-card rounded-xl border border-stone-200/80 dark:border-zinc-600/80 shadow-sm overflow-hidden">
+    <div class="px-4 py-3 border-b border-stone-100 dark:border-zinc-700/80">
+      <h2 class="text-xs font-semibold text-gray-500 dark:text-gray-400">Top Reviewers</h2>
+    </div>
+    <div class="relative">
+      <div class="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-white dark:from-[#1c1c1c] to-transparent z-10"></div>
+      <div class="divide-y divide-stone-100 dark:divide-zinc-700/80 max-h-80 overflow-y-auto">
+        {#each leaderboard as sub, i}
+          <div class="px-4 py-2.5 flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <span class="text-xs font-bold w-5 text-center {i === 0 && sub.count > 0 ? 'text-yellow-500' : i === 1 && sub.count > 0 ? 'text-gray-400' : i === 2 && sub.count > 0 ? 'text-amber-600' : 'text-gray-300 dark:text-gray-600'}">{i + 1}</span>
+              <span class="text-sm font-medium text-gray-900 dark:text-gray-100">{sub.reviewer}</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-semibold {sub.count > 0 ? 'text-primary-500' : 'text-gray-300 dark:text-gray-600'}">{sub.count}</span>
+              <span class="text-[10px] text-gray-400">reviews</span>
+            </div>
+          </div>
+        {/each}
+      </div>
+    </div>
+  </div>
+{/snippet}
+
 <svelte:head>
   <link rel="icon" href={favicon} />
   <meta name="robots" content="noindex" />
@@ -167,6 +344,26 @@
 {:else}
 
 <div class="h-screen flex flex-col bg-ui-parchment overflow-hidden">
+  <!-- R2 free-tier usage alert -->
+  {#if r2Alerts.length > 0 && !r2AlertDismissed}
+    <div class="flex-shrink-0 bg-amber-50 dark:bg-amber-950/60 border-b border-amber-300 dark:border-amber-700 px-4 py-2 flex items-center gap-3 z-50">
+      <span class="text-amber-600 dark:text-amber-400 text-lg leading-none">⚠</span>
+      <p class="flex-1 text-sm text-amber-800 dark:text-amber-300">
+        <span class="font-semibold">R2 free-tier alert:</span>
+        {#each r2Alerts as alert, i}
+          {#if i > 0}<span class="mx-1 opacity-50">·</span>{/if}
+          <span>{alert.label} at <span class="font-semibold">{alert.pct}%</span> ({alert.used} / {alert.limit})</span>
+        {/each}
+        <span class="ml-1 opacity-70">— run <code class="font-mono bg-amber-100 dark:bg-amber-900/50 px-1 rounded">check-r2</code> for details.</span>
+      </p>
+      <button
+        onclick={() => r2AlertDismissed = true}
+        class="text-amber-600 dark:text-amber-400 hover:text-amber-800 dark:hover:text-amber-200 transition-colors p-1 rounded"
+        aria-label="Dismiss alert"
+      >✕</button>
+    </div>
+  {/if}
+
   <!-- Top nav -->
   <nav class="bg-white/97 dark:bg-zinc-900/88 backdrop-blur-md border-b border-stone-200/90 dark:border-zinc-700/70 flex-shrink-0 z-40 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
@@ -198,6 +395,13 @@
 
         <!-- Preferences (right) -->
         <div class="hidden sm:flex items-center gap-1">
+          <!-- Review -->
+          <a
+            href="/review"
+            class="px-3 py-1.5 rounded-lg text-sm font-medium transition-colors {isActive('/review', $page.url.pathname)
+              ? 'bg-primary-50 text-primary-600 dark:bg-primary-500/20 dark:text-primary-400'
+              : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-700'}"
+          >Review</a>
           <!-- Feedback -->
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSeFsl3cKK7Tf3-iuzkPxPWmWkvRpZfB3U27PeZDun9NIqAt6A/viewform"
@@ -230,7 +434,7 @@
           <!-- Color theme -->
           <div class="relative">
             <button
-              onclick={() => { cycleTheme(); showThemePicker = true; }}
+              onclick={() => showThemePicker = !showThemePicker}
               class="p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
               aria-label="Change color theme"
               title="Theme: {THEMES.find(t => t.id === colorTheme)?.label}"
@@ -238,6 +442,8 @@
               <span class="block w-4 h-4 rounded-full border-2 border-white dark:border-gray-800 ring-1 ring-gray-300 dark:ring-gray-600 shadow-sm" style="background-color: {THEMES.find(t => t.id === colorTheme)?.color}"></span>
             </button>
             {#if showThemePicker}
+              <!-- svelte-ignore a11y_click_events_have_key_events -->
+              <div class="fixed inset-0 z-40" role="presentation" onclick={() => showThemePicker = false}></div>
               <div
                 class="absolute right-0 top-full mt-1 z-50 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-2 flex gap-2"
                 role="menu"
@@ -305,6 +511,13 @@
           </a>
         {/each}
         <a
+          href="/review"
+          class="block px-3 py-2 rounded-lg text-sm font-medium transition-colors {isActive('/review', $page.url.pathname)
+            ? 'bg-primary-50 text-primary-600 dark:bg-primary-500/20 dark:text-primary-400'
+            : 'text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700'}"
+          onclick={() => mobileMenuOpen = false}
+        >Review</a>
+        <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSeFsl3cKK7Tf3-iuzkPxPWmWkvRpZfB3U27PeZDun9NIqAt6A/viewform"
           target="_blank"
           rel="noopener noreferrer"
@@ -366,9 +579,9 @@
         <main class="flex-1 min-w-0">
           <!-- Hero banner — / and /sessions -->
           {#if $page.url.pathname === '/'}
-            <div class="bg-gradient-to-br from-primary-300 to-primary-900 rounded-2xl p-6 text-white shadow-lg relative mb-6">
+            <div class="bg-gradient-to-br from-primary-300 to-primary-900 rounded-2xl pt-3 sm:pt-6 px-6 pb-5 sm:pb-6 text-white shadow-lg relative mb-6">
               {#if sinceDate}
-                <div class="absolute top-4 right-7 flex items-center gap-1.5 text-xs text-primary-100">
+                <div class="absolute top-3 sm:top-4 right-7 flex items-center gap-1.5 text-xs text-primary-100">
                   <span class="relative flex h-2.5 w-2.5">
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-90"></span>
                     <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-400"></span>
@@ -377,7 +590,7 @@
                 </div>
               {/if}
               <h1 class="text-2xl font-bold mb-1">All Questions</h1>
-              <p class="text-primary-100 text-sm mb-4">Every question the group ever asked. Right here.</p>
+              <p class="text-primary-100 text-sm mb-7 sm:mb-4">Every question the group ever asked. Right here.</p>
               <div class="flex items-center justify-between gap-3">
                 <div class="flex flex-wrap gap-x-4 gap-y-1 text-sm">
                   <span class="font-semibold">{totalStats.total} total questions</span>
@@ -386,7 +599,7 @@
                 </div>
                 <button
                   onclick={surpriseMe}
-                  class="flex-shrink-0 inline-flex items-center gap-1.5 px-4 py-2 bg-white hover:bg-primary-50 text-primary-600 dark:bg-slate-700 dark:hover:bg-slate-600 dark:text-white font-semibold text-sm rounded-lg transition-colors shadow-sm cursor-pointer"
+                  class="flex-shrink-0 inline-flex items-center gap-1.5 px-4 py-2 bg-white hover:bg-primary-50 text-primary-600 dark:bg-gray-900 dark:hover:bg-gray-800 dark:text-primary-300 font-semibold text-sm rounded-lg transition-colors shadow-sm cursor-pointer"
                 >
                   <svg class="w-4 h-4 flex-shrink-0 animate-spin" style="animation-duration:1s" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
                   <span>Random question</span>
@@ -394,9 +607,9 @@
               </div>
             </div>
           {:else if $page.url.pathname === '/sessions'}
-            <div class="bg-gradient-to-br from-primary-300 to-primary-900 rounded-2xl p-6 text-white shadow-lg relative mb-6">
+            <div class="bg-gradient-to-br from-primary-300 to-primary-900 rounded-2xl pt-3 sm:pt-6 px-6 pb-5 sm:pb-6 text-white shadow-lg relative mb-6">
               {#if sinceDate}
-                <div class="absolute top-4 right-7 flex items-center gap-1.5 text-xs text-primary-100">
+                <div class="absolute top-3 sm:top-4 right-7 flex items-center gap-1.5 text-xs text-primary-100">
                   <span class="relative flex h-2.5 w-2.5">
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-90"></span>
                     <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-400"></span>
@@ -405,7 +618,7 @@
                 </div>
               {/if}
               <h1 class="text-2xl font-bold mb-1">Quiz Sessions</h1>
-              <p class="text-primary-100 text-sm mb-4">Curated quiz sessions hosted by group members</p>
+              <p class="text-primary-100 text-sm mb-7 sm:mb-4">Curated quiz sessions hosted by group members</p>
               <div class="flex items-center justify-between gap-3">
                 <div class="flex flex-wrap gap-x-4 gap-y-1 text-sm">
                   <span class="font-semibold">{totalStats.sessions} quiz sessions</span>
@@ -414,7 +627,7 @@
                 </div>
                 <button
                   onclick={randomQuiz}
-                  class="flex-shrink-0 inline-flex items-center gap-1.5 px-4 py-2 bg-white hover:bg-primary-50 text-primary-600 dark:bg-slate-700 dark:hover:bg-slate-600 dark:text-white font-semibold text-sm rounded-lg transition-colors shadow-sm cursor-pointer"
+                  class="flex-shrink-0 inline-flex items-center gap-1.5 px-4 py-2 bg-white hover:bg-primary-50 text-primary-600 dark:bg-gray-900 dark:hover:bg-gray-800 dark:text-primary-300 font-semibold text-sm rounded-lg transition-colors shadow-sm cursor-pointer"
                 >
                   <svg class="w-4 h-4 flex-shrink-0 animate-spin" style="animation-duration:1s" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
                   <span>Random quiz</span>
@@ -513,6 +726,10 @@
         <!-- Calendar sidebar — desktop only -->
         <aside class="hidden lg:block w-80 flex-shrink-0">
           <div class="sticky top-6 space-y-4">
+            {#if $page.url.pathname === '/review'}
+              <!-- Review calendar + leaderboard -->
+              {@render reviewSidebar()}
+            {:else}
             <CalendarSidebar {store} tz={tz.value} />
 
             {#if $page.url.pathname === '/sessions'}
@@ -586,6 +803,7 @@
                   </div>
                 </div>
               {/if}
+            {/if}
             {/if}
           </div>
         </aside>

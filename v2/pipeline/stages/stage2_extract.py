@@ -184,7 +184,8 @@ Return a JSON array. Each element is a flat object with EXACTLY these fields:
     "username": "string",
     "text": "string",
     "role": "attempt|hint|confirmation|chat|answer_reveal",
-    "is_correct": true/false/null
+    "is_correct": true/false/null,
+    "has_media": true if this message had image/GIF/video/audio/document omitted (hint and answer_reveal only; false for all other roles)
   } ],
   "scores_after": null or [{"username": "string", "score": integer}],
   "extraction_confidence": "high|medium|low"
@@ -217,8 +218,10 @@ Do not copy verbatim if sloppy or hedged. If never answered and never revealed, 
 
 ### answer_confirmed
 true ONLY if the asker sent an explicit text confirmation. Explicit confirms include:
-  "correct", "yes", "bingo", "right", "yep", "yess", "yup", "exactly", "indeed", "spot on", \
-"perfect", "well done", "✅", "👍", "💯", or any message containing "!"
+  "correct", "yes", "bingo", "right", "yep", "yess", "yesss", "yeas", "yeasss", "yeah", "exactly", \
+"indeed", "spot on", "perfect", "well done", "✅", "👍", "💯", "give it to you", \
+"giving it to you", "will give", "get it", "full points", "bonus for", "nailed", "closed", \
+or any message containing "!"
 
 Do NOT set true if:
 - The asker only reacted with an emoji reaction (not a text message)
@@ -245,6 +248,12 @@ If answer_parts entries have more than one distinct solver, answer_is_collaborat
 - chat: banter, reactions, off-topic
 - answer_reveal: asker reveals the answer after a confirm or when no one got it
 - All non-attempt roles: is_correct must be null (NEVER true or false)
+
+### has_media (discussion entries)
+Set has_media=true ONLY on hint and answer_reveal entries whose original message included a media
+marker ("image omitted", "GIF omitted", "video omitted", "audio omitted", "document omitted").
+Set has_media=false for ALL other roles (attempt, confirmation, chat), even if they had media —
+reactions and memes are intentionally excluded. Omit the field or set false when no media present.
 
 Discussion entries must be in chronological order. No entry may have a timestamp earlier than \
 question_timestamp. answer_solver must appear as a username in the discussion array.
@@ -286,6 +295,7 @@ NOTE: extraction_confidence="high" if and only if answer_confirmed=true.
 10. Does answer_solver appear in the discussion array?
 11. If answer_parts is present, is answer_text non-null?
 12. If answer_parts has multiple distinct solvers, is answer_is_collaborative=true?
+13. Does has_media=true on every hint/answer_reveal entry that had a media marker? Is has_media=false (or absent) for all other roles?
 
 ---
 
@@ -320,30 +330,106 @@ def _llm_call_once(messages_text: str, date_str: str, model: str, llm_client) ->
     )
     response = llm_client.messages.create(
         model=model,
-        max_tokens=8192,
+        max_tokens=65536,
         system=_EXTRACTION_SYSTEM_PROMPT,
         messages=[{"role": "user", "content": user_prompt}],
     )
     return response.content[0].text
 
 
+def _find_quiet_split(messages: list[dict], target_idx: int, lo_bound: int, hi_bound: int, search_range: int = 30) -> int:
+    """Find the largest time gap near target_idx to split without cutting a Q&A thread.
+    lo_bound/hi_bound prevent this split from crossing into a neighbor's territory."""
+    lo = max(lo_bound, target_idx - search_range)
+    hi = min(hi_bound - 1, target_idx + search_range)
+    best_idx = max(lo_bound, min(hi_bound, target_idx))  # clamp default to valid range
+    best_gap = 0.0
+    for i in range(lo, hi):
+        try:
+            t1 = datetime.fromisoformat(messages[i]["timestamp"].rstrip("Z"))
+            t2 = datetime.fromisoformat(messages[i + 1]["timestamp"].rstrip("Z"))
+            gap = (t2 - t1).total_seconds()
+            if gap > best_gap:
+                best_gap = gap
+                best_idx = i + 1  # split AFTER the gap
+        except (ValueError, KeyError):
+            continue
+    return best_idx
+
+
+def _merge_extractions(existing: dict, new: dict) -> dict:
+    """Merge two extractions of the same question, combining their discussions."""
+    # Start with whichever has richer top-level fields
+    if existing.get("answer_confirmed") and not new.get("answer_confirmed"):
+        base, other = existing, new
+    elif new.get("answer_confirmed") and not existing.get("answer_confirmed"):
+        base, other = new, existing
+    elif len(existing.get("discussion", [])) >= len(new.get("discussion", [])):
+        base, other = existing, new
+    else:
+        base, other = new, existing
+
+    # Merge discussion entries by timestamp+username (dedup)
+    merged = dict(base)
+    seen_keys: set[str] = set()
+    merged_disc: list[dict] = []
+    for entry in base.get("discussion", []) + other.get("discussion", []):
+        key = f"{entry.get('timestamp')}|{entry.get('username')}"
+        if key not in seen_keys:
+            seen_keys.add(key)
+            merged_disc.append(entry)
+    # Sort chronologically
+    merged_disc.sort(key=lambda e: e.get("timestamp", ""))
+    merged["discussion"] = merged_disc
+    return merged
+
+
 def _call_llm_chunked(messages: list[dict], date_str: str, model: str, llm_client) -> list[dict]:
-    """Split messages into two overlapping halves, extract each, merge by question_timestamp."""
-    mid = len(messages) // 2
-    overlap = 50  # messages of lookahead context for first chunk
-    chunk1 = _format_messages(messages[:mid + overlap])
-    chunk2 = _format_messages(messages[mid:])
-    log.info("Stage2 chunking into 2 halves (%d / %d messages)…", mid + overlap, len(messages) - mid)
-    raw1 = _llm_call_once(chunk1, date_str, model, llm_client)
-    time.sleep(1.0)
-    raw2 = _llm_call_once(chunk2, date_str, model, llm_client)
-    pairs1 = _parse_json(raw1) if raw1.strip() else []
-    pairs2 = _parse_json(raw2) if raw2.strip() else []
+    """Split messages into overlapping chunks at quiet gaps, extract each, merge by timestamp."""
+    overlap = 50  # bidirectional overlap so boundary Q&A threads are seen by both chunks
+    target_chunk_size = 600
+
+    # Determine split points
+    n_chunks = max(2, (len(messages) + target_chunk_size - 1) // target_chunk_size)
+    chunk_size = len(messages) // n_chunks
+
+    # Build split points with bounds so they stay monotonic
+    split_points = [0]
+    for i in range(1, n_chunks):
+        target = chunk_size * i
+        # Constrain search: can't go below previous split, can't go above next target
+        lo_bound = split_points[-1] + 1
+        hi_bound = min(len(messages), chunk_size * (i + 1)) if i < n_chunks - 1 else len(messages)
+        if lo_bound >= hi_bound:
+            continue  # skip — chunks are too small to split further
+        split_points.append(_find_quiet_split(messages, target, lo_bound, hi_bound))
+    split_points.append(len(messages))
+    n_chunks = len(split_points) - 1  # may have shrunk if chunks were skipped
+
+    log.info("Stage2 chunking into %d parts at quiet gaps (%d messages total)…",
+             n_chunks, len(messages))
+
     seen: dict[str, dict] = {}
-    for p in pairs1 + pairs2:
-        key = p.get("question_timestamp", "")
-        if key not in seen or len(p.get("discussion", [])) > len(seen[key].get("discussion", [])):
-            seen[key] = p
+    for ci in range(n_chunks):
+        # Add overlap in both directions
+        start = max(0, split_points[ci] - (overlap if ci > 0 else 0))
+        end = min(len(messages), split_points[ci + 1] + (overlap if ci < n_chunks - 1 else 0))
+        chunk_text = _format_messages(messages[start:end])
+        log.debug("  Chunk %d/%d: messages %d–%d (%d msgs)", ci + 1, n_chunks, start, end - 1, end - start)
+        try:
+            raw = _llm_call_once(chunk_text, date_str, model, llm_client)
+            pairs = _parse_json(raw) if raw.strip() else []
+            for p in pairs:
+                key = p.get("question_timestamp", "")
+                if key in seen:
+                    seen[key] = _merge_extractions(seen[key], p)
+                else:
+                    seen[key] = p
+        except Exception as e:
+            log.warning("  Chunk %d/%d failed: %s — continuing with remaining chunks", ci + 1, n_chunks, e)
+        if ci < n_chunks - 1:
+            time.sleep(13)  # Gemini free tier: 5 RPM
+
     return list(seen.values())
 
 
@@ -396,7 +482,35 @@ def _call_llm(messages: list[dict], date_str: str, config: dict, llm_client) -> 
             raise
             
     if not initial_candidates:
-        return []
+        # LLM returned [] — if the day is large, retry with chunked extraction
+        # since the model may have struggled with a big input.
+        if len(messages) > 100:
+            log.warning("Stage2 LLM returned 0 candidates for %d messages — retrying chunked…", len(messages))
+            try:
+                initial_candidates = _call_llm_chunked(messages, date_str, model, llm_client)
+            except Exception as e:
+                log.error("Stage2 chunked retry also returned nothing: %s", e)
+        if not initial_candidates:
+            return []
+
+    # ── Auto-fix common LLM topic mistakes before audit ──
+    _TOPIC_ALIASES = {
+        "music": "entertainment", "film": "entertainment", "movies": "entertainment",
+        "cinema": "entertainment", "tv": "entertainment", "television": "entertainment",
+        "gaming": "entertainment", "anime": "entertainment", "comics": "entertainment",
+        "food": "food_drink", "drink": "food_drink", "cuisine": "food_drink",
+        "cooking": "food_drink",
+        "culture": "art_culture", "art": "art_culture", "religion": "art_culture",
+        "politics": "history", "military": "history",
+        "math": "science", "mathematics": "science", "medicine": "science",
+        "biology": "science", "physics": "science", "chemistry": "science",
+        "economics": "business", "finance": "business",
+        "language": "etymology", "linguistics": "etymology",
+        "nature": "geography", "travel": "geography",
+    }
+    for entry in initial_candidates:
+        if "topics" in entry and isinstance(entry["topics"], list):
+            entry["topics"] = [_TOPIC_ALIASES.get(t.lower(), t) for t in entry["topics"]]
 
     # ── Self-Healing Audit Loop ──
     from utils.audit_extraction import audit_data
@@ -427,7 +541,7 @@ def _call_llm(messages: list[dict], date_str: str, config: dict, llm_client) -> 
             log.info("Stage2 dispatching self-healing LLM call...")
             fix_resp = llm_client.messages.create(
                 model=model,
-                max_tokens=8192,
+                max_tokens=65536,
                 system=_FIX_SYSTEM_PROMPT,
                 messages=[{"role": "user", "content": fix_prompt}]
             )

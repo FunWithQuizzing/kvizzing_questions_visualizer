@@ -129,7 +129,7 @@ class OllamaClient:
 
 # ── Gemini client ──────────────────────────────────────────────────────────────
 
-_GEMINI_MODEL = "gemini-2.0-flash"
+_GEMINI_MODEL = "gemini-2.5-pro"
 _GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
 
 

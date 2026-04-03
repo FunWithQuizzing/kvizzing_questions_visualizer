@@ -185,6 +185,22 @@ def upsert_session_final_scores(
         conn.executemany(_SCORE_UPSERT_SQL, rows)
 
 
+# ── Load helpers ─────────────────────────────────────────────────────────────
+
+def load_all(conn: sqlite3.Connection) -> list[KVizzingQuestion]:
+    """Load every question from the DB as KVizzingQuestion objects."""
+    import logging
+    log = logging.getLogger("kvizzing")
+    rows = conn.execute("SELECT payload FROM questions").fetchall()
+    questions = []
+    for (payload,) in rows:
+        try:
+            questions.append(KVizzingQuestion.model_validate_json(payload))
+        except Exception as e:
+            log.warning("Skipping malformed row: %s", e)
+    return questions
+
+
 # ── Pipeline state ────────────────────────────────────────────────────────────
 
 def _load_state(state_path: pathlib.Path) -> dict:

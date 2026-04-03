@@ -188,7 +188,8 @@ def build_stats(questions: list[dict]) -> dict:
     session_ids: set[str] = set()
 
     for q in questions:
-        topic = (q.get("question") or {}).get("topic")
+        topics_list = (q.get("question") or {}).get("topics") or []
+        topic = topics_list[0] if topics_list else None
         if topic:
             topic_dist[topic] += 1
 

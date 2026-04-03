@@ -11,6 +11,7 @@ Exits with code 0 if clean, code 1 if issues found.
 from __future__ import annotations
 
 import json
+import re
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -21,11 +22,50 @@ FORMAT_TAGS = {
     "fill in the blank", "multi-part", "factual",
 }
 
-EXPLICIT_CONFIRMS = [
-    "correct", "yes", "bingo", "right", "yep", "yess", "yup",
-    "✅", "👍", "💯", "perfect", "well done", "!", "exactly",
-    "indeed", "spot on",
-]
+# Regex for explicit confirmation phrases (word-boundary-aware).
+_CONFIRM_RE = re.compile(
+    r"(?:"
+    # direct affirmatives
+    r"\bye[sa]+h*\b"           # yes, yess, yesss, yeas, yeasss, yeah, yeaah, …
+    r"|\byep\b|\byup\b"
+    r"|\bcorrect\b"
+    r"|\bbingo\b"
+    r"|\bright\b"
+    r"|\bexactly\b"
+    r"|\bindeed\b"
+    r"|\bspot\s+on\b"
+    r"|\bperfect\b"
+    r"|\bwell\s+done\b"
+    r"|\bnailed\b"
+    r"|\bclosed\b"
+    # awarding phrases
+    r"|\bgive\s+it\s+to\s+you"
+    r"|\bgiving\s+it"
+    r"|\bwill\s+give\b"
+    r"|\bgave\s+it\b"
+    r"|\bget\s+it\b"
+    r"|\bfull\s+points\b"
+    r"|\bbonus\s+for\b"
+    # emoji
+    r"|[✅👍💯]"
+    # exclamation (any message with !)
+    r"|!"
+    r")",
+    re.IGNORECASE,
+)
+
+
+_NEGATION_RE = re.compile(
+    r"\b(not|no|never|neither|incorrect|wrong)\b",
+    re.IGNORECASE,
+)
+
+
+def _is_explicit_confirm(text: str) -> bool:
+    """Return True if text contains an explicit confirmation signal and no negation."""
+    if _NEGATION_RE.search(text):
+        return False
+    return bool(_CONFIRM_RE.search(text))
 MEDIA_MARKERS = [
     "image omitted", "gif omitted", "video omitted",
     "audio omitted", "document omitted",
@@ -39,6 +79,30 @@ def audit_data(data: list) -> list[str]:
     if not data:
         return []  # empty file is valid (no Q&A that day)
 
+    # 0. Near-duplicate questions: same text + same asker within 60 s of each other.
+    # (Same timestamp alone is not enough — multi-question emoji batches share one timestamp.)
+    for i, q in enumerate(data):
+        q_ts = q.get("question_timestamp", "")
+        q_text = q.get("question_text", "")
+        q_asker = q.get("question_asker", "")
+        for j, other in enumerate(data[:i]):
+            other_ts = other.get("question_timestamp", "")
+            if (other.get("question_asker") == q_asker
+                    and other.get("question_text") == q_text
+                    and q_ts and other_ts):
+                try:
+                    delta = abs(
+                        (datetime.fromisoformat(q_ts.rstrip("Z"))
+                         - datetime.fromisoformat(other_ts.rstrip("Z"))).total_seconds()
+                    )
+                    if delta < 60:
+                        issues.append(
+                            f"NEAR_DUPLICATE      entry#{i}: same text/asker as entry#{j} "
+                            f"(Δt={delta:.0f}s)"
+                        )
+                except ValueError:
+                    pass
+
     for i, q in enumerate(data):
         ts = q.get("question_timestamp", f"entry#{i}")
         label = f"[{ts[11:19] if len(ts) >= 19 else ts}]"
@@ -50,8 +114,7 @@ def audit_data(data: list) -> list[str]:
 
         # 1. answer_confirmed=true but confirmation_text not explicitly positive
         if q.get("answer_confirmed") and q.get("confirmation_text"):
-            ct = q["confirmation_text"].lower()
-            if not any(w in ct for w in EXPLICIT_CONFIRMS):
+            if not _is_explicit_confirm(q["confirmation_text"]):
                 issues.append(f"CONFIRM_IMPLICIT    {label}: \"{q['confirmation_text']}\"")
 
         # 2. answer_confirmed=true but no confirmation role in discussion
@@ -218,6 +281,13 @@ def audit_data(data: list) -> list[str]:
             for f in ["session_quizmaster", "session_theme", "session_quiz_type", "session_question_number"]:
                 if q.get(f):
                     issues.append(f"ORPHAN_SESSION_VAR  {label}: '{f}' is populated but is_session_question is false")
+
+        # 29. has_media set on discussion entry with non-media role
+        for e in disc:
+            if e.get("has_media") and e.get("role") not in ("hint", "answer_reveal"):
+                issues.append(
+                    f"DISC_MEDIA_ROLE     {label}: has_media=true on {e.get('role')} entry by {e.get('username')}"
+                )
 
     return issues
 

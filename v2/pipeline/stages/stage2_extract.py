@@ -18,6 +18,7 @@ Output: list of raw candidate dicts (not yet Pydantic-validated)
 
 from __future__ import annotations
 
+import copy
 import json
 import logging
 import re
@@ -370,14 +371,14 @@ def _merge_extractions(existing: dict, new: dict) -> dict:
         base, other = new, existing
 
     # Merge discussion entries by timestamp+username (dedup)
-    merged = dict(base)
+    merged = copy.deepcopy(base)
     seen_keys: set[str] = set()
     merged_disc: list[dict] = []
     for entry in base.get("discussion", []) + other.get("discussion", []):
         key = f"{entry.get('timestamp')}|{entry.get('username')}"
         if key not in seen_keys:
             seen_keys.add(key)
-            merged_disc.append(entry)
+            merged_disc.append(copy.deepcopy(entry))
     # Sort chronologically
     merged_disc.sort(key=lambda e: e.get("timestamp", ""))
     merged["discussion"] = merged_disc
@@ -447,6 +448,7 @@ def _call_llm(messages: list[dict], date_str: str, config: dict, llm_client) -> 
     messages_text = _format_messages(messages)
 
     initial_candidates = None
+    tried_chunked = False
     for attempt in range(max_retries):
         try:
             raw_text = _llm_call_once(messages_text, date_str, model, llm_client)
@@ -465,8 +467,10 @@ def _call_llm(messages: list[dict], date_str: str, config: dict, llm_client) -> 
             # All retries exhausted — try chunked extraction if the day is large
             if len(messages) > 100:
                 log.warning("Stage2 falling back to chunked extraction (%d messages)…", len(messages))
+                tried_chunked = True
                 try:
-                    return _call_llm_chunked(messages, date_str, model, llm_client)
+                    initial_candidates = _call_llm_chunked(messages, date_str, model, llm_client)
+                    break
                 except Exception as chunk_err:
                     log.error("Stage2 chunked extraction also failed: %s", chunk_err)
             return []
@@ -480,8 +484,8 @@ def _call_llm(messages: list[dict], date_str: str, config: dict, llm_client) -> 
                     continue
             log.error("Stage2 LLM call failed: %s", e, exc_info=True)
             raise
-            
-    if not initial_candidates:
+
+    if not initial_candidates and not tried_chunked:
         # LLM returned [] — if the day is large, retry with chunked extraction
         # since the model may have struggled with a big input.
         if len(messages) > 100:
@@ -490,8 +494,8 @@ def _call_llm(messages: list[dict], date_str: str, config: dict, llm_client) -> 
                 initial_candidates = _call_llm_chunked(messages, date_str, model, llm_client)
             except Exception as e:
                 log.error("Stage2 chunked retry also returned nothing: %s", e)
-        if not initial_candidates:
-            return []
+    if not initial_candidates:
+        return []
 
     # ── Auto-fix common LLM topic mistakes before audit ──
     _TOPIC_ALIASES = {

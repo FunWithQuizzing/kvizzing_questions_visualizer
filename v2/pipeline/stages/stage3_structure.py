@@ -14,6 +14,7 @@ Output: list of validated KVizzingQuestion objects
 from __future__ import annotations
 
 import json
+import logging
 import pathlib
 import re
 import sys
@@ -21,6 +22,8 @@ from collections import Counter
 from datetime import datetime, date as Date
 from typing import Optional
 from zoneinfo import ZoneInfo
+
+log = logging.getLogger("kvizzing")
 
 from pydantic import ValidationError
 
@@ -120,12 +123,14 @@ def _map_discussion(entries: list[dict]) -> list[DiscussionEntry]:
     result = []
     for e in entries:
         try:
+            role = DiscussionRole(e["role"])
             result.append(DiscussionEntry(
                 timestamp=datetime.fromisoformat(e["timestamp"].rstrip("Z")).replace(tzinfo=UTC),
                 username=e["username"],
                 text=e["text"],
-                role=DiscussionRole(e["role"]),
+                role=role,
                 is_correct=e.get("is_correct"),
+                has_media=bool(e.get("has_media", False)),
                 media=None,
             ))
         except (KeyError, ValueError):
@@ -244,14 +249,25 @@ def structure(
         )
 
         session: Optional[Session] = None
-        if raw.get("is_session_question") and raw.get("session_quizmaster"):
+        if raw.get("is_session_question"):
             session_date = q_date.strftime("%Y-%m-%d")
+            quizmaster = raw.get("session_quizmaster") or ""
+            if not quizmaster:
+                # Try to infer quizmaster from discussion (first hint/confirmation sender)
+                for entry in discussion_raw:
+                    role = entry.get("role", "")
+                    if role in ("hint", "confirmation", "answer_reveal"):
+                        quizmaster = entry.get("username", "")
+                        break
+            if not quizmaster:
+                log.warning("Stage3: is_session_question=true but no quizmaster found for %s — using 'unknown'", q_ts)
+                quizmaster = "unknown"
             # Take the first component before any space or dot for a clean slug
             # e.g. "pratik.s.chandarana" → "pratik", "Pavan Pamidimarri" → "pavan"
-            qm_slug = re.split(r"[\s.]", raw["session_quizmaster"].lower())[0]
+            qm_slug = re.split(r"[\s.]", quizmaster.lower())[0]
             session = Session(
                 id=f"{session_date}-{qm_slug}",
-                quizmaster=raw["session_quizmaster"],
+                quizmaster=quizmaster,
                 question_number=raw.get("session_question_number") or 1,
                 theme=raw.get("session_theme"),
                 quiz_type=raw.get("session_quiz_type"),
@@ -312,10 +328,45 @@ def run(
     Validate and structure all raw candidates into KVizzingQuestion objects.
     Invalid candidates are logged to errors_dir (if provided) and skipped.
     """
+    # Deduplicate raw candidates: drop any entry with the same text + asker
+    # whose timestamp is within 60 s of an already-seen entry.
+    # (Same timestamp alone is insufficient — emoji batches can share one timestamp.)
+    seen: list[tuple[str, str, datetime]] = []  # (text, asker, dt)
+    deduped: list[dict] = []
+    for c in candidates:
+        text = c.get("question_text", "")
+        asker = c.get("question_asker", "")
+        ts_str = c.get("question_timestamp", "")
+        is_dup = False
+        try:
+            dt = datetime.fromisoformat(ts_str.rstrip("Z")).replace(tzinfo=UTC) if ts_str else None
+            if dt:
+                for s_text, s_asker, s_dt in seen:
+                    if (s_text == text and s_asker == asker
+                            and abs((dt - s_dt).total_seconds()) < 60):
+                        log.warning(
+                            "Stage3: dropping near-duplicate candidate (same text/asker, Δt<60s): %s",
+                            ts_str,
+                        )
+                        is_dup = True
+                        break
+                if not is_dup and text and asker:
+                    seen.append((text, asker, dt))
+        except ValueError:
+            pass
+        if not is_dup:
+            deduped.append(c)
+
+    if len(deduped) < len(candidates):
+        log.warning(
+            "Stage3: removed %d near-duplicate candidate(s) (%d → %d)",
+            len(candidates) - len(deduped), len(candidates), len(deduped),
+        )
+
     collision_counter: Counter = Counter()
     results: list[KVizzingQuestion] = []
 
-    for i, candidate in enumerate(candidates):
+    for i, candidate in enumerate(deduped):
         try:
             obj = structure(candidate, config, collision_counter, source_file, pair_index=i + 1)
             results.append(obj)

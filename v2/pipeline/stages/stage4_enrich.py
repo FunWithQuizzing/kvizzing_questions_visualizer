@@ -35,6 +35,34 @@ def _parse_json(text: str) -> list:
     return json.loads(text.strip())
 
 
+# ── Tag normalisation ─────────────────────────────────────────────────────────
+# Tags that describe question FORMAT, not subject matter — never store these.
+_FORMAT_TAGS = {
+    "identify", "anagram", "wordplay", "connect", "clickbait",
+    "real life", "naming", "weird", "multi-part", "factual",
+    "battle", "pun", "fill in the blank",
+}
+
+# Tags to rename on ingest
+_RENAME_TAGS: dict[str, str] = {
+    "badly explained plots": "badly explained",
+    "pun": "puns",
+}
+
+
+def _normalize_tags(tags: list[str]) -> list[str]:
+    seen: set[str] = set()
+    result = []
+    for tag in tags:
+        tag = _RENAME_TAGS.get(tag, tag)
+        if tag in _FORMAT_TAGS:
+            continue
+        if tag not in seen:
+            result.append(tag)
+            seen.add(tag)
+    return result
+
+
 _ENRICH_SYSTEM_PROMPT = """\
 You are classifying quiz questions from a WhatsApp trivia group.
 
@@ -101,13 +129,22 @@ def _call_llm(
         try:
             response = llm_client.messages.create(
                 model=model,
-                max_tokens=2048,
+                max_tokens=4096,
                 system=_ENRICH_SYSTEM_PROMPT,
                 messages=[{"role": "user", "content": user_prompt}],
             )
-            return _parse_json(response.content[0].text)
+            raw_text = response.content[0].text
+            return _parse_json(raw_text)
         except json.JSONDecodeError as e:
-            log.warning("Stage4 LLM returned invalid JSON: %s", e)
+            log.warning(
+                "Stage4 LLM returned invalid JSON (attempt %d/%d): %s\nRaw response (first 500 chars): %s",
+                attempt + 1, max_retries, e, raw_text[:500] if 'raw_text' in dir() else "<no response>",
+            )
+            if attempt < max_retries - 1:
+                delay = base_delay * (2 ** attempt)
+                log.warning("Stage4 retrying in %.1fs…", delay)
+                time.sleep(delay)
+                continue
             return []
         except Exception as e:
             err_str = str(e)
@@ -129,7 +166,7 @@ def _apply_enrichment(
     """Return a copy of question with primary + optional secondary topic and tags applied."""
     primary_str = enrichment.get("primary_topic", "") or enrichment.get("topic", "")
     secondary_str = enrichment.get("secondary_topic") or ""
-    tags = enrichment.get("tags", [])
+    tags = _normalize_tags(enrichment.get("tags", []))
 
     try:
         primary = TopicCategory(primary_str)

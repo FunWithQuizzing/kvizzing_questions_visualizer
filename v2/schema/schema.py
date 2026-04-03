@@ -191,10 +191,18 @@ class DiscussionEntry(BaseModel):
         default=None,
         description="True if this attempt was the winning answer. Null for non-attempt roles."
     )
+    has_media: bool = Field(
+        default=False,
+        description="True if this discussion message included an image/video/audio/document "
+                    "attachment in the original chat. Only tracked for hint and answer_reveal "
+                    "roles — reaction GIFs and memes in chat/attempt/confirmation entries are "
+                    "intentionally excluded."
+    )
     media: Optional[list[MediaAttachment]] = Field(
         default=None,
-        description="Media attachments on this discussion message (e.g. an image posted as a hint). "
-                    "Null when unavailable or not applicable."
+        description="Media attachments on this discussion message (e.g. an image posted as a hint "
+                    "or an answer reveal image). Null until files are matched and hosted. "
+                    "has_media=True with media=None means: file exists but not yet matched."
     )
 
 

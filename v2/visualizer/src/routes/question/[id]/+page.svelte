@@ -1,0 +1,273 @@
+<script lang="ts">
+  import { getContext } from 'svelte';
+  import { goto } from '$app/navigation';
+  import type { QuestionStore } from '$lib/stores/questionStore';
+  import { formatDateTz, formatTime } from '$lib/utils/time';
+  import { topicCls, topicClsSecondary, topicLabel } from '$lib/utils/topicColors';
+  import { filterHints } from '$lib/utils/hints';
+  import MemberAvatar from '$lib/components/MemberAvatar.svelte';
+  import AnswerSubmission from '$lib/components/AnswerSubmission.svelte';
+  import DiscussionThread from '$lib/components/DiscussionThread.svelte';
+  import MediaGallery from '$lib/components/MediaGallery.svelte';
+  import { displayText } from '$lib/utils/text';
+
+  let { data } = $props();
+  const store = getContext<QuestionStore>('store');
+  const tzCtx = getContext<{ value: string }>('timezone');
+
+  const question = $derived(data.question);
+  const q = $derived(question.question);
+  const a = $derived(question.answer);
+  const stats = $derived(question.stats);
+  const adj = $derived(store.getAdjacentQuestions(question.id));
+
+  let discussionVisible = $state(false);
+  let revealed = $state(false);
+
+  const questionMedia = $derived((q.media ?? []).filter((m: { url: string | null }) => m.url));
+  const answerMedia = $derived(
+    (question.discussion ?? [])
+      .filter((d: { role: string; media?: { url: string | null }[] | null }) =>
+        d.role === 'answer_reveal' && d.media?.some(m => m.url))
+      .flatMap((d: { media?: { url: string | null }[] | null }) => d.media ?? [])
+      .filter((m: { url: string | null }) => m.url)
+  );
+
+  function onAnswerReveal() {
+    revealed = true;
+  }
+  function onAnswerHide() {
+    revealed = false;
+  }
+</script>
+
+<svelte:head>
+  <title>{q.asker}'s question — KVizzing</title>
+</svelte:head>
+
+<div class="space-y-5">
+  <!-- Back nav -->
+  <div class="flex items-center gap-3">
+    <a href="/" class="inline-flex items-center gap-1.5 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+      Feed
+    </a>
+    {#if question.session}
+      <span class="text-gray-300 dark:text-gray-600">/</span>
+      <a href="/session/{question.session.id}" class="text-sm text-primary-500 dark:text-primary-400 hover:text-primary-600 dark:hover:text-primary-300 transition-colors">
+        {question.session.quiz_type === 'connect' ? `${question.session.quizmaster}'s Connect Quiz` : (question.session.theme ?? 'Session')} #{question.session.question_number}
+      </a>
+    {/if}
+    <button
+      onclick={() => { const q = store.random(); if (q) goto(`/question/${q.id}`); }}
+      class="ml-auto inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium bg-primary-500 dark:bg-primary-600 text-white hover:bg-primary-600 dark:hover:bg-primary-700 rounded-lg transition-colors cursor-pointer flex-shrink-0"
+    >
+      <svg class="w-4 h-4 flex-shrink-0 animate-spin" style="animation-duration:1s" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
+      <span class="hidden sm:inline">Random question</span>
+      <span class="sm:hidden">Random</span>
+    </button>
+  </div>
+
+  <!-- Context bar -->
+  <div class="flex items-center justify-between gap-3 flex-wrap">
+    <div class="flex items-center gap-2">
+      <MemberAvatar username={q.asker} size="sm" />
+      <div>
+        <p class="text-sm font-semibold text-gray-800 dark:text-gray-200">{q.asker}</p>
+        <p class="text-xs text-gray-400 dark:text-gray-500">{formatDateTz(question.question.timestamp ?? question.date, tzCtx?.value ?? 'Europe/London')}</p>
+      </div>
+    </div>
+
+    <div class="flex items-center gap-2 flex-wrap justify-end">
+      {#if question.session}
+        <a
+          href="/session/{question.session.id}"
+          class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-primary-100 dark:bg-primary-900/40 text-primary-700 dark:text-primary-300 hover:bg-primary-200 dark:hover:bg-primary-900/60 transition-colors"
+        >
+          #{question.session.question_number} {question.session.quiz_type === 'connect' ? `${question.session.quizmaster}'s Connect Quiz` : (question.session.theme ?? 'Session')}
+        </a>
+      {/if}
+      {#each (q.topics ?? []) as topic, i}
+        <a href="/?topic={topic}" class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium transition-colors {i === 0 ? topicCls(topic) : topicClsSecondary(topic)}">
+          {topicLabel(topic)}
+        </a>
+      {/each}
+    </div>
+  </div>
+
+  <!-- Question card -->
+  <div class="bg-ui-card rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm p-6 space-y-3">
+    <p class="text-gray-900 dark:text-gray-100 text-base leading-relaxed font-medium">{displayText(q.text, questionMedia.length > 0)}</p>
+    {#if questionMedia.length > 0}
+      <MediaGallery attachments={questionMedia} />
+    {:else if q.has_media}
+      <p class="text-sm text-purple-500 dark:text-purple-400 flex items-center gap-1.5">
+        <span>📎</span> Media not yet hosted
+      </p>
+    {/if}
+    {#if revealed && q.tags && q.tags.length > 0}
+      <div class="flex gap-2 flex-wrap">
+        {#each q.tags as tag}
+          <a href="/?tag={encodeURIComponent(tag)}" class="text-xs px-2 py-0.5 bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-400 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 hover:text-gray-700 dark:hover:text-gray-200 transition-colors">{tag}</a>
+        {/each}
+      </div>
+    {/if}
+  </div>
+
+  <!-- Answer submission -->
+  {#if a?.text}
+    <AnswerSubmission
+      correctAnswer={a.text}
+      solver={a.solver ?? null}
+      parts={a.parts && a.parts.length > 1 ? a.parts : null}
+      hints={filterHints(question.discussion?.filter((d: {role: string}) => d.role === 'hint').map((d: {text: string}) => d.text) ?? [])}
+      maxAttempts={3}
+      onReveal={onAnswerReveal}
+      onHide={onAnswerHide}
+    />
+  {/if}
+
+  <!-- Answer parts breakdown -->
+  {#if revealed && a?.parts && a.parts.length > 1}
+    <div class="bg-green-50 dark:bg-green-900/30 border border-green-200 dark:border-green-800 rounded-xl px-4 py-3">
+      <p class="text-xs font-medium text-green-600 dark:text-green-400 uppercase tracking-wide mb-2">Answer Parts</p>
+      <div class="space-y-1.5">
+        {#each a.parts as part}
+          <div class="flex items-center gap-2 text-sm">
+            <span class="font-semibold text-green-800 dark:text-green-200">{part.label}:</span>
+            <span class="text-green-700 dark:text-green-300">{part.text}</span>
+            {#if part.solver}
+              <span class="flex items-center gap-1 text-xs text-green-500 dark:text-green-400 ml-auto">
+                <MemberAvatar username={part.solver} size="xs" />
+                {part.solver}
+              </span>
+            {/if}
+          </div>
+        {/each}
+      </div>
+    </div>
+  {/if}
+
+  <!-- Answer reveal media -->
+  {#if revealed && answerMedia.length > 0}
+    <div class="bg-ui-card rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm p-4">
+      <p class="text-xs font-medium text-green-600 dark:text-green-400 uppercase tracking-wide mb-3">Answer reveal</p>
+      <MediaGallery attachments={answerMedia} />
+    </div>
+  {/if}
+
+  <!-- First solved by -->
+  {#if revealed && a?.solver}
+    <div class="flex items-center gap-3 bg-green-50 dark:bg-green-900/30 border border-green-200 dark:border-green-800 rounded-xl px-4 py-3">
+      <svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      <div class="flex items-center gap-2">
+        <MemberAvatar username={a.solver} size="xs" />
+        <span class="text-sm text-green-800 dark:text-green-200">
+          First solved by <a href="/?solver={encodeURIComponent(a.solver)}" class="font-semibold hover:underline">{a.solver}</a>
+        </span>
+      </div>
+      {#if a.confirmation_text}
+        <span class="text-xs text-green-600 dark:text-green-400 ml-auto italic">"{a.confirmation_text}"</span>
+      {/if}
+    </div>
+  {/if}
+
+  <!-- Discussion Metrics -->
+  {#if stats || question.discussion?.length > 0}
+    <div class="space-y-3">
+      <h2 class="text-sm font-semibold text-gray-700 dark:text-gray-300">Discussion Metrics</h2>
+
+      {#if stats}
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          {#if stats.time_to_answer_seconds}
+            <div class="bg-ui-card rounded-xl border border-gray-200 dark:border-gray-700 p-3 text-center shadow-sm">
+              <p class="text-lg font-bold text-gray-900 dark:text-gray-100">{formatTime(stats.time_to_answer_seconds)}</p>
+              <p class="text-xs text-gray-400 dark:text-gray-500 mt-0.5">Solve time</p>
+            </div>
+          {/if}
+          <div class="bg-ui-card rounded-xl border border-gray-200 dark:border-gray-700 p-3 text-center shadow-sm">
+            <p class="text-lg font-bold text-gray-900 dark:text-gray-100">{stats.wrong_attempts}</p>
+            <p class="text-xs text-gray-400 dark:text-gray-500 mt-0.5">Wrong attempts</p>
+          </div>
+          {#if stats.hints_given > 0}
+            <div class="bg-ui-card rounded-xl border border-gray-200 dark:border-gray-700 p-3 text-center shadow-sm">
+              <p class="text-lg font-bold text-gray-900 dark:text-gray-100">{stats.hints_given}</p>
+              <p class="text-xs text-gray-400 dark:text-gray-500 mt-0.5">Hints given</p>
+            </div>
+          {/if}
+          {#if stats.unique_participants > 0}
+            <div class="bg-ui-card rounded-xl border border-gray-200 dark:border-gray-700 p-3 text-center shadow-sm">
+              <p class="text-lg font-bold text-gray-900 dark:text-gray-100">{stats.unique_participants}</p>
+              <p class="text-xs text-gray-400 dark:text-gray-500 mt-0.5">Participants</p>
+            </div>
+          {/if}
+        </div>
+      {/if}
+
+  <!-- Discussion thread -->
+  {#if question.discussion?.length > 0}
+    <div class="bg-ui-card rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
+      <button
+        class="w-full px-5 py-4 flex items-center justify-between text-left hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+        onclick={() => discussionVisible = !discussionVisible}
+      >
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+          </svg>
+          <span class="text-sm font-semibold text-gray-700 dark:text-gray-300">Complete Discussion</span>
+          <span class="text-xs text-gray-400 dark:text-gray-500 bg-gray-100 dark:bg-gray-700 px-2 py-0.5 rounded-full">{question.discussion.length}</span>
+        </div>
+        <svg class="w-4 h-4 text-gray-400 transition-transform {discussionVisible ? 'rotate-180' : ''}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      {#if discussionVisible}
+        <div class="px-5 pb-5 border-t border-gray-100 dark:border-gray-700">
+          <div class="pt-4">
+            <DiscussionThread entries={question.discussion} />
+          </div>
+        </div>
+      {/if}
+    </div>
+  {/if}
+
+    </div>
+  {/if}
+
+  <!-- Prev / Next navigation -->
+  <div class="flex justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
+    {#if adj.next}
+      <a href="/question/{adj.next.id}" class="flex items-center gap-2 text-sm text-gray-500 hover:text-primary-600 dark:hover:text-primary-400 transition-colors group max-w-[45%]">
+        <svg class="w-4 h-4 flex-shrink-0 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        <div>
+          <p class="text-xs text-gray-400 dark:text-gray-500">Previous</p>
+          <p class="text-xs font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 line-clamp-2">{adj.next.question.text.slice(0, 60)}…</p>
+        </div>
+      </a>
+    {:else}
+      <div></div>
+    {/if}
+
+    {#if adj.prev}
+      <a href="/question/{adj.prev.id}" class="flex items-center gap-2 text-sm text-gray-500 hover:text-primary-600 dark:hover:text-primary-400 transition-colors group text-right max-w-[45%]">
+        <div>
+          <p class="text-xs text-gray-400 dark:text-gray-500">Next</p>
+          <p class="text-xs font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-primary-400 line-clamp-2">{adj.prev.question.text.slice(0, 60)}…</p>
+        </div>
+        <svg class="w-4 h-4 flex-shrink-0 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    {:else}
+      <div></div>
+    {/if}
+  </div>
+</div>

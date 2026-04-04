@@ -744,9 +744,9 @@
         <main class="flex-1 min-w-0">
           <!-- Hero banner — / and /sessions -->
           {#if $page.url.pathname === '/'}
-            <div class="bg-gradient-to-br from-primary-300 to-primary-900 rounded-2xl pt-3 sm:pt-6 px-6 pb-5 sm:pb-6 text-white shadow-lg relative mb-6">
+            <div class="bg-gradient-to-br from-primary-300 to-primary-900 rounded-2xl p-4 sm:p-6 text-white shadow-lg relative mb-6">
               {#if sinceDate}
-                <div class="absolute top-3 sm:top-4 right-7 flex items-center gap-1.5 text-xs text-primary-100">
+                <div class="absolute top-4 sm:top-6 right-4 sm:right-6 flex items-center gap-1.5 text-xs text-primary-100">
                   <span class="relative flex h-2.5 w-2.5">
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-90"></span>
                     <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-400"></span>
@@ -754,8 +754,8 @@
                   since {sinceDate}
                 </div>
               {/if}
-              <h1 class="text-2xl font-bold mb-1">All Questions</h1>
-              <p class="text-primary-100 text-sm mb-7 sm:mb-4">Every question the group ever asked. Right here.</p>
+              <h1 class="text-xl sm:text-2xl font-bold mb-1">All Questions</h1>
+              <p class="text-primary-100 text-sm mb-4">Every question the group ever asked. Right here.</p>
               <div class="flex items-center justify-between gap-3">
                 <div class="flex flex-wrap gap-x-4 gap-y-1 text-sm">
                   <span class="font-semibold">{totalStats.total} total questions</span>
@@ -773,9 +773,9 @@
               </div>
             </div>
           {:else if $page.url.pathname === '/sessions'}
-            <div class="bg-gradient-to-br from-primary-300 to-primary-900 rounded-2xl pt-3 sm:pt-6 px-6 pb-5 sm:pb-6 text-white shadow-lg relative mb-6">
+            <div class="bg-gradient-to-br from-primary-300 to-primary-900 rounded-2xl p-4 sm:p-6 text-white shadow-lg relative mb-6">
               {#if sinceDate}
-                <div class="absolute top-3 sm:top-4 right-7 flex items-center gap-1.5 text-xs text-primary-100">
+                <div class="absolute top-4 sm:top-6 right-4 sm:right-6 flex items-center gap-1.5 text-xs text-primary-100">
                   <span class="relative flex h-2.5 w-2.5">
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-90"></span>
                     <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-400"></span>
@@ -783,8 +783,8 @@
                   since {sinceDate}
                 </div>
               {/if}
-              <h1 class="text-2xl font-bold mb-1">Quiz Sessions</h1>
-              <p class="text-primary-100 text-sm mb-7 sm:mb-4">Curated quiz sessions hosted by group members</p>
+              <h1 class="text-xl sm:text-2xl font-bold mb-1">Quiz Sessions</h1>
+              <p class="text-primary-100 text-sm mb-4">Curated quiz sessions hosted by group members</p>
               <div class="flex items-center justify-between gap-3">
                 <div class="flex flex-wrap gap-x-4 gap-y-1 text-sm">
                   <span class="font-semibold">{totalStats.sessions} quiz sessions</span>
@@ -846,7 +846,7 @@
                   <div class="divide-y divide-stone-100 dark:divide-zinc-700/80">
                     {#each sidebarQuestions.slice(0, 8) as question}
                       <a href="/question/{question.id}" class="relative overflow-hidden flex items-center gap-3 px-4 py-2.5 transition-colors group">
-                        <div class="absolute inset-0" style="background-image: url('/images/connect-quiz-bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat; opacity: {SESSION_IMAGE_OPACITY.sidebar.default}"></div>
+                        <div class="absolute inset-0" style="background-image: url('/images/connect-quiz-bg-old.png'); background-size: cover; background-position: center; background-repeat: no-repeat; opacity: {SESSION_IMAGE_OPACITY.sidebar.default}"></div>
                         <span class="relative text-[10px] text-gray-600 dark:text-gray-400 flex-shrink-0 w-20">{ordinalDate(question.question?.timestamp ? dateInTz(question.question.timestamp, tz.value) : question.date)}</span>
                         <div class="relative min-w-0 flex-1 text-right">
                           <p class="text-xs font-semibold text-primary-700 dark:text-primary-200 truncate">{question.question.text}</p>
@@ -924,7 +924,7 @@
                         >
                           <div
                             class="question-bg absolute inset-0 transition-opacity"
-                            style="background-image: url('/images/connect-quiz-bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat; opacity: {SESSION_IMAGE_OPACITY.sidebar.default}"
+                            style="background-image: url('/images/connect-quiz-bg-old.png'); background-size: cover; background-position: center; background-repeat: no-repeat; opacity: {SESSION_IMAGE_OPACITY.sidebar.default}"
                           ></div>
                           <span class="relative text-[10px] text-gray-600 dark:text-gray-400 flex-shrink-0 w-20 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">{ordinalDate(question.question?.timestamp ? dateInTz(question.question.timestamp, tz.value) : question.date)}</span>
                           <div class="relative min-w-0 flex-1 text-right">
@@ -987,7 +987,15 @@
     <!-- Footer -->
     <footer class="mt-auto pt-8 px-4 sm:px-6">
       <div class="max-w-7xl mx-auto px-6 py-4 rounded-t-2xl bg-gradient-to-br from-primary-300 to-primary-900 text-white text-center">
-        <p class="text-sm font-medium tracking-wide">Apes together strong 🦍</p>
+        <p class="text-xs font-medium tracking-wide">Apes together strong 🦍</p>
+        <div class="flex items-center justify-center gap-3 mt-1.5 text-xs text-primary-100">
+          <span>Made with <span class="text-primary-300">&#9829;</span> by <a href="https://github.com/Saumay" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Saumay</a></span>
+          <span class="text-primary-300">·</span>
+          <a href="https://github.com/Saumay/kvizzing_questions_visualizer" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 hover:text-white transition-colors">
+            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            Contribute on GitHub
+          </a>
+        </div>
       </div>
     </footer>
   </div>

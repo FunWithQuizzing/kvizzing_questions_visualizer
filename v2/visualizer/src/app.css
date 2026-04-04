@@ -133,6 +133,14 @@
   }
 }
 
+/* Suppress all transitions during theme/dark-mode switch to avoid lag */
+html.no-transitions,
+html.no-transitions *,
+html.no-transitions *::before,
+html.no-transitions *::after {
+  transition-duration: 0s !important;
+}
+
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;

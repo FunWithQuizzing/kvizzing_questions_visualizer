@@ -17,7 +17,7 @@
   // Data is static (prerendered), so we construct the store once from the initial load.
   // eslint-disable-next-line svelte/no-unused-svelte-ignore
   // svelte-ignore state_referenced_locally
-  const store = new QuestionStore(data.questions, data.sessions, data.members);
+  const store = new QuestionStore(data.questions, data.sessions, data.members, data.tags ?? [], data.stats ?? null);
   setContext('store', store);
 
   const TIMEZONES = [
@@ -238,6 +238,7 @@
   });
   let tzSearch = $state('');
   let showThemePicker = $state(false);
+  let showUserMenu = $state(false);
 
   const THEMES = [
     { id: 'sky',     label: 'Blue',   color: '#0ea5e9' },
@@ -249,7 +250,7 @@
   let colorTheme = $state('sky');
 
   onMount(() => {
-    authenticated = localStorage.getItem('kvizzing_auth') === 'true';
+    authenticated = localStorage.getItem('kvizzing_auth_v2') === 'true';
     dm.value = localStorage.getItem('kvizzing_dark') === 'true';
     if (dm.value) document.documentElement.classList.add('dark');
     const saved = localStorage.getItem('kvizzing_theme') ?? 'sky';
@@ -267,11 +268,17 @@
   $effect(() => { if (showTzPicker) tzSearch = ''; });
 
   function applyTheme(id: string) {
+    document.documentElement.classList.add('no-transitions');
     if (id === 'sky') {
       document.documentElement.removeAttribute('data-theme');
     } else {
       document.documentElement.setAttribute('data-theme', id);
     }
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        document.documentElement.classList.remove('no-transitions');
+      });
+    });
   }
 
   function cycleTheme() {
@@ -283,14 +290,28 @@
   }
 
   function toggleDark() {
+    // Disable transitions during theme switch to prevent lag from
+    // hundreds of elements animating background/color simultaneously
+    document.documentElement.classList.add('no-transitions');
     dm.value = !dm.value;
     localStorage.setItem('kvizzing_dark', String(dm.value));
     document.documentElement.classList.toggle('dark', dm.value);
+    // Re-enable after a single frame so the browser paints the new colors first
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        document.documentElement.classList.remove('no-transitions');
+      });
+    });
   }
 
   function onAuthenticated() {
-    localStorage.setItem('kvizzing_auth', 'true');
+    localStorage.setItem('kvizzing_auth_v2', 'true');
     authenticated = true;
+  }
+
+  function logout() {
+    localStorage.removeItem('kvizzing_auth_v2');
+    authenticated = false;
   }
 
   let mobileMenuOpen = $state(false);
@@ -487,18 +508,6 @@
             <span class="text-xs font-medium">Feedback</span>
           </a>
 
-          <!-- Timezone -->
-          <button
-            onclick={() => { showTzPicker = true; tzSearch = ''; }}
-            class="flex items-center gap-1.5 px-2 py-1.5 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-            title="Change timezone"
-          >
-            <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <span class="text-xs font-medium">{TIMEZONES.find(z => z.id === tz.value)?.label ?? tzAbbr(tz.value)} ({tzAbbr(tz.value)})</span>
-          </button>
-
           <!-- Color theme -->
           <div class="relative">
             <button
@@ -549,25 +558,94 @@
           <!-- Divider -->
           <div class="w-px h-5 bg-gray-200 dark:bg-gray-600 mx-1"></div>
 
-          <!-- User identity -->
-          <button
-            onclick={() => { showUsernamePrompt = true; usernameInput = username.value; }}
-            class="flex items-center gap-1.5 px-2 py-1.5 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-            title="Change name"
-          >
-            <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-            </svg>
-            <span class="text-xs font-medium">{username.value || 'Set name'}</span>
-          </button>
+          <!-- User menu -->
+          <div class="relative">
+            <button
+              onclick={() => showUserMenu = !showUserMenu}
+              class="flex items-center gap-1.5 px-2 py-1.5 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+            >
+              <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+              <span class="text-xs font-medium">{username.value || 'Set name'}</span>
+              <svg class="w-3 h-3 transition-transform {showUserMenu ? 'rotate-180' : ''}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            {#if showUserMenu}
+              <!-- svelte-ignore a11y_click_events_have_key_events -->
+              <div class="fixed inset-0 z-40" role="presentation" onclick={() => showUserMenu = false}></div>
+              <div class="absolute right-0 top-full mt-1 z-50 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 py-1 w-56">
+                <!-- Timezone -->
+                <button
+                  onclick={() => { showUserMenu = false; showTzPicker = true; tzSearch = ''; }}
+                  class="w-full flex items-center gap-2.5 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                >
+                  <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span class="flex-1 text-left">{TIMEZONES.find(z => z.id === tz.value)?.label ?? tzAbbr(tz.value)}</span>
+                  <span class="text-xs text-gray-400 font-mono">{tzAbbr(tz.value)}</span>
+                </button>
+                <!-- Change name -->
+                <button
+                  onclick={() => { showUserMenu = false; showUsernamePrompt = true; usernameInput = username.value; }}
+                  class="w-full flex items-center gap-2.5 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                >
+                  <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                  </svg>
+                  Change name
+                </button>
+                <!-- Divider -->
+                <div class="border-t border-gray-100 dark:border-gray-700 my-1"></div>
+                <!-- Logout -->
+                <button
+                  onclick={() => { showUserMenu = false; logout(); }}
+                  class="w-full flex items-center gap-2.5 px-3 py-2 text-sm text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors"
+                >
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                  </svg>
+                  Logout
+                </button>
+              </div>
+            {/if}
+          </div>
         </div>
 
-        <!-- Mobile menu button -->
-        <button
-          class="sm:hidden p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700"
-          onclick={() => mobileMenuOpen = !mobileMenuOpen}
-          aria-label="Toggle menu"
-        >
+        <!-- Mobile: theme + dark mode + hamburger -->
+        <div class="sm:hidden flex items-center gap-1">
+          <!-- Color theme -->
+          <button
+            onclick={cycleTheme}
+            class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+            aria-label="Change color theme"
+          >
+            <span class="block w-4 h-4 rounded-full border-2 border-white dark:border-gray-800 ring-1 ring-gray-300 dark:ring-gray-600 shadow-sm" style="background-color: {THEMES.find(t => t.id === colorTheme)?.color}"></span>
+          </button>
+          <!-- Dark mode -->
+          <button
+            onclick={toggleDark}
+            class="p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 transition-colors"
+            aria-label="Toggle dark mode"
+          >
+            {#if dm.value}
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+            {:else}
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+              </svg>
+            {/if}
+          </button>
+          <!-- Hamburger -->
+          <button
+            class="p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700"
+            onclick={() => mobileMenuOpen = !mobileMenuOpen}
+            aria-label="Toggle menu"
+          >
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {#if mobileMenuOpen}
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -575,7 +653,8 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             {/if}
           </svg>
-        </button>
+          </button>
+        </div>
       </div>
     </div>
 
@@ -612,6 +691,24 @@
           </svg>
           Give feedback
         </a>
+        <!-- User section -->
+        <div class="border-t border-stone-200/80 dark:border-zinc-700/80 mt-1 pt-1">
+          <div class="px-3 py-2 flex items-center gap-2 text-sm font-medium text-gray-800 dark:text-gray-200">
+            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+            </svg>
+            {username.value || 'No name set'}
+          </div>
+          <button
+            onclick={() => { mobileMenuOpen = false; showUsernamePrompt = true; usernameInput = username.value; }}
+            class="w-full text-left px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 transition-colors flex items-center gap-2"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+            </svg>
+            Change name
+          </button>
+        </div>
         <div class="px-3 py-2 flex items-center gap-2 text-sm font-medium text-gray-600 dark:text-gray-300">
           <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -627,28 +724,13 @@
           </select>
         </div>
         <button
-          onclick={cycleTheme}
-          class="w-full text-left px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 transition-colors flex items-center gap-2"
+          onclick={() => { mobileMenuOpen = false; logout(); }}
+          class="w-full text-left px-3 py-2 rounded-lg text-sm font-medium text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors flex items-center gap-2"
         >
-          <span class="w-4 h-4 rounded-full border-2 border-white dark:border-gray-800 ring-1 ring-gray-300 dark:ring-gray-600 flex-shrink-0" style="background-color: {THEMES.find(t => t.id === colorTheme)?.color}"></span>
-          Theme: {THEMES.find(t => t.id === colorTheme)?.label}
-        </button>
-        <button
-          onclick={toggleDark}
-          class="w-full text-left px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 transition-colors flex items-center gap-2"
-          aria-label="Toggle dark mode"
-        >
-          {#if dm.value}
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-            </svg>
-            Light mode
-          {:else}
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-            </svg>
-            Dark mode
-          {/if}
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+          </svg>
+          Logout
         </button>
       </div>
     {/if}

@@ -53,27 +53,27 @@
   const grid = $derived(buildGrid(year, month));
 </script>
 
-<div class="relative bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm">
+<div class="relative bg-white dark:bg-neutral-900 rounded-xl border border-gray-200 dark:border-neutral-700 shadow-sm">
   <!-- Header -->
-  <div class="px-4 pt-4 pb-2 flex items-center justify-center">
+  <div class="bg-gradient-to-br from-primary-600 to-primary-900 dark:from-primary-700 dark:to-primary-900 rounded-t-xl px-4 pt-4 pb-2 flex items-center justify-center">
     <div class="flex items-center gap-1">
       <button
         onclick={prevMonth}
         disabled={!canGoPrev}
-        class="p-1 rounded transition-colors {canGoPrev ? 'hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-500 dark:text-gray-400' : 'text-gray-200 dark:text-gray-600 cursor-default'}"
+        class="p-1 rounded transition-colors {canGoPrev ? 'hover:bg-primary-400 dark:hover:bg-primary-500 text-primary-100' : 'text-primary-300 dark:text-primary-400 cursor-default'}"
         aria-label="Previous month"
       >
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
         </svg>
       </button>
-      <span class="text-sm font-semibold text-gray-800 dark:text-gray-200 w-36 text-center">
+      <span class="text-sm font-semibold text-white w-36 text-center">
         {MONTH_NAMES[month - 1]} {year}
       </span>
       <button
         onclick={nextMonth}
         disabled={!canGoNext}
-        class="p-1 rounded transition-colors {canGoNext ? 'hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-500 dark:text-gray-400' : 'text-gray-200 dark:text-gray-600 cursor-default'}"
+        class="p-1 rounded transition-colors {canGoNext ? 'hover:bg-primary-400 dark:hover:bg-primary-500 text-primary-100' : 'text-primary-300 dark:text-primary-400 cursor-default'}"
         aria-label="Next month"
       >
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -84,18 +84,18 @@
   </div>
 
   <!-- Weekday headers -->
-  <div class="grid grid-cols-7 px-2">
+  <div class="grid grid-cols-7 px-2 bg-primary-50 dark:bg-primary-900/20">
     {#each WEEKDAYS as wd}
-      <div class="text-center text-[11px] font-medium text-gray-400 dark:text-gray-500 py-1">{wd}</div>
+      <div class="text-center text-[11px] font-semibold text-primary-600 dark:text-primary-400 py-1.5">{wd}</div>
     {/each}
   </div>
 
   <!-- Day grid -->
-  <div class="grid grid-cols-7 px-2 pb-3 gap-y-0.5"
-    style="mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);"
-  >
+  <div class="grid grid-cols-7 px-2 pb-3 gap-1">
     {#each grid as cell}
-      {@render dayContent(cell)}
+      <div class="border border-gray-100 dark:border-neutral-700/40 rounded-lg bg-gray-50/50 dark:bg-neutral-800 {cell.inMonth ? '' : 'bg-transparent border-transparent dark:bg-transparent dark:border-transparent'}">
+        {@render dayContent(cell)}
+      </div>
     {/each}
   </div>
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { getContext } from 'svelte';
+  import { getContext, onMount } from 'svelte';
   import type { QuestionStore } from '$lib/stores/questionStore';
   import { formatDateTz, formatTime, dateInTz } from '$lib/utils/time';
   import { SESSION_IMAGE_OPACITY, sessionBgUrl } from '$lib/config/ui';
@@ -113,6 +113,21 @@
 
   const selectCls = 'w-full sm:w-40 text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 dark:focus:ring-primary-900 text-gray-600';
 
+  const MOBILE_PAGE_SIZE = 6;
+  let isMobile = $state(false);
+  let mobileLimit = $state(MOBILE_PAGE_SIZE);
+
+  onMount(() => {
+    const mq = window.matchMedia('(max-width: 1023px)');
+    isMobile = mq.matches;
+    mq.addEventListener('change', e => { isMobile = e.matches; });
+  });
+
+  $effect(() => {
+    search; filterQuizmaster; filterConnect; filterTopics; filterTags; sortBy; minQuestions;
+    mobileLimit = MOBILE_PAGE_SIZE;
+  });
+
   let sessionsAtBottom = $state(true);
   let sessionsScrollEl = $state<HTMLElement | null>(null);
   function onSessionsScroll(e: Event) {
@@ -205,6 +220,8 @@
     {/if}
     <div class="lg:max-h-[92vh] lg:overflow-y-auto space-y-6 pr-1 scrollbar-hide" bind:this={sessionsScrollEl} onscroll={onSessionsScroll}>
       {#each sessionsByDate as group, gi}
+        {@const visibleSessions = isMobile ? group.sessions.filter(s => filtered.indexOf(s) < mobileLimit) : group.sessions}
+        {#if visibleSessions.length > 0}
         <div class="relative pl-7">
           <!-- Timeline vertical line -->
           <div class="absolute left-[6px] top-[22px] bottom-3 w-[3px] rounded-full bg-primary-200 dark:bg-primary-800/60"></div>
@@ -212,11 +229,11 @@
           <div class="flex items-center gap-3 {gi > 0 ? 'pt-2' : ''}">
             <div class="absolute left-0 w-3.5 h-3.5 rounded-full bg-primary-500 dark:bg-primary-400 border-[3px] border-white dark:border-gray-900 shadow-sm z-10"></div>
             <span class="text-sm font-semibold text-gray-900 dark:text-gray-100">{group.displayDate}</span>
-            <span class="text-xs text-gray-400 dark:text-gray-500">{group.sessions.length} session{group.sessions.length !== 1 ? 's' : ''}</span>
+            <span class="text-xs text-gray-400 dark:text-gray-500">{visibleSessions.length} session{visibleSessions.length !== 1 ? 's' : ''}</span>
             <div class="flex-1 border-t border-gray-200 dark:border-gray-700"></div>
           </div>
           <div class="space-y-4 mt-3">
-      {#each group.sessions as session}
+      {#each visibleSessions as session}
         <a
           href="/session/{session.id}"
           class="relative overflow-hidden block bg-ui-card rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-primary-200 transition-all p-5 group"
@@ -227,7 +244,12 @@
             class="session-bg absolute inset-0 bg-cover bg-center transition-opacity"
             style="background-image: url('{sessionBgUrl(session)}'); opacity: {SESSION_IMAGE_OPACITY.card.default}"
           ></div>
+          <!-- Text protection overlay — stronger on hover -->
+          <div class="absolute inset-0 bg-gradient-to-r from-white/70 via-white/40 to-transparent dark:from-gray-900/70 dark:via-gray-900/40 dark:to-transparent group-hover:from-white/80 group-hover:via-white/50 group-hover:to-transparent dark:group-hover:from-gray-900/80 dark:group-hover:via-gray-900/50 dark:group-hover:to-transparent transition-all pointer-events-none"></div>
 
+          {#if session.quiz_type === 'connect'}
+            <div class="absolute left-0 top-0 bottom-0 w-1 rounded-l-xl bg-primary-500 z-10"></div>
+          {/if}
           <div class="relative flex items-start justify-between gap-4">
             <div class="flex-1 min-w-0">
               <!-- Title -->
@@ -242,15 +264,12 @@
                     <h2 class="text-base font-semibold text-primary-700 dark:text-primary-200 group-hover:text-primary-800 dark:group-hover:text-primary-100 transition-colors">
                       {session.quiz_type === 'connect' ? `${session.quizmaster}'s Connect Quiz` : (session.theme ?? `${session.quizmaster}'s Quiz`)}
                     </h2>
-                    {#if session.quiz_type === 'connect'}
-                      <ConnectBadge />
-                    {/if}
                   </div>
                   <p class="text-xs text-gray-700 dark:text-gray-300">Hosted by {session.quizmaster} · {sessionDate(session)}</p>
                 </div>
               </div>
               {#if session.announcement}
-                <p class="mt-2 text-xs text-gray-500 dark:text-gray-400 italic line-clamp-2">"{session.announcement}"</p>
+                <p class="mt-2 text-sm text-gray-700 dark:text-gray-300 italic truncate">"{session.announcement}"</p>
               {/if}
 
               <!-- Stats row -->
@@ -302,7 +321,16 @@
       {/each}
           </div>
         </div>
+        {/if}
       {/each}
+      {#if isMobile && mobileLimit < filtered.length}
+        <button
+          onclick={() => mobileLimit += MOBILE_PAGE_SIZE}
+          class="w-full py-3 text-sm font-medium text-primary-600 dark:text-primary-400 border border-primary-200 dark:border-primary-800 rounded-xl hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors"
+        >
+          Show more ({filtered.length - mobileLimit} remaining)
+        </button>
+      {/if}
     </div>
     </div>
   {/if}

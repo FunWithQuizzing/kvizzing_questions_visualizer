@@ -78,6 +78,8 @@ export interface Session {
   scores: unknown;
   /** If 'connect', the theme is the answer to a connect quiz and should be hidden until revealed. */
   quiz_type?: 'connect' | null;
+  /** The hidden connecting theme/answer for connect quizzes */
+  connect_answer?: string | null;
   /** Quizmaster's introductory message announcing the session */
   announcement?: string | null;
 }

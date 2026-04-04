@@ -1,15 +1,34 @@
 import type { Question, Session, Member, QuestionFilters, SortOption } from '$lib/types';
 import { dateInTz } from '$lib/utils/time';
 
+export type TagEntry = { tag: string; count: number; question_ids: string[] };
+export type Stats = {
+  total_questions: number;
+  total_sessions: number;
+  topic_distribution: Record<string, number>;
+  difficulty_distribution: Record<string, number>;
+  session_activity: Record<string, number>;
+};
+
 export class QuestionStore {
   private questions: Question[];
   private sessions: Session[];
   private members: Member[];
+  private tags: TagEntry[];
+  private stats: Stats | null;
 
-  constructor(questions: Question[], sessions: Session[], members: Member[]) {
+  constructor(
+    questions: Question[],
+    sessions: Session[],
+    members: Member[],
+    tags: TagEntry[] = [],
+    stats: Stats | null = null,
+  ) {
     this.questions = questions;
     this.sessions = sessions;
     this.members = members;
+    this.tags = tags;
+    this.stats = stats;
   }
 
   getQuestions(filters?: QuestionFilters, sort: SortOption = 'newest'): Question[] {
@@ -107,6 +126,23 @@ export class QuestionStore {
 
   getMember(username: string): Member | undefined {
     return this.members.find(m => m.username === username);
+  }
+
+  getTags(): TagEntry[] {
+    return this.tags;
+  }
+
+  getTagFreq(): { tagFreq: Map<string, number>; allTags: string[] } {
+    const tagFreq = new Map<string, number>();
+    for (const t of this.tags) {
+      tagFreq.set(t.tag, t.count);
+    }
+    const allTags = this.tags.map(t => t.tag);
+    return { tagFreq, allTags };
+  }
+
+  getStats(): Stats | null {
+    return this.stats;
   }
 
   getAskers(): string[] {

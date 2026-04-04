@@ -12,7 +12,6 @@
   import ActiveFilterChips from '$lib/components/ActiveFilterChips.svelte';
   import EmptyState from '$lib/components/EmptyState.svelte';
   import SearchableSelect from '$lib/components/SearchableSelect.svelte';
-  import { tagFrequency } from '$lib/utils/tags';
   import { dateInTz, formatDateTz } from '$lib/utils/time';
 
   const store = getContext<QuestionStore>('store');
@@ -75,7 +74,7 @@
   const allSessions = store.getSessions();
 
   const allQuestions = store.getQuestions();
-  const { tagFreq, allTags } = tagFrequency(allQuestions);
+  const { tagFreq, allTags } = store.getTagFreq();
 
   const fuse = new Fuse(allQuestions, {
     keys: [

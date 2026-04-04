@@ -193,14 +193,26 @@
 
   // ── Filters ────────────────────────────────────────────────────────────────
   const allDates = [...new Set(threads.map(t => t.date))].sort();
-  let sortBy = $state<'least' | 'most'>('least');
+  let sortBy = $state<'least' | 'most' | 'newest' | 'oldest'>('least');
 
-  function toggleSort() {
+  function toggleVoteSort() {
     if (sortBy === 'most') {
       sortBy = 'least';
-    } else {
+    } else if (sortBy === 'least') {
       const ok = confirm('Your help is most needed on questions with the fewest votes! Switch anyway?');
       if (ok) sortBy = 'most';
+    } else {
+      sortBy = 'least';
+    }
+  }
+
+  function toggleDateSort() {
+    if (sortBy === 'newest') {
+      sortBy = 'oldest';
+    } else if (sortBy === 'oldest') {
+      sortBy = 'newest';
+    } else {
+      sortBy = 'newest';
     }
   }
   const urlDate = $page.url.searchParams.get('date');
@@ -231,6 +243,10 @@
         return true;
       })
       .sort((a, b) => {
+        if (sortBy === 'newest' || sortBy === 'oldest') {
+          const dateCmp = sortBy === 'newest' ? b.date.localeCompare(a.date) : a.date.localeCompare(b.date);
+          return dateCmp || a.id.localeCompare(b.id);
+        }
         const aVotes = allVotes.filter(v => v.thread_id === a.id).length;
         const bVotes = allVotes.filter(v => v.thread_id === b.id).length;
         if (aVotes !== bVotes) {
@@ -241,7 +257,11 @@
   }
 
   const filtered = $derived(filterThreads(threads));
-  const visibleDates = $derived([...new Set(filtered.map(t => t.date))].sort());
+  const visibleDates = $derived.by(() => {
+    const dates = [...new Set(filtered.map(t => t.date))];
+    dates.sort((a, b) => sortBy === 'newest' ? b.localeCompare(a) : a.localeCompare(b));
+    return dates;
+  });
 
   function dateReviewStats(d: string) {
     const dateThreads = threads.filter(t => t.date === d);
@@ -388,13 +408,22 @@
     </div>
     <div class="flex flex-wrap items-center gap-2">
       <button
-        onclick={toggleSort}
-        class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 transition-all justify-center"
+        onclick={toggleVoteSort}
+        class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all justify-center {sortBy === 'least' || sortBy === 'most' ? 'bg-primary-500 text-white shadow-sm' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'}"
       >
         <svg class="w-3 h-3 transition-transform {sortBy === 'most' ? 'rotate-180' : ''}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13M3 8h9M3 12h5m0 0l4 4m-4-4l4-4" />
         </svg>
-        {sortBy === 'least' ? 'Least votes' : 'Most votes'}
+        {sortBy === 'least' ? 'Least votes' : sortBy === 'most' ? 'Most votes' : 'By votes'}
+      </button>
+      <button
+        onclick={toggleDateSort}
+        class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all justify-center {sortBy === 'newest' || sortBy === 'oldest' ? 'bg-primary-500 text-white shadow-sm' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'}"
+      >
+        <svg class="w-3 h-3 transition-transform {sortBy === 'oldest' ? 'rotate-180' : ''}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+        {sortBy === 'newest' ? 'Newest first' : sortBy === 'oldest' ? 'Oldest first' : 'By date'}
       </button>
       <button
         onclick={() => showDateRange = !showDateRange}

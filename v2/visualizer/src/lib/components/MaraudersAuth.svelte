@@ -8,15 +8,58 @@
   let input = $state('');
   let mapOpen = $state(false);
   let error = $state(false);
+  let audio: HTMLAudioElement | undefined;
+  let musicStarted = false;
+
+  function startMusic() {
+    if (!audio || !audio.paused) return;
+    audio.volume = 0.4;
+    audio.play().catch(() => {});
+  }
+
+  let fading = $state(false);
+
+  function triggerMapOpen() {
+    mapOpen = true;
+    // Let the map unfold animation play, then fade out and reveal UI
+    setTimeout(() => {
+      fading = true;
+      if (audio) {
+        const startVol = audio.volume;
+        const steps = 20;
+        const interval = 100;
+        let step = 0;
+        const fadeAudio = setInterval(() => {
+          step++;
+          try {
+            if (audio && step < steps) {
+              audio.volume = Math.max(0, startVol * (1 - step / steps));
+            } else {
+              clearInterval(fadeAudio);
+              if (audio) { audio.pause(); audio.volume = 0; }
+            }
+          } catch {
+            clearInterval(fadeAudio);
+          }
+        }, interval);
+      }
+      setTimeout(() => {
+        if (audio) { try { audio.pause(); } catch {} }
+        onAuthenticated();
+      }, 2000);
+    }, 7000);
+  }
 
   function handleInput(e: Event) {
+    startMusic();
     const val = (e.target as HTMLInputElement).value.toLowerCase().replace(/\s+/g, ' ').trim();
     if (val === 'mischief managed') {
-      onAuthenticated();
+      triggerMapOpen();
     }
   }
 
   function handleKeydown(e: KeyboardEvent) {
+    startMusic();
     if (e.key !== 'Enter') return;
     const val = (e.target as HTMLInputElement).value.toLowerCase().replace(/\s+/g, ' ').trim();
     if (val !== 'mischief managed') {
@@ -26,25 +69,31 @@
   }
 </script>
 
-<div class="auth-wrap bg-ui-parchment">
+<!-- svelte-ignore a11y_media_has_caption -->
+<audio bind:this={audio} src="/audio/marauders-map.mp3" loop preload="auto"></audio>
+
+<!-- svelte-ignore a11y_click_events_have_key_events -->
+<!-- svelte-ignore a11y_no_static_element_interactions -->
+<div class="auth-wrap bg-ui-parchment" class:fading onmousedown={startMusic} ontouchstart={startMusic}>
   <div class="title-text">
     <p>I solemnly swear that I am up to no good.</p>
   </div>
 
   <div class="main-content">
+    <div class="map-blur-wrap" class:active={mapOpen}>
     <div class="map-base" class:active={mapOpen}>
       <div class="footsteps footsteps-1">
         <div class="footstep left"></div>
         <div class="footstep right"></div>
         <div class="scroll-name">
-          <p>KVizzing</p>
+          <p>Fun</p>
         </div>
       </div>
       <div class="footsteps footsteps-2">
         <div class="footstep left"></div>
         <div class="footstep right"></div>
         <div class="scroll-name">
-          <p>Access Granted</p>
+          <p>Lurn</p>
         </div>
       </div>
       <div class="map-flap flap--1">
@@ -79,6 +128,7 @@
         <div class="back"></div>
       </div>
     </div>
+    </div>
   </div>
 
   {#if !mapOpen}
@@ -100,24 +150,36 @@
 
 <style>
   .auth-wrap {
-    min-height: 100vh;
+    height: 100dvh;
     font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem 1rem;
+    justify-content: center;
+    padding: 1rem;
+    overflow: hidden;
+    gap: 1rem;
+    transition: opacity 2.5s ease;
+  }
+  .auth-wrap.fading {
+    opacity: 0;
   }
 
   .title-text {
     color: #3b2a1a;
     font: 26px 'Satisfy', cursive;
-    margin-bottom: 2rem;
     text-align: center;
+    flex-shrink: 0;
   }
 
   .main-content {
     text-align: center;
-    margin: 0 auto 2rem;
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
   }
 
   .map-base {
@@ -128,12 +190,39 @@
     position: relative;
     display: inline-block;
     perspective: 1000px;
+    overflow: visible;
     -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent),
                         linear-gradient(to right, transparent, black 10%, black 90%, transparent);
     -webkit-mask-composite: destination-in;
     mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent),
                 linear-gradient(to right, transparent, black 10%, black 90%, transparent);
     mask-composite: intersect;
+    transition: mask-image 0.5s, -webkit-mask-image 0.5s;
+  }
+  .map-base.active {
+    overflow: visible;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .map-blur-wrap {
+    display: inline-block;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent),
+                        linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-composite: destination-in;
+    mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent),
+                linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-composite: intersect;
+  }
+  .map-blur-wrap.active {
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent),
+                        linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+    -webkit-mask-composite: destination-in;
+    mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent),
+                linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+    mask-composite: intersect;
+    padding: 20px 200px;
+    margin: -20px -200px;
   }
 
   /* Flaps */
@@ -256,9 +345,9 @@
 
   .footsteps-1 .footstep.left  { bottom: 150px; left: 18px; transform: rotate(35deg); }
   .footsteps-1 .footstep.right { bottom: 150px; left: 28px; transform: rotate(30deg); }
-  .footsteps-2 .footstep.left  { bottom: 285px; left: 280px; transform: rotate(-90deg); }
-  .footsteps-2 .footstep.right { bottom: 275px; left: 285px; transform: rotate(-85deg); }
-  .footsteps-2 .scroll-name    { bottom: 300px; left: 220px; }
+  .footsteps-2 .footstep.left  { bottom: 285px; left: 230px; transform: rotate(-90deg); }
+  .footsteps-2 .footstep.right { bottom: 275px; left: 235px; transform: rotate(-85deg); }
+  .footsteps-2 .scroll-name    { bottom: 300px; left: 170px; }
 
   /* Active / open state */
   .map-base.active .flap--1 {
@@ -337,31 +426,53 @@
     animation: 15s scroll-2 ease 3.2s forwards;
   }
 
+  /* Footsteps-1: walks up from bottom-left along the left corridor, then turns right */
   @keyframes footsteps-1 {
-    10% { transform: translate(8px, -15px) rotate(30deg); }
-    20% { transform: translate(30px, -45px) rotate(30deg); }
-    30% { transform: translate(40px, -75px) rotate(20deg); }
-    40% { transform: translate(45px, -100px) rotate(10deg); }
-    50% { transform: translate(50px, -125px) rotate(10deg); }
-    60% { transform: translate(50px, -135px) rotate(10deg); }
-    100% { transform: translate(50px, -135px) rotate(20deg); }
+    8%  { transform: translate(8px, -15px) rotate(30deg); }
+    16% { transform: translate(15px, -45px) rotate(25deg); }
+    24% { transform: translate(20px, -80px) rotate(15deg); }
+    32% { transform: translate(25px, -115px) rotate(10deg); }
+    40% { transform: translate(30px, -140px) rotate(5deg); }
+    48% { transform: translate(50px, -145px) rotate(-50deg); }
+    56% { transform: translate(80px, -140px) rotate(-70deg); }
+    64% { transform: translate(110px, -135px) rotate(-80deg); }
+    72% { transform: translate(110px, -135px) rotate(-80deg); }
+    100% { transform: translate(110px, -135px) rotate(-80deg); }
   }
+  /* Footsteps-2: walks left along the horizontal corridor, then turns down */
   @keyframes footsteps-2 {
-    80% { transform: translate(-170px, -25px) rotate(-90deg); }
-    100% { transform: translate(-180px, -25px) rotate(-90deg); }
+    8%  { transform: translate(-20px, 0px) rotate(-90deg); }
+    16% { transform: translate(-50px, 0px) rotate(-90deg); }
+    24% { transform: translate(-85px, 5px) rotate(-85deg); }
+    32% { transform: translate(-115px, 10px) rotate(-80deg); }
+    40% { transform: translate(-140px, 15px) rotate(-70deg); }
+    48% { transform: translate(-150px, 35px) rotate(-30deg); }
+    56% { transform: translate(-148px, 60px) rotate(-10deg); }
+    64% { transform: translate(-145px, 75px) rotate(0deg); }
+    72% { transform: translate(-145px, 75px) rotate(0deg); }
+    100% { transform: translate(-145px, 75px) rotate(0deg); }
   }
   @keyframes scroll-1 {
-    10% { transform: translate(8px, -15px); }
-    20% { transform: translate(30px, -45px); }
-    30% { transform: translate(40px, -75px); }
-    40% { transform: translate(45px, -100px); }
-    50% { transform: translate(50px, -125px); }
-    60% { transform: translate(50px, -135px); }
-    100% { transform: translate(50px, -135px); }
+    8%  { transform: translate(8px, -15px); }
+    16% { transform: translate(15px, -45px); }
+    24% { transform: translate(20px, -80px); }
+    32% { transform: translate(25px, -115px); }
+    40% { transform: translate(30px, -140px); }
+    48% { transform: translate(50px, -145px); }
+    56% { transform: translate(80px, -140px); }
+    64% { transform: translate(110px, -135px); }
+    100% { transform: translate(110px, -135px); }
   }
   @keyframes scroll-2 {
-    80% { transform: translate(-170px, -25px); }
-    100% { transform: translate(-180px, -25px); }
+    8%  { transform: translate(-20px, 0px); }
+    16% { transform: translate(-50px, 0px); }
+    24% { transform: translate(-85px, 5px); }
+    32% { transform: translate(-115px, 10px); }
+    40% { transform: translate(-140px, 15px); }
+    48% { transform: translate(-150px, 35px); }
+    56% { transform: translate(-148px, 60px); }
+    64% { transform: translate(-145px, 75px); }
+    100% { transform: translate(-145px, 75px); }
   }
 
   /* Input */
@@ -400,24 +511,26 @@
     80%       { transform: translateX(4px); }
   }
 
+  .instructions {
+    flex-shrink: 0;
+    position: relative;
+    z-index: 20;
+  }
+
   @media (max-width: 640px) {
-    .auth-wrap {
-      padding: 1rem 0.75rem;
-    }
     .title-text {
       font-size: 20px;
-      margin-bottom: 1rem;
     }
     .map-base {
-      width: 200px;
-      height: 390px;
+      width: 250px;
+      height: 490px;
     }
     .map-side {
-      height: 390px;
-      width: 99px;
+      height: 490px;
+      width: 124px;
     }
     .instructions input {
-      width: 260px;
+      width: min(260px, 80vw);
       font-size: 15px;
     }
   }

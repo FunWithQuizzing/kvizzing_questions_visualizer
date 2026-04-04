@@ -91,6 +91,19 @@ export function formatDateTz(tsOrDate: string, tz: string): string {
   }
 }
 
+export function formatDateTimeTz(ts: string, tz: string): string {
+  try {
+    const d = new Date(ts.endsWith('Z') ? ts : ts + 'Z');
+    return d.toLocaleString('en', {
+      timeZone: tz,
+      month: 'short', day: 'numeric', year: 'numeric',
+      hour: 'numeric', minute: '2-digit', hour12: true,
+    });
+  } catch {
+    return formatDateTz(ts, tz);
+  }
+}
+
 export function getDurationBetween(start: string, end: string): string {
   try {
     const s = parseISO(start);

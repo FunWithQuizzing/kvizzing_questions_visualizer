@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { getContext } from 'svelte';
+  import { getContext, onMount } from 'svelte';
   import { goto } from '$app/navigation';
   import type { QuestionStore } from '$lib/stores/questionStore';
   import type { Question } from '$lib/types';
@@ -30,11 +30,16 @@
   const isConnect = $derived(session.quiz_type === 'connect');
 
   let revealAll = $state(false);
+  const _defaultState = () => ({ revealed: false, input: '', result: null as 'correct' | 'almost' | 'wrong' | null, hintsShown: 0 });
   let qStates = $state<Record<string, { revealed: boolean; input: string; result: 'correct' | 'almost' | 'wrong' | null; hintsShown: number }>>(
     Object.fromEntries(
-      store.getQuestions().map((q: Question) => [q.id, { revealed: revealAll, input: '', result: null as 'correct' | 'almost' | 'wrong' | null, hintsShown: 0 }])
+      [...store.getQuestions(), ...sessionQuestions].map((q: Question) => [q.id, _defaultState()])
     )
   );
+  function qs(id: string) {
+    if (!qStates[id]) qStates[id] = _defaultState();
+    return qStates[id];
+  }
 
   // Search & filters
   let search = $state('');
@@ -89,6 +94,21 @@
   const selectCls = "flex-1 basis-[calc(50%-4px)] sm:flex-none sm:w-[129px] text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 dark:text-gray-200 focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 dark:focus:ring-primary-900 text-gray-600";
   const filterSizeCls = "flex-1 basis-[calc(50%-4px)] sm:flex-none sm:w-[129px]";
 
+  const MOBILE_PAGE_SIZE = 8;
+  let isMobile = $state(false);
+  let mobileLimit = $state(MOBILE_PAGE_SIZE);
+
+  onMount(() => {
+    const mq = window.matchMedia('(max-width: 1023px)');
+    isMobile = mq.matches;
+    mq.addEventListener('change', e => { isMobile = e.matches; });
+  });
+
+  $effect(() => {
+    search; filterAsker; filterSolver; filterHasMedia; filterTopics; filterTags; sortBy;
+    mobileLimit = MOBILE_PAGE_SIZE;
+  });
+
   // Connect quiz state
   let connectGuess = $state('');
   let connectResult = $state<'correct' | 'almost' | 'wrong' | null>(null);
@@ -96,9 +116,10 @@
 
   function submitConnectGuess() {
     const input = connectGuess.trim();
-    if (!input || !session.theme) return;
-    if (isCorrect(input, session.theme)) { connectResult = 'correct'; connectRevealed = true; }
-    else if (isAlmost(input, session.theme)) connectResult = 'almost';
+    const answer = session.connect_answer || session.theme;
+    if (!input || !answer) return;
+    if (isCorrect(input, answer)) { connectResult = 'correct'; connectRevealed = true; }
+    else if (isAlmost(input, answer)) connectResult = 'almost';
     else connectResult = 'wrong';
   }
 
@@ -141,9 +162,6 @@
       <p class="text-primary-100 text-sm">
         Hosted by {session.quizmaster} · {formatDateTz(sessionQuestions[0]?.question?.timestamp ?? session.date, tzCtx?.value ?? 'Europe/London')}
       </p>
-      {#if session.announcement}
-        <p class="mt-2 text-sm text-primary-100/80 italic leading-relaxed">"{session.announcement}"</p>
-      {/if}
     </div>
 
     <!-- Stats row -->
@@ -184,7 +202,7 @@
         onclick={() => { 
           revealAll = !revealAll;
           sessionQuestions.forEach((q: Question) => {
-            qStates[q.id].revealed = revealAll;
+            qs(q.id).revealed = revealAll;
           });
         }}
         class="flex-none px-4 py-2 text-sm font-medium rounded-xl border transition-colors {revealAll ? 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 border-gray-200 dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-600' : 'bg-primary-500 text-white border-primary-500 hover:bg-primary-600 dark:bg-primary-600 dark:border-primary-600'}"
@@ -237,6 +255,13 @@
 
     <ActiveFilterChips bind:tags={filterTags} bind:topics={filterTopics} hasFilters={hasFilters} onClear={clearFilters} />
 
+    {#if session.announcement}
+      <div class="bg-primary-50/50 dark:bg-primary-900/10 border border-primary-100 dark:border-primary-800/30 rounded-xl px-4 py-3">
+        <p class="text-sm font-semibold text-primary-500 dark:text-primary-400 mb-1">Announcement Message</p>
+        <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">{session.announcement}</p>
+      </div>
+    {/if}
+
     <p class="text-sm text-gray-500 dark:text-gray-400">
       {filteredQuestions.length}{filteredQuestions.length !== sessionQuestions.length ? ` of ${sessionQuestions.length}` : ''} question{filteredQuestions.length !== 1 ? 's' : ''}
       {#if hasFilters}<span class="text-primary-500 font-medium"> (filtered)</span>{/if}
@@ -261,18 +286,27 @@
         <div class="flex-1 border-t border-gray-200 dark:border-gray-700"></div>
       </div>
       <div class="grid gap-4 mt-3">
-        {#each filteredQuestions as question, i (question.id)}
+        {#each (isMobile ? filteredQuestions.slice(0, mobileLimit) : filteredQuestions) as question, i (question.id)}
+          {@const state = qs(question.id)}
           <QuestionCard
             {question}
             questionNumber={i + 1}
             hideSession={true}
-            bind:revealed={qStates[question.id].revealed}
-            bind:input={qStates[question.id].input}
-            bind:result={qStates[question.id].result}
-            bind:hintsShown={qStates[question.id].hintsShown}
+            bind:revealed={state.revealed}
+            bind:input={state.input}
+            bind:result={state.result}
+            bind:hintsShown={state.hintsShown}
           />
         {/each}
       </div>
+      {#if isMobile && mobileLimit < filteredQuestions.length}
+        <button
+          onclick={() => mobileLimit += MOBILE_PAGE_SIZE}
+          class="w-full py-3 mt-4 text-sm font-medium text-primary-600 dark:text-primary-400 border border-primary-200 dark:border-primary-800 rounded-xl hover:bg-primary-50 dark:hover:bg-primary-900/20 transition-colors"
+        >
+          Show more ({filteredQuestions.length - mobileLimit} remaining)
+        </button>
+      {/if}
     </div>
   {/if}
 
@@ -289,10 +323,23 @@
       </div>
 
       {#if connectRevealed}
-        <p class="text-lg font-bold text-green-800 dark:text-green-200">{session.theme}</p>
-        {#if connectResult === 'correct'}
-          <p class="text-xs text-green-600 dark:text-green-400 mt-1">You got it!</p>
-        {/if}
+        <div class="flex items-start justify-between gap-3">
+          <div>
+            <p class="text-lg font-bold text-green-800 dark:text-green-200">{session.connect_answer || session.theme || 'Connect quiz'}</p>
+            {#if connectResult === 'correct'}
+              <p class="text-xs text-green-600 dark:text-green-400 mt-1">You got it!</p>
+            {/if}
+          </div>
+          <button
+            onclick={() => { connectRevealed = false; connectResult = null; connectGuess = ''; }}
+            class="text-xs text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-200 transition-colors flex items-center gap-1 flex-shrink-0"
+          >
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
+            </svg>
+            Hide
+          </button>
+        </div>
       {:else}
         <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">What's the common theme connecting all these questions?</p>
         <div class="flex gap-2">
@@ -302,7 +349,7 @@
             placeholder="Your guess…"
             onkeydown={(e) => { if (e.key === 'Enter') submitConnectGuess(); }}
             class="flex-1 min-w-0 px-3 py-2 text-sm border rounded-lg focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 transition-all
-              {connectResult === 'almost' ? 'border-amber-300 bg-amber-50 dark:bg-amber-900/30 dark:border-amber-700' : connectResult === 'wrong' ? 'border-red-300 bg-red-50 dark:bg-red-900/30 dark:border-red-700' : 'border-gray-200 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 dark:placeholder-gray-400'}"
+              {connectResult === 'almost' ? 'border-amber-300 bg-amber-50 dark:bg-amber-900/30 dark:border-amber-700' : connectResult === 'wrong' ? 'border-red-300 bg-red-50 dark:bg-red-900/30 dark:border-red-700' : 'border-gray-200 bg-white dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 dark:placeholder-gray-400'}"
             autocomplete="off" spellcheck="false"
           />
           <button

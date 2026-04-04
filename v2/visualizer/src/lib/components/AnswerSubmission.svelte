@@ -1,6 +1,8 @@
 <script lang="ts">
   import { isCorrect, isAlmost } from '$lib/utils/fuzzy';
   import MemberAvatar from './MemberAvatar.svelte';
+  import { onMount } from 'svelte';
+  import { browser } from '$app/environment';
 
   type Part = { label: string; text: string; solver: string | null };
 
@@ -32,7 +34,7 @@
 
   // ── Multi-part mode state ──
   let partInputs = $state<string[]>(parts ? parts.map(() => '') : []);
-  let partResults = $state<('correct' | 'almost' | 'wrong' | null)[]>(parts ? parts.map(() => null) : []);
+  let partResults = $state<('correct' | 'almost' | 'wrong' | 'exhausted' | null)[]>(parts ? parts.map(() => null) : []);
   let partAttemptCounts = $state<number[]>(parts ? parts.map(() => 0) : []);
 
   const remainingAttempts = $derived(maxAttempts - attempts.length);
@@ -53,8 +55,10 @@
     }
   }
 
+  const PART_MAX_ATTEMPTS = 3;
+
   function submitPart(i: number) {
-    if (!parts || !partInputs[i]?.trim() || partResults[i] === 'correct') return;
+    if (!parts || !partInputs[i]?.trim() || partResults[i] === 'correct' || partResults[i] === 'exhausted') return;
     const text = partInputs[i].trim();
     const correct = parts[i].text;
     let result: 'correct' | 'almost' | 'wrong';
@@ -63,19 +67,22 @@
     else result = 'wrong';
     partResults[i] = result;
     partAttemptCounts[i] = partAttemptCounts[i] + 1;
-    if (result !== 'correct') {
-      // Reset after a short delay so user can see the result
-      setTimeout(() => {
-        if (partResults[i] !== 'correct') partResults[i] = null;
-      }, 1200);
-    }
     if (result === 'correct') {
       partInputs[i] = parts[i].text;
-      // Check if all parts are done
-      if (partResults.every(r => r === 'correct')) {
-        done = true;
-        onReveal?.();
-      }
+    } else if (partAttemptCounts[i] >= PART_MAX_ATTEMPTS) {
+      // Exhausted attempts — reveal this part
+      partResults[i] = 'exhausted';
+      partInputs[i] = parts[i].text;
+    } else {
+      // Reset after a short delay so user can try again
+      setTimeout(() => {
+        if (partResults[i] !== 'correct' && partResults[i] !== 'exhausted') partResults[i] = null;
+      }, 1200);
+    }
+    // Check if all parts are resolved (correct or exhausted)
+    if (partResults.every(r => r === 'correct' || r === 'exhausted')) {
+      done = true;
+      onReveal?.();
     }
   }
 
@@ -83,8 +90,9 @@
     revealed = true;
     done = true;
     if (parts) {
-      partResults = parts.map(() => 'correct' as const);
-      partInputs = parts.map(p => p.text);
+      // Mark unsolved parts as exhausted (not correct) so "You got it!" doesn't show
+      partResults = partResults.map(r => r === 'correct' ? 'correct' : 'exhausted');
+      partInputs = parts.map((p, i) => partResults[i] === 'correct' ? partInputs[i] : p.text);
     }
     onReveal?.();
   }
@@ -101,6 +109,67 @@
     }
     onHide?.();
   }
+
+  let cardEl: HTMLDivElement;
+
+  function fireConfetti() {
+    if (!browser || !cardEl) return;
+    const rect = cardEl.getBoundingClientRect();
+    const canvas = document.createElement('canvas');
+    canvas.style.cssText = `position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999`;
+    document.body.appendChild(canvas);
+    canvas.width = document.documentElement.clientWidth;
+    canvas.height = document.documentElement.clientHeight;
+    const ctx = canvas.getContext('2d')!;
+    const cx = rect.left + rect.width / 2;
+    const cy = rect.top + rect.height / 2;
+    const colors = ['#f43f5e','#eab308','#22c55e','#3b82f6','#a855f7','#f97316','#06b6d4'];
+    const particles = Array.from({ length: 80 }, () => ({
+      x: cx, y: cy,
+      vx: (Math.random() - 0.5) * 16,
+      vy: Math.random() * -14 - 4,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      size: Math.random() * 5 + 3,
+      rotation: Math.random() * 360,
+      rotSpeed: (Math.random() - 0.5) * 12,
+      life: 1,
+    }));
+    let raf: number;
+    function tick() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      let alive = false;
+      for (const p of particles) {
+        if (p.life <= 0) continue;
+        alive = true;
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += 0.45;
+        p.vx *= 0.98;
+        p.rotation += p.rotSpeed;
+        p.life -= 0.015;
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate((p.rotation * Math.PI) / 180);
+        ctx.globalAlpha = Math.max(0, p.life);
+        ctx.fillStyle = p.color;
+        ctx.fillRect(-p.size / 2, -p.size / 4, p.size, p.size / 2);
+        ctx.restore();
+      }
+      if (alive) raf = requestAnimationFrame(tick);
+      else canvas.remove();
+    }
+    raf = requestAnimationFrame(tick);
+  }
+
+  let confettiFired = $state(false);
+
+  $effect(() => {
+    if (done && hasWon && !confettiFired) {
+      confettiFired = true;
+      fireConfetti();
+    }
+    if (!done) confettiFired = false;
+  });
 
   const resultConfig = {
     correct: {
@@ -127,7 +196,7 @@
   };
 </script>
 
-<div class="bg-ui-card rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm p-5">
+<div bind:this={cardEl} class="bg-ui-card rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm p-5">
   <h3 class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-4 flex items-center gap-2">
     <span class="w-6 h-6 bg-primary-100 dark:bg-primary-900/40 text-primary-600 dark:text-primary-400 rounded-full flex items-center justify-center text-xs">?</span>
     Try to answer{#if parts} ({partResults.filter(r => r === 'correct').length}/{parts.length}){/if}
@@ -150,6 +219,29 @@
                   {part.solver}
                 </span>
               {/if}
+              <button onclick={() => { partResults[i] = null; partInputs[i] = ''; partAttemptCounts[i] = 0; done = false; }}
+                class="text-green-400 hover:text-green-600 dark:hover:text-green-300 transition-colors flex-shrink-0">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          {:else if res === 'exhausted'}
+            <div class="flex-1 px-3 py-2 text-sm rounded-lg border border-red-300 dark:border-red-700 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300 font-medium flex items-center gap-2">
+              <span class="text-red-500 font-bold">✗</span>
+              {part.text}
+              {#if part.solver}
+                <span class="ml-auto flex items-center gap-1 text-xs text-red-400 dark:text-red-400">
+                  <MemberAvatar username={part.solver} size="xs" />
+                  {part.solver}
+                </span>
+              {/if}
+              <button onclick={() => { partResults[i] = null; partInputs[i] = ''; partAttemptCounts[i] = 0; done = false; }}
+                class="text-red-400 hover:text-red-600 dark:hover:text-red-300 transition-colors flex-shrink-0">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
             </div>
           {:else}
             <input
@@ -161,11 +253,15 @@
                 {res === 'almost' ? 'border-amber-300 dark:border-amber-700 bg-amber-50 dark:bg-amber-900/20' : res === 'wrong' ? 'border-red-300 dark:border-red-700 bg-red-50 dark:bg-red-900/20' : 'border-gray-200 dark:border-gray-600'}"
               autocomplete="off" autocorrect="off" spellcheck="false"
             />
-            <button
-              onclick={() => submitPart(i)}
-              disabled={!partInputs[i]?.trim()}
-              class="px-3 py-2 bg-primary-500 dark:bg-primary-600 text-white text-xs font-medium rounded-lg hover:bg-primary-600 dark:hover:bg-primary-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors flex-shrink-0"
-            >Go</button>
+            <div class="flex items-center gap-1.5 flex-shrink-0">
+              <button
+                onclick={() => submitPart(i)}
+                disabled={!partInputs[i]?.trim()}
+                class="px-3 py-2 text-white text-xs font-medium rounded-lg disabled:opacity-40 disabled:cursor-not-allowed transition-colors
+                  {res === 'wrong' ? 'bg-red-500 hover:bg-red-600' : res === 'almost' ? 'bg-amber-500 hover:bg-amber-600' : 'bg-primary-500 dark:bg-primary-600 hover:bg-primary-600 dark:hover:bg-primary-700'}"
+              >{res === 'wrong' ? '✗' : res === 'almost' ? '~' : 'Go'}</button>
+              <span class="text-[10px] text-gray-400 dark:text-gray-500 whitespace-nowrap">{PART_MAX_ATTEMPTS - partAttemptCounts[i]} left</span>
+            </div>
           {/if}
         </div>
       {/each}
@@ -182,11 +278,19 @@
         </svg>
         Hint{hints.length > 1 ? ` (${hintsShown}/${hints.length})` : ''}
       </button>
-      <button onclick={revealAnswer} class="text-xs text-gray-400 hover:text-gray-600 transition-colors">Give up & reveal</button>
+      <button onclick={revealAnswer} class="text-xs text-gray-400 hover:text-gray-600 transition-colors">Reveal</button>
     </div>
 
     {#if hintsShown > 0}
       <div class="mt-3 space-y-1.5">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-medium text-amber-600 dark:text-amber-400">Hints</span>
+          <button onclick={() => hintsShown = 0} class="text-amber-400 hover:text-amber-600 dark:hover:text-amber-300 transition-colors">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
         {#each hints.slice(0, hintsShown) as hint}
           <div class="flex items-start gap-2 px-3 py-2 bg-amber-50 dark:bg-amber-900/20 border border-amber-100 dark:border-amber-800 rounded-lg">
             <svg class="w-3.5 h-3.5 text-amber-500 dark:text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -211,7 +315,6 @@
             <button
               onclick={() => { attempts = attempts.filter((_, j) => j !== i); if (attempts.length === 0) { done = false; } }}
               class="text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300 transition-colors flex-shrink-0"
-              title="Dismiss"
             >
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -254,12 +357,20 @@
             </svg>
             Hint{hints.length > 1 ? ` (${hintsShown}/${hints.length})` : ''}
           </button>
-          <button onclick={revealAnswer} class="text-xs text-gray-400 hover:text-gray-600 transition-colors">Give up & reveal</button>
+          <button onclick={revealAnswer} class="text-xs text-gray-400 hover:text-gray-600 transition-colors">Reveal</button>
         </div>
       </div>
 
       {#if hintsShown > 0}
         <div class="mt-3 space-y-1.5">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-medium text-amber-600 dark:text-amber-400">Hints</span>
+            <button onclick={() => hintsShown = 0} class="text-amber-400 hover:text-amber-600 dark:hover:text-amber-300 transition-colors">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
           {#each hints.slice(0, hintsShown) as hint}
             <div class="flex items-start gap-2 px-3 py-2 bg-amber-50 dark:bg-amber-900/20 border border-amber-100 dark:border-amber-800 rounded-lg">
               <svg class="w-3.5 h-3.5 text-amber-500 dark:text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -279,7 +390,6 @@
       <button
         onclick={hideAnswer}
         class="absolute top-2 right-2 text-xs text-green-600/70 hover:text-green-700 dark:text-green-400/70 dark:hover:text-green-300 transition-colors flex items-center gap-1"
-        title="Hide Answer"
       >
         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
@@ -287,7 +397,11 @@
         Hide
       </button>
       <div class="text-2xl mb-1">🎉</div>
-      <p class="text-sm font-semibold text-green-700 dark:text-green-400">You got it!</p>
+      <p class="text-sm font-semibold text-green-700 dark:text-green-400 mb-1">You got it!</p>
+      <p class="text-base font-semibold text-green-900 dark:text-green-200">{correctAnswer}</p>
+      {#if solver}
+        <p class="text-xs text-green-600 dark:text-green-400 mt-1">Answered by <span class="font-semibold">{solver}</span></p>
+      {/if}
     </div>
   {:else if done && (revealed || !hasWon)}
     <!-- Revealed / gave up state -->
@@ -297,7 +411,6 @@
         <button
           onclick={hideAnswer}
           class="text-xs text-green-600/70 hover:text-green-700 dark:text-green-400/70 dark:hover:text-green-300 transition-colors flex items-center gap-1"
-          title="Hide Answer"
         >
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />

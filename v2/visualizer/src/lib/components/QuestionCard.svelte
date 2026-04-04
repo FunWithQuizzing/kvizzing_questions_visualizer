@@ -2,7 +2,7 @@
   import type { Question } from '$lib/types';
   import { getContext } from 'svelte';
   import { goto } from '$app/navigation';
-  import { formatDateTz, formatTime } from '$lib/utils/time';
+  import { formatDateTz, formatDateTimeTz, formatTime } from '$lib/utils/time';
   import MemberAvatar from './MemberAvatar.svelte';
   import { topicCls, topicClsSecondary, topicLabel } from '$lib/utils/topicColors';
   import { filterHints } from '$lib/utils/hints';
@@ -123,7 +123,7 @@
         <MemberAvatar username={q.asker} />
         <div>
           <span class="text-sm font-medium text-gray-900 dark:text-gray-100">{q.asker}</span>
-          <span class="text-xs text-gray-400 dark:text-gray-500 ml-1.5">{formatDateTz(question.question.timestamp ?? question.date, tzCtx?.value ?? 'Europe/London')}</span>
+          <span class="text-xs text-gray-400 dark:text-gray-500 sm:ml-1.5 block sm:inline">{question.question.timestamp ? formatDateTimeTz(question.question.timestamp, tzCtx?.value ?? 'Europe/London') : formatDateTz(question.date, tzCtx?.value ?? 'Europe/London')}</span>
         </div>
       </div>
       <div class="flex items-center gap-1.5 flex-wrap justify-end min-w-0">
@@ -210,7 +210,7 @@
   <div class="border-t border-gray-100 dark:border-gray-700">
     {#if revealed}
       <div class="bg-green-50 dark:bg-green-900/30">
-        <div class="px-3 py-2.5 min-h-[48px] flex flex-wrap items-center gap-x-3 gap-y-1">
+        <div class="px-3 py-3 min-h-[52px] flex flex-wrap items-center gap-x-3 gap-y-1">
           <span class="text-xs font-medium text-green-600 dark:text-green-400 uppercase tracking-wide flex-shrink-0">Answer</span>
           <span class="text-sm font-semibold text-green-800 dark:text-green-200 flex-1 min-w-0">{a?.text ?? '—'}</span>
           <div class="flex items-center gap-2 flex-shrink-0 ml-auto">
@@ -223,7 +223,6 @@
             <button
               onclick={() => { revealed = false; result = null; input = ''; }}
               class="text-xs text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors flex items-center gap-1"
-              title="Hide Answer"
             >
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
@@ -251,6 +250,14 @@
     {:else}
       {#if hintsShown > 0}
         <div class="px-5 py-2 bg-amber-50 dark:bg-amber-900/30 border-b border-amber-100 dark:border-amber-800 space-y-1">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-medium text-amber-600 dark:text-amber-400">Hints</span>
+            <button onclick={() => hintsShown = 0} class="text-amber-400 hover:text-amber-600 dark:hover:text-amber-300 transition-colors">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
           {#each hints.slice(0, hintsShown) as hint}
             <p class="text-xs text-amber-700 dark:text-amber-300 flex items-start gap-1.5">
               <svg class="w-3.5 h-3.5 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -261,7 +268,7 @@
           {/each}
         </div>
       {/if}
-      <div class="px-3 py-2.5 flex items-center gap-2">
+      <div class="px-3 py-3 min-h-[52px] flex items-center gap-2">
         {#if a?.parts && a.parts.length > 1}
           <a
             href="/question/{question.id}"

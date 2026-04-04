@@ -95,9 +95,15 @@
     if (filterDateFrom || filterDateTo) filters.tz = tzCtx?.value;
     if (filterMedia === 'media') filters.has_media = true;
     else if (filterMedia === 'no_media') filters.has_media = false;
-    if (filterSessionId) filters.session_id = filterSessionId;
+    if (filterSessionId && !filterSessionId.startsWith('__')) filters.session_id = filterSessionId;
 
     let results = store.getQuestions(filters, sortBy);
+
+    if (filterSessionId === '__none__') {
+      results = results.filter(q => !q.session);
+    } else if (filterSessionId === '__session__') {
+      results = results.filter(q => q.session);
+    }
 
     if (filterTags.size > 0) {
       results = results.filter(q => [...filterTags].every(tag => q.question.tags?.includes(tag)));
@@ -254,12 +260,18 @@
           class={filterSizeCls}
         />
 
-        <SearchableSelect
-          bind:value={filterSessionId}
-          options={allSessions.map(s => ({ value: s.id, label: s.theme ?? `${s.quizmaster}'s Quiz` }))}
-          placeholder="All sessions"
-          class={filterSizeCls}
-        />
+        <div class="col-span-1 sm:col-auto sm:flex-none inline-flex rounded-lg border border-gray-200 dark:border-gray-600 overflow-hidden text-sm">
+          <button
+            onclick={() => filterSessionId = filterSessionId === '__session__' ? '' : '__session__'}
+            class="flex-1 sm:flex-none px-2.5 py-1.5 leading-5 whitespace-nowrap transition-colors
+              {filterSessionId === '__session__' ? 'bg-primary-500 text-white' : 'bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600'}"
+          >Session</button>
+          <button
+            onclick={() => filterSessionId = filterSessionId === '__none__' ? '' : '__none__'}
+            class="flex-1 sm:flex-none px-2.5 py-1.5 leading-5 whitespace-nowrap transition-colors border-l border-gray-200 dark:border-gray-600
+              {filterSessionId === '__none__' ? 'bg-primary-500 text-white' : 'bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600'}"
+          >Non-session</button>
+        </div>
 
         <div class="col-span-1 sm:col-auto sm:flex-none inline-flex rounded-lg border border-gray-200 dark:border-gray-600 overflow-hidden text-sm">
           <button

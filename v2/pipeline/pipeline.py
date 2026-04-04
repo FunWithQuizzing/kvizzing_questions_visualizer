@@ -419,6 +419,16 @@ def _run_pipeline(mode: str) -> None:
             except Exception as e:
                 log.warning("  [%s] Export failed: %s", date_str, e)
 
+            # Per-date rejected candidates + export
+            try:
+                rejected_dir = data_dir / "attribution_gaps" / "rejected_candidates"
+                _write_rejected_candidates({date_str: by_date.get(date_str, [])}, extraction_output_dir, rejected_dir, config)
+                rejected_json = output_dir / "rejected_candidates.json"
+                if rejected_dir.exists():
+                    _export_rejected(rejected_dir, rejected_json)
+            except Exception as e:
+                log.debug("  [%s] Rejected candidates skipped: %s", date_str, e)
+
             # Per-date session image generation
             try:
                 _generate_images_main()

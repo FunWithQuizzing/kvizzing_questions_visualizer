@@ -162,10 +162,14 @@ def _parse_topics(raw_topics: list | str | None) -> list[TopicCategory]:
         return []
     if isinstance(raw_topics, str):
         raw_topics = [raw_topics]
+    seen = set()
     result = []
     for t in raw_topics:
         try:
-            result.append(TopicCategory(t.strip().lower()))
+            topic = TopicCategory(t.strip().lower())
+            if topic not in seen:
+                seen.add(topic)
+                result.append(topic)
         except ValueError:
             pass
     return result

@@ -4,9 +4,9 @@ export const SESSION_IMAGE_OPACITY = {
   /** Full session page header (bg-gray-900 base) */
   header: 0.6,
   /** Session card on the /sessions list page (default / hover) */
-  card: { default: 0.4, hover: 0.6 },
+  card: { default: 0.4, hover: 0.8 },
   /** Sidebar session tile (default / hover) */
-  sidebar: { default: 0.15, hover: 0.35 },
+  sidebar: { default: 0.3, hover: 0.45 },
 } as const;
 
 /** Sessions that have a custom background image in /images/sessions/. */

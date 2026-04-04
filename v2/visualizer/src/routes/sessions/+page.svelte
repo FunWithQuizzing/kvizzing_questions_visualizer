@@ -245,7 +245,7 @@
             style="background-image: url('{sessionBgUrl(session)}'); opacity: {SESSION_IMAGE_OPACITY.card.default}"
           ></div>
           <!-- Text protection overlay — stronger on hover -->
-          <div class="absolute inset-0 bg-gradient-to-r from-white/70 via-white/40 to-transparent dark:from-gray-900/70 dark:via-gray-900/40 dark:to-transparent group-hover:from-white/80 group-hover:via-white/50 group-hover:to-transparent dark:group-hover:from-gray-900/80 dark:group-hover:via-gray-900/50 dark:group-hover:to-transparent transition-all pointer-events-none"></div>
+          <div class="absolute inset-0 bg-gradient-to-r from-white/80 via-white/50 to-white/20 dark:from-gray-900/85 dark:via-gray-900/55 dark:to-gray-900/20 group-hover:from-white/90 group-hover:via-white/65 group-hover:to-white/30 dark:group-hover:from-gray-900/92 dark:group-hover:via-gray-900/70 dark:group-hover:to-gray-900/35 transition-all pointer-events-none"></div>
 
           {#if session.quiz_type === 'connect'}
             <div class="absolute left-0 top-0 bottom-0 w-1 rounded-l-xl bg-primary-500 z-10"></div>

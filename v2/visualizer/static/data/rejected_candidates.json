@@ -1047,99 +1047,6 @@
     ]
   },
   {
-    "id": "2025-09-27-t1",
-    "date": "2025-09-27",
-    "thread_number": 1,
-    "candidates": [
-      {
-        "timestamp": "2025-09-27T00:12:00Z",
-        "username": "Srikanth Kapali",
-        "text": "She has developed AI algorithms that with applications in various scientific domains including weather forecasting, drug discovery, scientific simulations and engineering design She invented Neural Operators that extend deep learning to modeling multi-scale processes in these scientific domains and ",
-        "reason_flagged": "question_mark"
-      }
-    ],
-    "context": [
-      {
-        "timestamp": "2025-09-27T00:12:00Z",
-        "username": "Srikanth Kapali",
-        "text": "She has developed AI algorithms that with applications in various scientific domains including weather forecasting, drug discovery, scientific simulations and engineering design She invented Neural Op",
-        "is_candidate": true
-      },
-      {
-        "timestamp": "2025-09-27T00:13:21Z",
-        "username": "Naman Agarwal",
-        "text": "Anima Anandkumar",
-        "is_candidate": false
-      },
-      {
-        "timestamp": "2025-09-27T00:19:38Z",
-        "username": "Ankit Jain",
-        "text": "She studied physics at Presidency College, Madras and earned a gold medal. There she caught the attention of Alladi Ramakrishnan, who mentored her and guided her to a doctorate. Then came 1965, that c",
-        "is_candidate": false
-      },
-      {
-        "timestamp": "2025-09-27T00:21:44Z",
-        "username": "Srikanth Kapali",
-        "text": "Thayoor Radha",
-        "is_candidate": false
-      },
-      {
-        "timestamp": "2025-09-27T00:22:39Z",
-        "username": "Srikanth Kapali",
-        "text": "Had heard about her from my uncle and grandfather who were both gold medal engineers back in the day",
-        "is_candidate": false
-      },
-      {
-        "timestamp": "2025-09-27T00:33:42Z",
-        "username": "Srikanth Kapali",
-        "text": "X utilized photographic nuclear emulsion to become the first to detect and identify mesons. The IAU named the star HD 86081 X after her. She was also the first female faculty at TIFR. Who is this famo",
-        "is_candidate": false
-      },
-      {
-        "timestamp": "2025-09-27T00:42:58Z",
-        "username": "Pavan Pamidimarri",
-        "text": "Bibha Chowdhury",
-        "is_candidate": false
-      },
-      {
-        "timestamp": "2025-09-27T00:44:04Z",
-        "username": "Srikanth Kapali",
-        "text": "Missed out on a nobel as WW2 broke our right at the time she and Bose were about to order a Cloud chamber to prove her discoveries",
-        "is_candidate": false
-      },
-      {
-        "timestamp": "2025-09-27T02:57:00Z",
-        "username": "Akshay",
-        "text": "Q: This Indian mathematician and later Professor at TIFR developed one of the earliest efficient algorithms to solve Linear Programming problems in polynomial time. Unlike the classic LP technique of ",
-        "is_candidate": false
-      },
-      {
-        "timestamp": "2025-09-27T06:17:48Z",
-        "username": "Pavan Pamidimarri",
-        "text": "Outside the world of cricket, what is common to: Arun Lal, Diana Eduljee, EAS Prasanna, Narendra Hirwani, and S Venkataraghavan?",
-        "is_candidate": false
-      },
-      {
-        "timestamp": "2025-09-27T06:19:35Z",
-        "username": "Abhishek Vats",
-        "text": "Mile sur mera tumhara? Just from hirwani singing on the beach",
-        "is_candidate": false
-      },
-      {
-        "timestamp": "2025-09-27T06:19:50Z",
-        "username": "Abhishek Vats",
-        "text": "And Diana eduljee being there",
-        "is_candidate": false
-      },
-      {
-        "timestamp": "2025-09-27T06:20:30Z",
-        "username": "Abhishek Vats",
-        "text": "The only thing I know about hirwani outside cricket 😂",
-        "is_candidate": false
-      }
-    ]
-  },
-  {
     "id": "2025-09-27-t2",
     "date": "2025-09-27",
     "thread_number": 2,
@@ -2404,147 +2311,6 @@
         "timestamp": "2025-09-30T03:52:39Z",
         "username": "Pavan Pamidimarri",
         "text": "then you have to give other hints",
-        "is_candidate": false
-      }
-    ]
-  },
-  {
-    "id": "2025-09-30-t3",
-    "date": "2025-09-30",
-    "thread_number": 3,
-    "candidates": [
-      {
-        "timestamp": "2025-09-30T04:26:37Z",
-        "username": "Pavan Pamidimarri",
-        "text": "The shuttle in the Honolulu airport is called X X shuttle, and in Hawaiian it means “very fast” shuttle. It inspired the name of a website you all know. What is the shuttle called?",
-        "reason_flagged": "question_mark"
-      }
-    ],
-    "context": [
-      {
-        "timestamp": "2025-09-30T04:23:06Z",
-        "username": "Akshay",
-        "text": "I think the ppl who will use it the most are punekars 😅",
-        "is_candidate": false
-      },
-      {
-        "timestamp": "2025-09-30T04:23:08Z",
-        "username": "Lzafeer Ahmad B F",
-        "text": "I believe even Hawaii airport is similr",
-        "is_candidate": false
-      },
-      {
-        "timestamp": "2025-09-30T04:23:11Z",
-        "username": "Akshay",
-        "text": "Given how horrible that airport is",
-        "is_candidate": false
-      },
-      {
-        "timestamp": "2025-09-30T04:23:30Z",
-        "username": "Pavan Pamidimarri",
-        "text": "HNL is not so good, but OGG in Maui is really good",
-        "is_candidate": false
-      },
-      {
-        "timestamp": "2025-09-30T04:23:54Z",
-        "username": "Pavan Pamidimarri",
-        "text": "HNL has bad design, hard to get around some parts of the airport without a bus",
-        "is_candidate": false
-      },
-      {
-        "timestamp": "2025-09-30T04:24:27Z",
-        "username": "Pavan Pamidimarri",
-        "text": "have they done anything to improve PNQ airport? last i was there was 2019, worst airport among major cities in India",
-        "is_candidate": false
-      },
-      {
-        "timestamp": "2025-09-30T04:24:34Z",
-        "username": "Prathamesh",
-        "text": "2 of my worst airport experiences are DEN and SLC for the distance they make you walk",
-        "is_candidate": false
-      },
-      {
-        "timestamp": "2025-09-30T04:26:21Z",
-        "username": "Akshay",
-        "text": "Expansion is stuck because of coordination issues with the airforce",
-        "is_candidate": false
-      },
-      {
-        "timestamp": "2025-09-30T04:26:37Z",
-        "username": "Pavan Pamidimarri",
-        "text": "The shuttle in the Honolulu airport is called X X shuttle, and in Hawaiian it means “very fast” shuttle. It inspired the name of a website you all know. What is the shuttle called?",
-        "is_candidate": true
-      },
-      {
-        "timestamp": "2025-09-30T04:26:48Z",
-        "username": "Akshay",
-        "text": "Wikiwiki",
-        "is_candidate": false
-      },
-      {
-        "timestamp": "2025-09-30T04:26:48Z",
-        "username": "Nikhil Borra",
-        "text": "Wiki wiki",
-        "is_candidate": false
-      },
-      {
-        "timestamp": "2025-09-30T04:28:40Z",
-        "username": "Pavan Pamidimarri",
-        "text": "even getting to the airport is a pain because some dudes stop cars as they enter the cantonment area to collect a toll. i can’t tell if it’s official or just extortion",
-        "is_candidate": false
-      },
-      {
-        "timestamp": "2025-09-30T04:28:48Z",
-        "username": "Lzafeer Ahmad B F",
-        "text": "Koh Samui airport ‎image omitted",
-        "is_candidate": false
-      },
-      {
-        "timestamp": "2025-09-30T04:29:03Z",
-        "username": "Pavan Pamidimarri",
-        "text": "lovely, reminds me of Kahului Maui airport",
-        "is_candidate": false
-      },
-      {
-        "timestamp": "2025-09-30T04:30:06Z",
-        "username": "Lzafeer Ahmad B F",
-        "text": "That’s the shuttle. ‎video omitted",
-        "is_candidate": false
-      },
-      {
-        "timestamp": "2025-09-30T04:31:12Z",
-        "username": "Shashank Jalani",
-        "text": "Koh Samui ‎video omitted",
-        "is_candidate": false
-      },
-      {
-        "timestamp": "2025-09-30T04:31:56Z",
-        "username": "Naren Iyer",
-        "text": "I was just there last week.. they’ve done a decent job with the new terminal.. renovating the old one now.. but it’s still the airforce base.. so not much can be done..",
-        "is_candidate": false
-      },
-      {
-        "timestamp": "2025-09-30T04:33:32Z",
-        "username": "Dhruv",
-        "text": "There's a swing in the airport?",
-        "is_candidate": false
-      },
-      {
-        "timestamp": "2025-09-30T04:34:00Z",
-        "username": "Shashank Jalani",
-        "text": "Yes and bean bags at the boarding gate",
-        "is_candidate": false
-      },
-      {
-        "timestamp": "2025-09-30T04:39:29Z",
-        "username": "Lzafeer Ahmad B F",
-        "text": "Us in India when Akshay and Pavan call it a night and the questions stop. ‎video omitted",
-        "is_candidate": false
-      },
-      {
-        "timestamp": "2025-09-30T04:40:49Z",
-        "username": "Akshay",
-        "text": "I’m in India and jetlagged so double shift 😀",
         "is_candidate": false
       }
     ]
@@ -35221,5 +34987,59 @@
         "is_candidate": false
       }
     ]
+  },
+  {
+    "timestamp": "2025-11-06T18:19:04Z",
+    "username": "Abhishek S",
+    "text": "Agar tie hota to ye tiebreaker tha ‎image omitted",
+    "reason": "timestamp does not match requested DATE"
+  },
+  {
+    "timestamp": "2025-11-06T19:42:10Z",
+    "username": "Pavan Pamidimarri",
+    "text": "The 1967 classic movie The Graduate features music by Simon and Garfunkel. The soundtrack rose to the top of the charts, because of hit single “Mrs. Robinson.” Paul Simon had originally not intended t",
+    "reason": "timestamp does not match requested DATE"
+  },
+  {
+    "timestamp": "2025-11-06T20:00:51Z",
+    "username": "Pavan Pamidimarri",
+    "text": "This 20th century bronze sculpture was originally named “The Poet” by its French sculptor, and was intended to depict Dante at the Gates of Hell, pondering his poem Divine Comedy. Foundry workers th",
+    "reason": "timestamp does not match requested DATE"
+  },
+  {
+    "timestamp": "2025-11-06T20:21:56Z",
+    "username": "Aakanksha Sinha",
+    "text": "X is the goddess of adversity and misfortune. She is regarded as _____ sister and the antithesis of Lakshmi. She appears in Hindu tradition as early as 300 BCE peaking in 7-8 century CE (mostly in ",
+    "reason": "timestamp does not match requested DATE"
+  },
+  {
+    "timestamp": "2025-11-06T20:50:28Z",
+    "username": "Abhishek Vats",
+    "text": "As per a tweet by the screenwriter on Iron man 3, Drew Pearce, the scene with Pepper Potts lifting the iron man helmet against her head was inspired by or was a tribute to a sporting hero X's sister",
+    "reason": "timestamp does not match requested DATE"
+  },
+  {
+    "timestamp": "2025-11-06T21:42:23Z",
+    "username": "Aakanksha Sinha",
+    "text": "In 1830s X attacked Y for the 1st time and it became known as the Z war. ↵ A _____  named Remonetel complained to the king of X against the officers of Y who looted his shop and demanded reparations",
+    "reason": "timestamp does not match requested DATE"
+  },
+  {
+    "timestamp": "2025-11-06T21:53:13Z",
+    "username": "Aakanksha Sinha",
+    "text": "ID the painter. ↵ I have no idea if he is famous or not. Just asking for fun.",
+    "reason": "timestamp does not match requested DATE"
+  },
+  {
+    "timestamp": "2025-11-06T22:28:10Z",
+    "username": "Pavan Pamidimarri",
+    "text": "The __ _______ effect is a term used in political science and media studies to describe the impact of new media and media sources on global politics, namely, reducing the government and mainstream m",
+    "reason": "timestamp does not match requested DATE"
+  },
+  {
+    "timestamp": "2025-11-06T22:42:19Z",
+    "username": "Pavan Pamidimarri",
+    "text": "Al Jazeera was founded after X shuttered its Arabic language television service after two brief years. X relaunched its Arabic service in 2008. ID X.",
+    "reason": "timestamp does not match requested DATE"
   }
 ]

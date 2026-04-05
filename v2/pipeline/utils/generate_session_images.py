@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import base64
 import json
+import random
 import time
 from pathlib import Path
 import requests
@@ -50,7 +51,15 @@ FALLBACK_PROMPT = (
     "warm orange tones, geometric patterns, wide banner"
 )
 
-NEGATIVE_PROMPT = "text, words, letters, numbers, typography, watermark, logo, signature, blurry, low quality, writing, caption, label, title, font, alphabet, NSFW"
+NEGATIVE_PROMPT = (
+    "text, words, letters, numbers, typography, watermark, logo, signature, "
+    "blurry, low quality, writing, caption, label, title, font, alphabet, NSFW, "
+    # Faces and people — Stable Horde mangles close-ups of faces, so push the
+    # composition toward objects, landscapes, and abstract scenes instead.
+    "face, faces, close-up face, portrait, head, heads, person, people, human, "
+    "eyes, mouth, teeth, selfie, headshot, cropped face, disfigured face, "
+    "distorted face, deformed, extra limbs, ugly, creepy"
+)
 
 
 HEADERS = {"apikey": ANON_KEY, "Content-Type": "application/json"}
@@ -148,9 +157,13 @@ def main() -> None:
         safe_theme = theme.replace("Indian", "South Asian").replace("Bollywood", "cinema").replace("Hindu", "cultural").replace("Muslim", "cultural").replace("nude", "").replace("naked", "")
         prompt = THEME_PROMPTS.get(theme)
         if not prompt:
+            # Explicit "no faces / no people" framing. The generator produces
+            # grotesque close-ups when a theme invites portraits (cricketers,
+            # celebrities, etc.), so we steer it toward objects and scenery.
             prompt = (
-                f"beautiful artistic illustration inspired by the theme '{safe_theme}', "
-                f"aesthetic wide banner, soft painterly style, rich colors, "
+                f"symbolic still-life scene inspired by the theme '{safe_theme}', "
+                f"objects and scenery only, no people, no faces, no portraits, "
+                f"wide landscape banner, soft painterly style, rich colors, "
                 f"elegant composition, no text or words"
             )
         print(f"[{sid}] Theme: {theme!r}")
@@ -162,7 +175,11 @@ def main() -> None:
                 print(f"  Retrying in 30s (attempt {attempt + 1}/3)...")
                 time.sleep(30)
             try:
-                img_bytes = generate(prompt, seed=i + 42 + attempt)
+                # Random seed on every call so manual regenerations (delete +
+                # rerun) produce a different image. Reproducibility across
+                # fresh runs isn't useful here because the script skips any
+                # session whose file already exists.
+                img_bytes = generate(prompt, seed=random.randint(0, 2**31 - 1))
                 if img_bytes:
                     break
             except Exception as e:

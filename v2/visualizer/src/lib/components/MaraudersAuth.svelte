@@ -3,13 +3,15 @@
 </svelte:head>
 
 <script lang="ts">
+  import { onMount } from 'svelte';
+
   let { onAuthenticated }: { onAuthenticated: () => void } = $props();
 
   let input = $state('');
   let mapOpen = $state(false);
   let error = $state(false);
   let audio: HTMLAudioElement | undefined;
-  let musicStarted = false;
+  let inputEl: HTMLInputElement | undefined;
 
   function startMusic() {
     if (!audio || !audio.paused) return;
@@ -19,7 +21,14 @@
 
   let fading = $state(false);
 
+  const PHRASE = 'mischief managed';
+
+  function isPhrase(raw: string): boolean {
+    return raw.toLowerCase().replace(/\s+/g, ' ').trim() === PHRASE;
+  }
+
   function triggerMapOpen() {
+    if (mapOpen) return;
     mapOpen = true;
     // Let the map unfold animation play, then fade out and reveal UI
     setTimeout(() => {
@@ -52,8 +61,7 @@
 
   function handleInput(e: Event) {
     startMusic();
-    const val = (e.target as HTMLInputElement).value.toLowerCase().replace(/\s+/g, ' ').trim();
-    if (val === 'mischief managed') {
+    if (isPhrase((e.target as HTMLInputElement).value)) {
       triggerMapOpen();
     }
   }
@@ -61,12 +69,28 @@
   function handleKeydown(e: KeyboardEvent) {
     startMusic();
     if (e.key !== 'Enter') return;
-    const val = (e.target as HTMLInputElement).value.toLowerCase().replace(/\s+/g, ' ').trim();
-    if (val !== 'mischief managed') {
+    if (isPhrase((e.target as HTMLInputElement).value)) {
+      triggerMapOpen();
+    } else {
       error = true;
       setTimeout(() => { error = false; }, 600);
     }
   }
+
+  // Reactive backup: catch any case where bind:value updates but event handlers didn't fire
+  $effect(() => {
+    if (isPhrase(input)) {
+      triggerMapOpen();
+    }
+  });
+
+  // On mount: if the user typed the phrase before hydration, the DOM value
+  // may not have synced to state yet — read it directly.
+  onMount(() => {
+    if (inputEl && inputEl.value && isPhrase(inputEl.value)) {
+      triggerMapOpen();
+    }
+  });
 </script>
 
 <!-- svelte-ignore a11y_media_has_caption -->
@@ -135,6 +159,7 @@
     <div class="instructions">
       <input
         type="text"
+        bind:this={inputEl}
         bind:value={input}
         oninput={handleInput}
         onkeydown={handleKeydown}

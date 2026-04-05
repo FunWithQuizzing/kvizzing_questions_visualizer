@@ -51,6 +51,67 @@
     flagged = flaggedIds?.value?.has(question.id) ?? false;
   });
 
+  // ── Likes (global) ──
+  const likedIds = getContext<{ value: Set<string> } | undefined>('likedIds');
+  const likeCounts = getContext<{ value: Map<string, number> } | undefined>('likeCounts');
+  let liked = $state(false);
+  let likeCount = $state(0);
+  $effect(() => {
+    liked = likedIds?.value?.has(question.id) ?? false;
+  });
+  $effect(() => {
+    likeCount = likeCounts?.value?.get(question.id) ?? 0;
+  });
+
+  async function toggleLike(e: MouseEvent) {
+    e.stopPropagation();
+    const user = usernameCtx?.value || '';
+    if (!user) return;
+    if (liked) {
+      // Unlike
+      liked = false;
+      likeCount = Math.max(0, likeCount - 1);
+      if (likedIds) { const next = new Set(likedIds.value); next.delete(question.id); likedIds.value = next; }
+      if (likeCounts) { const next = new Map(likeCounts.value); next.set(question.id, Math.max(0, (next.get(question.id) ?? 1) - 1)); likeCounts.value = next; }
+      await supabase.from('question_likes').delete().eq('question_id', question.id).eq('username', user);
+    } else {
+      // Like
+      liked = true;
+      likeCount = likeCount + 1;
+      if (likedIds) likedIds.value = new Set([...likedIds.value, question.id]);
+      if (likeCounts) { const next = new Map(likeCounts.value); next.set(question.id, (next.get(question.id) ?? 0) + 1); likeCounts.value = next; }
+      await supabase.from('question_likes').upsert(
+        { question_id: question.id, username: user },
+        { onConflict: 'question_id,username' }
+      );
+    }
+  }
+
+  // ── Saves (private) ──
+  const savedIds = getContext<{ value: Set<string> } | undefined>('savedIds');
+  let saved = $state(false);
+  $effect(() => {
+    saved = savedIds?.value?.has(question.id) ?? false;
+  });
+
+  async function toggleSave(e: MouseEvent) {
+    e.stopPropagation();
+    const user = usernameCtx?.value || '';
+    if (!user) return;
+    if (saved) {
+      saved = false;
+      if (savedIds) { const next = new Set(savedIds.value); next.delete(question.id); savedIds.value = next; }
+      await supabase.from('question_saves').delete().eq('question_id', question.id).eq('username', user);
+    } else {
+      saved = true;
+      if (savedIds) savedIds.value = new Set([...savedIds.value, question.id]);
+      await supabase.from('question_saves').upsert(
+        { question_id: question.id, username: user },
+        { onConflict: 'question_id,username' }
+      );
+    }
+  }
+
   function openFlagModal(e: MouseEvent) {
     e.stopPropagation();
     if (flagged) { unflag(); return; }
@@ -193,16 +254,38 @@
           </span>
         {/if}
       </div>
-      <button
-        onclick={openFlagModal}
-        class="flex items-center gap-1.5 flex-shrink-0 px-2 py-1 rounded-lg text-xs font-medium transition-colors {flagged ? 'bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400' : 'text-gray-400 dark:text-gray-500 hover:bg-red-50 hover:text-red-500 dark:hover:bg-red-900/20 dark:hover:text-red-400'}"
-        title={flagged ? 'Unflag — this is a valid question' : 'Flag this question'}
-      >
-        <svg class="w-4 h-4" fill={flagged ? 'currentColor' : 'none'} stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2z" />
-        </svg>
-        {flagged ? 'Flagged' : 'Flag'}
-      </button>
+      <div class="flex items-center gap-1 flex-shrink-0">
+        <!-- Like -->
+        <button
+          onclick={toggleLike}
+          class="flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-medium transition-colors {liked ? 'text-red-500 dark:text-red-400' : 'text-gray-400 dark:text-gray-500 hover:text-red-500 dark:hover:text-red-400'}"
+        >
+          <svg class="w-4 h-4" fill={liked ? 'currentColor' : 'none'} stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+          </svg>
+          {#if likeCount > 0}<span>{likeCount}</span>{/if}
+        </button>
+        <!-- Save -->
+        <button
+          onclick={toggleSave}
+          class="flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-medium transition-colors {saved ? 'text-primary-500 dark:text-primary-400' : 'text-gray-400 dark:text-gray-500 hover:text-primary-500 dark:hover:text-primary-400'}"
+        >
+          <svg class="w-4 h-4" fill={saved ? 'currentColor' : 'none'} stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+          </svg>
+        </button>
+        <!-- Flag -->
+        <button
+          onclick={openFlagModal}
+          class="flex items-center gap-1.5 px-2 py-1 rounded-lg text-xs font-medium transition-colors {flagged ? 'bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400' : 'text-gray-400 dark:text-gray-500 hover:bg-red-50 hover:text-red-500 dark:hover:bg-red-900/20 dark:hover:text-red-400'}"
+          title={flagged ? 'Unflag — this is a valid question' : 'Flag this question'}
+        >
+          <svg class="w-4 h-4" fill={flagged ? 'currentColor' : 'none'} stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2z" />
+          </svg>
+          {flagged ? 'Flagged' : 'Flag'}
+        </button>
+      </div>
     </div>
   </div>
 

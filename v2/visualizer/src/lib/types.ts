@@ -113,4 +113,4 @@ export interface QuestionFilters {
   search?: string;
 }
 
-export type SortOption = 'newest' | 'oldest' | 'most_discussed' | 'quickest';
+export type SortOption = 'newest' | 'oldest' | 'most_discussed' | 'most_liked';

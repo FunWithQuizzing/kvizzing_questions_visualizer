@@ -174,20 +174,20 @@
     onkeydown={(e) => { if (e.key === 'Enter') goto(`/question/${question.id}`); }}
   >
     <!-- Header row -->
-    <div class="flex items-start justify-between gap-3 mb-3">
-      <div class="flex items-center gap-2 flex-wrap">
+    <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-3 mb-3">
+      <div class="flex items-center gap-2 min-w-0">
         {#if questionNumber !== undefined}
           <div class="w-7 h-7 rounded-lg bg-primary-100 text-primary-600 dark:bg-primary-900/40 dark:text-primary-300 font-bold text-sm flex items-center justify-center flex-shrink-0">
             {questionNumber}
           </div>
         {/if}
         <MemberAvatar username={q.asker} />
-        <div>
+        <div class="min-w-0">
           <span class="text-sm font-medium text-gray-900 dark:text-gray-100">{q.asker}</span>
-          <span class="text-xs text-gray-400 dark:text-gray-500 sm:ml-1.5 block sm:inline">{question.question.timestamp ? formatDateTimeTz(question.question.timestamp, tzCtx?.value ?? 'Europe/London') : formatDateTz(question.date, tzCtx?.value ?? 'Europe/London')}</span>
+          <span class="text-xs text-gray-400 dark:text-gray-500 ml-1.5">{question.question.timestamp ? formatDateTimeTz(question.question.timestamp, tzCtx?.value ?? 'Europe/London') : formatDateTz(question.date, tzCtx?.value ?? 'Europe/London')}</span>
         </div>
       </div>
-      <div class="flex items-center gap-1.5 flex-wrap justify-end min-w-0">
+      <div class="flex items-center gap-1.5 flex-wrap min-w-0 sm:justify-end sm:flex-shrink-0">
         {#if question.session && !hideSession}
           <a
             href="/session/{question.session.id}"
@@ -227,8 +227,8 @@
     {/if}
 
     <!-- Stats row + tags -->
-    <div class="flex items-center justify-between gap-3 mt-3">
-      <div class="flex items-center gap-4 text-xs text-gray-400 dark:text-gray-500 min-w-0">
+    <div class="flex items-center justify-between flex-wrap gap-x-3 gap-y-2 mt-3">
+      <div class="flex items-center gap-4 text-xs text-gray-400 dark:text-gray-500 flex-wrap">
         {#if stats?.time_to_answer_seconds}
           <span class="flex items-center gap-1 flex-shrink-0">
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

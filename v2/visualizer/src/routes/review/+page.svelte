@@ -83,7 +83,7 @@
   let customReasonText = $state('');
 
   function startVote(id: string, status: Status) {
-    if (!reviewer) { return; return; }
+    if (!reviewer) return;
     const existing = myVotes.get(id);
     if (existing?.status === status) {
       deleteVote(id);
@@ -100,10 +100,7 @@
   }
 
   async function confirmVote(reason: string) {
-    if (!reasonOpenFor || !reviewer) {
-      if (!reviewer) return;
-      return;
-    }
+    if (!reasonOpenFor || !reviewer) return;
     const { id, status } = reasonOpenFor;
 
     const vote = { thread_id: id, reviewer, status, reason, comment: '' };

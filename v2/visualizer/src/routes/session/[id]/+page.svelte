@@ -1,6 +1,7 @@
 <script lang="ts">
   import { getContext, onMount } from 'svelte';
   import { goto } from '$app/navigation';
+  import { supabase } from '$lib/supabase';
   import type { QuestionStore } from '$lib/stores/questionStore';
   import type { Question } from '$lib/types';
   import { formatDateTz, formatTime, dateInTz } from '$lib/utils/time';
@@ -109,6 +110,31 @@
     mobileLimit = MOBILE_PAGE_SIZE;
   });
 
+  // Session save
+  const usernameCtx = getContext<{ value: string } | undefined>('username');
+  const savedSessionIds = getContext<{ value: Set<string> } | undefined>('savedSessionIds');
+  let sessionSaved = $state(false);
+  $effect(() => {
+    sessionSaved = savedSessionIds?.value?.has(session.id) ?? false;
+  });
+
+  async function toggleSessionSave() {
+    const user = usernameCtx?.value || '';
+    if (!user) return;
+    if (sessionSaved) {
+      sessionSaved = false;
+      if (savedSessionIds) { const next = new Set(savedSessionIds.value); next.delete(session.id); savedSessionIds.value = next; }
+      await supabase.from('session_saves').delete().eq('session_id', session.id).eq('username', user);
+    } else {
+      sessionSaved = true;
+      if (savedSessionIds) savedSessionIds.value = new Set([...savedSessionIds.value, session.id]);
+      await supabase.from('session_saves').upsert(
+        { session_id: session.id, username: user },
+        { onConflict: 'session_id,username' }
+      );
+    }
+  }
+
   // Connect quiz state
   let connectGuess = $state('');
   let connectResult = $state<'correct' | 'almost' | 'wrong' | null>(null);
@@ -159,9 +185,20 @@
           {session.theme ?? `${session.quizmaster}'s Quiz`}
         {/if}
       </h1>
-      <p class="text-primary-100 text-sm">
-        Hosted by {session.quizmaster} · {formatDateTz(sessionQuestions[0]?.question?.timestamp ?? session.date, tzCtx?.value ?? 'Europe/London')}
-      </p>
+      <div class="flex items-center justify-between">
+        <p class="text-primary-100 text-sm">
+          Hosted by {session.quizmaster} · {formatDateTz(sessionQuestions[0]?.question?.timestamp ?? session.date, tzCtx?.value ?? 'Europe/London')}
+        </p>
+        <button
+          onclick={toggleSessionSave}
+          class="flex-shrink-0 p-1.5 rounded-lg transition-colors {sessionSaved ? 'text-white bg-white/20' : 'text-primary-200 hover:text-white hover:bg-white/10'}"
+          title={sessionSaved ? 'Unsave session' : 'Save session'}
+        >
+          <svg class="w-5 h-5" fill={sessionSaved ? 'currentColor' : 'none'} stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+          </svg>
+        </button>
+      </div>
     </div>
 
     <!-- Stats row -->

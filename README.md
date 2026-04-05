@@ -144,6 +144,78 @@ npm run build      # Static build for Netlify
 
 ---
 
+## Getting Started
+
+### Prerequisites
+
+- Python 3.11+
+- Node.js 20+
+- An LLM API key (Gemini recommended — free tier with 1M token context)
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/Saumay/kvizzing_questions_visualizer.git
+cd kvizzing_questions_visualizer
+```
+
+### 2. Set up the pipeline
+
+```bash
+cd v2/pipeline
+pip install pydantic google-genai boto3 requests imagehash Pillow
+```
+
+Place your WhatsApp chat export at the path specified in `config/pipeline_config.json` (default: `data/raw/_chat.txt`). Media files from the export go in the same `data/raw/` directory.
+
+### 3. Run extraction
+
+```bash
+# Extract all Q&A pairs from the chat export
+GEMINI_API_KEY=your_key python3 pipeline.py backfill
+```
+
+This processes each date through all 7 stages and outputs JSON files to `../visualizer/static/data/`. See [`v2/pipeline/RUNNING_GUIDE.md`](v2/pipeline/RUNNING_GUIDE.md) for all commands and workflows.
+
+### 4. Set up the visualizer
+
+```bash
+cd ../visualizer
+npm install
+npm run dev    # http://localhost:5173
+```
+
+### 5. Optional: Media & images
+
+```bash
+cd ../pipeline
+
+# Match WhatsApp media files to questions
+python3 pipeline.py enrich-media --media-dir ../data/raw/
+
+# Upload to Cloudflare R2 (set credentials in .env first)
+python3 pipeline.py upload-media --media-dir ../data/raw/
+
+# Generate AI session background images (free, no API key needed)
+python3 pipeline.py generate-images
+
+# Re-export after media enrichment
+python3 pipeline.py export
+```
+
+### 6. Optional: Deploy
+
+The visualizer builds as a static site. Deploy to Netlify:
+
+```bash
+cd v2/visualizer
+npm run build    # Output in build/
+```
+
+The repo includes a `netlify.toml` at the root for automatic Netlify deploys on push.
+
+---
+
 ## Tech Stack
 
 | Component | Technology |

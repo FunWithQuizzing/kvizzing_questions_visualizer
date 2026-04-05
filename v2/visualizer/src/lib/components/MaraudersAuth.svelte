@@ -551,21 +551,53 @@
     z-index: 20;
   }
 
+  /*
+   * Mobile scaling strategy:
+   * The footstep start positions and @keyframes translate() values are
+   * hand-tuned in pixels for the desktop 306x600 coordinate system.
+   * Instead of re-tuning every number per breakpoint, we keep .map-base
+   * at its native 306x600 internal size on every device and apply a
+   * uniform transform: scale() on smaller screens. Negative margins
+   * reclaim the layout box so the title and input stay positioned
+   * correctly above and below the scaled map.
+   *
+   * Scale math:
+   *   --map-scale: s
+   *   width reclaimed  = 306 * (1 - s) / 2 per side
+   *   height reclaimed = 600 * (1 - s) / 2 per side
+   */
+  .map-base {
+    --map-scale: 1;
+    transform: scale(var(--map-scale));
+    transform-origin: center center;
+    margin: calc(600px * (var(--map-scale) - 1) / 2) calc(306px * (var(--map-scale) - 1) / 2);
+  }
+
   @media (max-width: 640px) {
     .title-text {
       font-size: 20px;
     }
     .map-base {
-      width: 250px;
-      height: 490px;
-    }
-    .map-side {
-      height: 490px;
-      width: 124px;
+      --map-scale: 0.82;
     }
     .instructions input {
       width: min(260px, 80vw);
       font-size: 15px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .title-text {
+      font-size: 18px;
+    }
+    .map-base {
+      --map-scale: 0.70;
+    }
+  }
+
+  @media (max-height: 700px) and (max-width: 640px) {
+    .map-base {
+      --map-scale: 0.70;
     }
   }
 </style>

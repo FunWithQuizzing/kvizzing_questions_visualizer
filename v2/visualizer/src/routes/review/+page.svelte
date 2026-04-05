@@ -256,9 +256,31 @@
       });
   }
 
+  const MOBILE_PAGE_SIZE = 8;
+  const DESKTOP_PAGE_SIZE = 200;
+  let isMobile = $state(false);
+  let renderLimit = $state(DESKTOP_PAGE_SIZE);
+
+  onMount(() => {
+    const mq = window.matchMedia('(max-width: 1023px)');
+    isMobile = mq.matches;
+    renderLimit = mq.matches ? MOBILE_PAGE_SIZE : DESKTOP_PAGE_SIZE;
+    mq.addEventListener('change', e => {
+      isMobile = e.matches;
+      renderLimit = e.matches ? MOBILE_PAGE_SIZE : DESKTOP_PAGE_SIZE;
+    });
+  });
+
+  // Reset renderLimit when filters/sort change
+  $effect(() => {
+    filterStatus; filterReviewer; filterDateFrom; filterDateTo; sortBy; selectedDate;
+    renderLimit = isMobile ? MOBILE_PAGE_SIZE : DESKTOP_PAGE_SIZE;
+  });
+
   const filtered = $derived(filterThreads(threads));
+  const limitedFiltered = $derived(filtered.slice(0, renderLimit));
   const visibleDates = $derived.by(() => {
-    const dates = [...new Set(filtered.map(t => t.date))];
+    const dates = [...new Set(limitedFiltered.map(t => t.date))];
     dates.sort((a, b) => sortBy === 'newest' ? b.localeCompare(a) : a.localeCompare(b));
     return dates;
   });
@@ -508,7 +530,7 @@
           <!-- Timeline dot — inside flex row so it always aligns with the date text -->
           <div class="absolute left-0 w-3.5 h-3.5 rounded-full bg-primary-500 dark:bg-primary-400 border-[3px] border-white dark:border-gray-900 shadow-sm z-10"></div>
           <button onclick={() => selectedDate = date} class="text-sm font-semibold text-gray-900 dark:text-gray-100 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">{date}</button>
-          <span class="text-xs text-gray-400 dark:text-gray-500">{filtered.filter(t => t.date === date).length} thread{filtered.filter(t => t.date === date).length > 1 ? 's' : ''}</span>
+          <span class="text-xs text-gray-400 dark:text-gray-500">{limitedFiltered.filter(t => t.date === date).length} thread{limitedFiltered.filter(t => t.date === date).length > 1 ? 's' : ''}</span>
           <div class="flex items-center gap-2">
             <div class="w-12 h-1.5 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
               <div class="h-full bg-green-400 rounded-full transition-all duration-300" style="width: {stats.total > 0 ? stats.reviewed / stats.total * 100 : 0}%"></div>
@@ -520,7 +542,7 @@
       {/if}
 
       <div class="space-y-3">
-    {#each filtered.filter(t => t.date === date) as thread (thread.id)}
+    {#each limitedFiltered.filter(t => t.date === date) as thread (thread.id)}
       {@const myVote = myVotes.get(thread.id)}
       {@const status = myVote?.status}
       {@const tally = voteTally(thread.id)}
@@ -531,14 +553,16 @@
             <div class="flex items-start gap-3 {ci > 0 ? 'mt-3 pt-3 border-t border-gray-100 dark:border-gray-700' : ''}">
               <MemberAvatar username={cand.username} />
               <div class="flex-1 min-w-0">
-                <div class="flex items-center gap-2 flex-wrap">
-                  <span class="text-sm font-medium text-gray-900 dark:text-gray-100">{cand.username}</span>
-                  <span class="text-xs text-gray-400">{dt.date} {dt.time}</span>
-                  <span class="px-1.5 py-0.5 rounded text-[10px] font-medium {reasonColors[cand.reason_flagged] ?? 'bg-gray-100 text-gray-600'}">
-                    {reasonLabels[cand.reason_flagged] ?? cand.reason_flagged}
-                  </span>
+                <div class="flex items-center justify-between gap-2">
+                  <div class="flex items-center gap-2 min-w-0 overflow-hidden">
+                    <span class="text-sm font-medium text-gray-900 dark:text-gray-100 truncate">{cand.username}</span>
+                    <span class="text-xs text-gray-400 flex-shrink-0">{dt.date} {dt.time}</span>
+                    <span class="flex-shrink-0 px-1.5 py-0.5 rounded text-[10px] font-medium {reasonColors[cand.reason_flagged] ?? 'bg-gray-100 text-gray-600'}">
+                      {reasonLabels[cand.reason_flagged] ?? cand.reason_flagged}
+                    </span>
+                  </div>
                   {#if ci === 0}
-                    <span class="ml-auto relative flex-shrink-0">
+                    <span class="relative flex-shrink-0">
                       {#if tally.total > 0}
                         <button
                           onclick={() => { const id = `votes-${thread.id}`; const el = document.getElementById(id); if (el) el.classList.toggle('hidden'); }}
@@ -598,8 +622,8 @@
               <div class="flex flex-wrap gap-1.5 mb-2">
                 {#each presets as preset}
                   <button
-                    onclick={() => confirmVote(preset)}
-                    class="px-2.5 py-1 rounded-full text-xs font-medium transition-colors cursor-pointer {chipColors[reasonOpenFor.status]}"
+                    onclick={() => { customReasonText = preset; }}
+                    class="px-2.5 py-1 rounded-full text-xs font-medium transition-colors cursor-pointer {customReasonText === preset ? 'ring-2 ring-offset-1 ring-primary-400' : ''} {chipColors[reasonOpenFor.status]}"
                   >{preset}</button>
                 {/each}
               </div>
@@ -670,6 +694,17 @@
     {/each}
   </div>
   </div>
+
+  {#if renderLimit < filtered.length}
+    <div class="flex justify-center py-4">
+      <button
+        onclick={() => renderLimit += isMobile ? MOBILE_PAGE_SIZE : DESKTOP_PAGE_SIZE}
+        class="px-5 py-2 rounded-lg bg-primary-500 hover:bg-primary-600 text-white text-sm font-medium transition-colors shadow-sm"
+      >
+        Load more ({filtered.length - renderLimit} remaining)
+      </button>
+    </div>
+  {/if}
 
   {#if filtered.length === 0}
     <div class="text-center py-12">

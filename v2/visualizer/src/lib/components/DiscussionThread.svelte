@@ -55,8 +55,8 @@
     <div class="flex gap-2.5 items-start">
       <MemberAvatar username={entry.username} size="xs" />
       <div class="flex-1 min-w-0">
-        <div class="flex items-center gap-1.5 mb-0.5">
-          <span class="text-xs font-semibold text-gray-700 dark:text-gray-200">{entry.username}</span>
+        <div class="flex items-center gap-1.5 mb-0.5 flex-wrap">
+          <span class="text-xs font-semibold text-gray-700 dark:text-gray-200 break-all">{entry.username}</span>
           {#if roleLabel(entry.role, entry.is_correct)}
             <span class="text-[10px] px-1.5 py-0.5 rounded font-medium {roleLabelStyle(entry.role)}">
               {roleLabel(entry.role, entry.is_correct)}

@@ -38,7 +38,7 @@
     class="w-full text-sm border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1.5 bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-200 placeholder:text-gray-600 dark:placeholder:text-gray-400 focus:outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100 dark:focus:ring-primary-900"
   />
   {#if tagInputFocused && tagSuggestions.length > 0}
-    <div class="absolute z-20 top-full mt-1 left-0 w-48 bg-ui-card border border-gray-200 dark:border-gray-600 rounded-lg shadow-lg overflow-hidden">
+    <div class="absolute z-20 top-full mt-1 left-0 right-0 w-auto min-w-full sm:w-48 sm:right-auto bg-ui-card border border-gray-200 dark:border-gray-600 rounded-lg shadow-lg overflow-hidden">
       {#each tagSuggestions as tag}
         <!-- svelte-ignore a11y_click_events_have_key_events -->
         <!-- svelte-ignore a11y_no_static_element_interactions -->

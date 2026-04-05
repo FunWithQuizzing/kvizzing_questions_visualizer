@@ -249,7 +249,7 @@
               onkeydown={(e) => { if (e.key === 'Enter') submitPart(i); }}
               type="text"
               placeholder="Your answer…"
-              class="flex-1 px-3 py-2 text-sm border rounded-lg focus:outline-none focus:border-primary-400 dark:focus:border-primary-500 focus:ring-2 focus:ring-primary-100 dark:focus:ring-primary-900 bg-white dark:bg-gray-700 dark:text-gray-200 dark:placeholder-gray-400 transition-all
+              class="flex-1 min-w-0 px-3 py-2 text-sm border rounded-lg focus:outline-none focus:border-primary-400 dark:focus:border-primary-500 focus:ring-2 focus:ring-primary-100 dark:focus:ring-primary-900 bg-white dark:bg-gray-700 dark:text-gray-200 dark:placeholder-gray-400 transition-all
                 {res === 'almost' ? 'border-amber-300 dark:border-amber-700 bg-amber-50 dark:bg-amber-900/20' : res === 'wrong' ? 'border-red-300 dark:border-red-700 bg-red-50 dark:bg-red-900/20' : 'border-gray-200 dark:border-gray-600'}"
               autocomplete="off" autocorrect="off" spellcheck="false"
             />
@@ -332,13 +332,13 @@
           onkeydown={(e) => { if (e.key === 'Enter') submit(); }}
           type="text"
           placeholder="Your answer…"
-          class="flex-1 px-3 py-2 text-sm border border-gray-200 dark:border-gray-600 rounded-lg focus:outline-none focus:border-primary-400 dark:focus:border-primary-500 focus:ring-2 focus:ring-primary-100 dark:focus:ring-primary-900 bg-white dark:bg-gray-700 dark:text-gray-200 dark:placeholder-gray-400 transition-all"
+          class="flex-1 min-w-0 px-3 py-2 text-sm border border-gray-200 dark:border-gray-600 rounded-lg focus:outline-none focus:border-primary-400 dark:focus:border-primary-500 focus:ring-2 focus:ring-primary-100 dark:focus:ring-primary-900 bg-white dark:bg-gray-700 dark:text-gray-200 dark:placeholder-gray-400 transition-all"
           autocomplete="off" autocorrect="off" spellcheck="false"
         />
         <button
           onclick={submit}
           disabled={!input.trim()}
-          class="px-4 py-2 bg-primary-500 dark:bg-primary-600 text-white text-sm font-medium rounded-lg hover:bg-primary-600 dark:hover:bg-primary-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+          class="flex-shrink-0 px-4 py-2 bg-primary-500 dark:bg-primary-600 text-white text-sm font-medium rounded-lg hover:bg-primary-600 dark:hover:bg-primary-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors whitespace-nowrap"
         >Submit</button>
       </div>
 

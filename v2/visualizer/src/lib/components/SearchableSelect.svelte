@@ -53,7 +53,7 @@
   </button>
 
   {#if open}
-    <div class="absolute z-50 top-full mt-1 w-full min-w-[180px] bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg shadow-lg overflow-hidden">
+    <div class="absolute z-50 top-full mt-1 w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg shadow-lg overflow-hidden">
       <div class="px-2 py-1.5 border-b border-gray-100 dark:border-gray-700">
         <input
           bind:value={search}

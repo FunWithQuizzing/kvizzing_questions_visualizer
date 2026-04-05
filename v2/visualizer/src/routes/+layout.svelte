@@ -1127,7 +1127,7 @@
     <!-- Footer -->
     <footer class="mt-auto pt-8 px-4 sm:px-6">
       <div class="max-w-7xl mx-auto px-6 py-4 rounded-t-2xl bg-gradient-to-br from-primary-300 to-primary-900 text-white text-center">
-        <p class="text-xs font-medium tracking-wide">Apes together strong 🦍</p>
+        <p class="text-sm font-medium tracking-wide">Apes together strong 🦍</p>
         <div class="flex items-center justify-center gap-3 mt-1.5 text-xs text-primary-100">
           <span>Made with <span class="text-primary-300">&#9829;</span> by <a href="https://github.com/Saumay" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Saumay</a></span>
           <span class="text-primary-300">·</span>
@@ -1152,7 +1152,7 @@
   >
     <div class="bg-ui-card rounded-2xl shadow-xl p-6 w-full max-w-sm mx-4 space-y-4" onclick={(e) => e.stopPropagation()}>
       <h2 class="text-lg font-bold text-gray-900 dark:text-gray-100">{username.value ? 'Change your name' : 'Welcome to KVizzing!'}</h2>
-      <p class="text-sm text-gray-500 dark:text-gray-400">{username.value ? 'Update how your name appears for reviews and flagged questions.' : 'Enter your name to get started. This is how your reviews and flags will be attributed.'}</p>
+      <p class="text-sm text-gray-500 dark:text-gray-400">{username.value ? 'Update how your name appears for reviews and flagged questions.' : 'Enter your name to get started. This is how your reviews and flagged questions will be attributed.'}</p>
       <input
         type="text"
         placeholder="Your name"

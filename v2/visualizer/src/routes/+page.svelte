@@ -32,7 +32,11 @@
 
   const savedIds = getContext<{ value: Set<string> } | undefined>('savedIds');
 
+  let _lastUrl = '';
   $effect(() => {
+    const url = $page.url.href;
+    if (url === _lastUrl) return;
+    _lastUrl = url;
     const p = $page.url.searchParams;
     searchQuery = p.get('q') ?? '';
     filterAsker = p.get('asker') ?? '';
@@ -78,10 +82,17 @@
   let revealAll = $state(false);
   type FeedState = { revealed: boolean; input: string; result: 'correct' | 'almost' | 'wrong' | null; hintsShown: number };
   const _defaultFeedState = (): FeedState => ({ revealed: false, input: '', result: null, hintsShown: 0 });
-  const _initStates: Record<string, FeedState> = {};
-  // Eagerly initialised below after allQuestions is available
-  let feedStates = $state<Record<string, FeedState>>(_initStates);
-  function fs(id: string) {
+
+  const askers = store.getAskers();
+  const solvers = store.getSolvers();
+  const allSessions = store.getSessions();
+  const allQuestions = store.getQuestions();
+
+  // Build feed states eagerly, then let $state wrap the populated object
+  let feedStates = $state<Record<string, FeedState>>(
+    Object.fromEntries(allQuestions.map(q => [q.id, _defaultFeedState()]))
+  );
+  function fs(id: string): FeedState {
     return feedStates[id];
   }
 
@@ -93,13 +104,6 @@
     filterTags.size + filterTopics.size +
     (filterSaved ? 1 : 0)
   );
-
-  const askers = store.getAskers();
-  const solvers = store.getSolvers();
-  const allSessions = store.getSessions();
-
-  const allQuestions = store.getQuestions();
-  for (const q of allQuestions) _initStates[q.id] = _defaultFeedState();
   const { tagFreq, allTags } = store.getTagFreq();
 
   // Pre-sort once per sort option (avoid re-sorting on every filter change)
@@ -397,7 +401,7 @@
             <button onclick={() => filterParts = filterParts === 'multi' ? 'all' : 'multi'} class="flex-1 px-2 py-1.5 leading-5 whitespace-nowrap transition-colors {filterParts === 'multi' ? 'bg-primary-500 text-white' : 'bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-200'}">Multi-part</button>
             <button onclick={() => filterParts = filterParts === 'single' ? 'all' : 'single'} class="flex-1 px-2 py-1.5 leading-5 whitespace-nowrap transition-colors border-l border-gray-200 dark:border-gray-600 {filterParts === 'single' ? 'bg-primary-500 text-white' : 'bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-200'}">Single-part</button>
           </div>
-          <button onclick={() => { filterSaved = !filterSaved; if (!filterSaved && $page.url.searchParams.has('saved')) { const u = new URL(window.location.href); u.searchParams.delete('saved'); history.replaceState({}, '', u); } }} class="inline-flex items-center gap-1 rounded-lg border text-sm px-2.5 py-1.5 leading-5 whitespace-nowrap transition-colors {filterSaved ? 'bg-primary-500 text-white border-primary-500' : 'border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-200'}">
+          <button onclick={() => filterSaved = !filterSaved} class="inline-flex items-center gap-1 rounded-lg border text-sm px-2.5 py-1.5 leading-5 whitespace-nowrap transition-colors {filterSaved ? 'bg-primary-500 text-white border-primary-500' : 'border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-200'}">
             <svg class="w-3.5 h-3.5" fill={filterSaved ? 'currentColor' : 'none'} stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" /></svg>
             Saved
           </button>

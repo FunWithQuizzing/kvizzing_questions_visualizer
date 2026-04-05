@@ -195,27 +195,24 @@
 
   // ── Filters ────────────────────────────────────────────────────────────────
   const allDates = $derived([...new Set(threads.map(t => t.date))].sort());
-  let sortBy = $state<'least' | 'most' | 'newest' | 'oldest'>('least');
+  // Two independent sort axes, always active. Date is primary (matches the
+  // date-grouped render layout), votes is the tiebreaker within each date.
+  // When a single date is selected, the date comparator is a no-op and vote
+  // sort effectively becomes primary.
+  let voteSort = $state<'least' | 'most'>('least');
+  let dateSort = $state<'newest' | 'oldest'>('newest');
 
   function toggleVoteSort() {
-    if (sortBy === 'most') {
-      sortBy = 'least';
-    } else if (sortBy === 'least') {
+    if (voteSort === 'least') {
       const ok = confirm('Your help is most needed on questions with the fewest votes! Switch anyway?');
-      if (ok) sortBy = 'most';
+      if (ok) voteSort = 'most';
     } else {
-      sortBy = 'least';
+      voteSort = 'least';
     }
   }
 
   function toggleDateSort() {
-    if (sortBy === 'newest') {
-      sortBy = 'oldest';
-    } else if (sortBy === 'oldest') {
-      sortBy = 'newest';
-    } else {
-      sortBy = 'newest';
-    }
+    dateSort = dateSort === 'newest' ? 'oldest' : 'newest';
   }
   const urlDate = $page.url.searchParams.get('date');
   const urlReviewer = $page.url.searchParams.get('reviewer');
@@ -250,16 +247,20 @@
         return true;
       })
       .sort((a, b) => {
-        if (sortBy === 'newest' || sortBy === 'oldest') {
-          const dateCmp = sortBy === 'newest' ? b.date.localeCompare(a.date) : a.date.localeCompare(b.date);
-          return dateCmp || a.id.localeCompare(b.id);
-        }
+        // Primary: date (direction from dateSort). Matches the date-grouped
+        // render so threads never split across their date header.
+        const dateCmp = dateSort === 'newest'
+          ? b.date.localeCompare(a.date)
+          : a.date.localeCompare(b.date);
+        if (dateCmp) return dateCmp;
+        // Secondary: vote count (direction from voteSort). Becomes the
+        // effective primary order when a single date is selected.
         const aVotes = allVotes.filter(v => v.thread_id === a.id).length;
         const bVotes = allVotes.filter(v => v.thread_id === b.id).length;
         if (aVotes !== bVotes) {
-          return sortBy === 'least' ? aVotes - bVotes : bVotes - aVotes;
+          return voteSort === 'least' ? aVotes - bVotes : bVotes - aVotes;
         }
-        return a.date.localeCompare(b.date) || a.id.localeCompare(b.id);
+        return a.id.localeCompare(b.id);
       });
   }
 
@@ -280,7 +281,7 @@
 
   // Reset renderLimit when filters/sort change
   $effect(() => {
-    filterStatus; filterReviewer; filterDateFrom; filterDateTo; sortBy; selectedDate;
+    filterStatus; filterReviewer; filterDateFrom; filterDateTo; voteSort; dateSort; selectedDate;
     renderLimit = isMobile ? MOBILE_PAGE_SIZE : DESKTOP_PAGE_SIZE;
   });
 
@@ -288,7 +289,7 @@
   const limitedFiltered = $derived(filtered.slice(0, renderLimit));
   const visibleDates = $derived.by(() => {
     const dates = [...new Set(limitedFiltered.map(t => t.date))];
-    dates.sort((a, b) => sortBy === 'newest' ? b.localeCompare(a) : a.localeCompare(b));
+    dates.sort((a, b) => dateSort === 'newest' ? b.localeCompare(a) : a.localeCompare(b));
     return dates;
   });
 
@@ -442,21 +443,21 @@
     <div class="flex flex-wrap items-center gap-2">
       <button
         onclick={toggleVoteSort}
-        class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all justify-center {sortBy === 'least' || sortBy === 'most' ? 'bg-primary-500 text-white shadow-sm' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'}"
+        class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all justify-center bg-primary-500 text-white shadow-sm"
       >
-        <svg class="w-3 h-3 transition-transform {sortBy === 'most' ? 'rotate-180' : ''}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-3 h-3 transition-transform {voteSort === 'most' ? 'rotate-180' : ''}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13M3 8h9M3 12h5m0 0l4 4m-4-4l4-4" />
         </svg>
-        {sortBy === 'least' ? 'Least votes' : sortBy === 'most' ? 'Most votes' : 'By votes'}
+        {voteSort === 'least' ? 'Least votes' : 'Most votes'}
       </button>
       <button
         onclick={toggleDateSort}
-        class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all justify-center {sortBy === 'newest' || sortBy === 'oldest' ? 'bg-primary-500 text-white shadow-sm' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'}"
+        class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all justify-center bg-primary-500 text-white shadow-sm"
       >
-        <svg class="w-3 h-3 transition-transform {sortBy === 'oldest' ? 'rotate-180' : ''}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-3 h-3 transition-transform {dateSort === 'oldest' ? 'rotate-180' : ''}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
         </svg>
-        {sortBy === 'newest' ? 'Newest first' : sortBy === 'oldest' ? 'Oldest first' : 'By date'}
+        {dateSort === 'newest' ? 'Newest first' : 'Oldest first'}
       </button>
       <button
         onclick={() => showDateRange = !showDateRange}
@@ -597,10 +598,10 @@
 
 
           <!-- Actions row -->
-          <div class="mt-3 flex items-center justify-between">
+          <div class="mt-3 flex items-center justify-between flex-wrap gap-y-2 gap-x-3">
             <button
               onclick={() => toggle(thread.id)}
-              class="text-xs text-primary-500 dark:text-primary-400 hover:text-primary-600 flex items-center gap-1"
+              class="text-xs text-primary-500 dark:text-primary-400 hover:text-primary-600 flex items-center gap-1 whitespace-nowrap"
             >
               <svg class="w-3 h-3 transition-transform {expandedIds.has(thread.id) ? 'rotate-90' : ''}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -610,15 +611,15 @@
             <div class="flex items-center gap-1.5">
               <button
                 onclick={() => startVote(thread.id, 'valid')}
-                class="px-3 py-1 rounded-lg text-xs font-medium transition-all {status === 'valid' ? 'bg-green-500 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-300 hover:bg-green-100 hover:text-green-700 dark:hover:bg-green-900/30 dark:hover:text-green-400'}"
+                class="px-3 py-1 rounded-lg text-xs font-medium transition-all whitespace-nowrap {status === 'valid' ? 'bg-green-500 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-300 hover:bg-green-100 hover:text-green-700 dark:hover:bg-green-900/30 dark:hover:text-green-400'}"
               >Missed Q</button>
               <button
                 onclick={() => startVote(thread.id, 'maybe')}
-                class="px-3 py-1 rounded-lg text-xs font-medium transition-all {status === 'maybe' ? 'bg-yellow-500 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-300 hover:bg-yellow-100 hover:text-yellow-700 dark:hover:bg-yellow-900/30 dark:hover:text-yellow-400'}"
+                class="px-3 py-1 rounded-lg text-xs font-medium transition-all whitespace-nowrap {status === 'maybe' ? 'bg-yellow-500 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-300 hover:bg-yellow-100 hover:text-yellow-700 dark:hover:bg-yellow-900/30 dark:hover:text-yellow-400'}"
               >Maybe</button>
               <button
                 onclick={() => startVote(thread.id, 'not_valid')}
-                class="px-3 py-1 rounded-lg text-xs font-medium transition-all {status === 'not_valid' ? 'bg-red-500 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-300 hover:bg-red-100 hover:text-red-700 dark:hover:bg-red-900/30 dark:hover:text-red-400'}"
+                class="px-3 py-1 rounded-lg text-xs font-medium transition-all whitespace-nowrap {status === 'not_valid' ? 'bg-red-500 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-300 hover:bg-red-100 hover:text-red-700 dark:hover:bg-red-900/30 dark:hover:text-red-400'}"
               >Not a Q</button>
             </div>
           </div>
